@@ -14,7 +14,8 @@ namespace Game.Varginha
         FuseBox,        // Caixa de força / eletricidade
         PadreFabio,     // Padre Fábio e o Livro do Tombo Secreto
         SecretTome,     // Livro do Tombo da diocese
-        ChurchSeat
+        ChurchSeat,
+        ClassroomSeat
     }
 
     /// <summary>
@@ -164,7 +165,7 @@ namespace Game.Varginha
 
                 case PropType.Backpack:
                     var pickupAnimation = GetComponent<BackpackPickupAnimation>();
-                    if (pickupAnimation != null) pickupAnimation.PlayPickup(edelzio);
+                    if (pickupAnimation != null && pickupAnimation.isActiveAndEnabled) pickupAnimation.PlayPickup(edelzio);
                     else
                     {
                         edelzio.EquipBackpack();
@@ -227,6 +228,7 @@ namespace Game.Varginha
                     break;
 
                 case PropType.ChurchSeat:
+                case PropType.ClassroomSeat:
                     _hasInteracted = false;
                     var seatAction = edelzio.GetComponent<VarginhaPlayerActionAnimation>();
                     if (seatAction != null) seatAction.PlayChurchSeat(transform);

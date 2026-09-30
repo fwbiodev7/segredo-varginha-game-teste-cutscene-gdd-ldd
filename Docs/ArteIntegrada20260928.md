@@ -43,3 +43,11 @@ A folha foi recuperada da geração integrada de imagens da tarefa anterior, sem
 
 Validação no Unity 6000.6.0f1: 40 testes distintos aprovados após as correções (10 de Edit Mode e 30 de Play Mode). Os quatro testes de resgate foram reexecutados depois do ajuste final de parada dos alunos; os demais 26 testes de Play Mode já haviam passado. Relatórios locais em `Logs/interaction-edit-regression.xml`, `Logs/interaction-play-regression.xml` e `Logs/interaction-rescue-final.xml`, com consolidação em `Logs/interaction-validation-summary.txt`. A compilação e `git diff --check` também passaram.
 
+## Revisão após queda de energia — 30/09/2026
+
+- GitHub HEAD e checkout local confirmados em `be71a34`. O commit contém 13 arquivos e o checkout estava limpo; não foram encontrados os 12 arquivos pendentes relatados.
+- Corrigida a restauração da escala ao interromper o agachamento, inclusive quando a rotina é executada pelo componente de coleta/baú e a animação é reativada logo depois.
+- Coleta da mochila usa o fallback imediato quando sua animação está desativada. Bancos não iniciam corrotinas em uma animação desativada.
+- Adicionados quatro testes de regressão em `VarginhaInteractionTests`.
+- Compilação de gameplay e testes aprovada via projetos C#, sem avisos ou erros; `git diff --check` aprovado. A execução de Play Mode foi tentada, mas o Unity encerrou por falha na validação da licença local; os novos testes ainda precisam ser executados no Editor licenciado.
+

@@ -48,7 +48,7 @@ Ao entrar no carro com os requisitos, a animação de partida termina carregando
 
 ### Fase 2 — escola e resgate
 
-A cena começa com uma transição cinematográfica: o Fusca estaciona do lado de fora da escola e Edelzio sai já equipado com os itens da Fase 1. A área externa tem vagas, calçada, sinalização e faixa de pedestres. A porta aberta conecta o estacionamento ao interior sem trocar de cena. Quatro subordinados ETs guardam os alunos do terceiro sistema:
+A cena começa com uma transição cinematográfica: o Fusca estaciona do lado de fora da escola e Edelzio sai já equipado com os itens da Fase 1. A área externa tem vagas, calçada, sinalização e faixa de pedestres. A porta aberta conecta o estacionamento ao interior sem trocar de cena. O novo interior reproduz a sala de informática da referência: 12 carteiras bege com pernas metálicas, computadores, cadeiras azuis interativas, janelas com cortinas claras, parede terracota e piso bege/oliva no estilo da casa da Fase 1. Edelzio pode sentar nas carteiras, com animação de joelhos dobrados nas quatro direções, e levantar usando Interagir. Quatro subordinados ETs disparam contra as jaulas dos alunos quando Edelzio está distante e passam ao combate normal quando ele se aproxima. Os nove alunos do terceiro sistema são:
 
 **Yasmin, Pedro, Matias, Fabio, Marcos, Anna Sabia, Ana Tavares, Luis Miguel Messias e Luis Martins.**
 

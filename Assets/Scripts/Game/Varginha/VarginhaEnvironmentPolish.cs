@@ -11,40 +11,7 @@ namespace Game.Varginha
 
         public static void EnsureSchool(Transform school)
         {
-            RefreshReferenceFurniture(school);
-            AlignSchoolSeating(school);
-            if (!NeedsRefresh(school)) return;
-            RefreshSurfaces(school, true);
-            var decor = Root(school);
-
-            // Fit each beam to its actual window opening, including differently sized windows.
-            for (int i = 0; i < 3; i++)
-            {
-                float x = new[] { -3.8f, 0f, 3.7f }[i];
-                var window = school.Find("CenarioV2_Janela_" + i);
-                if (window != null) ReplaceWindow(window, "Window", new Vector2(1.15f, .66f));
-                var light = Part(decor, "Luz_Janela_" + i, "WindowLight", new Vector2(x + .28f, 4.27f), new Vector2(1.6f, 2.45f), 1);
-                light.transform.rotation = Quaternion.Euler(0, 0, -90);
-                FitWindowBeam(window, light, Vector2.down, false);
-            }
-            Part(decor, "Mural_Trabalhos", "Noticeboard", new Vector2(1.1f, 4.1f), new Vector2(1.65f, .78f), 3);
-            Part(decor, "Biblioteca_Sala", "Bookshelf", new Vector2(-6.66f, 3.95f), new Vector2(.95f, 1.6f), 3);
-            Part(decor, "Livros_Corredor", "Bookshelf", new Vector2(7.75f, -4.7f), new Vector2(.85f, 1.15f), 3);
-            Part(decor, "Planta_Entrada", "Plant", new Vector2(7.55f, -3.8f), new Vector2(.55f, .85f), 3);
-            Part(decor, "Planta_Sala", "Plant", new Vector2(-6.65f, 1.55f), new Vector2(.5f, .75f), 3);
-            foreach (var renderer in school.GetComponentsInChildren<SpriteRenderer>(true))
-            {
-                if (renderer.name.StartsWith("CenarioV2_Carteira_")) Replace(renderer.transform, "Desk", SchoolDeskSize);
-                else if (renderer.name.StartsWith("CenarioV2_Lousa_")) Replace(renderer.transform, "Blackboard", new Vector2(2.1f, .65f));
-            }
-            // A restrained runner and ceiling light pools organize the open corridor.
-            Part(decor, "Passadeira_Corredor", "Rug", new Vector2(4.8f, -.55f), new Vector2(3.4f, .9f), 1).color = new Color(.72f, .83f, .86f);
-            Pool(decor, "Luz_Sala_Esquerda", new Vector2(-4.2f, 3.4f), new Vector2(3.8f, 2.35f), .42f);
-            Pool(decor, "Luz_Sala_Direita", new Vector2(5.5f, 3.5f), new Vector2(3.8f, 2.25f), .42f);
-            Pool(decor, "Luz_Corredor", new Vector2(1.9f, -2.8f), new Vector2(3.2f, 1.8f), .3f);
-            ContactShadows(school, decor);
-            Dust(decor, new Vector2(-4.1f, 3.85f), new Vector2(2.5f, 1.2f), 8, new Color(.88f, .88f, .7f, .42f));
-            VarginhaSoftLighting.Build(school, decor);
+            VarginhaClassroomMap.Ensure(school);
         }
 
         public static void EnsureDiocese(Transform church)

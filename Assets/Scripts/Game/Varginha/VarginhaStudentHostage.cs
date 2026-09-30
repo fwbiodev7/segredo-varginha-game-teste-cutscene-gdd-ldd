@@ -30,6 +30,13 @@ namespace Game.Varginha
         public string StudentName => studentName;
         public bool IsReleased => _released;
         public bool IsCaged => !_released;
+        private float _cageImpactUntil;
+        public bool IsCageUnderAttack => !_released && Time.time < _cageImpactUntil;
+
+        public void ReceiveCageImpact()
+        {
+            if(!_released) _cageImpactUntil=Time.time+.22f;
+        }
         public bool IsAtFusca => _arrived;
 
         private void Awake()
@@ -126,6 +133,7 @@ namespace Game.Varginha
             {
                 // O brilho pulsa para comunicar que os alunos ainda estão presos.
                 float pulse = .82f + Mathf.Sin(Time.unscaledTime * 3.5f) * .12f;
+                if(Time.time<_cageImpactUntil) pulse=1f;
                 _cageRenderer.color = new Color(1f, 1f, 1f, pulse);
             }
             if (!_released || _fusca == null || _arrived) return;

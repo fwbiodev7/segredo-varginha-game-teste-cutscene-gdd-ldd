@@ -20,7 +20,7 @@ namespace Game.Varginha
             || name.Contains("Banco_Igreja_") || name.Contains("Altar_Visual") || name.Contains("Leitor")
             || name.StartsWith("Bookshelf") || name.StartsWith("Kitchen_") || name.StartsWith("Sofa_")
             || name.StartsWith("Dresser_") || name.StartsWith("Bed_") || name.Contains("Pilastra_")
-            || name.Contains("Arquivo_") || name.Contains("Biblioteca_");
+            || name.Contains("Arquivo_") || name.Contains("Biblioteca_") || name.StartsWith("SalaV4_Mesa_");
 
         public static void Build(Transform environment, Transform decor)
         {
@@ -29,6 +29,7 @@ namespace Game.Varginha
             Bounds bounds = default;
             foreach (var renderer in decor.GetComponentsInChildren<SpriteRenderer>(true))
             {
+                if(!renderer.gameObject.activeInHierarchy) continue;
                 if (!(renderer.name.StartsWith("Luz_") || renderer.name.StartsWith("Luar_") || renderer.name.StartsWith("Reflexo_Vitral_"))) continue;
                 if (renderer.sprite == null) continue;
                 if (sources.Count == 0) bounds = renderer.bounds; else bounds.Encapsulate(renderer.bounds);
@@ -37,6 +38,7 @@ namespace Game.Varginha
             if (sources.Count == 0) return;
             foreach (var renderer in environment.GetComponentsInChildren<SpriteRenderer>(true))
             {
+                if(!renderer.gameObject.activeInHierarchy) continue;
                 bool wall = renderer.name.Contains("Parede_") || renderer.name.StartsWith("Wall_");
                 if (!IsFurniture(renderer.name) && !wall) continue;
                 renderer.sortingOrder = Mathf.Max(2, renderer.sortingOrder);

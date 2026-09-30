@@ -366,11 +366,11 @@ namespace Game.Varginha
             return _walk;
         }
 
-        public static Sprite EdelzioActionFrame(string poseId, int frame = 0)
+        public static Sprite EdelzioActionFrame(string poseId, int frame = 0, int direction = 0)
         {
             Sprite authored = poseId == "Edelzio_DrinkCoffee" ? VarginhaInteractionSprites.Frame(0, frame)
-                : poseId == "Edelzio_Sit" ? VarginhaInteractionSprites.Frame(1, frame)
-                : poseId == "Edelzio_UseNotebook" ? VarginhaInteractionSprites.Frame(1, 2 + (frame & 1))
+                : poseId == "Edelzio_Sit" ? VarginhaSeatedSprites.Frame(direction, frame) ?? VarginhaInteractionSprites.Frame(1, frame)
+                : poseId == "Edelzio_UseNotebook" ? VarginhaSeatedSprites.Frame(direction, 2 + (frame & 1)) ?? VarginhaInteractionSprites.Frame(1, 2 + (frame & 1))
                 : null;
             if (authored != null) return authored;
             var walk = EdelzioWalkFrames();

@@ -44,30 +44,25 @@ namespace Game.Tests.EditMode
         }
 
         [Test]
-        public void SchoolFurnitureClearsPartitionAndChairsStayPaired()
+        public void ClassroomFurnitureStaysPairedAndLeavesRescueAisles()
         {
             var root = new GameObject("SchoolCompositionTest");
             try
             {
                 var school = VarginhaEnvironmentArt.EnsureSchool(root.transform);
-                var wall = school.Find("CenarioV2_Divisoria_Sala").GetComponent<SpriteRenderer>().bounds;
-                foreach (int index in new[] { 4, 5 })
+                for (int index=0; index<12; index++)
                 {
-                    var desk = school.Find("CenarioV2_Carteira_" + index).GetComponent<SpriteRenderer>();
-                    var chair = school.Find("CenarioV2_Cadeira_" + index).GetComponent<SpriteRenderer>();
-                    Assert.Greater(desk.bounds.min.y, wall.max.y);
-                    Assert.Greater(chair.bounds.min.y, wall.max.y);
-                    Assert.AreEqual(desk.transform.position.x, chair.transform.position.x);
+                    var desk=school.Find("SalaV4_Mesa_"+index).GetComponent<SpriteRenderer>();
+                    var chair=school.Find("SalaV4_Cadeira_"+index).GetComponent<SpriteRenderer>();
+                    Assert.AreEqual(desk.transform.position.x,chair.transform.position.x);
+                    Assert.Greater(desk.transform.position.y,chair.transform.position.y);
+                    Assert.Less(desk.bounds.size.x,2f);
+                    Assert.AreEqual(FilterMode.Point,desk.sprite.texture.filterMode);
                 }
-                var board = school.Find("CenarioV2_Lousa_Fundo").GetComponent<SpriteRenderer>();
-                var partition = school.Find("CenarioV2_Divisoria_Fundo").GetComponent<SpriteRenderer>();
-                Assert.Greater(board.sortingOrder, partition.sortingOrder, "A lousa deve aparecer na frente da divisória.");
-                foreach (int index in new[] { 8, 9, 10 })
-                    Assert.Greater(board.bounds.min.y,
-                        school.Find("CenarioV2_Carteira_" + index).GetComponent<SpriteRenderer>().bounds.max.y);
-                var position = board.transform.position;
+                Assert.IsNotNull(school.Find(VarginhaClassroomMap.Marker));
+                int count=school.GetComponentsInChildren<Transform>(true).Length;
                 VarginhaEnvironmentPolish.EnsureSchool(school);
-                Assert.AreEqual(position, board.transform.position);
+                Assert.AreEqual(count,school.GetComponentsInChildren<Transform>(true).Length);
             }
             finally { Object.DestroyImmediate(root); }
         }

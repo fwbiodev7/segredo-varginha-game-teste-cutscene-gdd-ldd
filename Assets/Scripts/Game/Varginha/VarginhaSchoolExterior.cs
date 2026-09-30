@@ -20,7 +20,15 @@ namespace Game.Varginha
             if (south != null)
             {
                 south.position = new Vector3(-4.25f, -5.7f, 0);
-                south.localScale = new Vector3(7.5f, .7f, 1);
+                var renderer = south.GetComponent<SpriteRenderer>();
+                if (renderer != null && renderer.drawMode == SpriteDrawMode.Tiled)
+                {
+                    south.localScale = Vector3.one;
+                    renderer.size = new Vector2(7.5f, .7f);
+                    var collider = south.GetComponent<BoxCollider2D>();
+                    if (collider != null) collider.size = renderer.size;
+                }
+                else south.localScale = new Vector3(7.5f, .7f, 1);
             }
             var old = school.Find(RootName);
             if (old != null)

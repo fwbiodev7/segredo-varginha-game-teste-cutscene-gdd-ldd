@@ -25,6 +25,8 @@ namespace Game.Varginha
         private bool _seatWasIgnored;
         private Vector3 _standingPosition;
         private bool _notebookSession;
+        private Vector3? _poseStandingScale;
+        private int _poseVersion;
 
         private void Awake()
         {
@@ -60,7 +62,7 @@ namespace Game.Varginha
 
         public void PlayChurchSeat(Transform seat)
         {
-            if (_isActing || seat == null) return;
+            if (_isActing || seat == null || !isActiveAndEnabled) return;
             StartCoroutine(ChurchSeatRoutine(seat));
         }
 
@@ -76,7 +78,13 @@ namespace Game.Varginha
                 Physics2D.IgnoreCollision(_playerCollider, _seatCollider, true);
             }
             yield return MoveToPosition(seat.position + Vector3.up * .13f, .25f);
-            _spriteAnimation?.SetActionPose("Edelzio_Sit");
+            _spriteAnimation?.SetSeatingFacing(seat.GetComponent<InteractableProp>()?.Type == PropType.ClassroomSeat
+                ? Vector2.up : _player.FacingDirection);
+            for (int frame = 0; frame < 3; frame++)
+            {
+                _spriteAnimation?.SetSeatingFrame(frame);
+                yield return new WaitForSeconds(.16f);
+            }
             VarginhaGameHUD.Instance?.ShowDialogue("Edelzio", "Vou me sentar um instante. [E] para levantar.");
             yield return null; // Do not consume the same key press that started the interaction.
             while (_player != null && _player.CurrentSanity > 0f)
@@ -116,6 +124,7 @@ namespace Game.Varginha
             }
             else
                 yield return MoveCloseTo(notebook, .38f, .72f);
+            _spriteAnimation?.SetSeatingFacing(notebook != null ? (Vector2)(notebook.position - transform.position) : Vector2.down);
             for (int frame = 0; frame < 3; frame++)
             {
                 _spriteAnimation?.SetSeatingFrame(frame);
@@ -213,27 +222,36 @@ namespace Game.Varginha
 
         private IEnumerator PoseRoutine(string pose, float duration, float verticalScale)
         {
+            if (!isActiveAndEnabled) yield break;
             BeginAction();
             _spriteAnimation?.SetActionPose(pose);
             Vector3 standingScale = transform.localScale;
+            _poseStandingScale = standingScale;
+            int poseVersion = ++_poseVersion;
             Vector3 poseScale = new Vector3(standingScale.x * 1.035f, standingScale.y * verticalScale, standingScale.z);
             float blendElapsed = 0f;
             const float blendDuration = .12f;
             while (blendElapsed < blendDuration)
             {
+                if (!isActiveAndEnabled || poseVersion != _poseVersion) yield break;
                 blendElapsed += Time.deltaTime;
                 transform.localScale = Vector3.Lerp(standingScale, poseScale, Mathf.SmoothStep(0f, 1f, blendElapsed / blendDuration));
                 yield return null;
             }
             yield return new WaitForSeconds(duration);
+            // Coleta e baú podem executar esta rotina em outro componente.
+            // Nesse caso StopAllCoroutines daqui não interrompe a rotina externa.
+            if (!isActiveAndEnabled || poseVersion != _poseVersion) yield break;
             blendElapsed = 0f;
             while (blendElapsed < blendDuration)
             {
+                if (!isActiveAndEnabled || poseVersion != _poseVersion) yield break;
                 blendElapsed += Time.deltaTime;
                 transform.localScale = Vector3.Lerp(poseScale, standingScale, Mathf.SmoothStep(0f, 1f, blendElapsed / blendDuration));
                 yield return null;
             }
             transform.localScale = standingScale;
+            _poseStandingScale = null;
             _spriteAnimation?.ClearActionPose();
             EndAction();
         }
@@ -313,6 +331,12 @@ namespace Game.Varginha
         private void OnDisable()
         {
             StopAllCoroutines();
+            _poseVersion++;
+            if (_poseStandingScale.HasValue)
+            {
+                transform.localScale = _poseStandingScale.Value;
+                _poseStandingScale = null;
+            }
             if (_notebookSession) VarginhaNotebookQuiz.Instance?.CancelForPlayer(_player);
             if (_seatCollider != null && _body != null) _body.position = _standingPosition;
             RestoreSeatCollision();

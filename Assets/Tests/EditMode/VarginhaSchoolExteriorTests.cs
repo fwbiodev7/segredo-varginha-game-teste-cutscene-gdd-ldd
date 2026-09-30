@@ -48,7 +48,7 @@ namespace Game.Tests.EditMode
         {
             for (int i = 0; i < 9; i++)
             {
-                Vector2 start = new(-2.2f + i % 3 * 2.2f, 1.8f - i / 3 * 1.8f);
+                Vector2 start = VarginhaClassroomMap.StudentPositions[i];
                 Vector2 finish = (Vector2)VarginhaEnvironmentArt.FuscaParkingPosition + new Vector2(-1.35f - i % 3 * .7f, (i / 3 - 1) * .82f);
                 var path = new List<Vector2>();
                 VarginhaSchoolNavigation.FindPath(_school, start, finish, path);
@@ -68,6 +68,31 @@ namespace Game.Tests.EditMode
                 Assert.IsTrue(crossedDoor);
                 Assert.That(Vector2.Distance(previous, finish), Is.LessThan(.01f));
             }
+        }
+
+        [Test] public void ClassroomSpawnsAndCentralAisleAreClearForActors()
+        {
+            foreach(var position in VarginhaClassroomMap.StudentPositions)
+                Assert.IsTrue(VarginhaSchoolNavigation.CanNavigateSegment(position,position+Vector3.up*.05f),"Aluno preso: "+position);
+            foreach(var position in VarginhaClassroomMap.EnemyPositions)
+                Assert.IsTrue(VarginhaSchoolNavigation.CanNavigateSegment(position,position+Vector3.up*.05f),"ET preso: "+position);
+            Assert.IsEmpty(Physics2D.CircleCastAll(new Vector2(.75f,-7),.49f,Vector2.up,10.8f));
+        }
+
+        [Test] public void ClassroomHasTwelveInteractiveBlueChairsAndRestoresMissingArt()
+        {
+            for(int i=0;i<12;i++)
+            {
+                var chair=_school.Find("SalaV4_Cadeira_"+i);
+                Assert.AreEqual(PropType.ClassroomSeat,chair.GetComponent<InteractableProp>().Type);
+                Assert.IsNotNull(chair.GetComponent<Collider2D>());
+            }
+            var desk=_school.Find("SalaV4_Mesa_0").GetComponent<SpriteRenderer>();
+            desk.sprite=null;
+            int count=_school.GetComponentsInChildren<Transform>(true).Length;
+            VarginhaClassroomMap.Ensure(_school);
+            Assert.IsNotNull(desk.sprite);
+            Assert.AreEqual(count,_school.GetComponentsInChildren<Transform>(true).Length);
         }
     }
 }

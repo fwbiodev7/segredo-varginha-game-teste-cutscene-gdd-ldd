@@ -272,13 +272,7 @@ namespace Game.Varginha
     /// <summary>Fábrica mínima usada pela cena serializada; mantém a Fase 2 jogável em qualquer build.</summary>
     internal static class VarginhaPhase2RuntimeFactory
     {
-        private static readonly Vector3[] StudentPositions =
-        {
-            // Espaçamento maior para a turma continuar legível mesmo com a jaula sobreposta.
-            new(-2.2f, 1.8f, 0f), new(0f, 1.8f, 0f), new(2.2f, 1.8f, 0f),
-            new(-2.2f, 0f, 0f), new(0f, 0f, 0f), new(2.2f, 0f, 0f),
-            new(-2.2f, -1.8f, 0f), new(0f, -1.8f, 0f), new(2.2f, -1.8f, 0f)
-        };
+        private static readonly Vector3[] StudentPositions = VarginhaClassroomMap.StudentPositions;
 
         private static readonly Color[] StudentShirts =
         {
@@ -295,10 +289,10 @@ namespace Game.Varginha
             camera.GetComponent<CameraFollow2D>().ConfigureTopDown(player.transform);
             BuildSchool(root);
             CreateFusca(root, VarginhaEnvironmentArt.FuscaParkingPosition);
-            CreateSubordinate(root, "ET_Subordinado_1", new Vector3(2.8f, 2.6f));
-            CreateSubordinate(root, "ET_Subordinado_2", new Vector3(5.1f, -2.4f));
-            CreateSubordinate(root, "ET_Subordinado_3", new Vector3(-.3f, 3.1f));
-            CreateSubordinate(root, "ET_Subordinado_4", new Vector3(6.6f, 2.9f));
+            CreateSubordinate(root, "ET_Subordinado_1", VarginhaClassroomMap.EnemyPositions[0]);
+            CreateSubordinate(root, "ET_Subordinado_2", VarginhaClassroomMap.EnemyPositions[1]);
+            CreateSubordinate(root, "ET_Subordinado_3", VarginhaClassroomMap.EnemyPositions[2]);
+            CreateSubordinate(root, "ET_Subordinado_4", VarginhaClassroomMap.EnemyPositions[3]);
             var students = new GameObject("Refens_3_Sistema").transform;
             students.SetParent(root);
             for (int i = 0; i < VarginhaPhase2Controller.StudentNames.Length; i++)
@@ -328,14 +322,12 @@ namespace Game.Varginha
                 // Corrige cenas antigas que ainda tinham o Fusca na posição anterior.
                 existingCar.transform.position = VarginhaEnvironmentArt.FuscaParkingPosition;
 
-            var enemyPositions = new[]
-            {
-                new Vector3(2.8f, 2.6f), new Vector3(5.1f, -2.4f),
-                new Vector3(-.3f, 3.1f), new Vector3(6.6f, 2.9f)
-            };
+            var enemyPositions = VarginhaClassroomMap.EnemyPositions;
             int enemyCount = Object.FindObjectsByType<VarginhaCombatEnemy>(FindObjectsInactive.Include).Length;
             for (int i = enemyCount; i < enemyPositions.Length; i++)
                 CreateSubordinate(root, "ET_Subordinado_" + (i + 1), enemyPositions[i]);
+            foreach(var enemy in root.GetComponentsInChildren<VarginhaCombatEnemy>(true))
+                if(enemy.GetComponent<VarginhaClassroomPressure>()==null) enemy.gameObject.AddComponent<VarginhaClassroomPressure>();
 
             var parentObject = GameObject.Find("Refens_3_Sistema");
             var studentsParent = parentObject != null ? parentObject.transform : new GameObject("Refens_3_Sistema").transform;
@@ -467,6 +459,7 @@ namespace Game.Varginha
             var target = go.AddComponent<VarginhaCombatTarget>();
             target.SetKind(VarginhaCombatTarget.EnemyKind.MinorManifestation);
             go.AddComponent<VarginhaCombatEnemy>();
+            go.AddComponent<VarginhaClassroomPressure>();
         }
 
         private static void CreateStudent(Transform parent, string name, Vector3 position, Color shirt)

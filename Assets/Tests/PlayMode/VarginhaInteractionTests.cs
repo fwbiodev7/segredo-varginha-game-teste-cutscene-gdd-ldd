@@ -162,11 +162,119 @@ namespace Game.Tests.PlayMode
             Assert.IsFalse(player.IsInputLocked);
         }
 
+        [UnityTest] public IEnumerator InterruptedCrouchRestoresOriginalScale()
+        {
+            var player = CreatePlayer();
+            var action = player.GetComponent<VarginhaPlayerActionAnimation>();
+            Vector3 original = new Vector3(1.2f, 1.4f, 1f);
+            player.transform.localScale = original;
+            action.StartCoroutine(action.CrouchRoutine(1f));
+            yield return new WaitForSeconds(.2f);
+            Assert.Less(player.transform.localScale.y, original.y);
+            action.enabled = false;
+            Assert.AreEqual(original, player.transform.localScale);
+            Assert.IsFalse(player.IsInputLocked);
+        }
+
+        [Test] public void DisabledBackpackAnimationStillAllowsPickup()
+        {
+            var player = CreatePlayer();
+            var backpack = new GameObject("Backpack");
+            backpack.transform.SetParent(_root.transform);
+            backpack.AddComponent<SpriteRenderer>();
+            backpack.AddComponent<BoxCollider2D>();
+            backpack.AddComponent<BackpackPickupAnimation>().enabled = false;
+            var prop = backpack.AddComponent<InteractableProp>();
+            prop.Configure(PropType.Backpack, "Mochila", "", false);
+            prop.Interact(player);
+            Assert.IsTrue(player.HasBackpack);
+            Assert.IsFalse(backpack.GetComponent<SpriteRenderer>().enabled);
+            Assert.IsFalse(backpack.GetComponent<Collider2D>().enabled);
+            Assert.IsFalse(prop.CanInteract);
+        }
+
+        [UnityTest] public IEnumerator ExternallyStartedCrouchStaysRestoredAfterDisable()
+        {
+            var player = CreatePlayer();
+            var action = player.GetComponent<VarginhaPlayerActionAnimation>();
+            Vector3 original = player.transform.localScale;
+            player.StartCoroutine(action.CrouchRoutine(.3f));
+            yield return new WaitForSeconds(.05f);
+            action.enabled = false;
+            action.enabled = true;
+            yield return new WaitForSeconds(.5f);
+            Assert.AreEqual(original, player.transform.localScale);
+            Assert.IsFalse(player.IsInputLocked);
+        }
+
+        [Test] public void DisabledSeatAnimationDoesNotLockPlayerOrConsumeSeat()
+        {
+            var player = CreatePlayer();
+            player.GetComponent<VarginhaPlayerActionAnimation>().enabled = false;
+            var seat = new GameObject("Seat");
+            seat.transform.SetParent(_root.transform);
+            var prop = seat.AddComponent<InteractableProp>();
+            prop.Configure(PropType.ChurchSeat, "Banco", "", false);
+            prop.Interact(player);
+            Assert.IsFalse(player.IsInputLocked);
+            Assert.IsTrue(prop.CanInteract);
+        }
+
         [Test] public void SittingPoseUsesBentKneesInsteadOfStandingFrame()
         {
             var player = CreatePlayer();
             player.GetComponent<VarginhaPlayerSpriteAnimation>().SetActionPose("Edelzio_Sit");
-            Assert.AreSame(VarginhaInteractionSprites.Frame(1, 2), player.GetComponent<SpriteRenderer>().sprite);
+            Assert.AreSame(VarginhaSeatedSprites.Frame(0, 2), player.GetComponent<SpriteRenderer>().sprite);
+        }
+
+        [TestCase(0)][TestCase(1)][TestCase(2)][TestCase(3)]
+        public void SeatedFramesPreserveFeetAndHaveBentKnees(int direction)
+        {
+            var standing = VarginhaSeatedSprites.Frame(direction,0);
+            var seated = VarginhaSeatedSprites.Frame(direction,2);
+            Assert.IsNotNull(standing);
+            Assert.IsNotNull(seated);
+            Assert.Less(seated.bounds.size.y,standing.bounds.size.y);
+            Assert.That(seated.bounds.min.y,Is.EqualTo(standing.bounds.min.y).Within(.001f));
+            Assert.AreEqual(FilterMode.Point,seated.texture.filterMode);
+        }
+
+        [Test] public void SeatedPoseUsesTheSelectedDirection()
+        {
+            var player=CreatePlayer();
+            var animation=player.GetComponent<VarginhaPlayerSpriteAnimation>();
+            animation.SetSeatingFacing(Vector2.left);
+            animation.SetSeatingFrame(2);
+            Assert.AreEqual(Vector2.left,animation.ActionFacingDirection);
+            Assert.AreSame(VarginhaSeatedSprites.Frame(1,2),player.GetComponent<SpriteRenderer>().sprite);
+        }
+
+        [UnityTest] public IEnumerator ClassroomETAttacksCaptiveCageAndRescueStopsThePressure()
+        {
+            var player=CreatePlayer();
+            player.transform.position=new Vector3(0,-12);
+            VarginhaEnvironmentArt.EnsureSchool(_root.transform);
+            var captive=new GameObject("Refem_Yasmin");
+            captive.transform.SetParent(_root.transform);
+            captive.transform.position=VarginhaClassroomMap.StudentPositions[0];
+            captive.AddComponent<SpriteRenderer>();
+            var student=captive.AddComponent<VarginhaStudentHostage>();
+            student.Configure("Yasmin",Color.white);
+            var invader=new GameObject("ETThreatTest");
+            invader.transform.SetParent(_root.transform);
+            invader.transform.position=VarginhaClassroomMap.EnemyPositions[0];
+            invader.AddComponent<SpriteRenderer>();
+            invader.AddComponent<VarginhaCombatEnemy>();
+            invader.AddComponent<VarginhaClassroomPressure>();
+            Physics2D.SyncTransforms();
+            float deadline=Time.realtimeSinceStartup+4f;
+            while(!student.IsCageUnderAttack && Time.realtimeSinceStartup<deadline) yield return null;
+            Assert.IsTrue(student.IsCageUnderAttack,"ET deve disparar contra a jaula enquanto Edelzio está longe.");
+            Assert.IsTrue(student.IsCaged);
+            var car=new GameObject("Car");
+            car.transform.SetParent(_root.transform);
+            student.ReleaseTo(car.transform,0);
+            Assert.IsFalse(student.IsCageUnderAttack);
         }
 
         [TestCase("Edelzio", "Edelzio")]
