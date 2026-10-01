@@ -1,8 +1,23 @@
-# O Mistério de Varginha — protótipo jogável
+# O Segredo de Varginha — laboratório de cutscenes e campanha
+
+Esta é uma cópia independente do protótipo principal, criada em 01/10/2026 a partir do commit `f34e0db`. O histórico, as três fases, os scripts e os assets foram preservados. Nesta primeira entrega, somente documentação foi acrescentada/atualizada; a campanha de 20 fases e a abertura de 1996 ainda não estão implementadas.
+
+- [Planejamento da campanha: 20 fases em 6 atos](Docs/CampanhaOficial/PLANO_20_FASES.md)
+- [Reaproveitamento e primeira experiência de cutscene](Docs/CampanhaOficial/ADAPTACAO_E_CUTSCENE.md)
+- [GDD fornecido pelo usuário](Docs/CampanhaOficial/Referencias/GDD_Usuario.md)
+- [LDD de referência](Docs/CampanhaOficial/Referencias/O_Segredo_de_Varginha_LDD.md)
+- [Cutscenes e prompts de referência](Docs/CampanhaOficial/Referencias/O_Segredo_de_Varginha_Cutscenes_Prompts.md)
+- [Pacote de implementação de referência](Docs/CampanhaOficial/Referencias/O_Segredo_de_Varginha_Codex.md)
+
+As decisões mais recentes do usuário prevalecem: Renan é encontrado na Industrial; Edelzio é o selo vivo; a campanha tem 20 fases e somente o Final Verdadeiro. Os documentos de referência foram preservados como recebidos e contêm divergências que estão registradas no planejamento.
+
+## Protótipo existente
 
 Protótipo 2D top-down de investigação sobrenatural, inspirado no GDD de **O Mistério de Varginha**. O jogador controla Edelzio, explora a casa, coleta pistas, resolve o notebook, enfrenta manifestações menores e segue de Fusca até a investigação da escola.
 
-Repositório: [github.com/fwbiodev7/misterio_de_varginha-jogofeiratecnica-2026-prot-tipo_principal](https://github.com/fwbiodev7/misterio_de_varginha-jogofeiratecnica-2026-prot-tipo_principal)
+Repositório experimental: [segredo-varginha-game-teste-cutscene-gdd-ldd](https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd)
+
+Origem: [protótipo principal](https://github.com/fwbiodev7/misterio_de_varginha-jogofeiratecnica-2026-prot-tipo_principal). As alterações feitas nesta cópia não são enviadas ao projeto principal.
 
 ## Requisitos
 
