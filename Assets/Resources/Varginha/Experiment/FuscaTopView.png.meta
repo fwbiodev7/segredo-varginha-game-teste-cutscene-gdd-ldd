@@ -1,0 +1,899 @@
+fileFormatVersion: 2
+guid: 185d8201a2bbba74d90a387ed1ef364f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2662004878233766106
+    second: FuscaTopView_0
+  - first:
+      213: -5890573510938408516
+    second: FuscaTopView_1
+  - first:
+      213: 6825179294351561816
+    second: FuscaTopView_2
+  - first:
+      213: -6826856794299339161
+    second: FuscaTopView_3
+  - first:
+      213: 3069158441872036025
+    second: FuscaTopView_4
+  - first:
+      213: -2288111592545630760
+    second: FuscaTopView_5
+  - first:
+      213: 2489156531408434541
+    second: FuscaTopView_6
+  - first:
+      213: 4090418906225547160
+    second: FuscaTopView_7
+  - first:
+      213: -8918513435411963467
+    second: FuscaTopView_8
+  - first:
+      213: 8498474193677421736
+    second: FuscaTopView_9
+  - first:
+      213: 8430298293958434200
+    second: FuscaTopView_10
+  - first:
+      213: 4095717816665884049
+    second: FuscaTopView_11
+  - first:
+      213: 8193726610945145999
+    second: FuscaTopView_12
+  - first:
+      213: -8562655871675352485
+    second: FuscaTopView_13
+  - first:
+      213: -794502025145225291
+    second: FuscaTopView_14
+  - first:
+      213: -769281349969064281
+    second: FuscaTopView_15
+  - first:
+      213: -9184125575664918781
+    second: FuscaTopView_16
+  - first:
+      213: -5880097198578214061
+    second: FuscaTopView_17
+  - first:
+      213: 2699962396643579076
+    second: FuscaTopView_18
+  - first:
+      213: -6116206602684682483
+    second: FuscaTopView_19
+  - first:
+      213: 645569583219787268
+    second: FuscaTopView_20
+  - first:
+      213: 9133875184932140879
+    second: FuscaTopView_21
+  - first:
+      213: -8064278206924298058
+    second: FuscaTopView_22
+  - first:
+      213: -7551576500265814454
+    second: FuscaTopView_23
+  - first:
+      213: 4345954081836619648
+    second: FuscaTopView_24
+  - first:
+      213: -1187065299013805425
+    second: FuscaTopView_25
+  - first:
+      213: 5054856215843209147
+    second: FuscaTopView_26
+  - first:
+      213: -5554594842841798249
+    second: FuscaTopView_27
+  - first:
+      213: 1851885931957770977
+    second: FuscaTopView_28
+  - first:
+      213: 8850620203816054908
+    second: FuscaTopView_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FuscaTopView_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 616
+        width: 470
+        height: 951
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad80b75355751f420800000000000000
+      internalID: 2662004878233766106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_1
+      rect:
+        serializedVersion: 2
+        x: 366
+        y: 1553
+        width: 123
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb9c035f99a704ea0800000000000000
+      internalID: -5890573510938408516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_2
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 1540
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8541d282868e7be50800000000000000
+      internalID: 6825179294351561816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_3
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 1542
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76e63537ae12241a0800000000000000
+      internalID: -6826856794299339161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_4
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 1542
+        width: 40
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b09c2f7757d79a20800000000000000
+      internalID: 3069158441872036025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_5
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1470
+        width: 106
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d54dd721aefe30e0800000000000000
+      internalID: -2288111592545630760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_6
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 1498
+        width: 36
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6571fc5da24b8220800000000000000
+      internalID: 2489156531408434541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_7
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 748
+        width: 475
+        height: 787
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8979d10c25614c830800000000000000
+      internalID: 4090418906225547160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_8
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1458
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b1a8b568431b3480800000000000000
+      internalID: -8918513435411963467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_9
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 1480
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ac87f69045a0f570800000000000000
+      internalID: 8498474193677421736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_10
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1311
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89d59f9f1af6ef470800000000000000
+      internalID: 8430298293958434200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_11
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 1177
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 195cb9a77a9e6d830800000000000000
+      internalID: 4095717816665884049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_12
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1159
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8cfc00c0f6f5b170800000000000000
+      internalID: 8193726610945145999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_13
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1101
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ab0e20ad55b2980800000000000000
+      internalID: -8562655871675352485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1063
+        width: 5
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bfe3e91e9c59f4f0800000000000000
+      internalID: -794502025145225291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_15
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 1009
+        width: 8
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aec2c220b6f255f0800000000000000
+      internalID: -769281349969064281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_16
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 973
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30f99e1d27e6b8080800000000000000
+      internalID: -9184125575664918781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_17
+      rect:
+        serializedVersion: 2
+        x: 487
+        y: 844
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35bd9f180c2b56ea0800000000000000
+      internalID: -5880097198578214061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_18
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 15
+        width: 458
+        height: 753
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c45ad6ae71387520800000000000000
+      internalID: 2699962396643579076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_19
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 768
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0fa41aff7ede1ba0800000000000000
+      internalID: -6116206602684682483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_20
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 742
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 406cc959d1685f800800000000000000
+      internalID: 645569583219787268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 23
+        width: 489
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47b2ac561b02ce70800000000000000
+      internalID: 9133875184932140879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_22
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 680
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b86a5a72bde51090800000000000000
+      internalID: -8064278206924298058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_23
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 592
+        width: 52
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46f777de29633790800000000000000
+      internalID: -7551576500265814454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_24
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 607
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087d70a263eef4c30800000000000000
+      internalID: 4345954081836619648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 514
+        width: 50
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8ad61f5662b68fe0800000000000000
+      internalID: -1187065299013805425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_26
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 299
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbf720052f4762640800000000000000
+      internalID: 5054856215843209147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_27
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 111
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 799a2318b6d1ae2b0800000000000000
+      internalID: -5554594842841798249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_28
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 95
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ead2e2817833b910800000000000000
+      internalID: 1851885931957770977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaTopView_29
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 27
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c70f95ace28b3da70800000000000000
+      internalID: 8850620203816054908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FuscaTopView_0: 2662004878233766106
+      FuscaTopView_1: -5890573510938408516
+      FuscaTopView_10: 8430298293958434200
+      FuscaTopView_11: 4095717816665884049
+      FuscaTopView_12: 8193726610945145999
+      FuscaTopView_13: -8562655871675352485
+      FuscaTopView_14: -794502025145225291
+      FuscaTopView_15: -769281349969064281
+      FuscaTopView_16: -9184125575664918781
+      FuscaTopView_17: -5880097198578214061
+      FuscaTopView_18: 2699962396643579076
+      FuscaTopView_19: -6116206602684682483
+      FuscaTopView_2: 6825179294351561816
+      FuscaTopView_20: 645569583219787268
+      FuscaTopView_21: 9133875184932140879
+      FuscaTopView_22: -8064278206924298058
+      FuscaTopView_23: -7551576500265814454
+      FuscaTopView_24: 4345954081836619648
+      FuscaTopView_25: -1187065299013805425
+      FuscaTopView_26: 5054856215843209147
+      FuscaTopView_27: -5554594842841798249
+      FuscaTopView_28: 1851885931957770977
+      FuscaTopView_29: 8850620203816054908
+      FuscaTopView_3: -6826856794299339161
+      FuscaTopView_4: 3069158441872036025
+      FuscaTopView_5: -2288111592545630760
+      FuscaTopView_6: 2489156531408434541
+      FuscaTopView_7: 4090418906225547160
+      FuscaTopView_8: -8918513435411963467
+      FuscaTopView_9: 8498474193677421736
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

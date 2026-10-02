@@ -35,5 +35,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ato1_Fase1_O_Caso_de_Varginha.unity
     guid: 70ccfddc415dc3d47895c9ada38bd46d
+  - enabled: 1
+    path: Assets/Scenes/Ato2_Fase2_A_Chave_e_a_Caixa.unity
+    guid: 8e0b963f00c5a104e89bf5293fcdd4d8
+  - enabled: 1
+    path: Assets/Scenes/Ato2_Fase3_Nao_Deixa_Ela_Sair.unity
+    guid: e893fe68e28216f4aa1923362db7e013
+  - enabled: 1
+    path: Assets/Scenes/Ato2_Fase4_Entre_Aulas_e_Pistas.unity
+    guid: 25c0914519cebf44d93a409582429bae
+  - enabled: 1
+    path: Assets/Scenes/Ato2_Fase5_O_Codigo_das_2323.unity
+    guid: e8693e5ae5ffbcd47a3a951cfd5c1a57
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

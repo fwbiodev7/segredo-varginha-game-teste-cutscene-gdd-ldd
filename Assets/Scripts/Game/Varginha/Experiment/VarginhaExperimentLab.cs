@@ -86,8 +86,7 @@ namespace Game.Varginha.Experiment
                 if (_timeline.ShotIndex != _shot)
                 {
                     _shot = _timeline.ShotIndex; _voice.Stop();
-                    var clip = Resources.Load<AudioClip>("Varginha/Experiment/Audio/" + _data.shots[_shot].voice);
-                    if (_sound && clip != null) { _voice.clip = clip; _voice.Play(); }
+                    // News preview now uses captions and ambience only.
                 }
                 if (_timeline.Finished) FinishOpening();
             }

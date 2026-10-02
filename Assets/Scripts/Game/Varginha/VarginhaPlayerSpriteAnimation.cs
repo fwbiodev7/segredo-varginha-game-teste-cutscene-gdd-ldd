@@ -252,8 +252,10 @@ namespace Game.Varginha
             if (_renderer == null) _renderer = GetComponent<SpriteRenderer>();
             if (_controller == null) _controller = GetComponent<EdelzioTopDownController>();
             if (_renderer == null || _bodyPose == null) return;
+            var equipmentFacing = _actionPose != null ? ActionFacingDirection : _controller != null ? _controller.FacingDirection : Vector2.down;
+            EdelzioBackpackAppearance.HideLegacyLayers(transform);
             _renderer.sprite = _controller != null && _controller.IsBackpackVisible
-                ? _backpackAppearance.GetFrame(_bodyPose, _bodyDirection)
+                ? _backpackAppearance.GetFrame(_bodyPose, EdelzioBackpackAppearance.DirectionIndex(equipmentFacing))
                 : _bodyPose;
         }
 

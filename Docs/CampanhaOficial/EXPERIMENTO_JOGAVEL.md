@@ -6,13 +6,13 @@ O laboratório reaproveita a construção da escola do protótipo, a câmera ort
 
 Compilação no Unity 6000.6.0f1. Nove testes de EditMode passaram, cobrindo dependências dos puzzles, respostas incorretas, salvamento parcial/corrompido, pausa/pular e limites das configurações. Um teste de PlayMode passou com deslocamento real pela tecla D após a abertura, sprite infantil, ausência de combate, pausa/retorno do controle e pista da TV salva. A janela Game foi maximizada e a reprodução corrigida foi conferida com o Console sem erros ou avisos. As imagens da entrega estão em `Preview/UnityMenu.png` e `Preview/UnityPhase1Fixed.png`.
 
-O teste separado do laboratório foi incluído, mas o comando do Editor não chegou a executar casos nessa rodada; não conta entre os dez testes aprovados. A campanha completa, um build executável e as 19 fases seguintes não foram validados nesta entrega.
+O teste separado do laboratório foi incluído, mas o comando do Editor não chegou a executar casos nessa rodada; não conta entre os dez testes aprovados. Um build executável e as fases 6–20 permanecem fora desta entrega. A extensão jogável até a Fase 5 está descrita em FASES_1_A_5.md.
 
 ## Entrar na campanha
 
-O menu principal agora possui somente **Jogar** e **Configurações**. Dentro de Jogar, **Iniciar campanha** cria uma nova memória e **Continuar** recupera a exploração salva. Iniciar campanha apresenta os seis primeiros planos da abertura (55 segundos), encerrando na televisão da criança, sem antecipar a escola ou o salto temporal.
+O menu principal agora possui somente **Jogar** e **Configurações**. Dentro de Jogar, **Iniciar campanha** reinicia os dois arquivos da campanha e **Continuar** recupera a fase e a investigação salvas. Iniciar campanha apresenta os seis primeiros planos da abertura (55 segundos), encerrando na televisão da criança, sem antecipar a escola ou o salto temporal.
 
-Depois aparece **Ato I — A Lembrança / Fase 1 — O Caso de Varginha**. Edelzio tem seis anos, um sprite infantil com quatro direções e passos animados, e explora a casa existente. Pode examinar televisão, jornal, desenho e brinquedos. A televisão perde sinal, a iluminação oscila lentamente e o objetivo aponta para o quintal, pela porta da direita. Ao sair, há silêncio e uma presença parcialmente visível, seguida do corte que encerra a memória. Não há combate nem puzzle obrigatório nessa fase. Ela termina indicando o próximo ato, que ainda permanece planejado.
+Depois aparece **Ato I — A Lembrança / Fase 1 — O Caso de Varginha**. Edelzio tem seis anos, um sprite infantil com quatro direções e passos animados, e explora a casa existente. Pode examinar televisão, jornal, desenho e brinquedos. A televisão perde sinal, a iluminação oscila lentamente e o objetivo aponta para o quintal, pela porta da direita. Ao sair, há silêncio e uma presença parcialmente visível, seguida do corte que encerra a memória. Não há combate nem puzzle obrigatório nessa fase. Ao encerrar a lembrança, o botão Continuar • Ato II inicia a Fase 2. A campanha segue até a conclusão da Fase 5.
 
 Escape pausa. Pode continuar, alterar configurações ou salvar e voltar ao menu. `CampaignMemory1996.json` guarda posição, objetos examinados, abertura vista e conclusão. É independente do laboratório e do progresso do protótipo original.
 
@@ -27,19 +27,23 @@ Ande com WASD/setas. Perto de Renan, pressione E. Os botões do laboratório abr
 ## O que existe nesta versão
 
 - Abertura de 70 segundos, nove planos: transmissão, reportagem ficcional de 1996, testemunho, documentos contraditórios, interferência, memória infantil, clarão lento, salto temporal e fachada da Industrial em 2026. Quadros compostos em 384 × 216, atualizados a 12 fps; legendas, pausa, pular, som e redução de distorções. É uma prévia com ilustrações e efeitos, sem animação completa de personagens.
-- Voz temporária sintética portuguesa do Windows, sem imitação de vozes pessoais, e estática discreta.
+- Jornal com legendas e estática discreta. A narração sintética foi retirada.
 - Fragmentos do mapa: trocar duas peças até conectar rio, estrada e igreja; libera documentos.
 - Documentos: ordenar registros históricos, mantendo 1898 e 1996 como épocas distintas; libera o código.
 - Fotografia: decifrar a sequência de símbolos e abrir o próximo caminho de investigação. Tentativas incorretas não destroem pistas.
-- Renan no mapa da Industrial; aparência do Padre Fábio adaptada no mapa existente da igreja; quatro personagens na galeria, usando as referências fornecidas. Ouzana ainda não possui fase jogável própria. Os novos corpos são estáticos; as animações existentes de Edelzio continuam reutilizadas.
+- Renan no mapa da Industrial; aparência do Padre Fábio adaptada no mapa existente da igreja; quatro personagens na galeria, usando as referências fornecidas. Ouzana ainda não possui fase jogável própria. Os novos corpos são estáticos; as animações existentes de Edelzio continuam reutilizadas com pivôs alinhados.
 - Diálogo da igreja corrigido para Edelzio como selo vivo ligado a 1996.
 
 O arquivo `ExperimentGDDLDDSave.json` é separado do progresso tradicional. Guarda a abertura vista, peças parcialmente montadas e pistas resolvidas. **Novo teste** reinicia apenas o experimento. A página auxiliar usa seu próprio armazenamento no navegador, independente do Unity.
 
 ## O que permanece planejado
 
-As 20 fases em seis atos, a revelação completa do pacto, o encontro jogável com Ouzana, novos mapas futuros e o único Final Verdadeiro estão descritos no planejamento. Completar os três puzzles conclui esta amostra e indica a rota seguinte; não executa o final da campanha. As fases antigas continuam com seus sistemas de combate/resgate para comparação.
+As fases 6–20 em seis atos, a revelação completa do pacto, o encontro jogável com Ouzana, novos mapas futuros e o único Final Verdadeiro estão descritos no planejamento. Completar os três puzzles do laboratório conclui aquela amostra e indica a rota seguinte; não executa o final da campanha. As fases antigas continuam com seus sistemas de combate/resgate para comparação.
 
 ## Importação no Windows
 
 Prefira um caminho curto para a cópia. Nesta máquina, `V:\` aponta para ela temporariamente. A primeira importação no caminho extenso encontrou arquivos de pacote acima do limite usual do Windows; o cache foi guardado e reconstruído. O script `Tools/OpenLaboratory.ps1` usa esse caminho curto e abre o laboratório. Não aplica mudanças ao projeto principal.
+
+## Extensão até a Fase 5
+
+Consulte [Fases 1 a 5](FASES_1_A_5.md) para objetivos, puzzles, controles e limites da implementação. A sequência usa a casa existente, uma rua dirigível nova e o mesmo mapa da Industrial nas fases 4 e 5. Os mapas originais serializados permanecem preservados. A campanha tem seus próprios documentos e progressão, sem antecipar a revelação do selo dos atos seguintes.

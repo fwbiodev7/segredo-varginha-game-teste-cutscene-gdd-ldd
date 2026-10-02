@@ -359,7 +359,7 @@ namespace Game.Varginha
                 _walk[d] = new Sprite[4];
                 for (int f = 0; f < 4; f++)
                 {
-                    _walk[d][f] = Sprite.Create(texture, new Rect(f * 64, (3 - d) * 64, 64, 64), new Vector2(.5f, .5f - (26f / 64f) * (1f - 1f / EdelzioVisualScale)), EdelzioPixelsPerUnit);
+                    _walk[d][f] = Experiment.CampaignPresentation.AlignedFrame(texture, new RectInt(f * 64, (3 - d) * 64, 64, 64), EdelzioPixelsPerUnit, false);
                     _walk[d][f].name = "Edelzio_Reference_" + d + "_" + f;
                 }
             }

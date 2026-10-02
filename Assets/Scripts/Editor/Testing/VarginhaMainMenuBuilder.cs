@@ -72,7 +72,7 @@ namespace Game.Editor.Testing
             {
                 bool testCurrentScene = SessionState.GetBool(PlayCurrentSceneOnce, false);
                 SessionState.EraseBool(PlayCurrentSceneOnce);
-                if (testCurrentScene) EditorSceneManager.playModeStartScene = null;
+                if (testCurrentScene || UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.StartsWith("InitTestScene")) EditorSceneManager.playModeStartScene = null;
                 else Apply();
             }
             if (state == PlayModeStateChange.EnteredEditMode) Apply();
@@ -94,6 +94,9 @@ namespace Game.Editor.Testing
             bool suppressMenu = SessionState.GetBool("Varginha.SuppressMenuForTests", false);
             SessionState.EraseBool("Varginha.SuppressMenuForTests");
             if (suppressMenu) return;
+            // Test Runner owns its temporary scene during assembly/domain reloads.
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name.StartsWith("InitTestScene"))
+            { EditorSceneManager.playModeStartScene = null; return; }
             if (Application.isBatchMode || EditorApplication.isPlaying) return;
             var menuScene = AssetDatabase.LoadAssetAtPath<SceneAsset>(MenuPath);
             if (menuScene != null) EditorSceneManager.playModeStartScene = menuScene;

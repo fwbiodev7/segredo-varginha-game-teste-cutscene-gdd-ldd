@@ -178,6 +178,11 @@ namespace Game.Varginha
             _equipped.text = _squad?.SelectedStudent != null && _squad.SelectedStudent.IsActive
                 ? $"<color=#{ColorUtility.ToHtmlStringRGB(FocusGold)}>EQUIPADO</color>\n<b>{_squad.SelectedStudent.StudentName}</b>\n\n<size=12><color=#{ColorUtility.ToHtmlStringRGB(AccentCyan)}>{VarginhaInputBindings.DisplayName(VarginhaInputAction.AllyCommand)}</color> para atacar</size>"
                 : $"<color=#{ColorUtility.ToHtmlStringRGB(MutedCyan)}>NENHUM ALUNO EQUIPADO</color>\n<size=12>Selecione na aba Alunos</size>";
+            if (Experiment.VarginhaCampaignStage.Active != null)
+            {
+                _equipped.text = "<b>INVESTIGAÇÃO</b>\n\n" + Experiment.VarginhaCampaignStage.Active.Progress.MapFragments + "/3 fragmentos de mapa\n\n<TAB> Caderno: documentos e hipóteses.";
+                if (ShowingStudents) { RefreshCampaignStudents(); return; }
+            }
 
             if (!ShowingStudents)
             {
@@ -275,6 +280,25 @@ namespace Game.Varginha
             _equip.interactable = unlocked;
             _equip.image.sprite = unlocked ? _buttonActiveSprite : _buttonNormalSprite;
             _equipCaption.color = unlocked ? PaperColor : MutedCyan;
+        }
+        private void RefreshCampaignStudents()
+        {
+            var progress = Experiment.VarginhaCampaignStage.Active.Progress;
+            var actors = Object.FindObjectsByType<Experiment.CampaignSchoolLife>();
+            for (int i = 0; i < 9; i++)
+            {
+                bool known = (progress.studentsTalked & 1 << i) != 0;
+                _cells[i].sprite = i == _inspected ? _slotSelectedSprite : _slotNormalSprite;
+                _cellPortraits[i].enabled = true; _cellPortraits[i].sprite = VarginhaStudentAllySquad.Portrait(i);
+                _cellNames[i].text = VarginhaPhase2Controller.StudentNames[i]; _states[i].text = known ? "CONVERSA REGISTRADA" : "NA INDUSTRIAL";
+                _states[i].color = known ? AccentCyan : MutedCyan;
+            }
+            string name = VarginhaPhase2Controller.StudentNames[_inspected];
+            _name.text = name; _portrait.enabled = true; _portrait.sprite = VarginhaStudentAllySquad.Portrait(_inspected);
+            var actor = System.Array.Find(actors, candidate => candidate.StudentName == name);
+            _description.text = actor != null ? "Na escola: " + actor.Activity + "." : "Aluno da Industrial. Converse com ele durante o expediente.";
+            _availability.text = (progress.studentsTalked & 1 << _inspected) != 0 ? "A conversa foi registrada. As falas acompanham o andamento da investigação." : "Aproxime-se e pressione E para conversar. Cada aluno trabalha em uma atividade e possui observações próprias.";
+            _equip.interactable = false; _equipCaption.text = "CONVERSAR NA ESCOLA"; _equip.image.sprite = _buttonNormalSprite;
         }
 
         private void Build()

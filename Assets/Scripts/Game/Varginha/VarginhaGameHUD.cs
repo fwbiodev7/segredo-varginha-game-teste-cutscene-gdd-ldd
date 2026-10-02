@@ -14,6 +14,7 @@ namespace Game.Varginha
     public class VarginhaGameHUD : MonoBehaviour
     {
         public static VarginhaGameHUD Instance { get; private set; }
+        public bool CampaignInventoryOnly { get; set; }
         private VarginhaBackpackInventory _backpack;
         private int _blockInputThroughFrame = -1;
         public bool IsInventoryOpen => _backpack != null && _backpack.IsOpen;
@@ -94,7 +95,7 @@ namespace Game.Varginha
         private int _selectedSlot;
         private float HotbarSlotSize => Mathf.Clamp((Screen.width - 44f) / 6f, 28f, 48f);
         private float HotbarHeight => HotbarSlotSize + (Screen.height < 420f ? 38f : 46f);
-        public static float GameplayBottomInset => Instance != null && Instance.IsGameplayVisible
+        public static float GameplayBottomInset => Instance != null && !Instance.CampaignInventoryOnly && Instance.IsGameplayVisible
             ? Instance.HotbarHeight + 16f : 0f;
 
         public void TogglePause()
@@ -119,6 +120,7 @@ namespace Game.Varginha
 
         private void Update()
         {
+            if (CampaignInventoryOnly) return;
             if (_edelzio == null) _edelzio = Object.FindAnyObjectByType<EdelzioTopDownController>();
             if (!IsGameplayVisible || VarginhaTravelCinematic.IsTravelling) return;
             var keyboard = Keyboard.current;
@@ -372,6 +374,7 @@ namespace Game.Varginha
 
         private void OnGUI()
         {
+            if (CampaignInventoryOnly) return;
             if (!IsGameplayVisible) return;
             if (IsInventoryOpen) return;
             if (Game.Varginha.VarginhaTravelCinematic.IsTravelling) return;

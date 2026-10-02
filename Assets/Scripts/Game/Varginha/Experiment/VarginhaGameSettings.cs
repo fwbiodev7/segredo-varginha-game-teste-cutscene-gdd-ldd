@@ -143,7 +143,8 @@ namespace Game.Varginha.Experiment
                 var settings = VarginhaGameSettings.Current;
                 string label = source.clip != null ? source.clip.name : source.name;
                 bool voice = label.Contains("NewsAnchor") || label.Contains("Witness") || label.Contains("Memory");
-                source.volume = baseline * (voice ? settings.voice : source.loop ? settings.music : settings.effects);
+                bool mechanical = label == "Campaign_Engine";
+                source.volume = baseline * (voice ? settings.voice : source.loop && !mechanical ? settings.music : settings.effects);
             }
             var removed = new List<AudioSource>();
             foreach (var source in _bases.Keys) if (source == null) removed.Add(source);

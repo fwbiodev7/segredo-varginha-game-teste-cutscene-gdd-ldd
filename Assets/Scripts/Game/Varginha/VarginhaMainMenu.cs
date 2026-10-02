@@ -278,7 +278,7 @@ namespace Game.Varginha
             if (Experiment.ExperimentGUI.Button(new Rect(325, 320, 630, 54), "INICIAR CAMPANHA"))
                 Experiment.VarginhaCampaignPhase1.StartCampaign(false);
             bool before = GUI.enabled;
-            GUI.enabled = Experiment.CampaignMemorySave.Exists;
+            GUI.enabled = Experiment.CampaignStorySave.Exists;
             if (Experiment.ExperimentGUI.Button(new Rect(325, 394, 630, 54), "CONTINUAR"))
                 Experiment.VarginhaCampaignPhase1.StartCampaign(true);
             GUI.enabled = before;

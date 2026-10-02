@@ -16,6 +16,7 @@ namespace Game.Varginha
         private SpriteRenderer _renderer;
         private Rigidbody2D _body;
         private bool _isActing;
+        public bool IsActing => _isActing;
         private GameObject _heldCup;
         private SpriteRenderer _worldCup;
         private bool _worldCupWasVisible;
@@ -112,8 +113,11 @@ namespace Game.Varginha
                     _seatWasIgnored = Physics2D.GetIgnoreCollision(_playerCollider, _seatCollider);
                     Physics2D.IgnoreCollision(_playerCollider, _seatCollider, true);
                 }
-                yield return MoveToPosition(chair.transform.position, .34f);
-                if (Vector2.Distance(transform.position, chair.transform.position) > .4f)
+                Vector3 seatPosition = chair.transform.position;
+                // The campaign uses a feet collider; keep its lower edge clear of the desk.
+                if (Experiment.VarginhaCampaignStage.Active != null) seatPosition += Vector3.up * .32f;
+                yield return MoveToPosition(seatPosition, .34f);
+                if (Vector2.Distance(transform.position, seatPosition) > .4f)
                 {
                     RestoreSeatCollision();
                     _notebookSession = false;

@@ -1,11 +1,12 @@
 # O Segredo de Varginha — laboratório de cutscenes e campanha
 
-Esta é uma cópia independente do protótipo principal, criada em 01/10/2026 a partir do commit `f34e0db`. Mantém os mapas 2D topview da casa, escola e igreja. O menu **Jogar → Iniciar campanha** apresenta reportagens ficcionais de 1996 e inicia o **Ato I / Fase 1**, com Edelzio criança na casa existente, exploração, documentos opcionais e o encontro incompleto no quintal. A campanha completa de 20 fases continua em planejamento.
+Esta é uma cópia independente do protótipo principal, criada em 01/10/2026 a partir do commit `f34e0db`. Mantém os mapas 2D topview da casa, escola e igreja. O menu **Jogar → Iniciar campanha** apresenta reportagens ficcionais de 1996 e inicia o **Ato I / Fase 1**, com Edelzio criança na casa existente, exploração, documentos opcionais e o encontro incompleto no quintal. A campanha experimental agora segue até a Fase 5: rotina e caixa antiga, viagem dirigível de Fusca, investigação na Industrial com Renan e o código das 23:23. Os dois fragmentos de mapa e documentos ficam no caderno. As fases 6 a 20 continuam em planejamento.
 
 Abra `Assets/Scenes/Menu_MisterioDeVarginha.unity`, pressione Play e escolha **Jogar → Iniciar campanha**. **Configurações** reúne remapeamento de controles, áudio, vídeo e acessibilidade. O laboratório anterior de três puzzles e Renan permanece disponível pelo menu de desenvolvimento `Varginha > Experimentos > Abrir laboratório`, separado do início da campanha. [Detalhes do experimento](Docs/CampanhaOficial/EXPERIMENTO_JOGAVEL.md).
 
 `Preview/` é uma página auxiliar para avaliar cutscene e pistas; o jogo é o projeto Unity.
 
+- [Fases 1 a 5 jogáveis](Docs/CampanhaOficial/FASES_1_A_5.md)
 - [Planejamento da campanha: 20 fases em 6 atos](Docs/CampanhaOficial/PLANO_20_FASES.md)
 - [Reaproveitamento e primeira experiência de cutscene](Docs/CampanhaOficial/ADAPTACAO_E_CUTSCENE.md)
 - [GDD fornecido pelo usuário](Docs/CampanhaOficial/Referencias/GDD_Usuario.md)

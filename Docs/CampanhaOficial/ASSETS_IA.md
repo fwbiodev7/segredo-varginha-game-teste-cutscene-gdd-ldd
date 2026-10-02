@@ -5,14 +5,28 @@ Modo utilizado: ferramenta integrada ImageGen. As imagens finais estão em `Asse
 | Arquivo | Uso |
 | --- | --- |
 | OpeningStoryboard.png | Atlas 2 × 2: reportagem, rua, documentos e criança diante da TV. O compositor produz quadros reais em 384 × 216. |
-| IndustrialFacade.png | Fachada da Industrial; imagem de referência para o laboratório, não substitui o mapa topview. |
+| IndustrialFacade.png | Referência inicial do laboratório. A campanha usa SchoolIndustrialFacadeV1 do original, por solicitação do usuário. |
 | ReferenceCast.png | Referência visual dos quatro personagens derivados das fotos. |
 | GameCast.png | Versão simplificada para o jogo, atlas importado em 128 × 128, células de 64 × 64. |
 | ChildEdelzio.png | Edelzio aos seis anos, 3 poses por direção, 4 direções. Atlas importado com limite de 256; animado na Fase 1. |
+| FuscaBreakdown.png | Quatro planos da pane: rua, ignição/painel, rádio e motor traseiro. Composição em 384 × 216 com interferência discreta. |
+| FuscaTopView.png | Fusca azul visto de cima, quatro estados de luz; atlas transparente importado com limite de 256. Substitui o carro provisório da Fase 3. |
 
-As ilustrações geradas são arte de uma experiência em desenvolvimento. Não são fotografias nem filmagens reais dos eventos de 1996. As reportagens e falas da abertura são ficcionais. Voz temporária: Microsoft Maria Desktop, gerada localmente por `Tools/GeneratePreviewSpeech.ps1`; nenhuma voz pessoal foi clonada.
+As ilustrações geradas são arte de uma experiência em desenvolvimento. Não são fotografias nem filmagens reais dos eventos de 1996. As reportagens e falas da abertura são ficcionais. A voz sintética foi retirada a pedido do usuário. O jornal usa legendas e estática discreta. Nenhuma voz pessoal foi clonada. Os novos assets do Fusca seguem o azul, creme e preto do modelo original. A casa, a Industrial e seus modelos existentes permanecem preservados.
 
 ## Prompts e especificações
+
+## Arte reaproveitada do original
+
+`Assets/Resources/Varginha/SchoolIndustrialFacadeV1.png` e os modelos da mochila em `Assets/Resources/Varginha/Equipment/` vêm de `fwbiodev7/misterio_de_varginha-jogofeiratecnica-2026-prot-tipo_principal`, commit `5df6ec4`. A fachada mantém a identificação e o portão da escola real na arte existente. Não foi gerada uma substituta para essa integração. Também foram recuperados os atlas atualizados de Edelzio, Ana Tavares e Luis Miguel Messias.
+
+### Fusca: sprite topview
+
+Create a transparent production pixel-art vehicle sprite sheet for a Unity 2D TOP-DOWN RPG. Use image 1 as exact identity reference: sky-blue classic Volkswagen Beetle/Fusca with rounded hood and roof, cream windows, dark tires and small silver bumpers. Image 2 is existing gameplay style, use chunky crisp square pixels matching its sprite scale. EXACT 2 columns x 2 rows, 4 equal cells, transparent empty background and NO labels or text. EVERY cell contains exactly the same car viewed strictly from OVERHEAD, facing NORTH/up, same centered position, dimensions and baseline. Top-left car idle with headlights off. Top-right identical car with warm pale yellow headlights on (only bulbs, no giant external beam). Bottom-left identical car with subtle amber dashboard light visible under windshield. Bottom-right identical car with tail lamps softly lit. Each car should be authored as approximately 48x80 logical chunky pixel sprite, detailed round Beetle shape, bonnet curve, cabin glazing, wheel arches, chrome bumpers and tiny shadow inside silhouette, sufficient depth like existing RPG props, never a blocky rectangle placeholder. Total atlas approximately 192x320 logical pixel art. Transparent alpha everywhere outside cars. No perspective side view, no isometric angle, no characters, no road, no illustrations, no blur, no grain, no antialiasing, no text, no logos. Cars look same size and color across four cells.
+
+### Fusca: planos da pane
+
+Create a production PIXEL ART cinematic atlas for the existing 2D TOPVIEW Brazilian investigation game O Segredo de Varginha. Image 1 is the existing bright sky-blue Volkswagen Beetle/Fusca game sprite, use its shape and exact sky-blue/cream/black palette as identity reference. Image 2 is the existing house gameplay screenshot: match its chunky visible pixel size, crisp edges, restrained textured pixel shading and RPG atmosphere; do not copy UI text. Exactly 2 columns x 2 rows, FOUR equal 16:9 rectangular panels, total image also 16:9, no gutters, no borders, no text, no lettering. Each panel should feel like a real 384x216 pixel game cutscene, not a smooth painting. Top-left: overhead/topview night street in Varginha, recognizable SKY BLUE classic round Beetle stalled on dark asphalt, warm headlight cones, terracotta house roofs, sidewalk and utility pole shadows, quiet ominous Minas Gerais neighborhood; car viewed from high above. Top-right: close-up of this Fusca's 1990s beige dashboard, round analog speedometer and ignition key, needles stuck strangely, amber light, driver hands only in a faded mustard sleeve, no faces, NO digital text. Bottom-left: close-up of old analog car radio in the same beige dashboard, tactile knobs, tuning dial and faint eerie turquoise glow, period believable. Bottom-right: sky-blue Fusca seen from rear high angle with rear engine lid open revealing the rear-mounted air-cooled engine, road side at night with amber light, not a front-engine car. Cohesive sky blue, warm ochre, navy, teal palette. Cinematic horror through composition and lighting, no monster reveal, no gore, no logos, no photo textures, no gradients, no anti-aliasing. Keep pixel cells hard and legible when downsampled to 384x216 per panel.
 
 ### Personagens: prompt da referência
 

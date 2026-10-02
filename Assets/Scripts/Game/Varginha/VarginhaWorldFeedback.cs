@@ -5,6 +5,8 @@ namespace Game.Varginha
     {
         public static bool IsHidden => Experiment.VarginhaExperimentLab.IsModalOpen
             || Experiment.VarginhaCampaignPhase1.IsModalOpen
+            || Experiment.VarginhaCampaignStage.IsModalOpen
+            || Experiment.VarginhaCampaignDrive.IsModalOpen
             || VarginhaTravelCinematic.IsTravelling
             || VarginhaMainMenu.IsOpen
             || VarginhaGameHUD.Instance?.IsPaused == true
