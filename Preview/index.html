@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>O Segredo de Varginha — prévia experimental</title>
+<style>
+:root{color-scheme:dark;--ink:#0b141b;--paper:#e5dbc1;--muted:#8caaa4;--accent:#81b8a4;--line:#29423e}
+*{box-sizing:border-box}body{margin:0;background:#080e13;color:var(--paper);font:15px/1.5 ui-monospace,Consolas,monospace}
+button,input{font:inherit}button{border:1px solid var(--line);background:#15251f;color:var(--paper);padding:11px 16px;cursor:pointer}
+button:hover,button:focus-visible{border-color:var(--accent);background:#223d32;outline:2px solid transparent}button:disabled{opacity:.4;cursor:default}
+header{max-width:1160px;margin:30px auto 18px;padding:0 20px;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.eyebrow{font-size:11px;letter-spacing:3px;color:var(--accent)}h1{font-size:26px;letter-spacing:2px;margin:7px 0}h2{font-size:19px;margin:0 0 10px}
+.muted{color:var(--muted)}nav{display:flex;gap:8px;flex-wrap:wrap}main{max-width:1160px;margin:auto;padding:0 20px 28px}
+.panel{border:1px solid var(--line);background:var(--ink);padding:22px}.screen{position:relative;background:#000;overflow:hidden}
+#cinema{display:block;width:100%;aspect-ratio:16/9;image-rendering:pixelated;image-rendering:crisp-edges}
+.shot-title{position:absolute;left:0;right:0;top:0;padding:16px 23px;background:#000c;font-size:17px;letter-spacing:2px}
+.subtitle{position:absolute;left:0;right:0;bottom:0;min-height:73px;padding:17px 23px;background:#000e;text-align:center;font-size:16px}
+.controls{display:flex;align-items:center;flex-wrap:wrap;gap:10px;padding-top:17px}#seek{flex:1;min-width:100px;accent-color:var(--accent)}
+.note{font-size:12px;color:var(--muted);margin-top:12px}.hidden{display:none!important}
+.investigation{display:grid;grid-template-columns:1fr 290px;gap:22px}.side{border-left:1px solid var(--line);padding-left:20px}
+.portrait{display:block;width:192px;height:192px;image-rendering:pixelated;margin:0 auto 10px}.case-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+.pieces{display:grid;grid-template-columns:1fr 1fr;gap:10px}.piece{padding:10px;text-align:left;min-height:160px;background:#142027}
+.piece.selected{outline:2px solid #a3d6b6;background:#284737}.piece canvas{width:100%;height:auto;aspect-ratio:10/7;display:block;image-rendering:pixelated;margin-bottom:8px}
+.piece small{display:block;color:var(--muted);font-size:11px}.doc{font-size:15px;line-height:1.7}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.feedback{min-height:55px;padding:12px 0;color:#bddaca}.clues{border:1px solid var(--line);padding:15px;margin-bottom:20px}
+#code{width:180px;font-size:30px;padding:12px;background:#071011;border:1px solid var(--line);color:var(--paper);letter-spacing:8px}
+.cast{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.cast article{border:1px solid var(--line);padding:16px}.cast canvas{width:100%;aspect-ratio:1;image-rendering:pixelated}
+.cast h2{margin-top:14px;font-size:18px}.cast p{font-size:13px}.footer{display:flex;justify-content:space-between;gap:16px;margin-top:22px;color:var(--muted);font-size:12px}
+.status{color:#bdcfac}label{font-size:12px;color:var(--muted)}#loading{padding:20px}.completed{color:#a3d6b6}
+@media(max-width:800px){header{display:block}nav{margin-top:18px}.investigation{grid-template-columns:1fr}.side{border-left:0;border-top:1px solid var(--line);padding:18px 0 0}.cast{grid-template-columns:1fr 1fr}.subtitle{font-size:13px;padding:10px;min-height:60px}.shot-title{font-size:12px;padding:10px}.controls button{padding:9px}h1{font-size:20px}}
+</style>
+</head>
+<body>
+<header><div><div class="eyebrow">VARGINHA / MG • LABORATÓRIO DE INVESTIGAÇÃO</div><h1>O SEGREDO DE VARGINHA</h1><div class="muted">Reportagens, lembranças e documentos que não coincidem.</div></div>
+<nav aria-label="Experimentos"><button data-tab="opening">ABERTURA</button><button data-tab="investigate">INVESTIGAR</button><button data-tab="characters">PERSONAGENS</button></nav></header>
+<main>
+<div id="loading" role="status">Preparando a transmissão…</div>
+<section id="opening" class="panel hidden">
+<div class="screen"><canvas id="cinema" width="384" height="216" aria-label="Prévia animada da abertura em 384 por 216 pixels"></canvas><div id="shotTitle" class="shot-title"></div><div id="subtitle" class="subtitle" aria-live="off"></div></div>
+<div class="controls"><button id="play">ASSISTIR À PRÉVIA</button><button id="skip">PULAR PRÉVIA</button><input id="seek" type="range" min="0" max="70" step=".1" value="0" aria-label="Posição na cutscene"><span id="time">0 / 70 s</span></div>
+<div class="controls"><label><input id="sound" type="checkbox"> SOM E VOZ SINTÉTICA</label><label><input id="reduced" type="checkbox"> REDUZIR DISTORÇÕES E CLARÃO</label><button id="replay">REINICIAR TRANSMISSÃO</button></div>
+<p class="note">Prévia experimental em resolução de jogo. Reportagens ficcionais; arte criada com IA. A fachada aparece em 2026. Não há clonagem de voz dos personagens.</p>
+</section>
+<section id="investigate" class="panel hidden">
+<div class="case-nav" id="caseNav"></div>
+<div class="investigation"><div><div class="eyebrow">NOTEBOOK DE EDELZIO • EVIDÊNCIAS</div><h2 id="puzzleTitle"></h2><p id="puzzleDescription" class="muted"></p><div id="pieces" class="pieces"></div><div id="codePuzzle" class="hidden"><div class="clues" id="clues"></div><label for="code">SEQUÊNCIA DECODIFICADA</label><p><input id="code" inputmode="numeric" maxlength="4" placeholder="____" aria-label="Código de quatro dígitos"></p></div><div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+<div class="actions"><button id="check">CONFERIR EVIDÊNCIAS</button><button id="hint">DICA</button><button id="resetPieces">REORGANIZAR</button></div></div>
+<aside class="side"><canvas id="speaker" width="64" height="64" class="portrait"></canvas><div class="eyebrow">INDUSTRIAL • RENAN</div><h2>Uma pista precisa de outra.</h2><p id="helper">Compare os recortes antes de confiar nas coordenadas.</p><p id="progress" class="status"></p><button id="newTest">NOVO TESTE</button><p class="note">Esta página testa a cutscene e os puzzles. Os mapas topview existentes são reutilizados na cena de laboratório do Unity.</p></aside></div>
+</section>
+<section id="characters" class="panel hidden"><div class="eyebrow">DESIGNS BASEADOS NAS REFERÊNCIAS ENVIADAS</div><h2>Os rostos por trás do mistério.</h2><p class="muted">Sprites de cenário em células de 64 × 64. Edelzio mantém as animações existentes no jogo.</p><div id="cast" class="cast"></div></section>
+<div class="footer"><span>2D TOPVIEW • MAPAS EXISTENTES PRESERVADOS</span><span id="saveStatus">Progresso local do experimento.</span></div>
+</main>
+<script src="preview.js"></script>
+</body></html>

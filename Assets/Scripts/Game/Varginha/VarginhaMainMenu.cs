@@ -23,7 +23,7 @@ namespace Game.Varginha
         private void OnDisable() => IsOpen = false;
         private void OnDestroy() { if (pixel != null) Destroy(pixel); }
 
-        private enum Panel { None, Controls, Credits, Difficulty, Keybinds }
+        private enum Panel { None, Play, Settings, Controls, Credits, Difficulty, Keybinds }
         private Panel panel;
         private string _pendingScene;
         private Vector2 _controlsScroll;
@@ -67,30 +67,33 @@ namespace Game.Varginha
 
             if (panel != Panel.None)
             {
-                if (panel == Panel.Difficulty) DrawDifficulty();
+                if (panel == Panel.Play) DrawCampaignSelection();
+                else if (panel == Panel.Settings)
+                {
+                    if (Experiment.VarginhaGameSettings.Draw(() => OpenPanel(Panel.Keybinds))) panel = Panel.None;
+                }
+                else if (panel == Panel.Difficulty) DrawDifficulty();
                 else if (panel == Panel.Keybinds) DrawKeybinds();
                 else DrawPanel();
                 return;
             }
 
             // A fixed design canvas scales as a whole, including very short Game Views.
-            float scale = Mathf.Min(1f, Mathf.Min((Screen.width - 24f) / 560f, (Screen.height - 24f) / 488f));
+            float scale = Mathf.Min(1f, Mathf.Min((Screen.width - 24f) / 560f, (Screen.height - 24f) / 390f));
             var previous = GUI.matrix;
             GUI.matrix = Matrix4x4.TRS(new Vector3((Screen.width - 560f * scale) * .5f,
-                (Screen.height - 488f * scale) * .5f), Quaternion.identity, Vector3.one * scale);
-            PixelMenuTheme.Panel(new Rect(0, 0, 560, 488));
+                (Screen.height - 390f * scale) * .5f), Quaternion.identity, Vector3.one * scale);
+            PixelMenuTheme.Panel(new Rect(0, 0, 560, 390));
             PixelMenuTheme.Label(new Rect(24, 14, 512, 22), "• TRANSMISSAO • 96.4 MHz • VARGINHA / MG", 9, PixelMenuTheme.Muted);
             PixelMenuTheme.Separator(new Rect(16, 42, 528, 1));
-            PixelMenuTheme.Label(new Rect(24, 57, 512, 28), "MISTERIO DE VARGINHA", 23, PixelMenuTheme.Paper);
+            PixelMenuTheme.Label(new Rect(24, 57, 512, 28), "O SEGREDO DE VARGINHA", 23, PixelMenuTheme.Paper);
             PixelMenuTheme.Label(new Rect(24, 96, 512, 22), "INVESTIGACAO SOBRENATURAL", 10, PixelMenuTheme.Muted);
-            PixelMenuTheme.Label(new Rect(24, 133, 512, 22), "Varginha, 2026. As luzes voltaram.", 10, PixelMenuTheme.Paper);
-            PixelMenuTheme.Label(new Rect(24, 158, 512, 22), "As pistas de 1996 ainda esperam por Edelzio.", 9, PixelMenuTheme.Muted);
-            if (PixelMenuTheme.Button(new Rect(22, 204, 516, 44), "INICIAR INVESTIGACAO", "01")) StartInvestigation();
-            if (PixelMenuTheme.Button(new Rect(22, 258, 516, 44), "TUTORIAL / CONTROLES", "02")) OpenPanel(Panel.Controls);
-            if (PixelMenuTheme.Button(new Rect(22, 312, 516, 44), "CREDITOS", "03")) OpenPanel(Panel.Credits);
-            if (PixelMenuTheme.Button(new Rect(22, 366, 516, 44), "JOGAR FASE 3 — O GUARDIAO", "04")) StartPhase3();
-            PixelMenuTheme.Separator(new Rect(16, 440, 528, 1));
-            PixelMenuTheme.Label(new Rect(24, 450, 512, 22), "SINAL DETECTADO • 21:17", 9, PixelMenuTheme.Muted, TextAnchor.MiddleCenter);
+            PixelMenuTheme.Label(new Rect(24, 133, 512, 22), "Varginha, 1996. Uma lembrança incompleta.", 10, PixelMenuTheme.Paper);
+            PixelMenuTheme.Label(new Rect(24, 158, 512, 22), "Antes dos documentos, houve uma noite.", 9, PixelMenuTheme.Muted);
+            if (PixelMenuTheme.Button(new Rect(22, 204, 516, 48), "JOGAR", "01")) panel = Panel.Play;
+            if (PixelMenuTheme.Button(new Rect(22, 268, 516, 48), "CONFIGURAÇÕES", "02")) panel = Panel.Settings;
+            PixelMenuTheme.Separator(new Rect(16, 344, 528, 1));
+            PixelMenuTheme.Label(new Rect(24, 354, 512, 22), "INVESTIGAÇÃO • MEMÓRIA • MISTÉRIO", 9, PixelMenuTheme.Muted, TextAnchor.MiddleCenter);
             GUI.matrix = previous;
         }
 
@@ -136,7 +139,7 @@ namespace Game.Varginha
                 "EDITAR CONTROLES DO TECLADO E MOUSE", buttonStyle))
                 OpenPanel(Panel.Keybinds);
             if (GUI.Button(new Rect(x + width * .5f - 100, y + height - 55, 200, 34), "VOLTAR", buttonStyle))
-                panel = Panel.None;
+                panel = Panel.Settings;
         }
 
         private void DrawKeybinds()
@@ -204,7 +207,7 @@ namespace Game.Varginha
             if (GUI.Button(backRect, "VOLTAR", buttonStyle))
             {
                 _rebindingAction = null;
-                panel = Panel.None;
+                panel = Panel.Settings;
             }
         }
 
@@ -263,6 +266,24 @@ namespace Game.Varginha
         {
             _pendingScene = phase3SceneName;
             panel = Panel.Difficulty;
+        }
+
+        private void DrawCampaignSelection()
+        {
+            var previous = Experiment.ExperimentGUI.BeginCanvas();
+            Experiment.ExperimentGUI.Init();
+            Experiment.ExperimentGUI.Panel(new Rect(280, 145, 720, 430));
+            Experiment.ExperimentGUI.Label(new Rect(325, 175, 630, 42), "JOGAR", true);
+            Experiment.ExperimentGUI.Label(new Rect(325, 238, 630, 60), "Ato I — A Lembrança\nFase 1 — O Caso de Varginha", small: true);
+            if (Experiment.ExperimentGUI.Button(new Rect(325, 320, 630, 54), "INICIAR CAMPANHA"))
+                Experiment.VarginhaCampaignPhase1.StartCampaign(false);
+            bool before = GUI.enabled;
+            GUI.enabled = Experiment.CampaignMemorySave.Exists;
+            if (Experiment.ExperimentGUI.Button(new Rect(325, 394, 630, 54), "CONTINUAR"))
+                Experiment.VarginhaCampaignPhase1.StartCampaign(true);
+            GUI.enabled = before;
+            if (Experiment.ExperimentGUI.Button(new Rect(475, 488, 330, 45), "VOLTAR")) panel = Panel.None;
+            GUI.matrix = previous;
         }
 
         private void DrawDifficulty()

@@ -188,7 +188,7 @@ namespace Game.Varginha
                 return;
             }
 
-            VarginhaGameHUD.Instance?.ShowDialogue("Padre Fábio", "Seu nome está no Livro do Tombo desde 1898, Edelzio. Leia-o e descubra por que o selo escolheu você.");
+            VarginhaGameHUD.Instance?.ShowDialogue("Padre Fábio", "Seu nome foi registrado em 1996, Edelzio. O livro guarda a história de 1898 e explica por que você é o próprio selo vivo.");
         }
 
         private void HandleTomeInteracted(EdelzioTopDownController edelzio)

@@ -112,6 +112,7 @@ namespace Game.Varginha
         private float _dodgeTrailTimer;
 
         public bool IsDodging => _dodgeRemaining > 0f;
+        public bool CanDodge { get; set; } = true;
         public float DodgeCooldownRemaining => Mathf.Max(0f, _dodgeCooldown);
         private bool IsGameplayBlocked => IsInputLocked || Time.timeScale <= 0f || currentSanity <= 0f
             || GetComponent<Game.Player.HealthSystem>()?.IsDead == true
@@ -120,7 +121,7 @@ namespace Game.Varginha
 
         public bool TryDodge(Vector2 direction)
         {
-            if (!isActiveAndEnabled || IsGameplayBlocked || _dodgeCooldown > 0f || IsScriptedMotion) return false;
+            if (!isActiveAndEnabled || IsGameplayBlocked || !CanDodge || _dodgeCooldown > 0f || IsScriptedMotion) return false;
             _dodgeDirection = direction.sqrMagnitude > .01f ? direction.normalized : _lastFacing.normalized;
             _dodgeRemaining = .18f;
             _dodgeCooldown = 1.1f;
@@ -292,7 +293,7 @@ namespace Game.Varginha
             foreach (var hit in hits)
             {
                 var prop = hit.GetComponent<InteractableProp>();
-                if (prop != null && prop.CanInteract)
+                if (prop != null && prop.isActiveAndEnabled && prop.CanInteract)
                 {
                     float d = Vector2.Distance(transform.position, prop.transform.position);
                     if (d < closestDist)

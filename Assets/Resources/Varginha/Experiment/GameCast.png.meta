@@ -1,0 +1,639 @@
+fileFormatVersion: 2
+guid: d82804e3ed22d0c4281cec3caeac4330
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1558193665662475721
+    second: GameCast_0
+  - first:
+      213: -3430110843904019059
+    second: GameCast_1
+  - first:
+      213: 9144657525486069344
+    second: GameCast_2
+  - first:
+      213: 51738133140699729
+    second: GameCast_3
+  - first:
+      213: -4344222394309262538
+    second: GameCast_4
+  - first:
+      213: 7732207369355932627
+    second: GameCast_5
+  - first:
+      213: 1136953583582278195
+    second: GameCast_6
+  - first:
+      213: -8005071764955130118
+    second: GameCast_7
+  - first:
+      213: 1400254237221311226
+    second: GameCast_8
+  - first:
+      213: 5978234384465053418
+    second: GameCast_9
+  - first:
+      213: 8195942543542633442
+    second: GameCast_10
+  - first:
+      213: -975151771083865900
+    second: GameCast_11
+  - first:
+      213: -1760458449001627643
+    second: GameCast_12
+  - first:
+      213: 3131014455889279352
+    second: GameCast_13
+  - first:
+      213: -6625213680914618809
+    second: GameCast_14
+  - first:
+      213: -2515043409683142098
+    second: GameCast_15
+  - first:
+      213: 4139379192400090612
+    second: GameCast_16
+  - first:
+      213: 8888731977930885651
+    second: GameCast_17
+  - first:
+      213: -849814976460436301
+    second: GameCast_18
+  - first:
+      213: 7390335420734821750
+    second: GameCast_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 128
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GameCast_0
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 908
+        width: 332
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cd531d12e0df9510800000000000000
+      internalID: 1558193665662475721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_1
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 286
+        width: 680
+        height: 945
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d85b2e86c5cc560d0800000000000000
+      internalID: -3430110843904019059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_2
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1187
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0662337a19958ee70800000000000000
+      internalID: 9144657525486069344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_3
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 631
+        width: 256
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15a7137de8fc7b000800000000000000
+      internalID: 51738133140699729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_4
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 898
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63346e1cfb836b3c0800000000000000
+      internalID: -4344222394309262538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 527
+        width: 111
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d33e1ca2a15e4b60800000000000000
+      internalID: 7732207369355932627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_6
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 790
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 332778ba24547cf00800000000000000
+      internalID: 1136953583582278195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_7
+      rect:
+        serializedVersion: 2
+        x: 1123
+        y: 777
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af6175874a548e090800000000000000
+      internalID: -8005071764955130118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_8
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 647
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af2dfc45fc3be6310800000000000000
+      internalID: 1400254237221311226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_9
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 598
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6c016af74f6f250800000000000000
+      internalID: 5978234384465053418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_10
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 622
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e3ce53c156ddb170800000000000000
+      internalID: 8195942543542633442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_11
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 604
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d0047a71a09772f0800000000000000
+      internalID: -975151771083865900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_12
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 605
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5004c613e589197e0800000000000000
+      internalID: -1760458449001627643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_13
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 569
+        height: 521
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 879b4ed0f09937b20800000000000000
+      internalID: 3131014455889279352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_14
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 517
+        width: 41
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 746a60452438e04a0800000000000000
+      internalID: -6625213680914618809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_15
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 52
+        width: 386
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2a262b1855c81dd0800000000000000
+      internalID: -2515043409683142098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_16
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 485
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f596a1b177027930800000000000000
+      internalID: 4139379192400090612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_17
+      rect:
+        serializedVersion: 2
+        x: 1016
+        y: 485
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31ac930b3ae1b5b70800000000000000
+      internalID: 8888731977930885651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_18
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 294
+        width: 18
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bcc44b08c9d434f0800000000000000
+      internalID: -849814976460436301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GameCast_19
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 55
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675d2e3d8eebf8660800000000000000
+      internalID: 7390335420734821750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      GameCast_0: 1558193665662475721
+      GameCast_1: -3430110843904019059
+      GameCast_10: 8195942543542633442
+      GameCast_11: -975151771083865900
+      GameCast_12: -1760458449001627643
+      GameCast_13: 3131014455889279352
+      GameCast_14: -6625213680914618809
+      GameCast_15: -2515043409683142098
+      GameCast_16: 4139379192400090612
+      GameCast_17: 8888731977930885651
+      GameCast_18: -849814976460436301
+      GameCast_19: 7390335420734821750
+      GameCast_2: 9144657525486069344
+      GameCast_3: 51738133140699729
+      GameCast_4: -4344222394309262538
+      GameCast_5: 7732207369355932627
+      GameCast_6: 1136953583582278195
+      GameCast_7: -8005071764955130118
+      GameCast_8: 1400254237221311226
+      GameCast_9: 5978234384465053418
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

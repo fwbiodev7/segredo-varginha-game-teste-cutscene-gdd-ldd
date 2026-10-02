@@ -1,0 +1,1549 @@
+fileFormatVersion: 2
+guid: fea28965728d60244923b0f550f4d890
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5095354302269812492
+    second: ChildEdelzio_0
+  - first:
+      213: 3417057568356147781
+    second: ChildEdelzio_1
+  - first:
+      213: -7505033201128570511
+    second: ChildEdelzio_2
+  - first:
+      213: 2296233307521694357
+    second: ChildEdelzio_3
+  - first:
+      213: 2843926413690366024
+    second: ChildEdelzio_4
+  - first:
+      213: 2860250491718960509
+    second: ChildEdelzio_5
+  - first:
+      213: 8663097556304983117
+    second: ChildEdelzio_6
+  - first:
+      213: -2196522653600340301
+    second: ChildEdelzio_7
+  - first:
+      213: 8394253493054954615
+    second: ChildEdelzio_8
+  - first:
+      213: -4697469644848297311
+    second: ChildEdelzio_9
+  - first:
+      213: 5961357533038087824
+    second: ChildEdelzio_10
+  - first:
+      213: 9204743084583006232
+    second: ChildEdelzio_11
+  - first:
+      213: 2495444880143036728
+    second: ChildEdelzio_12
+  - first:
+      213: -6542167850905798298
+    second: ChildEdelzio_13
+  - first:
+      213: 8105481659937407856
+    second: ChildEdelzio_14
+  - first:
+      213: 6947456697953552059
+    second: ChildEdelzio_15
+  - first:
+      213: -1389217981204454092
+    second: ChildEdelzio_16
+  - first:
+      213: 453054537631768878
+    second: ChildEdelzio_17
+  - first:
+      213: 4663404681440659458
+    second: ChildEdelzio_18
+  - first:
+      213: -9045155337796724713
+    second: ChildEdelzio_19
+  - first:
+      213: 5533829596651210264
+    second: ChildEdelzio_20
+  - first:
+      213: 8698790111393829073
+    second: ChildEdelzio_21
+  - first:
+      213: 2827507341147615529
+    second: ChildEdelzio_22
+  - first:
+      213: -801192856947114206
+    second: ChildEdelzio_23
+  - first:
+      213: -4977445743265981770
+    second: ChildEdelzio_24
+  - first:
+      213: -4669789486495739903
+    second: ChildEdelzio_25
+  - first:
+      213: -6895899009620373383
+    second: ChildEdelzio_26
+  - first:
+      213: -1613127454528405434
+    second: ChildEdelzio_27
+  - first:
+      213: 323854095538479272
+    second: ChildEdelzio_28
+  - first:
+      213: -1771958639744403789
+    second: ChildEdelzio_29
+  - first:
+      213: -717293931432837098
+    second: ChildEdelzio_30
+  - first:
+      213: -265421987334565518
+    second: ChildEdelzio_31
+  - first:
+      213: 9173373001576796880
+    second: ChildEdelzio_32
+  - first:
+      213: -526693427441173171
+    second: ChildEdelzio_33
+  - first:
+      213: -271203354683171342
+    second: ChildEdelzio_34
+  - first:
+      213: 4616821728972441581
+    second: ChildEdelzio_35
+  - first:
+      213: 3626781597313740249
+    second: ChildEdelzio_36
+  - first:
+      213: -802311551629725949
+    second: ChildEdelzio_37
+  - first:
+      213: 2355988082124636514
+    second: ChildEdelzio_38
+  - first:
+      213: -9206671995595983392
+    second: ChildEdelzio_39
+  - first:
+      213: -8809087453020345701
+    second: ChildEdelzio_40
+  - first:
+      213: -3361166760927747048
+    second: ChildEdelzio_41
+  - first:
+      213: -5165814729999112342
+    second: ChildEdelzio_42
+  - first:
+      213: 8941892847038370154
+    second: ChildEdelzio_43
+  - first:
+      213: 2528360532249177454
+    second: ChildEdelzio_44
+  - first:
+      213: -4093225375600446215
+    second: ChildEdelzio_45
+  - first:
+      213: -8279434417488349671
+    second: ChildEdelzio_46
+  - first:
+      213: 1760067529973234594
+    second: ChildEdelzio_47
+  - first:
+      213: -6974538822637009689
+    second: ChildEdelzio_48
+  - first:
+      213: 2117195097635106650
+    second: ChildEdelzio_49
+  - first:
+      213: -25808700256555808
+    second: ChildEdelzio_50
+  - first:
+      213: 311032122020778406
+    second: ChildEdelzio_51
+  - first:
+      213: 986440029551275919
+    second: ChildEdelzio_52
+  - first:
+      213: 5476585812780746680
+    second: ChildEdelzio_53
+  - first:
+      213: 8337857077681689042
+    second: ChildEdelzio_54
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 256
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ChildEdelzio_0
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1368
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0fec87ddb556b640800000000000000
+      internalID: 5095354302269812492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_1
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1385
+        width: 32
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 542adea01c3db6f20800000000000000
+      internalID: 3417057568356147781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_2
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1029
+        width: 347
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17108332114c8d790800000000000000
+      internalID: -7505033201128570511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_3
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 1425
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59a3048f60cdddf10800000000000000
+      internalID: 2296233307521694357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_4
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 1429
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8486d576108a77720800000000000000
+      internalID: 2843926413690366024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_5
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 809
+        width: 329
+        height: 627
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d758b8ffaa6a1b720800000000000000
+      internalID: 2860250491718960509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_6
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 1083
+        width: 249
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d44fc121451893870800000000000000
+      internalID: 8663097556304983117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_7
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 1405
+        width: 52
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6ad03c8426481e0800000000000000
+      internalID: -2196522653600340301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_8
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 1398
+        width: 48
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c5f18c3116e7470800000000000000
+      internalID: 8394253493054954615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1135
+        width: 98
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa03ab0f3c3fceb0800000000000000
+      internalID: -4697469644848297311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_10
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 1318
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e85d7771ffab250800000000000000
+      internalID: 5961357533038087824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_11
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 1214
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 810bd4d0111ddbf70800000000000000
+      internalID: 9204743084583006232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_12
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 1164
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8313e75a5e991a220800000000000000
+      internalID: 2495444880143036728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1069
+        width: 44
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66977c1600d8535a0800000000000000
+      internalID: -6542167850905798298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_14
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1035
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073430200a47c7070800000000000000
+      internalID: 8105481659937407856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_15
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 514
+        width: 376
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb60eedbe035a6060800000000000000
+      internalID: 6947456697953552059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_16
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 752
+        width: 252
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43529b24b9188bce0800000000000000
+      internalID: -1389217981204454092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_17
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 751
+        width: 169
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e21ab6b93b2994600800000000000000
+      internalID: 453054537631768878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 928
+        width: 82
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2080a2999ddb7b040800000000000000
+      internalID: 4663404681440659458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_19
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 934
+        width: 58
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 718d560c427297280800000000000000
+      internalID: -9045155337796724713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_20
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 741
+        width: 38
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81640fbd2bc1ccc40800000000000000
+      internalID: 5533829596651210264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_21
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 721
+        width: 19
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d05f45a48f48b870800000000000000
+      internalID: 8698790111393829073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_22
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 722
+        width: 34
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 921b9ec22f25d3720800000000000000
+      internalID: 2827507341147615529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_23
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 601
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22f361d675791e4f0800000000000000
+      internalID: -801192856947114206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_24
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 409
+        width: 228
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bad9d7d77f8ceab0800000000000000
+      internalID: -4977445743265981770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_25
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 409
+        width: 250
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10051912433913fb0800000000000000
+      internalID: -4669789486495739903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_26
+      rect:
+        serializedVersion: 2
+        x: 705
+        y: 103
+        width: 381
+        height: 623
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9701c940368dc40a0800000000000000
+      internalID: -6895899009620373383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_27
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 552
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 640876770250d99e0800000000000000
+      internalID: -1613127454528405434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_28
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 544
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a060a3859f8e7400800000000000000
+      internalID: 323854095538479272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_29
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 533
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b6b951610db867e0800000000000000
+      internalID: -1771958639744403789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_30
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 441
+        width: 101
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 610076148f8ab06f0800000000000000
+      internalID: -717293931432837098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_31
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 343
+        width: 30
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2715859db18015cf0800000000000000
+      internalID: -265421987334565518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_32
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 404
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d2d42f642e5e4f70800000000000000
+      internalID: 9173373001576796880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_33
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 0
+        width: 217
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4df5d74e1fc0b8f0800000000000000
+      internalID: -526693427441173171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_34
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 0
+        width: 337
+        height: 394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fd173e5cfd7c3cf0800000000000000
+      internalID: -271203354683171342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_35
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 387
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de705bac6ee321040800000000000000
+      internalID: 4616821728972441581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_36
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 387
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dd2fc1b5aae45230800000000000000
+      internalID: 3626781597313740249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_37
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 83
+        width: 171
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30feae505ed9dd4f0800000000000000
+      internalID: -802311551629725949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_38
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 353
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 261c71a9da622b020800000000000000
+      internalID: 2355988082124636514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_39
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 361
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e5f6fa59945b3080800000000000000
+      internalID: -9206671995595983392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_40
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 345
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a2f5f42a5dfb580800000000000000
+      internalID: -8809087453020345701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_41
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 65
+        width: 89
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8142d00a3acba51d0800000000000000
+      internalID: -3361166760927747048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_42
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 327
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a672cea6fd65f48b0800000000000000
+      internalID: -5165814729999112342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_43
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 325
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61145f0b2cf71c70800000000000000
+      internalID: 8941892847038370154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_44
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 96
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d64dc128a861320800000000000000
+      internalID: 2528360532249177454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_45
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 87
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f478bd2531f137c0800000000000000
+      internalID: -4093225375600446215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_46
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 0
+        width: 68
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 916b67c734a891d80800000000000000
+      internalID: -8279434417488349671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_47
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 101
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2abf0c0e7140d6810800000000000000
+      internalID: 1760067529973234594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_48
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 45
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e4cc8cb4e5753f90800000000000000
+      internalID: -6974538822637009689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_49
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 46
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f2db259b9c16d10800000000000000
+      internalID: 2117195097635106650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_50
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 47
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ece715bf1f44aff0800000000000000
+      internalID: -25808700256555808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_51
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 57
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a1d8ca2112015400800000000000000
+      internalID: 311032122020778406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_52
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 48
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8f21a10bf980bd00800000000000000
+      internalID: 986440029551275919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_53
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 15
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b78db0d7cdb00c40800000000000000
+      internalID: 5476585812780746680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ChildEdelzio_54
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 0
+        width: 105
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d1913716d406b370800000000000000
+      internalID: 8337857077681689042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ChildEdelzio_0: 5095354302269812492
+      ChildEdelzio_1: 3417057568356147781
+      ChildEdelzio_10: 5961357533038087824
+      ChildEdelzio_11: 9204743084583006232
+      ChildEdelzio_12: 2495444880143036728
+      ChildEdelzio_13: -6542167850905798298
+      ChildEdelzio_14: 8105481659937407856
+      ChildEdelzio_15: 6947456697953552059
+      ChildEdelzio_16: -1389217981204454092
+      ChildEdelzio_17: 453054537631768878
+      ChildEdelzio_18: 4663404681440659458
+      ChildEdelzio_19: -9045155337796724713
+      ChildEdelzio_2: -7505033201128570511
+      ChildEdelzio_20: 5533829596651210264
+      ChildEdelzio_21: 8698790111393829073
+      ChildEdelzio_22: 2827507341147615529
+      ChildEdelzio_23: -801192856947114206
+      ChildEdelzio_24: -4977445743265981770
+      ChildEdelzio_25: -4669789486495739903
+      ChildEdelzio_26: -6895899009620373383
+      ChildEdelzio_27: -1613127454528405434
+      ChildEdelzio_28: 323854095538479272
+      ChildEdelzio_29: -1771958639744403789
+      ChildEdelzio_3: 2296233307521694357
+      ChildEdelzio_30: -717293931432837098
+      ChildEdelzio_31: -265421987334565518
+      ChildEdelzio_32: 9173373001576796880
+      ChildEdelzio_33: -526693427441173171
+      ChildEdelzio_34: -271203354683171342
+      ChildEdelzio_35: 4616821728972441581
+      ChildEdelzio_36: 3626781597313740249
+      ChildEdelzio_37: -802311551629725949
+      ChildEdelzio_38: 2355988082124636514
+      ChildEdelzio_39: -9206671995595983392
+      ChildEdelzio_4: 2843926413690366024
+      ChildEdelzio_40: -8809087453020345701
+      ChildEdelzio_41: -3361166760927747048
+      ChildEdelzio_42: -5165814729999112342
+      ChildEdelzio_43: 8941892847038370154
+      ChildEdelzio_44: 2528360532249177454
+      ChildEdelzio_45: -4093225375600446215
+      ChildEdelzio_46: -8279434417488349671
+      ChildEdelzio_47: 1760067529973234594
+      ChildEdelzio_48: -6974538822637009689
+      ChildEdelzio_49: 2117195097635106650
+      ChildEdelzio_5: 2860250491718960509
+      ChildEdelzio_50: -25808700256555808
+      ChildEdelzio_51: 311032122020778406
+      ChildEdelzio_52: 986440029551275919
+      ChildEdelzio_53: 5476585812780746680
+      ChildEdelzio_54: 8337857077681689042
+      ChildEdelzio_6: 8663097556304983117
+      ChildEdelzio_7: -2196522653600340301
+      ChildEdelzio_8: 8394253493054954615
+      ChildEdelzio_9: -4697469644848297311
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

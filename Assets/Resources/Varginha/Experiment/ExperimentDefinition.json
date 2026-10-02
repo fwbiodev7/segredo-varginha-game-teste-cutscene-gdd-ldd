@@ -1,0 +1,25 @@
+{
+  "title": "O SEGREDO DE VARGINHA",
+  "shots": [
+    { "id": "signal", "duration": 5, "asset": "OpeningStoryboard", "panel": 0, "mode": "signal", "title": "VARGINHA • 1996", "subtitle": "Uma transmissão atravessa a noite.", "voice": "" },
+    { "id": "news", "duration": 10, "asset": "OpeningStoryboard", "panel": 0, "mode": "news", "title": "RELATOS EM VARGINHA", "subtitle": "Moradores relatam o avistamento de uma criatura. As versões ainda se contradizem.", "voice": "NewsAnchor" },
+    { "id": "street", "duration": 12, "asset": "OpeningStoryboard", "panel": 1, "mode": "street", "title": "O QUE FOI VISTO?", "subtitle": "Eu vi alguma coisa perto da rua. Quando a luz voltou, já não estava lá.", "voice": "Witness" },
+    { "id": "evidence", "duration": 10, "asset": "OpeningStoryboard", "panel": 2, "mode": "evidence", "title": "FRAGMENTOS DE UMA NOITE", "subtitle": "Fotografias, recortes e um mapa incompleto. A mesma marca aparece mais de uma vez.", "voice": "" },
+    { "id": "interference", "duration": 8, "asset": "OpeningStoryboard", "panel": 0, "mode": "interference", "title": "SINAL INTERROMPIDO", "subtitle": "Não deixa ela sair.", "voice": "Memory" },
+    { "id": "room", "duration": 10, "asset": "OpeningStoryboard", "panel": 3, "mode": "room", "title": "A CASA DE EDELZIO", "subtitle": "A reportagem termina. Um brilho começa a aparecer pela janela.", "voice": "" },
+    { "id": "flash", "duration": 4, "asset": "OpeningStoryboard", "panel": 3, "mode": "flash", "title": "O CLARÃO", "subtitle": "A lembrança termina antes da resposta.", "voice": "" },
+    { "id": "timeskip", "duration": 4, "asset": "IndustrialFacade", "panel": -1, "mode": "timeskip", "title": "30 ANOS DEPOIS", "subtitle": "Varginha, 2026.", "voice": "" },
+    { "id": "school", "duration": 7, "asset": "IndustrialFacade", "panel": -1, "mode": "school", "title": "INDUSTRIAL", "subtitle": "Renan está na escola. O caderno de 1996 ainda espera por uma explicação.", "voice": "" }
+  ],
+  "puzzles": [
+    { "id": "map", "title": "FRAGMENTOS DO MAPA", "description": "Reúna os quatro recortes. O rio e a estrada devem continuar de um fragmento para o outro.", "hint": "A igreja fica a noroeste; o rio desce pela direita. Clique em duas peças para trocá-las.", "items": ["Arquivo da escola", "Caderno de 1996", "Registro da diocese", "Recorte antigo"], "solution": [2, 0, 3, 1], "initial": [1, 3, 0, 2], "reward": "O mapa aponta para a mata e para uma propriedade antiga.", "code": "" },
+    { "id": "documents", "title": "DOCUMENTOS FORA DE ORDEM", "description": "Compare as páginas e reconstrua a sequência histórica. Clique em duas páginas para trocar suas posições.", "hint": "Primeiro houve a abertura, depois a contenção. O acordo de 1996 precede as interferências de 2026.", "items": ["1996 — Uma criança aceitou um acordo. Seu nome foi acrescentado ao registro naquele ano.", "1898 — Zé Gomes abriu uma passagem enquanto investigava uma força desconhecida.", "2026 — A instabilidade retorna através da eletricidade e das lembranças de Edelzio.", "1898 — Os envolvidos fecharam a passagem. Os registros sobre seus interesses foram ocultados."], "solution": [1, 3, 0, 2], "initial": [2, 0, 3, 1], "reward": "1898 explica a ruptura; 1996 explica o selo vivo; 2026 mostra seu enfraquecimento.", "code": "" },
+    { "id": "code", "title": "O CÓDIGO DA FOTOGRAFIA", "description": "A fotografia repete a sequência de símbolos: R • S • R • S. Cruze-a com a legenda recuperada.", "hint": "R corresponde a 2. S corresponde a 3. Leia os quatro símbolos da esquerda para a direita.", "items": ["R = 2", "S = 3", "R • S • R • S", "Destino: arquivo subterrâneo da diocese"], "solution": [], "initial": [], "reward": "23:23 — Diocese. Padre Fábio guarda um registro sobre Edelzio, o próprio selo vivo.", "code": "2323" }
+  ],
+  "characters": [
+    { "id": "edelzio", "name": "Edelzio", "cell": 0, "role": "Professor • protagonista", "description": "Camisa amarela desbotada, óculos, cabelo curto e cavanhaque. É o selo vivo; sua escolha de 1996 é a revelação da campanha." },
+    { "id": "renan", "name": "Renan", "cell": 1, "role": "Colaborador técnico • Industrial", "description": "Corpo mais largo, óculos, barba, camisa laranja e sobrecamisa marrom/xadrez. Ajuda a conferir arquivos e padrões na escola." },
+    { "id": "fabio", "name": "Padre Fábio", "cell": 2, "role": "Guardião • Igreja", "description": "Óculos, barba, polo cinza com detalhes azuis. Guarda o Livro do Tombo e omite parte da história." },
+    { "id": "ouzana", "name": "Ouzana", "cell": 3, "role": "Bióloga • região rural", "description": "Mulher negra, cabelos cacheados, óculos, blusa branca e jeans escuro. Seu reagente revela cicatrizes da realidade." }
+  ]
+}

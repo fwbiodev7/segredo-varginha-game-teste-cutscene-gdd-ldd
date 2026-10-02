@@ -29,5 +29,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FaseTopView_Varginha.unity
     guid: 2bbb5331da8dbac4ba974f3a6ba1a53f
+  - enabled: 1
+    path: Assets/Scenes/Laboratorio_GDD_Cutscene.unity
+    guid: 43bb89a484f3cc14b97f7a3293f15901
+  - enabled: 1
+    path: Assets/Scenes/Ato1_Fase1_O_Caso_de_Varginha.unity
+    guid: 70ccfddc415dc3d47895c9ada38bd46d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
