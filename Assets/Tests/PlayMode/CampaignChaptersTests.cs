@@ -62,7 +62,8 @@ namespace Game.Tests.PlayMode
             Assert.That(VarginhaGameHUD.Instance.IsInventoryOpen, Is.True);
             VarginhaGameHUD.Instance.CloseBackpack(); yield return null;
             Assert.That(VarginhaGameHUD.Instance.IsInventoryOpen, Is.False);
-            Assert.That(Object.FindAnyObjectByType<EdelzioTopDownController>().GetComponent<SpriteRenderer>().sprite.rect.width, Is.EqualTo(64), "The original backpack compositing keeps full sprite cells.");
+            yield return new WaitForSeconds(.1f);
+            Assert.That(Object.FindAnyObjectByType<EdelzioTopDownController>().GetComponent<SpriteRenderer>().sprite.name, Does.StartWith("Team_"), "The supplied character remains visible after closing the original backpack.");
             stage.Interact("box"); stage.FinishCutscene();
             Assert.That(stage.SubmitPages(), Is.False);
             stage.Progress.pages = new[] { 0, 1, 2 }; Assert.That(stage.SubmitPages(), Is.True); stage.FinishCutscene();

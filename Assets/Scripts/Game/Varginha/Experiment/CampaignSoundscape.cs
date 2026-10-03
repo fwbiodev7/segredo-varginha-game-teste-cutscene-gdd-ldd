@@ -14,7 +14,7 @@ namespace Game.Varginha.Experiment
         private bool _school;
         public void Configure(string environment, EdelzioTopDownController actor = null)
         {
-            _actor = actor; _school = environment == "School";
+            _actor = actor; _school = environment == "School" || environment == "Lab" || environment == "Church" || environment == "Workshop";
             _effects = gameObject.AddComponent<AudioSource>(); _effects.playOnAwake = false; _effects.volume = .48f;
             _ambience = gameObject.AddComponent<AudioSource>(); _ambience.playOnAwake = false; _ambience.loop = true; _ambience.volume = .12f;
             _ambience.clip = Clip(environment + "Ambience"); _ambience.Play();
@@ -31,7 +31,7 @@ namespace Game.Varginha.Experiment
             _engine.pitch = Mathf.Lerp(.85f, 1.35f, Mathf.Clamp01(throttle));
             if (running && !_engine.isPlaying) _engine.Play(); else if (!running && _engine.isPlaying) _engine.Stop();
         }
-        public void Play(string sound) { if (_effects != null) _effects.PlayOneShot(Clip(sound)); }
+        public void Play(string sound) { if (_effects != null) _effects.PlayOneShot(Clip(sound), sound.StartsWith("Foot") ? .28f : 1f); }
         public void Suspend(bool value)
         {
             if (_ambience == null) return;
@@ -65,6 +65,10 @@ namespace Game.Varginha.Experiment
                     float bed = Mathf.Sin(t * Mathf.PI * 2 * 55) * .055f + Mathf.Sin(t * Mathf.PI * 2 * 82) * .026f;
                     float outdoor = Mathf.Sin(t * Mathf.PI * 2 * (2400 + 80 * Mathf.Sin(t * 3))) * Mathf.Pow(Mathf.Max(0, Mathf.Sin(t * 5)), 12) * .03f;
                     value = filtered * (id == "SchoolAmbience" ? .35f : .19f) + bed + outdoor;
+                    if(id=="ChurchAmbience")value=filtered*.12f+(Mathf.Sin(t*Mathf.PI*2*38)*.07f+Mathf.Sin(t*Mathf.PI*2*57)*.03f)*(.7f+.3f*Mathf.Sin(t*.8f));
+                    if(id=="LabAmbience")value=filtered*.25f+Mathf.Sin(t*Mathf.PI*2*110)*.018f+(t%2.4f<.06f?Mathf.Sin(t*Mathf.PI*2*660)*.025f:0);
+                    if(id=="ForestAmbience")value=filtered*.3f+outdoor*2;
+                    if(id=="WorkshopAmbience")value=filtered*.2f+Mathf.Sin(t*Mathf.PI*2*88)*.025f;
                 }
                 else if (id == "Success")
                 {

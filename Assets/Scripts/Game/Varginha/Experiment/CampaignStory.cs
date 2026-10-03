@@ -17,7 +17,8 @@ namespace Game.Varginha.Experiment
         public int circle = 1, triangle = 1;
         public float driveDistance, x, y;
         public int positionPhase;
-        public int MapFragments => (pagesSolved ? 1 : 0) + (buildingSolved ? 1 : 0);
+        public CampaignExpansionState expansion = new();
+        public int MapFragments => (pagesSolved ? 1 : 0) + (buildingSolved ? 1 : 0) + ((expansion.visited & 1) != 0 ? 1 : 0);
         public bool CanLeaveHouse => routine == 15 && pagesSolved;
         public bool CanSolveBuilding => renanMet && lesson && archive;
         public bool CanDecode => buildingSolved && symbolsFound && legendFound;
@@ -44,7 +45,8 @@ namespace Game.Varginha.Experiment
         }
         public void Repair()
         {
-            phase = Mathf.Clamp(phase, 1, 5); routine &= 15; inspection &= 7;
+            phase = Mathf.Clamp(phase, 1, 10); routine &= 15; inspection &= 7;
+            expansion ??= new CampaignExpansionState(); expansion.Repair();
             if (pages == null || pages.Length != 3 || !IsPermutation(pages)) pages = new[] { 2, 0, 1 };
             if (symbols == null || symbols.Length != 4) symbols = new[] { 1, 0, 1, 0 };
             for (int i = 0; i < symbols.Length; i++) symbols[i] = Mathf.Clamp(symbols[i], 0, 1);
@@ -77,17 +79,24 @@ namespace Game.Varginha.Experiment
         }
         public static void Write(CampaignStory data)
         {
+            string temp=Path+"."+Guid.NewGuid().ToString("N")+".tmp";
             try
             {
                 Directory.CreateDirectory(Application.persistentDataPath);
-                string temp = Path + ".tmp"; File.WriteAllText(temp, JsonUtility.ToJson(data, true));
-                if (File.Exists(Path)) File.Replace(temp, Path, null); else File.Move(temp, Path);
+                File.WriteAllText(temp, JsonUtility.ToJson(data, true));
+                for(int attempt=0;;attempt++)
+                {
+                    try{if(File.Exists(Path))File.Replace(temp,Path,null);else File.Move(temp,Path);break;}
+                    catch(IOException) when(attempt<4){System.Threading.Thread.Sleep(10);}
+                }
             }
             catch (Exception e) when (e is IOException || e is UnauthorizedAccessException || e is PlatformNotSupportedException)
             { Debug.LogWarning("Não foi possível salvar a campanha: " + e.GetType().Name); }
+            finally { try{if(File.Exists(temp))File.Delete(temp);}catch(IOException){}catch(UnauthorizedAccessException){} }
         }
         public static string Scene(int phase) => phase == 1 ? VarginhaCampaignPhase1.SceneName
-            : phase == 3 ? VarginhaCampaignDrive.SceneName : "Ato2_Fase" + phase + "_" + (phase == 2 ? "A_Chave_e_a_Caixa" : phase == 4 ? "Entre_Aulas_e_Pistas" : "O_Codigo_das_2323");
+            : phase == 3 ? VarginhaCampaignDrive.SceneName : phase >= 6 ? CampaignExpansionController.SceneName(phase)
+            : "Ato2_Fase" + phase + "_" + (phase == 2 ? "A_Chave_e_a_Caixa" : phase == 4 ? "Entre_Aulas_e_Pistas" : "O_Codigo_das_2323");
         public static void GoTo(int phase)
         {
             string scene = Scene(phase);

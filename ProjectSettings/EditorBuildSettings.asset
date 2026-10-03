@@ -47,5 +47,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ato2_Fase5_O_Codigo_das_2323.unity
     guid: e8693e5ae5ffbcd47a3a951cfd5c1a57
+  - enabled: 1
+    path: Assets/Scenes/Ato3_Fase6_Fragmentos.unity
+    guid: cb7d7d0e205d2c24d9a13624cbd3a208
+  - enabled: 1
+    path: Assets/Scenes/Ato3_Fase7_A_Mata.unity
+    guid: 30ad62e9e543bd547b8615b208802aa3
+  - enabled: 1
+    path: Assets/Scenes/Ato3_Fase8_A_Ancora.unity
+    guid: 9b319817a3d3a6544be3a006cafc24f9
+  - enabled: 1
+    path: Assets/Scenes/Ato4_Fase9_Ouzana.unity
+    guid: fdc90a63d4e50b448aace465cdd98dd3
+  - enabled: 1
+    path: Assets/Scenes/Ato4_Fase10_O_Fusca_Marcado.unity
+    guid: 659eb12b01feb714084cd37ba2c51576
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

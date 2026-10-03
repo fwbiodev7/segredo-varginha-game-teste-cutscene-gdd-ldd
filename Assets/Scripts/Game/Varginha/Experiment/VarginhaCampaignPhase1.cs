@@ -76,7 +76,7 @@ namespace Game.Varginha.Experiment
             "Um desenho seu: a casa, uma árvore e uma figura sem rosto. Você não lembra de ter feito a última parte.",
             "Carrinhos, papéis e uma caixa velha. Você guarda um desenho aqui. Um dia, essa caixa voltará a ser importante."
         };
-        private readonly Vector2[] _points = { new(4.6f, 5.55f), new(4.6f, 1.85f), new(-4.55f, 5.35f), new(-6.3f, 3.15f) };
+        private readonly Vector2[] _points = { new(4.6f, 4.5f), new(4.6f, 1.5f), new(-4.55f, 4.5f), new(-7.6f, 1.5f) };
         public CampaignMemory Memory => _memory;
         public bool IsExploring => _stage == Stage.Explore;
         public static void StartCampaign(bool continueGame)
@@ -86,7 +86,13 @@ namespace Game.Varginha.Experiment
             else if (CampaignStorySave.Load().phase > 1) { Time.timeScale = 1; GameManager.Instance?.StartGame(); SceneManager.LoadScene(CampaignStorySave.Scene(CampaignStorySave.Load().phase)); return; }
             Time.timeScale = 1; GameManager.Instance?.StartGame(); SceneManager.LoadScene(SceneName);
         }
-        private void Awake() => Active = this;
+        private void Awake()
+        {
+            Active = this;
+            var plan = CampaignMapPlan.Create(1);
+            CampaignMapConstruction.Build(transform, plan);
+            if (FindAnyObjectByType<EdelzioTopDownController>() == null) CampaignMapConstruction.CreatePlayer(transform, plan, true);
+        }
         private IEnumerator Start()
         {
             _memory = CampaignMemorySave.Load(); _composer = new ExperimentFrameComposer();
@@ -95,7 +101,8 @@ namespace Game.Varginha.Experiment
             QuietHouse();
             _player.HasBackpack = _player.HasResearchNotebook = _player.HasFuscaKey = false;
             _player.SetCombatLocked(false); _player.CanDodge = false;
-            _player.transform.position = new Vector3(_memory.x, _memory.y);
+            var housePlan=CampaignMapPlan.Create(1);
+            _player.transform.position = housePlan.IsClear(new Vector2(_memory.x,_memory.y))?new Vector3(_memory.x,_memory.y):(Vector3)housePlan.spawn;
             var adult = _player.GetComponent<VarginhaPlayerSpriteAnimation>(); if (adult != null) adult.enabled = false;
             var action = _player.GetComponent<VarginhaPlayerActionAnimation>(); if (action != null) action.enabled = false;
             var attack = _player.GetComponent<VarginhaPlayerAttack>(); if (attack != null) attack.enabled = false;

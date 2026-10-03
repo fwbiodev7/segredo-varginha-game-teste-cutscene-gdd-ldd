@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="7" result="Passed" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-03 01:08:12Z" end-time="2026-10-03 01:09:20Z" duration="67,655442">
+  <test-suite type="TestSuite" id="1227" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="192" result="Passed" start-time="2026-10-03 01:08:12Z" end-time="2026-10-03 01:09:20Z" duration="67.655442" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1447" name="GamePlayModeTests.dll" fullname="V:/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="192" result="Passed" start-time="2026-10-03 01:08:12Z" end-time="2026-10-03 01:09:20Z" duration="67.646182" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="29204" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1448" name="Game" fullname="Game" runstate="Runnable" testcasecount="192" result="Passed" start-time="2026-10-03 01:08:12Z" end-time="2026-10-03 01:09:20Z" duration="67.632351" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1449" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="192" result="Passed" start-time="2026-10-03 01:08:12Z" end-time="2026-10-03 01:09:20Z" duration="67.618226" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1450" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="192" result="Passed" start-time="2026-10-03 01:08:12Z" end-time="2026-10-03 01:09:20Z" duration="67.599068" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1228" name="CampaignChaptersTests" fullname="Game.Tests.PlayMode.CampaignChaptersTests" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-03 01:08:12Z" end-time="2026-10-03 01:08:57Z" duration="44.156629" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1229" name="ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor" fullname="Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor" methodname="ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="496686825" result="Passed" start-time="2026-10-03 01:08:12Z" end-time="2026-10-03 01:08:15Z" duration="2.404758" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor
+QA test: Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor
+]]></output>
+              </test-case>
+              <test-case id="1230" name="HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" fullname="Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" methodname="HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="408217367" result="Passed" start-time="2026-10-03 01:08:15Z" end-time="2026-10-03 01:08:57Z" duration="41.725826" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+QA test: Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1231" name="CampaignExpansionPlayTests" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-03 01:08:57Z" end-time="2026-10-03 01:09:20Z" duration="23.426222" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1232" name="AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions" methodname="AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1240558290" result="Passed" start-time="2026-10-03 01:08:57Z" end-time="2026-10-03 01:09:00Z" duration="3.441613" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions
+QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions
+]]></output>
+              </test-case>
+              <test-case id="1236" name="CharacterActionsAndPunchUseNewTransparentAnimationSheets" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets" methodname="CharacterActionsAndPunchUseNewTransparentAnimationSheets" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="208380795" result="Passed" start-time="2026-10-03 01:09:00Z" end-time="2026-10-03 01:09:04Z" duration="3.962888" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+]]></output>
+              </test-case>
+              <test-case id="1234" name="FuscaRequiresStabilizationAndCompletesOnlyAfterDrivingTheTrack" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaRequiresStabilizationAndCompletesOnlyAfterDrivingTheTrack" methodname="FuscaRequiresStabilizationAndCompletesOnlyAfterDrivingTheTrack" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="541543640" result="Passed" start-time="2026-10-03 01:09:04Z" end-time="2026-10-03 01:09:12Z" duration="7.539562" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaRequiresStabilizationAndCompletesOnlyAfterDrivingTheTrack
+QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaRequiresStabilizationAndCompletesOnlyAfterDrivingTheTrack
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaRequiresStabilizationAndCompletesOnlyAfterDrivingTheTrack
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaRequiresStabilizationAndCompletesOnlyAfterDrivingTheTrack
+]]></output>
+              </test-case>
+              <test-case id="1233" name="PhysicalMovementUsesDoorsAndCannotCrossTheArchiveWall" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.PhysicalMovementUsesDoorsAndCannotCrossTheArchiveWall" methodname="PhysicalMovementUsesDoorsAndCannotCrossTheArchiveWall" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1567743005" result="Passed" start-time="2026-10-03 01:09:12Z" end-time="2026-10-03 01:09:16Z" duration="4.830294" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.PhysicalMovementUsesDoorsAndCannotCrossTheArchiveWall
+QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.PhysicalMovementUsesDoorsAndCannotCrossTheArchiveWall
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.PhysicalMovementUsesDoorsAndCannotCrossTheArchiveWall
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.PhysicalMovementUsesDoorsAndCannotCrossTheArchiveWall
+]]></output>
+              </test-case>
+              <test-case id="1235" name="SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" methodname="SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="201667086" result="Passed" start-time="2026-10-03 01:09:16Z" end-time="2026-10-03 01:09:20Z" duration="3.612540" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

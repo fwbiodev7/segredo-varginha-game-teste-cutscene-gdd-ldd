@@ -41,20 +41,7 @@ namespace Game.Varginha.Experiment
         }
         private void BuildRoad()
         {
-            Part("Rua", new Vector2(0, 68), new Vector2(10, 150), "Street_Campaign", new Color(.20f, .23f, .26f), 0);
-            Part("Calçada_Esquerda", new Vector2(-6, 68), new Vector2(2, 150), "Driveway", new Color(.37f, .36f, .33f), 1);
-            Part("Calçada_Direita", new Vector2(6, 68), new Vector2(2, 150), "Driveway", new Color(.37f, .36f, .33f), 1);
-            for (int y = -5; y < 142; y += 8)
-            {
-                Part("Faixa_" + y, new Vector2(0, y), new Vector2(.15f, 2), "RoadMarking", new Color(.68f, .65f, .47f), 1);
-                float side = y % 16 == 3 ? -1 : 1;
-                var house = Part("Casa_" + y, new Vector2(side * 10, y), new Vector2(5, 5), "Wall_House", new Color(.33f, .28f, .25f), 2);
-                house.AddComponent<BoxCollider2D>();
-                Part("Telhado_" + y, new Vector2(side * 10, y + .6f), new Vector2(5.2f, 3.5f), "Wall_Roof", new Color(.36f, .17f, .13f), 3);
-                Part("Janela_" + y, new Vector2(side * 9.2f, y - 1.6f), new Vector2(.85f, .65f), "Window", new Color(.67f, .69f, .46f), 3);
-                Part("Árvore_" + y, new Vector2(-side * 8.2f, y + 2.5f), new Vector2(1.4f, 1.8f), "Tree_Campaign", new Color(.16f, .26f, .19f), 3);
-                Part("Poste_" + y, new Vector2(5.7f, y + 3), new Vector2(.6f, 1.8f), "StreetLamp", new Color(.75f, .65f, .40f), 3);
-            }
+            CampaignMapConstruction.Build(transform,CampaignMapPlan.Create(3));
             var car = new GameObject("Fusca_TopView_Campanha"); car.transform.SetParent(transform); _car = car.transform;
             _car.position = new Vector3(-2, _progress.driveDistance);
             var texture = VarginhaExperimentArt.Load("FuscaTopView");
@@ -75,7 +62,7 @@ namespace Game.Varginha.Experiment
         private GameObject Part(string name, Vector2 position, Vector2 size, string motif, Color tint, int order)
         {
             var item = new GameObject(name); item.transform.SetParent(transform); item.transform.position = position;
-            var sr = item.AddComponent<SpriteRenderer>(); sr.sprite = VarginhaPixelArtSprites.Create(motif, tint); sr.drawMode = SpriteDrawMode.Tiled; sr.size = size; sr.sortingOrder = order;
+            var sr = item.AddComponent<SpriteRenderer>(); sr.sprite = motif=="StreetLamp"?CampaignVisualAssets.Prop("Lamp")??VarginhaPixelArtSprites.Create(motif,tint):VarginhaPixelArtSprites.Create(motif,tint); sr.drawMode = SpriteDrawMode.Tiled; sr.size = size; sr.sortingOrder = order;
             return item;
         }
         private void Update()

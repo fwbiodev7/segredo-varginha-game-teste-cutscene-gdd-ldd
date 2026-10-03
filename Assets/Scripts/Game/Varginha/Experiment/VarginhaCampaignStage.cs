@@ -39,19 +39,36 @@ namespace Game.Varginha.Experiment
         private void Awake()
         {
             Active = this;
-            if (phase >= 4) VarginhaPhase2RuntimeFactory.Build(transform);
+            if (phase >= 4)
+            {
+                var school=new GameObject("Escola_3_Sistema_Ambiente");school.transform.SetParent(transform);
+                var plan=CampaignMapPlan.Create(phase);CampaignMapConstruction.Build(school.transform,plan);CampaignMapConstruction.CreatePlayer(transform,plan);
+                foreach(string name in VarginhaPhase2Controller.StudentNames)
+                {
+                    var student=new GameObject("Refem_"+name.Replace(" ","_"));student.transform.SetParent(transform);
+                    student.AddComponent<SpriteRenderer>().sprite=VarginhaStudentSprites.Frame(name,0,0);
+                    var body=student.AddComponent<Rigidbody2D>();body.gravityScale=0;body.constraints=RigidbodyConstraints2D.FreezeRotation;
+                    var feet=student.AddComponent<CircleCollider2D>();feet.radius=.22f;feet.offset=new Vector2(0,-.58f);
+                    VarginhaWorldDepth.Ensure(student.GetComponent<SpriteRenderer>(),ground:feet);
+                }
+            }
         }
         private IEnumerator Start()
         {
             _progress = CampaignStorySave.Load(); _progress.phase = phase;
             yield return null;
+            if (VarginhaGameHUD.Instance == null)
+            {
+                var hud = new GameObject("Campaign_HUD"); hud.transform.SetParent(transform); hud.AddComponent<VarginhaGameHUD>();
+            }
             CampaignPresentation.QuietWorld();
             _player = FindAnyObjectByType<EdelzioTopDownController>();
+            if (_player.GetComponent<CampaignTeamEdelzio>() == null) _player.gameObject.AddComponent<CampaignTeamEdelzio>();
             _player.SetCombatLocked(false); _player.CanDodge = false;
             CampaignPresentation.FootCollision(_player, false);
             if (phase == 2) BuildHousePoints(); else BuildSchoolPoints();
-            if (_progress.positionPhase == phase) _player.transform.position = new Vector3(_progress.x, _progress.y);
-            else _player.transform.position = phase == 2 ? new Vector3(-5, 2) : new Vector3(.75f, -7.8f);
+            if (_progress.positionPhase == phase && (phase==2 || CampaignMapPlan.Create(phase).IsClear(new Vector2(_progress.x,_progress.y-.58f)))) _player.transform.position = new Vector3(_progress.x, _progress.y);
+            else _player.transform.position = phase == 2 ? new Vector3(-5, 2) : (Vector3)(CampaignMapPlan.Create(phase).spawn+Vector2.up*.58f);
             RestoreInventory();
             _sound = gameObject.AddComponent<CampaignSoundscape>(); _sound.Configure(phase == 2 ? "House" : "School", _player);
             GameManager.Instance?.StartGame(); _ready = true; Lock(); Save();
@@ -76,7 +93,7 @@ namespace Game.Varginha.Experiment
         private void BuildSchoolPoints()
         {
             var school = GameObject.Find("Escola_3_Sistema_Ambiente");
-            if (school != null) VarginhaIndustrialSchoolFacade.Ensure(school.transform);
+            if (school != null) CampaignMapConstruction.PreserveSchoolFacade(school.transform);
             foreach (var hostage in FindObjectsByType<VarginhaStudentHostage>(FindObjectsInactive.Include, FindObjectsSortMode.None))
             {
                 // These are ordinary classes in Act II; retain each student's existing sprite.
@@ -85,19 +102,20 @@ namespace Game.Varginha.Experiment
             }
             foreach (var sr in FindObjectsByType<SpriteRenderer>(FindObjectsInactive.Include, FindObjectsSortMode.None))
                 if (sr.name.Contains("HostageCage") || sr.name.Contains("Jaula") || sr.name.Contains("Cage")) sr.gameObject.SetActive(false);
-            Vector2[] seats = { new(-5.7f,2.2f), new(-2.8f,2.2f), new(3.8f,2.2f), new(6.7f,2.2f), new(-5.7f,-.3f), new(3.8f,-.3f), new(6.7f,-.3f), new(.75f,-4.7f), new(2.8f,-6.5f) };
+            Vector2[] seats = { new(-5.85f,2.33f),new(3.75f,2.33f),new(6.55f,2.33f),new(-5.85f,-.07f),new(3.75f,-.07f),new(6.55f,-.07f),new(-5.85f,-2.47f),new(3.75f,-2.47f),new(6.55f,-2.47f) };
             string[] activities = { "conferindo arquivos", "organizando o projeto", "comparando imagens", "anotando os resultados", "fazendo a pesquisa", "revisando documentos", "verificando a legenda", "levando material à aula", "conversando no intervalo" };
             for (int i = 0; i < VarginhaPhase2Controller.StudentNames.Length; i++)
             {
                 string name = VarginhaPhase2Controller.StudentNames[i]; var actor = GameObject.Find("Refem_" + name.Replace(" ", "_"));
                 if (actor == null) continue;
                 var life = actor.AddComponent<CampaignSchoolLife>();
-                life.Configure(name, activities[i], seats[i], i == 7 ? new Vector2(.75f,-7.3f) : new Vector2(4.8f,-7.3f), i >= 7);
+                life.Configure(name, activities[i], seats[i], i == 7 ? new Vector2(.75f,-7.1f) : new Vector2(5,-7.1f), i >= 7);
                 _students.Add(life); _points.Add(new Point("student:" + i, name.ToUpperInvariant() + " • " + activities[i], seats[i], actor.transform));
             }
-            var renan = new GameObject("Renan_Industrial_Campanha"); renan.transform.SetParent(transform); renan.transform.position = new Vector3(2.8f, -7.8f);
+            var renan = new GameObject("Renan_Industrial_Campanha"); renan.transform.SetParent(transform); renan.transform.position = new Vector3(3,-7.7f);
             var renderer = renan.AddComponent<SpriteRenderer>(); renderer.sprite = VarginhaExperimentArt.Body(1); renderer.sortingOrder = 6;
-            renan.AddComponent<CircleCollider2D>().radius = .24f;
+            var renanFeet=renan.AddComponent<CircleCollider2D>();renanFeet.radius=.24f;renanFeet.offset=Vector2.down*.58f;
+            VarginhaWorldDepth.Ensure(renderer,ground:renanFeet);
             _points.Add(new Point("renan", "RENAN", new(2.8f, -7.8f)));
             _points.Add(new Point("lesson", "EXPEDIENTE • MESA DO PROFESSOR", new(.75f, 4.75f)));
             _points.Add(new Point("archive", "ARQUIVO • PLANTAS E REGISTROS", new(-6.5f, -4.65f)));
@@ -105,10 +123,13 @@ namespace Game.Varginha.Experiment
             _points.Add(new Point("mural", "MURAL • LEGENDA DO LEVANTAMENTO", new(7.95f, -4.1f)));
             _points.Add(new Point("research", "PASTA • CORRESPONDÊNCIA DE PESQUISA", new(3.3f, 5.2f)));
             _points.Add(new Point("car", "FUSCA • PREPARAR SAÍDA", new(-5.5f, -10.4f)));
-            var notebook = new GameObject("Notebook_Campanha_Industrial"); notebook.transform.SetParent(transform); notebook.transform.position = new Vector3(-2.8f,3.12f);
+            var notebook = new GameObject("Notebook_Campanha_Industrial"); notebook.transform.SetParent(transform); notebook.transform.position = new Vector3(-3.05f,3.35f);
             var screen = notebook.AddComponent<SpriteRenderer>(); screen.sprite = VarginhaPixelArtSprites.Create("Notebook_Inventory", Color.gray); screen.sortingOrder = 5; notebook.transform.localScale = new Vector3(.72f,.52f,1);
-            var folder = new GameObject("Pasta_Ouzana_Campanha"); folder.transform.SetParent(transform); folder.transform.position = new Vector3(3.3f,5.2f);
+            var folder = new GameObject("Pasta_Ouzana_Campanha"); folder.transform.SetParent(transform); folder.transform.position = new Vector3(1.25f,4.8f);
             var paper = folder.AddComponent<SpriteRenderer>(); paper.sprite = VarginhaPixelArtSprites.Create("Doc_Ouzana", new Color(.8f,.73f,.5f)); paper.sortingOrder = 8; folder.transform.localScale = new Vector3(.6f,.6f,1);
+            var plan=CampaignMapPlan.Create(phase);
+            foreach(var point in _points)
+                foreach(var target in plan.points) if(target.id==point.id) point.position=target.position+new Vector2(0,.58f);
         }
         private void Update()
         {
@@ -477,9 +498,9 @@ namespace Game.Varginha.Experiment
             ExperimentGUI.Label(new Rect(220, 165, 895, 55), "FASE " + phase + " CONCLUÍDA", true);
             ExperimentGUI.Label(new Rect(220, 270, 870, 155), phase == 4
                 ? "O segundo fragmento está no caderno. A fotografia ainda contém marcas que não deveriam estar ali.\n\nPróxima fase: O Código das 23:23."
-                : "Renan confirmou a mensagem. Edelzio leva dois fragmentos de mapa e os documentos à antiga diocese.\n\nAto II concluído. A Fase 6 — Sob a Diocese — será a próxima etapa da campanha.");
+                : "Renan confirmou a mensagem. Cruze os registros municipais, o relato urbano e os arquivos da Industrial.\n\nAto II concluído. Próxima fase: Fragmentos.");
             if (phase == 4 && ExperimentGUI.Button(new Rect(370, 490, 540, 55), "CONTINUAR PARA A FASE 5")) CampaignStorySave.GoTo(5);
-            if (phase == 5 && ExperimentGUI.Button(new Rect(370, 490, 540, 55), "REVER EVIDÊNCIAS NA ESCOLA")) Show(View.World);
+            if (phase == 5 && ExperimentGUI.Button(new Rect(370, 490, 540, 55), "CONTINUAR PARA A FASE 6 • FRAGMENTOS")) CampaignStorySave.GoTo(6);
             if (ExperimentGUI.Button(new Rect(370, 570, 540, 45), "SALVAR E VOLTAR AO MENU")) Menu();
         }
         public void Save()

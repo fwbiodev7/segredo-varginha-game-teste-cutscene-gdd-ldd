@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &809498942
+--- !u!1 &1562401716
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,35 +127,35 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 809498944}
-  - component: {fileID: 809498943}
+  - component: {fileID: 1562401718}
+  - component: {fileID: 1562401717}
   m_Layer: 0
-  m_Name: Campanha_Ato2_Fase5
+  m_Name: Campanha_Fase_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &809498943
+--- !u!114 &1562401717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809498942}
+  m_GameObject: {fileID: 1562401716}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34b6b1f217faa224e9777c028f7bb2f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Game::Game.Varginha.Experiment.VarginhaCampaignStage
   phase: 5
---- !u!4 &809498944
+--- !u!4 &1562401718
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 809498942}
+  m_GameObject: {fileID: 1562401716}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -168,4 +168,4 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 809498944}
+  - {fileID: 1562401718}

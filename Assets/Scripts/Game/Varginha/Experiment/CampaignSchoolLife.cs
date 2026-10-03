@@ -12,6 +12,7 @@ namespace Game.Varginha.Experiment
         public bool Walks;
         private readonly List<Vector2> _path = new();
         private Transform _environment;
+        private CampaignMapPlan _plan;
         private Rigidbody2D _body;
         private SpriteRenderer _renderer;
         private float _nextRoute, _talkUntil;
@@ -32,7 +33,11 @@ namespace Game.Varginha.Experiment
             if (!Walks || Time.timeScale <= 0 || VarginhaCampaignStage.IsModalOpen || Time.time < _talkUntil) return;
             if (Time.time >= _nextRoute && _path.Count == 0)
             {
-                _away = !_away; VarginhaSchoolNavigation.FindPath(_environment, _body.position, _away ? Away : Home, _path);
+                _away = !_away;
+                _plan ??= CampaignMapPlan.Create(VarginhaCampaignStage.Active.phase);
+                var footOffset=GetComponent<CircleCollider2D>().offset;
+                _plan.Route(_body.position+footOffset,(_away?Away:Home)+footOffset,_path);
+                for(int i=0;i<_path.Count;i++)_path[i]-=footOffset;
                 _nextRoute = Time.time + 18;
             }
         }
