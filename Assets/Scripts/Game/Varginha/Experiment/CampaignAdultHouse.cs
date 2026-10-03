@@ -15,8 +15,8 @@ namespace Game.Varginha.Experiment
                 string id=renderer.name;
                 if(id.StartsWith("Door_")||id.StartsWith("Doorway_")){renderer.gameObject.SetActive(false);continue;}
                 if(id=="Wall_Bedroom_H"){renderer.enabled=false;foreach(var collider in renderer.GetComponents<Collider2D>())collider.enabled=false;continue;}
-                if(id.StartsWith("Floor_House")) { Surface(renderer,TextureTile("WoodRequested",1),false);continue; }
-                if(id.StartsWith("Wall_")) { var size=(Vector2)renderer.bounds.size;Surface(renderer,TextureTile("WallRequested",Mathf.Min(size.x,size.y)),size.y>size.x);continue; }
+                if(id.StartsWith("Floor_House")) { Surface(renderer,TextureTile("WoodRequested",1.5f),false);continue; }
+                if(id.StartsWith("Wall_")) { var size=(Vector2)renderer.bounds.size;Surface(renderer,TextureTile("WallRequested",1),size.y>size.x);continue; }
                 Sprite sprite=null;Vector2? position=null;Vector2 box=renderer.bounds.size;bool solid=false;
                 switch(id)
                 {
@@ -53,6 +53,7 @@ namespace Game.Varginha.Experiment
                 WallSegment(portals.transform,"Divisão quarto leste",new Rect(-4.1f,-.3f,4.1f,.6f));
                 Portal(portals.transform,"Portal_Quarto_Escritorio",new Vector2(-5,0),1.8f,false);
                 Portal(portals.transform,"Portal_Escritorio_Sala",new Vector2(0,-3),2f,true);
+                Portal(portals.transform,"Portal_Quarto_Sala",new Vector2(0,1),2f,true);
                 Portal(portals.transform,"Portal_Sala_Quintal",new Vector2(9,0),2.8f,true);
             }
             if(house!=null)
@@ -105,18 +106,17 @@ namespace Game.Varginha.Experiment
         {
             if(tile==null)return;
             var child=original.transform.Find("Requested_Texture");if(child!=null)return;
-            Vector2 size=original.bounds.size;
-            var go=new GameObject("Requested_Texture");go.transform.SetParent(original.transform);
-            go.transform.position=original.transform.position;
-            go.transform.localScale=new Vector3(1/original.transform.lossyScale.x,1/original.transform.lossyScale.y,1);
-            if(vertical)
+            var area=new Rect((Vector2)original.bounds.min,original.bounds.size);
+            if(original.name.StartsWith("Floor_"))
             {
-                go.transform.rotation=Quaternion.Euler(0,0,90);
-                go.transform.localScale=new Vector3(1/original.transform.lossyScale.y,1/original.transform.lossyScale.x,1);
+                var go=new GameObject("Requested_Texture");go.transform.SetParent(original.transform,false);
+                CampaignArchitectureRenderer.Floor(go.transform,"Piso alinhado",area,tile,original.sortingOrder);
             }
-            var renderer=go.AddComponent<SpriteRenderer>();renderer.sprite=tile;renderer.color=Color.white;
-            renderer.sortingLayerID=original.sortingLayerID;renderer.sortingOrder=original.sortingOrder;
-            renderer.drawMode=SpriteDrawMode.Tiled;renderer.size=vertical?new Vector2(size.y,size.x):size;
+            else
+            {
+                var renderer=CampaignArchitectureRenderer.Wall(original.transform,"Requested_Texture",area,tile,true,false);
+                renderer.sortingLayerID=original.sortingLayerID;renderer.sortingOrder=original.sortingOrder;
+            }
             original.enabled=false;
         }
         private static void Fit(SpriteRenderer renderer,Sprite sprite,Vector2 position,Vector2 box,bool solid)
@@ -148,9 +148,7 @@ namespace Game.Varginha.Experiment
         }
         private static void WallSegment(Transform parent,string name,Rect rect)
         {
-            var go=new GameObject(name);go.transform.SetParent(parent,false);go.transform.position=rect.center;
-            var sr=go.AddComponent<SpriteRenderer>();sr.sprite=TextureTile("WallRequested",rect.height);sr.drawMode=SpriteDrawMode.Tiled;sr.size=rect.size;sr.sortingOrder=4;
-            go.AddComponent<BoxCollider2D>().size=rect.size;
+            CampaignArchitectureRenderer.Wall(parent,name,rect,TextureTile("WallRequested",1));
         }
         private static void Portal(Transform parent,string name,Vector2 position,float width,bool vertical)
         {

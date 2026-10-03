@@ -12,7 +12,7 @@ namespace Game.Tests.EditMode
             var plan=CampaignMapPlan.Create(1);
             foreach(var prop in plan.furniture)
             {
-                var art=CampaignVisualAssets.Prop(prop.motif);if(art==null)continue;
+                var art=CampaignInteriorArt.Prop(prop.motif)??CampaignVisualAssets.Prop(prop.motif);if(art==null)continue;
                 Assert.That(prop.size.x/prop.size.y,Is.EqualTo(art.bounds.size.x/art.bounds.size.y).Within(.001f),prop.name);
                 if(prop.footprint.width<=0||prop.footprint.height<=0)continue;
                 var visual=new Rect(prop.position-prop.size/2,prop.size);
@@ -205,7 +205,7 @@ namespace Game.Tests.EditMode
             }
             finally{Object.DestroyImmediate(root);}
         }
-        [Test]public void CryptAndBiologyLabHaveIndependentFloorLightingAndEquipment()
+        [Test]public void ChurchAndBiologyHouseHaveIndependentFloorLightingAndEquipment()
         {
             foreach(int phase in new[]{8,9})
             {
@@ -214,8 +214,16 @@ namespace Game.Tests.EditMode
                 {
                     var map=CampaignMapConstruction.Build(root.transform,CampaignMapPlan.Create(phase));
                     Assert.That(map.GetComponentInChildren<Game.Varginha.VarginhaSoftLighting>().SourceCount,Is.GreaterThan(0));
-                    if(phase==8)Assert.That(map.Find("02_Mobilia_Colisoes/Sarcófago da contenção"),Is.Not.Null);
-                    else Assert.That(map.Find("02_Mobilia_Colisoes/Tanque biológico"),Is.Not.Null);
+                    if(phase==8)
+                    {
+                        Assert.That(map.Find("02_Mobilia_Colisoes/Altar da âncora").GetComponent<SpriteRenderer>().sprite.name,Is.EqualTo("Church_Altar"));
+                        Assert.That(map.Find("02_Mobilia_Colisoes/Passadeira da nave").GetComponents<Collider2D>(),Is.Empty);
+                    }
+                    else
+                    {
+                        Assert.That(map.Find("02_Mobilia_Colisoes/Tanque biológico").GetComponent<SpriteRenderer>().sprite.name,Is.EqualTo("Ouzana_Specimen"));
+                        Assert.That(map.Find("01_Planta_Paredes_Divisoes/Casa de Ouzana").GetComponentInChildren<SpriteRenderer>().sprite.texture,Is.SameAs(Resources.Load<Texture2D>("Varginha/OuzanaArt/Architecture")));
+                    }
                 }
                 finally{Object.DestroyImmediate(root);}
             }

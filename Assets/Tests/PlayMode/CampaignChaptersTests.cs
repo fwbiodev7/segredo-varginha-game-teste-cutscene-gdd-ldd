@@ -26,15 +26,16 @@ namespace Game.Tests.PlayMode
         }
         [UnityTest] public IEnumerator ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor()
         {
-            CampaignMemorySave.Write(new CampaignMemory { openingSeen = true, x = 8, y = 3 });
+            float eastWall=CampaignMapPlan.Create(1).rooms.Find(r=>r.name=="Casa de infância").rect.xMax;
+            CampaignMemorySave.Write(new CampaignMemory { openingSeen = true, x = eastWall-.7f, y = 3 });
             yield return SceneManager.LoadSceneAsync(VarginhaCampaignPhase1.SceneName); yield return null; yield return null;
             var actor = Object.FindAnyObjectByType<EdelzioTopDownController>();
             var keyboard = InputSystem.AddDevice<Keyboard>();
             Press(keyboard.dKey); yield return new WaitForSeconds(.65f); Release(keyboard.dKey);
-            Assert.That(actor.transform.position.x, Is.LessThan(9), "The child cannot cross the east wall.");
-            var body = actor.GetComponent<Rigidbody2D>(); body.position = new Vector2(8, 0); body.linearVelocity = Vector2.zero;
+            Assert.That(actor.transform.position.x, Is.LessThan(eastWall), "The child cannot cross the east wall.");
+            var body = actor.GetComponent<Rigidbody2D>(); body.position = new Vector2(eastWall-.7f, 0); body.linearVelocity = Vector2.zero;
             Press(keyboard.dKey); yield return new WaitForSeconds(.9f); Release(keyboard.dKey);
-            Assert.That(actor.transform.position.x, Is.GreaterThan(10), "The existing east doorway must remain passable.");
+            Assert.That(actor.transform.position.x, Is.GreaterThan(eastWall+1), "The east portal must remain passable.");
             Assert.That(actor.GetComponent<CircleCollider2D>().radius, Is.LessThan(.3f), "The collision shape follows the child's feet.");
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }

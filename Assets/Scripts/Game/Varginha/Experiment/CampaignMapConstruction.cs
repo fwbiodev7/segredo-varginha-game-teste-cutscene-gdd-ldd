@@ -19,34 +19,23 @@ namespace Game.Varginha.Experiment
             int order = -1000;
             foreach (var room in plan.rooms)
             {
-                var layer = new GameObject(room.name).transform; layer.SetParent(architecture);
-                if(room.motif=="Water")
-                {
-                    var water=Render(layer,"Água",CampaignVisualAssets.Floor("Water")??VarginhaSceneryArt.Create("Puddle",Vector2.one),room.rect.center,room.rect.size,order++);
-                    water.drawMode=SpriteDrawMode.Tiled;
-                    continue;
-                }
-                for (int y = 0; y < Mathf.CeilToInt(room.rect.height); y++) for (int x = 0; x < Mathf.CeilToInt(room.rect.width); x++)
-                {
-                    float w = Mathf.Min(1, room.rect.width - x), h = Mathf.Min(1, room.rect.height - y);
-                    var sprite = CampaignVisualAssets.Floor(room.motif)??VarginhaPixelArtSprites.Create(room.motif, room.color);
-                    Render(layer, "Piso", sprite, new Vector2(room.rect.x + x + w / 2, room.rect.y + y + h / 2), new Vector2(w, h), order);
-                }
-                order++;
+                CampaignArchitectureRenderer.Floor(architecture,room.name,room.rect,
+                    CampaignArchitectureRenderer.FloorMaterial(room.motif)??VarginhaPixelArtSprites.Create(room.motif,room.color),order++);
             }
             for (int i = 0; i < plan.walls.Count; i++)
             {
                 var wall = plan.walls[i];
                 bool river = plan.title=="A MATA" && Mathf.Approximately(wall.width,1.5f);
-                var renderer = Render(architecture, "Parede_" + i, CampaignVisualAssets.Wall(plan.phase)??VarginhaPixelArtSprites.Create("Wall_Campanha", new Color(.35f,.29f,.24f)), wall.center, wall.size, 3);
-                renderer.drawMode=SpriteDrawMode.Tiled;
-                bool vertical=wall.height>wall.width;
-                if(vertical){renderer.transform.rotation=Quaternion.Euler(0,0,90);renderer.size=new Vector2(wall.height,wall.width);}
-                renderer.enabled = !river && !(plan.phase==3&&wall.width>=4);
-                var collider = renderer.gameObject.AddComponent<BoxCollider2D>(); collider.size = vertical?new Vector2(wall.height,wall.width):wall.size;
-                VarginhaWorldDepth.Ensure(renderer, background: true, ground: collider);
+                bool forestBoundary=plan.phase==7&&(wall.xMin<=plan.bounds.xMin+.01f||wall.xMax>=plan.bounds.xMax-.01f||wall.yMin<=plan.bounds.yMin+.01f||wall.yMax>=plan.bounds.yMax-.01f);
+                bool outsideBoundary=wall.yMax<=plan.bounds.yMin;
+                var material=plan.phase==1?CampaignAdultHouse.TextureTile("WallRequested",1):CampaignVisualAssets.Wall(plan.phase);
+                if(plan.phase==9)material=CampaignOuzanaArt.Wall(wall.center.x<=-1)??material;
+                CampaignArchitectureRenderer.Wall(architecture,"Parede_"+i,wall,material,
+                    !river&&!forestBoundary&&!outsideBoundary&&!(plan.phase==3&&wall.width>=4));
             }
-            if(plan.phase!=3&&plan.phase!=7)CampaignWallConnections.Build(architecture,plan.walls,CampaignVisualAssets.Wall(plan.phase),plan.phase==1||plan.phase==6);
+            if(plan.phase==9)CampaignWallConnections.Build(architecture,plan.walls,CampaignOuzanaArt.Wall(false),true,p=>CampaignOuzanaArt.Wall(p.x<=-1));
+            else if(plan.phase!=3&&plan.phase!=7)CampaignWallConnections.Build(architecture,plan.walls,
+                plan.phase==1?CampaignAdultHouse.TextureTile("WallRequested",1):CampaignVisualAssets.Wall(plan.phase),plan.phase==1||plan.phase==6);
             if (furnished) Furnish(map, plan);
             return map;
         }
@@ -58,7 +47,7 @@ namespace Game.Varginha.Experiment
             {
                 Sprite sprite;
                 string motif=prop.name.StartsWith("Árvore")&&prop.motif=="Plant"?"Tree":prop.motif;
-                sprite=motif=="Fusca"?null:CampaignVisualAssets.Prop(motif);
+                sprite=motif=="Fusca"?null:CampaignInteriorArt.Prop(motif)??CampaignOuzanaArt.Prop(motif)??CampaignVisualAssets.Prop(motif);
                 if(sprite!=null) { }
                 else if (prop.motif == "Fusca")
                 {
@@ -73,14 +62,16 @@ namespace Game.Varginha.Experiment
                 }
                 else sprite = VarginhaFurnitureArt.Create(prop.motif, prop.size) ?? VarginhaSceneryArt.Create(prop.motif, prop.size);
                 var renderer = Render(layer, prop.name, sprite, prop.position, prop.size, 5);
-                if(plan.phase==1)
+                if(plan.phase==1||motif.StartsWith("Ouzana_")||CampaignInteriorArt.Contains(motif))
                 {
                     renderer.drawMode=SpriteDrawMode.Simple;
                     float fit=Mathf.Min(prop.size.x/sprite.bounds.size.x,prop.size.y/sprite.bounds.size.y);
                     renderer.transform.localScale=Vector3.one*fit;
                 }
+                if(motif.StartsWith("Ouzana_"))renderer.sharedMaterial=CampaignOuzanaArt.Material;
+                else if(CampaignInteriorArt.Contains(motif))renderer.sharedMaterial=CampaignInteriorArt.Material;
                 if(prop.footprint.width<=0||prop.footprint.height<=0)
-                {renderer.sortingOrder=prop.motif=="Rug"?1:4;continue;}
+                {renderer.sortingOrder=prop.motif=="Rug"||prop.motif=="Church_Runner"?1:4;continue;}
                 var collider = renderer.gameObject.AddComponent<BoxCollider2D>();
                 var scale=(Vector2)renderer.transform.lossyScale;
                 collider.size = prop.footprint.size/scale; collider.offset = (prop.footprint.center - prop.position)/scale;

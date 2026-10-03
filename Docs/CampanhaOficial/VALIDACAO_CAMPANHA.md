@@ -1,24 +1,22 @@
 # Validação da campanha remasterizada
 
-Data: 2 de outubro de 2026. Unity 6000.6.0f1; renderização Built-in.
+Data: 3 de outubro de 2026. Unity 6000.6.0f1; renderização Built-in.
 
-## Estado salvo após o feedback — trabalho interrompido a pedido do usuário
+## Estado atual
 
-Compilação do estado atual confirmada sem erros. A última execução EditMode concluída passou **32/32**; o registro completo preservado da execução imediatamente anterior contém **31/31** em [feedback-EditMode.json](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/Validacao/feedback-EditMode.json). O teste adicional da proporção/colisão dos móveis infantis e os últimos ajustes dessas bases ainda precisam de uma execução final.
+Compilação confirmada sem erros. EditMode passou **33/33**, incluindo caminhos livres até todos os objetivos, limites das plantas, bases de colisão dos móveis e uso das novas artes da infância, igreja e casa/laboratório. Registro: [EditMode atual](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/Validacao20261003EditMode.json).
 
-O teste isolado da casa adulta passou: personagem menor que a geladeira, texturas pedidas, tapetes proporcionais, portas removidas, travessia física dos dois portais e rotina salva em 14 completada pela higiene, liberando a caixa.
+O clarão passou **2/2 testes PlayMode**: explosão branca/verde, recuo físico, queda e contato da cabeça, pose deitada estável, pausa, bloqueio de controle durante a sequência e memória perdida salva. Registro: [PlayMode do clarão](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/Validacao20261003ClaraoPlayMode.json). Capturas reais: [explosão](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Clarao_Explosao.png) e [criança caída](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Clarao_Crianca_Caida.png).
 
-A última execução completa PlayMode passou **7/8**, com uma falha na verificação da troca da fachada após teletransportar o Rigidbody, antes de aguardar um passo de física. O teste agora aguarda esse passo. As novas rotas dos alunos reservam a silhueta de Renan e têm teste de caminho aprovado; a nova verificação durante o intervalo ainda não foi concluída. Registro: [feedback-PlayMode-parcial.json](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/Validacao/feedback-PlayMode-parcial.json).
+Após os últimos ajustes, a execução completa da campanha passou **8/8 PlayMode** em 91,57 segundos. Inclui casa infantil, rotina e caixa da casa adulta, escola/fachada, separação de Renan durante todo o intervalo, condução do Fusca e carregamento das fases 6–10. Registro: [PlayMode da campanha](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/Validacao20261003CampanhaPlayMode.json). O cache do executor foi renovado por recompilação antes dessa execução; tentativas anteriores que selecionaram zero testes não foram consideradas aprovação.
 
-Os resultados abaixo pertencem ao remaster anterior. Não constituem aprovação dos últimos ajustes. As prévias da casa e dos atlas foram capturadas antes da última revisão de junções/pivôs; sua regeneração também fica pendente. Alterações, imagens e prompts estão em [CORRECOES_CASA_E_MOCHILA_V3.md](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/CORRECOES_CASA_E_MOCHILA_V3.md).
+As nove plantas reconstruídas e a casa adulta foram exportadas novamente. A igreja mede 14×10 unidades e a casa/laboratório mede 16×10; seus móveis usam escala de origem comum, com o órgão ampliado em 25%. Foram conferidos os limites visuais e os caminhos de interação. A casa adulta original salva, a fachada real da escola, o Fusca e os personagens da equipe permanecem preservados.
 
-## Resultado final
+## Kit para organização manual
 
-- Reconstrução das plantas e, depois, da mobília: duas execuções concluídas com código 0, sem erro de compilação.
-- EditMode: **26/26 passaram**. Rotas até todos os objetivos nas nove fases reconstruídas, correspondência entre planta e colisões, progresso, salvamento, recortes dos sprites e preservação da escola original.
-- PlayMode: **7/7 passaram**. Carregamento das fases 6–10, portas e paredes físicas, campanha salva, alunos sem sobreposição com Renan, fachada externa/interna, animações de ação e soco e condução do Fusca até o fim da pista.
+O pacote local contém **10 plantas limpas**, 10 referências mobiliadas, **161 PNGs isolados** e posições para 329 instâncias. A rua da fase 3 foi exportada inteira. Validação dos arquivos: dimensão da planta igual à referência e ao manifesto em todas as fases; móveis RGBA com transparência; dimensão de cada instância igual ao PNG correspondente; zero inconsistências. Escala comum de montagem: 48 pixels por unidade, importação das camadas a 100%.
 
-Resultados completos: [EditMode](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/Validacao/atmosferas-EditMode.xml) e [PlayMode](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/Validacao/atmosferas-PlayMode.xml). Filtros usados: `Game.Tests.EditMode.Campaign` e `Game.Tests.PlayMode.Campaign`.
+[Galeria e instruções do kit](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/KIT_MAPAS_MANUAL.md). O exportador faz capturas temporárias e restaura os renderizadores; não salva modificações nas cenas originais. Os arquivos de progresso do usuário foram restaurados após as capturas. A pasta `Entregas/` fica fora do Git; o exportador e os assets usados estão versionados.
 
 ## Preservação
 

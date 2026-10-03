@@ -14,7 +14,7 @@ namespace Game.Editor.Testing
         public static void ExportArchitecture()
         {
             _architectureOnly=true;
-            try { Build(); } finally { _architectureOnly=false; }
+            try { ExportPreviews(); } finally { _architectureOnly=false; }
         }
         [MenuItem("Varginha/Campanha/Reconstruir mapas V2 (preservar casa adulta)")]
         public static void Build()
@@ -50,11 +50,13 @@ namespace Game.Editor.Testing
             Debug.Log("CAMPAIGN_EXPANSION_READY=6-10");
         }
         [MenuItem("Varginha/Campanha/Exportar plantas e mobília")]
-        public static void ExportPreviews()
+        public static void ExportPreviews()=>ExportPreviewsForPhase(0);
+        public static void ExportPreviewsForPhase(int phaseOnly)
         {
             Directory.CreateDirectory("Preview/CampaignMapsV2");
             foreach (int phase in new[] { 1,3,4,5,6,7,8,9,10 })
             {
+                if(phaseOnly!=0&&phaseOnly!=phase)continue;
                 var plan = CampaignMapPlan.Create(phase);
                 var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene,NewSceneMode.Single);
                 var root = new GameObject("Preview_" + phase); var map = CampaignMapConstruction.Build(root.transform,plan,false);
@@ -93,6 +95,7 @@ namespace Game.Editor.Testing
                 File.WriteAllText("Preview/CampaignMapsV2/Fase"+phase+"_Planta.svg",Svg(plan,false));
                 File.WriteAllText("Preview/CampaignMapsV2/Fase"+phase+"_Colisoes.svg",Svg(plan,true));
             }
+            if(_architectureOnly||phaseOnly!=0)return;
             ExportActor();
             ExportActionActors("EdelzioPunch",3);
             ExportActionActors("EdelzioActions",6);

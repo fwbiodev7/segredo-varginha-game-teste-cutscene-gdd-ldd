@@ -156,7 +156,19 @@ namespace Game.Tests.PlayMode
                 roaming.Add(student);
                 typeof(CampaignSchoolLife).GetField("_nextRoute",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic).SetValue(student,Time.time);
             }
-            float until=Time.time+14;
+            // Routes around the preserved entrance and Renan vary in length.
+            // Wait for the actual longest route at the NPC's gameplay speed.
+            float travelTime=0;
+            foreach(var student in roaming)
+            {
+                var offset=student.GetComponent<CircleCollider2D>().offset;
+                var start=student.GetComponent<Rigidbody2D>().position+offset;
+                var path=new System.Collections.Generic.List<Vector2>();
+                Assert.That(CampaignSchoolLife.CreateRoutePlan(4).Route(start,student.Away+offset,path),Is.True);
+                float length=0;foreach(var point in path){length+=Vector2.Distance(start,point);start=point;}
+                travelTime=Mathf.Max(travelTime,length/CampaignSchoolLife.WalkSpeed);
+            }
+            float until=Time.time+travelTime+1;
             while(Time.time<until)
             {
                 foreach(var student in roaming)

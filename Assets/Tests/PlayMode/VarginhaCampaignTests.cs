@@ -6,11 +6,53 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using UnityEngine.InputSystem;
+using System.IO;
 
 namespace Game.Tests.PlayMode
 {
     public class VarginhaCampaignTests : InputTestFixture
     {
+        private string _memoryBefore,_storyBefore;
+        [SetUp]public void PreserveSaves()
+        {
+            _memoryBefore=File.Exists(CampaignMemorySave.Path)?File.ReadAllText(CampaignMemorySave.Path):null;
+            _storyBefore=File.Exists(CampaignStorySave.Path)?File.ReadAllText(CampaignStorySave.Path):null;
+        }
+        [UnityTest]public IEnumerator AlienBurstKnocksTheChildBackAndLeavesHimLyingWithNoMemory()
+        {
+            CampaignMemorySave.Write(new CampaignMemory());
+            yield return SceneManager.LoadSceneAsync(VarginhaCampaignPhase1.SceneName);
+            yield return null;yield return null;
+            var phase=VarginhaCampaignPhase1.Active;phase.FinishOpening();phase.DeliverControl();phase.TriggerPowerFailure();
+            var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
+            actor.GetComponent<Rigidbody2D>().position=new Vector2(14,0);
+            yield return new WaitForFixedUpdate();yield return null;yield return null;
+            var encounter=Object.FindAnyObjectByType<CampaignFlashEncounter>();
+            Assert.That(encounter,Is.Not.Null);
+            Assert.That(actor.IsInputLocked&&actor.IsScriptedMotion,Is.True);
+            yield return new WaitForSeconds(.48f);
+            Assert.That(encounter.Burst.enabled,Is.True);
+            Assert.That(encounter.Burst.sprite.texture.name,Is.EqualTo("AlienExplosion"));
+            Assert.That(encounter.Burst.bounds.size.x,Is.GreaterThan(7));
+            phase.TogglePause();var paused=actor.transform.position;
+            yield return new WaitForSecondsRealtime(.12f);
+            Assert.That(actor.transform.position,Is.EqualTo(paused));phase.TogglePause();
+            yield return new WaitForSeconds(1.15f);
+            Assert.That(encounter.HasHitHead&&encounter.IsLying,Is.True);
+            Assert.That(actor.transform.position.x,Is.LessThan(12.1f));
+            Assert.That(CampaignMapPlan.Create(1).IsClear(actor.transform.position,.22f),Is.True);
+            var sprite=actor.GetComponent<SpriteRenderer>().sprite;
+            Assert.That(sprite.name,Does.EndWith("unconscious"));
+            Assert.That(sprite.bounds.size.x,Is.GreaterThan(sprite.bounds.size.y*1.5f));
+            var resting=actor.transform.position;
+            yield return new WaitForSeconds(.25f);
+            Assert.That(Vector2.Distance(actor.transform.position,resting),Is.LessThan(.01f));
+            yield return new WaitForSeconds(4.2f);
+            var memory=CampaignMemorySave.Load();
+            Assert.That(memory.complete&&memory.headHit&&memory.memoryLost,Is.True);
+            Assert.That(actor.IsInputLocked,Is.True);
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
         [UnityTest]
         public IEnumerator OpeningHandsControlToChildWithoutCombatAndPauseRestoresInput()
         {
@@ -46,6 +88,13 @@ namespace Game.Tests.PlayMode
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
             Assert.That(VarginhaCampaignPhase1.Active, Is.Null);
         }
-        [TearDown] public void Cleanup() => Time.timeScale = 1;
+        [TearDown]public void Cleanup()
+        {
+            Time.timeScale=1;
+            if(_memoryBefore==null){if(File.Exists(CampaignMemorySave.Path))File.Delete(CampaignMemorySave.Path);}
+            else File.WriteAllText(CampaignMemorySave.Path,_memoryBefore);
+            if(_storyBefore==null){if(File.Exists(CampaignStorySave.Path))File.Delete(CampaignStorySave.Path);}
+            else File.WriteAllText(CampaignStorySave.Path,_storyBefore);
+        }
     }
 }

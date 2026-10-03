@@ -10,6 +10,7 @@ namespace Game.Varginha.Experiment
         public string StudentName, Activity;
         public Vector2 Home, Away;
         public bool Walks;
+        public const float WalkSpeed=1.35f;
         private readonly List<Vector2> _path = new();
         private Transform _environment;
         private CampaignMapPlan _plan;
@@ -52,7 +53,7 @@ namespace Game.Varginha.Experiment
         {
             if (Time.timeScale <= 0 || VarginhaCampaignStage.IsModalOpen || Time.time < _talkUntil || _path.Count == 0) { _body.linearVelocity = Vector2.zero; return; }
             while (_path.Count > 0 && Vector2.Distance(_body.position, _path[0]) < .07f) _path.RemoveAt(0);
-            if (_path.Count > 0) _body.MovePosition(Vector2.MoveTowards(_body.position, _path[0], 1.35f * Time.fixedDeltaTime));
+            if (_path.Count > 0) _body.MovePosition(Vector2.MoveTowards(_body.position, _path[0], WalkSpeed * Time.fixedDeltaTime));
         }
         private void LateUpdate()
         {

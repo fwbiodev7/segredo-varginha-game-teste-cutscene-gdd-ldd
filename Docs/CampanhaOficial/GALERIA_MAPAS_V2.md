@@ -4,7 +4,13 @@ As dez fases da campanha estão integradas. Nove recebem mapas novos. A cena adu
 
 Cada fase abaixo oferece a arquitetura primeiro, a mobília depois e o desenho das colisões. Os pontos verdes são locais de interação. As prévias mostram o cenário sem personagens; os personagens aparecem durante o jogo.
 
+[Pacote das dez plantas e móveis separados para organização manual](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/KIT_MAPAS_MANUAL.md). Exportado em 03/10/2026, com 161 PNGs transparentes na escala das plantas. A rua está incluída por inteiro.
+
 ## Fase 1 — Casa de Edélzio criança
+
+Casa de 1996 com planta menor, quarto e cozinha no lado oeste, sala no leste e banheiro compacto. Doze móveis novos incluem TV CRT com videocassete, sofá visto por trás e voltado para a TV, mesa de desenho sem computador, geladeira com ímãs e cama com brinquedos. A caminhada original da criança foi preservada.
+
+[Clarão branco e verde](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Clarao_Explosao.png) · [Criança caída após o impacto](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Clarao_Crianca_Caida.png) · [Prompts e arte da casa](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/CASA_INFANCIA_1996_PROMPTS.json).
 
 [Planta](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Fase1_01_Planta.png) · [Mobília](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Fase1_02_Mobilia.png) · [Colisões](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Fase1_Colisoes.svg) · [Objetivos](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Fase1_03_Objetivos.png)
 
@@ -56,7 +62,7 @@ Casas e comércios têm fachadas complementares orientadas para a rua central, c
 
 ## Fase 8 — A Âncora
 
-Arquivo religioso, câmara da âncora, nave, antecâmara, capela de oração e cripta dos guardiões. Livros, bancos, ambão, água benta, sarcófagos e relicários completam os ambientes; tochas e vitrais mantêm a atmosfera medieval sombria.
+Igreja compacta de 14 × 10 unidades, com altar ao norte, seis bancos voltados para ele, órgão, pia batismal e arquivos. Dez peças novas usam uma escala comum; o órgão foi ampliado conforme o último feedback. O corredor central fica livre e preserva os mesmos objetivos da fase. [Prompts da igreja](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/IGREJA_ARTE_NOVA_PROMPTS.json).
 
 [Planta](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Fase8_01_Planta.png) · [Mobília](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Fase8_02_Mobilia.png) · [Colisões](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Fase8_Colisoes.svg) · [Objetivos](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Fase8_03_Objetivos.png)
 
@@ -64,7 +70,7 @@ Arquivo religioso, câmara da âncora, nave, antecâmara, capela de oração e c
 
 ## Fase 9 — Ouzana
 
-Microscopia, documentação, recepção científica e cultivo biológico têm bancadas, carrinhos de amostras, tanques, terrários, lavagem e arquivos próprios. As portas e os corredores permanecem livres para a investigação.
+Casa e laboratório doméstico em 16 × 10 unidades: quarto, sala e cozinha com plantas no oeste; microscopia, cultivo e amostras no leste. Móveis e acabamentos exclusivos de Ouzana: dezesseis sprites e quatro materiais novos, com madeira quente, cerâmica creme e verde, herbário e terrários. As peças têm escala comum e o quadro fica dentro dos limites. [Prompts de Ouzana](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/OUZANA_ARTE_NOVA_PROMPTS.json).
 
 [Planta](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Fase9_01_Planta.png) · [Mobília](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Fase9_02_Mobilia.png) · [Colisões](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Fase9_Colisoes.svg) · [Objetivos](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Fase9_03_Objetivos.png)
 

@@ -13,7 +13,7 @@ namespace Game.Varginha.Experiment
     public sealed class CampaignMemory
     {
         public int version = 1, evidence;
-        public bool openingSeen, powerFailed, complete;
+        public bool openingSeen, powerFailed, complete,headHit,memoryLost;
         public float x = 6.15f, y = 2.8f;
     }
     public static class CampaignMemorySave
@@ -68,6 +68,7 @@ namespace Game.Varginha.Experiment
         private float _stageTime, _exploreTime, _saveTime;
         private bool _paused, _settings, _ready;
         private CampaignSoundscape _sound;
+        private CampaignFlashEncounter _flash;
         private string _dialogue;
         private readonly string[] _names = { "TELEVISÃO", "JORNAL DE 1996", "DESENHO INFANTIL", "CAIXA DE BRINQUEDOS" };
         private readonly string[] _lines = {
@@ -76,7 +77,7 @@ namespace Game.Varginha.Experiment
             "Um desenho seu: a casa, uma árvore e uma figura sem rosto. Você não lembra de ter feito a última parte.",
             "Carrinhos, papéis e uma caixa velha. Você guarda um desenho aqui. Um dia, essa caixa voltará a ser importante."
         };
-        private readonly Vector2[] _points = { new(4.6f, 4.5f), new(6.2f, 4), new(-4.55f, 4.5f), new(-7.6f, 1.5f) };
+        private Vector2[] _points = { new(4.6f, 4.5f), new(6.2f, 4), new(-4.55f, 4.5f), new(-7.6f, 1.5f) };
         public CampaignMemory Memory => _memory;
         public bool IsExploring => _stage == Stage.Explore;
         public static void StartCampaign(bool continueGame)
@@ -102,6 +103,7 @@ namespace Game.Varginha.Experiment
             _player.HasBackpack = _player.HasResearchNotebook = _player.HasFuscaKey = false;
             _player.SetCombatLocked(false); _player.CanDodge = false;
             var housePlan=CampaignMapPlan.Create(1);
+            _points=new[]{housePlan.points.Find(p=>p.id=="tv").position,housePlan.points.Find(p=>p.id=="paper").position,housePlan.points.Find(p=>p.id=="drawing").position,housePlan.points.Find(p=>p.id=="toys").position};
             _player.transform.position = housePlan.IsClear(new Vector2(_memory.x,_memory.y))?new Vector3(_memory.x,_memory.y):(Vector3)housePlan.spawn;
             var adult = _player.GetComponent<VarginhaPlayerSpriteAnimation>(); if (adult != null) adult.enabled = false;
             var action = _player.GetComponent<VarginhaPlayerActionAnimation>(); if (action != null) action.enabled = false;
@@ -109,8 +111,10 @@ namespace Game.Varginha.Experiment
             _player.transform.localScale = new Vector3(.72f, .72f, 1);
             foreach (Transform part in _player.transform) if (part.name.Contains("Beard") || part.name.Contains("Barba") || part.name.Contains("Backpack")) part.gameObject.SetActive(false);
             _child = _player.GetComponent<SpriteRenderer>(); _child.color = Color.white; _child.flipX = false; LoadChild(); CampaignPresentation.FootCollision(_player, true);
-            AddPaper("Jornal_1996", new(4.6f,4.22f), new Color(.86f, .8f, .62f),"Mesa do jornal");
-            AddPaper("Desenho_Infantil", new(-4.55f,6.03f), new Color(.95f, .89f, .72f),"Mesa de desenho");
+            var newspaper=housePlan.furniture.Find(p=>p.name=="Mesa do jornal");
+            var drawing=housePlan.furniture.Find(p=>p.name=="Mesa de desenho");
+            AddPaper("Jornal_1996",newspaper.position+Vector2.up*(newspaper.size.y*.25f),new Color(.86f,.8f,.62f),newspaper.name);
+            AddPaper("Desenho_Infantil",drawing.position+Vector2.up*(drawing.size.y*.25f),new Color(.95f,.89f,.72f),drawing.name);
             _voice = gameObject.AddComponent<AudioSource>(); _voice.volume = .7f;
             _ambience = gameObject.AddComponent<AudioSource>(); _ambience.volume = .025f; _ambience.loop = true;
             _staticClip = VarginhaExperimentLab.CreateStatic(); _ambience.clip = _staticClip;
@@ -174,6 +178,7 @@ namespace Game.Varginha.Experiment
                 figure.transform.position = new Vector3(17.2f, 0);
                 _presence = figure.AddComponent<SpriteRenderer>(); _presence.sprite = VarginhaPixelArtSprites.Create("ET_Subordinate_Entity", Color.black);
                 _presence.sortingOrder = 9; _presence.color = new Color(.06f, .07f, .09f, .14f);
+                _flash=gameObject.AddComponent<CampaignFlashEncounter>();_flash.Begin(_player,_child,_sound);
             }
         }
         private void Update()
@@ -216,8 +221,9 @@ namespace Game.Varginha.Experiment
             }
             else if (_stage == Stage.Encounter)
             {
-                if (_presence != null) _presence.color = new Color(.05f, .055f, .07f, .12f + .16f * Mathf.Sin(_stageTime * .35f));
-                if (_stageTime > 7) { _memory.complete = true; Save(); SetStage(Stage.Complete); }
+                if (_presence != null) _presence.color = new Color(.05f, .055f, .07f, Mathf.Lerp(.28f,0,Mathf.Clamp01((_stageTime-.4f)/1.2f)));
+                _memory.headHit=_flash!=null&&_flash.HasHitHead;
+                if (_stageTime > 5.8f) { _memory.complete = true;_memory.memoryLost=_memory.headHit; Save(); SetStage(Stage.Complete); }
             }
         }
         public void TriggerPowerFailure() { _memory.powerFailed = true; Save(); }
@@ -287,15 +293,17 @@ namespace Game.Varginha.Experiment
             }
             else if (_stage == Stage.Encounter)
             {
-                float exposure = settings.reducedMotion ? .22f : .2f + Mathf.Sin(Mathf.Clamp01(_stageTime / 7) * Mathf.PI) * .5f;
-                ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(.76f, .84f, .88f, exposure));
-                if (settings.subtitles) ExperimentGUI.Caption(new Rect(265, 610, 750, 58), "O som desaparece. Há algo no clarão...", settings.subtitleSize);
+                float exposure=Mathf.Max(0,1-Mathf.Abs(_stageTime-.48f)/.35f)*(settings.reducedMotion?.12f:.25f);
+                ExperimentGUI.Box(new Rect(0,0,1280,720),new Color(.93f,1,.95f,exposure));
+                float blackout=Mathf.Clamp01((_stageTime-4.1f)/1.4f);
+                if(blackout>0)ExperimentGUI.Box(new Rect(0,0,1280,720),new Color(.008f,.015f,.025f,blackout));
+                if(settings.subtitles)ExperimentGUI.Caption(new Rect(265,610,750,58),_stageTime<1.13f?"O clarão explode. Uma força o lança para trás.":_stageTime<3.3f?"Sua cabeça atinge o chão. Tudo fica distante...":"Quando despertar, não lembrará daquela noite.",settings.subtitleSize);
             }
             else
             {
                 ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(.008f, .015f, .025f, 1));
                 ExperimentGUI.Label(new Rect(275, 210, 760, 60), "A LEMBRANÇA SE INTERROMPE", true);
-                ExperimentGUI.Label(new Rect(275, 300, 760, 100), "Você ainda não sabe o que aconteceu naquela noite.\n\nPróximo ato: O Chamado — trinta anos depois.");
+                ExperimentGUI.Label(new Rect(275, 300, 760, 100), "Edelzio desperta sem lembrar do clarão ou da queda.\n\nPróximo ato: O Chamado — trinta anos depois.");
                 ExperimentGUI.Label(new Rect(275, 445, 760, 70), "Trinta anos depois, uma chave desaparecida traz essa noite de volta.", small: true);
                 if (ExperimentGUI.Button(new Rect(430, 550, 420, 50), "CONTINUAR • ATO II")) CampaignStorySave.GoTo(2);
             }

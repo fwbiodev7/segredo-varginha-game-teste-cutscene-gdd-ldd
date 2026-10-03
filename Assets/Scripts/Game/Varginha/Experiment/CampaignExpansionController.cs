@@ -49,8 +49,8 @@ namespace Game.Varginha.Experiment
             _sound = gameObject.AddComponent<CampaignSoundscape>(); _sound.Configure(phase == 7 ? "Forest" : phase == 8 ? "Church" : phase == 9 ? "Lab" : phase == 10 ? "Workshop" : "House", _actor);
             if (phase == 7) CreateEntity();
             if (phase == 10) for (int i = 0; i < 3; i++) if ((State.sprayed & (1 << i)) != 0) RevealMark(i);
-            if (phase == 7 || phase == 8) CreateNPC("Padre Fábio", VarginhaReferenceSprites.PadreFabio(), phase == 7 ? new Vector2(9.7f,4.5f) : new Vector2(-5,-4.1f));
-            if (phase == 9) CreateNPC("Ouzana", VarginhaExperimentArt.Body(2), new Vector2(-4.5f,-4.2f));
+            if (phase == 7 || phase == 8) CreateNPC("Padre Fábio", VarginhaReferenceSprites.PadreFabio(), phase == 7 ? new Vector2(9.7f,4.5f) : Plan.points.Find(p=>p.id=="trust").position+new Vector2(.9f,.6f));
+            if (phase == 9) CreateNPC("Ouzana", VarginhaExperimentArt.Body(2),Plan.points.Find(p=>p.id=="ouzana").position+new Vector2(.9f,.6f));
             GameManager.Instance?.StartGame(); Save(); Lock();
         }
         private void CreateNPC(string name, Sprite sprite, Vector2 position)

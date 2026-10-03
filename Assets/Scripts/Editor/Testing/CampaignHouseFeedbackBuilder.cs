@@ -7,6 +7,34 @@ namespace Game.Editor.Testing
 {
     public static class CampaignHouseFeedbackBuilder
     {
+        private static bool _burstCaptured;
+        public static void CaptureFlashSequence()
+        {
+            _burstCaptured=false;
+            UnityEditor.EditorApplication.update-=CaptureFlashFrame;
+            UnityEditor.EditorApplication.update+=CaptureFlashFrame;
+        }
+        private static void CaptureFlashFrame()
+        {
+            if(!Application.isPlaying){UnityEditor.EditorApplication.update-=CaptureFlashFrame;return;}
+            var flash=Object.FindAnyObjectByType<CampaignFlashEncounter>();
+            if(flash==null)return;
+            if(!_burstCaptured&&flash.Elapsed>=.5f&&flash.Elapsed<1.1f)
+            { CaptureYard("Clarao_Explosao.png");_burstCaptured=true; }
+            if(flash.IsLying&&flash.Elapsed>=1.85f)
+            { CaptureYard("Clarao_Crianca_Caida.png");UnityEditor.EditorApplication.update-=CaptureFlashFrame; }
+        }
+        private static void CaptureYard(string name)
+        {
+            var root=new GameObject("FlashPreviewCamera");
+            try
+            {
+                var camera=root.AddComponent<Camera>();camera.enabled=false;camera.orthographic=true;camera.orthographicSize=4.2f;
+                camera.transform.position=new Vector3(14.5f,0,-10);camera.backgroundColor=new Color(.05f,.07f,.1f);camera.allowHDR=camera.allowMSAA=false;
+                Capture(camera,name,1280,720);
+            }
+            finally{Object.DestroyImmediate(root);}
+        }
         public static void CaptureAdultHouse()
         {
             var root=new GameObject("FeedbackPreviewCamera");

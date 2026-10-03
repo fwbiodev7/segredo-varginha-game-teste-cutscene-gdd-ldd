@@ -1,0 +1,110 @@
+{
+  "coordinateOrigin": "bottom-left",
+  "alphaCutoff": 0.8627450980392157,
+  "pixelsPerUnit": 64,
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "sourceWidth": 1536,
+  "sourceHeight": 1024,
+  "sourceFormat": "RGBA",
+  "furniture": [
+    {
+      "name": "Child90_Bed",
+      "sheet": "RetroFurniture",
+      "x": 91,
+      "y": 624,
+      "width": 237,
+      "height": 364
+    },
+    {
+      "name": "Child90_Desk",
+      "sheet": "RetroFurniture",
+      "x": 470,
+      "y": 624,
+      "width": 292,
+      "height": 310
+    },
+    {
+      "name": "Child90_Fridge",
+      "sheet": "RetroFurniture",
+      "x": 909,
+      "y": 651,
+      "width": 175,
+      "height": 336
+    },
+    {
+      "name": "Child90_Stove",
+      "sheet": "RetroFurniture",
+      "x": 1230,
+      "y": 651,
+      "width": 206,
+      "height": 308
+    },
+    {
+      "name": "Child90_DiningTable",
+      "sheet": "RetroFurniture",
+      "x": 35,
+      "y": 368,
+      "width": 358,
+      "height": 211
+    },
+    {
+      "name": "Child90_TV",
+      "sheet": "RetroFurniture",
+      "x": 487,
+      "y": 350,
+      "width": 226,
+      "height": 296
+    },
+    {
+      "name": "Child90_SofaRear",
+      "sheet": "RetroFurniture",
+      "x": 794,
+      "y": 371,
+      "width": 366,
+      "height": 210
+    },
+    {
+      "name": "Child90_CoffeeTable",
+      "sheet": "RetroFurniture",
+      "x": 1220,
+      "y": 344,
+      "width": 274,
+      "height": 210
+    },
+    {
+      "name": "Child90_Sink",
+      "sheet": "RetroFurniture",
+      "x": 65,
+      "y": 56,
+      "width": 307,
+      "height": 274
+    },
+    {
+      "name": "Child90_Basin",
+      "sheet": "RetroFurniture",
+      "x": 508,
+      "y": 52,
+      "width": 183,
+      "height": 277
+    },
+    {
+      "name": "Child90_Toilet",
+      "sheet": "RetroFurniture",
+      "x": 890,
+      "y": 42,
+      "width": 154,
+      "height": 282
+    },
+    {
+      "name": "Child90_Shower",
+      "sheet": "RetroFurniture",
+      "x": 1232,
+      "y": 42,
+      "width": 210,
+      "height": 311
+    }
+  ]
+}

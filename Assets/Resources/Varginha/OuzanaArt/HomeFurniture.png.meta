@@ -1,0 +1,1029 @@
+fileFormatVersion: 2
+guid: ff68f5deefd143d408c1c2ebd9e612df
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4008700734285858208
+    second: HomeFurniture_0
+  - first:
+      213: 1818618511736713575
+    second: HomeFurniture_1
+  - first:
+      213: 5016103625192396315
+    second: HomeFurniture_2
+  - first:
+      213: 6084174384973159410
+    second: HomeFurniture_3
+  - first:
+      213: 7826515112195242470
+    second: HomeFurniture_4
+  - first:
+      213: 6273123833315426992
+    second: HomeFurniture_5
+  - first:
+      213: -2796136329962560858
+    second: HomeFurniture_6
+  - first:
+      213: 4484702282927719949
+    second: HomeFurniture_7
+  - first:
+      213: -8882613935298292251
+    second: HomeFurniture_8
+  - first:
+      213: 8399906827050988460
+    second: HomeFurniture_9
+  - first:
+      213: -4269368950564213391
+    second: HomeFurniture_10
+  - first:
+      213: -5114645670370336815
+    second: HomeFurniture_11
+  - first:
+      213: -6087117030408580366
+    second: HomeFurniture_12
+  - first:
+      213: 459795084186799265
+    second: HomeFurniture_13
+  - first:
+      213: 3056743756512270940
+    second: HomeFurniture_14
+  - first:
+      213: 4594301292317804985
+    second: HomeFurniture_15
+  - first:
+      213: -9038040387272481683
+    second: HomeFurniture_16
+  - first:
+      213: -1337790173709050609
+    second: HomeFurniture_17
+  - first:
+      213: -7828708368507101612
+    second: HomeFurniture_18
+  - first:
+      213: 1682167604222089263
+    second: HomeFurniture_19
+  - first:
+      213: -877665496080383294
+    second: HomeFurniture_20
+  - first:
+      213: 770376080196065094
+    second: HomeFurniture_21
+  - first:
+      213: -931670671355874806
+    second: HomeFurniture_22
+  - first:
+      213: -284061900904635829
+    second: HomeFurniture_23
+  - first:
+      213: 302378286923389336
+    second: HomeFurniture_24
+  - first:
+      213: 7043713458293953597
+    second: HomeFurniture_25
+  - first:
+      213: 4498595626786247711
+    second: HomeFurniture_26
+  - first:
+      213: -9102528859281874385
+    second: HomeFurniture_27
+  - first:
+      213: -1501692670214786377
+    second: HomeFurniture_28
+  - first:
+      213: -2615670150669757913
+    second: HomeFurniture_29
+  - first:
+      213: 2803152201105537239
+    second: HomeFurniture_30
+  - first:
+      213: -3589906182116604489
+    second: HomeFurniture_31
+  - first:
+      213: -5050020396525683195
+    second: HomeFurniture_32
+  - first:
+      213: 919578871958577314
+    second: HomeFurniture_33
+  - first:
+      213: -1485483624348615268
+    second: HomeFurniture_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HomeFurniture_0
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 431
+        width: 526
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06a3b02dbeb3e58c0800000000000000
+      internalID: -4008700734285858208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_1
+      rect:
+        serializedVersion: 2
+        x: 968
+        y: 949
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7613406a6e70d3910800000000000000
+      internalID: 1818618511736713575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_2
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 899
+        width: 153
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b165420bba7cc9540800000000000000
+      internalID: 5016103625192396315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_3
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 777
+        width: 325
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb1bd72e545f6450800000000000000
+      internalID: 6084174384973159410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 521
+        width: 373
+        height: 403
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e9bf93270e5d9c60800000000000000
+      internalID: 7826515112195242470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_5
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 899
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b28dc4d3ec9e0750800000000000000
+      internalID: 6273123833315426992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_6
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 879
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a2640d82d02239d0800000000000000
+      internalID: -2796136329962560858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_7
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 890
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d064a4127fcdc3e30800000000000000
+      internalID: 4484702282927719949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_8
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 837
+        width: 67
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e55c9d10bd9ab480800000000000000
+      internalID: -8882613935298292251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_9
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 866
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3b0cc21c6729470800000000000000
+      internalID: 8399906827050988460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_10
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 862
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17da98e3f8720c4c0800000000000000
+      internalID: -4269368950564213391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_11
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 849
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df16918cd02509b0800000000000000
+      internalID: -5114645670370336815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_12
+      rect:
+        serializedVersion: 2
+        x: 972
+        y: 823
+        width: 79
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f21440df47368ba0800000000000000
+      internalID: -6087117030408580366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_13
+      rect:
+        serializedVersion: 2
+        x: 804
+        y: 849
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1accc666135816600800000000000000
+      internalID: 459795084186799265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_14
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 841
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a9e40504cbb6a20800000000000000
+      internalID: 3056743756512270940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_15
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 839
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b988b70fac32cf30800000000000000
+      internalID: 4594301292317804985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_16
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 741
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d646df2472e629280800000000000000
+      internalID: -9038040387272481683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_17
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 483
+        width: 442
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d5018cce63f6de0800000000000000
+      internalID: -1337790173709050609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_18
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 521
+        width: 312
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e91059737da5390800000000000000
+      internalID: -7828708368507101612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_19
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 17
+        width: 361
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f28d3560682485710800000000000000
+      internalID: 1682167604222089263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_20
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 23
+        width: 325
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c20382a1e7e1d3f0800000000000000
+      internalID: -877665496080383294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_21
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 461
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6475b8b96fce0ba00800000000000000
+      internalID: 770376080196065094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_22
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 32
+        width: 358
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a02fe2ae57a0213f0800000000000000
+      internalID: -931670671355874806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_23
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 15
+        width: 395
+        height: 417
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b426b56c43fce0cf0800000000000000
+      internalID: -284061900904635829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_24
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 149
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8991cdb2373423400800000000000000
+      internalID: 302378286923389336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_25
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 62
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d34df35321c40c160800000000000000
+      internalID: 7043713458293953597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_26
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 23
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1458b253e83e6e30800000000000000
+      internalID: 4498595626786247711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_27
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 33
+        width: 22
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2223c0da325da180800000000000000
+      internalID: -9102528859281874385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_28
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 35
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b23a06097ae82be0800000000000000
+      internalID: -1501692670214786377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_29
+      rect:
+        serializedVersion: 2
+        x: 856
+        y: 31
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7229cbb3bd543bbd0800000000000000
+      internalID: -2615670150669757913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_30
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 40
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d8ff3e331cc6e620800000000000000
+      internalID: 2803152201105537239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_31
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 31
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b506f5f8571e2ec0800000000000000
+      internalID: -3589906182116604489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_32
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 0
+        width: 29
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50efb9c9439bae9b0800000000000000
+      internalID: -5050020396525683195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_33
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 17
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a0ab06ac1003cc00800000000000000
+      internalID: 919578871958577314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HomeFurniture_34
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 19
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d7a0b9380826be0800000000000000
+      internalID: -1485483624348615268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HomeFurniture_0: -4008700734285858208
+      HomeFurniture_1: 1818618511736713575
+      HomeFurniture_10: -4269368950564213391
+      HomeFurniture_11: -5114645670370336815
+      HomeFurniture_12: -6087117030408580366
+      HomeFurniture_13: 459795084186799265
+      HomeFurniture_14: 3056743756512270940
+      HomeFurniture_15: 4594301292317804985
+      HomeFurniture_16: -9038040387272481683
+      HomeFurniture_17: -1337790173709050609
+      HomeFurniture_18: -7828708368507101612
+      HomeFurniture_19: 1682167604222089263
+      HomeFurniture_2: 5016103625192396315
+      HomeFurniture_20: -877665496080383294
+      HomeFurniture_21: 770376080196065094
+      HomeFurniture_22: -931670671355874806
+      HomeFurniture_23: -284061900904635829
+      HomeFurniture_24: 302378286923389336
+      HomeFurniture_25: 7043713458293953597
+      HomeFurniture_26: 4498595626786247711
+      HomeFurniture_27: -9102528859281874385
+      HomeFurniture_28: -1501692670214786377
+      HomeFurniture_29: -2615670150669757913
+      HomeFurniture_3: 6084174384973159410
+      HomeFurniture_30: 2803152201105537239
+      HomeFurniture_31: -3589906182116604489
+      HomeFurniture_32: -5050020396525683195
+      HomeFurniture_33: 919578871958577314
+      HomeFurniture_34: -1485483624348615268
+      HomeFurniture_4: 7826515112195242470
+      HomeFurniture_5: 6273123833315426992
+      HomeFurniture_6: -2796136329962560858
+      HomeFurniture_7: 4484702282927719949
+      HomeFurniture_8: -8882613935298292251
+      HomeFurniture_9: 8399906827050988460
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

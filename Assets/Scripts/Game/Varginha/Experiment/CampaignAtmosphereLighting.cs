@@ -9,15 +9,15 @@ namespace Game.Varginha.Experiment
             var decor=new GameObject("03_Atmosfera_Luz_Ambiente").transform;decor.SetParent(map,false);
             foreach(var prop in plan.furniture)
             {
-                if(prop.motif=="Torch"||prop.motif=="Lamp"||prop.motif=="SpecimenTank")
+                if(prop.motif=="Torch"||prop.motif=="Lamp"||prop.motif=="SpecimenTank"||prop.motif=="Ouzana_Specimen")
                 {
-                    bool torch=prop.motif=="Torch",specimen=prop.motif=="SpecimenTank";
+                    bool torch=prop.motif=="Torch",specimen=prop.motif=="SpecimenTank"||prop.motif=="Ouzana_Specimen";
                     var position=prop.position+Vector2.down*(torch?.5f:prop.size.y*.3f);
                     var size=specimen?new Vector2(2.2f,2):new Vector2(3.3f,2.5f);
                     var color=specimen?new Color(.4f,1,.63f):torch?new Color(1,.5f,.16f):new Color(1,.77f,.42f);
                     Source(decor,"Luz_"+prop.name,"Glow",position,size,color);
                 }
-                if(prop.motif=="GothicWindow")
+                if(prop.motif=="GothicWindow"||prop.motif=="Church_Window")
                     Source(decor,"Reflexo_Vitral_"+prop.name,"GlassLight",prop.position+new Vector2(.4f,-2),new Vector2(2,3.5f),new Color(.74f,.57f,1));
                 if(plan.phase==5&&prop.motif=="OriginalProjector")
                     Source(decor,"Luz_Projetor_Investigação","Glow",prop.position+Vector2.down*1.5f,new Vector2(3.5f,3),new Color(.43f,.56f,1));

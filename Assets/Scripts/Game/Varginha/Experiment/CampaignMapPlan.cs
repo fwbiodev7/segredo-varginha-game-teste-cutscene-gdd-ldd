@@ -35,7 +35,7 @@ namespace Game.Varginha.Experiment
         private void Wall(float x, float y, float w, float h) => walls.Add(new Rect(x, y, w, h));
         private void Enclose(float x, float y, float w, float h, float doorX)
         {
-            const float t = .35f;
+            const float t = .625f;
             Wall(x, y, t, h); Wall(x + w - t, y, t, h); Wall(x, y + h - t, w, t);
             Wall(x, y, doorX - 1 - x, t); Wall(doorX + 1, y, x + w - doorX - 1, t);
         }
@@ -131,7 +131,231 @@ namespace Game.Varginha.Experiment
                     p.PointAt("exit", "ENCERRAR O TESTE NA PISTA", 9, -5); break;
                 default: throw new System.ArgumentOutOfRangeException(nameof(phase));
             }
-            p.AddDetails();p.AddIdentity();p.FitAtmosphericSprites();return p;
+            p.AddDetails();p.AddIdentity();p.RefineArchitecture();p.CompactRequestedMaps();p.FitAtmosphericSprites();p.FitChildFootprints();return p;
+        }
+        private void FitChildFootprints()
+        {
+            if(phase!=1)return;
+            foreach(var item in furniture)if(item.footprint.width>0&&item.footprint.height>0)
+            {
+                var size=new Vector2(Mathf.Min(item.footprint.width,item.size.x*.82f),Mathf.Min(item.footprint.height,Mathf.Min(.42f,item.size.y*.35f)));
+                var center=item.position-Vector2.up*(item.size.y*.3f);
+                item.footprint=new Rect(center-size/2,size);
+            }
+        }
+        private void CompactRequestedMaps()
+        {
+            if(phase==1)
+            {
+                Vector2 Map(Vector2 position)=>new(position.x<=9?position.x*7/9:7+(position.x-9)*5/6,position.y*(position.x<=9?6f/7:7f/8));
+                foreach(var room in rooms){var a=Map(room.rect.min);var b=Map(room.rect.max);room.rect=new Rect(a,b-a);}
+                for(int i=0;i<walls.Count;i++){var a=Map(walls[i].min);var b=Map(walls[i].max);walls[i]=new Rect(a,b-a);}
+                foreach(var prop in furniture){var delta=Map(prop.position)-prop.position;prop.position+=delta;prop.footprint.position+=delta;}
+                foreach(var point in points)point.position=Map(point.position);
+                bounds=new Rect(-7,-7,29,14);spawn=new Vector2(5.4f,2.2f);
+                points.Find(p=>p.id=="tv").position=new Vector2(4.8f,4.4f);
+                rooms.Find(r=>r.name=="Quintal").rect=new Rect(7,-7,15,14);
+                // A modest 1996 house: bedroom and kitchen west, living room east,
+                // with a small bathroom. Every opening is part of the wall plan.
+                walls.Clear();rooms.RemoveAll(r=>r.name!="Quintal"&&r.name!="Passagem do quintal");
+                Room("Casa de infância",-6.5f,-5.5f,13,11);
+                Room("Quarto infantil",-6.5f,.25f,5,5.25f);
+                Room("Cozinha de 1996",-6.5f,-5.5f,5,5.25f,"SchoolFloor");
+                Room("Sala de estar",-1,-5.5f,7.5f,11);
+                Room("Banheiro",3.75f,-5.5f,2.75f,3.25f,"SchoolFloor");
+                Wall(-7,-6,.5f,12);Wall(-7,-6,14,.5f);Wall(-7,5.5f,14,.5f);
+                Wall(6.5f,-6,.5f,4.5f);Wall(6.5f,1.5f,.5f,4.5f);
+                Wall(-1.5f,-5.5f,.5f,1.7f);Wall(-1.5f,-2.2f,.5f,3.8f);Wall(-1.5f,3.2f,.5f,2.3f);
+                Wall(-6.5f,-.25f,5,.5f);
+                Wall(3.25f,-5.5f,.5f,1.3f);Wall(3.25f,-2.8f,.5f,1.05f);Wall(3.25f,-2.25f,3.25f,.5f);
+                Wall(21.7f,-7,.3f,14);
+                Wall(7,-7,15,.546875f);Wall(7,6.453125f,15,.546875f);
+                furniture.RemoveAll(f=>f.position.x<7);
+                Prop("Cama infantil","Child90_Bed",-5.1f,3.9f,2,3.1f);
+                Prop("Mesa de desenho","Child90_Desk",-2.8f,4.2f,1.6f,1.7f);
+                Prop("Geladeira","Child90_Fridge",-5.85f,-1.45f,1.3f,1.85f);
+                Prop("Fogão","Child90_Stove",-3.9f,-1.6f,1.2f,1.8f);
+                Prop("Mesa da cozinha","Child90_DiningTable",-5,-3.65f,2.2f,1.35f);
+                Prop("Lavatório","Child90_Sink",-2.45f,-4.65f,1.55f,1.45f);
+                Prop("TV CRT","Child90_TV",3.4f,4.35f,1.5f,1.75f);
+                Prop("Sofá","Child90_SofaRear",3.4f,1.8f,2.6f,1.55f);
+                Prop("Mesa do jornal","Child90_CoffeeTable",3.4f,3.15f,1.65f,1.05f);
+                Prop("Vaso sanitário","Child90_Toilet",5.85f,-3.05f,.85f,1.3f);
+                Prop("Box do banheiro","Child90_Shower",5.8f,-4.65f,1.15f,1.5f);
+                Prop("Pia do banheiro","Child90_Basin",4.4f,-3.1f,.9f,1.3f);
+                Prop("Tapete da sala","Rug",3.4f,1.4f,2.9f,2,0,0);
+                Prop("Janela do quarto","Window",-4.8f,5.55f,1.1f,.8f,0,0);
+                Prop("Janela da sala","Window",3.4f,5.55f,1.1f,.8f,0,0);
+                points.Find(p=>p.id=="tv").position=new Vector2(4.8f,3.7f);
+                points.Find(p=>p.id=="paper").position=new Vector2(4.75f,2.9f);
+                points.Find(p=>p.id=="drawing").position=new Vector2(-2.8f,2.7f);
+                points.Find(p=>p.id=="toys").position=new Vector2(-5.1f,1.75f);
+                return;
+            }
+            if(phase!=8&&phase!=9)return;
+            const float t=.625f;
+            bounds=phase==8?new Rect(-7,-5,14,10):new Rect(-8,-5,16,10);
+            walls.Clear();rooms.Clear();furniture.Clear();
+            Wall(bounds.xMin,bounds.yMin,t,bounds.height);Wall(bounds.xMax-t,bounds.yMin,t,bounds.height);
+            Wall(bounds.xMin,bounds.yMax-t,bounds.width,t);Wall(bounds.xMin,bounds.yMin,bounds.width,t);
+            void At(string id,float x,float y){var point=points.Find(p=>p.id==id);if(point!=null)point.position=new Vector2(x,y);}
+            void Decor(string name,string motif,float x,float y,float w,float h)=>Prop(name,motif,x,y,w,h,0,0);
+            if(phase==8)
+            {
+                spawn=new Vector2(0,-3.9f);
+                walls.RemoveAll(w=>w.width>w.height&&Mathf.Approximately(w.yMin,bounds.yMin));
+                Wall(-7,-5,5.6f,t);Wall(1.4f,-5,5.6f,t);
+                Wall(-1.4f,-5.625f,2.8f,t);
+                Room("Nave da igreja",-6.375f,-4.375f,12.75f,8.75f,"ChurchFloor");
+                Room("Presbitério de madeira",-3.5f,2,7,2.375f);
+                Room("Degrau do presbitério",-3.7f,1.75f,7.4f,.25f);
+                Room("Alcova do órgão",-6.375f,-4.375f,2.25f,2);
+                Prop("Livro do Tombo","Church_Lectern",-4.3f,3.25f,1.15f,1.55f,.65f,.3f);
+                Prop("Estante de registros","Church_Archive",-5.4f,3.45f,1.55f,1.9f,.95f,.35f);
+                Prop("Arquivo de 1898","Church_Archive",5.4f,3.45f,1.55f,1.9f,.95f,.35f);
+                Prop("Altar da âncora","Church_Altar",0,3.4f,3.3f,3.15f,2.3f,.4f);
+                foreach(float x in new[]{-2.55f,2.55f})foreach(float y in new[]{1f,-.7f,-2.4f})
+                    Prop("Banco voltado ao altar "+x+":"+y,"Church_Pew",x,y,3.15f,2.2f,2.5f,.35f);
+                foreach(float x in new[]{-3.35f,3.35f})Prop("Coluna do presbitério "+x,"Church_Column",x,3.55f,.75f,1.9f,.45f,.4f);
+                Prop("Órgão da igreja","Church_Organ",-5.2f,-3.15f,1.8f,2,1.1f,.35f);
+                Prop("Pia batismal","Church_Font",5.2f,-3.15f,1.4f,1.3f,.85f,.3f);
+                Decor("Passadeira da nave","Church_Runner",0,-.7f,1.65f,4.884f);
+                Decor("Vitral do altar","Church_Window",0,4.05f,1.3f,1.9f);
+                foreach(float x in new[]{-1.8f,1.8f})Decor("Estandarte do altar "+x,"Church_Banner",x,3.95f,.65f,1.8f);
+                foreach(var p in new[]{new Vector2(-6.1f,3.95f),new Vector2(6.1f,3.95f),new Vector2(-3.95f,3.95f),new Vector2(3.95f,3.95f)})Decor("Tocha medieval "+p,"Torch",p.x,p.y,.35f,.75f);
+                At("index",-4.3f,2.25f);At("record",-5.4f,2.25f);At("truth2",5.4f,2.25f);
+                At("symbol",1.25f,2.75f);At("anchor",0,2.25f);At("trust",-3.75f,-3.8f);At("exit",0,-4.15f);
+            }
+            else
+            {
+                spawn=new Vector2(-3.5f,-3.6f);
+                Room("Casa de Ouzana",-7.375f,-4.375f,14.75f,8.75f);
+                Room("Quarto e arquivo pessoal",-7.375f,1.3125f,6.0625f,3.0625f);
+                Room("Sala da pesquisadora",-7.375f,-4.375f,6.0625f,5.0625f);
+                Room("Laboratório doméstico",-.6875f,-4.375f,8.0625f,8.75f,"LabFloor");
+                Wall(-1.3125f,-4.375f,t,2.875f);Wall(-1.3125f,.5f,t,3.875f);
+                Wall(-7.375f,.6875f,2.125f,t);Wall(-3.25f,.6875f,1.9375f,t);
+                Prop("Cama de Ouzana","Bed",-6,3.6f,1.7f,2.4f,1.15f,.4f);
+                Prop("Arquivo pessoal","Bookshelf",-2.4f,4.2f,1.1f,1.55f,.65f,.35f);
+                Prop("Sofá da recepção","Sofa",-5.6f,-1.7f,2.2f,1.3f,1.5f,.35f);
+                Prop("Mesa da recepção","CoffeeTable",-5.6f,-3.1f,1.65f,.8f,1.25f,.25f);
+                Prop("Cozinha da pesquisadora","Kitchen",-2.4f,-3.6f,1.6f,1.25f,1.2f,.35f);
+                Prop("Bancada de amostras","MicroscopeBench",2,3.8f,2.2f,1.65f,1.6f,.4f);
+                Prop("Geladeira de amostras","ScientificFreezer",.1f,4.2f,1.1f,1.7f,.65f,.35f);
+                Prop("Mesa de pesquisa","ScienceCabinet",4.2f,4.1f,1.1f,1.8f,.65f,.4f);
+                Prop("Estante de protocolos","Terrarium",6.4f,4.1f,1.2f,1.7f,.8f,.4f);
+                Prop("Tanque biológico","SpecimenTank",6.5f,0,1,1.7f,.6f,.35f);
+                Prop("Lavagem do cultivo","DecontaminationSink",4,-3.5f,1.9f,1.3f,1.2f,.35f);
+                Prop("Preparação de lâminas","SampleCart",1.2f,-3.5f,1,1.3f,.6f,.3f);
+                Decor("Protocolos de cultivo","DNABoard",4.1f,4.5f,1.8f,1);
+                Decor("Janela da residência","Window",-4.2f,4.3f,1.3f,1.5f);
+                Decor("Planta da recepção","PottedPlant",-7,-.3f,.65f,.85f);
+                Decor("Tapete da sala","Rug",-5.6f,-2.6f,2.7f,1.8f);
+                // All Ouzana furnishings and both floors use her exclusive botanist kit.
+                var motifs=new Dictionary<string,string>
+                {
+                    {"Bed","Ouzana_Bed"},{"Bookshelf","Ouzana_HerbariumShelf"},{"Sofa","Ouzana_Sofa"},
+                    {"CoffeeTable","Ouzana_CoffeeTable"},{"Kitchen","Ouzana_Kitchen"},{"MicroscopeBench","Ouzana_ResearchBench"},
+                    {"ScientificFreezer","Ouzana_Freezer"},{"ScienceCabinet","Ouzana_Cabinet"},{"Terrarium","Ouzana_Terrarium"},
+                    {"SpecimenTank","Ouzana_Specimen"},{"DecontaminationSink","Ouzana_Sink"},{"SampleCart","Ouzana_Cart"},
+                    {"DNABoard","Ouzana_Board"},{"Window","Ouzana_Window"},{"PottedPlant","Ouzana_Fern"}
+                };
+                furniture.RemoveAll(f=>f.motif=="Rug");
+                foreach(var prop in furniture)if(motifs.TryGetValue(prop.motif,out var motif))prop.motif=motif;
+                foreach(var room in rooms)room.motif=room.motif=="LabFloor"?"Ouzana_FloorLab":"Ouzana_FloorHome";
+                Decor("Ervas secas da pesquisadora","Ouzana_HangingHerbs",-2.6f,.1f,1.3f,.8f);
+                Decor("Samambaia do laboratório","Ouzana_Fern",6.6f,2.1f,.65f,.9f);
+                Prop("Ilha de preparo vegetal","Ouzana_ResearchBench",2.7f,-.9f,1.9f,1.3f,1.3f,.35f);
+                // The house and lab share a structure, with their own wall finishes.
+                walls.RemoveAll(w=>w.width>w.height&&Mathf.Approximately(w.width,bounds.width));
+                foreach(float y in new[]{bounds.yMin,bounds.yMax-t})
+                {
+                    Wall(bounds.xMin,y,6.6875f,t);Wall(-1.3125f,y,9.3125f,t);
+                }
+                At("ouzana",-3.5f,-3.5f);At("control",.1f,2.1f);At("residue",2.2f,2.4f);
+                At("samples",1.2f,1.5f);At("protocol",4.2f,2.7f);At("tutorial",6.4f,2.7f);At("exit",6.5f,-3.6f);
+            }
+        }
+        private void RefineArchitecture()
+        {
+            const float t=.625f;
+            void Perimeter(Rect area,float eastGap=0)
+            {
+                Wall(area.xMin,area.yMin,t,area.height);
+                Wall(area.xMin,area.yMax-t,area.width,t);
+                Wall(area.xMin,area.yMin,area.width,t);
+                if(eastGap<=0)Wall(area.xMax-t,area.yMin,t,area.height);
+                else
+                {
+                    Wall(area.xMax-t,area.yMin,t,-eastGap-area.yMin);
+                    Wall(area.xMax-t,eastGap,t,area.yMax-eastGap);
+                }
+            }
+            void Partition(float center,float bottom,float top)
+            {
+                Wall(center-t/2,bottom,t,-5.6f-bottom);
+                Wall(center-t/2,-3.6f,t,6);
+                Wall(center-t/2,4.4f,t,top-4.4f);
+            }
+            void Area(string name,Rect rect)
+            {
+                var room=rooms.Find(r=>r.name==name);if(room!=null)room.rect=rect;
+            }
+            if(phase==1)
+            {
+                walls.Clear();Perimeter(new Rect(-9,-7,18,14),1.75f);
+                foreach(float x in new[]{-1f,1f})
+                {
+                    Wall(x-t/2,-6.375f,t,2.175f);
+                    Wall(x-t/2,-2.2f,t,3.6f);
+                    Wall(x-t/2,3.4f,t,2.975f);
+                }
+                Wall(-8.375f,-t/2,2.125f,t);Wall(-3.75f,-t/2,2.4375f,t);
+                Wall(1.3125f,-t/2,2.6375f,t);Wall(6.45f,-t/2,1.925f,t);
+                Wall(26.375f,-8,t,16);Wall(9,7.375f,18,t);Wall(9,-8,18,t);
+                Area("Quarto infantil",new Rect(-8.375f,.3125f,7.0625f,6.0625f));
+                Area("Cozinha",new Rect(-8.375f,-6.375f,7.0625f,6.0625f));
+                Area("Corredor",new Rect(-.6875f,-6.375f,1.375f,12.75f));
+                Area("Sala",new Rect(1.3125f,.3125f,7.0625f,6.0625f));
+                Area("Banheiro e serviço",new Rect(1.3125f,-6.375f,7.0625f,6.0625f));
+                Area("Passagem do quintal",new Rect(9,-1.75f,7,3.5f));
+            }
+            if(phase==3)
+            {
+                Room("Guia da calçada oeste",-5.16f,-8,.16f,150,"Path");
+                Room("Guia da calçada leste",5,-8,.16f,150,"Path");
+            }
+            if(phase==4||phase==5)
+                Room("Soleira contínua do laboratório",-.5f,-5.7f,2.5f,.35f,"Path");
+            if(phase==6)
+            {
+                for(int i=0;i<walls.Count;i++)if(walls[i].x==-8.5f&&walls[i].y==4.1f)
+                    walls[i]=new Rect(-8.5f,4.1f,t,2.275f);
+            }
+            if(phase==8||phase==9)
+            {
+                walls.Clear();Perimeter(bounds);
+                float hall=phase==8?2.5f:2f,edge=hall+t/2;
+                Partition(-hall,-7.375f,7.375f);Partition(hall,-7.375f,7.375f);
+                Wall(-11.375f,-1.0625f,11.375f-edge,t);Wall(edge,-1.0625f,11.375f-edge,t);
+                Area("Área de circulação",new Rect(-11.375f,-7.375f,22.75f,14.75f));
+                Area(phase==8?"Arquivo de Fábio":"Laboratório de análise",new Rect(-11.375f,-.4375f,11.375f-edge,7.8125f));
+                Area(phase==8?"Subterrâneo religioso":"Documentação de Ouzana",new Rect(edge,-.4375f,11.375f-edge,7.8125f));
+                Area(phase==8?"Capela de oração e vigília":"Recepção da pesquisa",new Rect(-11.375f,-7.375f,11.375f-edge,6.3125f));
+                Area(phase==8?"Cripta dos antigos guardiões":"Cultivo e conservação biológica",new Rect(edge,-7.375f,11.375f-edge,6.3125f));
+                Area("Antecâmara do abrigo",new Rect(-hall+t/2,-7.375f,hall*2-t,6.9375f));
+            }
+            if(phase==10)
+            {
+                walls.Clear();Perimeter(bounds);
+                Wall(-11.375f,-1.3125f,9.375f,t);Wall(3.5f,-1.3125f,7.875f,t);
+                foreach(float x in new[]{-4.5f,5f})
+                {
+                    Wall(x-t/2,-.6875f,t,1.6875f);Wall(x-t/2,3.5f,t,3.875f);
+                }
+                Area("Oficina",new Rect(-11.375f,-.6875f,22.75f,8.0625f));
+                Area("Trecho de teste",new Rect(-11.375f,-7.375f,22.75f,6.0625f));
+            }
         }
         private void AddDetails()
         {
@@ -186,12 +410,35 @@ namespace Game.Varginha.Experiment
         {
             foreach(var prop in furniture)
             {
-                var sprite=CampaignAtmosphereAssets.Prop(prop.motif);if(sprite==null)continue;
+                var sprite=CampaignInteriorArt.Prop(prop.motif)??CampaignOuzanaArt.Prop(prop.motif)??CampaignAtmosphereAssets.Prop(prop.motif);if(sprite==null)continue;
+                if((phase==8&&prop.motif.StartsWith("Church_")&&prop.motif!="Church_Runner")||(phase==9&&prop.motif.StartsWith("Ouzana_")))
+                {
+                    // One common scale for the whole kit; independent fit boxes made
+                    // the altar larger than the organ and appliances inconsistent.
+                    prop.size=sprite.rect.size/250f;
+                    if(prop.motif=="Church_Organ")prop.size*=1.25f;
+                    if(prop.motif is "Ouzana_Board" or "Ouzana_Window")
+                        prop.position=new Vector2(prop.position.x,Mathf.Min(prop.position.y,bounds.yMax-.08f-prop.size.y/2));
+                    if(phase==9&&prop.position.y>3&&(prop.motif is "Ouzana_Bed" or "Ouzana_HerbariumShelf" or "Ouzana_Freezer" or "Ouzana_ResearchBench" or "Ouzana_Cabinet" or "Ouzana_Terrarium"))
+                        prop.position=new Vector2(prop.position.x,4.25f-prop.size.y/2);
+                    if(prop.footprint.width>0&&prop.footprint.height>0)
+                    {
+                        var size=new Vector2(Mathf.Min(prop.footprint.width,prop.size.x*.82f),Mathf.Min(prop.footprint.height,prop.size.y*.3f));
+                        prop.footprint=new Rect(prop.position-Vector2.up*(prop.size.y*.3f)-size/2,size);
+                    }
+                    continue;
+                }
                 float aspect=sprite.rect.width/sprite.rect.height;
                 var fit=prop.size.x/prop.size.y>aspect?new Vector2(prop.size.y*aspect,prop.size.y):new Vector2(prop.size.x,prop.size.x/aspect);
                 prop.position+=Vector2.up*(fit.y-prop.size.y)/2;prop.size=fit;
                 if(prop.footprint.width>0){var center=prop.footprint.center;var size=new Vector2(Mathf.Min(prop.footprint.width,fit.x*.82f),Mathf.Min(prop.footprint.height,fit.y*.58f));prop.footprint=new Rect(center-size/2,size);}
             }
+            if(phase==9)
+                foreach(var approach in new[]{("control","Geladeira de amostras"),("residue","Bancada de amostras"),("protocol","Mesa de pesquisa"),("tutorial","Estante de protocolos")})
+                {
+                    var point=points.Find(p=>p.id==approach.Item1);var prop=furniture.Find(f=>f.name==approach.Item2);
+                    if(point!=null&&prop!=null)point.position=new Vector2(point.position.x,prop.footprint.yMin-.55f);
+                }
         }
         private void AddIdentity()
         {

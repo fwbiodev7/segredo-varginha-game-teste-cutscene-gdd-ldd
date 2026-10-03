@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "duration": 7.92,
+  "summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.VarginhaCampaignTests.AlienBurstKnocksTheChildBackAndLeavesHimLyingWithNoMemory",
+      "Status": "Passed",
+      "Duration": 7.0730978,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.VarginhaCampaignTests.OpeningHandsControlToChildWithoutCombatAndPauseRestoresInput",
+      "Status": "Passed",
+      "Duration": 0.7381456,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}
