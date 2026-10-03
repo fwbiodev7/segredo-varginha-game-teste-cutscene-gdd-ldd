@@ -76,7 +76,7 @@ namespace Game.Varginha.Experiment
             "Um desenho seu: a casa, uma árvore e uma figura sem rosto. Você não lembra de ter feito a última parte.",
             "Carrinhos, papéis e uma caixa velha. Você guarda um desenho aqui. Um dia, essa caixa voltará a ser importante."
         };
-        private readonly Vector2[] _points = { new(4.6f, 4.5f), new(4.6f, 1.5f), new(-4.55f, 4.5f), new(-7.6f, 1.5f) };
+        private readonly Vector2[] _points = { new(4.6f, 4.5f), new(6.2f, 4), new(-4.55f, 4.5f), new(-7.6f, 1.5f) };
         public CampaignMemory Memory => _memory;
         public bool IsExploring => _stage == Stage.Explore;
         public static void StartCampaign(bool continueGame)
@@ -109,8 +109,8 @@ namespace Game.Varginha.Experiment
             _player.transform.localScale = new Vector3(.72f, .72f, 1);
             foreach (Transform part in _player.transform) if (part.name.Contains("Beard") || part.name.Contains("Barba") || part.name.Contains("Backpack")) part.gameObject.SetActive(false);
             _child = _player.GetComponent<SpriteRenderer>(); _child.color = Color.white; _child.flipX = false; LoadChild(); CampaignPresentation.FootCollision(_player, true);
-            AddPaper("Jornal_1996", _points[1], new Color(.86f, .8f, .62f));
-            AddPaper("Desenho_Infantil", _points[2], new Color(.95f, .89f, .72f));
+            AddPaper("Jornal_1996", new(4.6f,4.22f), new Color(.86f, .8f, .62f),"Mesa do jornal");
+            AddPaper("Desenho_Infantil", new(-4.55f,6.03f), new Color(.95f, .89f, .72f),"Mesa de desenho");
             _voice = gameObject.AddComponent<AudioSource>(); _voice.volume = .7f;
             _ambience = gameObject.AddComponent<AudioSource>(); _ambience.volume = .025f; _ambience.loop = true;
             _staticClip = VarginhaExperimentLab.CreateStatic(); _ambience.clip = _staticClip;
@@ -145,11 +145,13 @@ namespace Game.Varginha.Experiment
                     new RectInt(frame * width, (3 - direction) * height, width, height), height / 1.8f, true);
             _child.sprite = _childFrames[0, 0];
         }
-        private void AddPaper(string name, Vector2 position, Color color)
+        private void AddPaper(string name, Vector2 position, Color color,string supportName)
         {
             var item = new GameObject(name); item.transform.SetParent(transform); item.transform.position = position;
             var renderer = item.AddComponent<SpriteRenderer>(); renderer.sprite = VarginhaPixelArtSprites.Create("Doc_Prop", color); renderer.sortingOrder = 8;
             item.transform.localScale = new Vector3(.48f, .48f, 1);
+            var support=GameObject.Find(supportName);
+            if(support!=null)VarginhaWorldDepth.Ensure(renderer,supportingObject:support.transform,offset:2);
         }
         public void PlayOpening()
         {

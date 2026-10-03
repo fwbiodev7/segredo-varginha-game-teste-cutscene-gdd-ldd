@@ -9,9 +9,11 @@ namespace Game.Varginha.Experiment
     {
         private static readonly Dictionary<string,Sprite> Frames=new();
         private static readonly Dictionary<Texture2D,Rect[]> Outlines=new();
+        private static readonly Dictionary<(Texture2D,Rect),float> Anchors=new();
         private EdelzioTopDownController _actor;
         private VarginhaPlayerSpriteAnimation _actions;
         private SpriteRenderer _renderer;
+        public const float StandingHeight=1.5f;
         private bool _wasPunching;
         private float _punchStarted;
         private string _lastInteraction;
@@ -19,12 +21,14 @@ namespace Game.Varginha.Experiment
         private void Start()
         {
             _actor=GetComponent<EdelzioTopDownController>();_actions=GetComponent<VarginhaPlayerSpriteAnimation>();_renderer=GetComponent<SpriteRenderer>();
+            transform.localScale=Vector3.one;
             if(_actions!=null)_actions.enabled=false;
         }
         private void LateUpdate()
         {
             if(_actor==null||_renderer==null)return;
             bool acting=_actions!=null&&_actions.HasActionPose;
+            bool equipped=_actor.IsBackpackVisible;
             Vector2 face=acting?_actions.ActionFacingDirection:_actor.FacingDirection;
             int direction=Mathf.Abs(face.y)>=Mathf.Abs(face.x)?face.y>0?3:0:face.x<0?1:2;
             bool punching=_actions!=null&&_actions.IsPunching;
@@ -33,40 +37,64 @@ namespace Game.Varginha.Experiment
             string interaction=acting?_actions.CurrentActionPose:null;
             if(interaction!=_lastInteraction){_interactionStarted=Time.time;_lastInteraction=interaction;}
             Sprite pose;
-            if(punching)pose=Frame("EdelzioPunch",direction,Mathf.Clamp((int)((Time.time-_punchStarted)*12),0,2));
+            if(punching)pose=Frame("EdelzioPunch",direction,Mathf.Clamp((int)((Time.time-_punchStarted)*12),0,2),equipped);
             else if(_actions!=null&&_actions.IsSeated)
-                pose=Frame("EdelzioActions",direction,_actions.CurrentActionPose=="Edelzio_UseNotebook"?(int)(Time.time*4)%3:_actions.ActionFrame);
-            else if(_actions!=null&&_actions.IsDrinking)pose=Frame("EdelzioActions",direction,3+_actions.ActionFrame);
+                pose=Frame("EdelzioActions",direction,_actions.CurrentActionPose=="Edelzio_UseNotebook"?(int)(Time.time*4)%3:_actions.ActionFrame,equipped);
+            else if(_actions!=null&&_actions.IsDrinking)pose=Frame("EdelzioActions",direction,3+_actions.ActionFrame,equipped);
             else if(acting&&(_actions.CurrentActionPose=="Edelzio_Crouch"||_actions.CurrentActionPose=="Edelzio_Reach"))
-                pose=Frame("EdelzioInteractions",direction,(_actions.CurrentActionPose=="Edelzio_Reach"?3:0)+Mathf.Clamp((int)((Time.time-_interactionStarted)*8),0,2));
+                pose=Frame("EdelzioInteractions",direction,(_actions.CurrentActionPose=="Edelzio_Reach"?3:0)+Mathf.Clamp((int)((Time.time-_interactionStarted)*8),0,2),equipped);
             else
             {
                 int frame=_actor.IsMoving&&!_actor.IsInputLocked?(int)(Time.time*7)%4:1;
-                pose=direction==0&&!_actor.IsMoving?Idle:Frame("EdelzioWalk",direction,frame);
+                pose=direction==0&&!_actor.IsMoving?(equipped?Frame("EdelzioWalk",0,1,true):Idle):Frame("EdelzioWalk",direction,frame,equipped);
             }
-            if(pose!=null){_renderer.sprite=pose;_renderer.color=Color.white;_renderer.flipX=false;}
+            if(pose!=null)
+            {
+                _renderer.sprite=pose;
+                _renderer.color=Color.white;_renderer.flipX=false;
+            }
+            EdelzioBackpackAppearance.HideLegacyLayers(transform);
             foreach(Transform part in transform)if(part.name.Contains("Beard")||part.name.Contains("Barba"))part.gameObject.SetActive(false);
         }
         public static Sprite Idle=>Frame("EdelzioIdle",0,0);
-        public static Sprite Frame(string name,int row,int column)
+        public static Sprite Frame(string name,int row,int column,bool withBackpack=false)
         {
             bool idle=name=="EdelzioIdle";
             int columns=idle?1:name=="EdelzioWalk"?4:name=="EdelzioPunch"?3:6;
             if(row<0||row>=(idle?1:4)||column<0||column>=columns)return null;
-            string key=name+row+":"+column;
+            string key=name+row+":"+column+(withBackpack?"_ComMochilaV3":"");
             if(Frames.TryGetValue(key,out var cached)&&cached!=null)return cached;
-            var texture=Resources.Load<Texture2D>("Varginha/TeamArt/"+name+(idle?"":"V2"));
+            var texture=Resources.Load<Texture2D>("Varginha/TeamArt/"+name+(withBackpack?"BackpackV3":idle?"":"V2"));
             if(texture==null)return null;
             var rectangles=FindOutlines(texture,columns,idle?1:4);
             var rect=rectangles[row*columns+column];if(rect.width<=0||rect.height<=0)return null;
             int standingColumn=idle?0:name=="EdelzioActions"||name=="EdelzioInteractions"?4:name=="EdelzioWalk"?1:0;
             var standing=rectangles[row*columns+standingColumn];
-            float ppu=Mathf.Max(1,standing.height)/1.82f;
+            float ppu=Mathf.Max(1,standing.height)/StandingHeight;
+            // Padding preserves the full silhouette at the edges of punch poses.
+            float left=Mathf.Max(0,Mathf.Floor(rect.x-ppu*.22f)),right=Mathf.Min(texture.width,Mathf.Ceil(rect.xMax+ppu*.22f));
+            rect=new Rect(left,rect.y,right-left,rect.height);
             // Outline rectangles retain the complete head even when artwork crosses a nominal grid edge.
-            float cellCenter=(column+.5f)*(texture.width/(float)columns);
-            float pivotX=Mathf.Clamp01((cellCenter-rect.x)/rect.width);
+            float bodyCenter=BodyAnchorX(texture,rectangles[row*columns+column]);
+            float pivotX=Mathf.Clamp01((bodyCenter-rect.x)/rect.width);
             var sprite=Sprite.Create(texture,rect,new Vector2(pivotX,ppu*.58f/rect.height),ppu,0,SpriteMeshType.FullRect);
             sprite.name="Team_"+key;Frames[key]=sprite;return sprite;
+        }
+        public static float BodyAnchorX(Texture2D texture,Rect outline)
+        {
+            if(Anchors.TryGetValue((texture,outline),out float anchor))return anchor;
+            return BodyAnchorX(texture,outline,texture.GetPixels32());
+        }
+        private static float BodyAnchorX(Texture2D texture,Rect outline,Color32[] pixels)
+        {
+            // The upper head is stationary while arms and feet swing. Atlas-cell centers
+            // differ between generated poses and must never drive the character origin.
+            int left=(int)outline.xMax,right=(int)outline.xMin-1;
+            int bottom=Mathf.CeilToInt(outline.yMin+outline.height*.8f);
+            for(int y=bottom;y<(int)outline.yMax;y++)for(int x=(int)outline.xMin;x<(int)outline.xMax;x++)
+                if(pixels[y*texture.width+x].a>=100){left=Mathf.Min(left,x);right=Mathf.Max(right,x);}
+            float anchor=right>=left?(left+right+1)*.5f:outline.center.x;
+            Anchors[(texture,outline)]=anchor;return anchor;
         }
         private static Rect[] FindOutlines(Texture2D texture,int columns,int rows)
         {
@@ -91,6 +119,7 @@ namespace Game.Varginha.Experiment
                 int slot=row*columns+column;
                 if(tail>counts[slot]){counts[slot]=tail;rectangles[slot]=new Rect(left,bottom,right-left+1,top-bottom+1);}
             }
+            foreach(var rect in rectangles)BodyAnchorX(texture,rect,pixels);
             Outlines[texture]=rectangles;return rectangles;
         }
     }

@@ -17,6 +17,13 @@ namespace Game.Varginha.Experiment
         private SpriteRenderer _renderer;
         private float _nextRoute, _talkUntil;
         private bool _away;
+        public static readonly Rect RenanClearArea=new(1.8f,-9.5f,2.4f,2.7f);
+        public static CampaignMapPlan CreateRoutePlan(int phase)
+        {
+            var plan=CampaignMapPlan.Create(phase);
+            // Keep roaming classmates outside Renan's whole silhouette, not just his feet.
+            plan.walls.Add(RenanClearArea);return plan;
+        }
         public void Configure(string name, string activity, Vector2 home, Vector2 away, bool walks)
         {
             StudentName = name; Activity = activity; Home = home; Away = away; Walks = walks;
@@ -34,7 +41,7 @@ namespace Game.Varginha.Experiment
             if (Time.time >= _nextRoute && _path.Count == 0)
             {
                 _away = !_away;
-                _plan ??= CampaignMapPlan.Create(VarginhaCampaignStage.Active.phase);
+                _plan ??= CreateRoutePlan(VarginhaCampaignStage.Active.phase);
                 var footOffset=GetComponent<CircleCollider2D>().offset;
                 _plan.Route(_body.position+footOffset,(_away?Away:Home)+footOffset,_path);
                 for(int i=0;i<_path.Count;i++)_path[i]-=footOffset;

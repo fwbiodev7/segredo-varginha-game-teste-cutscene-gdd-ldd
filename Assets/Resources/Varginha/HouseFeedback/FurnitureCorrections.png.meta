@@ -1,0 +1,431 @@
+fileFormatVersion: 2
+guid: 93682c116bb9ac946a370fa2152e5c9a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7886328018691472956
+    second: FurnitureCorrections_0
+  - first:
+      213: 7259822831339447369
+    second: FurnitureCorrections_1
+  - first:
+      213: 3776060387539517841
+    second: FurnitureCorrections_2
+  - first:
+      213: -2854934525453164295
+    second: FurnitureCorrections_3
+  - first:
+      213: 2614232253006494747
+    second: FurnitureCorrections_4
+  - first:
+      213: 108265653085835683
+    second: FurnitureCorrections_5
+  - first:
+      213: 2052215908207086776
+    second: FurnitureCorrections_6
+  - first:
+      213: 6516855648537626214
+    second: FurnitureCorrections_7
+  - first:
+      213: -605709842721765181
+    second: FurnitureCorrections_8
+  - first:
+      213: 6827399095925906963
+    second: FurnitureCorrections_9
+  - first:
+      213: 3038849669229961945
+    second: FurnitureCorrections_10
+  - first:
+      213: -1839016195388438066
+    second: FurnitureCorrections_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FurnitureCorrections_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 487
+        width: 781
+        height: 491
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3eb058ac8dd17d60800000000000000
+      internalID: 7886328018691472956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureCorrections_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 961
+        width: 95
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9442242a66210c460800000000000000
+      internalID: 7259822831339447369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureCorrections_2
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 415
+        width: 672
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19187b18ae2476430800000000000000
+      internalID: 3776060387539517841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureCorrections_3
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 951
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0ad59dc2c3168d0800000000000000
+      internalID: -2854934525453164295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureCorrections_4
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 961
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c32d0226e974420800000000000000
+      internalID: 2614232253006494747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureCorrections_5
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 0
+        width: 692
+        height: 452
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a19e81b903a08100800000000000000
+      internalID: 108265653085835683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureCorrections_6
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 377
+        width: 41
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bcc613de7fea7c10800000000000000
+      internalID: 2052215908207086776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureCorrections_7
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 29
+        width: 483
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 666459f3fa5807a50800000000000000
+      internalID: 6516855648537626214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureCorrections_8
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 351
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c88c937b161897f0800000000000000
+      internalID: -605709842721765181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureCorrections_9
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 359
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e9c7cfd4bcfbe50800000000000000
+      internalID: 6827399095925906963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureCorrections_10
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 215
+        width: 33
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d2e3447ca92c2a20800000000000000
+      internalID: 3038849669229961945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnitureCorrections_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 55
+        width: 94
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec98ea983808a76e0800000000000000
+      internalID: -1839016195388438066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FurnitureCorrections_0: 7886328018691472956
+      FurnitureCorrections_1: 7259822831339447369
+      FurnitureCorrections_10: 3038849669229961945
+      FurnitureCorrections_11: -1839016195388438066
+      FurnitureCorrections_2: 3776060387539517841
+      FurnitureCorrections_3: -2854934525453164295
+      FurnitureCorrections_4: 2614232253006494747
+      FurnitureCorrections_5: 108265653085835683
+      FurnitureCorrections_6: 2052215908207086776
+      FurnitureCorrections_7: 6516855648537626214
+      FurnitureCorrections_8: -605709842721765181
+      FurnitureCorrections_9: 6827399095925906963
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

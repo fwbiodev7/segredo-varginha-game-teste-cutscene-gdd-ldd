@@ -1,0 +1,639 @@
+fileFormatVersion: 2
+guid: 2fb389daf50bad74f9eb335eee58e4b7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6216684089738852986
+    second: EdelzioActionsBackpackV3_0
+  - first:
+      213: -5190218403860239184
+    second: EdelzioActionsBackpackV3_1
+  - first:
+      213: 2342349645950665089
+    second: EdelzioActionsBackpackV3_2
+  - first:
+      213: 4459859319657423480
+    second: EdelzioActionsBackpackV3_3
+  - first:
+      213: 2889632052312171385
+    second: EdelzioActionsBackpackV3_4
+  - first:
+      213: -1849129592849720746
+    second: EdelzioActionsBackpackV3_5
+  - first:
+      213: -8084981662406317752
+    second: EdelzioActionsBackpackV3_6
+  - first:
+      213: -8108076056883197126
+    second: EdelzioActionsBackpackV3_7
+  - first:
+      213: 4157427397321186806
+    second: EdelzioActionsBackpackV3_8
+  - first:
+      213: -1323065718698818533
+    second: EdelzioActionsBackpackV3_9
+  - first:
+      213: -8412146851292258090
+    second: EdelzioActionsBackpackV3_10
+  - first:
+      213: -2024493008264145421
+    second: EdelzioActionsBackpackV3_11
+  - first:
+      213: 5897485606405332593
+    second: EdelzioActionsBackpackV3_12
+  - first:
+      213: 2691438511705723244
+    second: EdelzioActionsBackpackV3_13
+  - first:
+      213: 1889962616342236004
+    second: EdelzioActionsBackpackV3_14
+  - first:
+      213: 7077908356063899002
+    second: EdelzioActionsBackpackV3_15
+  - first:
+      213: -6805640647628314281
+    second: EdelzioActionsBackpackV3_16
+  - first:
+      213: -3235509193202933369
+    second: EdelzioActionsBackpackV3_17
+  - first:
+      213: 4099234737153019013
+    second: EdelzioActionsBackpackV3_18
+  - first:
+      213: -3404715115194938009
+    second: EdelzioActionsBackpackV3_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 743
+        width: 263
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6850b4ef1c6e9b9a0800000000000000
+      internalID: -6216684089738852986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_1
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 887
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc27335cd3a8f7b0800000000000000
+      internalID: -5190218403860239184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_2
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 687
+        width: 233
+        height: 314
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 181c6aab792b18020800000000000000
+      internalID: 2342349645950665089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_3
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 765
+        width: 129
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87265600c6a94ed30800000000000000
+      internalID: 4459859319657423480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_4
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 0
+        width: 291
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97366a9aa090a1820800000000000000
+      internalID: 2889632052312171385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_5
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 0
+        width: 267
+        height: 1020
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a9782be629656e0800000000000000
+      internalID: -1849129592849720746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_6
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 0
+        width: 215
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84969bc93006ccf80800000000000000
+      internalID: -8084981662406317752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 473
+        width: 251
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3b80a1e8c35a7f80800000000000000
+      internalID: -8108076056883197126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_8
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 495
+        width: 207
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fd5eccd03622b930800000000000000
+      internalID: 4157427397321186806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_9
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 503
+        width: 154
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14c57e1db683ade0800000000000000
+      internalID: -1323065718698818533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_10
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 499
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d0ed4a120d024b80800000000000000
+      internalID: -8412146851292258090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_11
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 501
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f55720d55e87e3e0800000000000000
+      internalID: -2024493008264145421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13
+        width: 333
+        height: 478
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17ed4cda9e318d150800000000000000
+      internalID: 5897485606405332593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_13
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 15
+        width: 189
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6196090119e95520800000000000000
+      internalID: 2691438511705723244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_14
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 389
+        width: 49
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46bc8d17cfe7a3a10800000000000000
+      internalID: 1889962616342236004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_15
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 13
+        width: 179
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d25f34628c93260800000000000000
+      internalID: 7077908356063899002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_16
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 389
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 759a72983e18d81a0800000000000000
+      internalID: -6805640647628314281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_17
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 249
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 781e0aff7892913d0800000000000000
+      internalID: -3235509193202933369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_18
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 149
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c82f6564863e830800000000000000
+      internalID: 4099234737153019013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioActionsBackpackV3_19
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 63
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d076544a500c0d0800000000000000
+      internalID: -3404715115194938009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      EdelzioActionsBackpackV3_0: -6216684089738852986
+      EdelzioActionsBackpackV3_1: -5190218403860239184
+      EdelzioActionsBackpackV3_10: -8412146851292258090
+      EdelzioActionsBackpackV3_11: -2024493008264145421
+      EdelzioActionsBackpackV3_12: 5897485606405332593
+      EdelzioActionsBackpackV3_13: 2691438511705723244
+      EdelzioActionsBackpackV3_14: 1889962616342236004
+      EdelzioActionsBackpackV3_15: 7077908356063899002
+      EdelzioActionsBackpackV3_16: -6805640647628314281
+      EdelzioActionsBackpackV3_17: -3235509193202933369
+      EdelzioActionsBackpackV3_18: 4099234737153019013
+      EdelzioActionsBackpackV3_19: -3404715115194938009
+      EdelzioActionsBackpackV3_2: 2342349645950665089
+      EdelzioActionsBackpackV3_3: 4459859319657423480
+      EdelzioActionsBackpackV3_4: 2889632052312171385
+      EdelzioActionsBackpackV3_5: -1849129592849720746
+      EdelzioActionsBackpackV3_6: -8084981662406317752
+      EdelzioActionsBackpackV3_7: -8108076056883197126
+      EdelzioActionsBackpackV3_8: 4157427397321186806
+      EdelzioActionsBackpackV3_9: -1323065718698818533
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

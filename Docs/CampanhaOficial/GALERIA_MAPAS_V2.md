@@ -1,6 +1,6 @@
 # Galeria dos mapas V2
 
-As dez fases da campanha estão integradas. Nove recebem mapas novos; a casa adulta permanece original. A fachada real da escola e o modelo do Fusca são preservados. Imagens geradas pela ImageGen foram integradas como peças dos cenários, com plantas e colisões definidas no Unity.
+As dez fases da campanha estão integradas. Nove recebem mapas novos. A cena adulta preserva o arquivo original e aplica ajustes visuais e portais durante o jogo, conforme o feedback posterior. A fachada real da escola e o modelo do Fusca são preservados. Imagens geradas pela ImageGen foram integradas como peças dos cenários, com plantas e colisões definidas no Unity.
 
 Cada fase abaixo oferece a arquitetura primeiro, a mobília depois e o desenho das colisões. Os pontos verdes são locais de interação. As prévias mostram o cenário sem personagens; os personagens aparecem durante o jogo.
 
@@ -10,9 +10,13 @@ Cada fase abaixo oferece a arquitetura primeiro, a mobília depois e o desenho d
 
 ![Fase 1 mobiliada](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Fase1_02_Mobilia.png)
 
-## Fase 2 — Casa de Edélzio adulto — original
+## Fase 2 — Casa de Edélzio adulto — ajustes do feedback
 
-[Cena original preservada](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Assets/Scenes/Ato2_Fase2_A_Chave_e_a_Caixa.unity). Sua planta, mobília e iluminação não foram reconstruídas.
+[Cena original preservada no arquivo](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Assets/Scenes/Ato2_Fase2_A_Chave_e_a_Caixa.unity). Após o feedback de teste, o jogo aplica texturas indicadas pelo usuário, móveis proporcionais, sofá voltado à TV e portais abertos entre os cômodos. A caixa mostra apenas tarefas realmente pendentes, com a pia acessível.
+
+[Casa com os ajustes atuais](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/Fase2_Adulto_Ajustado.png) · [Sprites, mudanças e prompts](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/CORRECOES_CASA_E_MOCHILA_V3.md).
+
+[Mochila: caminhada](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/EdelzioWalk_Mochila.png) · [Soco](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/EdelzioPunch_Mochila.png) · [Sentar e café](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/EdelzioActions_Mochila.png) · [Agachar e alcançar](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Preview/CampaignMapsV2/EdelzioInteractions_Mochila.png).
 
 ## Fase 3 — Travessia urbana
 

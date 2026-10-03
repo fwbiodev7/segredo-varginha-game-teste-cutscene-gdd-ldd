@@ -41,7 +41,12 @@ namespace Game.Varginha.Experiment
         }
         private void Prop(string n, string motif, float x, float y, float w, float h, float fw = -1, float fh = -1)
         {
-            fw = fw < 0 ? w * .82f : fw; fh = fh < 0 ? h * .58f : fh;
+            if(phase==1&&CampaignVisualAssets.Prop(motif) is Sprite art)
+            {
+                float scale=Mathf.Min(w/art.bounds.size.x,h/art.bounds.size.y);
+                w=art.bounds.size.x*scale;h=art.bounds.size.y*scale;
+            }
+            fw = fw < 0 ? w * .82f : fw; fh = fh < 0 ? phase==1?Mathf.Min(.42f,h*.35f):h*.58f : fh;
             var footprint=new Rect(x-fw/2,y-h*.30f-fh/2,fw,fh);
             if(motif=="Fusca")footprint=new Rect(x-w*.31f,y-h*.38f,w*.62f,h*.76f);
             furniture.Add(new Furnishing(n, motif, new Vector2(x, y), new Vector2(w, h), footprint));
@@ -355,7 +360,7 @@ namespace Game.Varginha.Experiment
         }
         private void Road()
         {
-            title="NÃO DEIXA ELA SAIR • TRAVESSIA URBANA";bounds=new Rect(-12,-8,24,150);spawn=new Vector2(-2,0);rooms.Clear();walls.Clear();
+            title="NÃO DEIXE ELA SAIR • TRAVESSIA URBANA";bounds=new Rect(-12,-8,24,150);spawn=new Vector2(-2,0);rooms.Clear();walls.Clear();
             Room("Asfalto",-5,-8,10,150,"Street");Room("Calçada esquerda",-7,-8,2,150,"Path");Room("Calçada direita",5,-8,2,150,"Path");
             Room("Jardins urbanos",-12,-8,5,150,"Floor_Yard");Room("Jardins leste",7,-8,5,150,"Floor_Yard");
             for(int y=-5;y<139;y+=8){Wall(-11,y,4,5);Wall(7,y,4,5);}
@@ -377,10 +382,10 @@ namespace Game.Varginha.Experiment
             Prop("Cama infantil", "Bed", -6.3f, 4.5f, 2.4f, 2.8f); Prop("Brinquedos", "Nightstand", -7.6f, 2.5f, 1, 1);
             Prop("Mesa de desenho", "Desk", -4.55f, 5.8f, 2, 1); Prop("Fogão", "Stove", -7.4f, -4.8f, 1.4f, 1.8f);
             Prop("Mesa da cozinha", "CoffeeTable", -4.5f, -3.5f, 2.3f, 1.5f); Prop("Geladeira", "Fridge", -7.5f, -1.4f, 1.3f, 1.8f);
-            Prop("TV CRT", "TV", 4.6f, 5.8f, 1.8f, 1.5f); Prop("Sofá", "Sofa", 6.8f, 4.2f, 2.1f, 1.3f);
-            Prop("Mesa do jornal", "CoffeeTable", 4.6f, 2.5f, 1.6f, .9f); Prop("Lavatório", "Kitchen", 4.7f, -5.5f, 2, 1.5f);
-            Prop("Árvore do clarão", "Plant", 18, 5, 3, 3, .8f, .8f);
-            PointAt("tv", "TV", 4.6f, 4.5f); PointAt("paper", "JORNAL", 4.6f, 1.5f); PointAt("drawing", "DESENHO", -4.55f, 4.5f);
+            Prop("TV CRT", "TV", 4.6f, 5.8f, 1.8f, 1.5f); Prop("Sofá", "SofaFacingTV", 4.6f, 2.9f, 2.4f, 1.5f);
+            Prop("Mesa do jornal", "CoffeeTable", 4.6f, 4, 1.6f, .9f); Prop("Lavatório", "Kitchen", 4.7f, -5.5f, 2, 1.5f);
+            Prop("Árvore do clarão", "Tree", 18, 5, 3, 3, .8f, .8f);
+            PointAt("tv", "TV", 4.6f, 4.5f); PointAt("paper", "JORNAL", 6.2f, 4); PointAt("drawing", "DESENHO", -4.55f, 4.5f);
             PointAt("toys", "BRINQUEDOS", -7.6f, 1.5f); PointAt("yard", "QUINTAL", 17, 0);
         }
         public bool IsClear(Vector2 point, float radius = .28f)

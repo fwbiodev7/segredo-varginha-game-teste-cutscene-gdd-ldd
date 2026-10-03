@@ -54,6 +54,7 @@ namespace Game.Varginha.Experiment
         }
         public static Sprite Prop(string motif)
         {
+            if(motif=="SofaFacingTV")return CampaignAdultHouse.Correction(0);
             var atmospheric=CampaignAtmosphereAssets.Prop(motif);if(atmospheric!=null)return atmospheric;
             if(motif.StartsWith("Original"))return OriginalSchool(motif);
             int detail=System.Array.IndexOf(Details,motif);

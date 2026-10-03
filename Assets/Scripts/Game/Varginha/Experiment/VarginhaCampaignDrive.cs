@@ -127,7 +127,7 @@ namespace Game.Varginha.Experiment
             if (_titleTime < 3)
             {
                 ExperimentGUI.Label(new Rect(230, 230, 880, 60), "ATO II — O CHAMADO", true);
-                ExperimentGUI.Label(new Rect(230, 325, 880, 70), "FASE 3 • NÃO DEIXA ELA SAIR\nO caminho até a Industrial.");
+                ExperimentGUI.Label(new Rect(230, 325, 880, 70), "FASE 3 • NÃO DEIXE ELA SAIR\nO caminho até a Industrial.");
             }
             else if (_state == State.Arrived)
             {
@@ -140,13 +140,13 @@ namespace Game.Varginha.Experiment
             else
             {
                 ExperimentGUI.Panel(new Rect(24, 18, 940, 103));
-                ExperimentGUI.Label(new Rect(46, 32, 890, 33), "FASE 3 • NÃO DEIXA ELA SAIR", true);
+                ExperimentGUI.Label(new Rect(46, 32, 890, 33), "FASE 3 • NÃO DEIXE ELA SAIR", true);
                 ExperimentGUI.Label(new Rect(46, 76, 890, 37), _state == State.Breakdown ? "O motor parou. [E] examine ignição, rádio e painel."
                     : _state == State.Restart ? "Silêncio. O motor recomeça sozinho..." : "W / ↑: ACELERAR • A/D: DIREÇÃO • S / ↓: RECUAR • ESC: PAUSAR", small: true);
                 if (ExperimentGUI.Button(new Rect(1080, 22, 175, 44), "PAUSAR")) TogglePause();
                 string signal = _progress.driveDistance < 25 ? "RÁDIO: previsão do tempo e notícias locais."
                     : _progress.driveDistance < 45 ? "O rádio perde o sinal. O farol parece iluminar a mesma rua outra vez."
-                    : "No retrovisor, a lembrança de uma criança: NÃO DEIXA ELA SAIR.";
+                    : "No retrovisor, a lembrança de uma criança: NÃO DEIXE ELA SAIR.";
                 if (VarginhaGameSettings.Current.subtitles) { ExperimentGUI.Panel(new Rect(160, 630, 960, 65)); ExperimentGUI.Caption(new Rect(182, 643, 916, 44), signal, VarginhaGameSettings.Current.subtitleSize); }
             }
             if (_paused)

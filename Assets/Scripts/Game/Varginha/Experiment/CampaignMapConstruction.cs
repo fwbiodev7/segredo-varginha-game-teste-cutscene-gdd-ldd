@@ -46,6 +46,7 @@ namespace Game.Varginha.Experiment
                 var collider = renderer.gameObject.AddComponent<BoxCollider2D>(); collider.size = vertical?new Vector2(wall.height,wall.width):wall.size;
                 VarginhaWorldDepth.Ensure(renderer, background: true, ground: collider);
             }
+            if(plan.phase!=3&&plan.phase!=7)CampaignWallConnections.Build(architecture,plan.walls,CampaignVisualAssets.Wall(plan.phase),plan.phase==1||plan.phase==6);
             if (furnished) Furnish(map, plan);
             return map;
         }
@@ -72,10 +73,17 @@ namespace Game.Varginha.Experiment
                 }
                 else sprite = VarginhaFurnitureArt.Create(prop.motif, prop.size) ?? VarginhaSceneryArt.Create(prop.motif, prop.size);
                 var renderer = Render(layer, prop.name, sprite, prop.position, prop.size, 5);
+                if(plan.phase==1)
+                {
+                    renderer.drawMode=SpriteDrawMode.Simple;
+                    float fit=Mathf.Min(prop.size.x/sprite.bounds.size.x,prop.size.y/sprite.bounds.size.y);
+                    renderer.transform.localScale=Vector3.one*fit;
+                }
                 if(prop.footprint.width<=0||prop.footprint.height<=0)
                 {renderer.sortingOrder=prop.motif=="Rug"?1:4;continue;}
                 var collider = renderer.gameObject.AddComponent<BoxCollider2D>();
-                collider.size = prop.footprint.size; collider.offset = prop.footprint.center - prop.position;
+                var scale=(Vector2)renderer.transform.lossyScale;
+                collider.size = prop.footprint.size/scale; collider.offset = (prop.footprint.center - prop.position)/scale;
                 VarginhaWorldDepth.Ensure(renderer, ground: collider);
                 if(!sprite.name.StartsWith("WorldArt"))VarginhaContactShadow.Ensure(renderer,false);
             }

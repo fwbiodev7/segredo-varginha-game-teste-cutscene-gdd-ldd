@@ -7,6 +7,94 @@ namespace Game.Tests.EditMode
 {
     public class CampaignExpansionTests
     {
+        [Test]public void ChildhoodFurnitureKeepsItsAspectAndCollisionWithinItsBase()
+        {
+            var plan=CampaignMapPlan.Create(1);
+            foreach(var prop in plan.furniture)
+            {
+                var art=CampaignVisualAssets.Prop(prop.motif);if(art==null)continue;
+                Assert.That(prop.size.x/prop.size.y,Is.EqualTo(art.bounds.size.x/art.bounds.size.y).Within(.001f),prop.name);
+                if(prop.footprint.width<=0||prop.footprint.height<=0)continue;
+                var visual=new Rect(prop.position-prop.size/2,prop.size);
+                Assert.That(visual.Contains(prop.footprint.min),Is.True,prop.name+" lower base");
+                Assert.That(visual.Contains(prop.footprint.max),Is.True,prop.name+" upper base");
+            }
+        }
+        [Test]public void RoamingStudentsCanReachTheYardWithoutEnteringRenansSpace()
+        {
+            foreach(int phase in new[]{4,5})
+            {
+                var plan=CampaignSchoolLife.CreateRoutePlan(phase);var path=new List<Vector2>();
+                foreach(var route in new[]{(new Vector2(3.75f,-3.05f),new Vector2(.75f,-7.68f)),(new Vector2(6.55f,-3.05f),new Vector2(7.8f,-7.88f))})
+                {
+                    Assert.That(plan.Route(route.Item1,route.Item2,path),Is.True);
+                    foreach(var point in path)Assert.That(CampaignSchoolLife.RenanClearArea.Contains(point),Is.False);
+                }
+            }
+        }
+        [Test]public void WalkingFramesKeepTheirHeadCenteredInEveryDirection()
+        {
+            foreach(bool equipped in new[]{false,true})for(int direction=0;direction<4;direction++)
+                for(int frame=0;frame<4;frame++)
+                {
+                    var sprite=CampaignTeamEdelzio.Frame("EdelzioWalk",direction,frame,equipped);
+                    float head=CampaignTeamEdelzio.BodyAnchorX(sprite.texture,sprite.rect);
+                    Assert.That((head-sprite.rect.x-sprite.pivot.x)/sprite.pixelsPerUnit,Is.EqualTo(0).Within(.001f));
+                    Assert.That(sprite.bounds.min.y,Is.EqualTo(-.58f).Within(.001f));
+                }
+        }
+        [Test]public void JournalistMovesOnlyHisMouthAndClosesItAfterTheReport()
+        {
+            var composer=new ExperimentFrameComposer();
+            try
+            {
+                var shot=System.Array.Find(ExperimentDefinition.Load().shots,s=>s.id=="news");
+                var closed=composer.Compose(shot,0,false).GetPixels32();
+                var open=composer.Compose(shot,.46f,false).GetPixels32();int changes=0;
+                for(int i=0;i<closed.Length;i++)if(!closed[i].Equals(open[i]))
+                {changes++;Assert.That(i%384,Is.InRange(189,198));Assert.That(i/384,Is.InRange(124,127));}
+                Assert.That(changes,Is.GreaterThan(0));
+                CollectionAssert.AreEqual(closed,composer.Compose(shot,shot.duration-.1f,false).GetPixels32());
+                Assert.That(System.Array.Find(ExperimentDefinition.Load().shots,s=>s.id=="interference").subtitle,Is.EqualTo("Não deixe ela sair."));
+            }
+            finally{composer.Dispose();}
+        }
+        [Test]public void WallConnectionsFinishCornersWithoutBlockingOpenings()
+        {
+            var root=new GameObject("WallJoinTest");
+            try
+            {
+                var walls=new[]{new Rect(-3,2,6,.6f),new Rect(-3,-2,.6f,4.6f),new Rect(0,-2,.6f,4.6f)};
+                CampaignWallConnections.Build(root.transform,walls,CampaignAdultHouse.TextureTile("WallRequested",.6f),true);
+                Assert.That(root.GetComponentsInChildren<SpriteRenderer>().Length,Is.EqualTo(2));
+                Assert.That(root.GetComponentsInChildren<Collider2D>(),Is.Empty);
+                CampaignWallConnections.Build(root.transform,walls,CampaignAdultHouse.TextureTile("WallRequested",.6f),true);
+                Assert.That(root.GetComponentsInChildren<SpriteRenderer>().Length,Is.EqualTo(2));
+            }
+            finally{Object.DestroyImmediate(root);}
+        }
+        [Test]public void AllNewPosesUseDedicatedBackpackSheetsWithCompleteHeadsAndStableFeet()
+        {
+            foreach(var sheet in new[]{("EdelzioWalk",4),("EdelzioPunch",3),("EdelzioActions",6),("EdelzioInteractions",6)})
+                for(int row=0;row<4;row++)for(int frame=0;frame<sheet.Item2;frame++)
+                {
+                    var body=CampaignTeamEdelzio.Frame(sheet.Item1,row,frame);var equipped=CampaignTeamEdelzio.Frame(sheet.Item1,row,frame,true);
+                    Assert.That(equipped,Is.Not.Null,body.name);Assert.That(equipped.texture.name,Is.EqualTo(sheet.Item1+"BackpackV3"));
+                    Assert.That(equipped.texture,Is.Not.EqualTo(body.texture));Assert.That(equipped.name,Does.Contain("ComMochila"));
+                    Assert.That(equipped.bounds.min.y,Is.EqualTo(body.bounds.min.y).Within(.001f));
+                    Assert.That(equipped.rect.yMax,Is.LessThan(equipped.texture.height));Assert.That(equipped.rect.yMin,Is.GreaterThan(0));
+                    Assert.That(equipped.bounds.size.y,Is.InRange(.7f,1.9f));
+                    Assert.That(equipped.texture.GetPixel(0,0).a,Is.LessThan(.05f));
+                }
+        }
+        [Test]public void HouseListsOnlyActualPendingTasksAndUsesRequestedTextures()
+        {
+            var story=new CampaignStory{routine=14};Assert.That(story.RemainingHouseTasks,Is.EqualTo("lavar o rosto na pia da cozinha"));
+            story.routine=15;Assert.That(story.RemainingHouseTasks,Is.Empty);
+            Assert.That(CampaignAdultHouse.TextureTile("WoodRequested",1).texture.name,Is.EqualTo("WoodRequested"));
+            Assert.That(CampaignAdultHouse.TextureTile("WallRequested",.8f).texture.name,Is.EqualTo("WallRequested"));
+            Assert.That(CampaignAdultHouse.Correction(0).texture.filterMode,Is.EqualTo(FilterMode.Point));
+        }
         [TestCase(1)] [TestCase(3)] [TestCase(4)] [TestCase(5)] [TestCase(6)] [TestCase(7)] [TestCase(8)] [TestCase(9)] [TestCase(10)]
         public void EveryObjectiveHasFootClearanceAndAConnectedRoute(int phase)
         {

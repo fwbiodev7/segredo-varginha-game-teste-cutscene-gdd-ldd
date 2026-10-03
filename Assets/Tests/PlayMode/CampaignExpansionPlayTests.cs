@@ -5,6 +5,7 @@ using Game.Varginha.Experiment;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
@@ -63,6 +64,50 @@ namespace Game.Tests.PlayMode
             }
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
+        [UnityTest]public IEnumerator AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox()
+        {
+            CampaignStorySave.Write(new CampaignStory{phase=2,routine=14});
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.4f);
+            var stage=VarginhaCampaignStage.Active;var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
+            var fridge=GameObject.Find("Fridge_Kitchen").GetComponent<SpriteRenderer>();
+            Assert.That(actor.GetComponent<SpriteRenderer>().bounds.size.y,Is.LessThan(fridge.bounds.size.y));
+            Assert.That(actor.transform.localScale,Is.EqualTo(Vector3.one));
+            Assert.That(GameObject.Find("Wall_North/Requested_Texture").GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("WallRequested"));
+            Assert.That(GameObject.Find("Sofa_LivingRoom").GetComponent<SpriteRenderer>().sprite,Is.EqualTo(CampaignAdultHouse.Correction(0)));
+            Assert.That(GameObject.Find("Door_Office_Accessible"),Is.Null,"Door leaves are removed.");
+            var partition=GameObject.Find("Wall_Corridor_V2");var surface=partition.transform.Find("Requested_Texture").GetComponent<SpriteRenderer>();
+            Assert.That(surface.bounds.size.x,Is.EqualTo(partition.GetComponent<BoxCollider2D>().bounds.size.x).Within(.001f));
+            Assert.That(surface.bounds.size.y,Is.EqualTo(partition.GetComponent<BoxCollider2D>().bounds.size.y).Within(.001f));
+            foreach(string name in new[]{"BedroomRug","KitchenRunner","Rug_LivingRoom"})
+            {
+                var rug=GameObject.Find(name).GetComponent<SpriteRenderer>();
+                Assert.That(rug.bounds.size.x/rug.bounds.size.y,Is.EqualTo(rug.sprite.rect.width/rug.sprite.rect.height).Within(.001f));
+            }
+            var keyboard=InputSystem.AddDevice<Keyboard>();
+            actor.GetComponent<Rigidbody2D>().position=new Vector2(-5,1.48f);yield return new WaitForFixedUpdate();
+            yield return HoldKey(keyboard,Key.S,.6f);
+            Assert.That(actor.GetComponent<CircleCollider2D>().bounds.center.y,Is.LessThan(-.5f),"Walk through the bedroom portal.");
+            actor.GetComponent<Rigidbody2D>().position=new Vector2(-1.1f,-2.42f);yield return new WaitForFixedUpdate();
+            Assert.That(actor.IsInputLocked,Is.False,"Office approach must remain interactive; HUD dialogue="+VarginhaGameHUD.Instance?.IsDialogueOpen);
+            yield return HoldKey(keyboard,Key.D,.5f);
+            Assert.That(actor.transform.position.x,Is.GreaterThan(.4f),"Walk through the office portal.");
+            actor.GetComponent<Rigidbody2D>().position=CampaignAdultHouse.WashApproach;
+            yield return new WaitForFixedUpdate();yield return null;
+            Assert.That(actor.GetComponent<CircleCollider2D>().Distance(GameObject.Find("Kitchen_Cabinet").GetComponent<BoxCollider2D>()).isOverlapped,Is.False);
+            yield return HoldKey(keyboard,Key.E,.1f);
+            yield return new WaitForSeconds(1.2f);
+            Assert.That(stage.Progress.routine,Is.EqualTo(15),"A reachable hygiene action completes the saved routine=14 state.");
+            stage.CloseDialogue();stage.Interact("box");Assert.That(stage.Progress.boxFound,Is.True);
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
+        private static IEnumerator HoldKey(Keyboard keyboard,Key key,float duration)
+        {
+            // Queue a held hardware state each frame rather than mixing manual input updates
+            // with the Editor's dynamic/fixed update buffers after a rigidbody teleport.
+            float end=Time.time+duration;
+            while(Time.time<end){InputSystem.QueueStateEvent(keyboard,new KeyboardState(key));yield return null;}
+            InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return null;
+        }
         [UnityTest] public IEnumerator PhysicalMovementUsesDoorsAndCannotCrossTheArchiveWall()
         {
             CampaignStorySave.Write(new CampaignStory{phase=6});yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(6));yield return new WaitForSeconds(3);
@@ -102,9 +147,27 @@ namespace Game.Tests.PlayMode
                 Assert.That(feet.Distance(renan).isOverlapped,Is.False,student.StudentName+" overlaps Renan");
             }
             var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();actor.GetComponent<Rigidbody2D>().position=new Vector2(.75f,-4.3f);
-            yield return null;yield return null;Assert.That(renderer.enabled,Is.False);
+            yield return new WaitForFixedUpdate();yield return null;yield return null;Assert.That(renderer.enabled,Is.False);
             Assert.That(archive.enabled,Is.True);
-            actor.GetComponent<Rigidbody2D>().position=new Vector2(0,-10);yield return null;yield return null;Assert.That(renderer.enabled,Is.True);
+            actor.GetComponent<Rigidbody2D>().position=new Vector2(0,-10);yield return new WaitForFixedUpdate();yield return null;yield return null;Assert.That(renderer.enabled,Is.True);
+            var roaming=new System.Collections.Generic.List<CampaignSchoolLife>();
+            foreach(var student in Object.FindObjectsByType<CampaignSchoolLife>(FindObjectsSortMode.None))if(student.Walks)
+            {
+                roaming.Add(student);
+                typeof(CampaignSchoolLife).GetField("_nextRoute",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic).SetValue(student,Time.time);
+            }
+            float until=Time.time+14;
+            while(Time.time<until)
+            {
+                foreach(var student in roaming)
+                {
+                    var feet=student.GetComponent<CircleCollider2D>();
+                    Assert.That(feet.Distance(renan).isOverlapped,Is.False,student.StudentName+" crosses Renan during the interval");
+                    Assert.That(CampaignSchoolLife.RenanClearArea.Contains(feet.bounds.center),Is.False,student.StudentName+" obscures Renan");
+                }
+                yield return new WaitForFixedUpdate();
+            }
+            foreach(var student in roaming)Assert.That(Vector2.Distance(student.transform.position,student.Away),Is.LessThan(.3f),student.StudentName+" reaches the yard");
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
         [UnityTest]public IEnumerator CharacterActionsAndPunchUseNewTransparentAnimationSheets()
@@ -113,15 +176,15 @@ namespace Game.Tests.PlayMode
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(6));yield return new WaitForSeconds(3);
             var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();var actions=actor.GetComponent<VarginhaPlayerSpriteAnimation>();var renderer=actor.GetComponent<SpriteRenderer>();
             actions.SetSeatingFacing(Vector2.left);actions.SetSeatingFrame(1);yield return null;yield return null;
-            Assert.That(renderer.sprite.texture.name,Is.EqualTo("EdelzioActionsV2"));
+            Assert.That(renderer.sprite.name,Does.Contain("EdelzioActions"));Assert.That(renderer.sprite.name,Does.Contain("ComMochila"));
             actions.SetCoffeeFrame(2);yield return null;yield return null;Assert.That(renderer.sprite.name,Does.Contain("EdelzioActions"));
             foreach(string pose in new[]{"Edelzio_Crouch","Edelzio_Reach"})
-            {actions.SetActionPose(pose);yield return null;yield return null;Assert.That(renderer.sprite.texture.name,Is.EqualTo("EdelzioInteractionsV2"));}
+            {actions.SetActionPose(pose);yield return null;yield return null;Assert.That(renderer.sprite.name,Does.Contain("EdelzioInteractions"));Assert.That(renderer.sprite.name,Does.Contain("ComMochila"));}
             actions.ClearActionPose();yield return null;
             var attack=actor.GetComponent<VarginhaPlayerAttack>();Assert.That(attack,Is.Not.Null);
             Assert.That(attack.TryAttack(Vector2.right),Is.True);yield return new WaitForSeconds(.1f);
-            Assert.That(renderer.sprite.texture.name,Is.EqualTo("EdelzioPunchV2"));yield return new WaitForSeconds(.4f);
-            Assert.That(renderer.sprite.texture.name,Is.Not.EqualTo("EdelzioPunchV2"));
+            Assert.That(renderer.sprite.name,Does.Contain("EdelzioPunch"));Assert.That(renderer.sprite.name,Does.Contain("ComMochila"));yield return new WaitForSeconds(.4f);
+            Assert.That(renderer.sprite.name,Does.Not.Contain("EdelzioPunch"));
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
     }

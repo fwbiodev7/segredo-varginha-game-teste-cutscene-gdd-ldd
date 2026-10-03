@@ -31,7 +31,7 @@ namespace Game.Varginha.Experiment
             _engine.pitch = Mathf.Lerp(.85f, 1.35f, Mathf.Clamp01(throttle));
             if (running && !_engine.isPlaying) _engine.Play(); else if (!running && _engine.isPlaying) _engine.Stop();
         }
-        public void Play(string sound) { if (_effects != null) _effects.PlayOneShot(Clip(sound), sound.StartsWith("Foot") ? .28f : 1f); }
+        public void Play(string sound) { if (_effects != null) _effects.PlayOneShot(Clip(sound), sound.StartsWith("Foot") ? .16f : 1f); }
         public void Suspend(bool value)
         {
             if (_ambience == null) return;
@@ -57,7 +57,8 @@ namespace Game.Varginha.Experiment
             for (int i = 0; i < data.Length; i++)
             {
                 float t = i / (float)rate, noise = (float)random.NextDouble() * 2 - 1;
-                filtered = Mathf.Lerp(filtered, noise, ambient ? .02f : .22f);
+                bool foot=id=="FootWood"||id=="FootTile";
+                filtered = Mathf.Lerp(filtered, noise, ambient ? .02f : foot ? .09f : .22f);
                 float envelope = Mathf.Min(1, t * 50) * Mathf.Clamp01((duration - t) * 10), value;
                 if (engine) value = Mathf.Sin(t * Mathf.PI * 2 * 44) * .25f + Mathf.Sin(t * Mathf.PI * 2 * 88) * .14f + filtered * .18f;
                 else if (ambient)
@@ -76,7 +77,7 @@ namespace Game.Varginha.Experiment
                     value = Mathf.Sin(t * Mathf.PI * 2 * notes[note]) * .16f * Mathf.Exp(-(t % .25f) * 9);
                 }
                 else if (id == "Starter") value = filtered * .4f * (.5f + .5f * Mathf.Sin(t * 95)) + Mathf.Sin(t * Mathf.PI * 2 * (28 + t * 20)) * .25f;
-                else if (id == "FootWood" || id == "FootTile") value = filtered * .32f * Mathf.Exp(-t * 28) + Mathf.Sin(t * 2 * Mathf.PI * (id == "FootWood" ? 100 : 170)) * .2f * Mathf.Exp(-t * 35);
+                else if (foot) value = filtered * .20f * Mathf.Exp(-t * 28) + Mathf.Sin(t * 2 * Mathf.PI * (id == "FootWood" ? 100 : 170)) * .13f * Mathf.Exp(-t * 35);
                 else if (id == "Paper" || id == "Zip") value = filtered * .55f * Mathf.Sin(t * 160) * Mathf.Exp(-t * 11);
                 else if (id == "Typing") value = filtered * .4f * Mathf.Pow(Mathf.Max(0, Mathf.Sin(t * 70)), 14);
                 else value = Mathf.Sin(t * 2 * Mathf.PI * (id == "Key" ? 1400 : 640)) * .17f * Mathf.Exp(-t * 28) + filtered * .12f * Mathf.Exp(-t * 40);

@@ -2,10 +2,10 @@
   "title": "O SEGREDO DE VARGINHA",
   "shots": [
     { "id": "signal", "duration": 5, "asset": "OpeningStoryboard", "panel": 0, "mode": "signal", "title": "VARGINHA • 1996", "subtitle": "Uma transmissão atravessa a noite.", "voice": "" },
-    { "id": "news", "duration": 10, "asset": "OpeningStoryboard", "panel": 0, "mode": "news", "title": "RELATOS EM VARGINHA", "subtitle": "Moradores relatam o avistamento de uma criatura. As versões ainda se contradizem.", "voice": "NewsAnchor" },
+    { "id": "news", "duration": 10, "asset": "OpeningStoryboard", "panel": 0, "mode": "news", "title": "RELATOS EM VARGINHA", "subtitle": "Moradores viram uma criatura. Os relatos se contradizem.", "voice": "NewsAnchor" },
     { "id": "street", "duration": 12, "asset": "OpeningStoryboard", "panel": 1, "mode": "street", "title": "O QUE FOI VISTO?", "subtitle": "Eu vi alguma coisa perto da rua. Quando a luz voltou, já não estava lá.", "voice": "Witness" },
     { "id": "evidence", "duration": 10, "asset": "OpeningStoryboard", "panel": 2, "mode": "evidence", "title": "FRAGMENTOS DE UMA NOITE", "subtitle": "Fotografias, recortes e um mapa incompleto. A mesma marca aparece mais de uma vez.", "voice": "" },
-    { "id": "interference", "duration": 8, "asset": "OpeningStoryboard", "panel": 0, "mode": "interference", "title": "SINAL INTERROMPIDO", "subtitle": "Não deixa ela sair.", "voice": "Memory" },
+    { "id": "interference", "duration": 8, "asset": "OpeningStoryboard", "panel": 0, "mode": "interference", "title": "SINAL INTERROMPIDO", "subtitle": "Não deixe ela sair.", "voice": "Memory" },
     { "id": "room", "duration": 10, "asset": "OpeningStoryboard", "panel": 3, "mode": "room", "title": "A CASA DE EDELZIO", "subtitle": "A reportagem termina. Um brilho começa a aparecer pela janela.", "voice": "" },
     { "id": "flash", "duration": 4, "asset": "OpeningStoryboard", "panel": 3, "mode": "flash", "title": "O CLARÃO", "subtitle": "A lembrança termina antes da resposta.", "voice": "" },
     { "id": "timeskip", "duration": 4, "asset": "IndustrialFacade", "panel": -1, "mode": "timeskip", "title": "30 ANOS DEPOIS", "subtitle": "Varginha, 2026.", "voice": "" },

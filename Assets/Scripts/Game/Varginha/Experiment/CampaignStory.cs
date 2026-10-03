@@ -20,6 +20,18 @@ namespace Game.Varginha.Experiment
         public CampaignExpansionState expansion = new();
         public int MapFragments => (pagesSolved ? 1 : 0) + (buildingSolved ? 1 : 0) + ((expansion.visited & 1) != 0 ? 1 : 0);
         public bool CanLeaveHouse => routine == 15 && pagesSolved;
+        public string RemainingHouseTasks
+        {
+            get
+            {
+                var pending=new System.Collections.Generic.List<string>();
+                if((routine&1)==0)pending.Add("lavar o rosto na pia da cozinha");
+                if((routine&2)==0)pending.Add("tomar café");
+                if((routine&4)==0)pending.Add("preparar o notebook");
+                if((routine&8)==0)pending.Add("pegar a mochila");
+                return string.Join(", ",pending);
+            }
+        }
         public bool CanSolveBuilding => renanMet && lesson && archive;
         public bool CanDecode => buildingSolved && symbolsFound && legendFound;
         public bool SubmitPages()

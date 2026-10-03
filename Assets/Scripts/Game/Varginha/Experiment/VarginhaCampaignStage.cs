@@ -66,7 +66,7 @@ namespace Game.Varginha.Experiment
             if (_player.GetComponent<CampaignTeamEdelzio>() == null) _player.gameObject.AddComponent<CampaignTeamEdelzio>();
             _player.SetCombatLocked(false); _player.CanDodge = false;
             CampaignPresentation.FootCollision(_player, false);
-            if (phase == 2) BuildHousePoints(); else BuildSchoolPoints();
+            if (phase == 2) { CampaignAdultHouse.Apply(); BuildHousePoints(); } else BuildSchoolPoints();
             if (_progress.positionPhase == phase && (phase==2 || CampaignMapPlan.Create(phase).IsClear(new Vector2(_progress.x,_progress.y-.58f)))) _player.transform.position = new Vector3(_progress.x, _progress.y);
             else _player.transform.position = phase == 2 ? new Vector3(-5, 2) : (Vector3)(CampaignMapPlan.Create(phase).spawn+Vector2.up*.58f);
             RestoreInventory();
@@ -81,7 +81,7 @@ namespace Game.Varginha.Experiment
         }
         private void BuildHousePoints()
         {
-            _points.Add(new Point("wash", "HIGIENE • LAVATÓRIO", new(4.6f, -5.35f)));
+            _points.Add(new Point("wash", "HIGIENE • LAVATÓRIO", CampaignAdultHouse.WashApproach));
             _points.Add(new Point("food", "CAFÉ DA MANHÃ", new(4.6f, -2.05f)));
             _points.Add(new Point("work", "PREPARAR NOTEBOOK • CADEIRA", new(-5, -2.3f)));
             _points.Add(new Point("bag", "MOCHILA", new(-3.35f, 2.65f)));
@@ -109,7 +109,7 @@ namespace Game.Varginha.Experiment
                 string name = VarginhaPhase2Controller.StudentNames[i]; var actor = GameObject.Find("Refem_" + name.Replace(" ", "_"));
                 if (actor == null) continue;
                 var life = actor.AddComponent<CampaignSchoolLife>();
-                life.Configure(name, activities[i], seats[i], i == 7 ? new Vector2(.75f,-7.1f) : new Vector2(5,-7.1f), i >= 7);
+                life.Configure(name, activities[i], seats[i], i == 7 ? new Vector2(.75f,-7.1f) : new Vector2(7.8f,-7.3f), i >= 7);
                 _students.Add(life); _points.Add(new Point("student:" + i, name.ToUpperInvariant() + " • " + activities[i], seats[i], actor.transform));
             }
             var renan = new GameObject("Renan_Industrial_Campanha"); renan.transform.SetParent(transform); renan.transform.position = new Vector3(3,-7.7f);
@@ -179,7 +179,7 @@ namespace Game.Varginha.Experiment
                 case "bag":
                     StartCoroutine(RoutineAction("bag")); break;
                 case "box":
-                    if (_progress.routine != 15) { Say("Edelzio", "A velha caixa está sob a cama. Primeiro preciso terminar de me preparar para sair."); break; }
+                    if (_progress.routine != 15) { Say("Edelzio", "Antes de investigar a caixa, falta: "+_progress.RemainingHouseTasks+"."); break; }
                     if (_progress.pagesSolved) { Say("Edelzio", "Guardei a chave, o caderno e o primeiro fragmento de mapa. A mensagem continua ali: ELA AINDA ESTÁ AQUI."); break; }
                     if (!_progress.boxFound)
                     {
@@ -203,15 +203,15 @@ namespace Game.Varginha.Experiment
                     if (phase == 5 && _progress.codeSolved)
                     {
                         _progress.renanConfirmed = true;
-                        Cutscene("23:23 • ANTIGA DIOCESE", "Renan: Isso foi escondido de propósito. As marcas formam um horário e o arquivo confirma o destino.\nEdelzio recolhe a mochila. A aula acabou; a investigação está apenas começando.", View.Complete);
+                        Cutscene("23:23 • ANTIGA DIOCESE", "Renan: As marcas indicam 23:23. O arquivo confirma: antiga diocese.\nEdelzio pega a mochila e parte.", View.Complete);
                     }
                     else Say("Renan", phase == 4
-                        ? "Bom dia, Edelzio. Temos aula agora. No intervalo, me mostra esse caderno. O armário guarda plantas antigas da região; compare os pontos de referência da foto."
-                        : "Separe as marcas por posição na foto, não pela ordem em que você as encontrou. A legenda do mural explica os símbolos. O notebook permite testar sua hipótese.");
+                        ? "Bom dia, Edelzio. Comece a aula e procure as plantas no armário. Compare com a foto do caderno."
+                        : "Leia as marcas por posição na foto. Use a legenda do mural e teste no notebook.");
                     break;
                 case "lesson":
                     _progress.lesson = true;
-                    Say("Edelzio", "Presença conferida. Atividade: organizar arquivos e comparar versões. Enquanto os alunos trabalham, posso investigar os registros antigos."); break;
+                    Say("Edelzio", "Presença conferida. A turma compara os arquivos; vou investigar os registros antigos."); break;
                 case "students": Say("Alunos", "Professor, o projetor piscou sem ninguém tocar. Parecia uma pessoa atrás do prédio... depois a foto voltou ao normal."); break;
                 case "archive":
                     if (!_progress.renanMet || !_progress.lesson) { Say("Edelzio", "Vou falar com Renan e iniciar a aula antes de mexer no arquivo."); break; }
@@ -286,18 +286,18 @@ namespace Game.Varginha.Experiment
             if (index < 0 || index >= _students.Count) return;
             var student = _students[index]; student.Greet(); _progress.studentsTalked |= 1 << index;
             string[] first = {
-                "Professor, eu separei os recortes por data. Duas fotos iguais têm detalhes diferentes. Posso deixar as duas versões abertas para você conferir.",
-                "Estou organizando as pastas do projeto. Renan comentou que os arquivos físicos do armário têm plantas que nunca foram digitalizadas.",
-                "Quando comparo as imagens, aparecem marcas no canto. Se olhar por posição, talvez os riscos façam sentido. Não parece defeito da câmera.",
-                "Anotei as referências no quadro. Um portão sozinho não identifica um prédio; também precisa bater a janela e a torre.",
-                "Na pesquisa da região, a escola e a diocese aparecem no mesmo levantamento. O verso dessa planta tem um recorte de mapa.",
-                "Professor, por que a fotografia mostra uma sombra só numa das cópias? Na versão antiga, o portão estava vazio.",
-                "O mural tem a legenda do levantamento. Círculos contam janelas; triângulos contam as águas do telhado. Posso apontar onde está.",
-                "Estou levando o material do intervalo. O projetor piscou há pouco, mas ninguém desconectou o cabo. Renan viu também.",
-                "No intervalo, vi Renan guardando uma carta de Ouzana. Parece ser sobre pesquisa na região rural. A pasta ficou perto do projetor."
+                "Separei os recortes por data. As duas cópias da foto têm detalhes diferentes.",
+                "Renan disse que o armário guarda plantas que nunca foram digitalizadas.",
+                "Há marcas nos cantos das fotos. Compare a posição de cada uma.",
+                "Confira portão, janelas e torre. Um portão sozinho não identifica o prédio.",
+                "Escola e diocese estão no mesmo levantamento. Há um mapa no verso da planta.",
+                "A sombra aparece só numa cópia. Na foto antiga, o portão estava vazio.",
+                "Veja a legenda no mural: círculos contam janelas; triângulos, águas do telhado.",
+                "O projetor piscou com o cabo conectado. Renan também viu.",
+                "A carta de Ouzana trata da pesquisa rural. Está na pasta perto do projetor."
             };
             Say(student.StudentName, phase == 5 && _progress.codeSolved
-                ? "Então as marcas eram um horário... 23:23. Guarde a foto original, professor. Se ela mudar de novo, precisamos de uma versão para comparar."
+                ? "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo."
                 : (_progress.lesson ? "Estou " + student.Activity + ". " : "Bom dia, professor! ") + first[index]);
         }
         private void LateUpdate() { if (_ready) Lock(); }
@@ -337,7 +337,7 @@ namespace Game.Varginha.Experiment
         }
         private string Objective()
         {
-            if (phase == 2) return _progress.routine != 15 ? "Prepare-se: higiene, café, notebook e mochila."
+            if (phase == 2) return _progress.routine != 15 ? "Falta: "+_progress.RemainingHouseTasks+"."
                 : !_progress.pagesSolved ? "A chave sumiu. Investigue a caixa sob a cama e organize as páginas." : "Leve as pistas ao trabalho. Vá ao Fusca no quintal à direita.";
             if (phase == 4) return !_progress.renanMet ? "Encontre Renan na entrada da Industrial."
                 : !_progress.lesson ? "Inicie o expediente na mesa do professor." : !_progress.archive ? "Examine as plantas no armário do arquivo."

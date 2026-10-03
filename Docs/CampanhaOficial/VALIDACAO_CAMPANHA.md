@@ -2,6 +2,16 @@
 
 Data: 2 de outubro de 2026. Unity 6000.6.0f1; renderização Built-in.
 
+## Estado salvo após o feedback — trabalho interrompido a pedido do usuário
+
+Compilação do estado atual confirmada sem erros. A última execução EditMode concluída passou **32/32**; o registro completo preservado da execução imediatamente anterior contém **31/31** em [feedback-EditMode.json](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/Validacao/feedback-EditMode.json). O teste adicional da proporção/colisão dos móveis infantis e os últimos ajustes dessas bases ainda precisam de uma execução final.
+
+O teste isolado da casa adulta passou: personagem menor que a geladeira, texturas pedidas, tapetes proporcionais, portas removidas, travessia física dos dois portais e rotina salva em 14 completada pela higiene, liberando a caixa.
+
+A última execução completa PlayMode passou **7/8**, com uma falha na verificação da troca da fachada após teletransportar o Rigidbody, antes de aguardar um passo de física. O teste agora aguarda esse passo. As novas rotas dos alunos reservam a silhueta de Renan e têm teste de caminho aprovado; a nova verificação durante o intervalo ainda não foi concluída. Registro: [feedback-PlayMode-parcial.json](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/Validacao/feedback-PlayMode-parcial.json).
+
+Os resultados abaixo pertencem ao remaster anterior. Não constituem aprovação dos últimos ajustes. As prévias da casa e dos atlas foram capturadas antes da última revisão de junções/pivôs; sua regeneração também fica pendente. Alterações, imagens e prompts estão em [CORRECOES_CASA_E_MOCHILA_V3.md](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/CORRECOES_CASA_E_MOCHILA_V3.md).
+
 ## Resultado final
 
 - Reconstrução das plantas e, depois, da mobília: duas execuções concluídas com código 0, sem erro de compilação.
