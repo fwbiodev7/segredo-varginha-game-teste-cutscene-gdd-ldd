@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Game.Varginha.Experiment
 {
@@ -18,11 +19,31 @@ namespace Game.Varginha.Experiment
         private float _punchStarted;
         private string _lastInteraction;
         private float _interactionStarted;
+        private float _jumpStarted = -100, _nextJump;
+        private bool _jumpHeld;
+        private MaterialPropertyBlock _equipment;
+        public bool IsJumping => Time.time - _jumpStarted < .48f;
+        private void Awake()=>_equipment=new MaterialPropertyBlock();
+        private void OnEnable()=>InputSystem.onAfterUpdate+=ReadJumpInput;
+        private void OnDisable()=>InputSystem.onAfterUpdate-=ReadJumpInput;
         private void Start()
         {
             _actor=GetComponent<EdelzioTopDownController>();_actions=GetComponent<VarginhaPlayerSpriteAnimation>();_renderer=GetComponent<SpriteRenderer>();
             transform.localScale=Vector3.one;
+            CampaignWallBody.Ensure(_actor,false);
             if(_actions!=null)_actions.enabled=false;
+        }
+        private void ReadJumpInput()
+        {
+            if(!Application.isPlaying||!isActiveAndEnabled)return;
+            bool held=VarginhaInputBindings.IsPressed(VarginhaInputAction.Jump);
+            if(held&&!_jumpHeld)TryJump();
+            _jumpHeld=held;
+        }
+        public bool TryJump()
+        {
+            if(_actor==null||_actor.IsInputLocked||_actions?.HasActionPose==true||Time.timeScale<=0||Time.time<_nextJump)return false;
+            _jumpStarted=Time.time;_nextJump=Time.time+.8f;return true;
         }
         private void LateUpdate()
         {
@@ -37,21 +58,41 @@ namespace Game.Varginha.Experiment
             string interaction=acting?_actions.CurrentActionPose:null;
             if(interaction!=_lastInteraction){_interactionStarted=Time.time;_lastInteraction=interaction;}
             Sprite pose;
-            if(punching)pose=Frame("EdelzioPunch",direction,Mathf.Clamp((int)((Time.time-_punchStarted)*12),0,2),equipped);
+            if(punching)
+            {
+                float elapsed=Time.time-_punchStarted;
+                int punchFrame=elapsed<.10f?0:elapsed<.18f?1:elapsed<.23f?2:3;
+                pose=CampaignStorySprites.Frame("Punch",direction,punchFrame+(equipped?4:0));
+            }
+            else if(acting && interaction=="Edelzio_WashFace")
+                pose=CampaignStorySprites.Frame(equipped?"LifeGray":"Life",direction,8+Mathf.Min(3,(int)((Time.time-_interactionStarted)*4)));
             else if(_actions!=null&&_actions.IsSeated)
-                pose=Frame("EdelzioActions",direction,_actions.CurrentActionPose=="Edelzio_UseNotebook"?(int)(Time.time*4)%3:_actions.ActionFrame,equipped);
+                pose=face.y>.5f&&GetComponent<CampaignSeatingLayers>()?.IsOfficeSeat==true
+                    ?CampaignStorySprites.Frame("SeatedDeskNorth",0,(interaction=="Edelzio_UseNotebook"?3:0)+(int)(Time.time*2)%3)
+                    :CampaignStorySprites.Frame(equipped?"SeatedGray":"Seated",CampaignStorySprites.EightDirection(face),(int)(Time.time*2)%3);
             else if(_actions!=null&&_actions.IsDrinking)pose=Frame("EdelzioActions",direction,3+_actions.ActionFrame,equipped);
             else if(acting&&(_actions.CurrentActionPose=="Edelzio_Crouch"||_actions.CurrentActionPose=="Edelzio_Reach"))
                 pose=Frame("EdelzioInteractions",direction,(_actions.CurrentActionPose=="Edelzio_Reach"?3:0)+Mathf.Clamp((int)((Time.time-_interactionStarted)*8),0,2),equipped);
             else
             {
                 int frame=_actor.IsMoving&&!_actor.IsInputLocked?(int)(Time.time*7)%4:1;
-                pose=direction==0&&!_actor.IsMoving?(equipped?Frame("EdelzioWalk",0,1,true):Idle):Frame("EdelzioWalk",direction,frame,equipped);
+                if(IsJumping) pose=CampaignStorySprites.Frame(equipped?"LifeGray":"Life",direction,4+Mathf.Clamp((int)((Time.time-_jumpStarted)*8.4f),0,3));
+                else if(!_actor.IsMoving || _actor.IsInputLocked)
+                {
+                    float cycle=Time.time%3.6f;
+                    int breath=cycle>3.45f?3:Mathf.FloorToInt(cycle*1.5f)%3;
+                    pose=CampaignStorySprites.Frame(equipped?"LifeGray":"Life",direction,breath);
+                }
+                else pose=Frame("EdelzioWalk",direction,frame,equipped);
             }
             if(pose!=null)
             {
                 _renderer.sprite=pose;
                 _renderer.color=Color.white;_renderer.flipX=false;
+                _renderer.GetPropertyBlock(_equipment);
+                _equipment.SetFloat("_GrayBag",equipped&&!pose.name.StartsWith("Team_V4_")?1:0);
+                _equipment.SetFloat("_BagUVYMin",(pose.rect.y+pose.rect.height*.42f)/pose.texture.height);
+                _renderer.SetPropertyBlock(_equipment);
             }
             EdelzioBackpackAppearance.HideLegacyLayers(transform);
             foreach(Transform part in transform)if(part.name.Contains("Beard")||part.name.Contains("Barba"))part.gameObject.SetActive(false);
@@ -59,6 +100,8 @@ namespace Game.Varginha.Experiment
         public static Sprite Idle=>Frame("EdelzioIdle",0,0);
         public static Sprite Frame(string name,int row,int column,bool withBackpack=false)
         {
+            if(name=="EdelzioWalk"&&withBackpack)
+                return CampaignStorySprites.Frame("WalkGray",row,column);
             bool idle=name=="EdelzioIdle";
             int columns=idle?1:name=="EdelzioWalk"?4:name=="EdelzioPunch"?3:6;
             if(row<0||row>=(idle?1:4)||column<0||column>=columns)return null;

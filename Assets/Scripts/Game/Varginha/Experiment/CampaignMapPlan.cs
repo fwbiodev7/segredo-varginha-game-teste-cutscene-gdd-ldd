@@ -25,6 +25,8 @@ namespace Game.Varginha.Experiment
         public Vector2 spawn = new(0, -5);
         public string title;
         public int phase;
+        public bool illustrated;
+        public readonly HashSet<Rect> bodyWalls = new();
         public readonly List<Surface> rooms = new();
         public readonly List<Rect> walls = new();
         public readonly List<Furnishing> furniture = new();
@@ -55,6 +57,7 @@ namespace Game.Varginha.Experiment
         public static CampaignMapPlan Create(int phase)
         {
             var p = new CampaignMapPlan { phase = phase };
+            if(phase==2){p.title="A CHAVE E A CAIXA";CampaignIllustratedMaps.Apply(p);return p;}
             p.Room("Área de circulação", -12, -8, 24, 16, phase == 7 ? "Floor_Yard" : "SchoolFloor");
             // Outer boundaries belong to the architecture layer, never to the furniture layer.
             p.Wall(-12, -8, .35f, 16); p.Wall(11.65f, -8, .35f, 16); p.Wall(-12, 7.65f, 24, .35f); p.Wall(-12, -8, 24, .35f);
@@ -131,7 +134,7 @@ namespace Game.Varginha.Experiment
                     p.PointAt("exit", "ENCERRAR O TESTE NA PISTA", 9, -5); break;
                 default: throw new System.ArgumentOutOfRangeException(nameof(phase));
             }
-            p.AddDetails();p.AddIdentity();p.RefineArchitecture();p.CompactRequestedMaps();p.FitAtmosphericSprites();p.FitChildFootprints();return p;
+            p.AddDetails();p.AddIdentity();p.RefineArchitecture();p.CompactRequestedMaps();p.FitAtmosphericSprites();p.FitChildFootprints();CampaignIllustratedMaps.Apply(p);return p;
         }
         private void FitChildFootprints()
         {
@@ -601,9 +604,8 @@ namespace Game.Varginha.Experiment
             for(int i=0;i<5;i++)Room("Travessia "+i,-.3f,-10.9f+i*.38f,2.1f,.18f,"RoadMarking");
             Prop("Banco do jardim","Pew",5.7f,-7.1f,2.2f,.75f);
             foreach(float x in new[]{-10,10.3f})Prop("Jardineira "+x,"Shrub",x,-6.7f,1.6f,1.3f,.7f,.45f);
-            PointAt("lesson","MESA DO PROFESSOR",.8f,3.8f);PointAt("archive","ARQUIVO DE PLANTAS",-6.65f,-3.7f);
-            PointAt("notebook","NOTEBOOK DE INVESTIGAÇÃO",-3.05f,1.7f);PointAt("mural","LEGENDA DO LEVANTAMENTO",7.7f,-3.7f);
-            PointAt("research","CORRESPONDÊNCIA DE OUZANA",2.2f,4.35f);PointAt("renan","RENAN",3,-9);PointAt("car","FUSCA",-3.5f,-10.4f);
+            PointAt("notebook","NOTEBOOK DO PROFESSOR",.8f,3.8f);
+            PointAt("renan","RENAN • QUADRO BRANCO",6.55f,4.1f);
         }
         private void Road()
         {
@@ -638,7 +640,9 @@ namespace Game.Varginha.Experiment
         public bool IsClear(Vector2 point, float radius = .28f)
         {
             if (point.x - radius < bounds.xMin || point.x + radius > bounds.xMax || point.y - radius < bounds.yMin || point.y + radius > bounds.yMax) return false;
-            foreach (var wall in walls) if (Touches(wall, point, radius)) return false;
+            bool torso=illustrated&&CampaignWallBody.SolidWalls(phase);
+            var upperBody=new Rect(point.x-radius,point.y+.03f,radius*2,CampaignWallBody.Height(phase==1));
+            foreach (var wall in walls) if (Touches(wall, point, radius)||(torso&&bodyWalls.Contains(wall)&&wall.Overlaps(upperBody))) return false;
             foreach (var prop in furniture) if (prop.footprint.width > 0 && prop.footprint.height > 0 && Touches(prop.footprint, point, radius)) return false;
             return true;
         }
@@ -649,7 +653,7 @@ namespace Game.Varginha.Experiment
         }
         public bool Route(Vector2 from, Vector2 to, List<Vector2> path)
         {
-            path.Clear(); const float step = .5f;
+            path.Clear(); float step = illustrated?.25f:.5f;
             int width = Mathf.RoundToInt(bounds.width / step), height = Mathf.RoundToInt(bounds.height / step);
             int Index(Vector2 v) => Mathf.Clamp(Mathf.RoundToInt((v.y - bounds.yMin) / step), 0, height - 1) * width + Mathf.Clamp(Mathf.RoundToInt((v.x - bounds.xMin) / step), 0, width - 1);
             Vector2 Position(int i) => new(bounds.xMin + i % width * step, bounds.yMin + i / width * step);
@@ -663,7 +667,7 @@ namespace Game.Varginha.Experiment
                 {
                     int x = current % width + direction.x, y = current / width + direction.y;
                     if (x < 0 || x >= width || y < 0 || y >= height) continue;
-                    int next = y * width + x; if (previous[next] >= 0 || !IsClear(Position(next), .32f)) continue;
+                    int next = y * width + x; if (previous[next] >= 0 || !IsClear(Position(next), .25f)) continue;
                     previous[next] = current; queue.Enqueue(next);
                 }
             }

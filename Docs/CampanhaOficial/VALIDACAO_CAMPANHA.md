@@ -2,7 +2,19 @@
 
 Data: 3 de outubro de 2026. Unity 6000.6.0f1; renderização Built-in.
 
-## Estado atual
+## Atualização com os mapas ilustrados
+
+Os nove originais enviados foram preservados por comparação SHA-256. Os cinco arquivos protegidos listados abaixo também continuam iguais a `origin/main`. As cenas recebem os mapas e seus recortes na execução, sem salvar alterações nos arquivos originais `.unity`.
+
+A compilação passou sem erros. **60/60 EditMode** conferem rotas, paredes, colisões, triangulação dos recortes, ancoragem das animações, os 281 quadros novos, textura sem cópia legível na CPU, sombras e escala do Fusca. Registro: [EditMode ilustrado](ValidacaoIlustrada20261003EditMode.json).
+
+**14/14 PlayMode** verificam movimento real com teclado, passagem pelo portão, fechamento do canto, colisões de parede e móveis, rotina do notebook com cadeira atrás do corpo e encosto à frente, mochila e pulo, iluminação e sombras, pausa e progressão salva das fases simplificadas da escola. Registro: [PlayMode ilustrado](ValidacaoIlustrada20261003CampanhaPlayMode.json). O cache dos sprites do clarão também foi corrigido para permitir reiniciar a execução com domain reload desativado.
+
+As capturas em `Preview/IllustratedMaps/*_Runtime.png` foram feitas na Unity em execução. Os detalhes `Notebook_Assento_Final`, `Escola_Assentos_Final`, `Renan_Aula_Final` e `Fusca_Farois_Final` mostram o posicionamento e a apresentação. O menu, HUD e a pausa em 1920 × 888 estão em `Preview/UI`. A captura `Previa_Chave_Final` mostra a entrada da fase 2; `Escola_Fotografia_Final` mostra a pista visual. `Escola_Entrada_Final` e `Escola_Canto_Final` registram os reparos da fachada.
+
+Não há uma medição de FPS em outros computadores. A aprovação dos testes da campanha não equivale à aprovação da suíte inteira do protótipo; seus limites estão registrados no fim deste documento.
+
+## Histórico anterior aos mapas ilustrados
 
 Compilação confirmada sem erros. EditMode passou **33/33**, incluindo caminhos livres até todos os objetivos, limites das plantas, bases de colisão dos móveis e uso das novas artes da infância, igreja e casa/laboratório. Registro: [EditMode atual](C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Docs/CampanhaOficial/Validacao20261003EditMode.json).
 

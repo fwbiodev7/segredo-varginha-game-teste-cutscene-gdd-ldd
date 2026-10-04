@@ -14,6 +14,7 @@ namespace Game.Varginha.Experiment
         public static Transform Build(Transform owner, CampaignMapPlan plan, bool furnished = true)
         {
             var existing = owner.Find("Mapa_Campanha"); if (existing != null) return existing;
+            if(CampaignIllustratedMaps.Get(plan.phase)!=null)return CampaignIllustratedMaps.Build(owner,plan,furnished);
             var map = new GameObject("Mapa_Campanha").transform; map.SetParent(owner);
             var architecture = new GameObject("01_Planta_Paredes_Divisoes").transform; architecture.SetParent(map);
             int order = -1000;
@@ -41,6 +42,7 @@ namespace Game.Varginha.Experiment
         }
         public static void Furnish(Transform map, CampaignMapPlan plan)
         {
+            if(CampaignIllustratedMaps.Get(plan.phase)!=null){CampaignIllustratedMaps.Furnish(map,plan);return;}
             if (map.Find("02_Mobilia_Colisoes") != null) return;
             var layer = new GameObject("02_Mobilia_Colisoes").transform; layer.SetParent(map);
             foreach (var prop in plan.furniture)

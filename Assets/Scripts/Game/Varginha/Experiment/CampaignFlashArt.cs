@@ -21,8 +21,15 @@ namespace Game.Varginha.Experiment
         private static Sprite[] _fall,_explosion;
         private static Material _material;
         public static Manifest Atlas=>_manifest??=JsonUtility.FromJson<Manifest>(Resources.Load<TextAsset>("Varginha/Flash1996/Atlas").text);
-        public static Sprite[] Fall=>_fall??=Load("ChildFall",Atlas.fall,Atlas.fallPPU);
-        public static Sprite[] Explosion=>_explosion??=Load("AlienExplosion",Atlas.explosion,Atlas.explosionPPU);
+        public static Sprite[] Fall=>Valid(_fall)?_fall:_fall=Load("ChildFall",Atlas.fall,Atlas.fallPPU);
+        public static Sprite[] Explosion=>Valid(_explosion)?_explosion:_explosion=Load("AlienExplosion",Atlas.explosion,Atlas.explosionPPU);
+        // Unity destroys native objects when ending a run even when domain reload is disabled.
+        private static bool Valid(Sprite[] frames)
+        {
+            if(frames==null)return false;
+            foreach(var frame in frames)if(frame==null||frame.texture==null)return false;
+            return true;
+        }
         public static Material Material
         {
             get

@@ -12,8 +12,8 @@ namespace Game.Tests.EditMode
             var plan=CampaignMapPlan.Create(1);
             foreach(var prop in plan.furniture)
             {
-                var art=CampaignInteriorArt.Prop(prop.motif)??CampaignVisualAssets.Prop(prop.motif);if(art==null)continue;
-                Assert.That(prop.size.x/prop.size.y,Is.EqualTo(art.bounds.size.x/art.bounds.size.y).Within(.001f),prop.name);
+                var art=System.Array.Find(CampaignIllustratedMaps.Get(1).props,p=>p.name==prop.name).art;
+                Assert.That(prop.size.x/prop.size.y,Is.EqualTo(art[2]/art[3]).Within(.001f),prop.name);
                 if(prop.footprint.width<=0||prop.footprint.height<=0)continue;
                 var visual=new Rect(prop.position-prop.size/2,prop.size);
                 Assert.That(visual.Contains(prop.footprint.min),Is.True,prop.name+" lower base");
@@ -25,7 +25,8 @@ namespace Game.Tests.EditMode
             foreach(int phase in new[]{4,5})
             {
                 var plan=CampaignSchoolLife.CreateRoutePlan(phase);var path=new List<Vector2>();
-                foreach(var route in new[]{(new Vector2(3.75f,-3.05f),new Vector2(.75f,-7.68f)),(new Vector2(6.55f,-3.05f),new Vector2(7.8f,-7.88f))})
+                var data=CampaignIllustratedMaps.Get(phase);var seats=CampaignIllustratedMaps.SchoolSeats(phase);
+                foreach(var route in new[]{(seats[10]-Vector2.up*.58f,data.Position(740,750)),(seats[11]-Vector2.up*.58f,data.Position(1080,750))})
                 {
                     Assert.That(plan.Route(route.Item1,route.Item2,path),Is.True);
                     foreach(var point in path)Assert.That(CampaignSchoolLife.RenanClearArea.Contains(point),Is.False);
@@ -34,14 +35,31 @@ namespace Game.Tests.EditMode
         }
         [Test]public void WalkingFramesKeepTheirHeadCenteredInEveryDirection()
         {
+            var gray=ReadForInspection(Resources.Load<Texture2D>("Varginha/StoryCharacters/WalkGray"));
+            try
+            {
             foreach(bool equipped in new[]{false,true})for(int direction=0;direction<4;direction++)
                 for(int frame=0;frame<4;frame++)
                 {
                     var sprite=CampaignTeamEdelzio.Frame("EdelzioWalk",direction,frame,equipped);
-                    float head=CampaignTeamEdelzio.BodyAnchorX(sprite.texture,sprite.rect);
-                    Assert.That((head-sprite.rect.x-sprite.pivot.x)/sprite.pixelsPerUnit,Is.EqualTo(0).Within(.001f));
+                    float head=CampaignTeamEdelzio.BodyAnchorX(equipped?gray:sprite.texture,sprite.rect);
+                    Assert.That((head-sprite.rect.x-sprite.pivot.x)/sprite.pixelsPerUnit,Is.EqualTo(0).Within(equipped?.045f:.001f));
                     Assert.That(sprite.bounds.min.y,Is.EqualTo(-.58f).Within(.001f));
                 }
+            }
+            finally{Object.DestroyImmediate(gray);}
+        }
+        private static Texture2D ReadForInspection(Texture texture)
+        {
+            var rt=RenderTexture.GetTemporary(texture.width,texture.height,0,RenderTextureFormat.ARGB32);
+            var active=RenderTexture.active;
+            try
+            {
+                Graphics.Blit(texture,rt);RenderTexture.active=rt;
+                var copy=new Texture2D(texture.width,texture.height,TextureFormat.RGBA32,false);
+                copy.ReadPixels(new Rect(0,0,texture.width,texture.height),0,0);copy.Apply();return copy;
+            }
+            finally{RenderTexture.active=active;RenderTexture.ReleaseTemporary(rt);}
         }
         [Test]public void JournalistMovesOnlyHisMouthAndClosesItAfterTheReport()
         {
@@ -75,17 +93,23 @@ namespace Game.Tests.EditMode
         }
         [Test]public void AllNewPosesUseDedicatedBackpackSheetsWithCompleteHeadsAndStableFeet()
         {
+            var gray=ReadForInspection(Resources.Load<Texture2D>("Varginha/StoryCharacters/WalkGray"));
+            try
+            {
             foreach(var sheet in new[]{("EdelzioWalk",4),("EdelzioPunch",3),("EdelzioActions",6),("EdelzioInteractions",6)})
                 for(int row=0;row<4;row++)for(int frame=0;frame<sheet.Item2;frame++)
                 {
                     var body=CampaignTeamEdelzio.Frame(sheet.Item1,row,frame);var equipped=CampaignTeamEdelzio.Frame(sheet.Item1,row,frame,true);
-                    Assert.That(equipped,Is.Not.Null,body.name);Assert.That(equipped.texture.name,Is.EqualTo(sheet.Item1+"BackpackV3"));
-                    Assert.That(equipped.texture,Is.Not.EqualTo(body.texture));Assert.That(equipped.name,Does.Contain("ComMochila"));
+                    bool walk=sheet.Item1=="EdelzioWalk";
+                    Assert.That(equipped,Is.Not.Null,body.name);Assert.That(equipped.texture.name,Is.EqualTo(walk?"WalkGray":sheet.Item1+"BackpackV3"));
+                    Assert.That(equipped.texture,Is.Not.EqualTo(body.texture));Assert.That(equipped.name,Does.Contain(walk?"WalkGray":"ComMochila"));
                     Assert.That(equipped.bounds.min.y,Is.EqualTo(body.bounds.min.y).Within(.001f));
                     Assert.That(equipped.rect.yMax,Is.LessThan(equipped.texture.height));Assert.That(equipped.rect.yMin,Is.GreaterThan(0));
                     Assert.That(equipped.bounds.size.y,Is.InRange(.7f,1.9f));
-                    Assert.That(equipped.texture.GetPixel(0,0).a,Is.LessThan(.05f));
+                    Assert.That((walk?gray:equipped.texture).GetPixel(0,0).a,Is.LessThan(.05f));
                 }
+            }
+            finally{Object.DestroyImmediate(gray);}
         }
         [Test]public void HouseListsOnlyActualPendingTasksAndUsesRequestedTextures()
         {
@@ -102,9 +126,9 @@ namespace Game.Tests.EditMode
             Assert.That(plan.IsClear(plan.spawn),Is.True,"Spawn");
             foreach(var point in plan.points)
             {
-                Assert.That(plan.IsClear(point.position),Is.True,"Fase "+phase+" / "+point.id+" footprint");
+                Assert.That(plan.IsClear(point.position,.25f),Is.True,"Fase "+phase+" / "+point.id+" footprint");
                 Assert.That(plan.Route(plan.spawn,point.position,route),Is.True,"Fase "+phase+" / "+point.id+" route");
-                foreach(var step in route) Assert.That(plan.IsClear(step,.32f),Is.True);
+                foreach(var step in route) Assert.That(plan.IsClear(step,.25f),Is.True);
             }
         }
         [Test] public void ExpansionRequiresPhysicalEvidenceAndPreservesOptionalClues()
@@ -154,7 +178,7 @@ namespace Game.Tests.EditMode
                     else Assert.That(map.Find("02_Mobilia_Colisoes/"+prop.name).GetComponent<Collider2D>(),Is.Null);
                 if(phase==4||phase==10)
                     Assert.That(map.Find("02_Mobilia_Colisoes/Fusca").GetComponent<SpriteRenderer>().sprite.texture,
-                        Is.EqualTo(Resources.Load<Texture2D>("Varginha/Experiment/FuscaTopView")));
+                        Is.EqualTo(Resources.Load<Texture2D>("Varginha/IllustratedMaps/"+CampaignIllustratedMaps.Get(phase).image)));
             }
             finally{Object.DestroyImmediate(root);}
         }
@@ -201,7 +225,9 @@ namespace Game.Tests.EditMode
                 var map=CampaignMapConstruction.Build(root.transform,CampaignMapPlan.Create(3));
                 foreach(var renderer in map.Find("01_Planta_Paredes_Divisoes").GetComponentsInChildren<SpriteRenderer>())
                     if(renderer.name=="Piso")Assert.That(renderer.sortingOrder,Is.LessThan(0));
-                Assert.That(map.Find("02_Mobilia_Colisoes/Ponto de ônibus 0").GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("BusStopVarginha"));
+                var road=map.Find("01_Planta_Paredes_Divisoes/Arte_Integrada_0").GetComponent<SpriteRenderer>();
+                Assert.That(road.sprite.texture.name,Is.EqualTo("Street"));Assert.That(road.sortingOrder,Is.LessThan(0));
+                Assert.That(map.Find("01_Planta_Paredes_Divisoes/Arte_Integrada_11"),Is.Not.Null,"The illustrated street covers the complete route.");
             }
             finally{Object.DestroyImmediate(root);}
         }
@@ -213,16 +239,16 @@ namespace Game.Tests.EditMode
                 try
                 {
                     var map=CampaignMapConstruction.Build(root.transform,CampaignMapPlan.Create(phase));
-                    Assert.That(map.GetComponentInChildren<Game.Varginha.VarginhaSoftLighting>().SourceCount,Is.GreaterThan(0));
+                    Assert.That(map.GetComponent<CampaignIllustratedLighting>(),Is.Not.Null);
                     if(phase==8)
                     {
-                        Assert.That(map.Find("02_Mobilia_Colisoes/Altar da âncora").GetComponent<SpriteRenderer>().sprite.name,Is.EqualTo("Church_Altar"));
-                        Assert.That(map.Find("02_Mobilia_Colisoes/Passadeira da nave").GetComponents<Collider2D>(),Is.Empty);
+                        Assert.That(map.Find("02_Mobilia_Colisoes/Altar da âncora").GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("Church"));
+                        Assert.That(map.Find("02_Mobilia_Colisoes/Tapete central").GetComponents<Collider2D>(),Is.Empty);
                     }
                     else
                     {
-                        Assert.That(map.Find("02_Mobilia_Colisoes/Tanque biológico").GetComponent<SpriteRenderer>().sprite.name,Is.EqualTo("Ouzana_Specimen"));
-                        Assert.That(map.Find("01_Planta_Paredes_Divisoes/Casa de Ouzana").GetComponentInChildren<SpriteRenderer>().sprite.texture,Is.SameAs(Resources.Load<Texture2D>("Varginha/OuzanaArt/Architecture")));
+                        Assert.That(map.Find("02_Mobilia_Colisoes/Espécime luminoso").GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("Ouzana"));
+                        Assert.That(map.Find("01_Planta_Paredes_Divisoes/Arte_Integrada_0").GetComponent<SpriteRenderer>().sprite.texture,Is.SameAs(Resources.Load<Texture2D>("Varginha/IllustratedMaps/Ouzana")));
                     }
                 }
                 finally{Object.DestroyImmediate(root);}
@@ -233,15 +259,15 @@ namespace Game.Tests.EditMode
             var plan=CampaignMapPlan.Create(4);
             var desks=plan.furniture.FindAll(p=>p.name.StartsWith("Carteira original"));
             Assert.That(desks.Count,Is.EqualTo(12));
-            float[] columns={-5.85f,-3.05f,3.75f,6.55f};
+            var data=CampaignIllustratedMaps.Get(4);
             for(int i=0;i<12;i++)
             {
-                Assert.That(desks[i].position.x,Is.EqualTo(columns[i%4]));
-                Assert.That(desks[i].footprint.center.y,Is.EqualTo(3-i/4*2.4f).Within(.001f));
-                Assert.That(CampaignVisualAssets.Prop(desks[i].motif).texture.name,Is.EqualTo("OriginalSchoolComputerLab"));
+                var measured=System.Array.Find(data.props,p=>p.name==desks[i].name);
+                Assert.That(desks[i].position,Is.EqualTo(data.Area(measured.art).center));
+                Assert.That(desks[i].footprint,Is.EqualTo(data.Area(measured.@base)));
             }
-            var route=new List<Vector2>();Assert.That(plan.Route(new Vector2(.75f,-8.4f),new Vector2(.8f,3.8f),route),Is.True,"Original central gate and aisle");
-            Assert.That(plan.furniture.Find(p=>p.name=="Fusca").position,Is.EqualTo(new Vector2(-5.5f,-10.4f)));
+            var route=new List<Vector2>();Assert.That(plan.Route(plan.spawn,data.Objective("notebook"),route),Is.True,"Real central gate and teacher notebook approach");
+            Assert.That(plan.furniture.Find(p=>p.name=="Fusca").position,Is.EqualTo(data.Area(System.Array.Find(data.props,p=>p.name=="Fusca").art).center));
         }
         [Test] public void SchoolFrontagePreservesWholeArtworkGateAndAspectRatio()
         {

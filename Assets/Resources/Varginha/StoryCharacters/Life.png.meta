@@ -1,0 +1,613 @@
+fileFormatVersion: 2
+guid: 2bc6243e79a6dc0438eb0f753cb8fdd6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8770001503089466214
+    second: Life_0
+  - first:
+      213: 4974403084737825917
+    second: Life_1
+  - first:
+      213: -3859521769266734839
+    second: Life_2
+  - first:
+      213: 3111174479070320432
+    second: Life_3
+  - first:
+      213: 5491018023987785717
+    second: Life_4
+  - first:
+      213: -7073486185709638420
+    second: Life_5
+  - first:
+      213: 5554200289638470740
+    second: Life_6
+  - first:
+      213: 879658991257033608
+    second: Life_7
+  - first:
+      213: 6964356236825910889
+    second: Life_8
+  - first:
+      213: 7020861105880416292
+    second: Life_9
+  - first:
+      213: 2550160201260053477
+    second: Life_10
+  - first:
+      213: -7114728948286102214
+    second: Life_11
+  - first:
+      213: -1136986018832328286
+    second: Life_12
+  - first:
+      213: -1408341337651643630
+    second: Life_13
+  - first:
+      213: -6465611990483522148
+    second: Life_14
+  - first:
+      213: -6776105228675057628
+    second: Life_15
+  - first:
+      213: 6498202658626151703
+    second: Life_16
+  - first:
+      213: 7874870304080897573
+    second: Life_17
+  - first:
+      213: 2187854344799329274
+    second: Life_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Life_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 125
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a94e5b03912ba4680800000000000000
+      internalID: -8770001503089466214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 146
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7cc7630041a80540800000000000000
+      internalID: 4974403084737825917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 102
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90918f34669307ac0800000000000000
+      internalID: -3859521769266734839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_3
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 0
+        width: 186
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0375f3b74bc1d2b20800000000000000
+      internalID: 3111174479070320432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_4
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 539
+        width: 103
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff2f07dcc3043c40800000000000000
+      internalID: 5491018023987785717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_5
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 15
+        width: 130
+        height: 709
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cece4218acde5dd90800000000000000
+      internalID: -7073486185709638420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_6
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 566
+        width: 117
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 454d54b6cbb741d40800000000000000
+      internalID: 5554200289638470740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_7
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 530
+        width: 115
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b9a51213d253c00800000000000000
+      internalID: 879658991257033608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_8
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 156
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ed841491d56a060800000000000000
+      internalID: 6964356236825910889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_9
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 0
+        width: 170
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 420cb594afb1f6160800000000000000
+      internalID: 7020861105880416292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_10
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 0
+        width: 145
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e3b174113df36320800000000000000
+      internalID: 2550160201260053477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_11
+      rect:
+        serializedVersion: 2
+        x: 2005
+        y: 0
+        width: 122
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a35e73c87b7634d90800000000000000
+      internalID: -7114728948286102214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_12
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 520
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a9d9e86d3d9830f0800000000000000
+      internalID: -1136986018832328286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_13
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 385
+        width: 90
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21b76ced301947ce0800000000000000
+      internalID: -1408341337651643630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_14
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 15
+        width: 120
+        height: 502
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d29b3a6288546a0800000000000000
+      internalID: -6465611990483522148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_15
+      rect:
+        serializedVersion: 2
+        x: 1110
+        y: 208
+        width: 98
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 428f724223076f1a0800000000000000
+      internalID: -6776105228675057628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_16
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 172
+        width: 165
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71529e993e04e2a50800000000000000
+      internalID: 6498202658626151703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_17
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 25
+        width: 116
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 526a30791d8294d60800000000000000
+      internalID: 7874870304080897573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Life_18
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 15
+        width: 113
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afb1f025fe1dc5e10800000000000000
+      internalID: 2187854344799329274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Life_0: -8770001503089466214
+      Life_1: 4974403084737825917
+      Life_10: 2550160201260053477
+      Life_11: -7114728948286102214
+      Life_12: -1136986018832328286
+      Life_13: -1408341337651643630
+      Life_14: -6465611990483522148
+      Life_15: -6776105228675057628
+      Life_16: 6498202658626151703
+      Life_17: 7874870304080897573
+      Life_18: 2187854344799329274
+      Life_2: -3859521769266734839
+      Life_3: 3111174479070320432
+      Life_4: 5491018023987785717
+      Life_5: -7073486185709638420
+      Life_6: 5554200289638470740
+      Life_7: 879658991257033608
+      Life_8: 6964356236825910889
+      Life_9: 7020861105880416292
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

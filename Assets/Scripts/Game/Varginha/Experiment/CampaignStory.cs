@@ -18,7 +18,7 @@ namespace Game.Varginha.Experiment
         public float driveDistance, x, y;
         public int positionPhase;
         public CampaignExpansionState expansion = new();
-        public int MapFragments => (pagesSolved ? 1 : 0) + (buildingSolved ? 1 : 0) + ((expansion.visited & 1) != 0 ? 1 : 0);
+        public int MapFragments => (pagesSolved ? 1 : 0) + (codeSolved ? 1 : 0) + ((expansion.visited & 1) != 0 ? 1 : 0);
         public bool CanLeaveHouse => routine == 15 && pagesSolved;
         public string RemainingHouseTasks
         {
@@ -32,21 +32,24 @@ namespace Game.Varginha.Experiment
                 return string.Join(", ",pending);
             }
         }
-        public bool CanSolveBuilding => renanMet && lesson && archive;
-        public bool CanDecode => buildingSolved && symbolsFound && legendFound;
+        // Old save fields above remain readable; the school now uses only the teacher's notebook.
+        public bool photoOpened, timeOpened;
+        public int schoolTimeChoice;
+        public bool CanAnalyzePhoto => renanMet && photoOpened;
+        public bool CanDecode => buildingSolved && timeOpened;
         public bool SubmitPages()
         {
             if (!boxFound || routine != 15 || !Sequence(pages, new[] { 0, 1, 2 })) return false;
             pagesSolved = true; return true;
         }
-        public bool SubmitBuilding(int choice)
+        public bool SubmitPhotoClue(int choice)
         {
-            if (!CanSolveBuilding || choice != 1) return false;
+            if (!CanAnalyzePhoto || choice != 1) return false;
             buildingSolved = true; return true;
         }
         public bool SubmitCode()
         {
-            if (!CanDecode || circle != 2 || triangle != 3 || !Sequence(symbols, new[] { 0, 1, 0, 1 })) return false;
+            if (!CanDecode || schoolTimeChoice != 1) return false;
             codeSolved = true; return true;
         }
         public static bool Sequence(int[] a, int[] b)
@@ -67,7 +70,10 @@ namespace Game.Varginha.Experiment
             driveDistance = Mathf.Clamp(driveDistance, 0, 120);
             if (float.IsNaN(x) || float.IsInfinity(x) || float.IsNaN(y) || float.IsInfinity(y)) positionPhase = 0;
             if (!boxFound || routine != 15) pagesSolved = false;
-            if (!CanSolveBuilding) buildingSolved = false;
+            // Completed legacy chapters migrate without making the player repeat removed puzzles.
+            if (buildingSolved && renanMet) photoOpened = true;
+            if (codeSolved && buildingSolved) { timeOpened = true; schoolTimeChoice = 1; }
+            if (!CanAnalyzePhoto) buildingSolved = false;
             if (!CanDecode) codeSolved = false;
             if (!codeSolved) renanConfirmed = false;
         }
@@ -114,7 +120,7 @@ namespace Game.Varginha.Experiment
             string scene = Scene(phase);
             if (!Application.CanStreamedLevelBeLoaded(scene)) { Debug.LogError("Cena da campanha ausente: " + scene); return; }
             var progress = Load(); progress.phase = phase; progress.positionPhase = 0; Write(progress);
-            Time.timeScale = 1; SceneManager.LoadScene(scene);
+            CampaignCinematics.Load(scene);
         }
     }
 }

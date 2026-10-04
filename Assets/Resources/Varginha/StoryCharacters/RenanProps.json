@@ -1,0 +1,61 @@
+{
+  "source": "b3f946dc-fc39-4fbc-9bdd-630725528580",
+  "width": 2172,
+  "height": 724,
+  "columns": 3,
+  "rows": 1,
+  "directions": [
+    "props"
+  ],
+  "coordinateOrigin": "top-left",
+  "pixelsPerUnit": [
+    951.66667
+  ],
+  "frames": [
+    {
+      "rect": [
+        73,
+        68,
+        651,
+        571
+      ],
+      "anchorX": 418.0,
+      "headWidth": 612,
+      "lift": 0
+    },
+    {
+      "rect": [
+        724,
+        218,
+        724,
+        377
+      ],
+      "anchorX": 1029.0,
+      "headWidth": 610,
+      "lift": 0
+    },
+    {
+      "rect": [
+        1448,
+        235,
+        653,
+        404
+      ],
+      "anchorX": 1758.0,
+      "headWidth": 604,
+      "lift": 0
+    }
+  ],
+  "footOffset": -0.58,
+  "fps": {
+    "walk": 7,
+    "breathing": 2,
+    "jump": 8,
+    "wash": 5,
+    "seated": 2,
+    "typing": 4,
+    "punch": 12,
+    "driving": 4,
+    "teaching": 2
+  }
+}

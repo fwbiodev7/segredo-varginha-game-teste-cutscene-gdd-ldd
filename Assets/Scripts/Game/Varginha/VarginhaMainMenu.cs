@@ -6,8 +6,7 @@ using Game.UI;
 namespace Game.Varginha
 {
     /// <summary>
-    /// Tela inicial provisoria de Mistério de Varginha. Não depende de artes ou fontes externas,
-    /// permitindo que o protótipo mantenha a identidade visual enquanto os assets finais chegam.
+    /// Menu da história, com a arte original e a fonte pixel art compartilhada pelo jogo.
     /// </summary>
     public class VarginhaMainMenu : MonoBehaviour
     {
@@ -19,6 +18,8 @@ namespace Game.Varginha
             IsOpen = true;
             Time.timeScale = 1f;
             Game.Managers.GameManager.Instance?.ReturnToMenu();
+            _resumeAvailable = Experiment.CampaignStorySave.Exists;
+            _resumePhase = _resumeAvailable ? Experiment.CampaignStorySave.Load().phase : 1;
         }
         private void OnDisable() => IsOpen = false;
         private void OnDestroy() { if (pixel != null) Destroy(pixel); }
@@ -38,6 +39,8 @@ namespace Game.Varginha
         private GUIStyle infoStyle;
         private GUIStyle leftInfoStyle;
         private GUIStyle smallStyle;
+        private bool _resumeAvailable;
+        private int _resumePhase;
         private readonly TypewriterText panelTypewriter = new TypewriterText();
 
         private void Awake()
@@ -61,7 +64,7 @@ namespace Game.Varginha
 
         private void OnGUI()
         {
-            if (Game.Varginha.VarginhaTravelCinematic.IsTravelling) return;
+            if (Game.Varginha.VarginhaTravelCinematic.IsTravelling || Experiment.CampaignCinematics.IsTransitioning) return;
             BuildStyles();
             DrawBackground();
 
@@ -78,22 +81,22 @@ namespace Game.Varginha
                 return;
             }
 
-            // A fixed design canvas scales as a whole, including very short Game Views.
-            float scale = Mathf.Min(1f, Mathf.Min((Screen.width - 24f) / 560f, (Screen.height - 24f) / 390f));
-            var previous = GUI.matrix;
-            GUI.matrix = Matrix4x4.TRS(new Vector3((Screen.width - 560f * scale) * .5f,
-                (Screen.height - 390f * scale) * .5f), Quaternion.identity, Vector3.one * scale);
-            PixelMenuTheme.Panel(new Rect(0, 0, 560, 390));
-            PixelMenuTheme.Label(new Rect(24, 14, 512, 22), "• TRANSMISSAO • 96.4 MHz • VARGINHA / MG", 9, PixelMenuTheme.Muted);
-            PixelMenuTheme.Separator(new Rect(16, 42, 528, 1));
-            PixelMenuTheme.Label(new Rect(24, 57, 512, 28), "O SEGREDO DE VARGINHA", 23, PixelMenuTheme.Paper);
-            PixelMenuTheme.Label(new Rect(24, 96, 512, 22), "INVESTIGACAO SOBRENATURAL", 10, PixelMenuTheme.Muted);
-            PixelMenuTheme.Label(new Rect(24, 133, 512, 22), "Varginha, 1996. Uma lembrança incompleta.", 10, PixelMenuTheme.Paper);
-            PixelMenuTheme.Label(new Rect(24, 158, 512, 22), "Antes dos documentos, houve uma noite.", 9, PixelMenuTheme.Muted);
-            if (PixelMenuTheme.Button(new Rect(22, 204, 516, 48), "JOGAR", "01")) panel = Panel.Play;
-            if (PixelMenuTheme.Button(new Rect(22, 268, 516, 48), "CONFIGURAÇÕES", "02")) panel = Panel.Settings;
-            PixelMenuTheme.Separator(new Rect(16, 344, 528, 1));
-            PixelMenuTheme.Label(new Rect(24, 354, 512, 22), "INVESTIGAÇÃO • MEMÓRIA • MISTÉRIO", 9, PixelMenuTheme.Muted, TextAnchor.MiddleCenter);
+            var previous = Experiment.ExperimentGUI.BeginCanvas();
+            PixelMenuTheme.Label(new Rect(72, 94, 490, 24), "96.4 MHz • VARGINHA / MG", 10, PixelMenuTheme.Muted);
+            PixelMenuTheme.Separator(new Rect(72, 133, 96, 3));
+            PixelMenuTheme.Label(new Rect(72, 164, 530, 49), "O SEGREDO", 38, PixelMenuTheme.Paper);
+            PixelMenuTheme.Label(new Rect(72, 220, 530, 49), "DE VARGINHA", 38, PixelMenuTheme.Paper);
+            PixelMenuTheme.Label(new Rect(72, 285, 500, 23), "1996 / 2026 • UMA LEMBRANÇA INCOMPLETA", 9, PixelMenuTheme.Muted);
+            bool enabled = GUI.enabled; GUI.enabled = _resumeAvailable;
+            if (PixelMenuTheme.Button(new Rect(72, 340, 470, 88), "")) Experiment.VarginhaCampaignPhase1.StartCampaign(true);
+            PixelMenuTheme.Label(new Rect(120, 355, 400, 25), "CONTINUAR", 14, PixelMenuTheme.Paper);
+            string chapter = _resumeAvailable ? (_resumePhase == 1 ? "A lembrança • 1996"
+                : "Fase " + _resumePhase + " • " + Experiment.CampaignMapPlan.Create(_resumePhase).title) : "Sua história começa aqui";
+            PixelMenuTheme.Label(new Rect(120, 393, 400, 20), chapter, 8, PixelMenuTheme.Muted);
+            GUI.enabled = enabled;
+            if (PixelMenuTheme.Button(new Rect(72, 449, 470, 56), "NOVA HISTÓRIA")) panel = Panel.Play;
+            if (PixelMenuTheme.Button(new Rect(72, 525, 470, 56), "CONFIGURAÇÕES")) panel = Panel.Settings;
+            PixelMenuTheme.Label(new Rect(72, 654, 900, 24), "INVESTIGAÇÃO • MEMÓRIA • MISTÉRIO", 9, PixelMenuTheme.Muted);
             GUI.matrix = previous;
         }
 
@@ -103,7 +106,7 @@ namespace Game.Varginha
             {
                 GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), backgroundTexture, ScaleMode.ScaleAndCrop);
                 // Vinheta que garante contraste sem ocultar a arte do ET e da luz no lado direito.
-                GUI.color = new Color(.005f, .015f, .04f, .56f);
+                GUI.color = new Color(.005f, .015f, .04f, .23f);
                 GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), pixel);
             }
             else
@@ -111,10 +114,11 @@ namespace Game.Varginha
                 GUI.color = new Color(.015f, .025f, .06f, 1f);
                 GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), pixel);
             }
-            GUI.color = new Color(.12f, .9f, .88f, .10f);
-            GUI.DrawTexture(new Rect(0, Screen.height * .42f, Screen.width, 2), pixel);
-            GUI.DrawTexture(new Rect(Screen.width * .16f, 0, 2, Screen.height), pixel);
-            GUI.DrawTexture(new Rect(Screen.width * .82f, 0, 2, Screen.height), pixel);
+            for (int i = 0; i < 20; i++)
+            {
+                GUI.color = new Color(.005f, .015f, .025f, .86f * (1 - i / 20f));
+                GUI.DrawTexture(new Rect(Screen.width * i * .035f, 0, Screen.width * .035f + 1, Screen.height), pixel);
+            }
             GUI.color = Color.white;
         }
 
@@ -273,8 +277,8 @@ namespace Game.Varginha
             var previous = Experiment.ExperimentGUI.BeginCanvas();
             Experiment.ExperimentGUI.Init();
             Experiment.ExperimentGUI.Panel(new Rect(280, 145, 720, 430));
-            Experiment.ExperimentGUI.Label(new Rect(325, 175, 630, 42), "JOGAR", true);
-            Experiment.ExperimentGUI.Label(new Rect(325, 238, 630, 60), "Ato I — A Lembrança\nFase 1 — O Caso de Varginha", small: true);
+            Experiment.ExperimentGUI.Label(new Rect(325, 175, 630, 42), "NOVA HISTÓRIA", true);
+            Experiment.ExperimentGUI.Label(new Rect(325, 238, 630, 60), "Ato I — A Lembrança\nUma nova história substitui o progresso salvo.", small: true);
             if (Experiment.ExperimentGUI.Button(new Rect(325, 320, 630, 54), "INICIAR CAMPANHA"))
                 Experiment.VarginhaCampaignPhase1.StartCampaign(false);
             bool before = GUI.enabled;

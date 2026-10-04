@@ -37,6 +37,7 @@ namespace Game.Varginha.Experiment
             }
             var body = actor.GetComponent<Rigidbody2D>();
             if (body != null) { body.interpolation = RigidbodyInterpolation2D.Interpolate; body.collisionDetectionMode = CollisionDetectionMode2D.Continuous; body.constraints = RigidbodyConstraints2D.FreezeRotation; }
+            CampaignWallBody.Ensure(actor,child);
         }
         public static void QuietWorld()
         {
@@ -47,7 +48,7 @@ namespace Game.Varginha.Experiment
             if (VarginhaGameHUD.Instance != null)
             {
                 VarginhaGameHUD.Instance.CloseDialogue();
-                if (VarginhaCampaignStage.Active != null) VarginhaGameHUD.Instance.CampaignInventoryOnly = true;
+                if (VarginhaCampaignStage.Active != null || CampaignExpansionController.Active != null) VarginhaGameHUD.Instance.CampaignInventoryOnly = true;
                 else VarginhaGameHUD.Instance.enabled = false;
             }
             if (VarginhaNotebookQuiz.Instance != null) VarginhaNotebookQuiz.Instance.enabled = false;

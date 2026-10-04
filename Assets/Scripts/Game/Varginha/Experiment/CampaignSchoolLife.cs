@@ -16,9 +16,13 @@ namespace Game.Varginha.Experiment
         private CampaignMapPlan _plan;
         private Rigidbody2D _body;
         private SpriteRenderer _renderer;
-        private float _nextRoute, _talkUntil;
+        private float _nextRoute, _talkUntil, _blockedFor;
+        private float _lastDistance=float.PositiveInfinity;
         private bool _away;
-        public static readonly Rect RenanClearArea=new(1.8f,-9.5f,2.4f,2.7f);
+        public static Rect RenanClearArea
+        {
+            get {var data=CampaignIllustratedMaps.Get(4);if(data==null)return new Rect(1.8f,-9.5f,2.4f,2.7f);var p=data.Objective("renan");return new Rect(p.x-.85f,p.y-.6f,1.7f,1.65f);}
+        }
         public static CampaignMapPlan CreateRoutePlan(int phase)
         {
             var plan=CampaignMapPlan.Create(phase);
@@ -31,7 +35,9 @@ namespace Game.Varginha.Experiment
             _body = GetComponent<Rigidbody2D>(); _renderer = GetComponent<SpriteRenderer>();
             _environment = GameObject.Find("Escola_3_Sistema_Ambiente")?.transform;
             _body.position = home; _body.linearVelocity = Vector2.zero;
+            _lastDistance=float.PositiveInfinity;
             _body.bodyType = walks ? RigidbodyType2D.Dynamic : RigidbodyType2D.Kinematic;
+            if(!walks && GetComponent<VarginhaStudentAnimation>()!=null)GetComponent<VarginhaStudentAnimation>().enabled=false;
             _nextRoute = Time.time + 12 + name.Length;
             transform.localScale = Vector3.one;
         }
@@ -42,22 +48,53 @@ namespace Game.Varginha.Experiment
             if (Time.time >= _nextRoute && _path.Count == 0)
             {
                 _away = !_away;
-                _plan ??= CreateRoutePlan(VarginhaCampaignStage.Active.phase);
-                var footOffset=GetComponent<CircleCollider2D>().offset;
-                _plan.Route(_body.position+footOffset,(_away?Away:Home)+footOffset,_path);
-                for(int i=0;i<_path.Count;i++)_path[i]-=footOffset;
-                _nextRoute = Time.time + 18;
+                Repath();
+                _nextRoute = float.PositiveInfinity;
             }
+        }
+        private void Repath()
+        {
+            _plan=CreateRoutePlan(VarginhaCampaignStage.Active.phase);
+            var ownFeet=GetComponent<CircleCollider2D>();
+            // Classmates and the player can occupy an otherwise open aisle.
+            // Reserve their actual floor contacts when choosing a route.
+            foreach(var feet in FindObjectsByType<CircleCollider2D>(FindObjectsSortMode.None))
+            {
+                if(feet==ownFeet||!feet.enabled||feet.isTrigger)continue;
+                if(feet.GetComponent<EdelzioTopDownController>()==null&&feet.GetComponent<CampaignSchoolLife>()==null)continue;
+                var b=feet.bounds;_plan.walls.Add(new Rect(b.min.x,b.min.y,b.size.x,b.size.y));
+            }
+            _plan.Route(_body.position+ownFeet.offset,(_away?Away:Home)+ownFeet.offset,_path);
+            for(int i=0;i<_path.Count;i++)_path[i]-=ownFeet.offset;
+            _blockedFor=0;_lastDistance=float.PositiveInfinity;
         }
         private void FixedUpdate()
         {
-            if (Time.timeScale <= 0 || VarginhaCampaignStage.IsModalOpen || Time.time < _talkUntil || _path.Count == 0) { _body.linearVelocity = Vector2.zero; return; }
-            while (_path.Count > 0 && Vector2.Distance(_body.position, _path[0]) < .07f) _path.RemoveAt(0);
-            if (_path.Count > 0) _body.MovePosition(Vector2.MoveTowards(_body.position, _path[0], WalkSpeed * Time.fixedDeltaTime));
+            if (Time.timeScale <= 0 || VarginhaCampaignStage.IsModalOpen || Time.time < _talkUntil) { _body.linearVelocity = Vector2.zero; return; }
+            if(_path.Count==0)
+            {
+                _body.linearVelocity=Vector2.zero;
+                if(float.IsPositiveInfinity(_nextRoute))
+                {
+                    if(Vector2.Distance(_body.position,_away?Away:Home)<.3f)_nextRoute=Time.time+18;
+                    else if((_blockedFor+=Time.fixedDeltaTime)>1)Repath();
+                }
+                return;
+            }
+            while (_path.Count > 0 && Vector2.Distance(_body.position, _path[0]) < .07f){_path.RemoveAt(0);_lastDistance=float.PositiveInfinity;}
+            if (_path.Count > 0)
+            {
+                float distance=Vector2.Distance(_body.position,_path[0]);
+                // Being pushed sideways does not count as progress toward the waypoint.
+                _blockedFor=distance<_lastDistance-.002f?0:_blockedFor+Time.fixedDeltaTime;
+                _lastDistance=distance;if(_blockedFor>.8f){Repath();return;}
+                _body.MovePosition(Vector2.MoveTowards(_body.position, _path[0], WalkSpeed * Time.fixedDeltaTime));
+            }
         }
         private void LateUpdate()
         {
             if (_renderer == null) return;
+            if(!Walks){_renderer.sprite=CampaignSeatingLayers.StudentPose(StudentName);return;}
             bool walking = _path.Count > 0 && !VarginhaCampaignStage.IsModalOpen;
             Vector2 facing = walking ? _path[0] - _body.position : Time.time < _talkUntil && EdelzioTopDownController.Instance != null
                 ? (Vector2)(EdelzioTopDownController.Instance.transform.position - transform.position) : Walks ? Vector2.down : Vector2.up;

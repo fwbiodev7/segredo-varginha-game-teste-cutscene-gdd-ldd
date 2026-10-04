@@ -1,0 +1,34 @@
+{
+  "width": 2172,
+  "height": 724,
+  "icons": [
+    {
+      "id": "Notebook",
+      "rect": [
+        219,
+        183,
+        366,
+        441
+      ]
+    },
+    {
+      "id": "Backpack",
+      "rect": [
+        855,
+        125,
+        463,
+        474
+      ]
+    },
+    {
+      "id": "Pause",
+      "rect": [
+        1638,
+        201,
+        312,
+        358
+      ]
+    }
+  ],
+  "source": "imagegen / exec-f0c9be20-e66c-4cef-8d53-c079d7617843"
+}

@@ -13,6 +13,19 @@ namespace Game.Tests.PlayMode
     public class CampaignChaptersTests : InputTestFixture
     {
         private string _previousStory, _previousMemory;
+        private static Bounds VisibleBounds(SpriteRenderer renderer)
+        {
+            // Check authored opaque pixels, excluding the transparent animation-cell padding.
+            var sprite=renderer.sprite;if(!sprite.texture.isReadable)return renderer.bounds;var pixels=sprite.texture.GetPixels32();
+            int left=(int)sprite.rect.xMax,right=(int)sprite.rect.xMin,bottom=(int)sprite.rect.yMax,top=(int)sprite.rect.yMin;
+            for(int y=(int)sprite.rect.yMin;y<(int)sprite.rect.yMax;y++)for(int x=(int)sprite.rect.xMin;x<(int)sprite.rect.xMax;x++)
+                if(pixels[y*sprite.texture.width+x].a>128){left=Mathf.Min(left,x);right=Mathf.Max(right,x+1);bottom=Mathf.Min(bottom,y);top=Mathf.Max(top,y+1);}
+            Vector2 a=(new Vector2(left,bottom)-sprite.rect.position-sprite.pivot)/sprite.pixelsPerUnit;
+            Vector2 b=(new Vector2(right,top)-sprite.rect.position-sprite.pivot)/sprite.pixelsPerUnit;
+            if(renderer.flipX){a.x=-a.x;b.x=-b.x;}
+            var p=renderer.transform.TransformPoint(a);var q=renderer.transform.TransformPoint(b);
+            var bounds=new Bounds();bounds.SetMinMax(Vector3.Min(p,q),Vector3.Max(p,q));return bounds;
+        }
         [SetUp] public void PreserveSaves()
         {
             _previousStory = File.Exists(CampaignStorySave.Path) ? File.ReadAllText(CampaignStorySave.Path) : null;
@@ -26,7 +39,7 @@ namespace Game.Tests.PlayMode
         }
         [UnityTest] public IEnumerator ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor()
         {
-            float eastWall=CampaignMapPlan.Create(1).rooms.Find(r=>r.name=="Casa de infância").rect.xMax;
+            float eastWall=CampaignIllustratedMaps.Get(1).Position(880,0).x;
             CampaignMemorySave.Write(new CampaignMemory { openingSeen = true, x = eastWall-.7f, y = 3 });
             yield return SceneManager.LoadSceneAsync(VarginhaCampaignPhase1.SceneName); yield return null; yield return null;
             var actor = Object.FindAnyObjectByType<EdelzioTopDownController>();
@@ -37,6 +50,87 @@ namespace Game.Tests.PlayMode
             Press(keyboard.dKey); yield return new WaitForSeconds(.9f); Release(keyboard.dKey);
             Assert.That(actor.transform.position.x, Is.GreaterThan(eastWall+1), "The east portal must remain passable.");
             Assert.That(actor.GetComponent<CircleCollider2D>().radius, Is.LessThan(.3f), "The collision shape follows the child's feet.");
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
+        [UnityTest] public IEnumerator MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame()
+        {
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(4));
+            yield return new WaitForSeconds(3.3f);
+            var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
+            Assert.That(actor.GetComponent<CampaignCharacterShadow>(),Is.Not.Null);
+            foreach(var pupil in Object.FindObjectsByType<VarginhaStudentAnimation>(FindObjectsSortMode.None))
+                Assert.That(pupil.GetComponent<CampaignCharacterShadow>(),Is.Not.Null,pupil.name);
+            var camera=Camera.main;var target=camera.targetTexture;
+            VarginhaCampaignStage.Active.TogglePause();
+            Assert.That(Time.timeScale,Is.Zero);
+            Assert.That(camera.targetTexture,Is.SameAs(target),"Pause capture restores the live camera target.");
+            var cinematic=Object.FindAnyObjectByType<CampaignCinematics>();
+            var field=typeof(CampaignCinematics).GetField("_pauseFrame",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance);
+            var frame=(RenderTexture)field.GetValue(cinematic);
+            Assert.That(frame,Is.Not.Null);Assert.That(frame.height,Is.EqualTo(90));
+            Assert.That((float)frame.width/frame.height,Is.EqualTo((float)Screen.width/Screen.height).Within(.02f),"Pause must cover wide displays without clear side strips.");
+            VarginhaCampaignStage.Active.TogglePause();
+            Assert.That(Time.timeScale,Is.EqualTo(1));Assert.That(field.GetValue(cinematic),Is.Null);
+            CampaignStorySave.GoTo(5);Assert.That(CampaignCinematics.IsTransitioning,Is.True);
+            float until=Time.realtimeSinceStartup+5;
+            while(CampaignCinematics.IsTransitioning&&Time.realtimeSinceStartup<until)yield return null;
+            Assert.That(SceneManager.GetActiveScene().name,Is.EqualTo(CampaignStorySave.Scene(5)));
+            Assert.That(CampaignCinematics.IsTransitioning,Is.False);Assert.That(Time.timeScale,Is.EqualTo(1));
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
+        [UnityTest]public IEnumerator AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight()
+        {
+            CampaignStorySave.Write(new CampaignStory {phase=2});
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.3f);
+            var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();var body=actor.GetComponent<Rigidbody2D>();
+            var feet=actor.GetComponent<CircleCollider2D>();var renderer=actor.GetComponent<SpriteRenderer>();
+            var keyboard=InputSystem.AddDevice<Keyboard>();
+            var furniture=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/Fridge_Kitchen");
+            var fridge=furniture.GetComponent<BoxCollider2D>();var fridgeGroup=furniture.GetComponent<UnityEngine.Rendering.SortingGroup>();
+            Assert.That(actor.GetComponent<VarginhaWorldDepth>(),Is.Not.Null,"The original adult actor must participate in depth sorting.");
+            foreach(var direction in new[]{Vector2.left,Vector2.up,Vector2.down})
+            {
+                body.position=(Vector2)fridge.bounds.center+direction*(direction.x!=0?fridge.bounds.extents.x+.6f:fridge.bounds.extents.y+.6f)-feet.offset;
+                body.linearVelocity=Vector2.zero;yield return new WaitForFixedUpdate();yield return null;
+                var key=direction.x<0?keyboard.dKey:direction.y>0?keyboard.sKey:keyboard.wKey;
+                Press(key);yield return new WaitForSeconds(.6f);Release(key);yield return new WaitForFixedUpdate();yield return null;
+                Assert.That(feet.Distance(fridge).distance,Is.GreaterThanOrEqualTo(-.01f),"Refrigerator blocks feet from "+direction+" within the physics solver contact tolerance.");
+                int actorOrder=actor.GetComponent<UnityEngine.Rendering.SortingGroup>().sortingOrder;
+                Assert.That(direction.y<0?actorOrder>fridgeGroup.sortingOrder:direction.y>0?actorOrder<fridgeGroup.sortingOrder:true,Is.True,"Actor covers furniture in front and is occluded behind.");
+            }
+            foreach(string name in new[]{"Office_Chair","Kitchen_Chair_Left","Kitchen_Chair_Right","Kitchen_Chair_Center"})
+            {
+                var chair=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/"+name).GetComponent<BoxCollider2D>();
+                body.position=(Vector2)chair.bounds.center+Vector2.down*(chair.bounds.extents.y+.6f)-feet.offset;body.linearVelocity=Vector2.zero;
+                yield return new WaitForFixedUpdate();Press(keyboard.wKey);yield return new WaitForSeconds(.6f);Release(keyboard.wKey);yield return new WaitForFixedUpdate();
+                Assert.That(feet.Distance(chair).distance,Is.GreaterThanOrEqualTo(-.01f),name+" has its own solid floor contact.");
+            }
+            var wall=GameObject.Find("Mapa_Campanha/01_Planta_Paredes_Divisoes/Parede_6").GetComponent<BoxCollider2D>();
+            body.position=new Vector2(wall.bounds.min.x-.6f,wall.bounds.center.y)-feet.offset;body.linearVelocity=Vector2.zero;
+            yield return new WaitForFixedUpdate();Press(keyboard.dKey);yield return new WaitForSeconds(.6f);Release(keyboard.dKey);yield return new WaitForFixedUpdate();
+            Assert.That(feet.Distance(wall).distance,Is.GreaterThanOrEqualTo(-.01f),"Bedroom wall blocks real movement within the physics solver contact tolerance.");
+            var block=new MaterialPropertyBlock();body.position=CampaignIllustratedMaps.Get(2).Position(280,290)-feet.offset;
+            yield return new WaitForSeconds(.25f);renderer.GetPropertyBlock(block);var shade=block.GetColor("_SceneTint");
+            body.position=CampaignIllustratedMaps.Get(2).Position(115,335)-feet.offset;
+            yield return new WaitForSeconds(.25f);renderer.GetPropertyBlock(block);var warm=block.GetColor("_SceneTint");
+            Assert.That(renderer.sharedMaterial.shader.name,Is.EqualTo("Varginha/IllustratedActorLighting"));
+            Assert.That(warm.r-shade.r,Is.GreaterThan(.12f),"The nearby bedside lamp visibly changes the player's illumination.");
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
+        [UnityTest]public IEnumerator PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening()
+        {
+            CampaignMemorySave.Write(new CampaignMemory{openingSeen=true});
+            yield return SceneManager.LoadSceneAsync(VarginhaCampaignPhase1.SceneName);yield return new WaitForSeconds(.3f);
+            var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();var feet=actor.GetComponent<CircleCollider2D>();var keyboard=InputSystem.AddDevice<Keyboard>();
+            var data=CampaignIllustratedMaps.Get(1);actor.GetComponent<Rigidbody2D>().position=data.Position(437,730)-feet.offset;
+            Press(keyboard.aKey);yield return new WaitForSeconds(.8f);Release(keyboard.aKey);yield return null;
+            Assert.That(VisibleBounds(actor.GetComponent<SpriteRenderer>()).min.x,Is.GreaterThanOrEqualTo(data.Position(394,0).x-.04f),"The child's visible body cannot enter the lower wall beside the refrigerator.");
+            CampaignStorySave.Write(new CampaignStory{phase=2});yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.3f);
+            actor=Object.FindAnyObjectByType<EdelzioTopDownController>();feet=actor.GetComponent<CircleCollider2D>();
+            var wall=GameObject.Find("Mapa_Campanha/01_Planta_Paredes_Divisoes/Parede_7").GetComponent<BoxCollider2D>();
+            actor.GetComponent<Rigidbody2D>().position=new Vector2(wall.bounds.center.x,wall.bounds.min.y-2)-feet.offset;
+            Press(keyboard.wKey);yield return new WaitForSeconds(.9f);Release(keyboard.wKey);yield return null;
+            Assert.That(VisibleBounds(actor.GetComponent<SpriteRenderer>()).max.y,Is.LessThanOrEqualTo(wall.bounds.min.y+.12f),"Walking north cannot put the visible torso inside the partition end.");
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
         [UnityTest] public IEnumerator HouseDriveSchoolAndCodeFormAPlayableSavedCampaign()
@@ -54,7 +148,21 @@ namespace Game.Tests.PlayMode
                 var target = GameObject.Find(point == "bag" ? "Backpack_Prop" : point == "food" ? "Coffee_Cup" : "Notebook_TI");
                 if (target != null) actor.GetComponent<Rigidbody2D>().position = point == "work" ? (Vector2)GameObject.Find("Chair_Office").transform.position + Vector2.left * .8f + Vector2.up * .35f : (Vector2)target.transform.position + Vector2.down;
                 yield return new WaitForFixedUpdate(); yield return null;
-                stage.Interact(point); yield return new WaitUntil(() => !stage.IsActing); stage.CloseDialogue();
+                stage.Interact(point);
+                if(point=="work")
+                {
+                    yield return new WaitForSeconds(.9f);
+                    var chair=GameObject.Find("Chair_Office").transform;
+                    Assert.That(actor.transform.position.y,Is.EqualTo(chair.position.y+.77f).Within(.08f),"Seated body fits between chair and desk.");
+                    var back=GameObject.Find("Encosto_"+actor.name).GetComponent<SpriteRenderer>();
+                    Assert.That(actor.GetComponent<SpriteRenderer>().sprite.name,Does.Contain("SeatedDeskNorth"));
+                    var fullChair=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/Office_Chair");
+                    Assert.That(fullChair.GetComponent<UnityEngine.Rendering.SortingGroup>().sortingOrder,
+                        Is.LessThan(actor.GetComponent<UnityEngine.Rendering.SortingGroup>().sortingOrder),"Only the backrest, not the entire chair, may cover the seated body.");
+                    Assert.That(back.enabled,Is.True);
+                    Assert.That(actor.GetComponent<SpriteRenderer>().bounds.max.y,Is.GreaterThan(back.bounds.max.y+.1f),"Backrest must not cover the head.");
+                }
+                yield return new WaitUntil(() => !stage.IsActing); stage.CloseDialogue();
             }
             var backpackActor = Object.FindAnyObjectByType<EdelzioTopDownController>();
             Assert.That(stage.Progress.routine, Is.EqualTo(15), "All four original routine animations finish successfully.");
@@ -70,14 +178,19 @@ namespace Game.Tests.PlayMode
             stage.Progress.pages = new[] { 0, 1, 2 }; Assert.That(stage.SubmitPages(), Is.True); stage.FinishCutscene();
             Assert.That(stage.Progress.MapFragments, Is.EqualTo(1));
             Assert.That(Object.FindAnyObjectByType<EdelzioTopDownController>().HasFuscaKey, Is.True);
-            stage.Interact("car"); yield return null; yield return null;
+            stage.Interact("car"); yield return new WaitForSecondsRealtime(1);
             Assert.That(SceneManager.GetActiveScene().name, Is.EqualTo(VarginhaCampaignDrive.SceneName));
             var drive = VarginhaCampaignDrive.Active;
             // Begin near the scripted pane; real keyboard movement must trigger it.
             drive.Progress.driveDistance = 54;
-            var car = GameObject.Find("Fusca_TopView_Campanha").GetComponent<Rigidbody2D>(); car.position = new Vector2(-2, 54);
+            var car = GameObject.Find("Fusca_TopView_Campanha").GetComponent<Rigidbody2D>(); car.position = new Vector2(CampaignMapPlan.Create(3).spawn.x, 54);
             yield return new WaitForSeconds(3.2f);
-            var keyboard = InputSystem.AddDevice<Keyboard>(); Press(keyboard.wKey); yield return new WaitForSeconds(.5f); Release(keyboard.wKey);
+            var keyboard = InputSystem.AddDevice<Keyboard>();var road=CampaignIllustratedMaps.Get(3);
+            Press(keyboard.aKey);yield return new WaitForSeconds(.9f);Release(keyboard.aKey);
+            Assert.That(car.GetComponent<BoxCollider2D>().bounds.min.x,Is.GreaterThanOrEqualTo(road.Position(road.laneBorders[0],0).x-.02f),"Fusca remains inside the left curb.");
+            Press(keyboard.dKey);yield return new WaitForSeconds(.9f);Release(keyboard.dKey);
+            Assert.That(car.GetComponent<BoxCollider2D>().bounds.max.x,Is.LessThanOrEqualTo(road.Position(road.laneBorders[1],0).x+.02f),"Fusca remains inside the right curb.");
+            Press(keyboard.wKey); yield return new WaitForSeconds(.5f); Release(keyboard.wKey);
             Assert.That(drive.HasBrokenDown, Is.True);
             drive.TogglePause(); Assert.That(Time.timeScale, Is.Zero); drive.TogglePause();
             drive.Inspect(0); drive.Inspect(1); drive.Inspect(2); drive.CloseInspection();
@@ -87,15 +200,15 @@ namespace Game.Tests.PlayMode
             CampaignStorySave.GoTo(4); yield return new WaitForSeconds(3.2f); stage = VarginhaCampaignStage.Active;
             Assert.That(Object.FindObjectsByType<VarginhaCombatEnemy>(FindObjectsSortMode.None), Is.Empty);
             Assert.That(GameObject.Find("Renan_Industrial_Campanha"), Is.Not.Null);
-            Assert.That(Object.FindAnyObjectByType<VarginhaIndustrialSchoolFacade>(), Is.Not.Null, "The real school frontage must be present in the campaign map.");
+            Assert.That(GameObject.Find("Mapa_Campanha/01_Planta_Paredes_Divisoes/Arte_Integrada_0").GetComponent<SpriteRenderer>().sprite.texture.name, Is.EqualTo("School"), "The supplied real school frontage must be present in the campaign map.");
             Assert.That(Object.FindObjectsByType<CampaignSchoolLife>().Length, Is.EqualTo(9), "All original students have classroom activities.");
-            stage.Interact("student:0"); stage.CloseDialogue(); stage.Interact("research"); stage.CloseDialogue();
-            Assert.That(stage.Progress.studentsTalked, Is.EqualTo(1)); Assert.That(stage.Progress.ouzanaNote, Is.True);
-            stage.Interact("renan"); stage.CloseDialogue(); stage.Interact("lesson"); stage.CloseDialogue(); stage.Interact("archive"); stage.CloseDialogue();
-            Assert.That(stage.SubmitBuilding(0), Is.False); Assert.That(stage.SubmitBuilding(1), Is.True); stage.FinishCutscene();
+            stage.Interact("student:0"); stage.CloseDialogue();
+            Assert.That(stage.Progress.studentsTalked, Is.EqualTo(1));
+            stage.Interact("renan"); stage.CloseDialogue(); stage.Interact("notebook");
+            Assert.That(stage.SubmitPhotoClue(0), Is.False); Assert.That(stage.SubmitPhotoClue(1), Is.True); stage.FinishCutscene();
             CampaignStorySave.GoTo(5); yield return new WaitForSeconds(3.2f); stage = VarginhaCampaignStage.Active;
-            stage.Interact("notebook"); stage.CloseDialogue(); stage.Interact("mural"); stage.CloseDialogue();
-            Assert.That(stage.SubmitCode(), Is.False); stage.Progress.symbols = new[] { 0, 1, 0, 1 }; stage.Progress.circle = 2; stage.Progress.triangle = 3;
+            stage.Interact("notebook");
+            Assert.That(stage.SubmitCode(), Is.False); stage.Progress.schoolTimeChoice = 1;
             Assert.That(stage.SubmitCode(), Is.True); stage.FinishCutscene(); stage.Interact("renan"); stage.FinishCutscene();
             Assert.That(stage.Progress.renanConfirmed, Is.True); stage.Save();
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");

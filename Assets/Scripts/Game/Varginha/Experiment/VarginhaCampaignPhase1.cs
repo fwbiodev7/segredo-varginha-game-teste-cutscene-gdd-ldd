@@ -84,8 +84,8 @@ namespace Game.Varginha.Experiment
         {
             if (!Application.CanStreamedLevelBeLoaded(SceneName)) { Debug.LogError("Cena inicial da campanha ausente."); return; }
             if (!continueGame) { CampaignMemorySave.Write(new CampaignMemory()); CampaignStorySave.Write(new CampaignStory()); }
-            else if (CampaignStorySave.Load().phase > 1) { Time.timeScale = 1; GameManager.Instance?.StartGame(); SceneManager.LoadScene(CampaignStorySave.Scene(CampaignStorySave.Load().phase)); return; }
-            Time.timeScale = 1; GameManager.Instance?.StartGame(); SceneManager.LoadScene(SceneName);
+            else if (CampaignStorySave.Load().phase > 1) { Time.timeScale = 1; GameManager.Instance?.StartGame(); CampaignCinematics.Load(CampaignStorySave.Scene(CampaignStorySave.Load().phase)); return; }
+            Time.timeScale = 1; GameManager.Instance?.StartGame(); CampaignCinematics.Load(SceneName);
         }
         private void Awake()
         {
@@ -113,8 +113,11 @@ namespace Game.Varginha.Experiment
             _child = _player.GetComponent<SpriteRenderer>(); _child.color = Color.white; _child.flipX = false; LoadChild(); CampaignPresentation.FootCollision(_player, true);
             var newspaper=housePlan.furniture.Find(p=>p.name=="Mesa do jornal");
             var drawing=housePlan.furniture.Find(p=>p.name=="Mesa de desenho");
-            AddPaper("Jornal_1996",newspaper.position+Vector2.up*(newspaper.size.y*.25f),new Color(.86f,.8f,.62f),newspaper.name);
-            AddPaper("Desenho_Infantil",drawing.position+Vector2.up*(drawing.size.y*.25f),new Color(.95f,.89f,.72f),drawing.name);
+            if(CampaignIllustratedMaps.Get(1)==null)
+            {
+                AddPaper("Jornal_1996",newspaper.position+Vector2.up*(newspaper.size.y*.25f),new Color(.86f,.8f,.62f),newspaper.name);
+                AddPaper("Desenho_Infantil",drawing.position+Vector2.up*(drawing.size.y*.25f),new Color(.95f,.89f,.72f),drawing.name);
+            }
             _voice = gameObject.AddComponent<AudioSource>(); _voice.volume = .7f;
             _ambience = gameObject.AddComponent<AudioSource>(); _ambience.volume = .025f; _ambience.loop = true;
             _staticClip = VarginhaExperimentLab.CreateStatic(); _ambience.clip = _staticClip;
@@ -183,6 +186,7 @@ namespace Game.Varginha.Experiment
         }
         private void Update()
         {
+            if (CampaignCinematics.IsTransitioning) return;
             if (!_ready) return;
             if (Keyboard.current?.escapeKey.wasPressedThisFrame == true)
             {
@@ -244,7 +248,7 @@ namespace Game.Varginha.Experiment
         private void CloseDialogue() { _dialogue = null; _player.SetInputLocked(_paused || _stage != Stage.Explore); }
         public void TogglePause()
         {
-            _paused = !_paused; _settings = false; Time.timeScale = _paused ? 0 : 1;
+            _paused = !_paused; _settings = false; Time.timeScale = _paused ? 0 : 1; CampaignCinematics.Pause(_paused);
             _sound?.Suspend(_paused);
             _player.SetInputLocked(_paused || _stage != Stage.Explore || _dialogue != null);
             if (_paused) { _voice.Pause(); _ambience.Pause(); } else { _voice.UnPause(); _ambience.UnPause(); }
@@ -255,8 +259,8 @@ namespace Game.Varginha.Experiment
         {
             if (!_ready) return;
             ExperimentGUI.Init(); GUI.depth = -3100;
-            if (_stage == Stage.Opening || _stage == Stage.ActTitle || _stage == Stage.Complete || _paused)
-                ExperimentGUI.Box(new Rect(0, 0, Screen.width, Screen.height), Color.black);
+            if (_stage == Stage.Opening || _stage == Stage.ActTitle || _stage == Stage.Complete )
+                ExperimentGUI.Box(new Rect(0, 0, Screen.width, Screen.height), _stage == Stage.ActTitle ? CampaignCinematics.ChapterBlack(_stageTime) : Color.black);
             var before = ExperimentGUI.BeginCanvas();
             var settings = VarginhaGameSettings.Current;
             if (_stage == Stage.Opening)
@@ -271,7 +275,6 @@ namespace Game.Varginha.Experiment
             }
             else if (_stage == Stage.ActTitle)
             {
-                ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(.01f, .02f, .03f, .96f));
                 ExperimentGUI.Label(new Rect(295, 245, 700, 60), "ATO I — A LEMBRANÇA", true);
                 ExperimentGUI.Label(new Rect(295, 322, 700, 60), "FASE 1 • O CASO DE VARGINHA\nEdelzio, seis anos. Varginha, 1996.");
             }
@@ -280,10 +283,8 @@ namespace Game.Varginha.Experiment
                 float shade = _memory.powerFailed ? .22f : .10f;
                 if (_memory.powerFailed && !settings.reducedMotion) shade += .035f * Mathf.Sin(Time.unscaledTime * .8f);
                 ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(.035f, .075f, .17f, shade));
-                ExperimentGUI.Panel(new Rect(24, 22, 905, 106));
-                ExperimentGUI.Label(new Rect(45, 32, 860, 33), "ATO I — A LEMBRANÇA • FASE 1", true);
-                ExperimentGUI.Label(new Rect(45, 72, 860, 49), _memory.powerFailed ? "A televisão perdeu o sinal. Uma luz vem do quintal. Siga pela porta à direita." : "Explore a casa. Você pode observar a televisão, os jornais, o desenho e os brinquedos.", small: true);
-                if (ExperimentGUI.Button(new Rect(1080, 25, 170, 50), "PAUSAR")) TogglePause();
+                ExperimentGUI.Objective("ATO I • FASE 1 • 1996", "A LEMBRANÇA", _memory.powerFailed ? "Uma luz vem do quintal. Siga pela porta à direita." : "Explore a casa e observe a televisão.");
+                if (!_paused && CampaignHudIcons.Button(1174, CampaignHudIcons.Icon.Pause, "ESC", "Pausa")) TogglePause();
                 if (settings.interactionHints && !_paused && _dialogue == null)
                 {
                     int nearby = NearestEvidence();
@@ -316,12 +317,10 @@ namespace Game.Varginha.Experiment
             if (_paused)
             {
                 if (_settings) { GUI.matrix = before; if (VarginhaGameSettings.Draw()) _settings = false; return; }
-                ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(0, 0, 0, .82f));
-                ExperimentGUI.Panel(new Rect(395, 190, 490, 360));
-                ExperimentGUI.Label(new Rect(425, 218, 430, 42), "PAUSADO", true);
-                if (ExperimentGUI.Button(new Rect(425, 290, 430, 46), "CONTINUAR")) TogglePause();
-                if (ExperimentGUI.Button(new Rect(425, 355, 430, 46), "CONFIGURAÇÕES")) _settings = true;
-                if (ExperimentGUI.Button(new Rect(425, 420, 430, 46), "SALVAR E VOLTAR AO MENU")) { Save(); Time.timeScale = 1; SceneManager.LoadScene("Menu_MisterioDeVarginha"); }
+                int action = ExperimentGUI.PausePanel("ATO I • A LEMBRANÇA • 1996");
+                if (action == 1) TogglePause();
+                if (action == 2) _settings = true;
+                if (action == 3) { Save(); Time.timeScale = 1; CampaignCinematics.Load("Menu_MisterioDeVarginha"); }
             }
             GUI.matrix = before;
         }

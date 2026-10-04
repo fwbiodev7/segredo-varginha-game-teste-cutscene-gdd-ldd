@@ -6,10 +6,11 @@ namespace Game.Varginha.Experiment
     // Runtime visual corrections requested after testing; the adult scene and wall colliders stay authored.
     public static class CampaignAdultHouse
     {
-        public static readonly Vector2 WashApproach=new(4.6f,-4.15f);
+        public static Vector2 WashApproach=>CampaignIllustratedMaps.Get(2)?.Objective("wash")+Vector2.up*.58f??new Vector2(4.6f,-4.15f);
         private static readonly Dictionary<string,Sprite> Sprites=new();
         public static void Apply()
         {
+            if(CampaignIllustratedMaps.Get(2)!=null){CampaignIllustratedMaps.ApplyAdultHouse(VarginhaCampaignStage.Active.transform);return;}
             foreach(var renderer in Object.FindObjectsByType<SpriteRenderer>(FindObjectsInactive.Include,FindObjectsSortMode.None))
             {
                 string id=renderer.name;

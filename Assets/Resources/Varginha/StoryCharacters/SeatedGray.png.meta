@@ -1,0 +1,483 @@
+fileFormatVersion: 2
+guid: 8b39bc7b205157041aa23c7b886c4e3d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 738807171862376924
+    second: SeatedGray_0
+  - first:
+      213: -5442907262608140607
+    second: SeatedGray_1
+  - first:
+      213: -1858577429652822638
+    second: SeatedGray_2
+  - first:
+      213: 4526746227418095123
+    second: SeatedGray_3
+  - first:
+      213: 1923543568068588541
+    second: SeatedGray_4
+  - first:
+      213: -5840664132030452327
+    second: SeatedGray_5
+  - first:
+      213: 1608329373796530697
+    second: SeatedGray_6
+  - first:
+      213: 8608966247178580524
+    second: SeatedGray_7
+  - first:
+      213: 2056061418386400971
+    second: SeatedGray_8
+  - first:
+      213: -2168318467696065060
+    second: SeatedGray_9
+  - first:
+      213: 4715037570031808381
+    second: SeatedGray_10
+  - first:
+      213: -6534887674055416209
+    second: SeatedGray_11
+  - first:
+      213: -7071822373466965006
+    second: SeatedGray_12
+  - first:
+      213: 8397009935230515734
+    second: SeatedGray_13
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SeatedGray_0
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 1055
+        width: 123
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd13e5c5535c04a00800000000000000
+      internalID: 738807171862376924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedGray_1
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 0
+        width: 171
+        height: 1439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c619d2bea8e674b0800000000000000
+      internalID: -5442907262608140607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedGray_2
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 0
+        width: 145
+        height: 1439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2952cf5cca10536e0800000000000000
+      internalID: -1858577429652822638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedGray_3
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 0
+        width: 175
+        height: 1443
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e5899c5bb32de30800000000000000
+      internalID: 4526746227418095123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedGray_4
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 1055
+        width: 121
+        height: 388
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df337bc0facc1ba10800000000000000
+      internalID: 1923543568068588541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedGray_5
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 0
+        width: 196
+        height: 1439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99da5f5caeac1fea0800000000000000
+      internalID: -5840664132030452327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedGray_6
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1438
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90af7fe4b0fe15610800000000000000
+      internalID: 1608329373796530697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedGray_7
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 0
+        width: 147
+        height: 1053
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2238668031397770800000000000000
+      internalID: 8608966247178580524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedGray_8
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 0
+        width: 145
+        height: 1058
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6ae4f67f8988c10800000000000000
+      internalID: 2056061418386400971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedGray_9
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 417
+        width: 20
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd58e0587d598e1e0800000000000000
+      internalID: -2168318467696065060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedGray_10
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 345
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7fed5840bd2f6140800000000000000
+      internalID: 4715037570031808381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedGray_11
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 272
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6629d4a84a6f45a0800000000000000
+      internalID: -6534887674055416209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedGray_12
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 247
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb77daf407dbdd90800000000000000
+      internalID: -7071822373466965006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedGray_13
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 49
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61a37dcfb0c288470800000000000000
+      internalID: 8397009935230515734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SeatedGray_0: 738807171862376924
+      SeatedGray_1: -5442907262608140607
+      SeatedGray_10: 4715037570031808381
+      SeatedGray_11: -6534887674055416209
+      SeatedGray_12: -7071822373466965006
+      SeatedGray_13: 8397009935230515734
+      SeatedGray_2: -1858577429652822638
+      SeatedGray_3: 4526746227418095123
+      SeatedGray_4: 1923543568068588541
+      SeatedGray_5: -5840664132030452327
+      SeatedGray_6: 1608329373796530697
+      SeatedGray_7: 8608966247178580524
+      SeatedGray_8: 2056061418386400971
+      SeatedGray_9: -2168318467696065060
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
