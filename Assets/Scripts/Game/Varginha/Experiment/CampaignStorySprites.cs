@@ -11,7 +11,7 @@ namespace Game.Varginha.Experiment
         [Serializable] private class Manifest { public int width, height, columns, rows; public float[] pixelsPerUnit; public FrameData[] frames; }
         private sealed class Sheet { public Texture2D texture; public Manifest data; public readonly Dictionary<int,Sprite> sprites = new(); }
         private static readonly Dictionary<string,Sheet> Sheets = new();
-        public static Sprite Frame(string name, int row, int column, bool portrait = false)
+        public static Sprite Frame(string name, int row, int column, bool portrait = false, bool churchScale = false)
         {
             if (!Sheets.TryGetValue(name, out var sheet) || sheet.texture == null)
             {
@@ -21,18 +21,22 @@ namespace Game.Varginha.Experiment
                 sheet = new Sheet { texture = texture, data = JsonUtility.FromJson<Manifest>(json.text) }; Sheets[name] = sheet;
             }
             if (row < 0 || row >= sheet.data.rows || column < 0 || column >= sheet.data.columns) return null;
-            int index = row * sheet.data.columns + column, key = portrait ? index + 10000 : index;
+            bool reduced = churchScale && IsEdelzio(name);
+            int index = row * sheet.data.columns + column, key = index + (portrait ? 10000 : 0) + (reduced ? 20000 : 0);
             if (sheet.sprites.TryGetValue(key, out var sprite) && sprite != null) return sprite;
             var f = sheet.data.frames[index]; int[] crop = f.rect;
             float sx = (float)sheet.texture.width/sheet.data.width, sy = (float)sheet.texture.height/sheet.data.height;
             float height = portrait ? crop[3]*.47f : crop[3];
             var rect = new Rect(crop[0]*sx, (sheet.data.height-crop[1]-height)*sy, crop[2]*sx, height*sy);
             float ppu = sheet.data.pixelsPerUnit[row]*sy;
+            if (reduced) ppu /= CampaignTeamEdelzio.ChurchVisualScale;
             var pivot = new Vector2((f.anchorX-crop[0])/crop[2], portrait ? .5f : (.58f-f.lift)*ppu/rect.height);
             sprite = Sprite.Create(sheet.texture, rect, pivot, ppu, 0, SpriteMeshType.FullRect);
             sprite.name = "Team_V4_" + name + "_" + row + "_" + column + (portrait ? "_Head" : "");
             sheet.sprites[key] = sprite; return sprite;
         }
+        private static bool IsEdelzio(string name) => name == "WalkGray" || name == "Life" || name == "LifeGray"
+            || name == "Punch" || name == "Seated" || name == "SeatedGray" || name == "SeatedDeskNorth" || name == "Driving";
         public static int EightDirection(Vector2 face)
         {
             float angle = Mathf.Atan2(face.x,-face.y)*Mathf.Rad2Deg;

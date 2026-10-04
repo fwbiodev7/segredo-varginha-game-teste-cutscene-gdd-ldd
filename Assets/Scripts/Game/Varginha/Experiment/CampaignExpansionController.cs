@@ -55,15 +55,16 @@ namespace Game.Varginha.Experiment
             if (phase == 7) CreateEntity();
             if (phase == 10) for (int i = 0; i < 3; i++) if ((State.sprayed & (1 << i)) != 0) RevealMark(i);
             if (phase == 7 || phase == 8) CreateNPC("Padre Fábio", VarginhaReferenceSprites.PadreFabio(), Plan.points.Find(p=>p.id==(phase==7?"fabio":"trust")).position+new Vector2(phase==7?-.55f:.55f,.6f));
-            if (phase == 9) CreateNPC("Ouzana", VarginhaExperimentArt.Body(2),Plan.points.Find(p=>p.id=="ouzana").position+new Vector2(.9f,.6f));
+            if (phase == 9) CreateNPC("Ouzana", CampaignStorySprites.Frame("OuzanaBiologist",0,0),Plan.points.Find(p=>p.id=="ouzana").position+new Vector2(.9f,.6f)).AddComponent<CampaignOuzanaBiologist>();
             GameManager.Instance?.StartGame(); Save(); Lock();
         }
-        private void CreateNPC(string name, Sprite sprite, Vector2 position)
+        private GameObject CreateNPC(string name, Sprite sprite, Vector2 position)
         {
             var go = new GameObject(name); go.transform.SetParent(transform); go.transform.position = position;
             var renderer = go.AddComponent<SpriteRenderer>(); renderer.sprite = sprite;
             var collider = go.AddComponent<CircleCollider2D>(); collider.radius = .23f; collider.offset = new Vector2(0,-.6f);
             VarginhaWorldDepth.Ensure(renderer, ground: collider);
+            return go;
         }
         private void CreateEntity()
         {
@@ -277,6 +278,8 @@ namespace Game.Varginha.Experiment
         public void Save()
         {
             if (Progress == null || _actor == null) return;
+            // A later visit to the book must not overwrite its solved combination.
+            if (State.anchorFound) { _year = 1996; _symbol = 1; _record = 23; }
             State.anchorYear = _year; State.anchorSymbol = _symbol; State.anchorRecord = _record;
             Progress.positionPhase = phase; Progress.x = _actor.transform.position.x; Progress.y = _actor.transform.position.y; CampaignStorySave.Write(Progress);
         }

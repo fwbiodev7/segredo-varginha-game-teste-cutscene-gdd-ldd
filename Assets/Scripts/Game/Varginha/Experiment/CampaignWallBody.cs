@@ -11,7 +11,7 @@ namespace Game.Varginha.Experiment
         private CapsuleCollider2D _body;
         public static bool SolidWalls(int phase)=>phase==1||phase==2;
         public static bool Guards(int phase,Rect wall,Rect bounds)=>SolidWalls(phase)&&wall.height>wall.width*1.3f&&wall.xMin>bounds.xMin+.15f&&wall.xMax<bounds.xMax-.15f;
-        public static float Height(bool child)=>child?1.15f:1.58f;
+        public static float Height(bool child)=>child?1.15f:CampaignTeamEdelzio.CurrentStandingHeight+.08f;
         public static void Ensure(EdelzioTopDownController actor,bool child)
         {
             var component=actor.GetComponent<CampaignWallBody>()??actor.gameObject.AddComponent<CampaignWallBody>();

@@ -15,8 +15,8 @@ namespace Game.Tests.EditMode
         }
         [Test]public void NewAnimationSheetsHaveAllFramesWithoutReadableCpuTextureCopies()
         {
-            string[] names={"WalkGray","Life","LifeGray","Seated","SeatedGray","Punch","Driving","RenanTeaching","RenanProps","SeatedDeskNorth"};
-            int[] columns={4,12,12,6,6,8,4,4,3,6},rows={4,4,4,8,8,4,4,4,1,1};
+            string[] names={"WalkGray","Life","LifeGray","Seated","SeatedGray","Punch","Driving","RenanTeaching","RenanProps","SeatedDeskNorth","OuzanaBiologist"};
+            int[] columns={4,12,12,6,6,8,4,4,3,6,4},rows={4,4,4,8,8,4,4,4,1,1,4};
             for(int i=0;i<names.Length;i++)for(int r=0;r<rows[i];r++)for(int c=0;c<columns[i];c++)
             {
                 var frame=CampaignStorySprites.Frame(names[i],r,c);
@@ -25,6 +25,46 @@ namespace Game.Tests.EditMode
                 Assert.That(frame.rect.xMin,Is.GreaterThanOrEqualTo(0));Assert.That(frame.rect.yMin,Is.GreaterThanOrEqualTo(0));
                 Assert.That(frame.rect.xMax,Is.LessThanOrEqualTo(frame.texture.width));Assert.That(frame.rect.yMax,Is.LessThanOrEqualTo(frame.texture.height));
             }
+        }
+        [TestCase(0)][TestCase(1)][TestCase(3)][TestCase(7)]
+        public void CorrectChurchCombinationSurvivesReloadWithoutHiddenInspectionGates(int inspected)
+        {
+            var state = new CampaignExpansionState { anchorClues = inspected };
+            Assert.That(state.SolveAnchor(1996,0,23),Is.False);
+            Assert.That(state.SolveAnchor(1996,1,1),Is.False);
+            Assert.That(state.SolveAnchor(1898,1,23),Is.False);
+            Assert.That(state.anchorClues,Is.EqualTo(inspected));
+            Assert.That(state.SolveAnchor(1996,1,23),Is.True);
+            var restored = JsonUtility.FromJson<CampaignExpansionState>(JsonUtility.ToJson(state));
+            restored.Repair();
+            Assert.That(restored.Complete(8),Is.True);
+            Assert.That(restored.anchorClues,Is.EqualTo(7));
+        }
+        [Test]public void ChurchScaleUsesSeparateCachedFramesAndOtherMapsKeepNormalSize()
+        {
+            foreach(string name in new[]{"Life","LifeGray","WalkGray","OuzanaBiologist"})
+                for(int row=0;row<4;row++)
+                {
+                    var sprite=CampaignStorySprites.Frame(name,row,0);
+                    Assert.That(sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.StandingHeight).Within(.04f),name+row);
+                    Assert.That(sprite.bounds.min.y,Is.EqualTo(-.58f).Within(.002f),name+row);
+                    var church=CampaignStorySprites.Frame(name,row,0,churchScale:true);
+                    Assert.That(church.bounds.size.y,Is.EqualTo(name=="OuzanaBiologist"?CampaignTeamEdelzio.StandingHeight:CampaignTeamEdelzio.ChurchStandingHeight).Within(.04f),name+row);
+                    Assert.That(church.bounds.min.y,Is.EqualTo(-.58f).Within(.002f));
+                    Assert.That(CampaignStorySprites.Frame(name,row,0),Is.SameAs(sprite),"The reduced cache must not replace the normal frame.");
+                }
+            for(int row=0;row<4;row++)
+                Assert.That(CampaignTeamEdelzio.Frame("EdelzioWalk",row,1).bounds.size.y,
+                    Is.EqualTo(CampaignTeamEdelzio.StandingHeight).Within(.002f));
+        }
+        [Test]public void LegacySolvedChurchRecordsRecoverTheirConfirmedCombination()
+        {
+            var state=new CampaignExpansionState {anchorFound=true,anchorClues=7};
+            state.Repair();
+            Assert.That(state.Complete(8),Is.True);
+            Assert.That(state.anchorYear,Is.EqualTo(1996));
+            Assert.That(state.anchorSymbol,Is.EqualTo(1));
+            Assert.That(state.anchorRecord,Is.EqualTo(23));
         }
         [Test]public void ShadowsTurnAwayFromTheNearestLampAndOpenAirKeepsContactOnly()
         {

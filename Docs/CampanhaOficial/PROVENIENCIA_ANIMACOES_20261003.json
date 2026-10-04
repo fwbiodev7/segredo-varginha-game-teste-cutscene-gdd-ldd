@@ -1,6 +1,6 @@
 {
   "tool": "image_gen.imagegen",
-  "reference": "Artes originais do Edelzio e foto do Renan enviada pelo usuário. A foto pessoal não é incluída no repositório.",
+  "reference": "Artes existentes e fotos de Renan e Ouzana fornecidas pelo usuário; fotos pessoais não incluídas no repositório.",
   "assets": [
     {
       "asset": "Assets/Resources/Varginha/StoryCharacters/WalkGray.png",
@@ -67,6 +67,13 @@
       "imagegen_id": "f344c014-bdc1-440e-8cd7-fdc496eb73e2",
       "frames": 9,
       "sha256": "b68be5e4be43bf7ac6765e8b6e40a2ee9d8a88991e54cdc71cdaf1fda53fcffd"
+    },
+    {
+      "asset": "Assets/Resources/Varginha/StoryCharacters/OuzanaBiologist.png",
+      "imagegen_id": "ab83af3f-db49-4411-82bb-fb5bffd3bbb9",
+      "frames": 16,
+      "sha256": "2bc1e6565e5322e853ce71ecd016610a6e4be1633d6197046a480253085d2877",
+      "prompt": "Docs/CampanhaOficial/CORRECOES_IGREJA_OUZANA_20261003.md"
     }
   ]
 }

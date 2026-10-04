@@ -64,6 +64,35 @@ namespace Game.Tests.PlayMode
             }
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
+        [UnityTest] public IEnumerator CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags()
+        {
+            var story=new CampaignStory {phase=8};
+            story.expansion.anchorYear=1996;story.expansion.anchorSymbol=1;story.expansion.anchorRecord=23;
+            CampaignStorySave.Write(story);
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(8));
+            yield return null;yield return new WaitForSeconds(.2f);
+            var church=CampaignExpansionController.Active;
+            Assert.That(church.Progress.expansion.anchorClues,Is.Zero);
+            church.Interact("anchor");Assert.That(church.SubmitPuzzle(),Is.True);
+            Assert.That(CampaignStorySave.Load().expansion.Complete(8),Is.True,"A correct answer must remain unlocked after save repair.");
+            var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
+            Assert.That(actor.GetComponent<SpriteRenderer>().sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.ChurchStandingHeight).Within(.04f));
+            Assert.That(actor.transform.localScale,Is.EqualTo(Vector3.one));
+            Assert.That(actor.GetComponent<CircleCollider2D>().offset.y,Is.EqualTo(-.58f));
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(9));
+            yield return null;yield return new WaitForSeconds(.4f);
+            var ouzana=GameObject.Find("Ouzana");
+            Assert.That(ouzana.GetComponent<CampaignOuzanaBiologist>(),Is.Not.Null);
+            var render=ouzana.GetComponent<SpriteRenderer>();
+            Assert.That(render.sprite.texture.name,Is.EqualTo("OuzanaBiologist"));
+            Assert.That(render.sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.StandingHeight).Within(.04f));
+            Assert.That(render.sprite.texture.isReadable,Is.False);
+            Assert.That(ouzana.GetComponent<CircleCollider2D>(),Is.Not.Null);
+            actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
+            Assert.That(actor.GetComponent<SpriteRenderer>().sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.StandingHeight).Within(.04f),"Leaving the church restores Edelzio's normal size.");
+            CampaignExpansionController.Active.Interact("ouzana");
+            Assert.That(CampaignExpansionController.Active.Progress.expansion.evidencePresented,Is.True);
+        }
         [UnityTest]public IEnumerator AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox()
         {
             CampaignStorySave.Write(new CampaignStory{phase=2,routine=14});

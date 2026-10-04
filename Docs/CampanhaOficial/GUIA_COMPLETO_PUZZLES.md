@@ -96,7 +96,7 @@ Se a presença alcançar você ou a sanidade acabar, o jogo retorna ao ponto seg
 6. Você pode pedir explicações a Fábio e escolher confiar ou desconfiar. Essa conversa é opcional para a passagem da fase.
 7. Use a saída **PROCURAR OUZANA** e continue para a fase 9.
 
-O documento de Zé Gomes datado de 1898 é uma pista histórica opcional. **1898 não é o ano da resposta deste puzzle.** O compartimento também exige que as três pistas principais tenham sido examinadas.
+O documento de Zé Gomes datado de 1898 é uma pista histórica opcional. **1898 não é o ano da resposta deste puzzle.** A combinação correta abre o compartimento mesmo que alguma leitura não tenha sido registrada separadamente. A solução é preservada ao salvar e carregar.
 
 ## Fase 9 — Ouzana
 
@@ -142,7 +142,7 @@ O teste da pista exige o selo resolvido. Apenas revelar as três marcas não bas
 
 - Feche a conversa ou painel anterior. O personagem permanece parado durante menus e animações.
 - Aproxime os **pés** do personagem do ponto de interação e siga o texto exibido. Não tente ativar um objeto por dentro de uma parede.
-- Confira o caderno: os puzzles exigem as pistas físicas além da resposta correta.
+- Confira o caderno e os pré-requisitos indicados. No Livro do Tombo, basta combinar corretamente 1996, ÂNCORA e 23.
 - Em puzzles com trocas, termine as duas seleções e aperte **CONFIRMAR**, **CONFERIR PÁGINAS** ou **DECODIFICAR**.
 - Após resolver a fase 5, volte a Renan; após os três sinais da mata, fale com Fábio; antes das amostras, apresente os documentos a Ouzana.
 - Se o Fusca ainda não ligar na fase 3, falta um dos três exames ou o comando de aguardar o motor.

@@ -14,12 +14,15 @@ As novas folhas RGBA estão em `Assets/Resources/Varginha/StoryCharacters`. Fora
 | SeatedDeskNorth | 6 | Tronco completo de costas: repouso e digitação no notebook, encaixado no assento |
 | RenanTeaching | 16 | Escrever, apontar e explicar em quatro vistas |
 | RenanProps | 3 | Mochila cinza, notebook e material de aula |
+| OuzanaBiologist | 16 | Bióloga com jaleco: quatro vistas, respiração, caderno e amostra botânica |
 
-Total: **281 quadros**. O pulo padrão é **K**, remapeável nas configurações; mantém a colisão no chão. O soco conserva **J**. Lavar o rosto e usar o notebook são ações da rotina da fase 2. O Fusca das fases 3 e 10 é independente e vazio: nenhuma camada de motorista é desenhada no carro. A folha Driving permanece disponível, sem ser aplicada ao veículo.
+Total: **297 quadros**. O pulo padrão é **K**, remapeável nas configurações; mantém a colisão no chão. O soco conserva **J**. Lavar o rosto e usar o notebook são ações da rotina da fase 2. O Fusca das fases 3 e 10 é independente e vazio: nenhuma camada de motorista é desenhada no carro. A folha Driving permanece disponível, sem ser aplicada ao veículo.
 
 O Renan foi recriado a partir da referência enviada: cabelo cacheado, barba, óculos pretos, camiseta laranja, jaqueta assimétrica xadrez/escura e tênis claros. A fotografia pessoal não faz parte dos arquivos versionados. Nas fases 4 e 5 ele fica ao lado do quadro, alternando escrita e explicação. Sua mesa contém os três objetos próprios; os nove alunos permanecem sentados.
 
 Ao sentar de costas, o corpo ocupa o espaço entre a cadeira e a mesa. Um recorte do encosto aparece à frente da parte inferior das costas. A cabeça permanece acima do encosto; a ação do notebook retorna à posição de pé e restaura a colisão ao terminar.
+
+Somente na igreja (fase 8), Edelzio usa a altura visível do padre, aproximadamente 0,955 unidade. Nas demais fases conserva o tamanho normal de 1,50 unidade, também usado por Ouzana. Os pés mantêm seu apoio original; os caches separam as duas escalas.
 
 ## Interface e apresentação
 

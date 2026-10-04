@@ -15,6 +15,11 @@ namespace Game.Varginha.Experiment
         private VarginhaPlayerSpriteAnimation _actions;
         private SpriteRenderer _renderer;
         public const float StandingHeight=1.5f;
+        // Only the church uses Padre Fabio's visible 42-pixel silhouette at 44 PPU.
+        public const float ChurchStandingHeight=42f/44f;
+        public const float ChurchVisualScale=ChurchStandingHeight/StandingHeight;
+        public static bool IsChurch => CampaignExpansionController.Active != null && CampaignExpansionController.Active.phase == 8;
+        public static float CurrentStandingHeight => IsChurch ? ChurchStandingHeight : StandingHeight;
         private bool _wasPunching;
         private float _punchStarted;
         private string _lastInteraction;
@@ -62,26 +67,26 @@ namespace Game.Varginha.Experiment
             {
                 float elapsed=Time.time-_punchStarted;
                 int punchFrame=elapsed<.10f?0:elapsed<.18f?1:elapsed<.23f?2:3;
-                pose=CampaignStorySprites.Frame("Punch",direction,punchFrame+(equipped?4:0));
+                pose=StoryFrame("Punch",direction,punchFrame+(equipped?4:0));
             }
             else if(acting && interaction=="Edelzio_WashFace")
-                pose=CampaignStorySprites.Frame(equipped?"LifeGray":"Life",direction,8+Mathf.Min(3,(int)((Time.time-_interactionStarted)*4)));
+                pose=StoryFrame(equipped?"LifeGray":"Life",direction,8+Mathf.Min(3,(int)((Time.time-_interactionStarted)*4)));
             else if(_actions!=null&&_actions.IsSeated)
                 pose=face.y>.5f&&GetComponent<CampaignSeatingLayers>()?.IsOfficeSeat==true
-                    ?CampaignStorySprites.Frame("SeatedDeskNorth",0,(interaction=="Edelzio_UseNotebook"?3:0)+(int)(Time.time*2)%3)
-                    :CampaignStorySprites.Frame(equipped?"SeatedGray":"Seated",CampaignStorySprites.EightDirection(face),(int)(Time.time*2)%3);
+                    ?StoryFrame("SeatedDeskNorth",0,(interaction=="Edelzio_UseNotebook"?3:0)+(int)(Time.time*2)%3)
+                    :StoryFrame(equipped?"SeatedGray":"Seated",CampaignStorySprites.EightDirection(face),(int)(Time.time*2)%3);
             else if(_actions!=null&&_actions.IsDrinking)pose=Frame("EdelzioActions",direction,3+_actions.ActionFrame,equipped);
             else if(acting&&(_actions.CurrentActionPose=="Edelzio_Crouch"||_actions.CurrentActionPose=="Edelzio_Reach"))
                 pose=Frame("EdelzioInteractions",direction,(_actions.CurrentActionPose=="Edelzio_Reach"?3:0)+Mathf.Clamp((int)((Time.time-_interactionStarted)*8),0,2),equipped);
             else
             {
                 int frame=_actor.IsMoving&&!_actor.IsInputLocked?(int)(Time.time*7)%4:1;
-                if(IsJumping) pose=CampaignStorySprites.Frame(equipped?"LifeGray":"Life",direction,4+Mathf.Clamp((int)((Time.time-_jumpStarted)*8.4f),0,3));
+                if(IsJumping) pose=StoryFrame(equipped?"LifeGray":"Life",direction,4+Mathf.Clamp((int)((Time.time-_jumpStarted)*8.4f),0,3));
                 else if(!_actor.IsMoving || _actor.IsInputLocked)
                 {
                     float cycle=Time.time%3.6f;
                     int breath=cycle>3.45f?3:Mathf.FloorToInt(cycle*1.5f)%3;
-                    pose=CampaignStorySprites.Frame(equipped?"LifeGray":"Life",direction,breath);
+                    pose=StoryFrame(equipped?"LifeGray":"Life",direction,breath);
                 }
                 else pose=Frame("EdelzioWalk",direction,frame,equipped);
             }
@@ -98,14 +103,16 @@ namespace Game.Varginha.Experiment
             foreach(Transform part in transform)if(part.name.Contains("Beard")||part.name.Contains("Barba"))part.gameObject.SetActive(false);
         }
         public static Sprite Idle=>Frame("EdelzioIdle",0,0);
+        private static Sprite StoryFrame(string name,int row,int column)
+            => CampaignStorySprites.Frame(name,row,column,churchScale:IsChurch);
         public static Sprite Frame(string name,int row,int column,bool withBackpack=false)
         {
             if(name=="EdelzioWalk"&&withBackpack)
-                return CampaignStorySprites.Frame("WalkGray",row,column);
+                return StoryFrame("WalkGray",row,column);
             bool idle=name=="EdelzioIdle";
             int columns=idle?1:name=="EdelzioWalk"?4:name=="EdelzioPunch"?3:6;
             if(row<0||row>=(idle?1:4)||column<0||column>=columns)return null;
-            string key=name+row+":"+column+(withBackpack?"_ComMochilaV3":"");
+            string key=name+row+":"+column+(withBackpack?"_ComMochilaV3":"")+(IsChurch?"_Igreja":"");
             if(Frames.TryGetValue(key,out var cached)&&cached!=null)return cached;
             var texture=Resources.Load<Texture2D>("Varginha/TeamArt/"+name+(withBackpack?"BackpackV3":idle?"":"V2"));
             if(texture==null)return null;
@@ -113,7 +120,7 @@ namespace Game.Varginha.Experiment
             var rect=rectangles[row*columns+column];if(rect.width<=0||rect.height<=0)return null;
             int standingColumn=idle?0:name=="EdelzioActions"||name=="EdelzioInteractions"?4:name=="EdelzioWalk"?1:0;
             var standing=rectangles[row*columns+standingColumn];
-            float ppu=Mathf.Max(1,standing.height)/StandingHeight;
+            float ppu=Mathf.Max(1,standing.height)/CurrentStandingHeight;
             // Padding preserves the full silhouette at the edges of punch poses.
             float left=Mathf.Max(0,Mathf.Floor(rect.x-ppu*.22f)),right=Mathf.Min(texture.width,Mathf.Ceil(rect.xMax+ppu*.22f));
             rect=new Rect(left,rect.y,right-left,rect.height);

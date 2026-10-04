@@ -17,7 +17,11 @@ namespace Game.Varginha.Experiment
         }
         public bool SolveAnchor(int year, int symbol, int record)
         {
-            if (!fabioMet || anchorClues != 7 || year != 1996 || symbol != 1 || record != 23) return false;
+            // The combination is the answer. Separate inspection triggers must not
+            // reject a player who has already understood the visible records.
+            if (year != 1996 || symbol != 1 || record != 23) return false;
+            anchorYear = year; anchorSymbol = symbol; anchorRecord = record;
+            anchorClues = 7;
             return anchorFound = true;
         }
         public bool SolveSamples()
@@ -45,7 +49,10 @@ namespace Game.Varginha.Experiment
             RepairOrder(ref mapOrder); RepairOrder(ref sampleOrder); RepairOrder(ref sealOrder);
             if (visited != 7) mapSolved = false;
             if (!mapSolved || forestSigns < 3) fabioMet = false;
-            if (!fabioMet || anchorClues != 7) anchorFound = false;
+            // A solved book remains solved across reloads, including older saves
+            // whose optional inspection/history flags were not registered.
+            if (anchorFound && anchorClues != 7 && (anchorYear != 1996 || anchorSymbol != 1 || anchorRecord != 23)) anchorFound = false;
+            if (anchorFound) { anchorClues = 7; anchorYear = 1996; anchorSymbol = 1; anchorRecord = 23; }
             if (!anchorFound) evidencePresented = false;
             if (!anchorFound || !evidencePresented || labClues != 7) reagentUnlocked = false;
             if (!reagentUnlocked) { sprayed = 0; stabilized = false; }

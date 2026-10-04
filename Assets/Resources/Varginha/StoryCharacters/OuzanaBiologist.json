@@ -1,0 +1,236 @@
+{
+  "source": "ab83af3f-db49-4411-82bb-fb5bffd3bbb9",
+  "width": 1263,
+  "height": 1246,
+  "columns": 4,
+  "rows": 4,
+  "directions": [
+    "S",
+    "W",
+    "E",
+    "N"
+  ],
+  "coordinateOrigin": "top-left",
+  "pixelsPerUnit": [
+    186.0,
+    186.0,
+    187.33333333333334,
+    186.0
+  ],
+  "frames": [
+    {
+      "rect": [
+        109,
+        30,
+        186,
+        279
+      ],
+      "anchorX": 202.5,
+      "lift": 0,
+      "action": "idle",
+      "direction": "S",
+      "index": 0
+    },
+    {
+      "rect": [
+        399,
+        30,
+        185,
+        280
+      ],
+      "anchorX": 492.0,
+      "lift": 0,
+      "action": "breathing",
+      "direction": "S",
+      "index": 1
+    },
+    {
+      "rect": [
+        687,
+        30,
+        184,
+        280
+      ],
+      "anchorX": 779.0,
+      "lift": 0,
+      "action": "notebook",
+      "direction": "S",
+      "index": 2
+    },
+    {
+      "rect": [
+        966,
+        30,
+        184,
+        280
+      ],
+      "anchorX": 1058.0,
+      "lift": 0,
+      "action": "botanical_sample",
+      "direction": "S",
+      "index": 3
+    },
+    {
+      "rect": [
+        119,
+        335,
+        163,
+        279
+      ],
+      "anchorX": 200.5,
+      "lift": 0,
+      "action": "idle",
+      "direction": "W",
+      "index": 0
+    },
+    {
+      "rect": [
+        424,
+        335,
+        156,
+        279
+      ],
+      "anchorX": 502.0,
+      "lift": 0,
+      "action": "breathing",
+      "direction": "W",
+      "index": 1
+    },
+    {
+      "rect": [
+        677,
+        335,
+        192,
+        279
+      ],
+      "anchorX": 779.0,
+      "lift": 0,
+      "action": "notebook",
+      "direction": "W",
+      "index": 2
+    },
+    {
+      "rect": [
+        979,
+        335,
+        175,
+        279
+      ],
+      "anchorX": 1074.5,
+      "lift": 0,
+      "action": "botanical_sample",
+      "direction": "W",
+      "index": 3
+    },
+    {
+      "rect": [
+        105,
+        636,
+        165,
+        281
+      ],
+      "anchorX": 187.5,
+      "lift": 0,
+      "action": "idle",
+      "direction": "E",
+      "index": 0
+    },
+    {
+      "rect": [
+        406,
+        636,
+        164,
+        281
+      ],
+      "anchorX": 488.0,
+      "lift": 0,
+      "action": "breathing",
+      "direction": "E",
+      "index": 1
+    },
+    {
+      "rect": [
+        692,
+        636,
+        197,
+        281
+      ],
+      "anchorX": 790.0,
+      "lift": 0,
+      "action": "notebook",
+      "direction": "E",
+      "index": 2
+    },
+    {
+      "rect": [
+        976,
+        638,
+        175,
+        279
+      ],
+      "anchorX": 1062.0,
+      "lift": 0,
+      "action": "botanical_sample",
+      "direction": "E",
+      "index": 3
+    },
+    {
+      "rect": [
+        109,
+        934,
+        178,
+        279
+      ],
+      "anchorX": 198.0,
+      "lift": 0,
+      "action": "idle",
+      "direction": "N",
+      "index": 0
+    },
+    {
+      "rect": [
+        407,
+        934,
+        176,
+        279
+      ],
+      "anchorX": 495.0,
+      "lift": 0,
+      "action": "breathing",
+      "direction": "N",
+      "index": 1
+    },
+    {
+      "rect": [
+        678,
+        934,
+        186,
+        279
+      ],
+      "anchorX": 771.5,
+      "lift": 0,
+      "action": "notebook",
+      "direction": "N",
+      "index": 2
+    },
+    {
+      "rect": [
+        976,
+        934,
+        205,
+        279
+      ],
+      "anchorX": 1078.5,
+      "lift": 0,
+      "action": "botanical_sample",
+      "direction": "N",
+      "index": 3
+    }
+  ],
+  "footOffset": -0.58,
+  "fps": {
+    "breathing": 1.4
+  },
+  "worldHeight": 1.5,
+  "description": "Ouzana: pele castanha mais escura, traços maduros, óculos, cabelo cacheado, jaleco e materiais de biologia."
+}
