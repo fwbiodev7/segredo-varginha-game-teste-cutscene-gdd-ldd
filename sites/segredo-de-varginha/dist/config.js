@@ -6,7 +6,7 @@ window.GAME_SITE = {
   updated: '04.10.2026',
   available: 'Campanha implementada até a fase 10',
   planned: '20 fases · 6 atos planejados',
-  siteUrl: 'https://o-segredo-de-varginha.fizzy-boot-5221.chatgpt.site',
+  siteUrl: 'https://o-segredo-de-varginha.zfabiobrronaldo.chatgpt.site',
   download: null,
   stores: { steam: null, itch: null },
   socials: [],
