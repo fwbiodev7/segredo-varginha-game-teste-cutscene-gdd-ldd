@@ -15,7 +15,7 @@ namespace Game.Varginha.Experiment
         {
             if (_pixel == null) { _pixel = new Texture2D(1, 1); _pixel.SetPixel(0, 0, Color.white); _pixel.Apply(); }
             if (_title != null) return;
-            _title = new GUIStyle(GUI.skin.label) { fontSize = 26, fontStyle = FontStyle.Bold, wordWrap = true };
+            _title = new GUIStyle(GUI.skin.label) { fontSize = 26, fontStyle = FontStyle.Normal, wordWrap = true };
             _text = new GUIStyle(GUI.skin.label) { fontSize = 18, wordWrap = true };
             _small = new GUIStyle(_text) { fontSize = 13 };
             _button = new GUIStyle(GUI.skin.button) { fontSize = 15, wordWrap = true };
@@ -27,12 +27,39 @@ namespace Game.Varginha.Experiment
         { var before = GUI.color; GUI.color = color; GUI.DrawTexture(rect, _pixel); GUI.color = before; }
         public static void Panel(Rect rect)
         {
-            Box(rect, Ink); Box(new Rect(rect.x, rect.y, rect.width, 2), Accent);
-            Box(new Rect(rect.x, rect.yMax - 2, rect.width, 2), new Color(.18f, .28f, .29f));
+            PixelMenuTheme.Panel(rect);
         }
         public static void Label(Rect rect, string text, bool title = false, bool small = false)
-            => GUI.Label(rect, text, title ? _title : small ? _small : _text);
-        public static bool Button(Rect rect, string text) => GUI.Button(rect, text, _button);
+        {
+            var style = title ? _title : small ? _small : _text;
+            int original = style.fontSize;
+            var content = new GUIContent(text);
+            while (style.fontSize > 10 && style.CalcHeight(content, rect.width) > rect.height) style.fontSize--;
+            GUI.Label(rect, content, style); style.fontSize = original;
+        }
+        public static bool Button(Rect rect, string text) => PixelMenuTheme.Button(rect, text, size: 13);
+        public static void Objective(string chapter, string title, string goal)
+        {
+            Panel(new Rect(28, 24, 620, 124));
+            PixelMenuTheme.Label(new Rect(48, 38, 580, 17), chapter, 9, Muted);
+            PixelMenuTheme.Label(new Rect(48, 62, 580, 26), title, 16, Paper);
+            int original = _small.fontSize; _small.fontSize = 11;
+            GUI.Label(new Rect(48, 98, 580, 43), goal, _small); _small.fontSize = original;
+        }
+        // Shared pause navigation keeps every chapter in the same visual language.
+        public static int PausePanel(string chapter)
+        {
+            CampaignCinematics.DrawPauseBackdrop(); Panel(new Rect(390, 140, 500, 440));
+            PixelMenuTheme.Label(new Rect(430, 174, 420, 24), "INVESTIGAÇÃO EM PAUSA", 9, Muted, TextAnchor.MiddleCenter);
+            PixelMenuTheme.Label(new Rect(430, 218, 420, 42), "PAUSADO", 25, Paper, TextAnchor.MiddleCenter);
+            PixelMenuTheme.Label(new Rect(430, 274, 420, 32), chapter, 10, Muted, TextAnchor.MiddleCenter);
+            int action = 0;
+            if (Button(new Rect(430, 325, 420, 48), "CONTINUAR")) action = 1;
+            if (Button(new Rect(430, 390, 420, 48), "CONFIGURAÇÕES")) action = 2;
+            if (Button(new Rect(430, 455, 420, 48), "SALVAR E VOLTAR AO MENU")) action = 3;
+            PixelMenuTheme.Label(new Rect(430, 530, 420, 22), "ESC • VOLTAR À HISTÓRIA", 9, Muted, TextAnchor.MiddleCenter);
+            return action;
+        }
         public static void Caption(Rect rect, string text, int size)
         {
             int before = _text.fontSize; _text.fontSize = size == 0 ? 16 : size == 2 ? 24 : 19;

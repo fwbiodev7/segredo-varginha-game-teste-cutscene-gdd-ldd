@@ -20,6 +20,11 @@ namespace Game.Varginha
         [SerializeField] private bool activateOnStart;
         private readonly List<VarginhaStudentAlly> _allies = new();
         private int _selectedStudentIndex = -1;
+        private readonly List<int> _teamSelection=new();
+        public IReadOnlyList<int> SelectedStudentIndices=>_teamSelection;
+        public int SelectionCapacity {get;private set;}=1;
+        public void ConfigureSelectionSlots(int count){SelectionCapacity=Mathf.Clamp(count,1,3);ClearSelection();}
+        public int FormationSlot(VarginhaStudentAlly ally)=>Mathf.Max(0,_teamSelection.IndexOf(_allies.IndexOf(ally)));
         public int SelectedStudentIndex => _selectedStudentIndex;
         public VarginhaStudentAlly SelectedStudent => _selectedStudentIndex >= 0 && _selectedStudentIndex < _allies.Count
             ? _allies[_selectedStudentIndex] : null;
@@ -27,15 +32,19 @@ namespace Game.Varginha
         public bool SelectStudent(int index)
         {
             if (index < 0 || index >= _allies.Count || _allies[index] == null || !_allies[index].IsActive) return false;
-            _selectedStudentIndex = index;
+            if(SelectionCapacity==1){_teamSelection.Clear();_teamSelection.Add(index);}
+            else if(_teamSelection.Contains(index))_teamSelection.Remove(index);
+            else{if(_teamSelection.Count==SelectionCapacity)_teamSelection.RemoveAt(_teamSelection.Count-1);_teamSelection.Add(index);}
+            _selectedStudentIndex=_teamSelection.Count>0?_teamSelection[_teamSelection.Count-1]:-1;
             UpdateEquippedPresentation();
             return true;
         }
 
         private void UpdateEquippedPresentation()
         {
-            for (int i = 0; i < _allies.Count; i++) _allies[i]?.SetEquippedPresentation(i == _selectedStudentIndex);
+            for (int i = 0; i < _allies.Count; i++) _allies[i]?.SetEquippedPresentation(_teamSelection.Contains(i));
         }
+        public void ClearSelection(){_teamSelection.Clear();_selectedStudentIndex=-1;_nextCommandSlot=0;UpdateEquippedPresentation();}
 
         public static Sprite Portrait(int index)
         {
@@ -43,6 +52,8 @@ namespace Game.Varginha
             return VarginhaPixelArtSprites.Create("StudentHead_" + VarginhaPhase2Controller.StudentNames[index], ShirtColors[index]);
         }
         private float _commandReadyAt;
+        private int _nextCommandSlot;
+        public bool CommandInProgress => _allies.Exists(ally => ally != null && ally.IsAttacking);
         public float CommandCooldownRemaining => Mathf.Max(0f, _commandReadyAt - Time.time);
         private string _lastInvokedStudentName;
         private string _lastInvokedAttackDescription;
@@ -84,6 +95,7 @@ namespace Game.Varginha
 
         public void DeactivateAllies()
         {
+            ClearSelection();
             _commandReadyAt = 0f;
             _lastInvokedStudentName = null;
             _lastInvokedAttackDescription = null;
@@ -109,6 +121,7 @@ namespace Game.Varginha
             EnsureRoster();
             if (leader == null) leader = Object.FindAnyObjectByType<EdelzioTopDownController>()?.transform;
             _selectedStudentIndex = -1;
+            _teamSelection.Clear();
             _commandReadyAt = 0f;
             _lastInvokedStudentName = null;
             _lastInvokedAttackDescription = null;
@@ -127,7 +140,7 @@ namespace Game.Varginha
             ActivateManualAllies(cooldownSeconds, phaseNumber >= 3, phaseNumber);
         }
 
-        /// <summary>Compatibility entry point: invokes the equipped student, never rotates the roster.</summary>
+        /// <summary>Invoca um aluno equipado por comando.</summary>
         public bool TryInvokeNextAttack()
         {
             return TryInvokeAttack(null);
@@ -136,6 +149,7 @@ namespace Game.Varginha
         /// <summary>A mochila escolhe o aluno; a mira escolhe o ET. Recarga nunca troca a seleção.</summary>
         public bool TryInvokeAttack(Vector2? aim)
         {
+            if(SelectionCapacity>1)return TryInvokeTeam(aim);
             if (SelectedStudent == null || CommandCooldownRemaining > 0f) return false;
             var targets = Object.FindObjectsByType<VarginhaCombatTarget>(FindObjectsInactive.Exclude);
             VarginhaStudentAlly selected = null;
@@ -195,6 +209,34 @@ namespace Game.Varginha
             _commandReadyAt = Time.time + .9f;
             _lastInvokedStudentName = selected.StudentName;
             _lastInvokedAttackDescription = selected.AttackDescription;
+            return true;
+        }
+        private bool TryInvokeTeam(Vector2? aim)
+        {
+            for(int offset=0;offset<_teamSelection.Count;offset++)
+                if(TryInvokeSelectedAttack((_nextCommandSlot+offset)%_teamSelection.Count,aim))return true;
+            return false;
+        }
+
+        public bool TryInvokeSelectedAttack(int slot,Vector2? aim=null)
+        {
+            if(SelectionCapacity<=1||slot<0||slot>=_teamSelection.Count||CommandCooldownRemaining>0
+                ||CommandInProgress||Time.timeScale<=0||leader==null)return false;
+            var ally=_allies[_teamSelection[slot]];
+            if(!ally.IsReadyForManualAttack||!ally.CanCommand)return false;
+            VarginhaCombatTarget chosen=null;float best=float.PositiveInfinity;
+            foreach(var target in Object.FindObjectsByType<VarginhaCombatTarget>())
+            {
+                if(!ally.CanReachTarget(target))continue;
+                float score=Vector2.Distance(leader.position,target.transform.position);
+                if(aim.HasValue)score+=Vector2.Distance(aim.Value,target.transform.position)*2;
+                if(score<best){best=score;chosen=target;}
+            }
+            if(chosen==null||!ally.TryManualAttack(chosen))return false;
+            _commandReadyAt=Time.time+.55f;
+            _nextCommandSlot=(slot+1)%_teamSelection.Count;
+            _lastInvokedStudentName=ally.StudentName;
+            _lastInvokedAttackDescription=ally.AttackDescription;
             return true;
         }
 

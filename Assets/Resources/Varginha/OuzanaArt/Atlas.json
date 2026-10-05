@@ -1,0 +1,142 @@
+{
+  "coordinateOrigin": "bottom-left",
+  "alphaCutoff": 0.8627450980392157,
+  "pixelsPerUnit": 64,
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "sourceWidth": 1536,
+  "sourceHeight": 1024,
+  "sourceFormat": "RGBA",
+  "furniture": [
+    {
+      "name": "Ouzana_Bed",
+      "sheet": "HomeFurniture",
+      "x": 81,
+      "y": 527,
+      "width": 287,
+      "height": 388
+    },
+    {
+      "name": "Ouzana_HerbariumShelf",
+      "sheet": "HomeFurniture",
+      "x": 437,
+      "y": 528,
+      "width": 254,
+      "height": 399
+    },
+    {
+      "name": "Ouzana_Sofa",
+      "sheet": "HomeFurniture",
+      "x": 738,
+      "y": 531,
+      "width": 431,
+      "height": 262
+    },
+    {
+      "name": "Ouzana_CoffeeTable",
+      "sheet": "HomeFurniture",
+      "x": 1204,
+      "y": 527,
+      "width": 301,
+      "height": 196
+    },
+    {
+      "name": "Ouzana_Kitchen",
+      "sheet": "HomeFurniture",
+      "x": 59,
+      "y": 87,
+      "width": 330,
+      "height": 383
+    },
+    {
+      "name": "Ouzana_Fern",
+      "sheet": "HomeFurniture",
+      "x": 430,
+      "y": 91,
+      "width": 294,
+      "height": 360
+    },
+    {
+      "name": "Ouzana_HangingHerbs",
+      "sheet": "HomeFurniture",
+      "x": 788,
+      "y": 83,
+      "width": 334,
+      "height": 312
+    },
+    {
+      "name": "Ouzana_Window",
+      "sheet": "HomeFurniture",
+      "x": 1162,
+      "y": 64,
+      "width": 335,
+      "height": 378
+    },
+    {
+      "name": "Ouzana_ResearchBench",
+      "sheet": "LabFurniture",
+      "x": 48,
+      "y": 530,
+      "width": 383,
+      "height": 348
+    },
+    {
+      "name": "Ouzana_Freezer",
+      "sheet": "LabFurniture",
+      "x": 483,
+      "y": 522,
+      "width": 251,
+      "height": 430
+    },
+    {
+      "name": "Ouzana_Cabinet",
+      "sheet": "LabFurniture",
+      "x": 798,
+      "y": 526,
+      "width": 318,
+      "height": 366
+    },
+    {
+      "name": "Ouzana_Terrarium",
+      "sheet": "LabFurniture",
+      "x": 1155,
+      "y": 527,
+      "width": 344,
+      "height": 395
+    },
+    {
+      "name": "Ouzana_Specimen",
+      "sheet": "LabFurniture",
+      "x": 61,
+      "y": 103,
+      "width": 214,
+      "height": 358
+    },
+    {
+      "name": "Ouzana_Sink",
+      "sheet": "LabFurniture",
+      "x": 345,
+      "y": 95,
+      "width": 367,
+      "height": 348
+    },
+    {
+      "name": "Ouzana_Cart",
+      "sheet": "LabFurniture",
+      "x": 772,
+      "y": 95,
+      "width": 297,
+      "height": 354
+    },
+    {
+      "name": "Ouzana_Board",
+      "sheet": "LabFurniture",
+      "x": 1106,
+      "y": 96,
+      "width": 395,
+      "height": 328
+    }
+  ]
+}

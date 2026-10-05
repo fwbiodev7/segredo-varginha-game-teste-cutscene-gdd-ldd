@@ -1,0 +1,873 @@
+fileFormatVersion: 2
+guid: 70016ecd29045184ab2d107841770d30
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1528068646531959284
+    second: HeroAnaTavares_0
+  - first:
+      213: -4369669677357285247
+    second: HeroAnaTavares_1
+  - first:
+      213: 3412387381866122978
+    second: HeroAnaTavares_2
+  - first:
+      213: 1899286232824602659
+    second: HeroAnaTavares_3
+  - first:
+      213: 45743505146954038
+    second: HeroAnaTavares_4
+  - first:
+      213: 6011691349458367008
+    second: HeroAnaTavares_5
+  - first:
+      213: 4614545802522272604
+    second: HeroAnaTavares_6
+  - first:
+      213: 7821342422567328944
+    second: HeroAnaTavares_7
+  - first:
+      213: -789952621239859735
+    second: HeroAnaTavares_8
+  - first:
+      213: -8656044070078813110
+    second: HeroAnaTavares_9
+  - first:
+      213: -760109889634010002
+    second: HeroAnaTavares_10
+  - first:
+      213: 6618958983488316923
+    second: HeroAnaTavares_11
+  - first:
+      213: -5695013044799282751
+    second: HeroAnaTavares_12
+  - first:
+      213: 2965648778983965790
+    second: HeroAnaTavares_13
+  - first:
+      213: -5805868351887024174
+    second: HeroAnaTavares_14
+  - first:
+      213: 818441921298799679
+    second: HeroAnaTavares_15
+  - first:
+      213: -2821896122732889599
+    second: HeroAnaTavares_16
+  - first:
+      213: -707319026997739122
+    second: HeroAnaTavares_17
+  - first:
+      213: -4966616659356188088
+    second: HeroAnaTavares_18
+  - first:
+      213: -1767119861846218835
+    second: HeroAnaTavares_19
+  - first:
+      213: 6714080193295384246
+    second: HeroAnaTavares_20
+  - first:
+      213: -3027079634424253726
+    second: HeroAnaTavares_21
+  - first:
+      213: 1568428456888330305
+    second: HeroAnaTavares_22
+  - first:
+      213: -5041499713004781787
+    second: HeroAnaTavares_23
+  - first:
+      213: -5231215876510528
+    second: HeroAnaTavares_24
+  - first:
+      213: 75537622709062655
+    second: HeroAnaTavares_25
+  - first:
+      213: -8197371685468626269
+    second: HeroAnaTavares_26
+  - first:
+      213: 3056245426804659303
+    second: HeroAnaTavares_27
+  - first:
+      213: -1359425823743213731
+    second: HeroAnaTavares_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeroAnaTavares_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 131
+        width: 94
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c06fc0b79a53bcae0800000000000000
+      internalID: -1528068646531959284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 251
+        width: 21
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 180c2577490db53c0800000000000000
+      internalID: -4369669677357285247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_2
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 250
+        width: 52
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eec7248e3c3b5f20800000000000000
+      internalID: 3412387381866122978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_3
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 132
+        width: 84
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 320ec4214ce9b5a10800000000000000
+      internalID: 1899286232824602659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_4
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 251
+        width: 23
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 631c01fb97382a000800000000000000
+      internalID: 45743505146954038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_5
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 250
+        width: 49
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02231c75e61dd6350800000000000000
+      internalID: 6011691349458367008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_6
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 249
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c532c1f55f82a0040800000000000000
+      internalID: 4614545802522272604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_7
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 249
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bc91db7e7dfa8c60800000000000000
+      internalID: 7821342422567328944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_8
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 132
+        width: 150
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e50c9db6468905f0800000000000000
+      internalID: -789952621239859735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_9
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 132
+        width: 89
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c63daa7cd8fd780800000000000000
+      internalID: -8656044070078813110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_10
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 132
+        width: 137
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6c7a16251c8375f0800000000000000
+      internalID: -760109889634010002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_11
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 132
+        width: 83
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5a3b170244bdb50800000000000000
+      internalID: 6618958983488316923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 13
+        width: 101
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c1e5892fcf37f0b0800000000000000
+      internalID: -5695013044799282751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_13
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 13
+        width: 92
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5409ef0ad9182920800000000000000
+      internalID: 2965648778983965790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_14
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 90
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df5719ae796d6fa0800000000000000
+      internalID: -5805868351887024174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_15
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 77
+        width: 54
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c9d445790bb5b00800000000000000
+      internalID: 818441921298799679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_16
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 12
+        width: 98
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10a347b6d6c96d8d0800000000000000
+      internalID: -2821896122732889599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_17
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 13
+        width: 95
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e81cceca7191f26f0800000000000000
+      internalID: -707319026997739122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_18
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 75
+        width: 51
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 842898b6678031bb0800000000000000
+      internalID: -4966616659356188088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_19
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 86
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da76e1729dde977e0800000000000000
+      internalID: -1767119861846218835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_20
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 13
+        width: 88
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6be7bd2fc543d2d50800000000000000
+      internalID: 6714080193295384246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_21
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 13
+        width: 88
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e2b2535c17adf5d0800000000000000
+      internalID: -3027079634424253726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_22
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 62
+        width: 44
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14861742f5d24c510800000000000000
+      internalID: 1568428456888330305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_23
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 62
+        width: 42
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52fbd17d8bef80ab0800000000000000
+      internalID: -5041499713004781787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_24
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 21
+        width: 51
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ccefe3ac3a6deff0800000000000000
+      internalID: -5231215876510528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_25
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 39
+        width: 53
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffb40c0511d5c0100800000000000000
+      internalID: 75537622709062655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_26
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 39
+        width: 49
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a22cc332e51d3e80800000000000000
+      internalID: -8197371685468626269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_27
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 23
+        width: 36
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7649a13e507f96a20800000000000000
+      internalID: 3056245426804659303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavares_28
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 19
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ffa457a69522de0800000000000000
+      internalID: -1359425823743213731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HeroAnaTavares_0: -1528068646531959284
+      HeroAnaTavares_1: -4369669677357285247
+      HeroAnaTavares_10: -760109889634010002
+      HeroAnaTavares_11: 6618958983488316923
+      HeroAnaTavares_12: -5695013044799282751
+      HeroAnaTavares_13: 2965648778983965790
+      HeroAnaTavares_14: -5805868351887024174
+      HeroAnaTavares_15: 818441921298799679
+      HeroAnaTavares_16: -2821896122732889599
+      HeroAnaTavares_17: -707319026997739122
+      HeroAnaTavares_18: -4966616659356188088
+      HeroAnaTavares_19: -1767119861846218835
+      HeroAnaTavares_2: 3412387381866122978
+      HeroAnaTavares_20: 6714080193295384246
+      HeroAnaTavares_21: -3027079634424253726
+      HeroAnaTavares_22: 1568428456888330305
+      HeroAnaTavares_23: -5041499713004781787
+      HeroAnaTavares_24: -5231215876510528
+      HeroAnaTavares_25: 75537622709062655
+      HeroAnaTavares_26: -8197371685468626269
+      HeroAnaTavares_27: 3056245426804659303
+      HeroAnaTavares_28: -1359425823743213731
+      HeroAnaTavares_3: 1899286232824602659
+      HeroAnaTavares_4: 45743505146954038
+      HeroAnaTavares_5: 6011691349458367008
+      HeroAnaTavares_6: 4614545802522272604
+      HeroAnaTavares_7: 7821342422567328944
+      HeroAnaTavares_8: -789952621239859735
+      HeroAnaTavares_9: -8656044070078813110
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

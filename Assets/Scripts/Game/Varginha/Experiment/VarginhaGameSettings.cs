@@ -137,7 +137,7 @@ namespace Game.Varginha.Experiment
         {
             if (Time.unscaledTime < _next) return;
             _next = Time.unscaledTime + .3f;
-            foreach (var source in FindObjectsByType<AudioSource>(FindObjectsSortMode.None))
+            foreach (var source in FindObjectsByType<AudioSource>())
             {
                 if (!_bases.TryGetValue(source, out float baseline)) { baseline = source.volume; _bases[source] = baseline; }
                 var settings = VarginhaGameSettings.Current;

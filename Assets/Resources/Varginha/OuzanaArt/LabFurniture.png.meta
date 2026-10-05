@@ -1,0 +1,665 @@
+fileFormatVersion: 2
+guid: 86188d6165dfca349837915e70cdd775
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3350858450950662652
+    second: LabFurniture_0
+  - first:
+      213: 4370377553520151152
+    second: LabFurniture_1
+  - first:
+      213: 5878211924469893691
+    second: LabFurniture_2
+  - first:
+      213: -5249877372125595824
+    second: LabFurniture_3
+  - first:
+      213: -4594406727023063265
+    second: LabFurniture_4
+  - first:
+      213: -26888591027769345
+    second: LabFurniture_5
+  - first:
+      213: -1473340154403078859
+    second: LabFurniture_6
+  - first:
+      213: 6557239325892786681
+    second: LabFurniture_7
+  - first:
+      213: 907438594339901749
+    second: LabFurniture_8
+  - first:
+      213: 5271276857179494351
+    second: LabFurniture_9
+  - first:
+      213: -2709510088833497574
+    second: LabFurniture_10
+  - first:
+      213: -6936160378719093272
+    second: LabFurniture_11
+  - first:
+      213: 6777422967915952311
+    second: LabFurniture_12
+  - first:
+      213: -3182424802514492691
+    second: LabFurniture_13
+  - first:
+      213: -1587462956503013858
+    second: LabFurniture_14
+  - first:
+      213: -7808950500740128131
+    second: LabFurniture_15
+  - first:
+      213: 6526871799292100990
+    second: LabFurniture_16
+  - first:
+      213: 7374995559283447208
+    second: LabFurniture_17
+  - first:
+      213: -7810880938205036592
+    second: LabFurniture_18
+  - first:
+      213: -4073909585116839163
+    second: LabFurniture_19
+  - first:
+      213: -2725205886528605338
+    second: LabFurniture_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LabFurniture_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 933
+        width: 197
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40658721efb5f71d0800000000000000
+      internalID: -3350858450950662652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_1
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 911
+        width: 27
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ac8ebca33b6ac30800000000000000
+      internalID: 4370377553520151152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_2
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 899
+        width: 73
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3a4e78e99a939150800000000000000
+      internalID: 5878211924469893691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_3
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 927
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 057b7185850b427b0800000000000000
+      internalID: -5249877372125595824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_4
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 487
+        width: 292
+        height: 499
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f002a8c636d30c0800000000000000
+      internalID: -4594406727023063265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_5
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 465
+        width: 363
+        height: 491
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fff674b08f870aff0800000000000000
+      internalID: -26888591027769345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_6
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 449
+        width: 377
+        height: 489
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53d3c778fe4ad8be0800000000000000
+      internalID: -1473340154403078859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_7
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 899
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f9bf07dc6efffa50800000000000000
+      internalID: 6557239325892786681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_8
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 909
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5311c1ff79ed79c00800000000000000
+      internalID: 907438594339901749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_9
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 911
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc7dbe88f56572940800000000000000
+      internalID: 5271276857179494351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_10
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 523
+        width: 394
+        height: 374
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a160eb70ee2e56ad0800000000000000
+      internalID: -2709510088833497574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_11
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 881
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed3f4982eecdbf90800000000000000
+      internalID: -6936160378719093272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 295
+        height: 494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b8343fe74e3e0e50800000000000000
+      internalID: 6777422967915952311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_13
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 71
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de22bb9d081c5d3d0800000000000000
+      internalID: -3182424802514492691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_14
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 85
+        width: 431
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16eb8f0ad238f9e0800000000000000
+      internalID: -1587462956503013858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_15
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 15
+        width: 73
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72a6c6a4e801a390800000000000000
+      internalID: -7808950500740128131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_16
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 23
+        width: 323
+        height: 433
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e710253125b149a50800000000000000
+      internalID: 6526871799292100990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_17
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 19
+        width: 412
+        height: 416
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a55c23036f395660800000000000000
+      internalID: 7374995559283447208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_18
+      rect:
+        serializedVersion: 2
+        x: 1214
+        y: 37
+        width: 27
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0df3b67ab2d2a9390800000000000000
+      internalID: -7810880938205036592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_19
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 33
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5034d0c11d09677c0800000000000000
+      internalID: -4073909585116839163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LabFurniture_20
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 33
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 663b8a95faf1e2ad0800000000000000
+      internalID: -2725205886528605338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LabFurniture_0: -3350858450950662652
+      LabFurniture_1: 4370377553520151152
+      LabFurniture_10: -2709510088833497574
+      LabFurniture_11: -6936160378719093272
+      LabFurniture_12: 6777422967915952311
+      LabFurniture_13: -3182424802514492691
+      LabFurniture_14: -1587462956503013858
+      LabFurniture_15: -7808950500740128131
+      LabFurniture_16: 6526871799292100990
+      LabFurniture_17: 7374995559283447208
+      LabFurniture_18: -7810880938205036592
+      LabFurniture_19: -4073909585116839163
+      LabFurniture_2: 5878211924469893691
+      LabFurniture_20: -2725205886528605338
+      LabFurniture_3: -5249877372125595824
+      LabFurniture_4: -4594406727023063265
+      LabFurniture_5: -26888591027769345
+      LabFurniture_6: -1473340154403078859
+      LabFurniture_7: 6557239325892786681
+      LabFurniture_8: 907438594339901749
+      LabFurniture_9: 5271276857179494351
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

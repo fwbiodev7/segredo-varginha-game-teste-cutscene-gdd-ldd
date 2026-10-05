@@ -1,0 +1,561 @@
+fileFormatVersion: 2
+guid: 3ea7fa91c1b27fc42ae08bee03a7d0df
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1023966683593015274
+    second: HeroAnaTavaresEffects_0
+  - first:
+      213: -7460988960280333265
+    second: HeroAnaTavaresEffects_1
+  - first:
+      213: 1967744873666777624
+    second: HeroAnaTavaresEffects_2
+  - first:
+      213: -5480258145492457745
+    second: HeroAnaTavaresEffects_3
+  - first:
+      213: 1877636372087966938
+    second: HeroAnaTavaresEffects_4
+  - first:
+      213: 3655090762812441056
+    second: HeroAnaTavaresEffects_5
+  - first:
+      213: 3065345275470821541
+    second: HeroAnaTavaresEffects_6
+  - first:
+      213: 5858233524970770500
+    second: HeroAnaTavaresEffects_7
+  - first:
+      213: 5943218384084675083
+    second: HeroAnaTavaresEffects_8
+  - first:
+      213: -907846945866541864
+    second: HeroAnaTavaresEffects_9
+  - first:
+      213: 9206336944650700860
+    second: HeroAnaTavaresEffects_10
+  - first:
+      213: 5117913172289152972
+    second: HeroAnaTavaresEffects_11
+  - first:
+      213: 8286928808563175854
+    second: HeroAnaTavaresEffects_12
+  - first:
+      213: 6909661628477233761
+    second: HeroAnaTavaresEffects_13
+  - first:
+      213: 4879823936257457738
+    second: HeroAnaTavaresEffects_14
+  - first:
+      213: -9141454396993339182
+    second: HeroAnaTavaresEffects_15
+  - first:
+      213: -4520297089899762199
+    second: HeroAnaTavaresEffects_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 247
+        width: 30
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef7565064cd53e00800000000000000
+      internalID: 1023966683593015274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_1
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 247
+        width: 23
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f243165121e357890800000000000000
+      internalID: -7460988960280333265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 178
+        width: 52
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 812118b7985de4b10800000000000000
+      internalID: 1967744873666777624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_3
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 173
+        width: 102
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe62b78904632f3b0800000000000000
+      internalID: -5480258145492457745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_4
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 75
+        width: 51
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc08af0554be0a10800000000000000
+      internalID: 1877636372087966938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_5
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 103
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e14f3beead79b230800000000000000
+      internalID: 3655090762812441056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_6
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 91
+        width: 55
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a83c52894b4a8a20800000000000000
+      internalID: 3065345275470821541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_7
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 58
+        width: 73
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 440da2b4a50ac4150800000000000000
+      internalID: 5858233524970770500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_8
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 87
+        width: 21
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a20fdb1ad8a7250800000000000000
+      internalID: 5943218384084675083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_9
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 69
+        width: 74
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d49331430ea663f0800000000000000
+      internalID: -907846945866541864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_10
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 53
+        width: 80
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c38c5748caa73cf70800000000000000
+      internalID: 9206336944650700860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_11
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 70
+        width: 34
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc766911aea760740800000000000000
+      internalID: 5117913172289152972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_12
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 32
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1fb5968d5110370800000000000000
+      internalID: 8286928808563175854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_13
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 43
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a588364ac04ef50800000000000000
+      internalID: 6909661628477233761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_14
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 12
+        width: 68
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ef21ff30e98b340800000000000000
+      internalID: 4879823936257457738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_15
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 27
+        width: 84
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d087c0d8a7032180800000000000000
+      internalID: -9141454396993339182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnaTavaresEffects_16
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 27
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9edea4d0fbda441c0800000000000000
+      internalID: -4520297089899762199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HeroAnaTavaresEffects_0: 1023966683593015274
+      HeroAnaTavaresEffects_1: -7460988960280333265
+      HeroAnaTavaresEffects_10: 9206336944650700860
+      HeroAnaTavaresEffects_11: 5117913172289152972
+      HeroAnaTavaresEffects_12: 8286928808563175854
+      HeroAnaTavaresEffects_13: 6909661628477233761
+      HeroAnaTavaresEffects_14: 4879823936257457738
+      HeroAnaTavaresEffects_15: -9141454396993339182
+      HeroAnaTavaresEffects_16: -4520297089899762199
+      HeroAnaTavaresEffects_2: 1967744873666777624
+      HeroAnaTavaresEffects_3: -5480258145492457745
+      HeroAnaTavaresEffects_4: 1877636372087966938
+      HeroAnaTavaresEffects_5: 3655090762812441056
+      HeroAnaTavaresEffects_6: 3065345275470821541
+      HeroAnaTavaresEffects_7: 5858233524970770500
+      HeroAnaTavaresEffects_8: 5943218384084675083
+      HeroAnaTavaresEffects_9: -907846945866541864
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

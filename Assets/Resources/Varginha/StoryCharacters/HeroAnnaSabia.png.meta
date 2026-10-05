@@ -1,0 +1,717 @@
+fileFormatVersion: 2
+guid: 687f335cce2e94349a69575e3d81844b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5431841536420745768
+    second: HeroAnnaSabia_0
+  - first:
+      213: -2041873119826849885
+    second: HeroAnnaSabia_1
+  - first:
+      213: 2340199982247237506
+    second: HeroAnnaSabia_2
+  - first:
+      213: 4996269081076751694
+    second: HeroAnnaSabia_3
+  - first:
+      213: -3718618829497161251
+    second: HeroAnnaSabia_4
+  - first:
+      213: -8190799624954178489
+    second: HeroAnnaSabia_5
+  - first:
+      213: 818491193718440145
+    second: HeroAnnaSabia_6
+  - first:
+      213: -9121037605453996072
+    second: HeroAnnaSabia_7
+  - first:
+      213: -2605561887223663811
+    second: HeroAnnaSabia_8
+  - first:
+      213: -8591063762481473097
+    second: HeroAnnaSabia_9
+  - first:
+      213: -2145688962996496235
+    second: HeroAnnaSabia_10
+  - first:
+      213: -5035221017226733581
+    second: HeroAnnaSabia_11
+  - first:
+      213: -3598301662932212681
+    second: HeroAnnaSabia_12
+  - first:
+      213: 8794868288937581669
+    second: HeroAnnaSabia_13
+  - first:
+      213: -8868400806527880377
+    second: HeroAnnaSabia_14
+  - first:
+      213: 5836326224690434304
+    second: HeroAnnaSabia_15
+  - first:
+      213: 9083939877770944642
+    second: HeroAnnaSabia_16
+  - first:
+      213: -8992447217555704084
+    second: HeroAnnaSabia_17
+  - first:
+      213: -1663130458524144876
+    second: HeroAnnaSabia_18
+  - first:
+      213: 4268482352644015068
+    second: HeroAnnaSabia_19
+  - first:
+      213: -8260890128106001464
+    second: HeroAnnaSabia_20
+  - first:
+      213: -8986923312657271873
+    second: HeroAnnaSabia_21
+  - first:
+      213: -2017666326165127719
+    second: HeroAnnaSabia_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeroAnnaSabia_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 243
+        width: 36
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82212962917c16b40800000000000000
+      internalID: 5431841536420745768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 244
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3af4d40473fc9a3e0800000000000000
+      internalID: -2041873119826849885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_2
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 243
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 287d8352c7f0a7020800000000000000
+      internalID: 2340199982247237506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_3
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 243
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4dd8d30240565540800000000000000
+      internalID: 4996269081076751694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_4
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 243
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd92ebc60efc46cc0800000000000000
+      internalID: -3718618829497161251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_5
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 244
+        width: 36
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7441438432f645e80800000000000000
+      internalID: -8190799624954178489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_6
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 244
+        width: 36
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d08f55776ddb5b00800000000000000
+      internalID: 818491193718440145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_7
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 243
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8df5fe78f909b6180800000000000000
+      internalID: -9121037605453996072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_8
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 125
+        width: 81
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d33bcb7b44f27dbd0800000000000000
+      internalID: -2605561887223663811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_9
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 124
+        width: 130
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b99f82860966c880800000000000000
+      internalID: -8591063762481473097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_10
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 124
+        width: 98
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5981e1aa14bf832e0800000000000000
+      internalID: -2145688962996496235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_11
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 124
+        width: 81
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f79e9e992d4f1ab0800000000000000
+      internalID: -5035221017226733581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_12
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 124
+        width: 116
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7346a32c3b3401ec0800000000000000
+      internalID: -3598301662932212681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_13
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 124
+        width: 79
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56cd8709c16ad0a70800000000000000
+      internalID: 8794868288937581669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_14
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 19
+        width: 91
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7433e19047c1de480800000000000000
+      internalID: -8868400806527880377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_15
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 19
+        width: 94
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00158f777cbcef050800000000000000
+      internalID: 5836326224690434304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_16
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 43
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 280ea87a033a01e70800000000000000
+      internalID: 9083939877770944642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_17
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 17
+        width: 113
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6742056e8643380800000000000000
+      internalID: -8992447217555704084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_18
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 50
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41b298cd8af5be8e0800000000000000
+      internalID: -1663130458524144876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_19
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 17
+        width: 93
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd3ce579512bc3b30800000000000000
+      internalID: 4268482352644015068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_20
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 49
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cbe5b1523c6b5d80800000000000000
+      internalID: -8260890128106001464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_21
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 19
+        width: 98
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb3f265acd8084380800000000000000
+      internalID: -8986923312657271873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabia_22
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 17
+        width: 104
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ddf8a99a2fcff3e0800000000000000
+      internalID: -2017666326165127719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HeroAnnaSabia_0: 5431841536420745768
+      HeroAnnaSabia_1: -2041873119826849885
+      HeroAnnaSabia_10: -2145688962996496235
+      HeroAnnaSabia_11: -5035221017226733581
+      HeroAnnaSabia_12: -3598301662932212681
+      HeroAnnaSabia_13: 8794868288937581669
+      HeroAnnaSabia_14: -8868400806527880377
+      HeroAnnaSabia_15: 5836326224690434304
+      HeroAnnaSabia_16: 9083939877770944642
+      HeroAnnaSabia_17: -8992447217555704084
+      HeroAnnaSabia_18: -1663130458524144876
+      HeroAnnaSabia_19: 4268482352644015068
+      HeroAnnaSabia_2: 2340199982247237506
+      HeroAnnaSabia_20: -8260890128106001464
+      HeroAnnaSabia_21: -8986923312657271873
+      HeroAnnaSabia_22: -2017666326165127719
+      HeroAnnaSabia_3: 4996269081076751694
+      HeroAnnaSabia_4: -3718618829497161251
+      HeroAnnaSabia_5: -8190799624954178489
+      HeroAnnaSabia_6: 818491193718440145
+      HeroAnnaSabia_7: -9121037605453996072
+      HeroAnnaSabia_8: -2605561887223663811
+      HeroAnnaSabia_9: -8591063762481473097
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

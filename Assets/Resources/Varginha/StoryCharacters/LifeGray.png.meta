@@ -1,0 +1,587 @@
+fileFormatVersion: 2
+guid: d2e8f579ecafeea4591de9be549f1a59
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7739412930897386222
+    second: LifeGray_0
+  - first:
+      213: 8328284546581519338
+    second: LifeGray_1
+  - first:
+      213: 5140196817937862468
+    second: LifeGray_2
+  - first:
+      213: 8560013952275916715
+    second: LifeGray_3
+  - first:
+      213: 546353060641022707
+    second: LifeGray_4
+  - first:
+      213: -3655237406981532130
+    second: LifeGray_5
+  - first:
+      213: 1144184276290208627
+    second: LifeGray_6
+  - first:
+      213: 1131863444126794442
+    second: LifeGray_7
+  - first:
+      213: 5330240773919193456
+    second: LifeGray_8
+  - first:
+      213: 5956321911608325854
+    second: LifeGray_9
+  - first:
+      213: -2196360550907891947
+    second: LifeGray_10
+  - first:
+      213: -7950821944311004427
+    second: LifeGray_11
+  - first:
+      213: 4665266443328846737
+    second: LifeGray_12
+  - first:
+      213: -4268853962911358109
+    second: LifeGray_13
+  - first:
+      213: -9112808479208459943
+    second: LifeGray_14
+  - first:
+      213: -2782422077471410819
+    second: LifeGray_15
+  - first:
+      213: -3831517532100468559
+    second: LifeGray_16
+  - first:
+      213: 2034284105545345823
+    second: LifeGray_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LifeGray_0
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 118
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 215ebcbc1f4189490800000000000000
+      internalID: -7739412930897386222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_1
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 0
+        width: 144
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aebdd538ba2049370800000000000000
+      internalID: 8328284546581519338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_2
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 0
+        width: 113
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44f87c0a5c5a55740800000000000000
+      internalID: 5140196817937862468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_3
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 0
+        width: 148
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba72bc136574bc670800000000000000
+      internalID: 8560013952275916715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_4
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 537
+        width: 103
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f2a475c639059700800000000000000
+      internalID: 546353060641022707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_5
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 15
+        width: 158
+        height: 709
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e165523d1fcf54dc0800000000000000
+      internalID: -3655237406981532130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_6
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 565
+        width: 115
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3738dd18985f0ef00800000000000000
+      internalID: 1144184276290208627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_7
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 530
+        width: 115
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac28d693ecf25bf00800000000000000
+      internalID: 1131863444126794442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_8
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 0
+        width: 122
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 079b1c83eb1d8f940800000000000000
+      internalID: 5330240773919193456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_9
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 0
+        width: 170
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed63a4d783b19a250800000000000000
+      internalID: 5956321911608325854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_10
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 0
+        width: 126
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f247c37b5f481e0800000000000000
+      internalID: -2196360550907891947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_11
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 0
+        width: 136
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f246f0219109a190800000000000000
+      internalID: -7950821944311004427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_12
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 173
+        width: 148
+        height: 347
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b7a21dc1b5eb040800000000000000
+      internalID: 4665266443328846737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_13
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 385
+        width: 116
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36366a620fbf1c4c0800000000000000
+      internalID: -4268853962911358109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_14
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 15
+        width: 158
+        height: 508
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 951bc9a48fcc88180800000000000000
+      internalID: -9112808479208459943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_15
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 209
+        width: 123
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d75bc19ccd9d269d0800000000000000
+      internalID: -2782422077471410819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_16
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 15
+        width: 108
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b06874da17b3dac0800000000000000
+      internalID: -3831517532100468559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LifeGray_17
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 25
+        width: 114
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1be04bad9a3b3c10800000000000000
+      internalID: 2034284105545345823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      LifeGray_0: -7739412930897386222
+      LifeGray_1: 8328284546581519338
+      LifeGray_10: -2196360550907891947
+      LifeGray_11: -7950821944311004427
+      LifeGray_12: 4665266443328846737
+      LifeGray_13: -4268853962911358109
+      LifeGray_14: -9112808479208459943
+      LifeGray_15: -2782422077471410819
+      LifeGray_16: -3831517532100468559
+      LifeGray_17: 2034284105545345823
+      LifeGray_2: 5140196817937862468
+      LifeGray_3: 8560013952275916715
+      LifeGray_4: 546353060641022707
+      LifeGray_5: -3655237406981532130
+      LifeGray_6: 1144184276290208627
+      LifeGray_7: 1131863444126794442
+      LifeGray_8: 5330240773919193456
+      LifeGray_9: 5956321911608325854
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

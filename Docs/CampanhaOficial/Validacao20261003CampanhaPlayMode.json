@@ -1,0 +1,69 @@
+{
+  "status": "completed",
+  "duration": 91.57,
+  "summary": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor",
+      "Status": "Passed",
+      "Duration": 2.2073064,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign",
+      "Status": "Passed",
+      "Duration": 42.2569756,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox",
+      "Status": "Passed",
+      "Duration": 7.2496384,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions",
+      "Status": "Passed",
+      "Duration": 2.2186968,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets",
+      "Status": "Passed",
+      "Duration": 3.9131156,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaRequiresStabilizationAndCompletesOnlyAfterDrivingTheTrack",
+      "Status": "Passed",
+      "Duration": 7.600159,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.PhysicalMovementUsesDoorsAndCannotCrossTheArchiveWall",
+      "Status": "Passed",
+      "Duration": 4.8618349,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture",
+      "Status": "Passed",
+      "Duration": 21.1551894,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

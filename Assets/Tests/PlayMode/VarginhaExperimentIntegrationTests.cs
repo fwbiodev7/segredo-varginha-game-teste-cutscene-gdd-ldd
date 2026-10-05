@@ -20,7 +20,7 @@ namespace Game.Tests.PlayMode
             Assert.That(lab, Is.Not.Null);
             Assert.That(Object.FindAnyObjectByType<EdelzioTopDownController>(), Is.Not.Null);
             Assert.That(GameObject.Find("Renan_Industrial"), Is.Not.Null);
-            Assert.That(Object.FindObjectsByType<VarginhaCombatEnemy>(FindObjectsSortMode.None), Is.Empty);
+            Assert.That(Object.FindObjectsByType<VarginhaCombatEnemy>(), Is.Empty);
             lab.PlayOpening();
             Assert.That(VarginhaExperimentLab.IsModalOpen, Is.True);
             lab.FinishOpening();

@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-04",
+  "tool": "built-in image_gen",
+  "style": "O Segredo de Varginha: top-down pixel art, dark outlines, existing character proportions, crisp nearest-neighbour rendering.",
+  "assets": [
+    {
+      "name": "EntityManifestation",
+      "source": "exec-914167d3-9aed-4dab-82f0-5ad8e23cc0c6.png",
+      "designBrief": "Large hostile manifestation of the wounded entity before its peaceful return. Preserve the game's extraterrestrial silhouette and amber eyes. Four directions, eight poses per direction: movement, anticipation, lunge, recovery. Transparent background, complete silhouettes, no lettering or floor shadow.",
+      "processing": "Detected complete connected bodies, padded 128x144 cells, eight columns and four rows. Threshold alpha only; nearest-neighbour scaling. Main boss 34 pixels per unit; miniature echoes 100 pixels per unit. Same design, visibly different size."
+    },
+    {
+      "name": "SupportAttacks",
+      "source": "exec-1070320e-f145-4001-8680-46a6450f01bc.png",
+      "designBrief": "Existing Renan with glasses, beard, plaid shirt and notebook emits orange interference. Existing older Ouzana with dark skin, curly black hair, glasses and lab coat throws a green reagent flask. Preserve the existing bald, grey-bearded priest design for a golden protection aura. Anticipation, emission/contact and recovery to west and east; transparent sheet without captions.",
+      "processing": "Six 128x128 cells per row; three rows. Existing character identities retained; alpha threshold and nearest-neighbour packing."
+    },
+    {
+      "name": "SupportEffects",
+      "source": "exec-837ed1d6-335a-4d52-9ec1-a94c905dfac7.png",
+      "designBrief": "Detached animated pixel effects: green reagent flask, splash and lingering cloud; expanding orange notebook pulse and cyan electronic interference; golden protection dome with crosses and fading sparks. Transparent background, six frames per effect, no characters or text.",
+      "processing": "Three rows of six 128x128 effect frames. Timed flight, impact, lingering damage, interference stagger and bounded protection are implemented separately in gameplay."
+    },
+    {
+      "name": "FinalBattleArena",
+      "source": "exec-437939d7-23ce-43a8-addc-aa6caa783cd4.png",
+      "designBrief": "Large underground containment arena consistent with the existing stone-and-industrial maps. Broad unobstructed central floor for Edelzio, nine students, three adult allies, a large entity and small echoes. Tree, river and chapel stations, pipes, lamps, north containment passage and south entrance. No legends, collision markings, labels or explanatory panels.",
+      "processing": "1536x1024 map reused by battle 20 and peaceful return 21; JSON collider/interaction layout and brighter arena-only lighting."
+    },
+    {
+      "name": "Memory1898",
+      "source": "exec-a2adbdf3-f9e0-4ccc-87fd-48c07edd99be.png",
+      "designBrief": "First-person memory from 1898: anonymous hands and linen sleeves at a brass valve and mechanical lever in a stone basement, containment door and warm amber illumination. Historical equipment, no modern electronics or labels.",
+      "processing": "Source retained in ArtSources; Point import and full-screen memory presentation after the archive puzzle."
+    }
+  ],
+  "studentAttacks": "The superseded shared student sheet is retained only as an art source. Runtime uses each student's two separate authored attack atlases and effect atlases, documented in Students20261004/REFERENCIAS_E_PROMPTS.json. Personal photos are excluded."
+}

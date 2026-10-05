@@ -1,0 +1,1211 @@
+fileFormatVersion: 2
+guid: 65536024936fe7f4180c2f5b43d282a2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7020697144261836480
+    second: OuzanaBiologist_0
+  - first:
+      213: 5748405367551950124
+    second: OuzanaBiologist_1
+  - first:
+      213: -3107780129875736444
+    second: OuzanaBiologist_2
+  - first:
+      213: 45235198424146385
+    second: OuzanaBiologist_3
+  - first:
+      213: 3817093479211926718
+    second: OuzanaBiologist_4
+  - first:
+      213: -951508888764336875
+    second: OuzanaBiologist_5
+  - first:
+      213: -9007217353860966117
+    second: OuzanaBiologist_6
+  - first:
+      213: 6791977682108592956
+    second: OuzanaBiologist_7
+  - first:
+      213: 4596755566868870745
+    second: OuzanaBiologist_8
+  - first:
+      213: 3665718683478566987
+    second: OuzanaBiologist_9
+  - first:
+      213: -4549578773556869045
+    second: OuzanaBiologist_10
+  - first:
+      213: -6143341977123531484
+    second: OuzanaBiologist_11
+  - first:
+      213: 3755635230084413573
+    second: OuzanaBiologist_12
+  - first:
+      213: 3676587966394611237
+    second: OuzanaBiologist_13
+  - first:
+      213: 4137874760976714729
+    second: OuzanaBiologist_14
+  - first:
+      213: 1422659268213441325
+    second: OuzanaBiologist_15
+  - first:
+      213: 327530279005541522
+    second: OuzanaBiologist_16
+  - first:
+      213: 4327254552929187200
+    second: OuzanaBiologist_17
+  - first:
+      213: 1142954029872191756
+    second: OuzanaBiologist_18
+  - first:
+      213: -5809701216112719816
+    second: OuzanaBiologist_19
+  - first:
+      213: -8491097220138132535
+    second: OuzanaBiologist_20
+  - first:
+      213: 549496607724092257
+    second: OuzanaBiologist_21
+  - first:
+      213: 6746984521035756373
+    second: OuzanaBiologist_22
+  - first:
+      213: -2648712735713363540
+    second: OuzanaBiologist_23
+  - first:
+      213: 7606296876286189626
+    second: OuzanaBiologist_24
+  - first:
+      213: -1588540664426988891
+    second: OuzanaBiologist_25
+  - first:
+      213: 3591289427748811934
+    second: OuzanaBiologist_26
+  - first:
+      213: -2775999364920656132
+    second: OuzanaBiologist_27
+  - first:
+      213: -5055349573429767514
+    second: OuzanaBiologist_28
+  - first:
+      213: -3002529542722555931
+    second: OuzanaBiologist_29
+  - first:
+      213: 4450442317451406484
+    second: OuzanaBiologist_30
+  - first:
+      213: -4013777757707063010
+    second: OuzanaBiologist_31
+  - first:
+      213: 4551600710569924471
+    second: OuzanaBiologist_32
+  - first:
+      213: 2582645443484920968
+    second: OuzanaBiologist_33
+  - first:
+      213: -1545631797867958332
+    second: OuzanaBiologist_34
+  - first:
+      213: 7639666193645957048
+    second: OuzanaBiologist_35
+  - first:
+      213: 2165423615296536306
+    second: OuzanaBiologist_36
+  - first:
+      213: 2878981622144033326
+    second: OuzanaBiologist_37
+  - first:
+      213: -4803463514863639999
+    second: OuzanaBiologist_38
+  - first:
+      213: -8105294586367719435
+    second: OuzanaBiologist_39
+  - first:
+      213: -996264109685349016
+    second: OuzanaBiologist_40
+  - first:
+      213: -1690015453484666223
+    second: OuzanaBiologist_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OuzanaBiologist_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 931
+        width: 333
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ce735ffad68e6160800000000000000
+      internalID: 7020697144261836480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_1
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1199
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2df1e5b93076cf40800000000000000
+      internalID: 5748405367551950124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_2
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 930
+        width: 194
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4884db60072fed4d0800000000000000
+      internalID: -3107780129875736444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_3
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 931
+        width: 220
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d16a6d5c25b0a000800000000000000
+      internalID: 45235198424146385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_4
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 1213
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb403e6ab4a09f430800000000000000
+      internalID: 3817093479211926718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_5
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 929
+        width: 268
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 515339cf4bf8bc2f0800000000000000
+      internalID: -951508888764336875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_6
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 1180
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b191268f98feff280800000000000000
+      internalID: -9007217353860966117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_7
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 1180
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c33b67867b3f14e50800000000000000
+      internalID: 6791977682108592956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_8
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 1164
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956b48a55d4facf30800000000000000
+      internalID: 4596755566868870745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_9
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 1186
+        width: 17
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b48a04788bf3fd230800000000000000
+      internalID: 3665718683478566987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_10
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 1198
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b484c7cc536acd0c0800000000000000
+      internalID: -4549578773556869045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_11
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1172
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4255ec745077ebaa0800000000000000
+      internalID: -6143341977123531484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_12
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 1156
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 588bf13f752be1430800000000000000
+      internalID: 3755635230084413573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_13
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 1068
+        width: 30
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5263d6aa64dd50330800000000000000
+      internalID: 3676587966394611237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 628
+        width: 321
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb4215fb2fac6930800000000000000
+      internalID: 4137874760976714729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_15
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 590
+        width: 228
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d23874e111d4eb310800000000000000
+      internalID: 1422659268213441325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_16
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 891
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2945f4dad0f9b8400800000000000000
+      internalID: 327530279005541522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_17
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 622
+        width: 204
+        height: 294
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0853900d61f7d0c30800000000000000
+      internalID: 4327254552929187200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_18
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 863
+        width: 30
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c09122172a69cdf00800000000000000
+      internalID: 1142954029872191756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_19
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 628
+        width: 345
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 838427a668bcf5fa0800000000000000
+      internalID: -5809701216112719816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 313
+        width: 329
+        height: 302
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cb1c58e010992a80800000000000000
+      internalID: -8491097220138132535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_21
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 320
+        width: 240
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16b3dacd04430a700800000000000000
+      internalID: 549496607724092257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_22
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 323
+        width: 286
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5533561ccaa12ad50800000000000000
+      internalID: 6746984521035756373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_23
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 310
+        width: 242
+        height: 303
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca970c3ecc1ed3bd0800000000000000
+      internalID: -2648712735713363540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_24
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 499
+        width: 26
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a30a33785befe8960800000000000000
+      internalID: 7606296876286189626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_25
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 527
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aaf091aeae54f9e0800000000000000
+      internalID: -1588540664426988891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_26
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 397
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e94759205b2d6d130800000000000000
+      internalID: 3591289427748811934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_27
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 393
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfeb135194ba979d0800000000000000
+      internalID: -2775999364920656132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_28
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 361
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a2db4ce85ac7d9b0800000000000000
+      internalID: -5055349573429767514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_29
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 325
+        width: 28
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5efe76af94fd456d0800000000000000
+      internalID: -3002529542722555931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 326
+        width: 8
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49cae0155b523cd30800000000000000
+      internalID: 4450442317451406484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_31
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 343
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e11b18035623c48c0800000000000000
+      internalID: -4013777757707063010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_32
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 339
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7779fe81bb88a2f30800000000000000
+      internalID: 4551600710569924471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_33
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 29
+        width: 262
+        height: 290
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88c23bfe85667d320800000000000000
+      internalID: 2582645443484920968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_34
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 29
+        width: 207
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cf2886a110dc8ae0800000000000000
+      internalID: -1545631797867958332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_35
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 29
+        width: 209
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bfe3da2deb850a60800000000000000
+      internalID: 7639666193645957048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_36
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 29
+        width: 223
+        height: 288
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fefdf12e412d0e10800000000000000
+      internalID: 2165423615296536306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_37
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 306
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e22e5c6288234f720800000000000000
+      internalID: 2878981622144033326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_38
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 244
+        width: 43
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 142e001126ba65db0800000000000000
+      internalID: -4803463514863639999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_39
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 236
+        width: 20
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f7c7a37485348f80800000000000000
+      internalID: -8105294586367719435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_40
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 246
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 865ebb7121f8c22f0800000000000000
+      internalID: -996264109685349016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OuzanaBiologist_41
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 72
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 192302e26ebdb88e0800000000000000
+      internalID: -1690015453484666223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      OuzanaBiologist_0: 7020697144261836480
+      OuzanaBiologist_1: 5748405367551950124
+      OuzanaBiologist_10: -4549578773556869045
+      OuzanaBiologist_11: -6143341977123531484
+      OuzanaBiologist_12: 3755635230084413573
+      OuzanaBiologist_13: 3676587966394611237
+      OuzanaBiologist_14: 4137874760976714729
+      OuzanaBiologist_15: 1422659268213441325
+      OuzanaBiologist_16: 327530279005541522
+      OuzanaBiologist_17: 4327254552929187200
+      OuzanaBiologist_18: 1142954029872191756
+      OuzanaBiologist_19: -5809701216112719816
+      OuzanaBiologist_2: -3107780129875736444
+      OuzanaBiologist_20: -8491097220138132535
+      OuzanaBiologist_21: 549496607724092257
+      OuzanaBiologist_22: 6746984521035756373
+      OuzanaBiologist_23: -2648712735713363540
+      OuzanaBiologist_24: 7606296876286189626
+      OuzanaBiologist_25: -1588540664426988891
+      OuzanaBiologist_26: 3591289427748811934
+      OuzanaBiologist_27: -2775999364920656132
+      OuzanaBiologist_28: -5055349573429767514
+      OuzanaBiologist_29: -3002529542722555931
+      OuzanaBiologist_3: 45235198424146385
+      OuzanaBiologist_30: 4450442317451406484
+      OuzanaBiologist_31: -4013777757707063010
+      OuzanaBiologist_32: 4551600710569924471
+      OuzanaBiologist_33: 2582645443484920968
+      OuzanaBiologist_34: -1545631797867958332
+      OuzanaBiologist_35: 7639666193645957048
+      OuzanaBiologist_36: 2165423615296536306
+      OuzanaBiologist_37: 2878981622144033326
+      OuzanaBiologist_38: -4803463514863639999
+      OuzanaBiologist_39: -8105294586367719435
+      OuzanaBiologist_4: 3817093479211926718
+      OuzanaBiologist_40: -996264109685349016
+      OuzanaBiologist_41: -1690015453484666223
+      OuzanaBiologist_5: -951508888764336875
+      OuzanaBiologist_6: -9007217353860966117
+      OuzanaBiologist_7: 6791977682108592956
+      OuzanaBiologist_8: 4596755566868870745
+      OuzanaBiologist_9: 3665718683478566987
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

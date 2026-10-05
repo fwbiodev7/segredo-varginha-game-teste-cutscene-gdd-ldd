@@ -1,0 +1,1029 @@
+fileFormatVersion: 2
+guid: fe3845d3a790c6f4c8695c24e9ad4f80
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2461896739756438381
+    second: EntityManifestation_0
+  - first:
+      213: -1960626672611907214
+    second: EntityManifestation_1
+  - first:
+      213: 2822740836361418340
+    second: EntityManifestation_2
+  - first:
+      213: -8767934744076293180
+    second: EntityManifestation_3
+  - first:
+      213: -2323805938221514469
+    second: EntityManifestation_4
+  - first:
+      213: 6581556618921481932
+    second: EntityManifestation_5
+  - first:
+      213: 2567404815496838800
+    second: EntityManifestation_6
+  - first:
+      213: 2541618363820380663
+    second: EntityManifestation_7
+  - first:
+      213: 7045297559527901360
+    second: EntityManifestation_8
+  - first:
+      213: -4239381557906633466
+    second: EntityManifestation_9
+  - first:
+      213: -7521463426364686631
+    second: EntityManifestation_10
+  - first:
+      213: -1643938320299449680
+    second: EntityManifestation_11
+  - first:
+      213: 2136577814743013338
+    second: EntityManifestation_12
+  - first:
+      213: 4437263196955465281
+    second: EntityManifestation_13
+  - first:
+      213: -3757354935695325350
+    second: EntityManifestation_14
+  - first:
+      213: -8413648579935664406
+    second: EntityManifestation_15
+  - first:
+      213: -2493699049237673451
+    second: EntityManifestation_16
+  - first:
+      213: -4167650677388813440
+    second: EntityManifestation_17
+  - first:
+      213: -2599902840643919390
+    second: EntityManifestation_18
+  - first:
+      213: -6752947000868345564
+    second: EntityManifestation_19
+  - first:
+      213: 2438102148569079226
+    second: EntityManifestation_20
+  - first:
+      213: -6962754528593480314
+    second: EntityManifestation_21
+  - first:
+      213: -662155720641165077
+    second: EntityManifestation_22
+  - first:
+      213: -7059206130506410958
+    second: EntityManifestation_23
+  - first:
+      213: -7098719017184641633
+    second: EntityManifestation_24
+  - first:
+      213: -5568225218334281721
+    second: EntityManifestation_25
+  - first:
+      213: -1412555935371475352
+    second: EntityManifestation_26
+  - first:
+      213: 5609175812031235089
+    second: EntityManifestation_27
+  - first:
+      213: -408689204617433563
+    second: EntityManifestation_28
+  - first:
+      213: -8907779421221917109
+    second: EntityManifestation_29
+  - first:
+      213: -7963536938364964703
+    second: EntityManifestation_30
+  - first:
+      213: 7500512350963244972
+    second: EntityManifestation_31
+  - first:
+      213: 8022282881028659532
+    second: EntityManifestation_32
+  - first:
+      213: -718021536459584811
+    second: EntityManifestation_33
+  - first:
+      213: -4528945598862136676
+    second: EntityManifestation_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EntityManifestation_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 439
+        width: 77
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d63ffd68a0a6a2220800000000000000
+      internalID: 2461896739756438381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_1
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 439
+        width: 77
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 279afc9dd647ac4e0800000000000000
+      internalID: -1960626672611907214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_2
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 439
+        width: 68
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 466bf4cc5d36c2720800000000000000
+      internalID: 2822740836361418340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_3
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 439
+        width: 77
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cbe6850ec9025680800000000000000
+      internalID: -8767934744076293180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_4
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 439
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b110d5dafce20cfd0800000000000000
+      internalID: -2323805938221514469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_5
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 439
+        width: 75
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc69fe3dfd2665b50800000000000000
+      internalID: 6581556618921481932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_6
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 439
+        width: 73
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09ef056b31141a320800000000000000
+      internalID: 2567404815496838800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_7
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 439
+        width: 76
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f19f129f64a54320800000000000000
+      internalID: 2541618363820380663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_8
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 514
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b846948dcce5c160800000000000000
+      internalID: 7045297559527901360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_9
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 295
+        width: 57
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60d02ad2fe0ba25c0800000000000000
+      internalID: -4239381557906633466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_10
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 295
+        width: 58
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9deb0783dd46e9790800000000000000
+      internalID: -7521463426364686631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_11
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 295
+        width: 62
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b226e1cece8f29e0800000000000000
+      internalID: -1643938320299449680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_12
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 295
+        width: 71
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad7dcb2d336a6ad10800000000000000
+      internalID: 2136577814743013338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_13
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 295
+        width: 94
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 146d1753e53549d30800000000000000
+      internalID: 4437263196955465281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_14
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 295
+        width: 73
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a57c1d2e7913bdbc0800000000000000
+      internalID: -3757354935695325350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_15
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 295
+        width: 67
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae607f7a137bc3b80800000000000000
+      internalID: -8413648579935664406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_16
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 295
+        width: 69
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51a85794de9946dd0800000000000000
+      internalID: -2493699049237673451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_17
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 151
+        width: 77
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08bd2524ac78926c0800000000000000
+      internalID: -4167650677388813440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_18
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 151
+        width: 76
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e1e3ec242a4bebd0800000000000000
+      internalID: -2599902840643919390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_19
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 151
+        width: 68
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 429e33a3b76b842a0800000000000000
+      internalID: -6752947000868345564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_20
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 151
+        width: 80
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abd939b8cf0e5d120800000000000000
+      internalID: 2438102148569079226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_21
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 151
+        width: 94
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68571f085a35f5f90800000000000000
+      internalID: -6962754528593480314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_22
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 151
+        width: 65
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be8c03d51ec8fc6f0800000000000000
+      internalID: -662155720641165077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_23
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 151
+        width: 77
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 234d7e2fc69a80e90800000000000000
+      internalID: -7059206130506410958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_24
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 151
+        width: 73
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9d366c1aa84c7d90800000000000000
+      internalID: -7098719017184641633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_25
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 215
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70030d76aa0b9b2b0800000000000000
+      internalID: -5568225218334281721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_26
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 7
+        width: 57
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86640de5cd7956ce0800000000000000
+      internalID: -1412555935371475352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_27
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 7
+        width: 57
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114c5deaeabc7dd40800000000000000
+      internalID: 5609175812031235089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_28
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 7
+        width: 63
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ead3f655b045af0800000000000000
+      internalID: -408689204617433563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_29
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 7
+        width: 71
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e6884dfc5316480800000000000000
+      internalID: -8907779421221917109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_30
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 7
+        width: 68
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a0fd01e855db7190800000000000000
+      internalID: -7963536938364964703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_31
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 101
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caf18986e3c271860800000000000000
+      internalID: 7500512350963244972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_32
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 7
+        width: 95
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c491963c6cfd45f60800000000000000
+      internalID: 8022282881028659532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_33
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 7
+        width: 71
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5da0f3287331906f0800000000000000
+      internalID: -718021536459584811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EntityManifestation_34
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 7
+        width: 71
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9ae0c429f3f521c0800000000000000
+      internalID: -4528945598862136676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      EntityManifestation_0: 2461896739756438381
+      EntityManifestation_1: -1960626672611907214
+      EntityManifestation_10: -7521463426364686631
+      EntityManifestation_11: -1643938320299449680
+      EntityManifestation_12: 2136577814743013338
+      EntityManifestation_13: 4437263196955465281
+      EntityManifestation_14: -3757354935695325350
+      EntityManifestation_15: -8413648579935664406
+      EntityManifestation_16: -2493699049237673451
+      EntityManifestation_17: -4167650677388813440
+      EntityManifestation_18: -2599902840643919390
+      EntityManifestation_19: -6752947000868345564
+      EntityManifestation_2: 2822740836361418340
+      EntityManifestation_20: 2438102148569079226
+      EntityManifestation_21: -6962754528593480314
+      EntityManifestation_22: -662155720641165077
+      EntityManifestation_23: -7059206130506410958
+      EntityManifestation_24: -7098719017184641633
+      EntityManifestation_25: -5568225218334281721
+      EntityManifestation_26: -1412555935371475352
+      EntityManifestation_27: 5609175812031235089
+      EntityManifestation_28: -408689204617433563
+      EntityManifestation_29: -8907779421221917109
+      EntityManifestation_3: -8767934744076293180
+      EntityManifestation_30: -7963536938364964703
+      EntityManifestation_31: 7500512350963244972
+      EntityManifestation_32: 8022282881028659532
+      EntityManifestation_33: -718021536459584811
+      EntityManifestation_34: -4528945598862136676
+      EntityManifestation_4: -2323805938221514469
+      EntityManifestation_5: 6581556618921481932
+      EntityManifestation_6: 2567404815496838800
+      EntityManifestation_7: 2541618363820380663
+      EntityManifestation_8: 7045297559527901360
+      EntityManifestation_9: -4239381557906633466
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

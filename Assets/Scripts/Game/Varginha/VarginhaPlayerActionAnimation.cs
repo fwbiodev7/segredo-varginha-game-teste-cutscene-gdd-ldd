@@ -48,6 +48,13 @@ namespace Game.Varginha
             if (_isActing) yield break;
             yield return PoseRoutine("Edelzio_Reach", duration, .92f);
         }
+        public IEnumerator WashFaceRoutine()
+        {
+            if (_isActing) yield break;
+            BeginAction(); _spriteAnimation?.SetActionPose("Edelzio_WashFace");
+            yield return new WaitForSeconds(1.05f);
+            _spriteAnimation?.ClearActionPose(); EndAction();
+        }
 
         public void PlayNotebookSession(Transform notebook, Action onReady)
         {
@@ -78,8 +85,10 @@ namespace Game.Varginha
                 _seatWasIgnored = Physics2D.GetIgnoreCollision(_playerCollider, _seatCollider);
                 Physics2D.IgnoreCollision(_playerCollider, _seatCollider, true);
             }
-            yield return MoveToPosition(seat.position + Vector3.up * .13f, .25f);
-            _spriteAnimation?.SetSeatingFacing(seat.GetComponent<InteractableProp>()?.Type == PropType.ClassroomSeat
+            bool classroom=seat.GetComponent<InteractableProp>()?.Type == PropType.ClassroomSeat;
+            if(classroom) Experiment.CampaignSeatingLayers.Attach(_renderer,seat.GetComponent<SpriteRenderer>());
+            yield return MoveToPosition(seat.position + Vector3.up * (classroom?.53f:.13f), .25f);
+            _spriteAnimation?.SetSeatingFacing(classroom
                 ? Vector2.up : _player.FacingDirection);
             for (int frame = 0; frame < 3; frame++)
             {
@@ -106,7 +115,7 @@ namespace Game.Varginha
             var chair = VarginhaHouseComposition.EnsureNotebookChair(notebook);
             if (chair != null)
             {
-                _seatCollider = chair.GetComponent<Collider2D>();
+                _seatCollider = GetComponent<Experiment.CampaignSeatingLayers>()?.SeatCollider ?? chair.GetComponent<Collider2D>();
                 _playerCollider = GetComponent<Collider2D>();
                 if (_seatCollider != null && _playerCollider != null)
                 {
@@ -114,8 +123,8 @@ namespace Game.Varginha
                     Physics2D.IgnoreCollision(_playerCollider, _seatCollider, true);
                 }
                 Vector3 seatPosition = chair.transform.position;
-                // The campaign uses a feet collider; keep its lower edge clear of the desk.
-                if (Experiment.VarginhaCampaignStage.Active != null) seatPosition += Vector3.up * .32f;
+                // The body sits in front of the backrest, between the chair and the tabletop.
+                if (Experiment.VarginhaCampaignStage.Active != null) seatPosition += Vector3.up * .77f;
                 yield return MoveToPosition(seatPosition, .34f);
                 if (Vector2.Distance(transform.position, seatPosition) > .4f)
                 {

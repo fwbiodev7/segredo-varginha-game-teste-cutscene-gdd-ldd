@@ -1,4 +1,5 @@
 using TMPro;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
@@ -19,15 +20,20 @@ namespace Game.Varginha
         private VarginhaStudentAllySquad _squad;
         private EdelzioTopDownController _player;
         public bool ShowingStudents { get; private set; }
+        public bool ShowingSupport {get;private set;}
         private int _inspected;
         private float _resumeScale;
         private int _openedFrame;
+        private EventSystem _navigationOwner;
+        private bool _navigationEvents;
 
         private readonly UnityEngine.UI.Image[] _cells = new UnityEngine.UI.Image[9];
         private readonly TMP_Text[] _states = new TMP_Text[9];
         private readonly TMP_Text[] _cellNames = new TMP_Text[9];
         private readonly UnityEngine.UI.Image[] _cellPortraits = new UnityEngine.UI.Image[9];
         private UnityEngine.UI.Button _itemsTab, _studentsTab;
+        private UnityEngine.UI.Button _supportTab;
+        private TMP_Text _supportTabLabel;
         private TMP_Text _itemsTabLabel, _studentsTabLabel;
         private TMP_Text _equipCaption;
 
@@ -71,9 +77,10 @@ namespace Game.Varginha
                 || VarginhaGameHUD.Instance?.IsDialogueOpen == true
                 || VarginhaGameHUD.Instance?.IsVictoryOpen == true) return false;
 
-            _squad = Object.FindAnyObjectByType<VarginhaStudentAllySquad>();
+            _squad = Experiment.CampaignFinalAllies.Active?.Squad??Object.FindAnyObjectByType<VarginhaStudentAllySquad>();
             _player = player;
             ShowingStudents = false;
+            ShowingSupport = false;
             _inspected = 0;
             player.GetComponent<VarginhaPlayerAttack>()?.EndHitstopForModal();
             _resumeScale = Time.timeScale;
@@ -84,6 +91,15 @@ namespace Game.Varginha
             Time.timeScale = 0;
             _canvasObject.SetActive(true);
             if (_ownedEventSystem != null) _ownedEventSystem.SetActive(true);
+            var events=EventSystem.current;
+            if(events!=null)
+            {
+                _navigationOwner=events;_navigationEvents=events.sendNavigationEvents;events.sendNavigationEvents=false;
+                var input=events.GetComponent<InputSystemUIInputModule>();
+                if(input==null)input=events.gameObject.AddComponent<InputSystemUIInputModule>();
+                if(input.actionsAsset==null)input.AssignDefaultActions();
+                input.enabled=true;
+            }
 
             string physical = "";
             string[] names = { "Mochila", "Chave do Fusca", "Caderno de 1996", "Notebook", "Documento de 1898" };
@@ -100,6 +116,8 @@ namespace Game.Varginha
             if (_canvasObject != null) _canvasObject.SetActive(false);
             if (_ownedEventSystem != null) _ownedEventSystem.SetActive(false);
             if (EventSystem.current != null) EventSystem.current.SetSelectedGameObject(null);
+            if(_navigationOwner!=null)_navigationOwner.sendNavigationEvents=_navigationEvents;
+            _navigationOwner=null;
             if (Time.timeScale == 0 && Game.Managers.GameManager.Instance?.IsPaused != true)
                 Time.timeScale = _resumeScale;
         }
@@ -110,36 +128,39 @@ namespace Game.Varginha
         private void Update()
         {
             if (!IsOpen || Time.frameCount == _openedFrame) return;
-            var keyboard = Keyboard.current;
-            if (keyboard == null) return;
+            var keyboard = Keyboard.current;var pad=Gamepad.current;
 
-            if (keyboard.escapeKey.wasPressedThisFrame || keyboard.gKey.wasPressedThisFrame)
+            if (keyboard?.escapeKey.wasPressedThisFrame==true || keyboard?.gKey.wasPressedThisFrame==true || pad?.buttonEast.wasPressedThisFrame==true)
             {
                 VarginhaGameHUD.Instance?.CloseBackpack();
                 return;
             }
 
-            if (keyboard.tabKey.wasPressedThisFrame)
+            if (keyboard?.tabKey.wasPressedThisFrame==true||pad?.rightShoulder.wasPressedThisFrame==true)
             {
-                ShowTab(!ShowingStudents);
+                if(ShowingStudents&&Experiment.CampaignFinalAllies.Active!=null)ShowSupport();
+                else ShowTab(!ShowingStudents&&!ShowingSupport);
                 return;
             }
 
             int next = _inspected;
-            if (keyboard.leftArrowKey.wasPressedThisFrame) next = (_inspected + 8) % 9;
-            if (keyboard.rightArrowKey.wasPressedThisFrame) next = (_inspected + 1) % 9;
-            if (keyboard.upArrowKey.wasPressedThisFrame) next = (_inspected + 6) % 9;
-            if (keyboard.downArrowKey.wasPressedThisFrame) next = (_inspected + 3) % 9;
+            int count=ShowingSupport?3:ShowingStudents?9:6;
+            if (keyboard?.leftArrowKey.wasPressedThisFrame==true||pad?.dpad.left.wasPressedThisFrame==true) next = (_inspected + count-1) % count;
+            if (keyboard?.rightArrowKey.wasPressedThisFrame==true||pad?.dpad.right.wasPressedThisFrame==true) next = (_inspected + 1) % count;
+            if (keyboard?.upArrowKey.wasPressedThisFrame==true||pad?.dpad.up.wasPressedThisFrame==true) next = (_inspected + count-3) % count;
+            if (keyboard?.downArrowKey.wasPressedThisFrame==true||pad?.dpad.down.wasPressedThisFrame==true) next = (_inspected + 3) % count;
             if (next != _inspected) { _inspected = next; Refresh(); }
 
-            if (keyboard.enterKey.wasPressedThisFrame) Equip();
+            if (keyboard?.enterKey.wasPressedThisFrame==true||pad?.buttonSouth.wasPressedThisFrame==true) Equip();
         }
 
         private void Equip()
         {
+            if(ShowingSupport){if(Experiment.CampaignFinalAllies.Active?.SelectSupport(_inspected)==true){Refresh();Experiment.CampaignContinuationController.Active?.SaveTeamChoice();}return;}
             if (ShowingStudents && _squad != null && _squad.SelectStudent(_inspected))
             {
                 Refresh();
+                Experiment.CampaignContinuationController.Active?.SaveTeamChoice();
                 return;
             }
 
@@ -152,14 +173,33 @@ namespace Game.Varginha
 
         public void ShowTab(bool students)
         {
+            ShowingSupport=false;
             ShowingStudents = students;
             _inspected = students ? Mathf.Max(0, _squad != null ? _squad.SelectedStudentIndex : 0) : 0;
             Refresh();
+        }
+        public void ShowSupport()
+        {
+            if(Experiment.CampaignFinalAllies.Active==null)return;
+            ShowingStudents=false;ShowingSupport=true;
+            _inspected=Mathf.Max(0,Experiment.CampaignFinalAllies.Active.SelectedSupport);Refresh();
         }
 
         private void Refresh()
         {
             EnsureTextures();
+            bool finalCombat=Experiment.CampaignFinalAllies.Active!=null;
+            _supportTab.gameObject.SetActive(finalCombat);
+            SetTabWidth(_itemsTab,_itemsTabLabel,finalCombat?150:200);
+            SetTabWidth(_studentsTab,_studentsTabLabel,finalCombat?130:200);
+            _studentsTab.image.rectTransform.anchoredPosition=new Vector2(finalCombat?766:814,-24);
+            _supportTab.image.sprite=ShowingSupport?_buttonActiveSprite:_buttonNormalSprite;
+            _supportTabLabel.color=ShowingSupport?AccentCyan:MutedCyan;
+            _itemsTab.image.sprite=!ShowingStudents&&!ShowingSupport?_buttonActiveSprite:_buttonNormalSprite;
+            _studentsTab.image.sprite=ShowingStudents?_buttonActiveSprite:_buttonNormalSprite;
+            _itemsTabLabel.color=!ShowingStudents&&!ShowingSupport?AccentCyan:MutedCyan;
+            _studentsTabLabel.color=ShowingStudents?AccentCyan:MutedCyan;
+            if(ShowingSupport){RefreshSupport();return;}
 
             // Tab styling: active tab gets glowing cyan border & teal background
             if (_itemsTab != null)
@@ -178,6 +218,7 @@ namespace Game.Varginha
             _equipped.text = _squad?.SelectedStudent != null && _squad.SelectedStudent.IsActive
                 ? $"<color=#{ColorUtility.ToHtmlStringRGB(FocusGold)}>EQUIPADO</color>\n<b>{_squad.SelectedStudent.StudentName}</b>\n\n<size=12><color=#{ColorUtility.ToHtmlStringRGB(AccentCyan)}>{VarginhaInputBindings.DisplayName(VarginhaInputAction.AllyCommand)}</color> para atacar</size>"
                 : $"<color=#{ColorUtility.ToHtmlStringRGB(MutedCyan)}>NENHUM ALUNO EQUIPADO</color>\n<size=12>Selecione na aba Alunos</size>";
+            if(finalCombat)_equipped.text=FinalTeamSummary();
             if (Experiment.VarginhaCampaignStage.Active != null)
             {
                 _equipped.text = "<b>INVESTIGAÇÃO</b>\n\n" + Experiment.VarginhaCampaignStage.Active.Progress.MapFragments + "/3 fragmentos de mapa\n\n<TAB> Caderno: documentos e hipóteses.";
@@ -188,6 +229,7 @@ namespace Game.Varginha
             {
                 for (int i = 0; i < 9; i++)
                 {
+                    _cells[i].gameObject.SetActive(i<ItemNames.Length);
                     bool owned = i < ItemNames.Length && _player != null && _player.HasInventoryItem(i);
                     bool selected = i == _inspected;
                     _cells[i].sprite = selected ? _slotSelectedSprite : _slotNormalSprite;
@@ -244,6 +286,7 @@ namespace Game.Varginha
 
             for (int i = 0; i < 9; i++)
             {
+                _cells[i].gameObject.SetActive(true);
                 _cellPortraits[i].enabled = true;
                 _cellPortraits[i].sprite = VarginhaStudentAllySquad.Portrait(i);
                 _cellNames[i].text = VarginhaPhase2Controller.StudentNames[i];
@@ -251,7 +294,7 @@ namespace Game.Varginha
 
                 var ally = _squad != null && i < _squad.Allies.Count ? _squad.Allies[i] : null;
                 bool available = ally != null && ally.IsActive;
-                bool equipped = available && _squad.SelectedStudentIndex == i;
+                bool equipped = available && _squad.SelectedStudentIndices.Contains(i);
                 bool selected = i == _inspected;
 
                 _cells[i].sprite = selected ? _slotSelectedSprite : _slotNormalSprite;
@@ -272,12 +315,13 @@ namespace Game.Varginha
             _description.text = VarginhaStudentAlly.DescribeAttack(studentName);
             _description.color = PaperColor;
 
-            _availability.text = unlocked
+            _availability.text = finalCombat?"Até 3 alunos e 1 apoio.\nEquipe ou remova clicando no botão. Uma quarta escolha substitui a última vaga.\nRecargas são individuais.":unlocked
                 ? "Recarga individual: 5 segundos.\n\nTrocar de aluno não reinicia recargas. O comando de aliado chama o aluno equipado."
                 : "Este aliado ainda não foi resgatado. Encontre a turma na escola; os especiais ficam ativos na igreja.";
             _availability.color = unlocked ? PaperColor : MutedCyan;
 
             _equip.interactable = unlocked;
+            if(finalCombat)_equipCaption.text=_squad.SelectedStudentIndices.Contains(_inspected)?"REMOVER DA EQUIPE":_squad.SelectedStudentIndices.Count==3?"SUBSTITUIR ÚLTIMA VAGA":"EQUIPAR ALUNO";
             _equip.image.sprite = unlocked ? _buttonActiveSprite : _buttonNormalSprite;
             _equipCaption.color = unlocked ? PaperColor : MutedCyan;
         }
@@ -287,6 +331,7 @@ namespace Game.Varginha
             var actors = Object.FindObjectsByType<Experiment.CampaignSchoolLife>();
             for (int i = 0; i < 9; i++)
             {
+                _cells[i].gameObject.SetActive(true);
                 bool known = (progress.studentsTalked & 1 << i) != 0;
                 _cells[i].sprite = i == _inspected ? _slotSelectedSprite : _slotNormalSprite;
                 _cellPortraits[i].enabled = true; _cellPortraits[i].sprite = VarginhaStudentAllySquad.Portrait(i);
@@ -299,6 +344,33 @@ namespace Game.Varginha
             _description.text = actor != null ? "Na escola: " + actor.Activity + "." : "Aluno da Industrial. Converse com ele durante o expediente.";
             _availability.text = (progress.studentsTalked & 1 << _inspected) != 0 ? "A conversa foi registrada. As falas acompanham o andamento da investigação." : "Aproxime-se e pressione E para conversar. Cada aluno trabalha em uma atividade e possui observações próprias.";
             _equip.interactable = false; _equipCaption.text = "CONVERSAR NA ESCOLA"; _equip.image.sprite = _buttonNormalSprite;
+        }
+        private void RefreshSupport()
+        {
+            var allies=Experiment.CampaignFinalAllies.Active;
+            for(int i=0;i<9;i++)
+            {
+                bool available=i<3;_cells[i].gameObject.SetActive(available);_cells[i].sprite=i==_inspected?_slotSelectedSprite:_slotNormalSprite;
+                _cellPortraits[i].enabled=available;
+                if(available)_cellPortraits[i].sprite=Experiment.CampaignFinalAllies.Portrait(i);
+                _cellNames[i].text=available?Experiment.CampaignFinalAllies.Names[i]:"";
+                _states[i].text=available?(allies.SelectedSupport==i?"EQUIPADO":allies.Cooldown(i)>0?$"{allies.Cooldown(i):0.0}s":"PRONTO"):"VAZIO";
+            }
+            bool selected=_inspected<3;_portrait.enabled=selected;
+            if(selected)_portrait.sprite=Experiment.CampaignFinalAllies.Portrait(_inspected);
+            _name.text=selected?Experiment.CampaignFinalAllies.Names[_inspected]:"Espaço livre";
+            _description.text=selected?Experiment.CampaignFinalAllies.Descriptions[_inspected]:"Selecione um dos três aliados de apoio.";
+            _availability.text="Trocar de aliado preserva a recarga de cada um. Use "+VarginhaInputBindings.DisplayName(VarginhaInputAction.SupportCommand)+" depois de fechar a mochila.";
+            _equip.interactable=selected;_equipCaption.text=allies.SelectedSupport==_inspected?"REMOVER APOIO":"EQUIPAR APOIO";
+            _equipped.text=FinalTeamSummary();
+        }
+        private string FinalTeamSummary()
+        {
+            var allies=Experiment.CampaignFinalAllies.Active;string text="<size=11><color=#a3c9cc>ALUNOS "+_squad.SelectedStudentIndices.Count+"/3</color>";
+            foreach(int i in _squad.SelectedStudentIndices)text+="\n"+_squad.Allies[i].StudentName;
+            text+="\n<color=#a3c9cc>APOIO "+(allies.SelectedSupport>=0?"1/1":"0/1")+"</color>";
+            if(allies.SelectedSupport>=0)text+="\n"+Experiment.CampaignFinalAllies.Names[allies.SelectedSupport];
+            return text+"</size>";
         }
 
         private void Build()
@@ -347,6 +419,8 @@ namespace Game.Varginha
             // Tabs matching Pause button styling
             _itemsTab = CreateTabButton(page, "ITENS FÍSICOS", 600, 24, 200, 36, () => ShowTab(false), out _itemsTabLabel);
             _studentsTab = CreateTabButton(page, "ALUNOS", 814, 24, 200, 36, () => ShowTab(true), out _studentsTabLabel);
+            _supportTab=CreateTabButton(page,"APOIO",910,24,130,36,ShowSupport,out _supportTabLabel);
+            _supportTab.gameObject.SetActive(false);
 
             // Top decorative divider line
             Separator(page, 32, 68, 1006, 2);
@@ -365,12 +439,12 @@ namespace Game.Varginha
             bagIcon.sprite = VarginhaPixelArtSprites.Create("Backpack_Inventory", Color.gray);
             bagIcon.preserveAspect = true;
 
-            _equipped = Label(leftPanel.transform, "", 12, 156, 206, 80, 14, TextAlignmentOptions.Center);
+            _equipped = Label(leftPanel.transform, "", 12, 150, 206, 108, 14, TextAlignmentOptions.Center);
 
-            Separator(leftPanel.transform, 16, 244, 198, 2);
+            Separator(leftPanel.transform, 16, 266, 198, 2);
 
-            Label(leftPanel.transform, "ITENS FÍSICOS", 16, 254, 198, 18, 12).color = AccentCyan;
-            _items = Label(leftPanel.transform, "", 16, 276, 198, 130, 13);
+            Label(leftPanel.transform, "ITENS FÍSICOS", 16, 278, 198, 18, 12).color = AccentCyan;
+            _items = Label(leftPanel.transform, "", 16, 300, 198, 110, 13);
             _items.color = PaperColor;
 
             var footNote = Label(leftPanel.transform, "Itens usados saem.\nPistas permanecem.", 12, 424, 206, 36, 12, TextAlignmentOptions.Center);
@@ -397,7 +471,7 @@ namespace Game.Varginha
                 var button = _cells[i].gameObject.AddComponent<UnityEngine.UI.Button>();
                 button.targetGraphic = _cells[i];
                 button.navigation = new Navigation { mode = Navigation.Mode.None };
-                button.onClick.AddListener(() => { _inspected = index; Refresh(); });
+                button.onClick.AddListener(() => { if(ShowingSupport&&index>=3||!ShowingStudents&&!ShowingSupport&&index>=6)return;_inspected = index; Refresh(); });
 
                 // Frame for portrait
                 var portBox = Panel(_cells[i].transform, "PortBox_" + i, 44, 8, 64, 64, new Color(0, 0, 0, .45f));
@@ -438,7 +512,7 @@ namespace Game.Varginha
             // ================= FOOTER =================
             Separator(page, 32, 560, 1006, 2);
 
-            Label(page, "<color=#a3c9cc>[SETAS]</color> Navegar    <color=#a3c9cc>[TAB]</color> Alternar Aba    <color=#a3c9cc>[ENTER]</color> Equipar    <color=#a3c9cc>[ESC] / [G]</color> Retomar",
+            Label(page, "SETAS / D-PAD: navegar    TAB / RB: abas    ENTER / A: equipar    ESC / B: voltar",
                 38, 570, 780, 26, 13);
 
             TMP_Text backLabel;
@@ -450,6 +524,11 @@ namespace Game.Varginha
                 _ownedEventSystem.transform.SetParent(transform, false);
                 _ownedEventSystem.GetComponent<InputSystemUIInputModule>().AssignDefaultActions();
             }
+        }
+        private static void SetTabWidth(UnityEngine.UI.Button tab,TMP_Text label,float width)
+        {
+            tab.image.rectTransform.sizeDelta=new Vector2(width,36);
+            label.rectTransform.sizeDelta=new Vector2(width,36);
         }
 
         private static void EnsureTextures()

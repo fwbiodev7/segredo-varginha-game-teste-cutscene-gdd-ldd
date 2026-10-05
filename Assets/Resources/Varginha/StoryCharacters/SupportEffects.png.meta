@@ -1,0 +1,4487 @@
+fileFormatVersion: 2
+guid: 63660f8175cd11c4188ae2c490523d7c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9153708798335469504
+    second: SupportEffects_0
+  - first:
+      213: -8878122058186208501
+    second: SupportEffects_1
+  - first:
+      213: 1523768287357776520
+    second: SupportEffects_2
+  - first:
+      213: -1081417219953089659
+    second: SupportEffects_3
+  - first:
+      213: -4896531472865726997
+    second: SupportEffects_4
+  - first:
+      213: -5818474685503391798
+    second: SupportEffects_5
+  - first:
+      213: 4081950268111715495
+    second: SupportEffects_6
+  - first:
+      213: -6895308624653132791
+    second: SupportEffects_7
+  - first:
+      213: 4767502500441237580
+    second: SupportEffects_8
+  - first:
+      213: -5244223694254246278
+    second: SupportEffects_9
+  - first:
+      213: 395401760758702716
+    second: SupportEffects_10
+  - first:
+      213: -3942822193979851623
+    second: SupportEffects_11
+  - first:
+      213: -228244583291641536
+    second: SupportEffects_12
+  - first:
+      213: -4258910197130684366
+    second: SupportEffects_13
+  - first:
+      213: -4803398971607704127
+    second: SupportEffects_14
+  - first:
+      213: -6850140050354759025
+    second: SupportEffects_15
+  - first:
+      213: 5120305734000725565
+    second: SupportEffects_16
+  - first:
+      213: -1186062255599305461
+    second: SupportEffects_17
+  - first:
+      213: 403713411439438525
+    second: SupportEffects_18
+  - first:
+      213: -1775949868848057517
+    second: SupportEffects_19
+  - first:
+      213: -4679658404853313376
+    second: SupportEffects_20
+  - first:
+      213: -712710982856131062
+    second: SupportEffects_21
+  - first:
+      213: 5428949202441837183
+    second: SupportEffects_22
+  - first:
+      213: 7583538545835139596
+    second: SupportEffects_23
+  - first:
+      213: -4770938178710639177
+    second: SupportEffects_24
+  - first:
+      213: -324132021512530581
+    second: SupportEffects_25
+  - first:
+      213: 8981283682145001876
+    second: SupportEffects_26
+  - first:
+      213: 6891802577239110905
+    second: SupportEffects_27
+  - first:
+      213: -4168307573615614487
+    second: SupportEffects_28
+  - first:
+      213: 137934937210432463
+    second: SupportEffects_29
+  - first:
+      213: -8592933893741646662
+    second: SupportEffects_30
+  - first:
+      213: 7665015000796434026
+    second: SupportEffects_31
+  - first:
+      213: -2452187032953624059
+    second: SupportEffects_32
+  - first:
+      213: -7231813622554082022
+    second: SupportEffects_33
+  - first:
+      213: -7264671503819187535
+    second: SupportEffects_34
+  - first:
+      213: -6663643622401733758
+    second: SupportEffects_35
+  - first:
+      213: 8131826428708664590
+    second: SupportEffects_36
+  - first:
+      213: -1656749939725698718
+    second: SupportEffects_37
+  - first:
+      213: 514613676612798355
+    second: SupportEffects_38
+  - first:
+      213: -6582014987762848489
+    second: SupportEffects_39
+  - first:
+      213: 4072296169272855809
+    second: SupportEffects_40
+  - first:
+      213: -8005062974824638645
+    second: SupportEffects_41
+  - first:
+      213: 8243542780248521326
+    second: SupportEffects_42
+  - first:
+      213: -2695242294821574922
+    second: SupportEffects_43
+  - first:
+      213: 5890522176125107933
+    second: SupportEffects_44
+  - first:
+      213: 4387050738296599601
+    second: SupportEffects_45
+  - first:
+      213: -5740446487667878965
+    second: SupportEffects_46
+  - first:
+      213: 3226784536958801790
+    second: SupportEffects_47
+  - first:
+      213: -5223240157163252405
+    second: SupportEffects_48
+  - first:
+      213: 1561850569499484364
+    second: SupportEffects_49
+  - first:
+      213: 7060553628372090777
+    second: SupportEffects_50
+  - first:
+      213: 5730474095409866235
+    second: SupportEffects_51
+  - first:
+      213: -2056409836642854613
+    second: SupportEffects_52
+  - first:
+      213: -6853799634768289790
+    second: SupportEffects_53
+  - first:
+      213: 3635444727945701114
+    second: SupportEffects_54
+  - first:
+      213: 8124396383214583092
+    second: SupportEffects_55
+  - first:
+      213: -6463283302381208296
+    second: SupportEffects_56
+  - first:
+      213: -5025162931666806005
+    second: SupportEffects_57
+  - first:
+      213: 286786862452193274
+    second: SupportEffects_58
+  - first:
+      213: -5074484965824109970
+    second: SupportEffects_59
+  - first:
+      213: 9056348382122270113
+    second: SupportEffects_60
+  - first:
+      213: 7453229518324158369
+    second: SupportEffects_61
+  - first:
+      213: 5689732079730182273
+    second: SupportEffects_62
+  - first:
+      213: -2252812437714623988
+    second: SupportEffects_63
+  - first:
+      213: 6196363536061313416
+    second: SupportEffects_64
+  - first:
+      213: 2605626024109093597
+    second: SupportEffects_65
+  - first:
+      213: -2044789867312543823
+    second: SupportEffects_66
+  - first:
+      213: -8151772174746164963
+    second: SupportEffects_67
+  - first:
+      213: -8077910500405002009
+    second: SupportEffects_68
+  - first:
+      213: 1276235058642703409
+    second: SupportEffects_69
+  - first:
+      213: 8529448452440644344
+    second: SupportEffects_70
+  - first:
+      213: 2930815112798523479
+    second: SupportEffects_71
+  - first:
+      213: 1367372318197179293
+    second: SupportEffects_72
+  - first:
+      213: 6761636337976961491
+    second: SupportEffects_73
+  - first:
+      213: -4860509461004697407
+    second: SupportEffects_74
+  - first:
+      213: -8725764750703848148
+    second: SupportEffects_75
+  - first:
+      213: -429558883540747144
+    second: SupportEffects_76
+  - first:
+      213: 6180554470166995739
+    second: SupportEffects_77
+  - first:
+      213: 6778433075486196703
+    second: SupportEffects_78
+  - first:
+      213: -715968327795747551
+    second: SupportEffects_79
+  - first:
+      213: 8424914810059184939
+    second: SupportEffects_80
+  - first:
+      213: 7334867261615405707
+    second: SupportEffects_81
+  - first:
+      213: 511932032853992440
+    second: SupportEffects_82
+  - first:
+      213: 7259728131962806843
+    second: SupportEffects_83
+  - first:
+      213: -6434291941163176410
+    second: SupportEffects_84
+  - first:
+      213: 4041540119940692319
+    second: SupportEffects_85
+  - first:
+      213: 4186781176578589953
+    second: SupportEffects_86
+  - first:
+      213: 4706708074845534471
+    second: SupportEffects_87
+  - first:
+      213: -1949261922871225365
+    second: SupportEffects_88
+  - first:
+      213: -4836005308293406309
+    second: SupportEffects_89
+  - first:
+      213: 4391046718115821550
+    second: SupportEffects_90
+  - first:
+      213: -4770059730442260943
+    second: SupportEffects_91
+  - first:
+      213: 4489866657342143166
+    second: SupportEffects_92
+  - first:
+      213: 6900800332108789021
+    second: SupportEffects_93
+  - first:
+      213: -7965744550158327886
+    second: SupportEffects_94
+  - first:
+      213: 7134513168768273052
+    second: SupportEffects_95
+  - first:
+      213: -213090723436535125
+    second: SupportEffects_96
+  - first:
+      213: -6054090728640831931
+    second: SupportEffects_97
+  - first:
+      213: -711396861630658287
+    second: SupportEffects_98
+  - first:
+      213: -3860220974622576422
+    second: SupportEffects_99
+  - first:
+      213: -8754253389220785029
+    second: SupportEffects_100
+  - first:
+      213: 189112260792315074
+    second: SupportEffects_101
+  - first:
+      213: 3070125528773236376
+    second: SupportEffects_102
+  - first:
+      213: 8593121723704989237
+    second: SupportEffects_103
+  - first:
+      213: 5140028064327801864
+    second: SupportEffects_104
+  - first:
+      213: 9030521513934468951
+    second: SupportEffects_105
+  - first:
+      213: 6413406483600534359
+    second: SupportEffects_106
+  - first:
+      213: -2868640355000483085
+    second: SupportEffects_107
+  - first:
+      213: 4839477667283901589
+    second: SupportEffects_108
+  - first:
+      213: 2470696792156769993
+    second: SupportEffects_109
+  - first:
+      213: -185058187589409254
+    second: SupportEffects_110
+  - first:
+      213: -7998075127336628566
+    second: SupportEffects_111
+  - first:
+      213: -1218853326514282795
+    second: SupportEffects_112
+  - first:
+      213: 8573273859974360898
+    second: SupportEffects_113
+  - first:
+      213: -1240284368999643726
+    second: SupportEffects_114
+  - first:
+      213: -105980052510330792
+    second: SupportEffects_115
+  - first:
+      213: -4294703810137938660
+    second: SupportEffects_116
+  - first:
+      213: 63918332632864143
+    second: SupportEffects_117
+  - first:
+      213: 6286325626382514446
+    second: SupportEffects_118
+  - first:
+      213: 6043846507536272900
+    second: SupportEffects_119
+  - first:
+      213: -2107420274236980898
+    second: SupportEffects_120
+  - first:
+      213: -5470715204722855863
+    second: SupportEffects_121
+  - first:
+      213: -900048854111319984
+    second: SupportEffects_122
+  - first:
+      213: 3654592125513451890
+    second: SupportEffects_123
+  - first:
+      213: -107575038652607200
+    second: SupportEffects_124
+  - first:
+      213: 6755287124825587979
+    second: SupportEffects_125
+  - first:
+      213: -5750063977243113888
+    second: SupportEffects_126
+  - first:
+      213: 1260868100987120174
+    second: SupportEffects_127
+  - first:
+      213: -4549924773576309884
+    second: SupportEffects_128
+  - first:
+      213: -3153633714795033438
+    second: SupportEffects_129
+  - first:
+      213: 5498956285937473368
+    second: SupportEffects_130
+  - first:
+      213: -6842004377753608083
+    second: SupportEffects_131
+  - first:
+      213: 4133741322087630589
+    second: SupportEffects_132
+  - first:
+      213: -5981247379297400401
+    second: SupportEffects_133
+  - first:
+      213: -3927068089561225705
+    second: SupportEffects_134
+  - first:
+      213: -6602605032061083019
+    second: SupportEffects_135
+  - first:
+      213: 2646966075718690148
+    second: SupportEffects_136
+  - first:
+      213: -103756041941154014
+    second: SupportEffects_137
+  - first:
+      213: -7703532738432030978
+    second: SupportEffects_138
+  - first:
+      213: -7565366069992789857
+    second: SupportEffects_139
+  - first:
+      213: -7969310400687703427
+    second: SupportEffects_140
+  - first:
+      213: -6861069857731800715
+    second: SupportEffects_141
+  - first:
+      213: 8211470799099677577
+    second: SupportEffects_142
+  - first:
+      213: 7786188129724648803
+    second: SupportEffects_143
+  - first:
+      213: 9068916766740348891
+    second: SupportEffects_144
+  - first:
+      213: -6242641428407570076
+    second: SupportEffects_145
+  - first:
+      213: -7600989525603908373
+    second: SupportEffects_146
+  - first:
+      213: 8537690009228691591
+    second: SupportEffects_147
+  - first:
+      213: 1251080926418029904
+    second: SupportEffects_148
+  - first:
+      213: -8957364572658893488
+    second: SupportEffects_149
+  - first:
+      213: -4988507671783608859
+    second: SupportEffects_150
+  - first:
+      213: -1076039262438722465
+    second: SupportEffects_151
+  - first:
+      213: 4383888393417348159
+    second: SupportEffects_152
+  - first:
+      213: -8791423716145799678
+    second: SupportEffects_153
+  - first:
+      213: 5895717270335360684
+    second: SupportEffects_154
+  - first:
+      213: 1399994405340531618
+    second: SupportEffects_155
+  - first:
+      213: 9033144164486156135
+    second: SupportEffects_156
+  - first:
+      213: -813879762659867370
+    second: SupportEffects_157
+  - first:
+      213: -5892323457628177649
+    second: SupportEffects_158
+  - first:
+      213: 2745903479226669480
+    second: SupportEffects_159
+  - first:
+      213: 3108395026373719864
+    second: SupportEffects_160
+  - first:
+      213: -7175281865672159209
+    second: SupportEffects_161
+  - first:
+      213: 6685931988360435918
+    second: SupportEffects_162
+  - first:
+      213: -5508325848052544357
+    second: SupportEffects_163
+  - first:
+      213: -5061313429965117713
+    second: SupportEffects_164
+  - first:
+      213: 2387821765958059912
+    second: SupportEffects_165
+  - first:
+      213: -7399577417515898702
+    second: SupportEffects_166
+  - first:
+      213: 4119894025449855380
+    second: SupportEffects_167
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SupportEffects_0
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 351
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7472657a1880f70800000000000000
+      internalID: 9153708798335469504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_1
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 339
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0b4041c6039ac480800000000000000
+      internalID: -8878122058186208501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_2
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 348
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88237ff1f23852510800000000000000
+      internalID: 1523768287357776520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_3
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 328
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 583a4be94c80ef0f0800000000000000
+      internalID: -1081417219953089659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_4
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 339
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bed615081960c0cb0800000000000000
+      internalID: -4896531472865726997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_5
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 315
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac7b7f3e910a04fa0800000000000000
+      internalID: -5818474685503391798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_6
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 244
+        width: 123
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7acfb99442006a830800000000000000
+      internalID: 4081950268111715495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_7
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 338
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90cdcdab651fe40a0800000000000000
+      internalID: -6895308624653132791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_8
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 335
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c48269cc342992240800000000000000
+      internalID: 4767502500441237580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_9
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 323
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a76f94dc556c837b0800000000000000
+      internalID: -5244223694254246278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_10
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 322
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7226957ecfbc7500800000000000000
+      internalID: 395401760758702716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_11
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 277
+        width: 52
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99cfd43ca184849c0800000000000000
+      internalID: -3942822193979851623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_12
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 326
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 041aef2c2cc15dcf0800000000000000
+      internalID: -228244583291641536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_13
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 250
+        width: 99
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2389cb98dbf45e4c0800000000000000
+      internalID: -4258910197130684366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_14
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 328
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cd98d6b516e65db0800000000000000
+      internalID: -4803398971607704127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_15
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 321
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8a9de4fae96fe0a0800000000000000
+      internalID: -6850140050354759025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_16
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 328
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e4280cfeafe0740800000000000000
+      internalID: 5120305734000725565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_17
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 322
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0d318d99a24a8fe0800000000000000
+      internalID: -1186062255599305461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_18
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 326
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbaa8ef65374a9500800000000000000
+      internalID: 403713411439438525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_19
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 270
+        width: 43
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 353f860f00f8a57e0800000000000000
+      internalID: -1775949868848057517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_20
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 318
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a01c8489738e0fb0800000000000000
+      internalID: -4679658404853313376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_21
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 315
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e375f1321fb16f0800000000000000
+      internalID: -712710982856131062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_22
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 298
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7a9f2b2980875b40800000000000000
+      internalID: 5428949202441837183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_23
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 306
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c026cfcc0242e3960800000000000000
+      internalID: 7583538545835139596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_24
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 314
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd6a9401093acdb0800000000000000
+      internalID: -4770938178710639177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_25
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 318
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b659a6dc4a3708bf0800000000000000
+      internalID: -324132021512530581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_26
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 319
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491e34d8cede3ac70800000000000000
+      internalID: 8981283682145001876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_27
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 293
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4757efde994af50800000000000000
+      internalID: 6891802577239110905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_28
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 250
+        width: 101
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e52210b8523726c0800000000000000
+      internalID: -4168307573615614487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_29
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 303
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcb2b86381b0ae100800000000000000
+      internalID: 137934937210432463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_30
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 289
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abc6d15a624cfb880800000000000000
+      internalID: -8592933893741646662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_31
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 293
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e0380488a9f5a60800000000000000
+      internalID: 7665015000796434026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_32
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 298
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50aeaf1c2e418fdd0800000000000000
+      internalID: -2452187032953624059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_33
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 283
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1545d973df63ab90800000000000000
+      internalID: -7231813622554082022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_34
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 301
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ba54f4d1c3be2b90800000000000000
+      internalID: -7264671503819187535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_35
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 270
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28b82f05e6bf583a0800000000000000
+      internalID: -6663643622401733758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_36
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 293
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e05305a7d0d0ad070800000000000000
+      internalID: 8131826428708664590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_37
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 293
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 269fff825ba0209e0800000000000000
+      internalID: -1656749939725698718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_38
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 293
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397401f8966442700800000000000000
+      internalID: 514613676612798355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_39
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 293
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71d291cdd3cf7a4a0800000000000000
+      internalID: -6582014987762848489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_40
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 278
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10d41bd3ac3b38830800000000000000
+      internalID: 4072296169272855809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_41
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 293
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4712f413ad48e090800000000000000
+      internalID: -8005062974824638645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_42
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 284
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6af2738b72f66270800000000000000
+      internalID: 8243542780248521326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_43
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 278
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f62d81b963989ad0800000000000000
+      internalID: -2695242294821574922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_44
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 278
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dde7f79b5b65fb150800000000000000
+      internalID: 5890522176125107933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_45
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 283
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 134b8c3276fe1ec30800000000000000
+      internalID: 4387050738296599601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_46
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 285
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3da6a6556d550b0800000000000000
+      internalID: -5740446487667878965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_47
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 275
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e77172ca077d7cc20800000000000000
+      internalID: 3226784536958801790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_48
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 261
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b459abf30c25387b0800000000000000
+      internalID: -5223240157163252405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_49
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 270
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc0224361decca510800000000000000
+      internalID: 1561850569499484364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_50
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 273
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99fb6b8dd102cf160800000000000000
+      internalID: 7060553628372090777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_51
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 267
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5ab7314dbb68f40800000000000000
+      internalID: 5730474095409866235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_52
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 270
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b29984e162a2673e0800000000000000
+      internalID: -2056409836642854613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_53
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 261
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2002fef8b8962e0a0800000000000000
+      internalID: -6853799634768289790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_54
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 261
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af625c9f7b1b37230800000000000000
+      internalID: 3635444727945701114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_55
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 267
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43d39f33777afb070800000000000000
+      internalID: 8124396383214583092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_56
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 260
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81dbad6941ecd46a0800000000000000
+      internalID: -6463283302381208296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_57
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 260
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0b1a8720f8034ab0800000000000000
+      internalID: -5025162931666806005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_58
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 265
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af736b6c12fdaf300800000000000000
+      internalID: 286786862452193274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_59
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 265
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e626ef13fcec399b0800000000000000
+      internalID: -5074484965824109970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_60
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 255
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1add496fedc9ead70800000000000000
+      internalID: 9056348382122270113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_61
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 255
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1afca2d02c03f6760800000000000000
+      internalID: 7453229518324158369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_62
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 253
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18846775e2df5fe40800000000000000
+      internalID: 5689732079730182273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_63
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 258
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02207816076cb0e0800000000000000
+      internalID: -2252812437714623988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_64
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 246
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8813e1a6ec7edf550800000000000000
+      internalID: 6196363536061313416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_65
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 133
+        width: 57
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd23980501b092420800000000000000
+      internalID: 2605626024109093597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_66
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 135
+        width: 53
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b7848e03727f93e0800000000000000
+      internalID: -2044789867312543823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_67
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 226
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d116752a5661fde80800000000000000
+      internalID: -8151772174746164963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_68
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 132
+        width: 53
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e046ffc23f75ef80800000000000000
+      internalID: -8077910500405002009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_69
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 215
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1345c48260916b110800000000000000
+      internalID: 1276235058642703409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_70
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 198
+        width: 49
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fadab13d20be5670800000000000000
+      internalID: 8529448452440644344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_71
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 216
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 750d3b421d85ca820800000000000000
+      internalID: 2930815112798523479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_72
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 210
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9368d5f0e1e9f210800000000000000
+      internalID: 1367372318197179293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_73
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 142
+        width: 46
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d96d79bc6826dd50800000000000000
+      internalID: 6761636337976961491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_74
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 206
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0c365b5600c8cb0800000000000000
+      internalID: -4860509461004697407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_75
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 202
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c251ca8b03bd7e680800000000000000
+      internalID: -8725764750703848148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_76
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 198
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87cb078a876e90af0800000000000000
+      internalID: -429558883540747144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_77
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 150
+        width: 31
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b13a14d6b8db5c550800000000000000
+      internalID: 6180554470166995739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_78
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 200
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd30d1ee7f4d11e50800000000000000
+      internalID: 6778433075486196703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_79
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 194
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 125dd47699e5016f0800000000000000
+      internalID: -715968327795747551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_80
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 156
+        width: 26
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b5184f16f4be470800000000000000
+      internalID: 8424914810059184939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_81
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 198
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a7a33a9eeaac560800000000000000
+      internalID: 7334867261615405707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_82
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 203
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f3e767b87fba1700800000000000000
+      internalID: 511932032853992440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_83
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 162
+        width: 32
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b32ad87b54cbfb460800000000000000
+      internalID: 7259728131962806843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_84
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 197
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62e6fc1e19dc4b6a0800000000000000
+      internalID: -6434291941163176410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_85
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 199
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f59fd8a735f661830800000000000000
+      internalID: 4041540119940692319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_86
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 193
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 105424e2c4f6a1a30800000000000000
+      internalID: 4186781176578589953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_87
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 200
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70971ae8e06915140800000000000000
+      internalID: 4706708074845534471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_88
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 196
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3d019db94d2f4e0800000000000000
+      internalID: -1949261922871225365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_89
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 181
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b91a44b5bce03ecb0800000000000000
+      internalID: -4836005308293406309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_90
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 139
+        width: 42
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee73071b9b120fc30800000000000000
+      internalID: 4391046718115821550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_91
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 187
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ee791b2f75dcdb0800000000000000
+      internalID: -4770059730442260943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_92
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 193
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebabfbfbfe53f4e30800000000000000
+      internalID: 4489866657342143166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_93
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 191
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d15fd3d075194cf50800000000000000
+      internalID: 6900800332108789021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_94
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 196
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf1f44398df37190800000000000000
+      internalID: -7965744550158327886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_95
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 188
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a87cd3de1e20360800000000000000
+      internalID: 7134513168768273052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_96
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 180
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba262a4bd13fa0df0800000000000000
+      internalID: -213090723436535125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_97
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 181
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54e9069ee8c8bfba0800000000000000
+      internalID: -6054090728640831931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_98
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 170
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1194d20d25c9026f0800000000000000
+      internalID: -711396861630658287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_99
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 181
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad0fb15d97dbd6ac0800000000000000
+      internalID: -3860220974622576422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_100
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 181
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b745cbdace4a28680800000000000000
+      internalID: -8754253389220785029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_101
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 181
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cc6237699cdf9200800000000000000
+      internalID: 189112260792315074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_102
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 179
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8961366f6e64b9a20800000000000000
+      internalID: 3070125528773236376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_103
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 172
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 536d02deda6e04770800000000000000
+      internalID: 8593121723704989237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_104
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 167
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c1ccd9a4c055740800000000000000
+      internalID: 5140028064327801864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_105
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 176
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757369e987bd25d70800000000000000
+      internalID: 9030521513934468951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_106
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 176
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b6237973ff00950800000000000000
+      internalID: 6413406483600534359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_107
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 170
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f288dbbbca8038d0800000000000000
+      internalID: -2868640355000483085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_108
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 171
+        width: 22
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59c94e83c47492340800000000000000
+      internalID: 4839477667283901589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_109
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 161
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ce833464ada94220800000000000000
+      internalID: 2470696792156769993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_110
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 161
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a16a4f11f8a8e6df0800000000000000
+      internalID: -185058187589409254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_111
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 166
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae863c1c01210190800000000000000
+      internalID: -7998075127336628566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_112
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 157
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5de10d77b53c51fe0800000000000000
+      internalID: -1218853326514282795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_113
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 163
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24fe9e907236af670800000000000000
+      internalID: 8573273859974360898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_114
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 150
+        width: 25
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b58e4d00ff99cee0800000000000000
+      internalID: -1240284368999643726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_115
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 157
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85038d824bb778ef0800000000000000
+      internalID: -105980052510330792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_116
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 160
+        width: 29
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c15263593a52664c0800000000000000
+      internalID: -4294703810137938660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_117
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 163
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f859737826513e000800000000000000
+      internalID: 63918332632864143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_118
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 151
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e09f6fec9d38d3750800000000000000
+      internalID: 6286325626382514446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_119
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 157
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e4fae706e00e350800000000000000
+      internalID: 6043846507536272900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_120
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 153
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5106a91d60f0c2e0800000000000000
+      internalID: -2107420274236980898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_121
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 138
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9407a23a18d1414b0800000000000000
+      internalID: -5470715204722855863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_122
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 153
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 058823af5526283f0800000000000000
+      internalID: -900048854111319984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_123
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 156
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2794b20ec28b7b230800000000000000
+      internalID: 3654592125513451890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_124
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 149
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02599628211d18ef0800000000000000
+      internalID: -107575038652607200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_125
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 145
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b01cff659d99fbd50800000000000000
+      internalID: 6755287124825587979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_126
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 141
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06687a0274ba330b0800000000000000
+      internalID: -5750063977243113888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_127
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 147
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2a65f38bd08f7110800000000000000
+      internalID: 1260868100987120174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_128
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 140
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4830c34668b6bd0c0800000000000000
+      internalID: -4549924773576309884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_129
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 149
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac42f558da0c34d0800000000000000
+      internalID: -3153633714795033438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_130
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 144
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85754ba7b97305c40800000000000000
+      internalID: 5498956285937473368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_131
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 144
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d602458d4415c01a0800000000000000
+      internalID: -6842004377753608083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_132
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 146
+        width: 15
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df60368b4dffd5930800000000000000
+      internalID: 4133741322087630589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_133
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 133
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa90e33d2375efca0800000000000000
+      internalID: -5981247379297400401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_134
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 138
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7166ee801604089c0800000000000000
+      internalID: -3927068089561225705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_135
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 22
+        width: 120
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 572eac794b5de54a0800000000000000
+      internalID: -6602605032061083019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_136
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 20
+        width: 125
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 465e8b32f99ebb420800000000000000
+      internalID: 2646966075718690148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_137
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 20
+        width: 125
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2270cc8fd626f8ef0800000000000000
+      internalID: -103756041941154014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_138
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 102
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef6aa2a1acd871590800000000000000
+      internalID: -7703532738432030978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_139
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 111
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f98694274ab620790800000000000000
+      internalID: -7565366069992789857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_140
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 102
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7afe2ee962576190800000000000000
+      internalID: -7969310400687703427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_141
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 90
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57191ced05598c0a0800000000000000
+      internalID: -6861069857731800715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_142
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 70
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b44df7f2105f170800000000000000
+      internalID: 8211470799099677577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_143
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 81
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36dc99ad9d81e0c60800000000000000
+      internalID: 7786188129724648803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_144
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 93
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf742b00c34bdd70800000000000000
+      internalID: 9068916766740348891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_145
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 89
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46131af12bead59a0800000000000000
+      internalID: -6242641428407570076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_146
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 81
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be40ae85c4cd38690800000000000000
+      internalID: -7600989525603908373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_147
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 38
+        width: 35
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7884a7a24d7fb7670800000000000000
+      internalID: 8537690009228691591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_148
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 78
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05dc96c597bbc5110800000000000000
+      internalID: 1251080926418029904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_149
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 60
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05d7ffa116c01b380800000000000000
+      internalID: -8957364572658893488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_150
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 75
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ede608e3b245cab0800000000000000
+      internalID: -4988507671783608859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_151
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 67
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5477fdedf32111f0800000000000000
+      internalID: -1076039262438722465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_152
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 80
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3459985443b6dc30800000000000000
+      internalID: 4383888393417348159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_153
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 73
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20e5f2985b69ef580800000000000000
+      internalID: -8791423716145799678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_154
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 69
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae897ade9bc1d150800000000000000
+      internalID: 5895717270335360684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_155
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 22
+        width: 113
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab4bd18e77cd6310800000000000000
+      internalID: 1399994405340531618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_156
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 26
+        width: 57
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76f071902cc2c5d70800000000000000
+      internalID: 9033144164486156135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_157
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 61
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61587c00ba484b4f0800000000000000
+      internalID: -813879762659867370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_158
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 44
+        width: 21
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0bfe5eb8034a3ea0800000000000000
+      internalID: -5892323457628177649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_159
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 68
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a990da7aa86b1620800000000000000
+      internalID: 2745903479226669480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_160
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 57
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 837b898becc332b20800000000000000
+      internalID: 3108395026373719864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_161
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 22
+        width: 50
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7101f41d8274c6c90800000000000000
+      internalID: -7175281865672159209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_162
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 62
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec815a648b339cc50800000000000000
+      internalID: 6685931988360435918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_163
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 51
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9cc9b753de7e83b0800000000000000
+      internalID: -5508325848052544357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_164
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 52
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe6e30e504a92c9b0800000000000000
+      internalID: -5061313429965117713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_165
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 34
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88740e2be3f332120800000000000000
+      internalID: 2387821765958059912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_166
+      rect:
+        serializedVersion: 2
+        x: 747
+        y: 38
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b866fc1b8b6f4990800000000000000
+      internalID: -7399577417515898702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SupportEffects_167
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 26
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 499513bb9cdcc2930800000000000000
+      internalID: 4119894025449855380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SupportEffects_0: 9153708798335469504
+      SupportEffects_1: -8878122058186208501
+      SupportEffects_10: 395401760758702716
+      SupportEffects_100: -8754253389220785029
+      SupportEffects_101: 189112260792315074
+      SupportEffects_102: 3070125528773236376
+      SupportEffects_103: 8593121723704989237
+      SupportEffects_104: 5140028064327801864
+      SupportEffects_105: 9030521513934468951
+      SupportEffects_106: 6413406483600534359
+      SupportEffects_107: -2868640355000483085
+      SupportEffects_108: 4839477667283901589
+      SupportEffects_109: 2470696792156769993
+      SupportEffects_11: -3942822193979851623
+      SupportEffects_110: -185058187589409254
+      SupportEffects_111: -7998075127336628566
+      SupportEffects_112: -1218853326514282795
+      SupportEffects_113: 8573273859974360898
+      SupportEffects_114: -1240284368999643726
+      SupportEffects_115: -105980052510330792
+      SupportEffects_116: -4294703810137938660
+      SupportEffects_117: 63918332632864143
+      SupportEffects_118: 6286325626382514446
+      SupportEffects_119: 6043846507536272900
+      SupportEffects_12: -228244583291641536
+      SupportEffects_120: -2107420274236980898
+      SupportEffects_121: -5470715204722855863
+      SupportEffects_122: -900048854111319984
+      SupportEffects_123: 3654592125513451890
+      SupportEffects_124: -107575038652607200
+      SupportEffects_125: 6755287124825587979
+      SupportEffects_126: -5750063977243113888
+      SupportEffects_127: 1260868100987120174
+      SupportEffects_128: -4549924773576309884
+      SupportEffects_129: -3153633714795033438
+      SupportEffects_13: -4258910197130684366
+      SupportEffects_130: 5498956285937473368
+      SupportEffects_131: -6842004377753608083
+      SupportEffects_132: 4133741322087630589
+      SupportEffects_133: -5981247379297400401
+      SupportEffects_134: -3927068089561225705
+      SupportEffects_135: -6602605032061083019
+      SupportEffects_136: 2646966075718690148
+      SupportEffects_137: -103756041941154014
+      SupportEffects_138: -7703532738432030978
+      SupportEffects_139: -7565366069992789857
+      SupportEffects_14: -4803398971607704127
+      SupportEffects_140: -7969310400687703427
+      SupportEffects_141: -6861069857731800715
+      SupportEffects_142: 8211470799099677577
+      SupportEffects_143: 7786188129724648803
+      SupportEffects_144: 9068916766740348891
+      SupportEffects_145: -6242641428407570076
+      SupportEffects_146: -7600989525603908373
+      SupportEffects_147: 8537690009228691591
+      SupportEffects_148: 1251080926418029904
+      SupportEffects_149: -8957364572658893488
+      SupportEffects_15: -6850140050354759025
+      SupportEffects_150: -4988507671783608859
+      SupportEffects_151: -1076039262438722465
+      SupportEffects_152: 4383888393417348159
+      SupportEffects_153: -8791423716145799678
+      SupportEffects_154: 5895717270335360684
+      SupportEffects_155: 1399994405340531618
+      SupportEffects_156: 9033144164486156135
+      SupportEffects_157: -813879762659867370
+      SupportEffects_158: -5892323457628177649
+      SupportEffects_159: 2745903479226669480
+      SupportEffects_16: 5120305734000725565
+      SupportEffects_160: 3108395026373719864
+      SupportEffects_161: -7175281865672159209
+      SupportEffects_162: 6685931988360435918
+      SupportEffects_163: -5508325848052544357
+      SupportEffects_164: -5061313429965117713
+      SupportEffects_165: 2387821765958059912
+      SupportEffects_166: -7399577417515898702
+      SupportEffects_167: 4119894025449855380
+      SupportEffects_17: -1186062255599305461
+      SupportEffects_18: 403713411439438525
+      SupportEffects_19: -1775949868848057517
+      SupportEffects_2: 1523768287357776520
+      SupportEffects_20: -4679658404853313376
+      SupportEffects_21: -712710982856131062
+      SupportEffects_22: 5428949202441837183
+      SupportEffects_23: 7583538545835139596
+      SupportEffects_24: -4770938178710639177
+      SupportEffects_25: -324132021512530581
+      SupportEffects_26: 8981283682145001876
+      SupportEffects_27: 6891802577239110905
+      SupportEffects_28: -4168307573615614487
+      SupportEffects_29: 137934937210432463
+      SupportEffects_3: -1081417219953089659
+      SupportEffects_30: -8592933893741646662
+      SupportEffects_31: 7665015000796434026
+      SupportEffects_32: -2452187032953624059
+      SupportEffects_33: -7231813622554082022
+      SupportEffects_34: -7264671503819187535
+      SupportEffects_35: -6663643622401733758
+      SupportEffects_36: 8131826428708664590
+      SupportEffects_37: -1656749939725698718
+      SupportEffects_38: 514613676612798355
+      SupportEffects_39: -6582014987762848489
+      SupportEffects_4: -4896531472865726997
+      SupportEffects_40: 4072296169272855809
+      SupportEffects_41: -8005062974824638645
+      SupportEffects_42: 8243542780248521326
+      SupportEffects_43: -2695242294821574922
+      SupportEffects_44: 5890522176125107933
+      SupportEffects_45: 4387050738296599601
+      SupportEffects_46: -5740446487667878965
+      SupportEffects_47: 3226784536958801790
+      SupportEffects_48: -5223240157163252405
+      SupportEffects_49: 1561850569499484364
+      SupportEffects_5: -5818474685503391798
+      SupportEffects_50: 7060553628372090777
+      SupportEffects_51: 5730474095409866235
+      SupportEffects_52: -2056409836642854613
+      SupportEffects_53: -6853799634768289790
+      SupportEffects_54: 3635444727945701114
+      SupportEffects_55: 8124396383214583092
+      SupportEffects_56: -6463283302381208296
+      SupportEffects_57: -5025162931666806005
+      SupportEffects_58: 286786862452193274
+      SupportEffects_59: -5074484965824109970
+      SupportEffects_6: 4081950268111715495
+      SupportEffects_60: 9056348382122270113
+      SupportEffects_61: 7453229518324158369
+      SupportEffects_62: 5689732079730182273
+      SupportEffects_63: -2252812437714623988
+      SupportEffects_64: 6196363536061313416
+      SupportEffects_65: 2605626024109093597
+      SupportEffects_66: -2044789867312543823
+      SupportEffects_67: -8151772174746164963
+      SupportEffects_68: -8077910500405002009
+      SupportEffects_69: 1276235058642703409
+      SupportEffects_7: -6895308624653132791
+      SupportEffects_70: 8529448452440644344
+      SupportEffects_71: 2930815112798523479
+      SupportEffects_72: 1367372318197179293
+      SupportEffects_73: 6761636337976961491
+      SupportEffects_74: -4860509461004697407
+      SupportEffects_75: -8725764750703848148
+      SupportEffects_76: -429558883540747144
+      SupportEffects_77: 6180554470166995739
+      SupportEffects_78: 6778433075486196703
+      SupportEffects_79: -715968327795747551
+      SupportEffects_8: 4767502500441237580
+      SupportEffects_80: 8424914810059184939
+      SupportEffects_81: 7334867261615405707
+      SupportEffects_82: 511932032853992440
+      SupportEffects_83: 7259728131962806843
+      SupportEffects_84: -6434291941163176410
+      SupportEffects_85: 4041540119940692319
+      SupportEffects_86: 4186781176578589953
+      SupportEffects_87: 4706708074845534471
+      SupportEffects_88: -1949261922871225365
+      SupportEffects_89: -4836005308293406309
+      SupportEffects_9: -5244223694254246278
+      SupportEffects_90: 4391046718115821550
+      SupportEffects_91: -4770059730442260943
+      SupportEffects_92: 4489866657342143166
+      SupportEffects_93: 6900800332108789021
+      SupportEffects_94: -7965744550158327886
+      SupportEffects_95: 7134513168768273052
+      SupportEffects_96: -213090723436535125
+      SupportEffects_97: -6054090728640831931
+      SupportEffects_98: -711396861630658287
+      SupportEffects_99: -3860220974622576422
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

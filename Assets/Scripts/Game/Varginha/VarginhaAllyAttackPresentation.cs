@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Game.Varginha
@@ -8,23 +9,34 @@ namespace Game.Varginha
     public sealed class VarginhaAllyAttackPresentation : MonoBehaviour
     {
         private GameObject _root;
+        private GameObject _pooledRoot;
+        private readonly List<SpriteRenderer> _parts=new();
+        private int _partCursor;
         private string _caption;
         private Vector3 _captionPosition;
         private Color _color;
-        private GUIStyle _label;
+        private string _captionCharacter,_captionAbility;
+        private int _captionLane;
         private static Sprite _ring, _star, _disc;
         public static Sprite MarkerSprite { get { EnsureShapes(); return _ring; } }
         public bool IsPresenting => _root != null;
 
         public IEnumerator Play(string student, VarginhaStudentAllyStyle style, Color color,
-            Vector3 source, Vector3 destination, Func<bool> canAdvance, Action impact, float areaRadius = 1.6f)
+            Vector3 source, Vector3 destination, Func<bool> canAdvance, Action impact, float areaRadius = 1.6f,int variant=0)
         {
             Cancel(); EnsureShapes();
+            bool authored=Experiment.CampaignHeroArt.Available(student);
+            if(authored)color=Experiment.CampaignHeroArt.ColorFor(student);
             _color = color;
-            _caption = student.ToUpperInvariant() + " • " + Signature(student, style);
-            _root = new GameObject("Animacao_" + student);
+            _caption = student.ToUpperInvariant() + " • " + (authored?Experiment.CampaignHeroArt.AttackName(student,variant):Signature(student, style));
+            _captionCharacter=student;_captionAbility=authored?Experiment.CampaignHeroArt.AttackName(student,variant):Signature(student,style);
+            _captionLane=0;
+            _root=_pooledRoot!=null?_pooledRoot:(_pooledRoot=new GameObject("Animacao_"+student));
+            _root.SetActive(true);_partCursor=0;
             var presentationRoot = _root;
             _captionPosition = destination + Vector3.up * 2.3f;
+            var targetVisual=GetComponent<VarginhaStudentAlly>()?.CurrentTarget?.GetComponent<SpriteRenderer>();
+            if(targetVisual!=null)_captionPosition.y=Mathf.Max(_captionPosition.y,targetVisual.bounds.max.y+.6f);
             var actor = Part("Aluno", VarginhaPixelArtSprites.Create("Student_" + student, color), Color.white, 1.55f, 110);
             var shadow = Part("Sombra_do_aluno", _disc, new Color(.015f, .025f, .045f, .45f), 1f, 100);
             shadow.transform.localScale = new Vector3(1.4f, .4f, 1f);
@@ -41,6 +53,10 @@ namespace Game.Varginha
             warning.transform.position = destination;
             float warningRadius = style == VarginhaStudentAllyStyle.PingPong || style == VarginhaStudentAllyStyle.Katana
                 ? .75f : areaRadius;
+            // The authored effects and their particles extend up to 2.5 units from contact.
+            // This ring documents the animation footprint, rather than clipping it.
+            if(authored)warningRadius=Mathf.Max(2.6f,areaRadius);
+            warning.transform.localScale=Vector3.one*(warningRadius/.44f);
             var areaGlow = Part("Iluminacao_da_area", VarginhaSceneryArt.Create("AttackGlow", new Vector2(2.5f, 2.5f)),
                 Color.white, 1f, 30002);
             areaGlow.enabled = false;
@@ -59,7 +75,7 @@ namespace Game.Varginha
                 trails[i] = Part("Rastro_pixel_" + i, trailSprite, new Color(color.r, color.g, color.b, .45f - i * .08f), .45f + i * .08f, 108);
                 trails[i].enabled = false;
             }
-            SpriteRenderer[] particles = new SpriteRenderer[12];
+            SpriteRenderer[] particles = new SpriteRenderer[authored?(style==VarginhaStudentAllyStyle.Art?32:variant==1?28:20):12];
             for (int i = 0; i < particles.Length; i++)
                 particles[i] = Part("Particula", i % 3 == 0 ? _star : _disc,
                     style == VarginhaStudentAllyStyle.Art ? Color.HSVToRGB(i / 12f,.7f,1f) : Color.Lerp(color,Color.white,i%3*.3f), .01f, 115);
@@ -71,6 +87,7 @@ namespace Game.Varginha
             Vector3 start = destination + (source - destination).normalized * 2.1f;
             if ((start - destination).sqrMagnitude < .01f) start = destination + Vector3.left * 2.1f;
             float sign = destination.x >= source.x ? 1 : -1;
+            if(authored)burst.sprite=Experiment.CampaignHeroArt.Effect(student,variant,1);
             while (time < anticipation + action + recovery)
             {
                 if (presentationRoot == null || _root != presentationRoot) yield break;
@@ -165,6 +182,19 @@ namespace Game.Varginha
                         weapon.transform.localScale = Vector3.one*(1.3f + move*.7f);
                         break;
                 }
+                if(authored)
+                {
+                    int pose=time<anticipation?0:time<anticipation+action?1:2;
+                    actor.sprite=Experiment.CampaignHeroArt.Pose(student,variant,sign<0,pose);
+                    actor.transform.localScale=Vector3.one;actor.transform.rotation=Quaternion.identity;
+                    actor.transform.position=Vector3.Lerp(start,destination+Vector3.left*sign*.8f,ease);
+                    shadow.transform.position=actor.transform.position-Vector3.up*.58f;
+                    weapon.enabled=style==VarginhaStudentAllyStyle.FallingPiano;
+                    if(weapon.enabled)weapon.sprite=Experiment.CampaignHeroArt.Effect(student,variant,0);
+                    ball.enabled=false;
+                    halo.sprite=Experiment.CampaignHeroArt.Effect(student,variant,move>=1?1:0);halo.flipX=sign<0;
+                    halo.transform.position=variant==1?destination:Vector3.Lerp(start,destination,ease);halo.transform.localScale=Vector3.one*(.6f+move*.8f);halo.enabled=move>0;
+                }
                 DrawPixelTrail(trails, actor.transform.position, destination, sign, move, time, style);
                 if (volleyball && move > 0f && !struck)
                     for (int i = 0; i < trails.Length; i++)
@@ -180,21 +210,21 @@ namespace Game.Varginha
                 if (struck)
                 {
                     warning.enabled = false;
-                    Color glowColor = AttackGlowColor(style, color, time);
+                    Color glowColor = authored&&style!=VarginhaStudentAllyStyle.Art?color:AttackGlowColor(style, color, time);
                     areaGlow.enabled = true;
                     glowColor = Color.Lerp(glowColor, Color.white, .12f);
                     areaGlow.color = new Color(glowColor.r, glowColor.g, glowColor.b, (1f - after) * .9f);
                     float pulse = 1f + Mathf.Sin(time * 11f) * .045f;
                     areaGlow.transform.localScale = Vector3.one * (Mathf.Max(.55f, warningRadius / 1.25f) * pulse);
                     burst.transform.position = destination;
-                    burst.transform.localScale = Vector3.one*(2.6f + after*.8f);
-                    burst.transform.rotation = Quaternion.Euler(0,0,after*35);
-                    Color burstColor = customImpact ? Color.white : color;
+                    burst.transform.localScale = Vector3.one*(authored?1.1f+after*.3f:2.6f + after*.8f);
+                    burst.transform.rotation = authored?Quaternion.identity:Quaternion.Euler(0,0,after*35);
+                    Color burstColor = authored||customImpact ? Color.white : color;
                     burst.color = new Color(burstColor.r,burstColor.g,burstColor.b,(1-after)*.85f);
                     halo.transform.position = destination;
-                    halo.transform.localScale = Vector3.one*(1.1f + after*3.2f);
+                    halo.transform.localScale = Vector3.one*(authored?.65f+after*.9f:1.1f + after*3.2f);
                     halo.color = new Color(1,1,1,1-after);
-                    actor.transform.position += Vector3.up*after*.8f;
+                    if(!authored)actor.transform.position += Vector3.up*after*.8f;
                     actor.color = new Color(1,1,1,1-after);
                     shadow.color = new Color(.015f,.025f,.045f,(1-after)*.45f);
                     weapon.color = new Color(1,1,1,1-after);
@@ -203,9 +233,11 @@ namespace Game.Varginha
                         ball.transform.position = destination + new Vector3(sign * after * 1.2f, Mathf.Sin(after * Mathf.PI) * 1.6f, 0);
                     for (int i = 0; i < particles.Length; i++)
                     {
-                        float angle = i*Mathf.PI*2/particles.Length;
-                        particles[i].transform.position = destination + new Vector3(Mathf.Cos(angle),Mathf.Sin(angle),0)*(after*2f + .3f);
-                        particles[i].transform.localScale = Vector3.one*((i%3==0 ? .35f:.16f)*(1-after));
+                        float stagger=(i%4)*.035f,progress=Mathf.Clamp01((after-stagger)/(1-stagger));
+                        float angle=i*2.399963f;
+                        particles[i].transform.position = destination + new Vector3(Mathf.Cos(angle),Mathf.Sin(angle),0)*(progress*2.15f + .25f);
+                        particles[i].transform.localScale = Vector3.one*((i%3==0 ? .35f:.16f)*(1-progress));
+                        var particleColor=particles[i].color;particleColor.a=(1-progress)*.82f;particles[i].color=particleColor;
                         particles[i].transform.Rotate(0,0,Time.deltaTime*220);
                     }
                     for (int i = 0; i < trails.Length; i++) trails[i].color = new Color(color.r, color.g, color.b, (1 - after) * (.45f - i * .08f));
@@ -270,6 +302,7 @@ namespace Game.Varginha
         {
             if (_root == null || string.IsNullOrWhiteSpace(quote)) return;
             _caption = student.ToUpperInvariant() + ": \"" + quote + "\"";
+            _captionCharacter=student;_captionAbility=quote;
             _captionPosition = destination + Vector3.up * 2.3f;
         }
 
@@ -328,7 +361,8 @@ namespace Game.Varginha
                 }
                 clip=AudioClip.Create("Impacto_"+style,count,1,rate,false);clip.SetData(samples,0);Sounds[style]=clip;
             }
-            var audio=_root.AddComponent<AudioSource>();audio.playOnAwake=false;audio.spatialBlend=0;audio.volume=.35f;audio.PlayOneShot(clip);
+            var audio=_root.GetComponent<AudioSource>();if(audio==null)audio=_root.AddComponent<AudioSource>();
+            audio.playOnAwake=false;audio.spatialBlend=0;audio.volume=.35f;audio.PlayOneShot(clip);
         }
 
         private static Color AttackGlowColor(VarginhaStudentAllyStyle style, Color studentColor, float time)
@@ -369,25 +403,29 @@ namespace Game.Varginha
         }
         private SpriteRenderer Part(string name, Sprite sprite, Color color, float size, int order)
         {
-            var go = new GameObject(name); go.transform.SetParent(_root.transform);
-            var renderer = go.AddComponent<SpriteRenderer>(); renderer.sprite = sprite; renderer.color = color; renderer.sortingOrder = order;
+            SpriteRenderer renderer;
+            if(_partCursor<_parts.Count&&_parts[_partCursor]!=null)renderer=_parts[_partCursor];
+            else
+            {
+                var part=new GameObject(name);part.transform.SetParent(_root.transform);renderer=part.AddComponent<SpriteRenderer>();
+                if(_partCursor<_parts.Count)_parts[_partCursor]=renderer;else _parts.Add(renderer);
+            }
+            _partCursor++;var go=renderer.gameObject;go.name=name;go.SetActive(true);go.transform.SetPositionAndRotation(Vector3.zero,Quaternion.identity);
+            renderer.enabled=true;renderer.flipX=renderer.flipY=false;renderer.sprite = sprite; renderer.color = color;
+            // World actors use sorting groups up to 22000. Offensive effects stay above them;
+            // the ground shadow and anticipation ring remain on the floor.
+            renderer.sortingOrder=order==100||order==101?order:order<30000?30000+order-100:order;
             go.transform.localScale = Vector3.one * size;
             return renderer;
         }
-        public void Cancel() { StopAllCoroutines(); if (_root != null) Destroy(_root); _root = null; }
+        public void Cancel() { StopAllCoroutines();foreach(var part in _parts)if(part!=null)part.gameObject.SetActive(false);if(_pooledRoot!=null)_pooledRoot.SetActive(false);_root=null; }
         private void OnDisable() => Cancel();
+        private void OnDestroy(){if(_pooledRoot!=null)Destroy(_pooledRoot);}
         private void OnGUI()
         {
             if (VarginhaWorldFeedback.IsHidden) return;
             if (_root == null || Camera.main == null) return;
-            if (_label == null) _label = new GUIStyle(GUI.skin.label) { fontSize = 17, fontStyle = FontStyle.Bold, alignment = TextAnchor.MiddleCenter };
-            Vector3 point = Camera.main.WorldToScreenPoint(_captionPosition);
-            if (point.z <= 0) return;
-            var rect = new Rect(Mathf.Clamp(point.x-220,0,Mathf.Max(0,Screen.width-440)),Mathf.Clamp(Screen.height-point.y,20,Screen.height-55),440,40);
-            var previous = GUI.color;
-            GUI.color = new Color(.015f,.025f,.06f,.9f); GUI.DrawTexture(rect,Texture2D.whiteTexture);
-            GUI.color = _color; GUI.DrawTexture(new Rect(rect.x,rect.yMax-3,rect.width,3),Texture2D.whiteTexture);
-            GUI.color = Color.white; GUI.Label(rect,_caption,_label); GUI.color = previous;
+            Experiment.CampaignAttackCaption.Draw(_captionPosition,_captionCharacter??"",_captionAbility??_caption,_color,_captionLane);
         }
         private static void EnsureShapes()
         {

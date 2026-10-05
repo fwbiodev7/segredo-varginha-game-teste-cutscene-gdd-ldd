@@ -1,0 +1,94 @@
+{
+  "coordinateOrigin": "bottom-left",
+  "alphaCutoff": 0.8627450980392157,
+  "pixelsPerUnit": 64,
+  "pivot": [
+    0.5,
+    0.5
+  ],
+  "sourceWidth": 1536,
+  "sourceHeight": 1024,
+  "sourceFormat": "RGBA",
+  "furniture": [
+    {
+      "name": "Church_Altar",
+      "sheet": "ChurchFurniture",
+      "x": 32,
+      "y": 574,
+      "width": 286,
+      "height": 330
+    },
+    {
+      "name": "Church_Pew",
+      "sheet": "ChurchFurniture",
+      "x": 350,
+      "y": 577,
+      "width": 348,
+      "height": 243
+    },
+    {
+      "name": "Church_Lectern",
+      "sheet": "ChurchFurniture",
+      "x": 725,
+      "y": 573,
+      "width": 204,
+      "height": 319
+    },
+    {
+      "name": "Church_Archive",
+      "sheet": "ChurchFurniture",
+      "x": 962,
+      "y": 574,
+      "width": 270,
+      "height": 358
+    },
+    {
+      "name": "Church_Organ",
+      "sheet": "ChurchFurniture",
+      "x": 1253,
+      "y": 562,
+      "width": 261,
+      "height": 391
+    },
+    {
+      "name": "Church_Font",
+      "sheet": "ChurchFurniture",
+      "x": 53,
+      "y": 90,
+      "width": 255,
+      "height": 300
+    },
+    {
+      "name": "Church_Column",
+      "sheet": "ChurchFurniture",
+      "x": 409,
+      "y": 94,
+      "width": 167,
+      "height": 402
+    },
+    {
+      "name": "Church_Window",
+      "sheet": "ChurchFurniture",
+      "x": 678,
+      "y": 113,
+      "width": 219,
+      "height": 380
+    },
+    {
+      "name": "Church_Runner",
+      "sheet": "ChurchFurniture",
+      "x": 1000,
+      "y": 90,
+      "width": 150,
+      "height": 444
+    },
+    {
+      "name": "Church_Banner",
+      "sheet": "ChurchFurniture",
+      "x": 1278,
+      "y": 75,
+      "width": 197,
+      "height": 452
+    }
+  ]
+}

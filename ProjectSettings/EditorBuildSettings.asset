@@ -47,5 +47,65 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ato2_Fase5_O_Codigo_das_2323.unity
     guid: e8693e5ae5ffbcd47a3a951cfd5c1a57
+  - enabled: 1
+    path: Assets/Scenes/Ato3_Fase6_Fragmentos.unity
+    guid: cb7d7d0e205d2c24d9a13624cbd3a208
+  - enabled: 1
+    path: Assets/Scenes/Ato3_Fase7_A_Mata.unity
+    guid: 30ad62e9e543bd547b8615b208802aa3
+  - enabled: 1
+    path: Assets/Scenes/Ato3_Fase8_A_Ancora.unity
+    guid: 9b319817a3d3a6544be3a006cafc24f9
+  - enabled: 1
+    path: Assets/Scenes/Ato4_Fase9_Ouzana.unity
+    guid: fdc90a63d4e50b448aace465cdd98dd3
+  - enabled: 1
+    path: Assets/Scenes/Ato4_Fase10_O_Fusca_Marcado.unity
+    guid: 659eb12b01feb714084cd37ba2c51576
+  - enabled: 1
+    path: Assets/Scenes/Ato4_Fase11_Arquivos_Alterados.unity
+    guid: fb829f764f7dbf1478076dd971383faa
+  - enabled: 1
+    path: Assets/Scenes/Ato4_Fase12_Casarao_de_Ze_Gomes.unity
+    guid: 616681e8adb61624c8c76ac6ea9e038a
+  - enabled: 1
+    path: Assets/Scenes/Ato4_Fase12_Casarao_de_Ze_Gomes_Area1.unity
+    guid: 271c62bfedb679549b5e2d34d3145b71
+  - enabled: 1
+    path: Assets/Scenes/Ato4_Fase13_Registros_de_1898.unity
+    guid: 284ce0662abd77d41860dade211ad328
+  - enabled: 1
+    path: Assets/Scenes/Ato5_Fase14_O_Que_Fabio_Escondeu.unity
+    guid: 6eda0d6915f77a34f9518655f70683e4
+  - enabled: 1
+    path: Assets/Scenes/Ato5_Fase15_A_Noite_Interrompida.unity
+    guid: 941a3bf9a543bf34ab282a87af025c93
+  - enabled: 1
+    path: Assets/Scenes/Ato5_Fase16_A_Descida.unity
+    guid: 19156fd4e98b43e4cb9c6a508b4b21f7
+  - enabled: 1
+    path: Assets/Scenes/Ato5_Fase17_Camaras_do_Selo.unity
+    guid: a0bbaa4081f1a224fbba96f8edcb82fb
+  - enabled: 1
+    path: Assets/Scenes/Ato5_Fase17_Camaras_do_Selo_Area1.unity
+    guid: 356590cd4ca61f24688780acfa05ca6e
+  - enabled: 1
+    path: Assets/Scenes/Ato5_Fase17_Camaras_do_Selo_Area2.unity
+    guid: 5c276d32b2fb5e546a20e6049bddf596
+  - enabled: 1
+    path: Assets/Scenes/Ato6_Fase18_A_Criatura_Ferida.unity
+    guid: 8a6bedd0ae22aa14ebd676e74b504463
+  - enabled: 1
+    path: Assets/Scenes/Ato6_Fase19_O_Acordo_Esquecido.unity
+    guid: e9f8b6f9c38e8b84680bdfc733391fe8
+  - enabled: 1
+    path: Assets/Scenes/Ato6_Fase20_O_Verdadeiro_Segredo.unity
+    guid: 92ed3c8ae19b2f94fbc67b408c012484
+  - enabled: 1
+    path: Assets/Scenes/Ato6_Fase21_O_Retorno.unity
+    guid: 8b064af440e4ad848a471fc45fe75eab
+  - enabled: 1
+    path: Assets/Scenes/Ato6_Fase21_O_Retorno_Area1.unity
+    guid: a2b56f927f6bc0144833f8772324df10
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

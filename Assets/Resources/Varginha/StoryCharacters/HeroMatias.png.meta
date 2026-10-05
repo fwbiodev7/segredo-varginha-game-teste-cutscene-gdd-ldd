@@ -1,0 +1,795 @@
+fileFormatVersion: 2
+guid: f66ee4697def3954d9e3214df61bc257
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8774881647305355631
+    second: HeroMatias_0
+  - first:
+      213: 5112841817456270914
+    second: HeroMatias_1
+  - first:
+      213: 8783668812253080220
+    second: HeroMatias_2
+  - first:
+      213: 8508934568167147738
+    second: HeroMatias_3
+  - first:
+      213: 1527837700799956919
+    second: HeroMatias_4
+  - first:
+      213: 4883159813657625502
+    second: HeroMatias_5
+  - first:
+      213: 1744756777518105262
+    second: HeroMatias_6
+  - first:
+      213: 7115105026652982927
+    second: HeroMatias_7
+  - first:
+      213: 6759955681803977816
+    second: HeroMatias_8
+  - first:
+      213: -4482558663485734158
+    second: HeroMatias_9
+  - first:
+      213: 7114569753464982172
+    second: HeroMatias_10
+  - first:
+      213: 8504287435891844444
+    second: HeroMatias_11
+  - first:
+      213: 279424065973520750
+    second: HeroMatias_12
+  - first:
+      213: -7216115351615397953
+    second: HeroMatias_13
+  - first:
+      213: 4459900396484743759
+    second: HeroMatias_14
+  - first:
+      213: 2526704548048742481
+    second: HeroMatias_15
+  - first:
+      213: -4112762708172437394
+    second: HeroMatias_16
+  - first:
+      213: -1596397380387127929
+    second: HeroMatias_17
+  - first:
+      213: 7065847615718990343
+    second: HeroMatias_18
+  - first:
+      213: -4740008826305730570
+    second: HeroMatias_19
+  - first:
+      213: 2919502443466137624
+    second: HeroMatias_20
+  - first:
+      213: 7496201500457140032
+    second: HeroMatias_21
+  - first:
+      213: 6746919703148698499
+    second: HeroMatias_22
+  - first:
+      213: 3069365456698907237
+    second: HeroMatias_23
+  - first:
+      213: -6361918192730604376
+    second: HeroMatias_24
+  - first:
+      213: 4083203664637985653
+    second: HeroMatias_25
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeroMatias_0
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 239
+        width: 48
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19e054212ab593680800000000000000
+      internalID: -8774881647305355631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 241
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e5e324b8674f640800000000000000
+      internalID: 5112841817456270914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_2
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 241
+        width: 35
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9aa5033f3cd5e970800000000000000
+      internalID: 8783668812253080220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_3
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 241
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad805a058eec51670800000000000000
+      internalID: 8508934568167147738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 241
+        width: 33
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b781a64b48f33510800000000000000
+      internalID: 1527837700799956919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_5
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 241
+        width: 29
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93868a7af774c340800000000000000
+      internalID: 4883159813657625502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_6
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 239
+        width: 36
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea20c678b0f963810800000000000000
+      internalID: 1744756777518105262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_7
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 241
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8e4f35035eedb260800000000000000
+      internalID: 7115105026652982927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_8
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 241
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8544f4770ef20dd50800000000000000
+      internalID: 6759955681803977816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_9
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 238
+        width: 44
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f2451a25a0cac1c0800000000000000
+      internalID: -4482558663485734158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_10
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 125
+        width: 87
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9ac4050f770cb260800000000000000
+      internalID: 7114569753464982172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_11
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 125
+        width: 106
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c55a6248d5c450670800000000000000
+      internalID: 8504287435891844444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_12
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 151
+        width: 24
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e690c0225b6b0e300800000000000000
+      internalID: 279424065973520750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_13
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 125
+        width: 88
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf98b002553bdb90800000000000000
+      internalID: -7216115351615397953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_14
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 125
+        width: 84
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f42d812f7cfb4ed30800000000000000
+      internalID: 4459900396484743759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_15
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 147
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1582fce3668a01320800000000000000
+      internalID: 2526704548048742481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_16
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 125
+        width: 107
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6888e57b188ce6c0800000000000000
+      internalID: -4112762708172437394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_17
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 125
+        width: 86
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d39a56a0578d9e0800000000000000
+      internalID: -1596397380387127929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_18
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 19
+        width: 92
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 702a8f358feee0260800000000000000
+      internalID: 7065847615718990343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_19
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 19
+        width: 106
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7a4db061b183eb0800000000000000
+      internalID: -4740008826305730570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_20
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 21
+        width: 92
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8102faf0108248820800000000000000
+      internalID: 2919502443466137624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_21
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 27
+        width: 47
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04f7f7f4c8bd70860800000000000000
+      internalID: 7496201500457140032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_22
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 19
+        width: 101
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38b134a29bfd1ad50800000000000000
+      internalID: 6746919703148698499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_23
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 20
+        width: 93
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a9464ee93989a20800000000000000
+      internalID: 3069365456698907237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_24
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 27
+        width: 39
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ac72305c1de5b7a0800000000000000
+      internalID: -6361918192730604376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMatias_25
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 20
+        width: 104
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 573025869147aa830800000000000000
+      internalID: 4083203664637985653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HeroMatias_0: -8774881647305355631
+      HeroMatias_1: 5112841817456270914
+      HeroMatias_10: 7114569753464982172
+      HeroMatias_11: 8504287435891844444
+      HeroMatias_12: 279424065973520750
+      HeroMatias_13: -7216115351615397953
+      HeroMatias_14: 4459900396484743759
+      HeroMatias_15: 2526704548048742481
+      HeroMatias_16: -4112762708172437394
+      HeroMatias_17: -1596397380387127929
+      HeroMatias_18: 7065847615718990343
+      HeroMatias_19: -4740008826305730570
+      HeroMatias_2: 8783668812253080220
+      HeroMatias_20: 2919502443466137624
+      HeroMatias_21: 7496201500457140032
+      HeroMatias_22: 6746919703148698499
+      HeroMatias_23: 3069365456698907237
+      HeroMatias_24: -6361918192730604376
+      HeroMatias_25: 4083203664637985653
+      HeroMatias_3: 8508934568167147738
+      HeroMatias_4: 1527837700799956919
+      HeroMatias_5: 4883159813657625502
+      HeroMatias_6: 1744756777518105262
+      HeroMatias_7: 7115105026652982927
+      HeroMatias_8: 6759955681803977816
+      HeroMatias_9: -4482558663485734158
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

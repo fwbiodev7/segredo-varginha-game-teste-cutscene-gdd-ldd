@@ -1,0 +1,431 @@
+fileFormatVersion: 2
+guid: c890d2db5e66d56428204b1bab24bd7d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2797440365676335950
+    second: HeroAnnaSabiaEffects_0
+  - first:
+      213: 1638947521059281632
+    second: HeroAnnaSabiaEffects_1
+  - first:
+      213: -6373193534534926427
+    second: HeroAnnaSabiaEffects_2
+  - first:
+      213: -9057575656731200163
+    second: HeroAnnaSabiaEffects_3
+  - first:
+      213: 4745680574976868991
+    second: HeroAnnaSabiaEffects_4
+  - first:
+      213: -3364813451771938930
+    second: HeroAnnaSabiaEffects_5
+  - first:
+      213: 8406298160374923806
+    second: HeroAnnaSabiaEffects_6
+  - first:
+      213: 4798009527377362595
+    second: HeroAnnaSabiaEffects_7
+  - first:
+      213: 4139449854443868166
+    second: HeroAnnaSabiaEffects_8
+  - first:
+      213: -8498706833263755314
+    second: HeroAnnaSabiaEffects_9
+  - first:
+      213: 8342297076557520246
+    second: HeroAnnaSabiaEffects_10
+  - first:
+      213: 879237721430162383
+    second: HeroAnnaSabiaEffects_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeroAnnaSabiaEffects_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 243
+        width: 27
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bce5831fce7d29d0800000000000000
+      internalID: -2797440365676335950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabiaEffects_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 243
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eade3e3616beb610800000000000000
+      internalID: 1638947521059281632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabiaEffects_2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 168
+        width: 73
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5afba393f3edd87a0800000000000000
+      internalID: -6373193534534926427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabiaEffects_3
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 152
+        width: 116
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d55bf46ede60d4280800000000000000
+      internalID: -9057575656731200163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabiaEffects_4
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 28
+        width: 136
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f72c7f8d65b0cd140800000000000000
+      internalID: 4745680574976868991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabiaEffects_5
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 87
+        width: 38
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e877daf3ef7cd41d0800000000000000
+      internalID: -3364813451771938930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabiaEffects_6
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 47
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12ca2d63ab29a470800000000000000
+      internalID: 8406298160374923806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabiaEffects_7
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 67
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ae74448e34f59240800000000000000
+      internalID: 4798009527377362595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabiaEffects_8
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 71
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6005babf5b7427930800000000000000
+      internalID: 4139449854443868166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabiaEffects_9
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 65
+        width: 33
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecff029c9278e0a80800000000000000
+      internalID: -8498706833263755314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabiaEffects_10
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 38
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67d9df2edfac5c370800000000000000
+      internalID: 8342297076557520246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroAnnaSabiaEffects_11
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 34
+        width: 52
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcbf7fa9c0ea33c00800000000000000
+      internalID: 879237721430162383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HeroAnnaSabiaEffects_0: -2797440365676335950
+      HeroAnnaSabiaEffects_1: 1638947521059281632
+      HeroAnnaSabiaEffects_10: 8342297076557520246
+      HeroAnnaSabiaEffects_11: 879237721430162383
+      HeroAnnaSabiaEffects_2: -6373193534534926427
+      HeroAnnaSabiaEffects_3: -9057575656731200163
+      HeroAnnaSabiaEffects_4: 4745680574976868991
+      HeroAnnaSabiaEffects_5: -3364813451771938930
+      HeroAnnaSabiaEffects_6: 8406298160374923806
+      HeroAnnaSabiaEffects_7: 4798009527377362595
+      HeroAnnaSabiaEffects_8: 4139449854443868166
+      HeroAnnaSabiaEffects_9: -8498706833263755314
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

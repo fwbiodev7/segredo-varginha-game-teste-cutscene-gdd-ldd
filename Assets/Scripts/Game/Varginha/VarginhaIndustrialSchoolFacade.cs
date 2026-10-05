@@ -9,7 +9,31 @@ namespace Game.Varginha
         public const string RootName = "Fachada_Escola_Industrial_V1";
         private static readonly Sprite[] Sprites = new Sprite[2];
         [SerializeField] private SpriteRenderer[] faces, wallEdges;
+        [SerializeField] private SpriteRenderer[] coveredInterior;
+        [SerializeField] private float interiorY = -5.15f;
         private EdelzioTopDownController _player;
+
+        public static VarginhaIndustrialSchoolFacade EnsureRebuiltCampus(Transform school)
+        {
+            var texture=Resources.Load<Texture2D>(ResourcePath);
+            if(texture==null)return null;
+            var root=school.Find(RootName);
+            if(root==null){root=new GameObject(RootName).transform;root.SetParent(school,false);}
+            var facade=root.GetComponent<VarginhaIndustrialSchoolFacade>();if(facade==null)facade=root.gameObject.AddComponent<VarginhaIndustrialSchoolFacade>();
+            var renderer=root.GetComponent<SpriteRenderer>();if(renderer==null)renderer=root.gameObject.AddComponent<SpriteRenderer>();
+            // Keep the complete authored frontage and its gate, at one uniform scale.
+            renderer.sprite=Sprite.Create(texture,new Rect(0,0,texture.width,texture.height),new Vector2(300f/texture.width,24f/texture.height),32,0,SpriteMeshType.FullRect);
+            renderer.sprite.name="Industrial_Fachada_Integral_Original";renderer.sortingOrder=VarginhaWorldDepth.OrderAt(-6.05f);
+            root.position=new Vector3(.75f,-6.05f,0);root.localScale=Vector3.one;
+            VarginhaWorldDepth.Ensure(renderer,supportingObject:root);
+            var furnishings=school.Find("Mapa_Campanha/02_Mobilia_Colisoes");
+            var covered=new System.Collections.Generic.List<SpriteRenderer>();
+            if(furnishings!=null)foreach(Transform prop in furnishings)
+            {if(prop.position.y>-5.7f&&prop.position.y< -3.6f)covered.Add(prop.GetComponent<SpriteRenderer>());}
+            facade.coveredInterior=covered.ToArray();
+            facade.faces=new[]{renderer};facade.wallEdges=null;facade.interiorY=-5.15f;facade.ShowInterior(false);
+            return facade;
+        }
 
         public static void Ensure(Transform school)
         {
@@ -63,6 +87,7 @@ namespace Game.Varginha
         {
             if (faces != null) foreach (var face in faces) if (face != null) face.enabled = !inside;
             if (wallEdges != null) foreach (var edge in wallEdges) if (edge != null) edge.enabled = inside;
+            if (coveredInterior != null) foreach(var furnishing in coveredInterior)if(furnishing!=null)furnishing.enabled=inside;
         }
 
         private void LateUpdate()
@@ -70,7 +95,7 @@ namespace Game.Varginha
             if (_player == null) _player = FindAnyObjectByType<EdelzioTopDownController>();
             if (_player == null) return;
             Vector2 position = _player.transform.position;
-            ShowInterior(position.y > -5.15f && position.x > -7.7f && position.x < 8.7f);
+            ShowInterior(position.y > interiorY && position.x > -7.7f && position.x < 8.7f);
         }
     }
 }

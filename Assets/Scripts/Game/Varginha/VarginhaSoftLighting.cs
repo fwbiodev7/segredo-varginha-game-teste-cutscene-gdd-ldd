@@ -39,14 +39,17 @@ namespace Game.Varginha
             foreach (var renderer in environment.GetComponentsInChildren<SpriteRenderer>(true))
             {
                 if(!renderer.gameObject.activeInHierarchy) continue;
-                bool wall = renderer.name.Contains("Parede_") || renderer.name.StartsWith("Wall_");
+                bool wall = renderer.name.Contains("Parede_") || renderer.name.StartsWith("Wall_") || renderer.name.StartsWith("Divisão quarto");
                 if (!IsFurniture(renderer.name) && !wall) continue;
+                if(wall&&renderer.GetComponent<Collider2D>() is Collider2D disabled&&!disabled.enabled)continue;
                 renderer.sortingOrder = Mathf.Max(2, renderer.sortingOrder);
                 var b = renderer.bounds;
                 if (b.size.x <= 0 || b.size.y <= 0) continue;
                 // A furniture footprint, not its entire upright sprite, casts the shadow.
-                occluders.Add(wall ? new Rect(b.min.x, b.min.y, b.size.x, b.size.y)
-                    : new Rect(b.min.x + b.size.x * .07f, b.min.y, b.size.x * .86f, b.size.y * .42f));
+                var footprint=renderer.GetComponent<Collider2D>();
+                if(footprint!=null&&footprint.enabled&&!footprint.isTrigger)b=footprint.bounds;
+                occluders.Add(footprint!=null&&footprint.enabled||wall?new Rect(b.min.x,b.min.y,b.size.x,b.size.y)
+                    :new Rect(b.min.x+b.size.x*.07f,b.min.y,b.size.x*.86f,b.size.y*.42f));
             }
             const float ppu = 32;
             int width = Mathf.CeilToInt(bounds.size.x * ppu) + 2;

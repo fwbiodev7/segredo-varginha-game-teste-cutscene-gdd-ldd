@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-04",
+  "tool": "built-in image_gen",
+  "references": "As nove primeiras fotos seguem a ordem dos alunos. Extras 160003 = Pedro; 160007 = Luis Martins. Fotografias pessoais não incluídas no repositório.",
+  "commonPrompt": "Production pixel art top-down RPG O Segredo de Varginha. Preserve photo identity and specified outfit. Transparent alpha, deliberate square pixels, dark outline, consistent head/body proportions. Movement: south, west, east, north, four walk frames. Two attacks: anticipation, contact, recovery, east and west plus detached small/large effects. No text, grids, background or floor shadows. Inspect generated coordinates; pack with nearest-neighbor, complete bodies, fixed foot baseline, preserve GUIDs.",
+  "students": [
+    {
+      "name": "Fabio",
+      "photoTimestamps": "155831",
+      "identityAndSkills": "A young man with long centre-parted dark hair reaching shoulders, friendly smile, NO GLASSES. Black gym T-shirt and black trousers. Attack A katana quick cut with pale white violet crescent. Attack B throw a dark metal gym weight plate, orange impact sparks."
+    },
+    {
+      "name": "Marcos",
+      "photoTimestamps": "155834",
+      "identityAndSkills": "A young brown-skinned man with tightly coiled short black hair, NO GLASSES. Purple volleyball T-shirt, dark volleyball shorts, trainers. Attack A forceful volleyball serve with blue white ball trail. Attack B multiple volleyballs descending in a violet area."
+    },
+    {
+      "name": "Matias",
+      "photoTimestamps": "155837",
+      "identityAndSkills": "A smiling young man with curly brown hair, NO GLASSES. White jiujitsu kimono, BLUE BELT, bare feet. Attack A rapid grounded jiujitsu combo. Attack B a low controlled projection throw, pale white impact crescent. Do not rotate the entire character or invent a weapon."
+    },
+    {
+      "name": "AnnaSabia",
+      "photoTimestamps": "155840",
+      "identityAndSkills": "Young woman with medium long curly dark hair and a warm smile WITHOUT BRACES, no glasses. Yellow table-tennis shirt, dark long sports trousers, trainers. Power A quick red paddle shot single red-white ball, power B spinning area of several red balls."
+    },
+    {
+      "name": "AnaTavares",
+      "photoTimestamps": "155843",
+      "identityAndSkills": "Young woman with longer defined curly dark brown hair and clearly visible tiny silver BRACES in smiling front views, no glasses. Yellow table-tennis shirt, dark sports SHORTS and trainers. Power A precise red paddle shot in a straight line; power B a shower of multiple glowing red-white pingpong balls."
+    },
+    {
+      "name": "Yasmin",
+      "photoTimestamps": "155846",
+      "identityAndSkills": "Young woman with black shoulder-length wavy-curly hair and bangs, light pale skin, no glasses. Black ROCK music T-shirt and dark trousers. Power A microphone purple soundwave with musical notes; power B invoke a purple-black upright grand piano falling from above with purple impact. Do NOT place piano in walk cells."
+    },
+    {
+      "name": "Pedro",
+      "photoTimestamps": [
+        "155853",
+        "160003"
+      ],
+      "identityAndSkills": "Young man with LONG curly dark hair to the shoulders and RECTANGULAR GLASSES. Black rock T-shirt and dark trousers. Attack A red guitar riff shooting musical waves in a line; attack B heavy guitar chord with expanding red area, notes and sparks. His guitar is RED."
+    },
+    {
+      "name": "LuisMartins",
+      "photoTimestamps": [
+        "155857",
+        "160007"
+      ],
+      "identityAndSkills": "Young man with STRAIGHT smooth dark-brown hair parted to the side, NO GLASSES. RED hoodie with black trousers, orange T-shirt subtly visible at neckline. Attack A paint jet from brush/can with multicolour streaks; attack B explosion of coloured paint in an area. Preserve slim teenage appearance."
+    },
+    {
+      "name": "LuisMiguelMessias",
+      "photoTimestamps": [
+        "160000"
+      ],
+      "identityAndSkills": "Young man with very short black BUZZCUT, close trimmed dark beard and moustache, NO GLASSES. Atletico Mineiro black and white vertically striped football shirt, dark trousers. Attack A microphone blue linear sonic wave; attack B a shout with concentric blue area waves. Keep close beard, no long hair."
+    }
+  ],
+  "technical": "Movement 256x256 (4x4, 64px cell), body alpha height 56px, foot baseline y=60. Attack 768x256 (6x2, 128px cell), 1.2 world-unit neutral body. Effect 256x256 (2x2). Detect actual row gutters and connected sprites; do not assume equal generator padding. Alpha below 128 discarded; no RGB-colour removal.",
+  "sources": "<Name>Source.png and MovementSource.png contain original generated material; <Name>Before.png preserves previous sprites. Hero JSON records actual packed rectangles, stages and hashes."
+}

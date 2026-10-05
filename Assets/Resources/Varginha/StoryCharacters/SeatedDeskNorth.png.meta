@@ -1,0 +1,561 @@
+fileFormatVersion: 2
+guid: a3216b1985f665b42bef7e25c166bcde
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3754542634896940558
+    second: SeatedDeskNorth_0
+  - first:
+      213: 235474242810778546
+    second: SeatedDeskNorth_1
+  - first:
+      213: -4697830556783792954
+    second: SeatedDeskNorth_2
+  - first:
+      213: 4763307395036375961
+    second: SeatedDeskNorth_3
+  - first:
+      213: -5657831546811020399
+    second: SeatedDeskNorth_4
+  - first:
+      213: 1991513141457656085
+    second: SeatedDeskNorth_5
+  - first:
+      213: -60504546564023689
+    second: SeatedDeskNorth_6
+  - first:
+      213: -5505395626870988786
+    second: SeatedDeskNorth_7
+  - first:
+      213: 9142181778800657001
+    second: SeatedDeskNorth_8
+  - first:
+      213: 8283163709180520420
+    second: SeatedDeskNorth_9
+  - first:
+      213: -7499976994585848199
+    second: SeatedDeskNorth_10
+  - first:
+      213: -8950431063904619047
+    second: SeatedDeskNorth_11
+  - first:
+      213: -3535696878976929009
+    second: SeatedDeskNorth_12
+  - first:
+      213: -5848065524232100086
+    second: SeatedDeskNorth_13
+  - first:
+      213: 963292399936695217
+    second: SeatedDeskNorth_14
+  - first:
+      213: 8760560063458492509
+    second: SeatedDeskNorth_15
+  - first:
+      213: 7949683883530188873
+    second: SeatedDeskNorth_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SeatedDeskNorth_0
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 628
+        width: 82
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e571f42a0da1430800000000000000
+      internalID: 3754542634896940558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_1
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 612
+        width: 132
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b39d748392944300800000000000000
+      internalID: 235474242810778546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_2
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 642
+        width: 44
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cc2defaff3fdceb0800000000000000
+      internalID: -4697830556783792954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_3
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 644
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b6225b6daaa1240800000000000000
+      internalID: 4763307395036375961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_4
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 0
+        width: 270
+        height: 654
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19b84554f285b71b0800000000000000
+      internalID: -5657831546811020399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_5
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 634
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5191b1296a643ab10800000000000000
+      internalID: 1991513141457656085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_6
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 12
+        width: 338
+        height: 626
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77a51ca7f6b092ff0800000000000000
+      internalID: -60504546564023689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_7
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 630
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e00ad50a8d7e893b0800000000000000
+      internalID: -5505395626870988786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_8
+      rect:
+        serializedVersion: 2
+        x: 1438
+        y: 0
+        width: 365
+        height: 632
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9624675f3ed8fde70800000000000000
+      internalID: 9142181778800657001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_9
+      rect:
+        serializedVersion: 2
+        x: 2067
+        y: 624
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7ac16e185b3f270800000000000000
+      internalID: 8283163709180520420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 285
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 976db16f8aabae790800000000000000
+      internalID: -7499976994585848199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_11
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 19
+        width: 371
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d5f7596e5ea9c380800000000000000
+      internalID: -8950431063904619047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_12
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 595
+        width: 29
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f037f17eb6eaeeec0800000000000000
+      internalID: -3535696878976929009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_13
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 0
+        width: 283
+        height: 615
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07efecd36f77dea0800000000000000
+      internalID: -5848065524232100086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_14
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 612
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb6f01855d4e5d00800000000000000
+      internalID: 963292399936695217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_15
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 594
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d50cae756f2c39970800000000000000
+      internalID: 8760560063458492509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SeatedDeskNorth_16
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 574
+        width: 81
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 948f6727f53f25e60800000000000000
+      internalID: 7949683883530188873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SeatedDeskNorth_0: 3754542634896940558
+      SeatedDeskNorth_1: 235474242810778546
+      SeatedDeskNorth_10: -7499976994585848199
+      SeatedDeskNorth_11: -8950431063904619047
+      SeatedDeskNorth_12: -3535696878976929009
+      SeatedDeskNorth_13: -5848065524232100086
+      SeatedDeskNorth_14: 963292399936695217
+      SeatedDeskNorth_15: 8760560063458492509
+      SeatedDeskNorth_16: 7949683883530188873
+      SeatedDeskNorth_2: -4697830556783792954
+      SeatedDeskNorth_3: 4763307395036375961
+      SeatedDeskNorth_4: -5657831546811020399
+      SeatedDeskNorth_5: 1991513141457656085
+      SeatedDeskNorth_6: -60504546564023689
+      SeatedDeskNorth_7: -5505395626870988786
+      SeatedDeskNorth_8: 9142181778800657001
+      SeatedDeskNorth_9: 8283163709180520420
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,951 @@
+fileFormatVersion: 2
+guid: 0d786f2425b20344c8b3dded7d925c8a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3422714973842653318
+    second: HeroLuisMartins_0
+  - first:
+      213: -3304644086263277221
+    second: HeroLuisMartins_1
+  - first:
+      213: 4636340045460143254
+    second: HeroLuisMartins_2
+  - first:
+      213: 2966302895253886344
+    second: HeroLuisMartins_3
+  - first:
+      213: -3887022410265276521
+    second: HeroLuisMartins_4
+  - first:
+      213: 7976420689462116856
+    second: HeroLuisMartins_5
+  - first:
+      213: -4836719791176809821
+    second: HeroLuisMartins_6
+  - first:
+      213: 448142400726477910
+    second: HeroLuisMartins_7
+  - first:
+      213: 1944741496809297906
+    second: HeroLuisMartins_8
+  - first:
+      213: 4317047146405835783
+    second: HeroLuisMartins_9
+  - first:
+      213: -1479706552074375086
+    second: HeroLuisMartins_10
+  - first:
+      213: 690262375505130027
+    second: HeroLuisMartins_11
+  - first:
+      213: 2685874890467479199
+    second: HeroLuisMartins_12
+  - first:
+      213: -3973521550509315636
+    second: HeroLuisMartins_13
+  - first:
+      213: -6944764911515947189
+    second: HeroLuisMartins_14
+  - first:
+      213: 7638944346598193716
+    second: HeroLuisMartins_15
+  - first:
+      213: 642307285367951829
+    second: HeroLuisMartins_16
+  - first:
+      213: -3504187172434717297
+    second: HeroLuisMartins_17
+  - first:
+      213: 4574370868031792517
+    second: HeroLuisMartins_18
+  - first:
+      213: -5387891322283782942
+    second: HeroLuisMartins_19
+  - first:
+      213: 2616288328047177166
+    second: HeroLuisMartins_20
+  - first:
+      213: -7471376649247791010
+    second: HeroLuisMartins_21
+  - first:
+      213: -690937537155377046
+    second: HeroLuisMartins_22
+  - first:
+      213: -8719692782865782379
+    second: HeroLuisMartins_23
+  - first:
+      213: 7240452459445551860
+    second: HeroLuisMartins_24
+  - first:
+      213: 6691738638377146965
+    second: HeroLuisMartins_25
+  - first:
+      213: 5441158055703037027
+    second: HeroLuisMartins_26
+  - first:
+      213: 9135066331916456201
+    second: HeroLuisMartins_27
+  - first:
+      213: 3810495378960943436
+    second: HeroLuisMartins_28
+  - first:
+      213: -7510635384009895003
+    second: HeroLuisMartins_29
+  - first:
+      213: 9073710325530552642
+    second: HeroLuisMartins_30
+  - first:
+      213: 7061209610139094362
+    second: HeroLuisMartins_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeroLuisMartins_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 251
+        width: 19
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7fb2b89dd21080d0800000000000000
+      internalID: -3422714973842653318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_1
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 250
+        width: 20
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b599e2956bb8322d0800000000000000
+      internalID: -3304644086263277221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 250
+        width: 48
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69cf19bf4b6975040800000000000000
+      internalID: 4636340045460143254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_3
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 251
+        width: 21
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88512df54cc6a2920800000000000000
+      internalID: 2966302895253886344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_4
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 250
+        width: 23
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79fc72256b58e0ac0800000000000000
+      internalID: -3887022410265276521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_5
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 251
+        width: 19
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f1477e2b50f1be60800000000000000
+      internalID: 7976420689462116856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_6
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 250
+        width: 24
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a20ec8d9f480ecb0800000000000000
+      internalID: -4836719791176809821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_7
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 250
+        width: 31
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65ca71c932f183600800000000000000
+      internalID: 448142400726477910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_8
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 249
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f79741761c1dfa10800000000000000
+      internalID: 1944741496809297906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_9
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 250
+        width: 19
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7043228c18b39eb30800000000000000
+      internalID: 4317047146405835783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_10
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 129
+        width: 77
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 250f9cf0bb6077be0800000000000000
+      internalID: -1479706552074375086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_11
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 127
+        width: 163
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22fccd29fd449900800000000000000
+      internalID: 690262375505130027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_12
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 127
+        width: 76
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9e84758bf4264520800000000000000
+      internalID: 2685874890467479199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_13
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 128
+        width: 81
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc96882d3373bd8c0800000000000000
+      internalID: -3973521550509315636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_14
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 128
+        width: 157
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4fae70ab1d3f9f90800000000000000
+      internalID: -6944764911515947189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_15
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 125
+        width: 63
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ab6fd096bf20a60800000000000000
+      internalID: 7638944346598193716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_16
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 193
+        width: 24
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1900da21fe9e800800000000000000
+      internalID: 642307285367951829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_17
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 157
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f855c882550ae5fc0800000000000000
+      internalID: -3504187172434717297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_18
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 190
+        width: 10
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5852ee3811e6b7f30800000000000000
+      internalID: 4574370868031792517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_19
+      rect:
+        serializedVersion: 2
+        x: 725
+        y: 179
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ec8dde736d5a35b0800000000000000
+      internalID: -5387891322283782942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_20
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 162
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecda0476f5cee4420800000000000000
+      internalID: 2616288328047177166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_21
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 151
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58ef66c586505890800000000000000
+      internalID: -7471376649247791010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_22
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 146
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68dedf78fb4966f0800000000000000
+      internalID: -690937537155377046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_23
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 141
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5996fb6ec9d6df680800000000000000
+      internalID: -8719692782865782379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_24
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 17
+        width: 73
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f20b5a76214b7460800000000000000
+      internalID: 7240452459445551860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_25
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 13
+        width: 149
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55ad93656d4dddc50800000000000000
+      internalID: 6691738638377146965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_26
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 107
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3644fe45c60e28b40800000000000000
+      internalID: 5441158055703037027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_27
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 16
+        width: 65
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901d281ed6646ce70800000000000000
+      internalID: 9135066331916456201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_28
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 16
+        width: 65
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c490c39bb5991e430800000000000000
+      internalID: 3810495378960943436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_29
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 13
+        width: 147
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a35c9a49ecd4c790800000000000000
+      internalID: -7510635384009895003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_30
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 16
+        width: 63
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 249ea0c677b4ced70800000000000000
+      internalID: 9073710325530552642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMartins_31
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 28
+        width: 46
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5d4ae08ab47ef160800000000000000
+      internalID: 7061209610139094362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HeroLuisMartins_0: -3422714973842653318
+      HeroLuisMartins_1: -3304644086263277221
+      HeroLuisMartins_10: -1479706552074375086
+      HeroLuisMartins_11: 690262375505130027
+      HeroLuisMartins_12: 2685874890467479199
+      HeroLuisMartins_13: -3973521550509315636
+      HeroLuisMartins_14: -6944764911515947189
+      HeroLuisMartins_15: 7638944346598193716
+      HeroLuisMartins_16: 642307285367951829
+      HeroLuisMartins_17: -3504187172434717297
+      HeroLuisMartins_18: 4574370868031792517
+      HeroLuisMartins_19: -5387891322283782942
+      HeroLuisMartins_2: 4636340045460143254
+      HeroLuisMartins_20: 2616288328047177166
+      HeroLuisMartins_21: -7471376649247791010
+      HeroLuisMartins_22: -690937537155377046
+      HeroLuisMartins_23: -8719692782865782379
+      HeroLuisMartins_24: 7240452459445551860
+      HeroLuisMartins_25: 6691738638377146965
+      HeroLuisMartins_26: 5441158055703037027
+      HeroLuisMartins_27: 9135066331916456201
+      HeroLuisMartins_28: 3810495378960943436
+      HeroLuisMartins_29: -7510635384009895003
+      HeroLuisMartins_3: 2966302895253886344
+      HeroLuisMartins_30: 9073710325530552642
+      HeroLuisMartins_31: 7061209610139094362
+      HeroLuisMartins_4: -3887022410265276521
+      HeroLuisMartins_5: 7976420689462116856
+      HeroLuisMartins_6: -4836719791176809821
+      HeroLuisMartins_7: 448142400726477910
+      HeroLuisMartins_8: 1944741496809297906
+      HeroLuisMartins_9: 4317047146405835783
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

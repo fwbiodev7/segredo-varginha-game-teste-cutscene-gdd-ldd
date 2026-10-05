@@ -1,0 +1,183 @@
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+namespace Game.Varginha.Experiment
+{
+    // New transparent animation sheets use the supplied clean portrait as their design reference.
+    [DefaultExecutionOrder(500)]
+    public sealed class CampaignTeamEdelzio : MonoBehaviour
+    {
+        private static readonly Dictionary<string,Sprite> Frames=new();
+        private static readonly Dictionary<Texture2D,Rect[]> Outlines=new();
+        private static readonly Dictionary<(Texture2D,Rect),float> Anchors=new();
+        private EdelzioTopDownController _actor;
+        private VarginhaPlayerSpriteAnimation _actions;
+        private SpriteRenderer _renderer;
+        public const float StandingHeight=1.5f;
+        // Only the church uses Padre Fabio's visible 42-pixel silhouette at 44 PPU.
+        public const float ChurchStandingHeight=42f/44f;
+        public const float ChurchVisualScale=ChurchStandingHeight/StandingHeight;
+        public static bool IsChurch => CampaignExpansionController.Active != null && CampaignExpansionController.Active.phase == 8
+            || CampaignContinuationController.Active != null && CampaignContinuationController.Active.phase == 14;
+        public static float CurrentStandingHeight => IsChurch ? ChurchStandingHeight : StandingHeight;
+        private bool _wasPunching;
+        private float _punchStarted;
+        private string _lastInteraction;
+        private float _interactionStarted;
+        private float _jumpStarted = -100, _nextJump;
+        private bool _jumpHeld;
+        private MaterialPropertyBlock _equipment;
+        public bool IsJumping => Time.time - _jumpStarted < .48f;
+        private void Awake()=>_equipment=new MaterialPropertyBlock();
+        private void OnEnable()
+        {
+            _equipment??=new MaterialPropertyBlock();
+            _actor=GetComponent<EdelzioTopDownController>();_actions=GetComponent<VarginhaPlayerSpriteAnimation>();_renderer=GetComponent<SpriteRenderer>();
+            InputSystem.onAfterUpdate-=ReadJumpInput;InputSystem.onAfterUpdate+=ReadJumpInput;
+        }
+        private void OnDisable()=>InputSystem.onAfterUpdate-=ReadJumpInput;
+        private void Start()
+        {
+            _actor=GetComponent<EdelzioTopDownController>();_actions=GetComponent<VarginhaPlayerSpriteAnimation>();_renderer=GetComponent<SpriteRenderer>();
+            transform.localScale=Vector3.one;
+            CampaignWallBody.Ensure(_actor,false);
+            if(_actions!=null)_actions.enabled=false;
+        }
+        private void ReadJumpInput()
+        {
+            if(!Application.isPlaying||!isActiveAndEnabled)return;
+            bool held=VarginhaInputBindings.IsPressed(VarginhaInputAction.Jump);
+            if(held&&!_jumpHeld)TryJump();
+            _jumpHeld=held;
+        }
+        public bool TryJump()
+        {
+            if(_actor==null||_actor.IsInputLocked||_actions?.HasActionPose==true||Time.timeScale<=0||Time.time<_nextJump)return false;
+            _jumpStarted=Time.time;_nextJump=Time.time+.8f;return true;
+        }
+        private void LateUpdate()
+        {
+            if(_actor==null||_renderer==null)return;
+            _equipment??=new MaterialPropertyBlock();
+            bool acting=_actions!=null&&_actions.HasActionPose;
+            bool equipped=_actor.IsBackpackVisible;
+            Vector2 face=acting?_actions.ActionFacingDirection:_actor.FacingDirection;
+            int direction=Mathf.Abs(face.y)>=Mathf.Abs(face.x)?face.y>0?3:0:face.x<0?1:2;
+            bool punching=_actions!=null&&_actions.IsPunching;
+            if(punching&&!_wasPunching)_punchStarted=Time.time;
+            _wasPunching=punching;
+            string interaction=acting?_actions.CurrentActionPose:null;
+            if(interaction!=_lastInteraction){_interactionStarted=Time.time;_lastInteraction=interaction;}
+            Sprite pose;
+            if(punching)
+            {
+                float elapsed=Time.time-_punchStarted;
+                int punchFrame=elapsed<.10f?0:elapsed<.18f?1:elapsed<.23f?2:3;
+                pose=StoryFrame("Punch",direction,punchFrame+(equipped?4:0));
+            }
+            else if(acting && interaction=="Edelzio_WashFace")
+                pose=StoryFrame(equipped?"LifeGray":"Life",direction,8+Mathf.Min(3,(int)((Time.time-_interactionStarted)*4)));
+            else if(_actions!=null&&_actions.IsSeated)
+                pose=face.y>.5f&&GetComponent<CampaignSeatingLayers>()?.IsOfficeSeat==true
+                    ?StoryFrame("SeatedDeskNorth",0,(interaction=="Edelzio_UseNotebook"?3:0)+(int)(Time.time*2)%3)
+                    :StoryFrame(equipped?"SeatedGray":"Seated",CampaignStorySprites.EightDirection(face),(int)(Time.time*2)%3);
+            else if(_actions!=null&&_actions.IsDrinking)pose=Frame("EdelzioActions",direction,3+_actions.ActionFrame,equipped);
+            else if(acting&&(_actions.CurrentActionPose=="Edelzio_Crouch"||_actions.CurrentActionPose=="Edelzio_Reach"))
+                pose=Frame("EdelzioInteractions",direction,(_actions.CurrentActionPose=="Edelzio_Reach"?3:0)+Mathf.Clamp((int)((Time.time-_interactionStarted)*8),0,2),equipped);
+            else
+            {
+                int frame=_actor.IsMoving&&!_actor.IsInputLocked?(int)(Time.time*7)%4:1;
+                if(IsJumping) pose=StoryFrame(equipped?"LifeGray":"Life",direction,4+Mathf.Clamp((int)((Time.time-_jumpStarted)*8.4f),0,3));
+                else if(!_actor.IsMoving || _actor.IsInputLocked)
+                {
+                    float cycle=Time.time%3.6f;
+                    int breath=cycle>3.45f?3:Mathf.FloorToInt(cycle*1.5f)%3;
+                    pose=StoryFrame(equipped?"LifeGray":"Life",direction,breath);
+                }
+                else pose=Frame("EdelzioWalk",direction,frame,equipped);
+            }
+            if(pose!=null)
+            {
+                _renderer.sprite=pose;
+                _renderer.color=Color.white;_renderer.flipX=false;
+                _renderer.GetPropertyBlock(_equipment);
+                _equipment.SetFloat("_GrayBag",equipped&&!pose.name.StartsWith("Team_V4_")?1:0);
+                _equipment.SetFloat("_BagUVYMin",(pose.rect.y+pose.rect.height*.42f)/pose.texture.height);
+                _renderer.SetPropertyBlock(_equipment);
+            }
+            EdelzioBackpackAppearance.HideLegacyLayers(transform);
+            foreach(Transform part in transform)if(part.name.Contains("Beard")||part.name.Contains("Barba"))part.gameObject.SetActive(false);
+        }
+        public static Sprite Idle=>Frame("EdelzioIdle",0,0);
+        private static Sprite StoryFrame(string name,int row,int column)
+            => CampaignStorySprites.Frame(name,row,column,churchScale:IsChurch);
+        public static Sprite Frame(string name,int row,int column,bool withBackpack=false)
+        {
+            if(name=="EdelzioWalk"&&withBackpack)
+                return StoryFrame("WalkGray",row,column);
+            bool idle=name=="EdelzioIdle";
+            int columns=idle?1:name=="EdelzioWalk"?4:name=="EdelzioPunch"?3:6;
+            if(row<0||row>=(idle?1:4)||column<0||column>=columns)return null;
+            string key=name+row+":"+column+(withBackpack?"_ComMochilaV3":"")+(IsChurch?"_Igreja":"");
+            if(Frames.TryGetValue(key,out var cached)&&cached!=null)return cached;
+            var texture=Resources.Load<Texture2D>("Varginha/TeamArt/"+name+(withBackpack?"BackpackV3":idle?"":"V2"));
+            if(texture==null)return null;
+            var rectangles=FindOutlines(texture,columns,idle?1:4);
+            var rect=rectangles[row*columns+column];if(rect.width<=0||rect.height<=0)return null;
+            int standingColumn=idle?0:name=="EdelzioActions"||name=="EdelzioInteractions"?4:name=="EdelzioWalk"?1:0;
+            var standing=rectangles[row*columns+standingColumn];
+            float ppu=Mathf.Max(1,standing.height)/CurrentStandingHeight;
+            // Padding preserves the full silhouette at the edges of punch poses.
+            float left=Mathf.Max(0,Mathf.Floor(rect.x-ppu*.22f)),right=Mathf.Min(texture.width,Mathf.Ceil(rect.xMax+ppu*.22f));
+            rect=new Rect(left,rect.y,right-left,rect.height);
+            // Outline rectangles retain the complete head even when artwork crosses a nominal grid edge.
+            float bodyCenter=BodyAnchorX(texture,rectangles[row*columns+column]);
+            float pivotX=Mathf.Clamp01((bodyCenter-rect.x)/rect.width);
+            var sprite=Sprite.Create(texture,rect,new Vector2(pivotX,ppu*.58f/rect.height),ppu,0,SpriteMeshType.FullRect);
+            sprite.name="Team_"+key;Frames[key]=sprite;return sprite;
+        }
+        public static float BodyAnchorX(Texture2D texture,Rect outline)
+        {
+            if(Anchors.TryGetValue((texture,outline),out float anchor))return anchor;
+            return BodyAnchorX(texture,outline,texture.GetPixels32());
+        }
+        private static float BodyAnchorX(Texture2D texture,Rect outline,Color32[] pixels)
+        {
+            // The upper head is stationary while arms and feet swing. Atlas-cell centers
+            // differ between generated poses and must never drive the character origin.
+            int left=(int)outline.xMax,right=(int)outline.xMin-1;
+            int bottom=Mathf.CeilToInt(outline.yMin+outline.height*.8f);
+            for(int y=bottom;y<(int)outline.yMax;y++)for(int x=(int)outline.xMin;x<(int)outline.xMax;x++)
+                if(pixels[y*texture.width+x].a>=100){left=Mathf.Min(left,x);right=Mathf.Max(right,x);}
+            float anchor=right>=left?(left+right+1)*.5f:outline.center.x;
+            Anchors[(texture,outline)]=anchor;return anchor;
+        }
+        private static Rect[] FindOutlines(Texture2D texture,int columns,int rows)
+        {
+            if(Outlines.TryGetValue(texture,out var cached))return cached;
+            var pixels=texture.GetPixels32();var visited=new bool[pixels.Length];var queue=new int[pixels.Length];
+            var counts=new int[columns*rows];var rectangles=new Rect[counts.Length];
+            int width=texture.width,height=texture.height;
+            for(int seed=0;seed<pixels.Length;seed++)
+            {
+                if(visited[seed]||pixels[seed].a<100)continue;
+                int head=0,tail=1;queue[0]=seed;visited[seed]=true;
+                int left=width,right=0,bottom=height,top=0;
+                while(head<tail)
+                {
+                    int i=queue[head++],x=i%width,y=i/width;
+                    left=Mathf.Min(left,x);right=Mathf.Max(right,x);bottom=Mathf.Min(bottom,y);top=Mathf.Max(top,y);
+                    void Add(int n){if(!visited[n]&&pixels[n].a>=100){visited[n]=true;queue[tail++]=n;}}
+                    if(x>0)Add(i-1);if(x+1<width)Add(i+1);if(y>0)Add(i-width);if(y+1<height)Add(i+width);
+                }
+                int column=Mathf.Clamp((left+right)*columns/(2*width),0,columns-1);
+                int row=rows-1-Mathf.Clamp((bottom+top)*rows/(2*height),0,rows-1);
+                int slot=row*columns+column;
+                if(tail>counts[slot]){counts[slot]=tail;rectangles[slot]=new Rect(left,bottom,right-left+1,top-bottom+1);}
+            }
+            foreach(var rect in rectangles)BodyAnchorX(texture,rect,pixels);
+            Outlines[texture]=rectangles;return rectangles;
+        }
+    }
+}

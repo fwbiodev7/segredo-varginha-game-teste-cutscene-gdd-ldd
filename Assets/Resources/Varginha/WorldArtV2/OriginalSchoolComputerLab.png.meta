@@ -1,0 +1,561 @@
+fileFormatVersion: 2
+guid: a0cc4c3caa4ac7a4294999bd2e8fdade
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4279910343979659544
+    second: OriginalSchoolComputerLab_0
+  - first:
+      213: 1206026370053848314
+    second: OriginalSchoolComputerLab_1
+  - first:
+      213: 6621522363220121712
+    second: OriginalSchoolComputerLab_2
+  - first:
+      213: -122207005789328485
+    second: OriginalSchoolComputerLab_3
+  - first:
+      213: -1440786229263740237
+    second: OriginalSchoolComputerLab_4
+  - first:
+      213: -2045640619043088522
+    second: OriginalSchoolComputerLab_5
+  - first:
+      213: 6019260113417734786
+    second: OriginalSchoolComputerLab_6
+  - first:
+      213: -647773420815932683
+    second: OriginalSchoolComputerLab_7
+  - first:
+      213: -2822578811987104194
+    second: OriginalSchoolComputerLab_8
+  - first:
+      213: 175221539422060974
+    second: OriginalSchoolComputerLab_9
+  - first:
+      213: 8391837026413093686
+    second: OriginalSchoolComputerLab_10
+  - first:
+      213: -2709396385437372665
+    second: OriginalSchoolComputerLab_11
+  - first:
+      213: 5484697489952795059
+    second: OriginalSchoolComputerLab_12
+  - first:
+      213: -6222141800808425629
+    second: OriginalSchoolComputerLab_13
+  - first:
+      213: 5851557349891191522
+    second: OriginalSchoolComputerLab_14
+  - first:
+      213: -1164655642166140946
+    second: OriginalSchoolComputerLab_15
+  - first:
+      213: -2772948502272064094
+    second: OriginalSchoolComputerLab_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 426
+        width: 453
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8117d6b28cb456b30800000000000000
+      internalID: 4279910343979659544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_1
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 448
+        width: 511
+        height: 423
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afc30d0089aacb010800000000000000
+      internalID: 1206026370053848314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_2
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 840
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0785a0cc18f54eb50800000000000000
+      internalID: 6621522363220121712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_3
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 846
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9becde2065dd4ef0800000000000000
+      internalID: -122207005789328485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_4
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 838
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b2d57fde8c410ce0800000000000000
+      internalID: -1440786229263740237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_5
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 404
+        width: 185
+        height: 324
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67793dbf1bc6c93e0800000000000000
+      internalID: -2045640619043088522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_6
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 513
+        width: 458
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28a01f68e25b88350800000000000000
+      internalID: 6019260113417734786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_7
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 426
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f2a35d7185a207f0800000000000000
+      internalID: -647773420815932683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_8
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 356
+        width: 126
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3ee6f0768f24d8d0800000000000000
+      internalID: -2822578811987104194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_9
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 0
+        width: 562
+        height: 395
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1cf3ecf038e6200800000000000000
+      internalID: 175221539422060974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_10
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 45
+        width: 339
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 633a25c405bc57470800000000000000
+      internalID: 8391837026413093686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_11
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 380
+        width: 62
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f274aa75a466ad0800000000000000
+      internalID: -2709396385437372665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_12
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 374
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b9ec15de4f8d1c40800000000000000
+      internalID: 5484697489952795059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_13
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 0
+        width: 297
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36754bc9ff286a9a0800000000000000
+      internalID: -6222141800808425629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_14
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 47
+        width: 487
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e237172868e43150800000000000000
+      internalID: 5851557349891191522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_15
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 15
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef58033ddf46dfe0800000000000000
+      internalID: -1164655642166140946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OriginalSchoolComputerLab_16
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 15
+        width: 23
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a54f9567028489d0800000000000000
+      internalID: -2772948502272064094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      OriginalSchoolComputerLab_0: 4279910343979659544
+      OriginalSchoolComputerLab_1: 1206026370053848314
+      OriginalSchoolComputerLab_10: 8391837026413093686
+      OriginalSchoolComputerLab_11: -2709396385437372665
+      OriginalSchoolComputerLab_12: 5484697489952795059
+      OriginalSchoolComputerLab_13: -6222141800808425629
+      OriginalSchoolComputerLab_14: 5851557349891191522
+      OriginalSchoolComputerLab_15: -1164655642166140946
+      OriginalSchoolComputerLab_16: -2772948502272064094
+      OriginalSchoolComputerLab_2: 6621522363220121712
+      OriginalSchoolComputerLab_3: -122207005789328485
+      OriginalSchoolComputerLab_4: -1440786229263740237
+      OriginalSchoolComputerLab_5: -2045640619043088522
+      OriginalSchoolComputerLab_6: 6019260113417734786
+      OriginalSchoolComputerLab_7: -647773420815932683
+      OriginalSchoolComputerLab_8: -2822578811987104194
+      OriginalSchoolComputerLab_9: 175221539422060974
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

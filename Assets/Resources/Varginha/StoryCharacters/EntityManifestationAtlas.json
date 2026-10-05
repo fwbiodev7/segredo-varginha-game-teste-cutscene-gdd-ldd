@@ -1,0 +1,881 @@
+{
+  "source": [
+    1536,
+    1024
+  ],
+  "logical": [
+    1024,
+    576
+  ],
+  "cell": [
+    128,
+    144
+  ],
+  "coordinates": "Unity bottom-left",
+  "frames": [
+    {
+      "direction": "S",
+      "action": "idle0",
+      "rect": [
+        0,
+        432,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        7,
+        21,
+        90,
+        124
+      ],
+      "alphaBounds": [
+        26,
+        45,
+        101,
+        136
+      ],
+      "sha256": "e4c7793464ec975799a811805d3db739167cb638694a966bfa6cf9ded0e85e19"
+    },
+    {
+      "direction": "S",
+      "action": "idle1",
+      "rect": [
+        128,
+        432,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        103,
+        21,
+        186,
+        124
+      ],
+      "alphaBounds": [
+        26,
+        45,
+        101,
+        136
+      ],
+      "sha256": "14231906bbd25b02d91000984ff359acae20662c3d144ca9b49bd62e51d4f9df"
+    },
+    {
+      "direction": "S",
+      "action": "windup0",
+      "rect": [
+        256,
+        432,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        203,
+        21,
+        277,
+        124
+      ],
+      "alphaBounds": [
+        31,
+        45,
+        97,
+        136
+      ],
+      "sha256": "ae15abce294c03848ded673494c57f394482a9c73c5c673af6fec7e372007ece"
+    },
+    {
+      "direction": "S",
+      "action": "windup1",
+      "rect": [
+        384,
+        432,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        295,
+        6,
+        378,
+        124
+      ],
+      "alphaBounds": [
+        26,
+        30,
+        101,
+        136
+      ],
+      "sha256": "07bcec91bc6616e25857911372500f5ead084dc2a2a264504b9228ac9e32375e"
+    },
+    {
+      "direction": "S",
+      "action": "contact",
+      "rect": [
+        512,
+        432,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        380,
+        31,
+        469,
+        124
+      ],
+      "alphaBounds": [
+        23,
+        55,
+        104,
+        136
+      ],
+      "sha256": "89bbfe4d00b003a0a6dd17001546f8f0801c79e4448c9c0fd61be0353a4dd175"
+    },
+    {
+      "direction": "S",
+      "action": "recovery",
+      "rect": [
+        640,
+        432,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        490,
+        29,
+        571,
+        125
+      ],
+      "alphaBounds": [
+        27,
+        52,
+        100,
+        136
+      ],
+      "sha256": "ee121ebd6df06ba7ba56ba12acbe78b841197388c00a8899bd7ebf76124918e6"
+    },
+    {
+      "direction": "S",
+      "action": "hurt",
+      "rect": [
+        768,
+        432,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        588,
+        29,
+        667,
+        124
+      ],
+      "alphaBounds": [
+        28,
+        53,
+        99,
+        136
+      ],
+      "sha256": "abd872001af52ac482f55faa298dba902bca6cbe687f62d86f1d2ca5798c0f37"
+    },
+    {
+      "direction": "S",
+      "action": "disperse",
+      "rect": [
+        896,
+        432,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        677,
+        34,
+        755,
+        124
+      ],
+      "alphaBounds": [
+        29,
+        50,
+        103,
+        136
+      ],
+      "sha256": "c2a4b1c3df8e9d54a147f37cca6fa161b3482025d010af6d72992f8651941a22"
+    },
+    {
+      "direction": "W",
+      "action": "idle0",
+      "rect": [
+        0,
+        288,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        19,
+        138,
+        82,
+        250
+      ],
+      "alphaBounds": [
+        36,
+        36,
+        91,
+        136
+      ],
+      "sha256": "2cc672f01669806fae3ec8103259e3e2917223f00f44532cad8efa7c1e81fa84"
+    },
+    {
+      "direction": "W",
+      "action": "idle1",
+      "rect": [
+        128,
+        288,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        114,
+        138,
+        178,
+        250
+      ],
+      "alphaBounds": [
+        36,
+        36,
+        92,
+        136
+      ],
+      "sha256": "48ff9397c0a142d29787cdec5deb5f97e2a8a4e6f255cea30d93c0717420b699"
+    },
+    {
+      "direction": "W",
+      "action": "windup0",
+      "rect": [
+        256,
+        288,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        204,
+        143,
+        272,
+        250
+      ],
+      "alphaBounds": [
+        34,
+        41,
+        94,
+        136
+      ],
+      "sha256": "6bb9260873d9e617e0f9bcd78c56b82bc2d714a4a561bd13cb55c290cfb89978"
+    },
+    {
+      "direction": "W",
+      "action": "windup1",
+      "rect": [
+        384,
+        288,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        295,
+        128,
+        372,
+        250
+      ],
+      "alphaBounds": [
+        29,
+        26,
+        98,
+        136
+      ],
+      "sha256": "64759f86e3f8aea7566ea17ac8af8174d4d651860e95843868729551f129c0b8"
+    },
+    {
+      "direction": "W",
+      "action": "contact",
+      "rect": [
+        512,
+        288,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        380,
+        146,
+        480,
+        250
+      ],
+      "alphaBounds": [
+        18,
+        44,
+        110,
+        136
+      ],
+      "sha256": "ec770868e57aed6d63374c77cf60174668e85f2687b1b55b16efcd5299123402"
+    },
+    {
+      "direction": "W",
+      "action": "recovery",
+      "rect": [
+        640,
+        288,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        495,
+        149,
+        574,
+        249
+      ],
+      "alphaBounds": [
+        28,
+        48,
+        99,
+        136
+      ],
+      "sha256": "ce719841320094e1fe2c024f4e72c78df217859a39dcd6abe066b79c394e9286"
+    },
+    {
+      "direction": "W",
+      "action": "hurt",
+      "rect": [
+        768,
+        288,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        594,
+        146,
+        667,
+        250
+      ],
+      "alphaBounds": [
+        31,
+        44,
+        96,
+        136
+      ],
+      "sha256": "e57170388e6a16ea2b410cdc927cdb1d601d1df70109ce576794aeda26ad165e"
+    },
+    {
+      "direction": "W",
+      "action": "disperse",
+      "rect": [
+        896,
+        288,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        684,
+        149,
+        755,
+        249
+      ],
+      "alphaBounds": [
+        32,
+        38,
+        99,
+        136
+      ],
+      "sha256": "287cbd3eef2ab87965dd9418cc75d08ef20adcede4ffea05c7144dd93186e203"
+    },
+    {
+      "direction": "N",
+      "action": "idle0",
+      "rect": [
+        0,
+        144,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        7,
+        267,
+        90,
+        374
+      ],
+      "alphaBounds": [
+        26,
+        41,
+        101,
+        136
+      ],
+      "sha256": "7345e5e1d6578b04287290d17ba2228544ea0281a221ffe1b7739b6f1210941d"
+    },
+    {
+      "direction": "N",
+      "action": "idle1",
+      "rect": [
+        128,
+        144,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        103,
+        267,
+        185,
+        374
+      ],
+      "alphaBounds": [
+        27,
+        41,
+        101,
+        136
+      ],
+      "sha256": "244f8ae82e902606c2410d6e4d737fc4b385649572152839aa5c17358f3b5db2"
+    },
+    {
+      "direction": "N",
+      "action": "windup0",
+      "rect": [
+        256,
+        144,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        203,
+        270,
+        277,
+        374
+      ],
+      "alphaBounds": [
+        31,
+        44,
+        97,
+        136
+      ],
+      "sha256": "cf21c96e93105c8db5240e54a605b7db2853029e2f6bfd5c6e8a5f9c92209edb"
+    },
+    {
+      "direction": "N",
+      "action": "windup1",
+      "rect": [
+        384,
+        144,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        295,
+        256,
+        381,
+        374
+      ],
+      "alphaBounds": [
+        25,
+        28,
+        103,
+        136
+      ],
+      "sha256": "b5e352f9758158eab6effde80ddac4eeb178484784283b255c3d525668465093"
+    },
+    {
+      "direction": "N",
+      "action": "contact",
+      "rect": [
+        512,
+        144,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        387,
+        273,
+        487,
+        374
+      ],
+      "alphaBounds": [
+        18,
+        47,
+        110,
+        136
+      ],
+      "sha256": "f2c6994c47f2151a1e4e338d3cd10f7f3c792d0d202dc8e749ba6c362829df3b"
+    },
+    {
+      "direction": "N",
+      "action": "recovery",
+      "rect": [
+        640,
+        144,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        497,
+        270,
+        568,
+        374
+      ],
+      "alphaBounds": [
+        32,
+        44,
+        95,
+        136
+      ],
+      "sha256": "c01a649ff6ceac1aed9a93af6f02e57cf75207313787aca1583c8da4f5fee14c"
+    },
+    {
+      "direction": "N",
+      "action": "hurt",
+      "rect": [
+        768,
+        144,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        581,
+        273,
+        664,
+        374
+      ],
+      "alphaBounds": [
+        26,
+        47,
+        101,
+        136
+      ],
+      "sha256": "ad67028a2f8742a89f6690657327df07083511fa2f3c30c00102dfa5b55882df"
+    },
+    {
+      "direction": "N",
+      "action": "disperse",
+      "rect": [
+        896,
+        144,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        683,
+        274,
+        759,
+        374
+      ],
+      "alphaBounds": [
+        27,
+        41,
+        98,
+        136
+      ],
+      "sha256": "d0446907cea60d237362feee7819ec7f806452d61b182b1723a7b09fac766d9f"
+    },
+    {
+      "direction": "E",
+      "action": "idle0",
+      "rect": [
+        0,
+        0,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        14,
+        386,
+        77,
+        497
+      ],
+      "alphaBounds": [
+        36,
+        37,
+        91,
+        136
+      ],
+      "sha256": "13beb86e2c4c82662db2281a9410d061ac7ca02ecc652306ce55d091ef681325"
+    },
+    {
+      "direction": "E",
+      "action": "idle1",
+      "rect": [
+        128,
+        0,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        110,
+        386,
+        173,
+        497
+      ],
+      "alphaBounds": [
+        36,
+        37,
+        91,
+        136
+      ],
+      "sha256": "aca90c421da9450b6e04645aa2affb05c1bdd974d66f4fd229d293e0e20620b0"
+    },
+    {
+      "direction": "E",
+      "action": "windup0",
+      "rect": [
+        256,
+        0,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        204,
+        390,
+        273,
+        497
+      ],
+      "alphaBounds": [
+        33,
+        41,
+        94,
+        136
+      ],
+      "sha256": "c8a835356d309c11e1a2046921c89349215fadd2e7a922bdd93d0379d3250a30"
+    },
+    {
+      "direction": "E",
+      "action": "windup1",
+      "rect": [
+        384,
+        0,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        295,
+        384,
+        372,
+        497
+      ],
+      "alphaBounds": [
+        29,
+        27,
+        98,
+        136
+      ],
+      "sha256": "1e4397ce5c8f3be88a3f690e2afda0b0cc6d101ddda512ed3c796e4c4cd73246"
+    },
+    {
+      "direction": "E",
+      "action": "contact",
+      "rect": [
+        512,
+        0,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        386,
+        397,
+        487,
+        497
+      ],
+      "alphaBounds": [
+        17,
+        48,
+        110,
+        136
+      ],
+      "sha256": "f7f503b6468391b4bf39ec22fd0a86ccc4780e6112d75a8230f14c26df5732ca"
+    },
+    {
+      "direction": "E",
+      "action": "recovery",
+      "rect": [
+        640,
+        0,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        492,
+        397,
+        569,
+        497
+      ],
+      "alphaBounds": [
+        29,
+        48,
+        98,
+        136
+      ],
+      "sha256": "eafb52d48af55ed078435f73134931f78ca996e27523c16bce2eae7c02fa4f80"
+    },
+    {
+      "direction": "E",
+      "action": "hurt",
+      "rect": [
+        768,
+        0,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        588,
+        394,
+        665,
+        497
+      ],
+      "alphaBounds": [
+        29,
+        45,
+        98,
+        136
+      ],
+      "sha256": "e323202fad40404aae16bd4a15e0f9ddca7af5a1d7041797d5bbceedfa88a65b"
+    },
+    {
+      "direction": "E",
+      "action": "disperse",
+      "rect": [
+        896,
+        0,
+        128,
+        144
+      ],
+      "footPivot": [
+        64,
+        8
+      ],
+      "sourceCrop": [
+        686,
+        394,
+        756,
+        497
+      ],
+      "alphaBounds": [
+        29,
+        37,
+        95,
+        136
+      ],
+      "sha256": "b70c4028f4d2349da72307fddefc80bd7216ce570132dc6c73c3232d859d50ea"
+    }
+  ]
+}

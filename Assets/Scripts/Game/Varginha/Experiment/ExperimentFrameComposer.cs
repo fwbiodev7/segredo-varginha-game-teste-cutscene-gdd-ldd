@@ -48,11 +48,33 @@ namespace Game.Varginha.Experiment
                 { c.r = (byte)(c.r * .88f); c.g = (byte)(c.g * .88f); c.b = (byte)(c.b * .88f); }
                 _pixels[y * Width + x] = c;
             }
+            if(shot.mode=="news"&&time>.45f&&time<shot.duration-.7f)AnimateReporterMouth(time);
             Apply();
             return Frame;
         }
+        private void AnimateReporterMouth(float time)
+        {
+            int[] cycle={0,1,2,1,0,2,1,0};
+            int frame=cycle[Mathf.FloorToInt(time*7)%cycle.Length];if(frame==0)return;
+            const string id="ReporterMouthV3";
+            var sheet=Resources.Load<Texture2D>("Varginha/HouseFeedback/"+id);if(sheet==null)return;
+            if(!_sources.TryGetValue(id,out var source)){source=sheet.GetPixels32();_sources.Add(id,source);}
+            // Sample only the generated lips: keep the original journalist, head, camera
+            // and backdrop perfectly still even if the generated atlas rows differ.
+            int sx=812,top=frame==1?463:777,sw=27,sh=13;
+            for(int y=0;y<4;y++)for(int x=0;x<10;x++)
+            {
+                var pixel=source[(sheet.height-top-sh+y*sh/4)*sheet.width+sx+x*sw/10];
+                if(((124+y)&1)==0){pixel.r=(byte)(pixel.r*.88f);pixel.g=(byte)(pixel.g*.88f);pixel.b=(byte)(pixel.b*.88f);}
+                _pixels[(124+y)*Width+189+x]=pixel;
+            }
+        }
         private void Fill(Color32 color) { for (int i = 0; i < _pixels.Length; i++) _pixels[i] = color; }
         private void Apply() { Frame.SetPixels32(_pixels); Frame.Apply(false); }
-        public void Dispose() { if (Frame != null) Object.Destroy(Frame); }
+        public void Dispose()
+        {
+            if(Frame==null)return;
+            if(Application.isPlaying)Object.Destroy(Frame);else Object.DestroyImmediate(Frame);
+        }
     }
 }

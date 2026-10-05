@@ -1,0 +1,899 @@
+fileFormatVersion: 2
+guid: 04cc810992e54c8409764ead029f0153
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7607516225813661486
+    second: EdelzioInteractionsV2_0
+  - first:
+      213: -2013971143789807786
+    second: EdelzioInteractionsV2_1
+  - first:
+      213: -3528325114529037505
+    second: EdelzioInteractionsV2_2
+  - first:
+      213: -3058877623803032366
+    second: EdelzioInteractionsV2_3
+  - first:
+      213: -8227581445771994912
+    second: EdelzioInteractionsV2_4
+  - first:
+      213: -2237544811621378371
+    second: EdelzioInteractionsV2_5
+  - first:
+      213: 8324943153756298347
+    second: EdelzioInteractionsV2_6
+  - first:
+      213: 6338275509352453955
+    second: EdelzioInteractionsV2_7
+  - first:
+      213: -5417613810503204200
+    second: EdelzioInteractionsV2_8
+  - first:
+      213: 2582070932086091501
+    second: EdelzioInteractionsV2_9
+  - first:
+      213: -4576998161996098132
+    second: EdelzioInteractionsV2_10
+  - first:
+      213: -614296529197542347
+    second: EdelzioInteractionsV2_11
+  - first:
+      213: 4686331829222827433
+    second: EdelzioInteractionsV2_12
+  - first:
+      213: -1788725453161117308
+    second: EdelzioInteractionsV2_13
+  - first:
+      213: 7635571273877603956
+    second: EdelzioInteractionsV2_14
+  - first:
+      213: 6029252839568900845
+    second: EdelzioInteractionsV2_15
+  - first:
+      213: -1623384259939067104
+    second: EdelzioInteractionsV2_16
+  - first:
+      213: 811891059778622512
+    second: EdelzioInteractionsV2_17
+  - first:
+      213: -7762130605379333030
+    second: EdelzioInteractionsV2_18
+  - first:
+      213: -1703648767772420632
+    second: EdelzioInteractionsV2_19
+  - first:
+      213: 7700121919085101294
+    second: EdelzioInteractionsV2_20
+  - first:
+      213: -562634925349347669
+    second: EdelzioInteractionsV2_21
+  - first:
+      213: 5300256386166151578
+    second: EdelzioInteractionsV2_22
+  - first:
+      213: 3478253399615953532
+    second: EdelzioInteractionsV2_23
+  - first:
+      213: -5240575679870872179
+    second: EdelzioInteractionsV2_24
+  - first:
+      213: -6573907376863943131
+    second: EdelzioInteractionsV2_25
+  - first:
+      213: 1927513405371358660
+    second: EdelzioInteractionsV2_26
+  - first:
+      213: -3840402606048606397
+    second: EdelzioInteractionsV2_27
+  - first:
+      213: -4588748720430556076
+    second: EdelzioInteractionsV2_28
+  - first:
+      213: 2987795814345549923
+    second: EdelzioInteractionsV2_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 655
+        width: 265
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e27c4a673b3539960800000000000000
+      internalID: 7607516225813661486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_1
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 782
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 657758a4aefec04e0800000000000000
+      internalID: -2013971143789807786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_2
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 751
+        width: 201
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f334860900fd80fc0800000000000000
+      internalID: -3528325114529037505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_3
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 625
+        width: 291
+        height: 355
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc44ddf10fac85d0800000000000000
+      internalID: -3058877623803032366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_4
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 759
+        width: 119
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e85a244442c1dd80800000000000000
+      internalID: -8227581445771994912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_5
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 12
+        width: 323
+        height: 995
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db61a4e49d4a2f0e0800000000000000
+      internalID: -2237544811621378371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_6
+      rect:
+        serializedVersion: 2
+        x: 1286
+        y: 12
+        width: 225
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6cd6fed0b3288370800000000000000
+      internalID: 8324943153756298347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_7
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 509
+        width: 191
+        height: 230
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 347d28f7ef316f750800000000000000
+      internalID: 6338275509352453955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_8
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 13
+        width: 223
+        height: 741
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 892c4be61f4c0d4b0800000000000000
+      internalID: -5417613810503204200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_9
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 735
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee6ad315db55d320800000000000000
+      internalID: 2582070932086091501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_10
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 328
+        width: 261
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca55b90fb6c3b70c0800000000000000
+      internalID: -4576998161996098132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_11
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 507
+        width: 169
+        height: 213
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 534dc66bf849977f0800000000000000
+      internalID: -614296529197542347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_12
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 625
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a5ee6c28f1390140800000000000000
+      internalID: 4686331829222827433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_13
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 591
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 489c1ab6dab2d27e0800000000000000
+      internalID: -1788725453161117308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_14
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 583
+        width: 8
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 476c6ac5e9ff6f960800000000000000
+      internalID: 7635571273877603956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_15
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 125
+        width: 257
+        height: 369
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de2058363853ca350800000000000000
+      internalID: 6029252839568900845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_16
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 479
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b1f5cdd949879e0800000000000000
+      internalID: -1623384259939067104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_17
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 27
+        width: 273
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0349b660e9a644b00800000000000000
+      internalID: 811891059778622512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_18
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 463
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a545d26075f574490800000000000000
+      internalID: -7762130605379333030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_19
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 454
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e594e6d87c6b58e0800000000000000
+      internalID: -1703648767772420632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_20
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 431
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee04442a6145cda60800000000000000
+      internalID: 7700121919085101294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_21
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 253
+        width: 171
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baed250348e1138f0800000000000000
+      internalID: -562634925349347669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_22
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 375
+        width: 23
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99ddebe91b4e8940800000000000000
+      internalID: 5300256386166151578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_23
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 327
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7a57e2d90d354030800000000000000
+      internalID: 3478253399615953532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_24
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 271
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d85deb65f2cb547b0800000000000000
+      internalID: -5240575679870872179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_25
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 246
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52664bf121ac4c4a0800000000000000
+      internalID: -6573907376863943131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 9
+        width: 134
+        height: 234
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cd96f2da37efba10800000000000000
+      internalID: 1927513405371358660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_27
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 12
+        width: 231
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3470df75d2624bac0800000000000000
+      internalID: -3840402606048606397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_28
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 0
+        width: 143
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45c553bd95d7150c0800000000000000
+      internalID: -4588748720430556076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EdelzioInteractionsV2_29
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 151
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368277f8678c67920800000000000000
+      internalID: 2987795814345549923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      EdelzioInteractionsV2_0: 7607516225813661486
+      EdelzioInteractionsV2_1: -2013971143789807786
+      EdelzioInteractionsV2_10: -4576998161996098132
+      EdelzioInteractionsV2_11: -614296529197542347
+      EdelzioInteractionsV2_12: 4686331829222827433
+      EdelzioInteractionsV2_13: -1788725453161117308
+      EdelzioInteractionsV2_14: 7635571273877603956
+      EdelzioInteractionsV2_15: 6029252839568900845
+      EdelzioInteractionsV2_16: -1623384259939067104
+      EdelzioInteractionsV2_17: 811891059778622512
+      EdelzioInteractionsV2_18: -7762130605379333030
+      EdelzioInteractionsV2_19: -1703648767772420632
+      EdelzioInteractionsV2_2: -3528325114529037505
+      EdelzioInteractionsV2_20: 7700121919085101294
+      EdelzioInteractionsV2_21: -562634925349347669
+      EdelzioInteractionsV2_22: 5300256386166151578
+      EdelzioInteractionsV2_23: 3478253399615953532
+      EdelzioInteractionsV2_24: -5240575679870872179
+      EdelzioInteractionsV2_25: -6573907376863943131
+      EdelzioInteractionsV2_26: 1927513405371358660
+      EdelzioInteractionsV2_27: -3840402606048606397
+      EdelzioInteractionsV2_28: -4588748720430556076
+      EdelzioInteractionsV2_29: 2987795814345549923
+      EdelzioInteractionsV2_3: -3058877623803032366
+      EdelzioInteractionsV2_4: -8227581445771994912
+      EdelzioInteractionsV2_5: -2237544811621378371
+      EdelzioInteractionsV2_6: 8324943153756298347
+      EdelzioInteractionsV2_7: 6338275509352453955
+      EdelzioInteractionsV2_8: -5417613810503204200
+      EdelzioInteractionsV2_9: 2582070932086091501
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

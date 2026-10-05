@@ -37,21 +37,22 @@ namespace Game.Varginha.Experiment
             }
             var body = actor.GetComponent<Rigidbody2D>();
             if (body != null) { body.interpolation = RigidbodyInterpolation2D.Interpolate; body.collisionDetectionMode = CollisionDetectionMode2D.Continuous; body.constraints = RigidbodyConstraints2D.FreezeRotation; }
+            CampaignWallBody.Ensure(actor,child);
         }
         public static void QuietWorld()
         {
-            foreach (var prop in Object.FindObjectsByType<InteractableProp>(FindObjectsInactive.Include, FindObjectsSortMode.None)) prop.enabled = false;
-            foreach (var enemy in Object.FindObjectsByType<EntityManifestationAI>(FindObjectsInactive.Include, FindObjectsSortMode.None)) enemy.gameObject.SetActive(false);
-            foreach (var enemy in Object.FindObjectsByType<VarginhaCombatEnemy>(FindObjectsInactive.Include, FindObjectsSortMode.None)) enemy.gameObject.SetActive(false);
-            foreach (var exit in Object.FindObjectsByType<FuscaLevelExit>(FindObjectsInactive.Include, FindObjectsSortMode.None)) exit.enabled = false;
+            foreach (var prop in Object.FindObjectsByType<InteractableProp>(FindObjectsInactive.Include)) prop.enabled = false;
+            foreach (var enemy in Object.FindObjectsByType<EntityManifestationAI>(FindObjectsInactive.Include)) enemy.gameObject.SetActive(false);
+            foreach (var enemy in Object.FindObjectsByType<VarginhaCombatEnemy>(FindObjectsInactive.Include)) enemy.gameObject.SetActive(false);
+            foreach (var exit in Object.FindObjectsByType<FuscaLevelExit>(FindObjectsInactive.Include)) exit.enabled = false;
             if (VarginhaGameHUD.Instance != null)
             {
                 VarginhaGameHUD.Instance.CloseDialogue();
-                if (VarginhaCampaignStage.Active != null) VarginhaGameHUD.Instance.CampaignInventoryOnly = true;
+                if (VarginhaCampaignStage.Active != null || CampaignExpansionController.Active != null) VarginhaGameHUD.Instance.CampaignInventoryOnly = true;
                 else VarginhaGameHUD.Instance.enabled = false;
             }
             if (VarginhaNotebookQuiz.Instance != null) VarginhaNotebookQuiz.Instance.enabled = false;
-            foreach (var attack in Object.FindObjectsByType<VarginhaPlayerAttack>(FindObjectsSortMode.None)) attack.enabled = false;
+            foreach (var attack in Object.FindObjectsByType<VarginhaPlayerAttack>()) attack.enabled = false;
         }
     }
 }

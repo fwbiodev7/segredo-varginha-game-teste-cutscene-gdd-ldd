@@ -1,0 +1,79 @@
+{
+  "tool": "image_gen.imagegen",
+  "reference": "Artes existentes e fotos de Renan e Ouzana fornecidas pelo usuário; fotos pessoais não incluídas no repositório.",
+  "assets": [
+    {
+      "asset": "Assets/Resources/Varginha/StoryCharacters/WalkGray.png",
+      "imagegen_id": "b1480130-c442-49d7-b783-00555a1222f6",
+      "frames": 16,
+      "sha256": "92bcd4a4cb7d84f8147b6806db1188b43d2120a15f3590944a5a7236a75bd878"
+    },
+    {
+      "asset": "Assets/Resources/Varginha/StoryCharacters/Life.png",
+      "imagegen_id": "387f9fb9-b762-4785-8dd3-0203e1b696ca",
+      "frames": 48,
+      "sha256": "dff43299412f98af2c797298333b2bd1d6284ffd10f6b1a5f30f1b837a72e89d"
+    },
+    {
+      "asset": "Assets/Resources/Varginha/StoryCharacters/LifeGray.png",
+      "imagegen_id": "fb4d28e5-3871-415c-8514-828b6a482248",
+      "frames": 48,
+      "sha256": "1776f07a4e8481b213e2803fc54c12e7dcc622bdb21be7de40680fb0be758b12"
+    },
+    {
+      "asset": "Assets/Resources/Varginha/StoryCharacters/Seated.png",
+      "imagegen_id": "c061135f-01d9-4749-8ec5-bfbf5d0f2bd2",
+      "frames": 48,
+      "sha256": "982c14e8514a14077ce1f8bd9d3379c26517b6b38388536d460e0d8ce93b9a7f"
+    },
+    {
+      "asset": "Assets/Resources/Varginha/StoryCharacters/SeatedGray.png",
+      "imagegen_id": "544dd71c-4856-4e72-8b81-0a7df2326189",
+      "frames": 48,
+      "sha256": "b7cc4d80187504589b02c53a845f14fda22e84f8aa53841f3332e3d451f158aa"
+    },
+    {
+      "asset": "Assets/Resources/Varginha/StoryCharacters/Punch.png",
+      "imagegen_id": "dd95700e-4f10-4092-8278-9ed65941cf16",
+      "frames": 32,
+      "sha256": "1ac822d8a790e693def104d1e262a0be78bc87b888a3fbcd7b51cacfa4c23576"
+    },
+    {
+      "asset": "Assets/Resources/Varginha/StoryCharacters/Driving.png",
+      "imagegen_id": "15b9353d-36b4-492b-89d2-625b175464e6",
+      "frames": 16,
+      "sha256": "f26d152bf05cda2bd74aee7542b76026ba8772ab67b74c1983d94c7815b08231"
+    },
+    {
+      "asset": "Assets/Resources/Varginha/StoryCharacters/RenanTeaching.png",
+      "imagegen_id": "ec652ca4-4444-458f-a1c5-a99965b7b1c4",
+      "frames": 16,
+      "sha256": "5a5f17b1da32446eb02c0880533c4d68a9dd6db241487d206620800a1511a1a5"
+    },
+    {
+      "asset": "Assets/Resources/Varginha/StoryCharacters/RenanProps.png",
+      "imagegen_id": "b3f946dc-fc39-4fbc-9bdd-630725528580",
+      "frames": 3,
+      "sha256": "8d36de6f27d7a878f016c11d62434c9beef11f7bd8b947eee8e9e8cc2930a24f"
+    },
+    {
+      "asset": "Assets/Resources/Varginha/StoryCharacters/SeatedDeskNorth.png",
+      "imagegen_id": "5f2dede2-ed27-41f7-90e3-41777b759357",
+      "frames": 6,
+      "sha256": "d2571226016a654ddd1d55741f49f1a8bcdd276f6205a9e421ece274c4ec9452"
+    },
+    {
+      "asset": "Assets/Resources/Varginha/Interface/ChapterPreviews.png",
+      "imagegen_id": "f344c014-bdc1-440e-8cd7-fdc496eb73e2",
+      "frames": 9,
+      "sha256": "b68be5e4be43bf7ac6765e8b6e40a2ee9d8a88991e54cdc71cdaf1fda53fcffd"
+    },
+    {
+      "asset": "Assets/Resources/Varginha/StoryCharacters/OuzanaBiologist.png",
+      "imagegen_id": "ab83af3f-db49-4411-82bb-fb5bffd3bbb9",
+      "frames": 16,
+      "sha256": "2bc1e6565e5322e853ce71ecd016610a6e4be1633d6197046a480253085d2877",
+      "prompt": "Docs/CampanhaOficial/CORRECOES_IGREJA_OUZANA_20261003.md"
+    }
+  ]
+}

@@ -47,7 +47,7 @@ namespace Game.Editor.Testing
         }
         public static void BuildCampaign()
         {
-            var house = EditorSceneManager.OpenScene("Assets/Scenes/FaseTopView_Varginha.unity");
+            var house = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
             new GameObject("Campanha_Ato1_Fase1").AddComponent<VarginhaCampaignPhase1>();
             string path = "Assets/Scenes/" + VarginhaCampaignPhase1.SceneName + ".unity";
             EditorSceneManager.SaveScene(house, path);

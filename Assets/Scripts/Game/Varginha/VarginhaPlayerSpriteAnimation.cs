@@ -32,6 +32,9 @@ namespace Game.Varginha
         private int _bodyDirection;
         public bool IsSeated { get; private set; }
         public bool IsDrinking { get; private set; }
+        public bool IsPunching => _attackPose;
+        public int ActionFrame { get; private set; }
+        public string CurrentActionPose { get; private set; }
         public bool HasActionPose => _actionPose != null;
         public Vector2 ActionFacingDirection { get; private set; } = Vector2.down;
 
@@ -193,7 +196,8 @@ namespace Game.Varginha
         /// <summary>Congela brevemente o ciclo idle/run em uma pose de interação.</summary>
         public void SetActionPose(string poseId)
         {
-            ActionFacingDirection = poseId == "Edelzio_Sit" || poseId == "Edelzio_UseNotebook" ? _seatingFacing : Vector2.down;
+            CurrentActionPose=poseId;ActionFrame=poseId=="Edelzio_UseNotebook"?1:0;
+            ActionFacingDirection = poseId == "Edelzio_WashFace" ? Vector2.up : poseId == "Edelzio_Sit" || poseId == "Edelzio_UseNotebook" ? _seatingFacing : Vector2.down;
             _attackPose = false;
             EnsureFrames();
             IsSeated = poseId == "Edelzio_Sit" || poseId == "Edelzio_UseNotebook";
@@ -210,6 +214,7 @@ namespace Game.Varginha
         public void SetCoffeeFrame(int frame)
         {
             SetActionPose("Edelzio_DrinkCoffee");
+            ActionFrame=Mathf.Clamp(frame,0,2);
             if (_actionFrames != null) _actionPose = _actionFrames[Mathf.Clamp(frame, 0, 3)];
             if (_renderer != null) PresentPose(_actionPose, DirectionIndex(ActionFacingDirection));
         }
@@ -222,12 +227,14 @@ namespace Game.Varginha
         public void SetSeatingFrame(int frame)
         {
             SetActionPose("Edelzio_Sit");
+            ActionFrame=Mathf.Clamp(frame,0,2);
             _actionPose = VarginhaReferenceSprites.EdelzioActionFrame("Edelzio_Sit", frame, DirectionIndex(ActionFacingDirection));
             if (_renderer != null) PresentPose(_actionPose, DirectionIndex(ActionFacingDirection));
         }
 
         public void ClearActionPose()
         {
+            CurrentActionPose=null;ActionFrame=0;
             _actionPose = null;
             _typing = false;
             _attackPose = false;
@@ -249,6 +256,9 @@ namespace Game.Varginha
         /// <summary>The backpack state selects the equipped version of the current pose.</summary>
         public void RefreshEquipmentAppearance()
         {
+            // Campaign sheets already contain the complete authored body. Legacy equipment
+            // compositing must not replace a new pose in the middle of an action coroutine.
+            if(GetComponent<Experiment.CampaignTeamEdelzio>()!=null)return;
             if (_renderer == null) _renderer = GetComponent<SpriteRenderer>();
             if (_controller == null) _controller = GetComponent<EdelzioTopDownController>();
             if (_renderer == null || _bodyPose == null) return;

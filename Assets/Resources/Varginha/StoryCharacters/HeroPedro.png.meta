@@ -1,0 +1,847 @@
+fileFormatVersion: 2
+guid: 25930240307cad742af45ba0fd34b07d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4392753930796188775
+    second: HeroPedro_0
+  - first:
+      213: 6070352049696001020
+    second: HeroPedro_1
+  - first:
+      213: -283159602915123804
+    second: HeroPedro_2
+  - first:
+      213: -487965898036166777
+    second: HeroPedro_3
+  - first:
+      213: -1100264108624212086
+    second: HeroPedro_4
+  - first:
+      213: -3064972930551835259
+    second: HeroPedro_5
+  - first:
+      213: -7131880570213267623
+    second: HeroPedro_6
+  - first:
+      213: 2569542274716153084
+    second: HeroPedro_7
+  - first:
+      213: 7607916267015279454
+    second: HeroPedro_8
+  - first:
+      213: -8761884676826352474
+    second: HeroPedro_9
+  - first:
+      213: -2947144887688398180
+    second: HeroPedro_10
+  - first:
+      213: 2713197971670162021
+    second: HeroPedro_11
+  - first:
+      213: -8524248629010371216
+    second: HeroPedro_12
+  - first:
+      213: 6948155898764032805
+    second: HeroPedro_13
+  - first:
+      213: -2638031779872263897
+    second: HeroPedro_14
+  - first:
+      213: -5057305827006426761
+    second: HeroPedro_15
+  - first:
+      213: -383937748194427870
+    second: HeroPedro_16
+  - first:
+      213: 2161488517053813778
+    second: HeroPedro_17
+  - first:
+      213: -8560757751825957878
+    second: HeroPedro_18
+  - first:
+      213: 3639557289105549134
+    second: HeroPedro_19
+  - first:
+      213: 6279908061769409143
+    second: HeroPedro_20
+  - first:
+      213: -2823112340745966243
+    second: HeroPedro_21
+  - first:
+      213: -6888697858150659229
+    second: HeroPedro_22
+  - first:
+      213: 5429847509237005571
+    second: HeroPedro_23
+  - first:
+      213: 2445255868565447243
+    second: HeroPedro_24
+  - first:
+      213: -732415289241308232
+    second: HeroPedro_25
+  - first:
+      213: -2097385137348366268
+    second: HeroPedro_26
+  - first:
+      213: -1168785829124470218
+    second: HeroPedro_27
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeroPedro_0
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 243
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b3131e29dc903c0800000000000000
+      internalID: -4392753930796188775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 245
+        width: 26
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfbc1bfe6093e3450800000000000000
+      internalID: 6070352049696001020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_2
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 242
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4add08567d3021cf0800000000000000
+      internalID: -283159602915123804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 243
+        width: 30
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78fbc01e9956a39f0800000000000000
+      internalID: -487965898036166777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_4
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 243
+        width: 24
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8f87566f931bb0f0800000000000000
+      internalID: -1100264108624212086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_5
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 242
+        width: 29
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 585154ccb570775d0800000000000000
+      internalID: -3064972930551835259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_6
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 242
+        width: 26
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9578def5868760d90800000000000000
+      internalID: -7131880570213267623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_7
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 243
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf43ec7b519d8a320800000000000000
+      internalID: 2569542274716153084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_8
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 241
+        width: 36
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e539c50598fb49960800000000000000
+      internalID: 7607916267015279454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_9
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 241
+        width: 37
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a4b3d21f48876680800000000000000
+      internalID: -8761884676826352474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_10
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 241
+        width: 37
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a79bbd653a917d0800000000000000
+      internalID: -2947144887688398180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_11
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 241
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ad5ba1e2737a520800000000000000
+      internalID: 2713197971670162021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_12
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 133
+        width: 78
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07de9ba0909c3b980800000000000000
+      internalID: -8524248629010371216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_13
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 133
+        width: 172
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52b7ddd1afecc6060800000000000000
+      internalID: 6948155898764032805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_14
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 183
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721b586b214d36bd0800000000000000
+      internalID: -2638031779872263897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_15
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 133
+        width: 80
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 771d4c42527d0d9b0800000000000000
+      internalID: -5057305827006426761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_16
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 132
+        width: 81
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22cf107f6aafbaaf0800000000000000
+      internalID: -383937748194427870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 132
+        width: 139
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 214141daa562ffd10800000000000000
+      internalID: 2161488517053813778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_18
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 132
+        width: 108
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0cfd3a7e24123980800000000000000
+      internalID: -8560757751825957878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_19
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 155
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e47e1dc321e428230800000000000000
+      internalID: 3639557289105549134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_20
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 22
+        width: 75
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 772a0eb1c17b62750800000000000000
+      internalID: 6279908061769409143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_21
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 18
+        width: 186
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5da0d8984a42d8d0800000000000000
+      internalID: -2823112340745966243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_22
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 45
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36b8fefbbcd6660a0800000000000000
+      internalID: -6888697858150659229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_23
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 22
+        width: 78
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30d7c948a81ba5b40800000000000000
+      internalID: 5429847509237005571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_24
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 21
+        width: 69
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4268c6c14b4fe120800000000000000
+      internalID: 2445255868565447243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_25
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 19
+        width: 154
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b3f4b8cc20f5d5f0800000000000000
+      internalID: -732415289241308232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_26
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 21
+        width: 74
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 440ba2b745794e2e0800000000000000
+      internalID: -2097385137348366268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroPedro_27
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 37
+        width: 12
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63a868c1b73a7cfe0800000000000000
+      internalID: -1168785829124470218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HeroPedro_0: -4392753930796188775
+      HeroPedro_1: 6070352049696001020
+      HeroPedro_10: -2947144887688398180
+      HeroPedro_11: 2713197971670162021
+      HeroPedro_12: -8524248629010371216
+      HeroPedro_13: 6948155898764032805
+      HeroPedro_14: -2638031779872263897
+      HeroPedro_15: -5057305827006426761
+      HeroPedro_16: -383937748194427870
+      HeroPedro_17: 2161488517053813778
+      HeroPedro_18: -8560757751825957878
+      HeroPedro_19: 3639557289105549134
+      HeroPedro_2: -283159602915123804
+      HeroPedro_20: 6279908061769409143
+      HeroPedro_21: -2823112340745966243
+      HeroPedro_22: -6888697858150659229
+      HeroPedro_23: 5429847509237005571
+      HeroPedro_24: 2445255868565447243
+      HeroPedro_25: -732415289241308232
+      HeroPedro_26: -2097385137348366268
+      HeroPedro_27: -1168785829124470218
+      HeroPedro_3: -487965898036166777
+      HeroPedro_4: -1100264108624212086
+      HeroPedro_5: -3064972930551835259
+      HeroPedro_6: -7131880570213267623
+      HeroPedro_7: 2569542274716153084
+      HeroPedro_8: 7607916267015279454
+      HeroPedro_9: -8761884676826352474
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
