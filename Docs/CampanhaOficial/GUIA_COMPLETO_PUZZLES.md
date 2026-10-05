@@ -67,11 +67,11 @@ Uma escolha errada permite tentar novamente no próprio notebook. Não são nece
 
 ## Fase 6 — Fragmentos
 
-1. Examine os três registros disponíveis: **arquivo municipal**, **planta escolar** e **relato urbano / praça**. Eles podem ser recolhidos em qualquer ordem.
-2. O arquivo fornece o terceiro fragmento. As pistas relacionam **árvore a oeste**, **rio no centro** e **capela a leste**.
-3. Abra a **sobreposição cartográfica / mapa**.
+1. Na **biblioteca da Escola Industrial**, examine o **livro aberto da mesa de leitura à esquerda**, a **anotação junto ao globo à direita** e o **painel de avisos**, perto da mesa redonda. Podem ser consultados em qualquer ordem.
+2. O livro fornece o terceiro fragmento. As pistas relacionam **árvore a oeste**, **rio no centro** e **capela a leste**.
+3. Examine a **mesa central** para abrir a sobreposição dos fragmentos.
 4. Organize as peças como **ÁRVORE • OESTE → RIO • CENTRO → CAPELA • LESTE** e clique em **CONFIRMAR**.
-5. Vá à saída indicada para a mata; continue para a fase 7.
+5. Volte à **entrada ao sul**, entre as duas plantas, e use **SAIR DA BIBLIOTECA • PARTIR PARA A MATA**; continue para a fase 7.
 
 O mapa só aceita a solução depois de recolher os três registros. Os documentos opcionais de verdade acrescentam contexto, mas não substituem os registros principais.
 
@@ -100,17 +100,19 @@ O documento de Zé Gomes datado de 1898 é uma pista histórica opcional. **1898
 
 ## Fase 9 — Ouzana
 
-1. Fale com **Ouzana** para apresentar as evidências e o registro da âncora.
+1. Fale com **Ouzana** para apresentar as evidências e o registro de Edelzio, o selo da entidade.
 2. Examine a **amostra de controle**, o **resíduo anômalo** e o **protocolo de leitura**. A coleta das pistas é livre.
 3. Abra o teste na **bancada de amostras**.
 4. Organize a execução do protocolo como **CONTROLE → RESÍDUO → REAGENTE** e clique em **CONFIRMAR**.
 5. Ouzana libera o reagente e entrega **seis cargas**.
-6. O ponto de **teste gratuito** mostra o funcionamento sem consumir cargas; esse teste é opcional.
+6. O ponto de **teste gratuito** explica a aplicação e a reação esperada por diálogo, sem consumir cargas; esse teste é opcional.
 7. Use a saída **LEVAR REAGENTE À OFICINA** e continue para a fase 10.
 
 Se o teste não for aceito, confira a conversa com Ouzana e a leitura das três pistas. Conhecer a ordem por este guia não substitui a coleta das evidências no jogo.
 
 ## Fase 10 — O Fusca Marcado
+
+Ao chegar, Edelzio está no Fusca, na rua em frente à oficina. Use **WASD / setas** para conduzir o veículo pela entrada central até os cantos amarelos da vaga. Pare com a frente voltada para cima; quando aparecer **[E] ESTACIONAR E SAIR DO FUSCA**, pressione **E**. A análise da lataria começa depois desse estacionamento. A chegada pode ser salva e retomada; investigações antigas com marcas já reveladas continuam com o carro estacionado.
 
 1. Examine as três regiões indicadas para borrifar o reagente: **CAPÔ**, **PORTA** e **MOTOR**. A ordem de aplicação é livre e cada marca revelada consome uma carga.
 2. Registre os resultados: **capô = ÁRVORE • I**, **porta = RIO • II**, **motor = CAPELA • III**.
@@ -119,9 +121,41 @@ Se o teste não for aceito, confira a conversa com Ouzana e a leitura das três 
 5. Se precisar de reagente, examine a **bancada de reserva** para recarregar as seis cargas. Aplicar outra vez em uma marca já registrada não consome uma nova carga.
 6. Examine **TESTAR ESTABILIZADOR • FUSCA**. O personagem entra no veículo e o teste muda para a pista abaixo da oficina.
 7. Conduza com **D / seta para a direita** até o final; **A / seta para a esquerda** recua. Termine o percurso para registrar o teste.
-8. Após sair do carro, examine **ENCERRAR O TESTE NA PISTA**. A tela de conclusão permite salvar e voltar ao menu.
+8. Após sair do carro, examine **ENCERRAR O TESTE NA PISTA**. Edelzio embarca e o Fusca parte pela rua em uma breve cena. A tela de conclusão permite salvar e voltar ao menu.
 
-O teste da pista exige o selo resolvido. Apenas revelar as três marcas não basta. Esta versão encerra a campanha jogável na fase 10; a continuação da história permanece planejada.
+O teste da pista exige o selo resolvido. Apenas revelar as três marcas não basta. Após a partida, continue para a fase 11.
+
+## Fases 11 a 21
+
+11. **Arquivos alterados:** fale com Renan no quadro, abra o notebook e examine impressão, original e cópia alterada. Compare **ACESSO DE SERVIÇO • 1898** e parta para o casarão.
+12. **Casarão de Zé Gomes:** examine a planta no jardim, entre pela porta principal e encontre a chave no escritório. Compare a parede e aplique o reagente. Volte ao jardim e abra a porta de serviço revelada. A fotografia do grupo é complementar.
+13. **Registros de 1898:** leia páginas, fotografias e materiais. Na mesa, ordene **DESCOBERTA → EXPERIÊNCIAS → RUPTURA → CONTENÇÃO**. A anotação da bancada é opcional. Aguarde a lembrança e siga para a capela.
+14. **O que Fábio escondeu:** apresente os registros ao padre antes de procurar a página. Leia os três registros e organize **1898 • MECANISMO → 1996 • EDELZIO, SELO VIVO → 2026 • FALHA DA LIGAÇÃO**.
+15. **A noite interrompida:** na casa de 1996, reúna notícia, desenho, falha de energia e presença. Ordene **NOTÍCIA → DESENHO → FALTA DE ENERGIA → PRESENÇA**.
+16. **A descida:** leia esquema, área inundada e painel. Escolha **PASSAGEM LIGADA • ÁGUA DESLIGADA**. Os suprimentos de Ouzana são opcionais. Passe pela porta norte.
+17. **Câmaras do selo:** percorra as três salas e leia Árvore, Rio e Capela. Cada regulador afeta duas leituras. Uma solução é **reguladores Árvore = 0, Rio = 2, Capela = 1**, produzindo **leituras 1, 2, 0**. Valide no console e siga pela saída. O abrigo interrompe a aproximação dos ecos.
+18. **Criatura ferida:** examine registros humanos, ferimentos e leituras de Ouzana. Escolha **PASSAGEM EXTERNA • SELO INTERNO**. A casa de 1996 reaparece na projeção.
+19. **Acordo esquecido:** examine página ocultada, registros, caderno e lembrança. Ordene **ESTABILIZAR → ABRIR RETORNO → ENTIDADE ATRAVESSA → ENCERRAR LIGAÇÃO**. Aguarde a memória do clarão.
+20. **Batalha:** prepare Árvore, Rio e Capela na arena. Desvie do aviso no chão e ataque durante a recuperação do chefe. Na mochila, equipe até **três alunos e um APOIO** entre Renan, Ouzana e Padre Fábio. Somente os equipados aparecem na arena. Use **1, 2 ou 3** para atacar com o aluno daquela vaga. **L / mouse direito** alterna entre os alunos prontos, acionando **um por comando**; aguarde o término do ataque antes do próximo. **H** aciona o professor separadamente. No controle: **LB** para aluno e **RB** para professor. As recargas são individuais. Selecionar um quarto aluno troca a última vaga; selecionar alguém equipado remove-o. Renan interrompe ataques com o notebook; Ouzana lança reagente e deixa uma nuvem; o padre cria uma proteção com área limitada. A formação fica salva. O chefe produz até cinco filhotes simultâneos. Ao dissipar a manifestação, use a saída.
+21. **Retorno e epílogo:** abra a passagem mantendo o selo, aguarde a travessia e só então encerre a ligação. Volte à Industrial, converse com Renan, abra o caderno e examine o Fusca. Depois da última fala aparecem os créditos da equipe e das participações.
+
+Edelzio é o **selo vivo da entidade**. A âncora é um símbolo do registro da fase 8. Dissipar a manifestação na fase 20 permite ajudar a entidade ferida na fase 21.
+
+## Ataques dos alunos
+
+Cada comando alterna entre as duas habilidades do aluno selecionado. Os ataques possuem preparação, contato e recuperação; o dano começa no contato. As áreas não atravessam paredes.
+
+| Aluno | Ataque 1 | Ataque 2 |
+|---|---|---|
+| Yasmin | Onda sonora | Piano do céu |
+| Pedro | Riff sonoro | Acorde em área |
+| Matias | Combo de quedas | Projeção |
+| Fabio | Corte de katana | Arremesso de anilhas |
+| Marcos | Saque potente | Bola em área |
+| Anna Sabia | Raquetada rápida | Spin em área |
+| Tavares | Toque preciso | Chuva de bolas |
+| Luis Miguel Messias | Rima pesada | Solta a voz |
+| Luis Martins | Jato de tinta | Explosão de cores |
 
 ## Respostas rápidas
 

@@ -25,10 +25,13 @@ namespace Game.Varginha
 
         public bool ReceiveHit(float damage, Vector2 direction, float hitstop)
         {
+            var manifestation=GetComponent<Experiment.CampaignManifestationCombat>();
+            if(manifestation!=null&&!manifestation.CanReceiveHit)return false;
             if (kind == EnemyKind.AncestralEntity || _health == null || _health.IsDead) return false;
             float before = _health.CurrentHealth;
             _health.TakeDamage(damage);
             if (_health.CurrentHealth >= before) return false;
+            manifestation?.ReactToHit();
             GetComponent<VarginhaCombatEnemy>()?.ReactToHit(direction, hitstop);
             if (_health.IsDead)
             {

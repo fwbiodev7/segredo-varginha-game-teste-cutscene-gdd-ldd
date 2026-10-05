@@ -1,0 +1,665 @@
+fileFormatVersion: 2
+guid: 4b1aace66c1369045b8c5b5c7a4177e8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -502517477258210359
+    second: HeroLuisMiguelMessias_0
+  - first:
+      213: -134288055383140154
+    second: HeroLuisMiguelMessias_1
+  - first:
+      213: -8133278231356370091
+    second: HeroLuisMiguelMessias_2
+  - first:
+      213: 5476328860688911034
+    second: HeroLuisMiguelMessias_3
+  - first:
+      213: 2053046119397314298
+    second: HeroLuisMiguelMessias_4
+  - first:
+      213: -6425539099055394805
+    second: HeroLuisMiguelMessias_5
+  - first:
+      213: -7573438670371496846
+    second: HeroLuisMiguelMessias_6
+  - first:
+      213: 3149291630897832529
+    second: HeroLuisMiguelMessias_7
+  - first:
+      213: 3229261776979186697
+    second: HeroLuisMiguelMessias_8
+  - first:
+      213: 6090070110135278100
+    second: HeroLuisMiguelMessias_9
+  - first:
+      213: -2271972067597836353
+    second: HeroLuisMiguelMessias_10
+  - first:
+      213: -1300573437491722454
+    second: HeroLuisMiguelMessias_11
+  - first:
+      213: -8340101240111825141
+    second: HeroLuisMiguelMessias_12
+  - first:
+      213: -5578363219943882864
+    second: HeroLuisMiguelMessias_13
+  - first:
+      213: -1133758880664481786
+    second: HeroLuisMiguelMessias_14
+  - first:
+      213: 1754446429565103076
+    second: HeroLuisMiguelMessias_15
+  - first:
+      213: -8573609785227347808
+    second: HeroLuisMiguelMessias_16
+  - first:
+      213: 3739980475688566173
+    second: HeroLuisMiguelMessias_17
+  - first:
+      213: 5512610235792965363
+    second: HeroLuisMiguelMessias_18
+  - first:
+      213: -7392322954849990851
+    second: HeroLuisMiguelMessias_19
+  - first:
+      213: 263742233773117163
+    second: HeroLuisMiguelMessias_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 230
+        width: 59
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c359925403b609f0800000000000000
+      internalID: -502517477258210359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_1
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 230
+        width: 60
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c85f41a9b9e22ef0800000000000000
+      internalID: -134288055383140154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_2
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 229
+        width: 57
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55316906a8ac02f80800000000000000
+      internalID: -8133278231356370091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_3
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 231
+        width: 59
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba059e7514dffb40800000000000000
+      internalID: 5476328860688911034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_4
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 231
+        width: 41
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afecb2e6192ed7c10800000000000000
+      internalID: 2053046119397314298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_5
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 230
+        width: 34
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b007b6ebb36e3d6a0800000000000000
+      internalID: -6425539099055394805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_6
+      rect:
+        serializedVersion: 2
+        x: 706
+        y: 231
+        width: 46
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27cdc44b7adb5e690800000000000000
+      internalID: -7573438670371496846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_7
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 122
+        width: 77
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 152a6c97d0884bb20800000000000000
+      internalID: 3149291630897832529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_8
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 121
+        width: 159
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 904579f0a74a0dc20800000000000000
+      internalID: 3229261776979186697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_9
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 121
+        width: 54
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a56d3af76448450800000000000000
+      internalID: 6090070110135278100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 121
+        width: 81
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf983321755870e0800000000000000
+      internalID: -2271972067597836353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_11
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 121
+        width: 148
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a274ffd695f63fde0800000000000000
+      internalID: -1300573437491722454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_12
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 121
+        width: 56
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ff6502c12024c80800000000000000
+      internalID: -8340101240111825141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_13
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 159
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09ff327f43ca592b0800000000000000
+      internalID: -5578363219943882864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_14
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 15
+        width: 78
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6009c011e441440f0800000000000000
+      internalID: -1133758880664481786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_15
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 15
+        width: 182
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb2ea37bbb095810800000000000000
+      internalID: 1754446429565103076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_16
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 15
+        width: 69
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a8f5b4435b640980800000000000000
+      internalID: -8573609785227347808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_17
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 15
+        width: 67
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d30586d6417e330800000000000000
+      internalID: 3739980475688566173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_18
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 15
+        width: 193
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe3f996dc9b08c40800000000000000
+      internalID: 5512610235792965363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_19
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 15
+        width: 60
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3743335071396990800000000000000
+      internalID: -7392322954849990851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroLuisMiguelMessias_20
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 22
+        width: 33
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bee805c0a2009a300800000000000000
+      internalID: 263742233773117163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HeroLuisMiguelMessias_0: -502517477258210359
+      HeroLuisMiguelMessias_1: -134288055383140154
+      HeroLuisMiguelMessias_10: -2271972067597836353
+      HeroLuisMiguelMessias_11: -1300573437491722454
+      HeroLuisMiguelMessias_12: -8340101240111825141
+      HeroLuisMiguelMessias_13: -5578363219943882864
+      HeroLuisMiguelMessias_14: -1133758880664481786
+      HeroLuisMiguelMessias_15: 1754446429565103076
+      HeroLuisMiguelMessias_16: -8573609785227347808
+      HeroLuisMiguelMessias_17: 3739980475688566173
+      HeroLuisMiguelMessias_18: 5512610235792965363
+      HeroLuisMiguelMessias_19: -7392322954849990851
+      HeroLuisMiguelMessias_2: -8133278231356370091
+      HeroLuisMiguelMessias_20: 263742233773117163
+      HeroLuisMiguelMessias_3: 5476328860688911034
+      HeroLuisMiguelMessias_4: 2053046119397314298
+      HeroLuisMiguelMessias_5: -6425539099055394805
+      HeroLuisMiguelMessias_6: -7573438670371496846
+      HeroLuisMiguelMessias_7: 3149291630897832529
+      HeroLuisMiguelMessias_8: 3229261776979186697
+      HeroLuisMiguelMessias_9: 6090070110135278100
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

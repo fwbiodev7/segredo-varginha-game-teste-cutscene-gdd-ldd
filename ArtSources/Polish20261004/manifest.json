@@ -1,0 +1,53 @@
+{
+  "date": "2026-10-04",
+  "skill": "segredo-varginha-pixelart",
+  "method": "imagegen fidelity edit; technical border crop only",
+  "maps": [
+    {
+      "phase": [
+        17,
+        117,
+        217
+      ],
+      "source": "exec-b9abed72-2c40-4874-9711-3882a73dcda2.png",
+      "prompt": "Edit the FIRST image, a playable top-down RPG pixel-art containment chamber map. The SECOND image is the game's established visual style reference. Deliver the same complete room at much higher native detail, approximately 1536x930 wide canvas. Preserve EXACTLY the first map's room silhouette, floor extent, every doorway, stairs, cylinder, console, pedestal, central circular dais, railings, pipes and their relative pixel coordinates. Do not invent objects or change the room layout or floor pathways. Refine pixel density and detail to the second image's sharp stone floor, warm ochre brass, navy machinery, teal cylinders, controlled warm lights. Square deliberate pixels, dark outlines and coherent contained colour groups, no blur, no painterly strokes. Camera must stay the same RPG topview with visible north wall fronts, NOT isometric or perspective. No people, text, HUD, legends, guide colours, grids or frame. Keep night suspense readable. Do NOT recolour symbols or doors, do NOT move any silhouettes. Full room and bottom steps remain visible, identical scene footprint.",
+      "sourceSize": [
+        1614,
+        975
+      ],
+      "finalSize": [
+        1614,
+        975
+      ],
+      "crop": [
+        0,
+        0,
+        1614,
+        975
+      ],
+      "preserved": "World bounds, puzzle state, objective identities; foreground rectangles and physical walkways retained."
+    },
+    {
+      "phase": [
+        18
+      ],
+      "source": "exec-01194aaa-fbd0-4158-89b4-48a5569a365c.png",
+      "prompt": "Refine the FIRST map without changing its composition. FIRST image is the edit target and exact level layout; SECOND is pixel-art detail reference. This is an extremely wide, low containment chamber map. Preserve FIRST image's aspect ratio 744:215 (3.46:1), ALL its wall silhouettes, all existing floor paths, tiny southern wall and every object's exact relative position. Higher-resolution crisp RPG pixel-art stone/brass detail only. MOST IMPORTANT: DO NOT ADD ANY SOUTHERN STAIRS, SOUTH EXIT, DOORWAY or extra floor. The southern edge remains the unbroken dark stone wall of the first image. Do NOT make the room taller or alter the height ratio. The left and right straight corridors remain the only side accesses and must be present to the original image edges. Keep blue cylinder exactly where it was, same relative size and circle platform. Keep all machines and grates in precisely the same arrangement. Native image around 2048x592 pixels, no extra border or padding. Sharp square pixel clusters, warm ochre lamps, navy stone, bronze pipes matching the second image, clear detailed floor. No blur, no characters, no text, no legends, no isometric perspective. This is a fidelity edit, not a new room design.",
+      "sourceSize": [
+        2155,
+        730
+      ],
+      "finalSize": [
+        2155,
+        623
+      ],
+      "crop": [
+        0,
+        44,
+        2155,
+        667
+      ],
+      "preserved": "Left/right accesses and original containment layout. Removed generated outer blank border; no resize."
+    }
+  ]
+}

@@ -25,6 +25,9 @@ namespace Game.Tests.PlayMode
             var story=new CampaignStory{phase=6}; CampaignStorySave.Write(story);
             for(int phase=6;phase<=10;phase++)
             {
+                // Arrival driving is exercised by the workshop vehicle test; this
+                // regression checks the already parked investigation in each scene.
+                if(phase==10){var saved=CampaignStorySave.Load();saved.expansion.workshopParked=true;CampaignStorySave.Write(saved);}
                 yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(phase)); yield return null; yield return new WaitForSeconds(.15f);
                 var stage=CampaignExpansionController.Active; Assert.That(stage,Is.Not.Null);
                 Assert.That(stage.phase,Is.EqualTo(phase));
@@ -131,16 +134,67 @@ namespace Game.Tests.PlayMode
             while(Time.time<end){InputSystem.QueueStateEvent(keyboard,new KeyboardState(key));yield return null;}
             InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return null;
         }
-        [UnityTest] public IEnumerator PhysicalMovementUsesDoorsAndCannotCrossTheArchiveWall()
+        [UnityTest] public IEnumerator IndustrialLibraryHasPhysicalPassagesAndReachableEvidence()
         {
             CampaignStorySave.Write(new CampaignStory{phase=6});yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(6));yield return new WaitForSeconds(3);
             var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();var body=actor.GetComponent<Rigidbody2D>();var keyboard=InputSystem.AddDevice<Keyboard>();
-            var data=CampaignIllustratedMaps.Get(6);
-            body.position=data.Position(150,500)+Vector2.up*.58f;Press(keyboard.wKey);yield return new WaitForSeconds(.6f);Release(keyboard.wKey);
-            Assert.That(body.position.y-.58f,Is.LessThan(data.Position(150,442).y),"Solid wall blocks feet.");
-            body.position=data.Position(288,500)+Vector2.up*.58f;body.linearVelocity=Vector2.zero;Press(keyboard.wKey);yield return new WaitForSeconds(.9f);Release(keyboard.wKey);
-            Assert.That(body.position.y-.58f,Is.GreaterThan(data.Position(288,390).y),"Door allows actual rigidbody movement.");
+            var data=CampaignIllustratedMaps.Get(6);var stage=CampaignExpansionController.Active;
+            Assert.That(data.image,Is.EqualTo("IndustrialLibrary"));
+            Assert.That(CampaignCharacterShadows.OpenAir(data,stage.Plan.spawn),Is.False,"The school library is indoors.");
+            // The entrance and rug are floor, while the central chair stops real movement.
+            yield return WalkLibrary(stage.Plan,body,keyboard,stage.Plan.points.Find(p=>p.id=="map").position);
+            var chair=GameObject.Find("Mapa_Campanha").transform.Find("02_Mobilia_Colisoes/Cadeira central sul meio").GetComponent<BoxCollider2D>();
+            body.position=data.Position(480,507)+Vector2.up*.58f;body.linearVelocity=Vector2.zero;yield return new WaitForFixedUpdate();
+            yield return HoldKey(keyboard,Key.W,.6f);
+            Assert.That(actor.GetComponent<CircleCollider2D>().Distance(chair).distance,Is.GreaterThanOrEqualTo(-.01f),"The chair cannot be walked through (physics contact tolerance).");
+            Assert.That(actor.GetComponent<CircleCollider2D>().bounds.center.y,Is.LessThanOrEqualTo(chair.bounds.min.y-.22f));
+            // Probe the T-shaped exterior and the bookshelf using the same physical controller.
+            body.position=data.Position(365,645)+Vector2.up*.58f;body.linearVelocity=Vector2.zero;yield return new WaitForFixedUpdate();
+            yield return HoldKey(keyboard,Key.A,.6f);
+            Assert.That(body.position.x-.23f,Is.GreaterThan(data.Position(347,645).x),"Vestibule wall closes the black external corner.");
+            body.position=data.Position(115,502)+Vector2.up*.58f;body.linearVelocity=Vector2.zero;yield return new WaitForFixedUpdate();
+            yield return HoldKey(keyboard,Key.W,.6f);
+            Assert.That(body.position.y-.58f,Is.LessThan(data.Position(115,465).y),"The west bookshelf blocks the feet.");
+            // Return to a real floor location, then walk the three clue routes without teleporting.
+            body.position=stage.Plan.spawn+Vector2.up*.58f;body.linearVelocity=Vector2.zero;yield return new WaitForFixedUpdate();
+            foreach(string id in new[]{"archive","school","square"})
+            {
+                yield return WalkLibrary(stage.Plan,body,keyboard,stage.Plan.points.Find(p=>p.id==id).position);
+                yield return HoldKey(keyboard,Key.E,.1f);stage.ClosePanel();yield return null;
+            }
+            Assert.That(stage.Progress.expansion.visited,Is.EqualTo(7),"Each visible object responds to the interaction key.");
+            yield return WalkLibrary(stage.Plan,body,keyboard,stage.Plan.points.Find(p=>p.id=="map").position);
+            yield return HoldKey(keyboard,Key.E,.1f);
+            stage.Progress.expansion.mapOrder=new[]{2,1,0};Assert.That(stage.SubmitPuzzle(),Is.False);
+            stage.ClosePanel();stage.Interact("map");stage.Progress.expansion.mapOrder=new[]{0,1,2};Assert.That(stage.SubmitPuzzle(),Is.True);stage.ClosePanel();
+            Assert.That(CampaignStorySave.Load().expansion.mapSolved,Is.True);
+            yield return WalkLibrary(stage.Plan,body,keyboard,stage.Plan.points.Find(p=>p.id=="exit").position);
+            yield return HoldKey(keyboard,Key.E,.1f);
+            Assert.That(actor.IsInputLocked,Is.True,"The reached exit opens the completion panel.");
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
+        private static IEnumerator WalkLibrary(CampaignMapPlan plan,Rigidbody2D body,Keyboard keyboard,Vector2 target)
+        {
+            var path=new System.Collections.Generic.List<Vector2>();
+            Assert.That(plan.Route(body.position-Vector2.up*.58f,target,path),Is.True,"Physical route to "+target);
+            var corners=new System.Collections.Generic.List<Vector2>();
+            for(int i=0;i<path.Count;i++)
+                if(i==path.Count-1||i==0||(path[i]-path[i-1])!=(path[i+1]-path[i]))corners.Add(path[i]);
+            corners.Add(target);
+            foreach(var corner in corners)
+            {
+                float deadline=Time.time+8;
+                while(Vector2.Distance(body.position-Vector2.up*.58f,corner)>.10f&&Time.time<deadline)
+                {
+                    var delta=corner-(body.position-Vector2.up*.58f);var keys=new System.Collections.Generic.List<Key>();
+                    if(Mathf.Abs(delta.x)>.065f)keys.Add(delta.x>0?Key.D:Key.A);
+                    if(Mathf.Abs(delta.y)>.065f)keys.Add(delta.y>0?Key.W:Key.S);
+                    InputSystem.QueueStateEvent(keyboard,new KeyboardState(keys.ToArray()));yield return null;
+                }
+                InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return null;
+                Assert.That(Vector2.Distance(body.position-Vector2.up*.58f,corner),Is.LessThan(.28f),"Blocked physical passage at "+corner);
+            }
+            yield return new WaitForFixedUpdate();yield return new WaitForFixedUpdate();
         }
         [UnityTest] public IEnumerator FuscaRequiresStabilizationAndCompletesOnlyAfterDrivingTheTrack()
         {
@@ -163,7 +217,7 @@ namespace Game.Tests.PlayMode
             Assert.That(renderer.bounds.size.x/renderer.bounds.size.y,Is.EqualTo(422f/187).Within(.001f),"Frontage crop retains its proportions.");
             var renan=GameObject.Find("Renan_Industrial_Campanha").GetComponent<Collider2D>();
             var plan=CampaignMapPlan.Create(4);
-            foreach(var student in Object.FindObjectsByType<CampaignSchoolLife>(FindObjectsSortMode.None))
+            foreach(var student in Object.FindObjectsByType<CampaignSchoolLife>())
             {
                 var feet=student.GetComponent<CircleCollider2D>();var ground=(Vector2)student.transform.position+feet.offset;
                 Assert.That(plan.IsClear(ground,feet.radius),Is.True,student.StudentName+" feet");
@@ -176,7 +230,7 @@ namespace Game.Tests.PlayMode
             Assert.That(actor.GetComponent<CircleCollider2D>().bounds.center.y,Is.GreaterThan(data.Position(700,640).y),"Player crosses the real gate instead of its painted walls.");
             Assert.That(renderer.enabled,Is.True,"Facade remains a depth-sorted wall face.");
             yield return new WaitForSeconds(1);
-            foreach(var student in Object.FindObjectsByType<CampaignSchoolLife>(FindObjectsSortMode.None))
+            foreach(var student in Object.FindObjectsByType<CampaignSchoolLife>())
             {
                 Assert.That(student.Walks,Is.False,"Students stay seated while Renan teaches.");
                 Assert.That((Vector2)student.transform.position,Is.EqualTo(student.Home));

@@ -1,0 +1,191 @@
+{
+  "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a0fec2-8e2e-7ad2-9b35-43f27cddb7b1\\exec-151424ee-2be3-4e4d-b23b-8f940ce91846.png",
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "movementSize": [
+    256,
+    256
+  ],
+  "movementRows": [
+    "south",
+    "west",
+    "east",
+    "north"
+  ],
+  "attackSize": [
+    768,
+    256
+  ],
+  "frames": [
+    {
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 64,
+      "lift": 0.0844375,
+      "action": 0,
+      "direction": "east",
+      "stage": "anticipation",
+      "sha256": "887bf33136d6ca698d6ea762be0a4e0e6bd5583221dbc32b1034651c81f8d837"
+    },
+    {
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 192,
+      "lift": 0.0844375,
+      "action": 0,
+      "direction": "east",
+      "stage": "contact",
+      "sha256": "e4269b424c5f2bb54cf8a7b96d509eb587cb8a5a5e71ec11f3692d21804cb14a"
+    },
+    {
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 320,
+      "lift": 0.0844375,
+      "action": 0,
+      "direction": "east",
+      "stage": "recovery",
+      "sha256": "607ec3ca450b76e5844fdd6ec808ed67329a6bcde870623e0bf6b54b6fc36ca9"
+    },
+    {
+      "rect": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 448,
+      "lift": 0.07237500000000001,
+      "action": 0,
+      "direction": "west",
+      "stage": "anticipation",
+      "sha256": "d6448fbf644ec5531e8d4c9baaafea450dcf00c7d26458a1b0711a1af1fd5f15"
+    },
+    {
+      "rect": [
+        512,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 576,
+      "lift": 0.07237500000000001,
+      "action": 0,
+      "direction": "west",
+      "stage": "contact",
+      "sha256": "158f7f2937198edee11df99dadec19479db903acf1c6a4aa2f97cf1e2dc5bdcf"
+    },
+    {
+      "rect": [
+        640,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 704,
+      "lift": 0.07237500000000001,
+      "action": 0,
+      "direction": "west",
+      "stage": "recovery",
+      "sha256": "8e0f05f3c4eb03f6dce4ee97644e0aa810117c6d72b41a6b7bff30c117bd5239"
+    },
+    {
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 64,
+      "lift": 0.265375,
+      "action": 1,
+      "direction": "east",
+      "stage": "anticipation",
+      "sha256": "7b46c2912a1d5d65d14a2f8b3ad449aa19e36c9e6a88c5ffc74396a091cc52b6"
+    },
+    {
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 192,
+      "lift": 0.22918750000000002,
+      "action": 1,
+      "direction": "east",
+      "stage": "contact",
+      "sha256": "c621bf21a8ec44524573d98746eeaedc342cf426c65cd3d51c3da893bfeb366a"
+    },
+    {
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 320,
+      "lift": 0.24125000000000002,
+      "action": 1,
+      "direction": "east",
+      "stage": "recovery",
+      "sha256": "d4d9495cad5a252ea244aa8a1f1766c07231fe0ae1ccf5710ef7fba62ccff374"
+    },
+    {
+      "rect": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 448,
+      "lift": 0.265375,
+      "action": 1,
+      "direction": "west",
+      "stage": "anticipation",
+      "sha256": "0a8c2dbbbbd67da8c199e43cfe6b320b5af206c97e6709d892f5345e1c6485f0"
+    },
+    {
+      "rect": [
+        512,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 576,
+      "lift": 0.24125000000000002,
+      "action": 1,
+      "direction": "west",
+      "stage": "contact",
+      "sha256": "0ef7d5a475ff21e7c44f8da1b1007947969e2e7633ef54294f2b89fc03ca82de"
+    },
+    {
+      "rect": [
+        640,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 704,
+      "lift": 0.265375,
+      "action": 1,
+      "direction": "west",
+      "stage": "recovery",
+      "sha256": "b5eb6dfa2bc0b3ba85c69db122207e3a2a6ccdca2869cca9acbc95de5399cacd"
+    }
+  ]
+}

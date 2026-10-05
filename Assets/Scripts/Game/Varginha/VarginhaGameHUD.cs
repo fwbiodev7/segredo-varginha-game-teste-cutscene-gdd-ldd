@@ -374,7 +374,7 @@ namespace Game.Varginha
 
         private void OnGUI()
         {
-            if (CampaignInventoryOnly) return;
+            if (CampaignInventoryOnly && !IsGameOver && GameManager.Instance?.IsGameOver != true) return;
             if (!IsGameplayVisible) return;
             if (IsInventoryOpen) return;
             if (Game.Varginha.VarginhaTravelCinematic.IsTravelling) return;

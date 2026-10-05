@@ -1,0 +1,191 @@
+{
+  "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a0fec2-8e2e-7ad2-9b35-43f27cddb7b1\\exec-20efba5d-c7df-4155-a87d-061a65457135.png",
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "movementSize": [
+    256,
+    256
+  ],
+  "movementRows": [
+    "south",
+    "west",
+    "east",
+    "north"
+  ],
+  "attackSize": [
+    768,
+    256
+  ],
+  "frames": [
+    {
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 64,
+      "lift": 0.08348742603550295,
+      "action": 0,
+      "direction": "east",
+      "stage": "anticipation",
+      "sha256": "59b0656b59c288adfe32996117fea0f9b8ad458d4dfd8c20e534dc4011420fce"
+    },
+    {
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 192,
+      "lift": 0.08348742603550295,
+      "action": 0,
+      "direction": "east",
+      "stage": "contact",
+      "sha256": "4752cc0703ba045f470b19329868c77c6c972e16cd3fb09dc3aff10827430a12"
+    },
+    {
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 320,
+      "lift": 0.08348742603550295,
+      "action": 0,
+      "direction": "east",
+      "stage": "recovery",
+      "sha256": "0935e6c23fd50082864c615408f6dee83c8edb9388ea038b24fb291d26d40720"
+    },
+    {
+      "rect": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 448,
+      "lift": 0.08348742603550295,
+      "action": 0,
+      "direction": "west",
+      "stage": "anticipation",
+      "sha256": "f90a50bea3096c6a6feb57256dde3e936a3b596adc736cc9f02d87db27d4b249"
+    },
+    {
+      "rect": [
+        512,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 576,
+      "lift": 0.09541420118343194,
+      "action": 0,
+      "direction": "west",
+      "stage": "contact",
+      "sha256": "cb31e24a03915ae705c41d3813f2d0cb4ce94d7b88c784552fc829d32ba8ded9"
+    },
+    {
+      "rect": [
+        640,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 704,
+      "lift": 0.08348742603550295,
+      "action": 0,
+      "direction": "west",
+      "stage": "recovery",
+      "sha256": "e2befccd7b16b6db0b7acf3c63c53ee7a48d248584284d349be08dcc0ec5689e"
+    },
+    {
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 64,
+      "lift": 0.1550480769230769,
+      "action": 1,
+      "direction": "east",
+      "stage": "anticipation",
+      "sha256": "c2fefc418248498eb42c34cd71061868c24e4530ef4617a5d3c468edf9ff2aaf"
+    },
+    {
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 192,
+      "lift": 0.14312130177514792,
+      "action": 1,
+      "direction": "east",
+      "stage": "contact",
+      "sha256": "e436a4b5c99668fb87d6301b80979c3b8fb19281d42f45aeece7e9e5b7d89000"
+    },
+    {
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 320,
+      "lift": 0.14312130177514792,
+      "action": 1,
+      "direction": "east",
+      "stage": "recovery",
+      "sha256": "ce4517c26789f446e30f0c86d75e4532f33be0fa53782ebbbfcee20095ca73c0"
+    },
+    {
+      "rect": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 448,
+      "lift": 0.14312130177514792,
+      "action": 1,
+      "direction": "west",
+      "stage": "anticipation",
+      "sha256": "6d2debd7fbd2d14ad4000694a68c530421799b3a593c0c79009dd70bf3ffb29e"
+    },
+    {
+      "rect": [
+        512,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 576,
+      "lift": 0.14312130177514792,
+      "action": 1,
+      "direction": "west",
+      "stage": "contact",
+      "sha256": "d64fa787d7fbe431050f5fad61960c63fa2ce856785c32fbc3291755e089de80"
+    },
+    {
+      "rect": [
+        640,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 704,
+      "lift": 0.14312130177514792,
+      "action": 1,
+      "direction": "west",
+      "stage": "recovery",
+      "sha256": "0ebedcfe311277664fc64eba5941e579f0753fb890be90cfc3f614bfe2ed8ef1"
+    }
+  ]
+}

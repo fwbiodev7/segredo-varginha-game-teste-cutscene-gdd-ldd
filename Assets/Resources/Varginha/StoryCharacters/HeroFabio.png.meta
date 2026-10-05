@@ -1,0 +1,717 @@
+fileFormatVersion: 2
+guid: de494d17f8ef7c642afde07010729e0d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2051861594069586114
+    second: HeroFabio_0
+  - first:
+      213: -7627235644640206817
+    second: HeroFabio_1
+  - first:
+      213: -3838129094768346175
+    second: HeroFabio_2
+  - first:
+      213: -7961032017619138322
+    second: HeroFabio_3
+  - first:
+      213: 5210510326568066049
+    second: HeroFabio_4
+  - first:
+      213: -8888975747584055141
+    second: HeroFabio_5
+  - first:
+      213: -8434967883781454133
+    second: HeroFabio_6
+  - first:
+      213: -7663004036710709671
+    second: HeroFabio_7
+  - first:
+      213: -2419591273681156595
+    second: HeroFabio_8
+  - first:
+      213: 3650313669858713833
+    second: HeroFabio_9
+  - first:
+      213: 1375242659575752678
+    second: HeroFabio_10
+  - first:
+      213: -2254858351082323141
+    second: HeroFabio_11
+  - first:
+      213: 231894599028669407
+    second: HeroFabio_12
+  - first:
+      213: -7529953441665694416
+    second: HeroFabio_13
+  - first:
+      213: -1825085738867559308
+    second: HeroFabio_14
+  - first:
+      213: 121934419328914458
+    second: HeroFabio_15
+  - first:
+      213: -3884563445689076059
+    second: HeroFabio_16
+  - first:
+      213: -2134537188962624295
+    second: HeroFabio_17
+  - first:
+      213: 5024947027414989773
+    second: HeroFabio_18
+  - first:
+      213: -90149278352942330
+    second: HeroFabio_19
+  - first:
+      213: -4753192588664903191
+    second: HeroFabio_20
+  - first:
+      213: 6852913826691510028
+    second: HeroFabio_21
+  - first:
+      213: -1698355156776883197
+    second: HeroFabio_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeroFabio_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 249
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c0d8c2af3da97c10800000000000000
+      internalID: 2051861594069586114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 249
+        width: 25
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10e50f879d962690800000000000000
+      internalID: -7627235644640206817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_2
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 249
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cbbd307ce93cbac0800000000000000
+      internalID: -3838129094768346175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_3
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 249
+        width: 26
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8cc403f8bb48190800000000000000
+      internalID: -7961032017619138322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_4
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 249
+        width: 22
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10c189919837f4840800000000000000
+      internalID: 5210510326568066049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_5
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 249
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b98a03447a304a480800000000000000
+      internalID: -8888975747584055141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_6
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 249
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc6c06b6669f0fa80800000000000000
+      internalID: -8434967883781454133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_7
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 249
+        width: 24
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956497fcd6a87a590800000000000000
+      internalID: -7663004036710709671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_8
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 246
+        width: 35
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d06899e5e82eb6ed0800000000000000
+      internalID: -2419591273681156595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_9
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 246
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e06eaa41f488a230800000000000000
+      internalID: 3650313669858713833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_10
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 128
+        width: 107
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7e9fb99e7d51310800000000000000
+      internalID: 1375242659575752678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_11
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 135
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b334ae4c64225b0e0800000000000000
+      internalID: -2254858351082323141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_12
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 128
+        width: 126
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdb7f60c8ead73300800000000000000
+      internalID: 231894599028669407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_13
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 127
+        width: 111
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 035494e7d3b308790800000000000000
+      internalID: -7529953441665694416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_14
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 126
+        width: 121
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 474fa22b03efba6e0800000000000000
+      internalID: -1825085738867559308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_15
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 128
+        width: 106
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a145ef555b231b100800000000000000
+      internalID: 121934419328914458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_16
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 16
+        width: 78
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a63c30a022471ac0800000000000000
+      internalID: -3884563445689076059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_17
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 16
+        width: 91
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc95046cb99062e0800000000000000
+      internalID: -2134537188962624295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_18
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 51
+        width: 61
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcbb938b2b23cb540800000000000000
+      internalID: 5024947027414989773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_19
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 16
+        width: 98
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60bd30f75b9bfbef0800000000000000
+      internalID: -90149278352942330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_20
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 16
+        width: 77
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e9eb9b2684490eb0800000000000000
+      internalID: -4753192588664903191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_21
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 15
+        width: 144
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f6f4c21d07a1f50800000000000000
+      internalID: 6852913826691510028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroFabio_22
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 15
+        width: 95
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c6cd1bbfa3e68e0800000000000000
+      internalID: -1698355156776883197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HeroFabio_0: 2051861594069586114
+      HeroFabio_1: -7627235644640206817
+      HeroFabio_10: 1375242659575752678
+      HeroFabio_11: -2254858351082323141
+      HeroFabio_12: 231894599028669407
+      HeroFabio_13: -7529953441665694416
+      HeroFabio_14: -1825085738867559308
+      HeroFabio_15: 121934419328914458
+      HeroFabio_16: -3884563445689076059
+      HeroFabio_17: -2134537188962624295
+      HeroFabio_18: 5024947027414989773
+      HeroFabio_19: -90149278352942330
+      HeroFabio_2: -3838129094768346175
+      HeroFabio_20: -4753192588664903191
+      HeroFabio_21: 6852913826691510028
+      HeroFabio_22: -1698355156776883197
+      HeroFabio_3: -7961032017619138322
+      HeroFabio_4: 5210510326568066049
+      HeroFabio_5: -8888975747584055141
+      HeroFabio_6: -8434967883781454133
+      HeroFabio_7: -7663004036710709671
+      HeroFabio_8: -2419591273681156595
+      HeroFabio_9: 3650313669858713833
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

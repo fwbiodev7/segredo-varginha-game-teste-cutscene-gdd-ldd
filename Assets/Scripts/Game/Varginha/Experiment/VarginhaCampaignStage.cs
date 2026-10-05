@@ -88,20 +88,20 @@ namespace Game.Varginha.Experiment
             _points.Add(new Point("box", "CAIXA SOB A CAMA", new(-6.3f, 3.15f)));
             _points.Add(new Point("car", "FUSCA • IR À INDUSTRIAL", new(20, 0)));
             if(CampaignIllustratedMaps.Get(2)!=null)foreach(var point in _points)point.position=CampaignMapPlan.Create(2).points.Find(p=>p.id==point.id).position+Vector2.up*.58f;
-            foreach (var exit in FindObjectsByType<FuscaLevelExit>(FindObjectsInactive.Include, FindObjectsSortMode.None)) exit.enabled = false;
+            foreach (var exit in FindObjectsByType<FuscaLevelExit>(FindObjectsInactive.Include)) exit.enabled = false;
             var bag = GameObject.Find("Backpack_Prop"); if (bag != null && (_progress.routine & 8) != 0) bag.SetActive(false);
         }
         private void BuildSchoolPoints()
         {
             var school = GameObject.Find("Escola_3_Sistema_Ambiente");
             if (school != null&&CampaignIllustratedMaps.Get(phase)==null) CampaignMapConstruction.PreserveSchoolFacade(school.transform);
-            foreach (var hostage in FindObjectsByType<VarginhaStudentHostage>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+            foreach (var hostage in FindObjectsByType<VarginhaStudentHostage>(FindObjectsInactive.Include))
             {
                 // These are ordinary classes in Act II; retain each student's existing sprite.
                 hostage.enabled = false;
                 foreach (Transform child in hostage.transform) if (child.name.Contains("Cage") || child.name.Contains("Grade") || child.name.Contains("Jaula")) child.gameObject.SetActive(false);
             }
-            foreach (var sr in FindObjectsByType<SpriteRenderer>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+            foreach (var sr in FindObjectsByType<SpriteRenderer>(FindObjectsInactive.Include))
                 if (sr.name.Contains("HostageCage") || sr.name.Contains("Jaula") || sr.name.Contains("Cage")) sr.gameObject.SetActive(false);
             Vector2[] seats = { new(-5.85f,2.33f),new(3.75f,2.33f),new(6.55f,2.33f),new(-5.85f,-.07f),new(3.75f,-.07f),new(6.55f,-.07f),new(-5.85f,-2.47f),new(3.75f,-2.47f),new(6.55f,-2.47f) };
             if(CampaignIllustratedMaps.Get(phase)!=null){var all=CampaignIllustratedMaps.SchoolSeats(phase);seats=new[]{all[0],all[2],all[3],all[4],all[6],all[7],all[8],all[10],all[11]};}

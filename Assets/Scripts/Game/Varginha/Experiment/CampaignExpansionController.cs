@@ -22,17 +22,22 @@ namespace Game.Varginha.Experiment
         private EdelzioTopDownController _actor;
         private CampaignSoundscape _sound;
         private string _message, _panel;
-        private bool _paused, _settings, _hidden, _driving;
+        private bool _paused, _settings, _hidden, _driving, _parking, _departing;
+        private CampaignWorkshopVehicle _vehicle;
+        private float _departureTime;
+        private Vector2 _departureStart;
         private int _selected = -1, _year = 1898, _symbol, _record = 1;
         private float _title, _saveTimer, _routeTimer, _driveTime;
         private SpriteRenderer _entity;
         private readonly List<Vector2> _chasePath = new();
         private Vector2 _safePoint;
         private bool Blocked => _paused || _title < 2.5f || _message != null || _panel != null || VarginhaGameHUD.Instance?.IsInventoryOpen == true || _actor?.GetComponent<VarginhaPlayerActionAnimation>()?.IsActing == true;
-        private string Objective => phase == 6 ? "Reúna os três registros e alinhe o mapa."
+        private string Objective => phase == 6 ? "Examine livro, globo e painel na biblioteca da Industrial. Alinhe os fragmentos na mesa central."
             : phase == 7 ? "Árvore → rio → capela. Use o esconderijo durante a perseguição."
             : phase == 8 ? "Cruze ano, símbolo e número no Livro do Tombo."
             : phase == 9 ? "Apresente provas e teste controle, resíduo e reagente."
+            : _parking ? "Conduza o Fusca para a vaga na oficina. Pare voltado para cima e pressione E."
+            : _departing ? "As marcas continuam. A investigação também."
             : "Revele as três marcas, estabilize o Fusca e teste na pista.";
         private void Awake()
         {
@@ -53,7 +58,15 @@ namespace Game.Varginha.Experiment
             if (Progress.positionPhase == phase && Plan.IsClear(new Vector2(Progress.x, Progress.y - .58f))) _actor.transform.position = new Vector3(Progress.x, Progress.y);
             _sound = gameObject.AddComponent<CampaignSoundscape>(); _sound.Configure(phase == 7 ? "Forest" : phase == 8 ? "Church" : phase == 9 ? "Lab" : phase == 10 ? "Workshop" : "House", _actor);
             if (phase == 7) CreateEntity();
-            if (phase == 10) for (int i = 0; i < 3; i++) if ((State.sprayed & (1 << i)) != 0) RevealMark(i);
+            if (phase == 10)
+            {
+                var car=transform.Find("Mapa_Campanha/02_Mobilia_Colisoes/Fusca");
+                _parking=!State.workshopParked;
+                if(_parking)_actor.gameObject.SetActive(false);
+                _vehicle=car.gameObject.AddComponent<CampaignWorkshopVehicle>();_vehicle.Configure(State);
+                if(_parking){Camera.main.GetComponent<Game.Level.CameraFollow2D>().Target=car;_sound.Engine(true);}
+                for (int i = 0; i < 3; i++) if ((State.sprayed & (1 << i)) != 0) RevealMark(i);
+            }
             if (phase == 7 || phase == 8) CreateNPC("Padre Fábio", VarginhaReferenceSprites.PadreFabio(), Plan.points.Find(p=>p.id==(phase==7?"fabio":"trust")).position+new Vector2(phase==7?-.55f:.55f,.6f));
             if (phase == 9) CreateNPC("Ouzana", CampaignStorySprites.Frame("OuzanaBiologist",0,0),Plan.points.Find(p=>p.id=="ouzana").position+new Vector2(.9f,.6f)).AddComponent<CampaignOuzanaBiologist>();
             GameManager.Instance?.StartGame(); Save(); Lock();
@@ -86,7 +99,19 @@ namespace Game.Varginha.Experiment
             }
             if (_paused) return;
             _title += Time.deltaTime;
-            if (Blocked) { Lock(); return; }
+            if (Blocked) { _vehicle?.StopInput(); Lock(); return; }
+            if (_parking)
+            {
+                if(_vehicle.TickParking())
+                {
+                    State.workshopParked=true;_parking=false;_vehicle.ParkAtBay();_sound.Engine(false);
+                    _actor.gameObject.SetActive(true);_actor.GetComponent<Rigidbody2D>().position=Plan.points.Find(p=>p.id=="drive").position+Vector2.up*.58f;
+                    Camera.main.GetComponent<Game.Level.CameraFollow2D>().Target=_actor.transform;
+                    Say("Fusca estacionado. O reagente pode revelar o que ficou escondido na lataria.");Save();
+                }
+                SaveVehiclePeriodically();Lock();return;
+            }
+            if (_departing) { Departure();return; }
             if (_driving) { Drive(); return; }
             if (Keyboard.current?.tabKey.wasPressedThisFrame == true) { _panel = "journal"; Lock(); return; }
             if (Keyboard.current?.gKey.wasPressedThisFrame == true) { OpenBackpack(); return; }
@@ -99,6 +124,8 @@ namespace Game.Varginha.Experiment
             _saveTimer += Time.deltaTime; if (_saveTimer > 5) { _saveTimer = 0; Save(); }
             Lock();
         }
+        private void SaveVehiclePeriodically()
+        { _saveTimer+=Time.deltaTime;if(_saveTimer>5){_saveTimer=0;Save();} }
         private CampaignMapPlan.Point Nearest()
         {
             CampaignMapPlan.Point closest = null; float distance = 1.45f;
@@ -119,7 +146,7 @@ namespace Game.Varginha.Experiment
         }
         public void Interact(string id)
         {
-            if (Progress == null || _driving) return;
+            if (Progress == null || _driving || _parking || _departing) return;
             _sound?.Play("Paper");
             if (id.StartsWith("truth"))
             {
@@ -131,14 +158,17 @@ namespace Game.Varginha.Experiment
             else if (id == "exit")
             {
                 if (!State.Complete(phase)) Say("Ainda faltam etapas da investigação. Consulte o caderno.");
+                else if(phase==10&&!State.workshopDeparted)BeginDeparture();
                 else { _panel = "complete"; Lock(); }
             }
             else if (phase == 6)
             {
                 if (id == "map") Open("map");
-                else if (id == "archive") { State.visited |= 1; Say("Registro municipal: ÁRVORE, margem oeste. Terceiro fragmento de mapa recolhido. O carimbo de 23:23 corresponde à diocese."); }
-                else if (id == "school") { State.visited |= 2; Say("Planta escolar: o RIO atravessa o centro do levantamento, ligando a árvore à capela."); }
-                else if (id == "square") { State.visited |= 4; Say("Relato de 1996: a CAPELA fica a leste. Alinhe ÁRVORE → RIO → CAPELA, do oeste ao leste."); }
+                else if (id == "archive") { State.visited |= 1; Say("O livro aberto da biblioteca guarda um registro da região: ÁRVORE, margem oeste. Terceiro fragmento de mapa recolhido. O carimbo de 23:23 corresponde à diocese."); }
+                else if (id == "school") { State.visited |= 2; Say("Uma anotação junto ao globo ajuda a orientar o levantamento: o RIO atravessa o centro, ligando a árvore à capela."); }
+                else if (id == "square") { State.visited |= 4; Say("O painel conserva um relato de 1996: a CAPELA fica a leste. Alinhe ÁRVORE → RIO → CAPELA na mesa central, do oeste ao leste."); }
+                else if (id.StartsWith("library_shelf")) Say("Estantes da biblioteca da Industrial. Livros de história local, atlas e registros escolares. Os documentos da investigação estão no livro aberto, junto ao globo e no painel de avisos.");
+                else if (id.StartsWith("library_plant")) Say("As plantas recebem a luz das janelas. Entre as estantes, a biblioteca continua silenciosa.");
             }
             else if (phase == 7)
             {
@@ -191,10 +221,9 @@ namespace Game.Varginha.Experiment
         }
         private void RevealMark(int region)
         {
-            var marker = transform.Find("Marca_" + region); if (marker != null) return;
-            var go = new GameObject("Marca_" + region); go.transform.SetParent(transform);
-            go.transform.position = Plan.points[region].position + new Vector2(.3f,0);
-            var sr = go.AddComponent<SpriteRenderer>(); sr.sprite = VarginhaSceneryArt.Create("Mosaic", new Vector2(.45f,.45f)); sr.color = new Color(.4f,.9f,.65f); sr.sortingOrder = 22001;
+            var car=transform.Find("Mapa_Campanha/02_Mobilia_Colisoes/Fusca");
+            var marks=car.GetComponent<CampaignReagentMarks>();if(marks==null)marks=car.gameObject.AddComponent<CampaignReagentMarks>();
+            marks.Reveal(region,_title>=2.5f);
         }
         private void Chase()
         {
@@ -221,17 +250,7 @@ namespace Game.Varginha.Experiment
         private void BeginDrive()
         {
             _driving = true; _driveTime = 0; _actor.gameObject.SetActive(false);
-            var car = transform.Find("Mapa_Campanha/02_Mobilia_Colisoes/Fusca"); car.position = new Vector3(-8,-4.5f); car.rotation = Quaternion.Euler(0,0,-90);
-            var side=Resources.Load<Texture2D>("Varginha/fusca-sprite-sheet");
-            if(side!=null)
-            {
-                car.rotation=Quaternion.identity;
-                var renderer=car.GetComponent<SpriteRenderer>();
-                renderer.sprite=Sprite.Create(side,new Rect(0,side.height*.35f,side.width/3,side.height*.55f),Vector2.one/2,side.height*.55f,0,SpriteMeshType.FullRect);
-                renderer.size=new Vector2(3.3f,1.8f);
-                float scale=Mathf.Min(3.3f/renderer.sprite.bounds.size.x,1.8f/renderer.sprite.bounds.size.y);car.localScale=Vector3.one*scale;
-                var collider=car.GetComponent<BoxCollider2D>();collider.size=new Vector2(3.1f,.6f)/scale;collider.offset=new Vector2(0,-.6f)/scale;
-            }
+            _vehicle.BeginTrack();_vehicle.SetPosition(new Vector2(-8,-4.5f));
             var camera = Camera.main; camera.GetComponent<Game.Level.CameraFollow2D>().enabled = false; camera.transform.position = new Vector3(0,-1,-10); camera.orthographicSize = 6;
             _sound.Engine(true); _sound.Play("Starter");
         }
@@ -241,27 +260,46 @@ namespace Game.Varginha.Experiment
             var car = transform.Find("Mapa_Campanha/02_Mobilia_Colisoes/Fusca");
             float movement = (Keyboard.current?.dKey.isPressed == true || Keyboard.current?.rightArrowKey.isPressed == true ? 1 : 0)
                 - (Keyboard.current?.aKey.isPressed == true || Keyboard.current?.leftArrowKey.isPressed == true ? 1 : 0);
-            car.position = new Vector3(Mathf.Clamp(car.position.x + movement * Time.deltaTime * 4,-8,8),-4.5f);
-            if(movement!=0&&car.rotation==Quaternion.identity)car.GetComponent<SpriteRenderer>().flipX=movement<0;
+            _vehicle.SetPosition(new Vector2(Mathf.Clamp(car.position.x + movement * Time.deltaTime * 4,-8,8),-4.5f));
+            if(movement!=0)_vehicle.SetFacing(movement<0?CampaignWorkshopVehicle.Facing.West:CampaignWorkshopVehicle.Facing.East);
             if (car.position.x < 7.5f) return;
-            car.position=new Vector3(7.5f,-6.1f);
+            // Keep the parked collider off the exit where Edelzio leaves the vehicle.
+            _vehicle.SetPosition(new Vector2(7.5f,-4.5f));_vehicle.FinishTrack();
             State.testDriven = true; _driving = false; _actor.gameObject.SetActive(true);
             _actor.GetComponent<Rigidbody2D>().position = Plan.points.Find(p=>p.id=="exit").position+Vector2.up*.58f;
             Camera.main.GetComponent<Game.Level.CameraFollow2D>().enabled = true; _sound.Engine(false);
             Say("O estabilizador resistiu ao teste. O rádio voltou, mas as marcas permanecem. A investigação continua."); Save();
         }
+        private void BeginDeparture()
+        {
+            _departing=true;_departureTime=0;_departureStart=_vehicle.transform.position;
+            _actor.gameObject.SetActive(false);_vehicle.BeginDeparture();
+            Camera.main.GetComponent<Game.Level.CameraFollow2D>().enabled=false;
+            Camera.main.transform.position=new Vector3(0,-1,-10);
+            _sound.Engine(true);_sound.Play("Starter");Lock();
+        }
+        private void Departure()
+        {
+            _departureTime+=Time.deltaTime;
+            float duration=VarginhaGameSettings.Current.reducedMotion?2:3.2f;
+            float t=Mathf.Clamp01(_departureTime/duration);
+            _vehicle.transform.position=Vector2.Lerp(_departureStart,new Vector2(Plan.bounds.xMax+4,_departureStart.y),Mathf.SmoothStep(0,1,t));
+            if(t<1)return;
+            State.workshopDeparted=true;_departing=false;_sound.Engine(false);_panel="complete";Save();Lock();
+        }
         private void Open(string panel) { _panel = panel; _selected = -1; Lock(); }
         private void Say(string message) { _message = message; Lock(); }
         public void ClosePanel() { _message = _panel = null; Lock(); }
-        private void Lock() => _actor?.SetInputLocked(Blocked || _driving);
+        private void Lock() => _actor?.SetInputLocked(Blocked || _driving || _parking || _departing);
         private void TogglePause()
         {
             _paused = !_paused; _settings = false; Time.timeScale = _paused ? 0 : 1;
+            _vehicle?.StopInput();
             CampaignCinematics.Pause(_paused); _sound.Suspend(_paused); Lock();
         }
         public bool OpenBackpack()
         {
-            if (Blocked || _driving) return false;
+            if (Blocked || _driving || _parking || _departing) return false;
             return VarginhaGameHUD.Instance != null && VarginhaGameHUD.Instance.OpenBackpack();
         }
         public bool SubmitPuzzle()
@@ -269,7 +307,7 @@ namespace Game.Varginha.Experiment
             bool result = _panel == "map" ? State.SolveMap() : _panel == "anchor" ? State.SolveAnchor(_year,_symbol,_record)
                 : _panel == "samples" ? State.SolveSamples() : _panel == "seal" && State.Stabilize();
             if (result) { _panel = null; _sound.Play("Success"); Say(phase == 6 ? "As coordenadas revelam a entrada da mata. Destino registrado."
-                : phase == 8 ? "RECEPTÁCULO: EDELZIO / ESTADO DA ÂNCORA: ESTÁVEL. Você está ligado ao evento de 1996."
+                : phase == 8 ? "SELO DA ENTIDADE: EDELZIO / CONTENÇÃO: ESTÁVEL. Você é o selo que mantém a entidade contida desde 1996."
                 : phase == 9 ? "A reação contradiz as leituras normais. Ouzana aceita ajudar e entrega o reagente."
                 : "As marcas reproduzem o trajeto árvore, rio e capela. Estabilizador temporário instalado. Faça o teste na pista."); }
             else Say("A combinação não corresponde às pistas. Confira os registros e tente novamente; nenhuma pista foi perdida.");
@@ -281,6 +319,7 @@ namespace Game.Varginha.Experiment
             // A later visit to the book must not overwrite its solved combination.
             if (State.anchorFound) { _year = 1996; _symbol = 1; _record = 23; }
             State.anchorYear = _year; State.anchorSymbol = _symbol; State.anchorRecord = _record;
+            if(_parking)_vehicle.SaveParking(State);
             Progress.positionPhase = phase; Progress.x = _actor.transform.position.x; Progress.y = _actor.transform.position.y; CampaignStorySave.Write(Progress);
         }
         private void OnGUI()
@@ -293,13 +332,32 @@ namespace Game.Varginha.Experiment
                 CampaignChapterPreview.Draw(phase,_title,2.5f);return;
             }
             ExperimentGUI.Init(); var matrix = ExperimentGUI.BeginCanvas();
-            ExperimentGUI.Objective("ATO " + (phase <= 8 ? "III" : "IV") + " • FASE " + phase + " • 2026", Plan.title, Objective);
-            bool hudEnabled=GUI.enabled; GUI.enabled=hudEnabled&&!_paused&&_panel==null&&_message==null;
-            if (CampaignHudIcons.Button(1010, CampaignHudIcons.Icon.Notebook, "TAB", "Caderno") && !Blocked && !_driving) { _panel = "journal"; Lock(); }
-            if (CampaignHudIcons.Button(1092, CampaignHudIcons.Icon.Backpack, "G", "Mochila")) OpenBackpack();
-            if (CampaignHudIcons.Button(1174, CampaignHudIcons.Icon.Pause, "ESC", "Pausa")) TogglePause();
-            GUI.enabled=hudEnabled;
-            if (_driving) ExperimentGUI.Label(new Rect(200,620,950,70), "A / D OU SETAS • conduza até o fim da pista. ESC • pausa");
+            if(!_departing)
+            {
+                ExperimentGUI.Objective("ATO " + (phase <= 8 ? "III" : "IV") + " • FASE " + phase + " • 2026", Plan.title, Objective);
+                bool hudEnabled=GUI.enabled; GUI.enabled=hudEnabled&&!_paused&&_panel==null&&_message==null;
+                if (CampaignHudIcons.Button(1010, CampaignHudIcons.Icon.Notebook, "TAB", "Caderno") && !Blocked && !_driving && !_parking) { _panel = "journal"; Lock(); }
+                if (CampaignHudIcons.Button(1092, CampaignHudIcons.Icon.Backpack, "G", "Mochila")) OpenBackpack();
+                if (CampaignHudIcons.Button(1174, CampaignHudIcons.Icon.Pause, "ESC", "Pausa")) TogglePause();
+                GUI.enabled=hudEnabled;
+            }
+            if (_departing)
+            {
+                var canvas=GUI.matrix;GUI.matrix=matrix;
+                float bar=Screen.height*75/720f;
+                ExperimentGUI.Box(new Rect(0,0,Screen.width,bar),Color.black);ExperimentGUI.Box(new Rect(0,Screen.height-bar,Screen.width,bar),Color.black);
+                float duration=VarginhaGameSettings.Current.reducedMotion?2:3.2f;
+                float fade=Mathf.Clamp01((_departureTime/duration-.78f)/.22f);
+                if(fade>0)ExperimentGUI.Box(new Rect(0,0,Screen.width,Screen.height),new Color(.008f,.015f,.025f,fade));
+                GUI.matrix=canvas;
+                ExperimentGUI.Caption(new Rect(200,661,880,45),"As marcas continuam. E a estrada também.",VarginhaGameSettings.Current.subtitleSize);
+            }
+            else if (_parking)
+            {
+                ExperimentGUI.Panel(new Rect(190,648,900,50));
+                ExperimentGUI.Label(new Rect(210,660,870,30),_vehicle.CanPark?"[E] ESTACIONAR E SAIR DO FUSCA":"WASD / SETAS • CONDUZIR     E • ESTACIONAR     ESC • PAUSA",small:true);
+            }
+            else if (_driving) ExperimentGUI.Label(new Rect(200,620,950,70), "A / D OU SETAS • conduza até o fim da pista. ESC • pausa");
             else
             {
                 var point = Nearest(); ExperimentGUI.Panel(new Rect(190,648,900,50));
@@ -307,7 +365,7 @@ namespace Game.Varginha.Experiment
                     : point == null ? "WASD / SETAS • ANDAR     E • EXAMINAR" : "[E] " + point.label, small:true);
             }
             if (phase == 7) ExperimentGUI.Label(new Rect(35,158,610,40), "SANIDADE " + Mathf.RoundToInt(_actor.CurrentSanity) + " • MARCAS " + State.forestSigns + "/3",small:true);
-            if (phase == 10) ExperimentGUI.Label(new Rect(35,158,610,40), "REAGENTE " + State.reagentCharges + " • MARCAS " + Count(State.sprayed) + "/3",small:true);
+            if (phase == 10 && !_departing && !_parking) ExperimentGUI.Label(new Rect(35,158,610,40), "REAGENTE " + State.reagentCharges + " • MARCAS " + Count(State.sprayed) + "/3",small:true);
             if (_panel != null) DrawPanel();
             if (_message != null)
             {
@@ -332,21 +390,21 @@ namespace Game.Varginha.Experiment
             if (_panel == "complete")
             {
                 ExperimentGUI.Label(new Rect(165,175,950,55),"FASE " + phase + " CONCLUÍDA",true);
-                ExperimentGUI.Label(new Rect(165,250,950,155),phase == 10 ? "O Fusca voltou a funcionar. Este capítulo termina aqui, mas as marcas continuam. A investigação ainda não acabou."
+                ExperimentGUI.Label(new Rect(165,250,950,155),phase == 10 ? "O rádio recebe uma ligação. Renan: Edelzio, preciso que você volte. A imagem está diferente da que imprimimos. A cópia em papel conservou o detalhe anterior."
                     : "Pistas e progresso salvos. Próxima fase: " + CampaignMapPlan.Create(phase+1).title + ".");
-                if (phase < 10 && ExperimentGUI.Button(new Rect(365,465,550,50),"CONTINUAR PARA A FASE " + (phase+1))) { Save(); CampaignStorySave.GoTo(phase+1); }
+                if (ExperimentGUI.Button(new Rect(365,465,550,50),"CONTINUAR PARA A FASE " + (phase+1))) { Save(); CampaignStorySave.GoTo(phase+1); }
                 if (ExperimentGUI.Button(new Rect(365,535,550,45),"SALVAR E VOLTAR AO MENU")) Menu(); return;
             }
             if (_panel == "journal")
             {
                 ExperimentGUI.Label(new Rect(165,170,950,45),"CADERNO • REGISTROS",true);
                 ExperimentGUI.Label(new Rect(165,240,950,225),"Equipamento: mochila • notebook • caderno de 1996 • chave do Fusca\nFragmentos " + Progress.MapFragments + "/3 • pistas opcionais desta extensão " + Count(State.truthClues) + "/3\n"
-                    + (State.mapSolved ? "Mapa: ÁRVORE → RIO → CAPELA. Entrada da mata localizada.\n" : "Consulte os três locais e alinhe as coordenadas no notebook.\n")
-                    + (State.anchorFound ? "Tombo: 1996 • ÂNCORA • 23. Receptáculo: Edelzio.\n" : "") + (State.reagentUnlocked ? "Reagente desbloqueado. Protocolo: CONTROLE → RESÍDUO → REAGENTE." : ""));
+                    + (State.mapSolved ? "Mapa: ÁRVORE → RIO → CAPELA. Entrada da mata localizada.\n" : "Consulte livro, globo e painel da biblioteca. Alinhe os fragmentos na mesa central.\n")
+                    + (State.anchorFound ? "Tombo: 1996 • ÂNCORA • 23. Edelzio é o selo da entidade.\n" : "") + (State.reagentUnlocked ? "Reagente desbloqueado. Protocolo: CONTROLE → RESÍDUO → REAGENTE." : ""));
                 if (phase == 6)
                 {
-                    string[] names = { "ARQUIVO", "PRAÇA", "INDUSTRIAL" }; Vector2[] positions = { new(-7.5f,-.5f),new(0,-5),new(7.5f,-.5f) };
-                    for (int i = 0; i < 3; i++) if (ExperimentGUI.Button(new Rect(165+i*320,470,300,42),names[i])) { _actor.GetComponent<Rigidbody2D>().position = positions[i]+new Vector2(0,.58f); ClosePanel(); Save(); }
+                    string[] names = { "LIVRO", "GLOBO", "PAINEL" }, ids = { "archive", "school", "square" };
+                    for (int i = 0; i < 3; i++) if (ExperimentGUI.Button(new Rect(165+i*320,470,300,42),names[i])) { _actor.GetComponent<Rigidbody2D>().position = Plan.points.Find(p=>p.id==ids[i]).position+Vector2.up*.58f; ClosePanel(); Save(); }
                 }
             }
             else if (_panel == "trust")

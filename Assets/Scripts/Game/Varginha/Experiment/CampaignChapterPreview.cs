@@ -9,10 +9,18 @@ namespace Game.Varginha.Experiment
         {
             2=>"CADE A CHAVE?",3=>"A CIDADE AINDA ESTÁ ACORDADA",4=>"ENTRE AULAS E PISTAS",
             5=>"UMA FOTO. DUAS ANOTAÇÕES.",6=>"CADA FRAGMENTO CONTA UMA HISTÓRIA",
-            7=>"ALÉM DA PONTE",8=>"A LUZ GUARDA MEMÓRIAS",9=>"O QUE A LUZ REVELA",10=>"DE VOLTA À OFICINA",_=>"VARGINHA"
+            7=>"ALÉM DA PONTE",8=>"A LUZ GUARDA MEMÓRIAS",9=>"O QUE A LUZ REVELA",10=>"DE VOLTA À OFICINA",
+            11=>"AS CÓPIAS NÃO CONCORDAM",12=>"A CASA POR TRÁS DOS REGISTROS",13=>"1898",14=>"UMA PÁGINA AUSENTE",
+            15=>"ANTES DO CLARÃO",16=>"SOB A CIDADE",17=>"TRÊS CÂMARAS. UMA LIGAÇÃO.",18=>"DO OUTRO LADO DO MECANISMO",
+            19=>"A LEMBRANÇA CONTINUA",20=>"MANTENHA A ESTABILIDADE",21=>"CUMPRA O ACORDO",_=>"VARGINHA"
         };
         public static void Background(int phase,float elapsed=0)
         {
+            if(phase>=11)
+            {
+                var data=CampaignIllustratedMaps.Get(phase);var texture=data==null?null:Resources.Load<Texture2D>("Varginha/IllustratedMaps/"+data.image);
+                if(texture!=null){var saved=GUI.matrix;GUI.matrix=Matrix4x4.identity;GUI.DrawTexture(new Rect(0,0,Screen.width,Screen.height),texture,ScaleMode.ScaleAndCrop);ExperimentGUI.Box(new Rect(0,0,Screen.width,Screen.height),new Color(0,0,0,.3f));GUI.matrix=saved;}return;
+            }
             _atlas??=Resources.Load<Texture2D>("Varginha/Interface/ChapterPreviews");
             if(_atlas==null)return;
             int cell=Mathf.Clamp(phase-2,0,8),col=cell%3,row=cell/3;
@@ -30,7 +38,7 @@ namespace Game.Varginha.Experiment
             var matrix=ExperimentGUI.BeginCanvas();
             ExperimentGUI.Panel(new Rect(155,510,970,130));
             ExperimentGUI.Label(new Rect(185,529,910,55),Caption(phase),true);
-            ExperimentGUI.Label(new Rect(185,598,910,28),"FASE "+phase+" • VARGINHA, 2026",small:true);
+            ExperimentGUI.Label(new Rect(185,598,910,28),"FASE "+phase+" • VARGINHA, "+(phase==15||phase==19?"1996":"2026"),small:true);
             GUI.matrix=Matrix4x4.identity;
             float alpha=Mathf.Max(1-Mathf.Clamp01(elapsed/.3f),Mathf.Clamp01((elapsed-total+.35f)/.35f));
             ExperimentGUI.Box(new Rect(0,0,Screen.width,Screen.height),new Color(0,0,0,alpha));GUI.matrix=matrix;

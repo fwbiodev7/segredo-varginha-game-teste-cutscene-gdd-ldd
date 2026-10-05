@@ -9,6 +9,9 @@ namespace Game.Varginha.Experiment
         public int visited, truthClues, forestSigns, anchorClues, labClues, sprayed, reagentCharges = 6, trust;
         public int anchorYear = 1898, anchorSymbol, anchorRecord = 1;
         public bool mapSolved, fabioMet, anchorFound, evidencePresented, reagentUnlocked, stabilized, testDriven;
+        public bool workshopParked,workshopDeparted,workshopHasCarPosition;
+        public float workshopCarX,workshopCarY;
+        public int workshopHeading;
         public int[] mapOrder = { 2, 0, 1 }, sampleOrder = { 2, 1, 0 }, sealOrder = { 2, 0, 1 };
         public bool SolveMap()
         {
@@ -58,6 +61,13 @@ namespace Game.Varginha.Experiment
             if (!reagentUnlocked) { sprayed = 0; stabilized = false; }
             if (sprayed != 7) stabilized = false;
             if (!stabilized) testDriven = false;
+            // Existing investigations resume at the bench rather than repeating the arrival.
+            if(sprayed!=0||stabilized||testDriven)workshopParked=true;
+            if(!testDriven)workshopDeparted=false;
+            workshopHeading=Mathf.Clamp(workshopHeading,0,3);
+            if(float.IsNaN(workshopCarX)||float.IsInfinity(workshopCarX)||float.IsNaN(workshopCarY)||float.IsInfinity(workshopCarY))
+            {workshopHasCarPosition=false;workshopCarX=workshopCarY=0;}
+            workshopCarX=Mathf.Clamp(workshopCarX,-10,10);workshopCarY=Mathf.Clamp(workshopCarY,-5.9f,5.9f);
         }
         private static void RepairOrder(ref int[] order)
         {

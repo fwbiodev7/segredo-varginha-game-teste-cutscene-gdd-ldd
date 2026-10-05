@@ -11,7 +11,7 @@ namespace Game.Varginha.Experiment
         public static void Apply()
         {
             if(CampaignIllustratedMaps.Get(2)!=null){CampaignIllustratedMaps.ApplyAdultHouse(VarginhaCampaignStage.Active.transform);return;}
-            foreach(var renderer in Object.FindObjectsByType<SpriteRenderer>(FindObjectsInactive.Include,FindObjectsSortMode.None))
+            foreach(var renderer in Object.FindObjectsByType<SpriteRenderer>(FindObjectsInactive.Include))
             {
                 string id=renderer.name;
                 if(id.StartsWith("Door_")||id.StartsWith("Doorway_")){renderer.gameObject.SetActive(false);continue;}

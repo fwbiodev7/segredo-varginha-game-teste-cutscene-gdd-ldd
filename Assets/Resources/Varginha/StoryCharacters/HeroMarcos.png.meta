@@ -1,0 +1,821 @@
+fileFormatVersion: 2
+guid: 39327abe3f9754d4d9d732d2603337f1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8071822453143889848
+    second: HeroMarcos_0
+  - first:
+      213: 4633615058744888043
+    second: HeroMarcos_1
+  - first:
+      213: -224853931947491572
+    second: HeroMarcos_2
+  - first:
+      213: 7394245629817224245
+    second: HeroMarcos_3
+  - first:
+      213: 4280948065321661492
+    second: HeroMarcos_4
+  - first:
+      213: -3660816109319795171
+    second: HeroMarcos_5
+  - first:
+      213: 5129531230674768514
+    second: HeroMarcos_6
+  - first:
+      213: -948428006574991116
+    second: HeroMarcos_7
+  - first:
+      213: -6307382728119915371
+    second: HeroMarcos_8
+  - first:
+      213: 7134989366286541956
+    second: HeroMarcos_9
+  - first:
+      213: 936920159610203139
+    second: HeroMarcos_10
+  - first:
+      213: 2761914602961307260
+    second: HeroMarcos_11
+  - first:
+      213: 5468691071676378594
+    second: HeroMarcos_12
+  - first:
+      213: -5465452022317325339
+    second: HeroMarcos_13
+  - first:
+      213: 7587504376293568142
+    second: HeroMarcos_14
+  - first:
+      213: -5057931128340666189
+    second: HeroMarcos_15
+  - first:
+      213: -4384112666065967287
+    second: HeroMarcos_16
+  - first:
+      213: 7174165166056309888
+    second: HeroMarcos_17
+  - first:
+      213: 8159338081119085016
+    second: HeroMarcos_18
+  - first:
+      213: -2363707496877849572
+    second: HeroMarcos_19
+  - first:
+      213: -7094080058741913190
+    second: HeroMarcos_20
+  - first:
+      213: -2357659727522919475
+    second: HeroMarcos_21
+  - first:
+      213: 4136934508016207164
+    second: HeroMarcos_22
+  - first:
+      213: 4847220473751902334
+    second: HeroMarcos_23
+  - first:
+      213: -4464047650105334111
+    second: HeroMarcos_24
+  - first:
+      213: 2656436266281580231
+    second: HeroMarcos_25
+  - first:
+      213: 5863808994910636331
+    second: HeroMarcos_26
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeroMarcos_0
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 237
+        width: 51
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8481656ce302bff80800000000000000
+      internalID: -8071822453143889848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_1
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 241
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beac3629858ed4040800000000000000
+      internalID: 4633615058744888043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_2
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 238
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f7beb4a8821ecf0800000000000000
+      internalID: -224853931947491572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_3
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 236
+        width: 40
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53c7d335933ad9660800000000000000
+      internalID: 7394245629817224245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_4
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 239
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 434b46f759bf86b30800000000000000
+      internalID: 4280948065321661492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_5
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 238
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1e47f7f42b223dc0800000000000000
+      internalID: -3660816109319795171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_6
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 237
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28254a41a71cf2740800000000000000
+      internalID: 5129531230674768514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_7
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 237
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f8d015c0c186d2f0800000000000000
+      internalID: -948428006574991116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_8
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 236
+        width: 30
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59c6af3a3dca778a0800000000000000
+      internalID: -6307382728119915371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_9
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 125
+        width: 93
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484e2bd9603940360800000000000000
+      internalID: 7134989366286541956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_10
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 125
+        width: 135
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30ce770dbeb900d00800000000000000
+      internalID: 936920159610203139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_11
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 125
+        width: 98
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c760979b2ba445620800000000000000
+      internalID: 2761914602961307260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_12
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 125
+        width: 87
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2edee992e81b4eb40800000000000000
+      internalID: 5468691071676378594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_13
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 125
+        width: 126
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e3e5d8c750d624b0800000000000000
+      internalID: -5465452022317325339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_14
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 125
+        width: 95
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e23b8a70b3c4960800000000000000
+      internalID: 7587504376293568142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_15
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 4
+        width: 83
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b82dd4df6e9ec9b0800000000000000
+      internalID: -5057931128340666189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_16
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 65
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 947e8db12c08823c0800000000000000
+      internalID: -4384112666065967287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_17
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 4
+        width: 95
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08484ca4531cf8360800000000000000
+      internalID: 7174165166056309888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_18
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 83
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d1ab6731cacb3170800000000000000
+      internalID: 8159338081119085016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_19
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 4
+        width: 111
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c140ba71e8c623fd0800000000000000
+      internalID: -2363707496877849572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_20
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 93
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a99818ac5c3cc8d90800000000000000
+      internalID: -7094080058741913190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_21
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 4
+        width: 81
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcb80cf18f8e74fd0800000000000000
+      internalID: -2357659727522919475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_22
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 80
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c358c514408596930800000000000000
+      internalID: 4136934508016207164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_23
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 4
+        width: 92
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e789bf5d659c44340800000000000000
+      internalID: 4847220473751902334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_24
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 70
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a6ed0350548c02c0800000000000000
+      internalID: -4464047650105334111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_25
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 4
+        width: 108
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c6bd24b5be8dd420800000000000000
+      internalID: 2656436266281580231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroMarcos_26
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 87
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b29836c863f606150800000000000000
+      internalID: 5863808994910636331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HeroMarcos_0: -8071822453143889848
+      HeroMarcos_1: 4633615058744888043
+      HeroMarcos_10: 936920159610203139
+      HeroMarcos_11: 2761914602961307260
+      HeroMarcos_12: 5468691071676378594
+      HeroMarcos_13: -5465452022317325339
+      HeroMarcos_14: 7587504376293568142
+      HeroMarcos_15: -5057931128340666189
+      HeroMarcos_16: -4384112666065967287
+      HeroMarcos_17: 7174165166056309888
+      HeroMarcos_18: 8159338081119085016
+      HeroMarcos_19: -2363707496877849572
+      HeroMarcos_2: -224853931947491572
+      HeroMarcos_20: -7094080058741913190
+      HeroMarcos_21: -2357659727522919475
+      HeroMarcos_22: 4136934508016207164
+      HeroMarcos_23: 4847220473751902334
+      HeroMarcos_24: -4464047650105334111
+      HeroMarcos_25: 2656436266281580231
+      HeroMarcos_26: 5863808994910636331
+      HeroMarcos_3: 7394245629817224245
+      HeroMarcos_4: 4280948065321661492
+      HeroMarcos_5: -3660816109319795171
+      HeroMarcos_6: 5129531230674768514
+      HeroMarcos_7: -948428006574991116
+      HeroMarcos_8: -6307382728119915371
+      HeroMarcos_9: 7134989366286541956
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

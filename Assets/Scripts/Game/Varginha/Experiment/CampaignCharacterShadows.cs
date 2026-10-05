@@ -29,15 +29,19 @@ namespace Game.Varginha.Experiment
             if (Time.unscaledTime >= _discover)
             {
                 _discover = Time.unscaledTime + 2;
-                foreach (var sr in FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None))
+                foreach (var sr in FindObjectsByType<SpriteRenderer>())
                 {
+                    // Projection names inherit the actor's suffix (including _Apoio).
+                    // Owned shadow visuals must never be discovered as new actors.
+                    if(sr.transform.parent==transform)continue;
                     bool actor = sr.GetComponent<EdelzioTopDownController>() != null
                         || sr.GetComponent<VarginhaStudentAnimation>() != null
                         || sr.GetComponent<VarginhaCombatEnemy>() != null
                         || sr.GetComponent<EntityManifestationAI>() != null
                         || sr.name.StartsWith("Refem_") || sr.name.StartsWith("Renan_")
                         || sr.name == "Padre Fábio" || sr.name == "Ouzana"
-                        || sr.name == "Manifestação não combatível";
+                        || sr.name == "Manifestação não combatível" || sr.GetComponent<CampaignManifestationCombat>()!=null
+                        || sr.name.EndsWith("_Apoio") || sr.name=="Entidade ferida";
                     if (!actor || sr.GetComponent<CampaignCharacterShadow>() != null) continue;
                     var shadow = sr.gameObject.AddComponent<CampaignCharacterShadow>();
                     shadow.Configure(sr, transform); _actors.Add(shadow);
@@ -56,8 +60,9 @@ namespace Game.Varginha.Experiment
             return data.phase == 3 || data.phase == 7
                 || data.phase == 1 && x >= 914
                 || data.phase == 2 && x >= 960
-                || (data.phase == 4 || data.phase == 5) && (y >= 660 || x < 240 || x > 1150)
-                || data.phase == 6 && (y >= 485 || x >= 510 && x <= 1025)
+                || (data.phase == 4 || data.phase == 5 || data.phase==11) && (y >= 660 || x < 240 || x > 1150)
+                || data.phase==12
+                || (data.phase==15||data.phase==19)&&x>=914
                 || data.phase == 10 && y >= 667;
         }
         public static Vector2 AwayFromNearestLight(CampaignIllustratedMaps.Layout data, Vector2 feet, out float proximity)
@@ -92,6 +97,7 @@ namespace Game.Varginha.Experiment
         private Vector2 _direction = Vector2.down;
         private float _length = .7f, _opacity = .23f;
         private bool _outdoor;
+        private void OnEnable()=>_properties??=new MaterialPropertyBlock();
         public Vector2 Feet => _feet != null ? (Vector2)_feet.transform.TransformPoint(_feet.offset)
             : new Vector2(_actor.bounds.center.x, _actor.bounds.min.y+.05f);
         public Vector2 Direction => _direction;
@@ -113,6 +119,7 @@ namespace Game.Varginha.Experiment
         }
         public void SetLight(CampaignIllustratedMaps.Layout layout, Vector2 feet)
         {
+            if(_projection==null||_contact==null)return;
             // Legacy maps use the original floor ordering instead of the illustrated ground layer.
             _projection.sortingOrder = _contact.sortingOrder = layout == null ? 4 : -950;
             _outdoor = CampaignCharacterShadows.OpenAir(layout, feet);
@@ -122,7 +129,9 @@ namespace Game.Varginha.Experiment
         }
         private void LateUpdate()
         {
-            if (_actor == null || _contact == null) return;
+            if (_actor == null || _contact == null || _projection==null) return;
+            // Native property blocks are not retained when scripts reload during play.
+            _properties??=new MaterialPropertyBlock();
             bool visible = _actor.enabled && _actor.gameObject.activeInHierarchy && _actor.sprite != null && _actor.color.a > .01f;
             _contact.enabled = visible; _projection.enabled = visible && !_outdoor;
             if (!visible) return;

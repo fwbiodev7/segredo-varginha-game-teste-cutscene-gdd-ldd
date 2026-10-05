@@ -18,6 +18,7 @@ namespace Game.Varginha.Experiment
         public float driveDistance, x, y;
         public int positionPhase;
         public CampaignExpansionState expansion = new();
+        public CampaignContinuationState continuation = new();
         public int MapFragments => (pagesSolved ? 1 : 0) + (codeSolved ? 1 : 0) + ((expansion.visited & 1) != 0 ? 1 : 0);
         public bool CanLeaveHouse => routine == 15 && pagesSolved;
         public string RemainingHouseTasks
@@ -60,7 +61,8 @@ namespace Game.Varginha.Experiment
         }
         public void Repair()
         {
-            phase = Mathf.Clamp(phase, 1, 10); routine &= 15; inspection &= 7;
+            phase = Mathf.Clamp(phase, 1, 21); routine &= 15; inspection &= 7;
+            continuation ??= new CampaignContinuationState(); continuation.Repair();
             expansion ??= new CampaignExpansionState(); expansion.Repair();
             if (pages == null || pages.Length != 3 || !IsPermutation(pages)) pages = new[] { 2, 0, 1 };
             if (symbols == null || symbols.Length != 4) symbols = new[] { 1, 0, 1, 0 };
@@ -112,7 +114,7 @@ namespace Game.Varginha.Experiment
             { Debug.LogWarning("Não foi possível salvar a campanha: " + e.GetType().Name); }
             finally { try{if(File.Exists(temp))File.Delete(temp);}catch(IOException){}catch(UnauthorizedAccessException){} }
         }
-        public static string Scene(int phase) => phase == 1 ? VarginhaCampaignPhase1.SceneName
+        public static string Scene(int phase) => phase >= 11 ? CampaignContinuationDefinition.SceneName(phase) : phase == 1 ? VarginhaCampaignPhase1.SceneName
             : phase == 3 ? VarginhaCampaignDrive.SceneName : phase >= 6 ? CampaignExpansionController.SceneName(phase)
             : "Ato2_Fase" + phase + "_" + (phase == 2 ? "A_Chave_e_a_Caixa" : phase == 4 ? "Entre_Aulas_e_Pistas" : "O_Codigo_das_2323");
         public static void GoTo(int phase)

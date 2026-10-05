@@ -16,7 +16,8 @@ namespace Game.Varginha
         Attack,
         AllyCommand,
         Dodge,
-        Jump
+        Jump,
+        SupportCommand
     }
 
     /// <summary>
@@ -38,7 +39,8 @@ namespace Game.Varginha
             new(Key.J, 0),
             new(Key.L, 1),
             new(Key.LeftCtrl, NoMouse),
-            new(Key.K, NoMouse)
+            new(Key.K, NoMouse),
+            new(Key.H, NoMouse)
         };
 
         private static Binding[] _bindings;
@@ -150,6 +152,7 @@ namespace Game.Varginha
                 case VarginhaInputAction.AllyCommand: return "Comandar aluno";
                 case VarginhaInputAction.Dodge: return "Esquivar";
                 case VarginhaInputAction.Jump: return "Pular";
+                case VarginhaInputAction.SupportCommand: return "Comandar professor";
                 default: return action.ToString();
             }
         }

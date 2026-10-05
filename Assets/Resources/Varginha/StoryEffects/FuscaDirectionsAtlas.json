@@ -1,0 +1,34 @@
+{
+  "sourceWidth": 1230,
+  "sourceHeight": 1278,
+  "frames": [
+    {
+      "name": "North",
+      "x": 167,
+      "y": 77,
+      "width": 349,
+      "height": 653
+    },
+    {
+      "name": "South",
+      "x": 725,
+      "y": 77,
+      "width": 333,
+      "height": 626
+    },
+    {
+      "name": "East",
+      "x": 32,
+      "y": 857,
+      "width": 565,
+      "height": 321
+    },
+    {
+      "name": "West",
+      "x": 633,
+      "y": 857,
+      "width": 564,
+      "height": 321
+    }
+  ]
+}

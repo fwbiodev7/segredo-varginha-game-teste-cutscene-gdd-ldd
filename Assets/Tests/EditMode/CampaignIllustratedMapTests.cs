@@ -99,6 +99,8 @@ namespace Game.Tests.EditMode
             for(int phase=1;phase<=10;phase++)foreach(var prop in CampaignIllustratedMaps.Get(phase).props)
             {
                 Assert.That(prop.outline.Length,Is.GreaterThanOrEqualTo(6),prop.name);
+                foreach(float coordinate in prop.outline)
+                    Assert.That(coordinate,Is.InRange(0f,1f),prop.name+" contour stays within its source crop");
                 var points=new Vector2[prop.outline.Length/2];
                 for(int i=0;i<points.Length;i++)points[i]=new Vector2(prop.outline[i*2],1-prop.outline[i*2+1]);
                 Assert.That(CampaignIllustratedContour.Triangulate(points).Length,Is.EqualTo((points.Length-2)*3),prop.name);

@@ -1,0 +1,132 @@
+{
+  "status": "completed",
+  "duration": 168.57,
+  "summary": {
+    "total": 17,
+    "passed": 17,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight",
+      "Status": "Passed",
+      "Duration": 10.0872428,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor",
+      "Status": "Passed",
+      "Duration": 1.9809965,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign",
+      "Status": "Passed",
+      "Duration": 42.9363783,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame",
+      "Status": "Passed",
+      "Duration": 4.5944372,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening",
+      "Status": "Passed",
+      "Duration": 6.3629277,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox",
+      "Status": "Passed",
+      "Duration": 7.0326246,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions",
+      "Status": "Passed",
+      "Duration": 2.1474176,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets",
+      "Status": "Passed",
+      "Duration": 3.9693664,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags",
+      "Status": "Passed",
+      "Duration": 1.1375911,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens",
+      "Status": "Passed",
+      "Duration": 5.1741498,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaRequiresStabilizationAndCompletesOnlyAfterDrivingTheTrack",
+      "Status": "Passed",
+      "Duration": 7.5181474,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.PhysicalMovementUsesDoorsAndCannotCrossTheArchiveWall",
+      "Status": "Passed",
+      "Duration": 4.8037112,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture",
+      "Status": "Passed",
+      "Duration": 6.8055316,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryRequiresEvidenceAndAllCluesAndSurvivesReload",
+      "Status": "Passed",
+      "Duration": 13.5623532,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload",
+      "Status": "Passed",
+      "Duration": 13.7392039,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt",
+      "Status": "Passed",
+      "Duration": 0.7099414,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopChargesMarksRefillAndTrackRemainConsistent",
+      "Status": "Passed",
+      "Duration": 35.7794358,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

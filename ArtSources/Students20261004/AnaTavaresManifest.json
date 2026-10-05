@@ -1,0 +1,191 @@
+{
+  "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a0fec2-8e2e-7ad2-9b35-43f27cddb7b1\\exec-fac683a0-294b-43c4-b99e-9db080f4aa82.png",
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "movementSize": [
+    256,
+    256
+  ],
+  "movementRows": [
+    "south",
+    "west",
+    "east",
+    "north"
+  ],
+  "attackSize": [
+    768,
+    256
+  ],
+  "frames": [
+    {
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 64,
+      "lift": 0.04247237569060773,
+      "action": 0,
+      "direction": "east",
+      "stage": "anticipation",
+      "sha256": "6065dd884a46961309cb0dad81d0c6dc39e7bdf77991f5559b168c640e2a5760"
+    },
+    {
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 192,
+      "lift": 0.053090469613259667,
+      "action": 0,
+      "direction": "east",
+      "stage": "contact",
+      "sha256": "f1f10caa6ad52b79091e9f33d54fa32b06b4949beaa8b163bb728aa48c10dca4"
+    },
+    {
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 320,
+      "lift": 0.053090469613259667,
+      "action": 0,
+      "direction": "east",
+      "stage": "recovery",
+      "sha256": "0ba6837d2577ec07330744f98c819bc2a03e11285323c520f0d1a17ac47e24a0"
+    },
+    {
+      "rect": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 448,
+      "lift": 0.053090469613259667,
+      "action": 0,
+      "direction": "west",
+      "stage": "anticipation",
+      "sha256": "45ea8666b93be29ef1a4f900cad3617225985ea3b1cdc33025f39efe750bd45a"
+    },
+    {
+      "rect": [
+        512,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 576,
+      "lift": 0.053090469613259667,
+      "action": 0,
+      "direction": "west",
+      "stage": "contact",
+      "sha256": "0dac7bfdb38bc77d2c24b75075789c0a7f0320364cb267c3f079609d6b61ce62"
+    },
+    {
+      "rect": [
+        640,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 704,
+      "lift": 0.053090469613259667,
+      "action": 0,
+      "direction": "west",
+      "stage": "recovery",
+      "sha256": "1dba0379e97380c8f2afac6392e88dbee9346f49b62b4bc166ed7da200b7d710"
+    },
+    {
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 64,
+      "lift": 0.14865331491712705,
+      "action": 1,
+      "direction": "east",
+      "stage": "anticipation",
+      "sha256": "79e60bcde32627066e88860450daff303396afb27ba2cf61dcbeb3eb0dbc1deb"
+    },
+    {
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 192,
+      "lift": 0.14865331491712705,
+      "action": 1,
+      "direction": "east",
+      "stage": "contact",
+      "sha256": "b5ff0a615eb94716845256cf719b5e5030cc3c83779ab76afab2ff5979003757"
+    },
+    {
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 320,
+      "lift": 0.13803522099447513,
+      "action": 1,
+      "direction": "east",
+      "stage": "recovery",
+      "sha256": "469b29dcd74184e91c1851dfcda8f74eff173b20802a978a35710e6067b70aa4"
+    },
+    {
+      "rect": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 448,
+      "lift": 0.14865331491712705,
+      "action": 1,
+      "direction": "west",
+      "stage": "anticipation",
+      "sha256": "0205b1f62c567919c7c01777d043a92a8491c3dbb07c33c135521904be51e9a6"
+    },
+    {
+      "rect": [
+        512,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 576,
+      "lift": 0.14865331491712705,
+      "action": 1,
+      "direction": "west",
+      "stage": "contact",
+      "sha256": "a9fbbaeb78d4293f783ce0507c2deb859fea636bdd1d0458b6a562b0534b1432"
+    },
+    {
+      "rect": [
+        640,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 704,
+      "lift": 0.14865331491712705,
+      "action": 1,
+      "direction": "west",
+      "stage": "recovery",
+      "sha256": "0d081b0108013c8cdb3ba0e7966a60cd6b07e040c5df295d4ee90692f8489304"
+    }
+  ]
+}

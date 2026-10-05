@@ -15,7 +15,7 @@ namespace Game.Varginha.Experiment
         private static readonly int Tint=Shader.PropertyToID("_SceneTint"),Key=Shader.PropertyToID("_KeyLight"),Shine=Shader.PropertyToID("_Shine");
         public void Configure(CampaignIllustratedMaps.Layout data)
         {
-            _block ??=new MaterialPropertyBlock();_data=data;_discoverUntil=Time.unscaledTime+6;
+            _block ??=new MaterialPropertyBlock();_data=data;_discoverUntil=data.phase>=11?float.PositiveInfinity:Time.unscaledTime+6;
             // Preview construction must not assign runtime materials to the authored editor scene.
             if(Application.isPlaying)Discover();
         }
@@ -23,9 +23,10 @@ namespace Game.Varginha.Experiment
         private void Discover()
         {
             if(_material==null)_material=new Material(Resources.Load<Shader>("Varginha/IllustratedMaps/ActorLighting")){name="Iluminação leve dos personagens",hideFlags=HideFlags.DontSave};
-            foreach(var renderer in FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None))
+            foreach(var renderer in FindObjectsByType<SpriteRenderer>())
             {
                 bool actor=renderer.GetComponentInParent<EdelzioTopDownController>()!=null||renderer.GetComponent<VarginhaStudentAnimation>()!=null||renderer.GetComponent<CampaignSchoolLife>()!=null||renderer.GetComponent<VarginhaCombatEnemy>()!=null||renderer.GetComponent<EntityManifestationAI>()!=null||renderer.name.StartsWith("Refem_")||renderer.name.StartsWith("Renan_")||renderer.name=="Ouzana"||renderer.name=="Padre Fábio"||renderer.name.StartsWith("Fusca_TopView")||(_data.phase==10&&renderer.name=="Fusca");
+                actor|=_data.phase>=11&&(renderer.GetComponent<CampaignManifestationCombat>()!=null||renderer.name=="Renan_Apoio"||renderer.name=="Ouzana_Apoio"||renderer.name=="Padre Fábio_Apoio");
                 if(!actor||_actors.Contains(renderer))continue;
                 if(renderer.sprite!=null)renderer.sprite.texture.filterMode=FilterMode.Point;
                 renderer.sharedMaterial=_material;_actors.Add(renderer);

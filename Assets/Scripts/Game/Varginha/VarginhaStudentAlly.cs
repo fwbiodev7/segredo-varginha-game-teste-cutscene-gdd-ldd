@@ -70,6 +70,7 @@ namespace Game.Varginha
         private bool _manualMode;
         private bool _manualPresentation;
         private bool _equippedPresentation;
+        public int AttackVariant {get;private set;}
         public bool IsEquippedPresentation => _equippedPresentation;
 
         public void SetEquippedPresentation(bool equipped)
@@ -89,6 +90,7 @@ namespace Game.Varginha
         public bool IsActive => _active;
         public bool IsManualMode => _manualMode;
         public bool IsReadyForManualAttack => _active && _manualMode && !_attacking && _cooldownTimer <= 0f;
+        public bool IsAttacking => _attacking;
         public float ManualCooldownRemaining => Mathf.Max(0f, _cooldownTimer);
         public float ManualCooldownDuration => _manualCooldownSeconds;
         public float SecondaryRadius => attackStyle == VarginhaStudentAllyStyle.FallingPiano ? 2.3f
@@ -223,6 +225,7 @@ namespace Game.Varginha
         private void Update()
         {
             if (!_active) return;
+            if(Time.timeScale<=0||VarginhaGameHUD.Instance?.IsInventoryOpen==true||Experiment.CampaignContinuationController.Active?.Modal==true)return;
             if (LeaderDefeated)
             {
                 CancelAttack();
@@ -245,7 +248,12 @@ namespace Game.Varginha
                     float otherDistance = delta.magnitude;
                     if (otherDistance > .01f && otherDistance < .82f) separation += delta.normalized * (.82f - otherDistance);
                 }
-                Vector3 offset = _manualMode ? new Vector3(-.7f, -.5f, 0) : _formationOffset;
+                Vector3 offset = _manualMode ? new Vector3(-.7f,-.5f,0) : _formationOffset;
+                if(_manualMode&&_squad?.SelectionCapacity>1)
+                {
+                    int slot=_squad.FormationSlot(this)-1;
+                    offset=new Vector3(slot*1.2f,-.9f-Mathf.Abs(slot)*.25f,0);
+                }
                 Vector3 destination = _leader.position + offset + freeMotion + separation * .75f;
                 FollowPath(destination);
 
@@ -381,7 +389,7 @@ namespace Game.Varginha
                     // O dano acompanha o contato visual. O ET pode sair da área durante a preparação.
                     if (CanReachTarget(target) && Vector2.Distance(target.transform.position, impactPoint) <= 1.25f)
                         ApplyTacticalHit(target, direction, impactPoint, presentation);
-                }, SecondaryRadius);
+                }, SecondaryRadius,AttackVariant);
 
             _attacking = false;
             CurrentTarget = null;
@@ -399,9 +407,40 @@ namespace Game.Varginha
 
         private void OnDisable() => CancelAttack();
 
+        private void HeroHit(VarginhaCombatTarget target,Vector2 direction,Vector2 centre,VarginhaAllyAttackPresentation presentation)
+        {
+            bool area=AttackVariant==1&&studentName!="Fabio";
+            bool control=AttackVariant==1&&(studentName=="Fabio"||studentName=="Matias");
+            float damage=_profile.Damage+(AttackVariant==1&&studentName=="Luis Martins"?10:0);
+            foreach(var other in Object.FindObjectsByType<VarginhaCombatTarget>())
+            {
+                if(other.IsDead||!CanChainToTarget(centre,other))continue;
+                Vector2 delta=(Vector2)other.transform.position-centre;
+                if(other!=target)
+                {
+                    if(studentName=="Fabio"||studentName=="Matias"&&!area||studentName=="Marcos"&&!area||studentName.Contains("Tavares")&&!area||studentName.Contains("Sabia")&&!area)continue;
+                    if(area){if(delta.sqrMagnitude>2.4f*2.4f)continue;}
+                    else if(Vector2.Dot(delta,direction)<0||Vector2.Dot(delta,direction)>3||Mathf.Abs(delta.x*direction.y-delta.y*direction.x)>.65f)continue;
+                }
+                var manifestation=other.GetComponent<Experiment.CampaignManifestationCombat>();
+                if(control)manifestation?.Stagger(1.2f);
+                if(studentName=="Luis Martins")manifestation?.Slow(3);
+                if(!other.ReceiveHit(damage,direction,.06f))continue;
+                other.GetComponent<VarginhaCombatEnemy>()?.ApplyAllyControl(direction,control?1.2f:.45f);
+                if(studentName=="Marcos"||studentName.Contains("Messias")&&area)manifestation?.Repel(centre-direction,.8f);
+                if(other!=target)presentation.ShowSecondaryImpact(centre,other.transform.position,attackStyle,_shirtColor);
+                if(studentName=="Matias"&&AttackVariant==0||studentName.Contains("Tavares")&&AttackVariant==1)StartCoroutine(RepeatedHeroHits(other,damage*.3f,direction,centre,area?2.4f:1.6f));
+            }
+            if(_leader!=null)_leader.GetComponent<EdelzioTopDownController>()?.RestoreSanity(studentName=="Pedro"?6:studentName.Contains("Messias")?12:0);
+        }
+        private IEnumerator RepeatedHeroHits(VarginhaCombatTarget target,float damage,Vector2 direction,Vector2 centre,float radius)
+        {
+            for(int i=0;i<2;i++){yield return new WaitForSeconds(.38f);if(target==null||target.IsDead||!CanCommand||Vector2.Distance(centre,target.transform.position)>radius||!CanChainToTarget(centre,target))yield break;target.ReceiveHit(damage,direction,.02f);}
+        }
         private void ApplyTacticalHit(VarginhaCombatTarget target, Vector2 direction, Vector2 impactPoint,
             VarginhaAllyAttackPresentation presentation)
         {
+            if(Experiment.CampaignHeroArt.Available(studentName)){HeroHit(target,direction,impactPoint,presentation);return;}
             float damage = _profile.Damage;
             var health = target.GetComponent<HealthSystem>();
             if (attackStyle == VarginhaStudentAllyStyle.Katana && health != null && health.HealthPercent <= .35f)
@@ -516,11 +555,31 @@ namespace Game.Varginha
 
         public static string DescribeAttack(string name)
         {
+            if(Experiment.CampaignHeroArt.Available(name))return name switch
+            {
+                "Yasmin"=>"Onda sonora em linha / piano do céu em área",
+                "Pedro"=>"Riff sonoro em linha / acorde pesado em área",
+                "Matias"=>"Combo de quedas / projeção atordoante",
+                "Fabio"=>"Corte de katana / arremesso de anilhas",
+                "Marcos"=>"Saque potente / chuva de bolas em área",
+                "Anna Sabia"=>"Raquetada rápida / spin em área",
+                "Ana Tavares"=>"Toque preciso / chuva de bolas",
+                "Luis Martins"=>"Jato de tinta / explosão de cores",
+                "Luis Miguel Messias"=>"Rima pesada / solta a voz em área",
+                _=>ProfileFor(name).Description
+            }+" • Os dois golpes alternam a cada invocação.";
             return ProfileFor(name).Description;
         }
 
         private void PrepareAttackProfile()
         {
+            if(Experiment.CampaignHeroArt.Available(studentName))
+            {
+                AttackVariant=_marcosAttackIndex%2;_marcosAttackIndex=(_marcosAttackIndex+1)%2;_profile=ProfileFor(studentName);
+                if(studentName=="Yasmin"&&AttackVariant==0)_profile=new AttackProfile(VarginhaStudentAllyStyle.Microphone,"onda sonora • microfone",28,5,4,.2f);
+                if(studentName=="Fabio"&&AttackVariant==1)_profile=new AttackProfile(VarginhaStudentAllyStyle.Katana,"arremesso de anilhas • dano e atordoamento",32,5,4,.2f);
+                attackStyle=_profile.Style;return;
+            }
             if (studentName != "Marcos") return;
             int variant = _marcosAttackIndex % 3;
             _marcosAttackIndex = (_marcosAttackIndex + 1) % 3;
@@ -541,7 +600,7 @@ namespace Game.Varginha
             AttackProfile previousProfile = _profile;
             VarginhaStudentAllyStyle previousStyle = attackStyle;
             int previousIndex = _marcosAttackIndex;
-            if (studentName == "Marcos") PrepareAttackProfile();
+            if (studentName == "Marcos"||Experiment.CampaignHeroArt.Available(studentName)) PrepareAttackProfile();
             var target = FindNearestTarget();
             if (target == null)
             {
@@ -557,7 +616,7 @@ namespace Game.Varginha
             AttackProfile previousProfile = _profile;
             VarginhaStudentAllyStyle previousStyle = attackStyle;
             int previousIndex = _marcosAttackIndex;
-            if (studentName == "Marcos") PrepareAttackProfile();
+            if (studentName == "Marcos"||Experiment.CampaignHeroArt.Available(studentName)) PrepareAttackProfile();
             if (CanReachTarget(target)) return true;
             _profile = previousProfile;
             attackStyle = previousStyle;

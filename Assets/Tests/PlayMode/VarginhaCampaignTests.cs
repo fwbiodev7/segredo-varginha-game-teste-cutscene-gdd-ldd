@@ -74,7 +74,7 @@ namespace Game.Tests.PlayMode
             Release(keyboard.dKey);
             Assert.That(actor.transform.position.x, Is.GreaterThan(startX + .15f), "D must move the child after the opening.");
             Assert.That(actor.TryDodge(Vector2.right), Is.False);
-            Assert.That(Object.FindObjectsByType<EntityManifestationAI>(FindObjectsSortMode.None), Is.Empty);
+            Assert.That(Object.FindObjectsByType<EntityManifestationAI>(), Is.Empty);
             phase.TogglePause();
             Assert.That(Time.timeScale, Is.Zero);
             Assert.That(actor.IsInputLocked, Is.True);

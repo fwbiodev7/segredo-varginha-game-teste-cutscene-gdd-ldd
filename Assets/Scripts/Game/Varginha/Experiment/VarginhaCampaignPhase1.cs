@@ -63,6 +63,7 @@ namespace Game.Varginha.Experiment
         private AudioSource _voice, _ambience;
         private AudioClip _staticClip;
         private SpriteRenderer _child, _presence;
+        private CampaignPreFlashGlow _preFlashGlow;
         private Sprite[,] _childFrames;
         private int _lastShot = -1, _frameTick = -1;
         private float _stageTime, _exploreTime, _saveTime;
@@ -84,7 +85,7 @@ namespace Game.Varginha.Experiment
         {
             if (!Application.CanStreamedLevelBeLoaded(SceneName)) { Debug.LogError("Cena inicial da campanha ausente."); return; }
             if (!continueGame) { CampaignMemorySave.Write(new CampaignMemory()); CampaignStorySave.Write(new CampaignStory()); }
-            else if (CampaignStorySave.Load().phase > 1) { Time.timeScale = 1; GameManager.Instance?.StartGame(); CampaignCinematics.Load(CampaignStorySave.Scene(CampaignStorySave.Load().phase)); return; }
+            else if (CampaignStorySave.Load().phase > 1) { var saved=CampaignStorySave.Load();Time.timeScale = 1; GameManager.Instance?.StartGame(); CampaignCinematics.Load(saved.phase>=11?CampaignContinuationDefinition.SceneName(saved.phase,saved.continuation.area):CampaignStorySave.Scene(saved.phase)); return; }
             Time.timeScale = 1; GameManager.Instance?.StartGame(); CampaignCinematics.Load(SceneName);
         }
         private void Awake()
@@ -97,6 +98,8 @@ namespace Game.Varginha.Experiment
         private IEnumerator Start()
         {
             _memory = CampaignMemorySave.Load(); _composer = new ExperimentFrameComposer();
+            var glow=new GameObject("Brilho_antes_do_clarao");glow.transform.SetParent(transform,false);
+            _preFlashGlow=glow.AddComponent<CampaignPreFlashGlow>();
             _player = FindAnyObjectByType<EdelzioTopDownController>();
             if (_player == null) throw new InvalidOperationException("Mapa da casa sem controlador do jogador.");
             QuietHouse();
@@ -131,14 +134,14 @@ namespace Game.Varginha.Experiment
         }
         private void QuietHouse()
         {
-            foreach (var prop in FindObjectsByType<InteractableProp>(FindObjectsInactive.Include, FindObjectsSortMode.None)) prop.enabled = false;
-            foreach (var enemy in FindObjectsByType<EntityManifestationAI>(FindObjectsInactive.Include, FindObjectsSortMode.None)) enemy.gameObject.SetActive(false);
-            foreach (var enemy in FindObjectsByType<VarginhaCombatEnemy>(FindObjectsInactive.Include, FindObjectsSortMode.None)) enemy.gameObject.SetActive(false);
-            foreach (var exit in FindObjectsByType<FuscaLevelExit>(FindObjectsInactive.Include, FindObjectsSortMode.None)) exit.enabled = false;
+            foreach (var prop in FindObjectsByType<InteractableProp>(FindObjectsInactive.Include)) prop.enabled = false;
+            foreach (var enemy in FindObjectsByType<EntityManifestationAI>(FindObjectsInactive.Include)) enemy.gameObject.SetActive(false);
+            foreach (var enemy in FindObjectsByType<VarginhaCombatEnemy>(FindObjectsInactive.Include)) enemy.gameObject.SetActive(false);
+            foreach (var exit in FindObjectsByType<FuscaLevelExit>(FindObjectsInactive.Include)) exit.enabled = false;
             if (VarginhaGameHUD.Instance != null) VarginhaGameHUD.Instance.enabled = false;
             if (VarginhaGameHUD.Instance != null) VarginhaGameHUD.Instance.CloseDialogue();
             if (VarginhaNotebookQuiz.Instance != null) VarginhaNotebookQuiz.Instance.enabled = false;
-            foreach (var item in FindObjectsByType<Transform>(FindObjectsInactive.Include, FindObjectsSortMode.None))
+            foreach (var item in FindObjectsByType<Transform>(FindObjectsInactive.Include))
                 if (item.name == "Notebook_TI" || item.name == "Backpack_Prop" || item.name.Contains("Fusca") && item.GetComponent<SpriteRenderer>() != null)
                     item.gameObject.SetActive(false);
         }
@@ -174,6 +177,7 @@ namespace Game.Varginha.Experiment
         private void SetStage(Stage value)
         {
             _stage = value; _stageTime = 0; _player.SetInputLocked(value != Stage.Explore || _paused || _dialogue != null);
+            if (_preFlashGlow!=null) _preFlashGlow.gameObject.SetActive(value==Stage.Explore && _memory.powerFailed);
             if (value != Stage.Opening) { _voice.Stop(); _ambience.Stop(); }
             if (value == Stage.Encounter)
             {
@@ -230,7 +234,7 @@ namespace Game.Varginha.Experiment
                 if (_stageTime > 5.8f) { _memory.complete = true;_memory.memoryLost=_memory.headHit; Save(); SetStage(Stage.Complete); }
             }
         }
-        public void TriggerPowerFailure() { _memory.powerFailed = true; Save(); }
+        public void TriggerPowerFailure() { _memory.powerFailed = true; if(_stage==Stage.Explore && _preFlashGlow!=null)_preFlashGlow.gameObject.SetActive(true); Save(); }
         private int NearestEvidence()
         {
             int found = -1; float distance = 1.85f;

@@ -1,0 +1,27 @@
+{
+  "sourceWidth": 1881,
+  "sourceHeight": 836,
+  "frames": [
+    {
+      "name": "Arvore_I",
+      "x": 72,
+      "y": 118,
+      "width": 494,
+      "height": 631
+    },
+    {
+      "name": "Rio_II",
+      "x": 684,
+      "y": 173,
+      "width": 521,
+      "height": 586
+    },
+    {
+      "name": "Capela_III",
+      "x": 1331,
+      "y": 130,
+      "width": 499,
+      "height": 613
+    }
+  ]
+}

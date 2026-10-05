@@ -18,7 +18,8 @@ namespace Game.Varginha.Experiment
         // Only the church uses Padre Fabio's visible 42-pixel silhouette at 44 PPU.
         public const float ChurchStandingHeight=42f/44f;
         public const float ChurchVisualScale=ChurchStandingHeight/StandingHeight;
-        public static bool IsChurch => CampaignExpansionController.Active != null && CampaignExpansionController.Active.phase == 8;
+        public static bool IsChurch => CampaignExpansionController.Active != null && CampaignExpansionController.Active.phase == 8
+            || CampaignContinuationController.Active != null && CampaignContinuationController.Active.phase == 14;
         public static float CurrentStandingHeight => IsChurch ? ChurchStandingHeight : StandingHeight;
         private bool _wasPunching;
         private float _punchStarted;
@@ -29,7 +30,12 @@ namespace Game.Varginha.Experiment
         private MaterialPropertyBlock _equipment;
         public bool IsJumping => Time.time - _jumpStarted < .48f;
         private void Awake()=>_equipment=new MaterialPropertyBlock();
-        private void OnEnable()=>InputSystem.onAfterUpdate+=ReadJumpInput;
+        private void OnEnable()
+        {
+            _equipment??=new MaterialPropertyBlock();
+            _actor=GetComponent<EdelzioTopDownController>();_actions=GetComponent<VarginhaPlayerSpriteAnimation>();_renderer=GetComponent<SpriteRenderer>();
+            InputSystem.onAfterUpdate-=ReadJumpInput;InputSystem.onAfterUpdate+=ReadJumpInput;
+        }
         private void OnDisable()=>InputSystem.onAfterUpdate-=ReadJumpInput;
         private void Start()
         {
@@ -53,6 +59,7 @@ namespace Game.Varginha.Experiment
         private void LateUpdate()
         {
             if(_actor==null||_renderer==null)return;
+            _equipment??=new MaterialPropertyBlock();
             bool acting=_actions!=null&&_actions.HasActionPose;
             bool equipped=_actor.IsBackpackVisible;
             Vector2 face=acting?_actions.ActionFacingDirection:_actor.FacingDirection;

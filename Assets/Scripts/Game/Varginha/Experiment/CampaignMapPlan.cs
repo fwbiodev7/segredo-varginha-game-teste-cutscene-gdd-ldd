@@ -56,6 +56,7 @@ namespace Game.Varginha.Experiment
         private void PointAt(string id, string label, float x, float y) => points.Add(new Point(id, label, x, y));
         public static CampaignMapPlan Create(int phase)
         {
+            if(phase>=11)return CampaignContinuationDefinition.Plan(phase);
             var p = new CampaignMapPlan { phase = phase };
             if(phase==2){p.title="A CHAVE E A CAIXA";CampaignIllustratedMaps.Apply(p);return p;}
             p.Room("Área de circulação", -12, -8, 24, 16, phase == 7 ? "Floor_Yard" : "SchoolFloor");
@@ -67,20 +68,20 @@ namespace Game.Varginha.Experiment
                 case 3: p.Road(); break;
                 case 4: case 5: p.School(phase); break;
                 case 6:
-                    p.title = "FRAGMENTOS";
-                    p.Room("Biblioteca municipal", -11, 1, 7, 6); p.Enclose(-11, 1, 7, 6, -7.5f);
-                    p.Room("Arquivo da Industrial", 4, 1, 7, 6); p.Enclose(4, 1, 7, 6, 7.5f);
-                    p.Room("Praça do relato de 1996", -11, -7, 22, 7, "Floor_Yard");
-                    p.Room("Passeio entre os arquivos",-4,-1,8,8,"Path");
-                    p.Room("Caminho da praça",-11,-4.8f,22,1.8f,"Path");
-                    p.Wall(-8.5f,4.1f,.35f,2.5f);
-                    p.Prop("Estante municipal", "Bookshelf", -9.7f, 5.6f, 1.6f, 2); p.Prop("Mesa de consulta", "Desk", -6.4f, 4.7f, 2.1f, 1.2f);
-                    p.Prop("Arquivo escolar", "Dresser", 9.5f, 5.8f, 1.9f, 1.6f); p.Prop("Notebook de consulta", "Desk", 6.4f, 4.7f, 2.1f, 1.2f);
-                    p.Prop("Banco da praça", "Pew", -7.5f, -5.7f, 3, 1.2f); p.Prop("Marco histórico", "Noticeboard", 4.5f, -5.4f, 1.6f, 1.6f);
-                    p.PointAt("archive", "ARQUIVO MUNICIPAL", -6.4f, 3.5f); p.PointAt("school", "PLANTAS DA INDUSTRIAL", 6.4f, 3.5f);
-                    p.PointAt("square", "RELATO DO CLARÃO", 4.5f, -3.7f); p.PointAt("map", "CRUZAR FRAGMENTOS NO NOTEBOOK", 0, -2);
-                    p.PointAt("truth0", "RECORTE • TESTEMUNHO OMITIDO", -10, 3); p.PointAt("truth1", "REGISTRO • VEÍCULO SEM PLACA", -7.5f, -4.3f);
-                    p.PointAt("exit", "PARTIR PARA A MATA", 9, -5); break;
+                    p.title = "FRAGMENTOS • BIBLIOTECA DA INDUSTRIAL";
+                    p.Room("Biblioteca da Escola Industrial",-11,-7,22,14);p.Enclose(-11,-7,22,14,0);
+                    p.PointAt("archive", "LIVRO ABERTO • PRIMEIRO REGISTRO", -6, 2);
+                    p.PointAt("school", "GLOBO • ORIENTAÇÃO DO LEVANTAMENTO", 7, 2);
+                    p.PointAt("square", "PAINEL DE AVISOS • RELATO DE 1996", 5, 3);
+                    p.PointAt("map", "MESA CENTRAL • ALINHAR FRAGMENTOS", 0, -2);
+                    p.PointAt("truth0", "ESTANTE • RECORTE DO DEPOIMENTO", -8, 2);
+                    p.PointAt("truth1", "MESA LATERAL • REGISTRO DO VEÍCULO", -7, -4);
+                    p.PointAt("library_shelf_central", "ESTANTE CENTRAL • EXAMINAR", 2, 2);
+                    p.PointAt("library_shelf_west", "ESTANTE OESTE • EXAMINAR", -8, -4);
+                    p.PointAt("library_shelf_east", "ESTANTE LESTE • EXAMINAR", 7, -4);
+                    p.PointAt("library_plant_west", "PLANTA • EXAMINAR", -1, -6);
+                    p.PointAt("library_plant_east", "PLANTA • EXAMINAR", 1, -6);
+                    p.PointAt("exit", "SAIR DA BIBLIOTECA • PARTIR PARA A MATA", 0, -6); break;
                 case 7:
                     p.title = "A MATA"; p.spawn = new(-9, -5);
                     p.Room("Trilha de terra", -10, -6, 3, 4, "Dirt"); p.Room("Curva da trilha",-8,-3.2f,4,1.6f,"Dirt"); p.Room("Trilha da bifurcação",-5,-3,2,3.2f,"Dirt");
@@ -484,14 +485,6 @@ namespace Game.Varginha.Experiment
                 Decor("Jardim da entrada oeste","ForestCluster",-10,-8.1f,2,1.1f);
                 Decor("Jardim da entrada leste","ForestCluster",10,-8.1f,2,1.1f);
             }
-            if(phase==6)
-            {
-                Replace("Estante municipal","ArchiveShelf");Replace("Arquivo escolar","SealedArchive");
-                var plaza=furniture.Find(p=>p.name=="Banco da praça");plaza.motif="CityPlaza";plaza.size=new Vector2(4,3.3f);plaza.position+=Vector2.up*1.05f;
-                Replace("Marco histórico","TechnicalBoard");
-                Decor("Paisagismo da praça","ForestCluster",-4.5f,-2.9f,2.8f,1.3f);
-                Decor("História da cidade","CitySigns",10,-2,1.2f,2);
-            }
             if(phase==7)
             {
                 foreach(var tree in furniture)if(tree.name.StartsWith("Árvore")&&tree.motif=="Plant")tree.motif="AncientTree";
@@ -640,8 +633,8 @@ namespace Game.Varginha.Experiment
         public bool IsClear(Vector2 point, float radius = .28f)
         {
             if (point.x - radius < bounds.xMin || point.x + radius > bounds.xMax || point.y - radius < bounds.yMin || point.y + radius > bounds.yMax) return false;
-            bool torso=illustrated&&CampaignWallBody.SolidWalls(phase);
-            var upperBody=new Rect(point.x-radius,point.y+.03f,radius*2,CampaignWallBody.Height(phase==1));
+            bool torso=illustrated&&(CampaignWallBody.SolidWalls(phase)||phase>=11);
+            var upperBody=new Rect(point.x-radius,point.y+.03f,radius*2,CampaignWallBody.Height(phase==1||phase==15||phase==19));
             foreach (var wall in walls) if (Touches(wall, point, radius)||(torso&&bodyWalls.Contains(wall)&&wall.Overlaps(upperBody))) return false;
             foreach (var prop in furniture) if (prop.footprint.width > 0 && prop.footprint.height > 0 && Touches(prop.footprint, point, radius)) return false;
             return true;

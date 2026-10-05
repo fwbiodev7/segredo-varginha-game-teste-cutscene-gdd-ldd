@@ -25,7 +25,7 @@ namespace Game.Varginha.Experiment
             public Rect Area(float[] p)=>new(Position(p[0],p[1]+p[3]),new Vector2(p[2],p[3])*Scale);
             public Vector2 Objective(string id)=>Position(Array.Find(points,p=>p.id==id).pixel);
         }
-        [Serializable]public sealed class Wall {public float[] rect,art;}
+        [Serializable]public sealed class Wall {public float[] rect,art;public bool water,skipBodyGuard;}
         [Serializable]public sealed class Prop {public string name,motif;public float[] art, @base,outline;public bool movable;}
         [Serializable]public sealed class Point {public string id;public float[] pixel;}
         [Serializable]public sealed class Light {public float[] pixel,color;public float radius;}
@@ -65,7 +65,7 @@ namespace Game.Varginha.Experiment
                 if(area.height>0)
                 {
                     plan.walls.Add(area);
-                    if(wall.art?.Length==4&&CampaignWallBody.Guards(plan.phase,area,plan.bounds))plan.bodyWalls.Add(area);
+                    if(!wall.water&&!wall.skipBodyGuard&&wall.art?.Length==4&&CampaignWallBody.Guards(plan.phase,area,plan.bounds))plan.bodyWalls.Add(area);
                 }
             }
             if(data.repeat)
@@ -102,7 +102,8 @@ namespace Game.Varginha.Experiment
             for(int i=0;i<count;i++)
             {
                 float height=data.repeat?Mathf.Min(tileHeight,plan.bounds.height-i*tileHeight):plan.bounds.height;
-                var r=Render(architecture,"Arte_Integrada_"+i,image,new Rect(0,0,image.width,image.height*height/tileHeight),plan.bounds.width,height);
+                float sourceHeight=data.repeat?Mathf.Min(image.height,image.height*height/tileHeight):image.height;
+                var r=Render(architecture,"Arte_Integrada_"+i,image,new Rect(0,0,image.width,sourceHeight),plan.bounds.width,height);
                 r.transform.position=data.repeat?new Vector2(plan.bounds.center.x,plan.bounds.yMin+i*tileHeight+height/2):plan.bounds.center;
                 r.sortingOrder=-1000;
             }
@@ -125,6 +126,20 @@ namespace Game.Varginha.Experiment
                 if(!data.repeat&&i<data.walls.Length&&data.walls[i].art?.Length==4)
                 {
                     var rect=data.walls[i].art;var area=data.Area(rect);
+                    if(plan.phase>=11&&plan.phase!=14&&plan.phase!=15&&plan.phase!=19)
+                    {
+                        // A long column cannot share one Y-order from top to bottom.
+                        // Small strips reuse the same texture and follow their own floor contacts.
+                        float strip=rect[3]>rect[2]*1.3f?48:rect[3];
+                        for(float row=0;row<rect[3];row+=strip)
+                        {
+                            var slice=new[]{rect[0],rect[1]+row,rect[2],Mathf.Min(strip,rect[3]-row)};var a=data.Area(slice);
+                            var face=Render(go.transform,"Face_da_parede_"+row,Texture(data.image),SourceRect(data,slice),a.width,a.height);face.transform.position=a.center;
+                            var contact=new GameObject("Contato_da_parede_"+row).transform;contact.SetParent(go.transform,false);contact.position=new Vector2(a.center.x,a.yMin);
+                            VarginhaWorldDepth.Ensure(face,supportingObject:contact);
+                        }
+                        continue;
+                    }
                     var sr=Render(go.transform,"Face_da_parede",Texture(data.image),SourceRect(data,rect),area.width,area.height);
                     sr.transform.position=area.center;
                     VarginhaWorldDepth.Ensure(sr,ground:collider);
@@ -160,7 +175,14 @@ namespace Game.Varginha.Experiment
                 var collider=sr.gameObject.AddComponent<BoxCollider2D>();
                 collider.size=prop.footprint.size/(Vector2)sr.transform.lossyScale;
                 collider.offset=(prop.footprint.center-prop.position)/(Vector2)sr.transform.lossyScale;
-                VarginhaWorldDepth.Ensure(sr,ground:collider);
+                if(plan.phase>=11&&plan.phase!=14&&plan.phase!=15&&plan.phase!=19)
+                {
+                    // A prop's front ground edge decides occlusion, independently of its blocking footprint.
+                    var contact=new GameObject("Contato_"+prop.name).transform;contact.SetParent(layer,false);
+                    contact.position=new Vector2(prop.footprint.center.x,prop.footprint.yMin+.03f);
+                    VarginhaWorldDepth.Ensure(sr,supportingObject:contact);sr.spriteSortPoint=SpriteSortPoint.Pivot;
+                }
+                else VarginhaWorldDepth.Ensure(sr,ground:collider);
             }
         }
         private static Texture2D Texture(string id)=>Resources.Load<Texture2D>("Varginha/IllustratedMaps/"+id)
@@ -206,9 +228,9 @@ namespace Game.Varginha.Experiment
         public static void ApplyAdultHouse(Transform owner)
         {
             var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
-            foreach(var sr in Object.FindObjectsByType<SpriteRenderer>(FindObjectsInactive.Include,FindObjectsSortMode.None))
+            foreach(var sr in Object.FindObjectsByType<SpriteRenderer>(FindObjectsInactive.Include))
                 if(sr.GetComponentInParent<EdelzioTopDownController>()==null){sr.enabled=false;if(sr.name=="Backpack_Prop")sr.name="Backpack_Original_Anchor";}
-            foreach(var collider in Object.FindObjectsByType<Collider2D>(FindObjectsInactive.Include,FindObjectsSortMode.None))
+            foreach(var collider in Object.FindObjectsByType<Collider2D>(FindObjectsInactive.Include))
                 if(collider.GetComponentInParent<EdelzioTopDownController>()==null)collider.enabled=false;
             var plan=CampaignMapPlan.Create(2);var map=Build(owner,plan,true);var data=Get(2);
             // The authored adult player bypasses CreatePlayer, so it also needs foot sorting.

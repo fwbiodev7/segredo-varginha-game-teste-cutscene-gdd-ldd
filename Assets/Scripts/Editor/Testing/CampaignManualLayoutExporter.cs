@@ -67,7 +67,7 @@ namespace Game.Editor.Testing
         {
             if(!Application.isPlaying)throw new InvalidOperationException("Export adult house from the running authored scene.");
             SetCanvas(2,"CASA DE EDELZIO ADULTO",new Rect(-9,-8,36,16));
-            var renderers=Object.FindObjectsByType<SpriteRenderer>(FindObjectsInactive.Exclude,FindObjectsSortMode.None).Where(r=>r.enabled).ToArray();
+            var renderers=Object.FindObjectsByType<SpriteRenderer>(FindObjectsInactive.Exclude).Where(r=>r.enabled).ToArray();
             var actors=renderers.Where(r=>r.GetComponentInParent<EdelzioTopDownController>()!=null).ToArray();
             foreach(var renderer in actors)renderer.enabled=false;
             _objects=renderers.Where(r=>!IsArchitecture(r)&&!IsEffect(r)&&!actors.Contains(r)).ToList();

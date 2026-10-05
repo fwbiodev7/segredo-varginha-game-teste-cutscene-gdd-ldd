@@ -1,0 +1,743 @@
+fileFormatVersion: 2
+guid: 9984baac8ea150d419370bc05e35d895
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4201893158348534477
+    second: FuscaDirections_0
+  - first:
+      213: -8426175811920683432
+    second: FuscaDirections_1
+  - first:
+      213: -5745110983785878303
+    second: FuscaDirections_2
+  - first:
+      213: 6933651921401900874
+    second: FuscaDirections_3
+  - first:
+      213: -7598430111953940000
+    second: FuscaDirections_4
+  - first:
+      213: -6885139582571899866
+    second: FuscaDirections_5
+  - first:
+      213: 906380446805780284
+    second: FuscaDirections_6
+  - first:
+      213: -1231006497178466114
+    second: FuscaDirections_7
+  - first:
+      213: 6308769547378876220
+    second: FuscaDirections_8
+  - first:
+      213: -2484263992740582652
+    second: FuscaDirections_9
+  - first:
+      213: 6701710775601699781
+    second: FuscaDirections_10
+  - first:
+      213: -4707446382752002411
+    second: FuscaDirections_11
+  - first:
+      213: -7650719848005183790
+    second: FuscaDirections_12
+  - first:
+      213: 5340614692738296039
+    second: FuscaDirections_13
+  - first:
+      213: -7522352758749198670
+    second: FuscaDirections_14
+  - first:
+      213: -1779084395860682369
+    second: FuscaDirections_15
+  - first:
+      213: 5356589374619112488
+    second: FuscaDirections_16
+  - first:
+      213: 4701063530827399373
+    second: FuscaDirections_17
+  - first:
+      213: 5689586685746001669
+    second: FuscaDirections_18
+  - first:
+      213: -5569049827981107766
+    second: FuscaDirections_19
+  - first:
+      213: -3486808860203352515
+    second: FuscaDirections_20
+  - first:
+      213: -7609113438565365864
+    second: FuscaDirections_21
+  - first:
+      213: 3692454585512289090
+    second: FuscaDirections_22
+  - first:
+      213: 6279424446690356088
+    second: FuscaDirections_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FuscaDirections_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 563
+        height: 776
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33dcd706f60efa5c0800000000000000
+      internalID: -4201893158348534477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_1
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1180
+        width: 74
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e9a7b2eb5301b80800000000000000
+      internalID: -8426175811920683432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_2
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 470
+        width: 625
+        height: 786
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ec6f38cff34540b0800000000000000
+      internalID: -5745110983785878303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_3
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 994
+        width: 61
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f6d5bbfa7493060800000000000000
+      internalID: 6933651921401900874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_4
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 1089
+        width: 38
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e19a564214fc8690800000000000000
+      internalID: -7598430111953940000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_5
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 1038
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62412d757021370a0800000000000000
+      internalID: -6885139582571899866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_6
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 778
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c37e733d63c149c00800000000000000
+      internalID: 906380446805780284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_7
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 719
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8ca7bec169aeee0800000000000000
+      internalID: -1231006497178466114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_8
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 721
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3fd1516a704d8750800000000000000
+      internalID: 6308769547378876220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_9
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 591
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40b67609f0f168dd0800000000000000
+      internalID: -2484263992740582652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_10
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 584
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cb95277172410d50800000000000000
+      internalID: 6701710775601699781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_11
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 583
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e8edcb47acbaeb0800000000000000
+      internalID: -4707446382752002411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_12
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 573
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d6de9f55de23d590800000000000000
+      internalID: -7650719848005183790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_13
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 551
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e8e5ea64ccad1a40800000000000000
+      internalID: 5340614692738296039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_14
+      rect:
+        serializedVersion: 2
+        x: 1096
+        y: 523
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b60393650c3b9790800000000000000
+      internalID: -7522352758749198670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_15
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 523
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f79984ffa2c6f47e0800000000000000
+      internalID: -1779084395860682369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_16
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 486
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 824ddc1e7ad665a40800000000000000
+      internalID: 5356589374619112488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 54
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc0c28dbf588d3140800000000000000
+      internalID: 4701063530827399373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_18
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 0
+        width: 576
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 507beaa22f875fe40800000000000000
+      internalID: 5689586685746001669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_19
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 47
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acd5cb200b2c6b2b0800000000000000
+      internalID: -5569049827981107766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_20
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 0
+        width: 584
+        height: 426
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3ef4e7c0dd5c9fc0800000000000000
+      internalID: -3486808860203352515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_21
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 55
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89709a674aff66690800000000000000
+      internalID: -7609113438565365864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_22
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 49
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 243e8bec1eb3e3330800000000000000
+      internalID: 3692454585512289090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaDirections_23
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 39
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87be1e2b34ff42750800000000000000
+      internalID: 6279424446690356088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FuscaDirections_0: -4201893158348534477
+      FuscaDirections_1: -8426175811920683432
+      FuscaDirections_10: 6701710775601699781
+      FuscaDirections_11: -4707446382752002411
+      FuscaDirections_12: -7650719848005183790
+      FuscaDirections_13: 5340614692738296039
+      FuscaDirections_14: -7522352758749198670
+      FuscaDirections_15: -1779084395860682369
+      FuscaDirections_16: 5356589374619112488
+      FuscaDirections_17: 4701063530827399373
+      FuscaDirections_18: 5689586685746001669
+      FuscaDirections_19: -5569049827981107766
+      FuscaDirections_2: -5745110983785878303
+      FuscaDirections_20: -3486808860203352515
+      FuscaDirections_21: -7609113438565365864
+      FuscaDirections_22: 3692454585512289090
+      FuscaDirections_23: 6279424446690356088
+      FuscaDirections_3: 6933651921401900874
+      FuscaDirections_4: -7598430111953940000
+      FuscaDirections_5: -6885139582571899866
+      FuscaDirections_6: 906380446805780284
+      FuscaDirections_7: -1231006497178466114
+      FuscaDirections_8: 6308769547378876220
+      FuscaDirections_9: -2484263992740582652
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

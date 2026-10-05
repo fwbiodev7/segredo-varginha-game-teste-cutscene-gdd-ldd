@@ -1,0 +1,48 @@
+{
+  "status": "completed",
+  "duration": 148.57,
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork",
+      "Status": "Passed",
+      "Duration": 47.1308426,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ArenaNavigationSpawnPoolAndDefeatAllowRetry",
+      "Status": "Passed",
+      "Duration": 12.1353824,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard",
+      "Status": "Passed",
+      "Duration": 11.4148853,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions",
+      "Status": "Passed",
+      "Duration": 62.5712681,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue",
+      "Status": "Passed",
+      "Duration": 15.2375172,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

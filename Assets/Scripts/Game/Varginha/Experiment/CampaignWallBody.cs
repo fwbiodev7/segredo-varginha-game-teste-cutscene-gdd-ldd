@@ -9,8 +9,8 @@ namespace Game.Varginha.Experiment
         public const int WallLayer=30;
         private EdelzioTopDownController _actor;
         private CapsuleCollider2D _body;
-        public static bool SolidWalls(int phase)=>phase==1||phase==2;
-        public static bool Guards(int phase,Rect wall,Rect bounds)=>SolidWalls(phase)&&wall.height>wall.width*1.3f&&wall.xMin>bounds.xMin+.15f&&wall.xMax<bounds.xMax-.15f;
+        public static bool SolidWalls(int phase)=>phase==1||phase==2||phase==6;
+        public static bool Guards(int phase,Rect wall,Rect bounds)=>phase==6||(SolidWalls(phase)||phase>=11)&&wall.height>wall.width*1.3f&&wall.xMin>bounds.xMin+.15f&&wall.xMax<bounds.xMax-.15f;
         public static float Height(bool child)=>child?1.15f:CampaignTeamEdelzio.CurrentStandingHeight+.08f;
         public static void Ensure(EdelzioTopDownController actor,bool child)
         {

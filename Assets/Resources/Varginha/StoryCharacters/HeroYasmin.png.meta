@@ -1,0 +1,561 @@
+fileFormatVersion: 2
+guid: 8941567389d3dea418a61206331dc0fd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7706584123693353933
+    second: HeroYasmin_0
+  - first:
+      213: 9018353580660448395
+    second: HeroYasmin_1
+  - first:
+      213: 7381064157184630778
+    second: HeroYasmin_2
+  - first:
+      213: -5841230463329435838
+    second: HeroYasmin_3
+  - first:
+      213: 941895758036411549
+    second: HeroYasmin_4
+  - first:
+      213: 5415242743413769500
+    second: HeroYasmin_5
+  - first:
+      213: -7451803831725805387
+    second: HeroYasmin_6
+  - first:
+      213: 3373034588191286831
+    second: HeroYasmin_7
+  - first:
+      213: -977200872515134583
+    second: HeroYasmin_8
+  - first:
+      213: -4268959235692458439
+    second: HeroYasmin_9
+  - first:
+      213: -1829991550596483498
+    second: HeroYasmin_10
+  - first:
+      213: -1533902612669108392
+    second: HeroYasmin_11
+  - first:
+      213: -7973448861657781461
+    second: HeroYasmin_12
+  - first:
+      213: -1288284666511425214
+    second: HeroYasmin_13
+  - first:
+      213: -905307697218139150
+    second: HeroYasmin_14
+  - first:
+      213: 5878261697702015747
+    second: HeroYasmin_15
+  - first:
+      213: -3675691343076039430
+    second: HeroYasmin_16
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HeroYasmin_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 134
+        width: 83
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 334b79b1296bc0590800000000000000
+      internalID: -7706584123693353933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 134
+        width: 107
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8c5322ecc0a72d70800000000000000
+      internalID: 9018353580660448395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_2
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 202
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aff9b519ebece6660800000000000000
+      internalID: 7381064157184630778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_3
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 134
+        width: 76
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24ffe0e77d7cfeea0800000000000000
+      internalID: -5841230463329435838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_4
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 134
+        width: 82
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9425399339421d00800000000000000
+      internalID: 941895758036411549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_5
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 198
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1580bd759ec62b40800000000000000
+      internalID: 5415242743413769500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_6
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 135
+        width: 118
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b0b61a75efd59890800000000000000
+      internalID: -7451803831725805387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_7
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 134
+        width: 70
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f266f3c361d6fce20800000000000000
+      internalID: 3373034588191286831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_8
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 166
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b988fdbf84072f0800000000000000
+      internalID: -977200872515134583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 12
+        width: 73
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e8deb613c91c4c0800000000000000
+      internalID: -4268959235692458439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_10
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 11
+        width: 76
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 656fab461609a96e0800000000000000
+      internalID: -1829991550596483498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_11
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 65
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f60d363bb76bae0800000000000000
+      internalID: -1533902612669108392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_12
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 11
+        width: 73
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2b2526618e985190800000000000000
+      internalID: -7973448861657781461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_13
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 11
+        width: 77
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2410103ebe71f1ee0800000000000000
+      internalID: -1288284666511425214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_14
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 60
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fbc2e62273bf63f0800000000000000
+      internalID: -905307697218139150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_15
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 11
+        width: 75
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3033054aed7c39150800000000000000
+      internalID: 5878261697702015747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeroYasmin_16
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 11
+        width: 74
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af469f7b2325dfcc0800000000000000
+      internalID: -3675691343076039430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      HeroYasmin_0: -7706584123693353933
+      HeroYasmin_1: 9018353580660448395
+      HeroYasmin_10: -1829991550596483498
+      HeroYasmin_11: -1533902612669108392
+      HeroYasmin_12: -7973448861657781461
+      HeroYasmin_13: -1288284666511425214
+      HeroYasmin_14: -905307697218139150
+      HeroYasmin_15: 5878261697702015747
+      HeroYasmin_16: -3675691343076039430
+      HeroYasmin_2: 7381064157184630778
+      HeroYasmin_3: -5841230463329435838
+      HeroYasmin_4: 941895758036411549
+      HeroYasmin_5: 5415242743413769500
+      HeroYasmin_6: -7451803831725805387
+      HeroYasmin_7: 3373034588191286831
+      HeroYasmin_8: -977200872515134583
+      HeroYasmin_9: -4268959235692458439
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -58,7 +58,7 @@ namespace Game.Varginha.Experiment
             var ownFeet=GetComponent<CircleCollider2D>();
             // Classmates and the player can occupy an otherwise open aisle.
             // Reserve their actual floor contacts when choosing a route.
-            foreach(var feet in FindObjectsByType<CircleCollider2D>(FindObjectsSortMode.None))
+            foreach(var feet in FindObjectsByType<CircleCollider2D>())
             {
                 if(feet==ownFeet||!feet.enabled||feet.isTrigger)continue;
                 if(feet.GetComponent<EdelzioTopDownController>()==null&&feet.GetComponent<CampaignSchoolLife>()==null)continue;

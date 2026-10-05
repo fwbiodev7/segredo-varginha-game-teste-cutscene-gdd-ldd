@@ -14,7 +14,7 @@ As plantas e a ocupação dos móveis estão em `Preview/CampaignMapsV2`, com PN
 
 ## Fase 6 — Fragmentos / Ato III
 
-Mapa novo: praça com relato de 1996, biblioteca/arquivo municipal e arquivo da Industrial. Consulte os três registros. O arquivo municipal fornece o terceiro fragmento; as outras fontes estabelecem coordenadas e orientação. No notebook, troque as peças até alinhar **árvore → rio → capela**, do oeste ao leste. A conclusão libera a mata. Há duas pistas opcionais: depoimento omitido e veículo sem placa.
+Mapa atual: biblioteca da Escola Industrial, usando a arte fornecida em 04/10/2026. Consulte o livro aberto da mesa oeste, a anotação junto ao globo e o painel de avisos. O livro fornece o terceiro fragmento; as outras fontes estabelecem coordenadas e orientação. Na mesa central, troque as peças até alinhar **árvore → rio → capela**, do oeste ao leste. A conclusão libera a saída ao sul para a mata. Há duas pistas opcionais, nas estantes e na mesa lateral: depoimento omitido e veículo sem placa.
 
 Tab/G abre o caderno e a seleção dos três locais. A escolha leva ao acesso de cada microárea, sem colocar Edelzio dentro de móveis. Cada registro é salvo imediatamente.
 
@@ -24,7 +24,7 @@ Mapa novo: entrada, bifurcação, clareira, riacho com passagem, ruína da capel
 
 ## Fase 8 — A Âncora / Ato III
 
-Mapa novo: arquivo de Fábio e subterrâneo religioso. Examine índice, inscrição e ficha; combine **1996 + Âncora + registro 23** no Tombo. A data de 1898 pertence à contenção anterior. A abertura revela `RECEPTÁCULO: EDELZIO / ESTADO DA ÂNCORA: ESTÁVEL`. Pedir explicação ou confrontar Fábio altera a confiança sem impedir a progressão. Um documento de Zé Gomes é a terceira pista opcional desta extensão.
+Mapa novo: arquivo de Fábio e subterrâneo religioso. Examine índice, inscrição e ficha; combine **1996 + Âncora + registro 23** no Tombo. A data de 1898 pertence à contenção anterior. A abertura revela `SELO DA ENTIDADE: EDELZIO / CONTENÇÃO: ESTÁVEL`. Edelzio é o selo que mantém a entidade contida desde 1996; Âncora é somente o símbolo usado no compartimento. Pedir explicação ou confrontar Fábio altera a confiança sem impedir a progressão. Um documento de Zé Gomes é a terceira pista opcional desta extensão.
 
 ## Fase 9 — Ouzana / Ato IV
 
@@ -32,7 +32,7 @@ Mapa novo: laboratório improvisado, bancada de amostras e depósito de document
 
 ## Fase 10 — O Fusca Marcado / Ato IV
 
-Mapa novo: oficina, bancada, área do Fusca e pista de teste. Borrife capô, porta e motor; cada região consome uma carga somente na primeira revelação. Conecte as marcas **árvore → rio → capela** na bancada para instalar o estabilizador temporário. A reserva permite repetir a investigação sem bloqueio por falta de carga. Interaja com o Fusca e conduza com A/D ou setas até a extremidade da pista. A fase só termina depois do teste.
+Mapa novo: oficina, bancada, área do Fusca e pista de teste. Na chegada, conduza o Fusca com WASD/setas pela entrada central, pare na vaga com a frente para cima e confirme com E para desembarcar. Borrife capô, porta e motor; cada região consome uma carga somente na primeira revelação. As marcas de **árvore I, rio II e capela III** aparecem na lataria e acompanham o veículo. Conecte **árvore → rio → capela** na bancada para instalar o estabilizador temporário. A reserva permite repetir a investigação sem bloqueio por falta de carga. Interaja com o Fusca e conduza com A/D ou setas até a extremidade da pista. A fase só termina depois do teste e da cena de partida do Fusca.
 
 A Fase 11 continua prevista no LDD. Encerrar a Fase 10 conclui esta extensão, sem executar um final da campanha.
 

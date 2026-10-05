@@ -58,7 +58,7 @@ namespace Game.Tests.PlayMode
             yield return new WaitForSeconds(3.3f);
             var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
             Assert.That(actor.GetComponent<CampaignCharacterShadow>(),Is.Not.Null);
-            foreach(var pupil in Object.FindObjectsByType<VarginhaStudentAnimation>(FindObjectsSortMode.None))
+            foreach(var pupil in Object.FindObjectsByType<VarginhaStudentAnimation>())
                 Assert.That(pupil.GetComponent<CampaignCharacterShadow>(),Is.Not.Null,pupil.name);
             var camera=Camera.main;var target=camera.targetTexture;
             VarginhaCampaignStage.Active.TogglePause();
@@ -198,7 +198,7 @@ namespace Game.Tests.PlayMode
             Press(keyboard.wKey); yield return new WaitForSeconds(7.6f); Release(keyboard.wKey);
             Assert.That(drive.Progress.arrival, Is.True, "The car must reach the Industrial after inspection and restart.");
             CampaignStorySave.GoTo(4); yield return new WaitForSeconds(3.2f); stage = VarginhaCampaignStage.Active;
-            Assert.That(Object.FindObjectsByType<VarginhaCombatEnemy>(FindObjectsSortMode.None), Is.Empty);
+            Assert.That(Object.FindObjectsByType<VarginhaCombatEnemy>(), Is.Empty);
             Assert.That(GameObject.Find("Renan_Industrial_Campanha"), Is.Not.Null);
             Assert.That(GameObject.Find("Mapa_Campanha/01_Planta_Paredes_Divisoes/Arte_Integrada_0").GetComponent<SpriteRenderer>().sprite.texture.name, Is.EqualTo("School"), "The supplied real school frontage must be present in the campaign map.");
             Assert.That(Object.FindObjectsByType<CampaignSchoolLife>().Length, Is.EqualTo(9), "All original students have classroom activities.");
