@@ -32,6 +32,7 @@ namespace Game.Varginha.Experiment
             if (running && !_engine.isPlaying) _engine.Play(); else if (!running && _engine.isPlaying) _engine.Stop();
         }
         public void Play(string sound) { if (_effects != null) _effects.PlayOneShot(Clip(sound), sound.StartsWith("Foot") ? .16f : 1f); }
+        public void CinematicDucking(float weight){if(_ambience!=null)_ambience.volume=Mathf.Lerp(.12f,.025f,Mathf.Clamp01(weight));}
         public void Suspend(bool value)
         {
             if (_ambience == null) return;
@@ -52,6 +53,9 @@ namespace Game.Varginha.Experiment
             const int rate = 22050;
             bool ambient = id.Contains("Ambience"), engine = id == "Engine";
             float duration = ambient ? 6 : engine ? 2 : id == "AlienBurst" ? .9f : id == "Success" ? 1.1f : id == "Starter" ? 1.2f : id == "Typing" ? .65f : .22f;
+            if(id=="ManifestationRise")duration=6.2f;
+            if(id=="ManifestationCollapse")duration=4.7f;
+            if(id=="ManifestationTear"||id=="SealClose")duration=.85f;
             var data = new float[Mathf.RoundToInt(rate * duration)];
             var random = new System.Random(1996 + id.Length * 71); float filtered = 0;
             for (int i = 0; i < data.Length; i++)
@@ -78,6 +82,15 @@ namespace Game.Varginha.Experiment
                 }
                 else if (id == "Starter") value = filtered * .4f * (.5f + .5f * Mathf.Sin(t * 95)) + Mathf.Sin(t * Mathf.PI * 2 * (28 + t * 20)) * .25f;
                 else if(id=="AlienBurst")value=(filtered*.32f+Mathf.Sin(t*Mathf.PI*2*(70-t*35))*.24f+Mathf.Sin(t*Mathf.PI*2*190)*.06f)*Mathf.Exp(-t*4);
+                else if(id=="ManifestationRise"||id=="ManifestationCollapse")
+                {
+                    float progress=t/duration,weight=id=="ManifestationRise"?Mathf.SmoothStep(.08f,1,progress):1-progress;
+                    float breath=.6f+.4f*Mathf.Sin(t*4.5f)*Mathf.Sin(t*1.7f);
+                    value=(Mathf.Sin(t*Mathf.PI*2*36)*.16f+Mathf.Sin(t*Mathf.PI*2*53)*.08f+filtered*.22f*breath)*weight;
+                    value+=Mathf.Sin(t*Mathf.PI*2*(108-t*7))*.035f*Mathf.Pow(Mathf.Max(0,Mathf.Sin(t*2.1f)),4)*weight;
+                }
+                else if(id=="ManifestationTear"||id=="SealClose")value=(filtered*.28f+Mathf.Sin(t*Mathf.PI*2*(64-t*24))*.26f)*Mathf.Exp(-t*5);
+                else if(id=="BossClaw"||id=="EchoClaw")value=(filtered*.26f+Mathf.Sin(t*Mathf.PI*2*(id=="BossClaw"?72:145))*.12f)*Mathf.Sin(Mathf.Clamp01(t/.22f)*Mathf.PI)*Mathf.Exp(-t*8);
                 else if(id=="Impact")value=(filtered*.12f+Mathf.Sin(t*Mathf.PI*2*90)*.16f)*Mathf.Exp(-t*24);
                 else if (foot) value = filtered * .20f * Mathf.Exp(-t * 28) + Mathf.Sin(t * 2 * Mathf.PI * (id == "FootWood" ? 100 : 170)) * .13f * Mathf.Exp(-t * 35);
                 else if (id == "Paper" || id == "Zip") value = filtered * .55f * Mathf.Sin(t * 160) * Mathf.Exp(-t * 11);

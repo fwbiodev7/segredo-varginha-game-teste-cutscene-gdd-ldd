@@ -1,0 +1,8 @@
+{
+  "tool": "image_gen.imagegen (built-in)",
+  "date": "2026-10-05",
+  "reference": "BossFlowSource.png",
+  "output": "BossFlowSourceV2.png",
+  "transparent_background": true,
+  "prompt": "Use case: background-extraction. Asset type: game sprite atlas edit. Edit target: the attached BossFlowSource.png, four rows and six columns, 24 poses of a horned rocky brown monster with red eyes and cyan cracks. Remove ONLY the blue/brown gradient backdrop completely, including inside gaps between limbs. Preserve all 24 creatures, exact poses, relative size, grid layout, sprite baselines, identity, colors and crisp pixel-art outlines. Preserve cyan claw attack trails as isolated transparent effects, but remove the broad diffuse blue background glow and all rectangular mattes. True alpha transparency everywhere outside creatures and narrow claw trails. No new poses, no text, no rearranging the grid. Return the same landscape composition with all 24 frames unobscured and separated."
+}

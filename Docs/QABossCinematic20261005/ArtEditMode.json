@@ -1,0 +1,55 @@
+{
+  "status": "completed",
+  "duration": 0.88,
+  "summary": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryCharacters/ManifestationBossCombatV2\",8,4,160,192)",
+      "Status": "Passed",
+      "Duration": 0.1873318,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryCharacters/ManifestationChildCombatV2\",8,4,96,128)",
+      "Status": "Passed",
+      "Duration": 0.0575019,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryCharacters/ManifestationBossFlowV1\",6,4,160,192)",
+      "Status": "Passed",
+      "Duration": 0.072722,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryCharacters/ManifestationChildFlowV1\",6,4,96,128)",
+      "Status": "Passed",
+      "Duration": 0.0418663,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryEffects/BossManifestationCinematicV1\",6,2,128,160)",
+      "Status": "Passed",
+      "Duration": 0.0359747,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryEffects/BossRiftCinematicV1\",6,2,160,160)",
+      "Status": "Passed",
+      "Duration": 0.0389657,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

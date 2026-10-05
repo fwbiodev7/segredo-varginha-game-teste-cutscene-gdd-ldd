@@ -1,0 +1,82 @@
+{
+  "status": "completed",
+  "unityVersion": "6000.6.0f1",
+  "aggregation": "Latest result per distinct test case",
+  "summary": {
+    "failed": 0,
+    "inconclusive": 0,
+    "skipped": 0,
+    "total": 9,
+    "passed": 9
+  },
+  "sourceReports": [
+    "CombatSuitePlayMode.json",
+    "NaturalAttackPlayMode.json"
+  ],
+  "note": "Eight suite cases passed. The stationary target fixture was corrected and the natural attack case rerun successfully; runtime game code was unchanged after the suite.",
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork",
+      "Status": "Passed",
+      "Duration": 57.0410976,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ArenaNavigationSpawnPoolAndDefeatAllowRetry",
+      "Status": "Passed",
+      "Duration": 17.6745938,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard",
+      "Status": "Passed",
+      "Duration": 16.0783277,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails",
+      "Status": "Passed",
+      "Duration": 3.1071222,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition",
+      "Status": "Passed",
+      "Duration": 4.2917129,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions",
+      "Status": "Passed",
+      "Duration": 68.1058455,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration",
+      "Status": "Passed",
+      "Duration": 36.9074171,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue",
+      "Status": "Passed",
+      "Duration": 20.3215458,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover",
+      "Status": "Passed",
+      "Duration": 12.1931911,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

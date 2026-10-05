@@ -28,6 +28,7 @@ namespace Game.Varginha
 
         private void Update()
         {
+            if(Time.timeScale<=0)return;
             // CameraFollow2D lê a posição anterior em LateUpdate. Retirar o deslocamento
             // antes desse cálculo evita incorporá-lo ao SmoothDamp e produzir deriva.
             transform.position -= _offset;
@@ -36,6 +37,7 @@ namespace Game.Varginha
 
         private void LateUpdate()
         {
+            if(Time.timeScale<=0)return;
             if (_time <= 0f)
             {
                 _duration = 0f;
@@ -57,7 +59,7 @@ namespace Game.Varginha
             var follow = GetComponent<Game.Level.CameraFollow2D>();
             transform.position = follow != null ? follow.ConstrainPosition(position + _offset) : position + _offset;
             _offset = transform.position - position;
-            _time = Mathf.Max(0f, _time - Time.unscaledDeltaTime);
+            _time = Mathf.Max(0f, _time - Time.deltaTime);
         }
 
         private void OnDisable()

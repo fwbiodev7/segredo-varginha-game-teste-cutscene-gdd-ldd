@@ -1,5 +1,13 @@
 # Histórico de atualizações
 
+## 05/10/2026 — conclusão do boss cinematográfico da fase 20
+
+- Aparência da entrada mantida no combate, com quatro direções e poses de caminhada, preparação, golpe, recuperação e reação para o boss e os filhos.
+- Quadros intermediários, contornos com transparência e colisores do corpo proporcionais às poses; os rastros de energia não ampliam a hitbox.
+- Movimento em passos fixos a partir do Rigidbody2D, interpolação visual, tamanho real do colisor dos pés e repulsão do escudo aplicada na física.
+- Entrada e saída preservam pausa, movimento reduzido, retorno da câmera, salvamento da derrota e calibração posterior ao combate.
+- Fontes, prompts, capturas e relatórios: [QABossCinematic20261005](QABossCinematic20261005/README.md).
+
 ## 15/09/2026 — mochila, consumíveis, luz suave e porta do Fusca
 
 - Inventário pela mochila da hotbar/clique ou tecla G: abre nos Itens físicos, com aba Alunos separada, descrição de poderes e botão Equipar. Setas navegam, Tab alterna abas, Enter equipa e Esc/G fecha. Layout escuro de três colunas inspirado na referência fornecida.

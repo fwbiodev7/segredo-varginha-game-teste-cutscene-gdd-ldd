@@ -29,6 +29,168 @@ namespace Game.Tests.PlayMode
             CampaignContinuationController.Active.CloseMessage();yield return null;
             Debug.Log("QA continuation ready: "+phase+" / "+area);
         }
+        [UnityTest,Timeout(90000)] public IEnumerator ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration()
+        {
+            bool originalMotion=VarginhaGameSettings.Current.reducedMotion;
+            try
+            {
+                foreach(bool reduced in new[]{false,true})
+                {
+                    VarginhaGameSettings.Current.reducedMotion=reduced;
+                    var story=new CampaignStory{phase=20};CampaignStorySave.Write(story);yield return Load(20);
+                    var c=CampaignContinuationController.Active;var camera=Camera.main;
+                    float size=camera.orthographicSize;var follow=camera.GetComponent<Game.Level.CameraFollow2D>();
+                    c.State.chambersPrepared=7;c.StartBattle();yield return null;
+                    var boss=Object.FindObjectsByType<CampaignManifestationCombat>().First(b=>!b.IsMinor);
+                    Assert.That(c.BattleEntrancePlaying,Is.True);Assert.That(c.Actor.IsInputLocked,Is.True);
+                    Assert.That(boss.GetComponent<VarginhaCombatTarget>().ReceiveHit(1000,Vector2.right,0),Is.False);
+                    yield return new WaitUntil(()=>boss.CinematicProgress>.7f);
+                    var body=boss.transform.Find("Cinematica_da_manifestacao/Corpo_em_pixelart").GetComponent<SpriteRenderer>();
+                    Assert.That(body.sprite.texture.name,Is.EqualTo("BossManifestationCinematicV1"));
+                    Assert.That(body.sprite.texture.filterMode,Is.EqualTo(FilterMode.Point));
+                    Assert.That(boss.transform.Find("Cinematica_da_manifestacao").childCount,Is.EqualTo(reduced?2:26));
+                    Assert.That(camera.orthographicSize,reduced?Is.EqualTo(size):Is.LessThanOrEqualTo(size));
+                    if(!reduced)CaptureBossFrame("Entrada.png",camera);
+                    c.TogglePause();float progress=boss.CinematicProgress;var pose=body.sprite;var position=camera.transform.position;
+                    yield return new WaitForSecondsRealtime(.3f);
+                    Assert.That(boss.CinematicProgress,Is.EqualTo(progress));Assert.That(body.sprite,Is.SameAs(pose));
+                    Assert.That(Vector3.Distance(position,camera.transform.position),Is.LessThan(.001f));
+                    c.TogglePause();yield return new WaitUntil(()=>!c.BattleEntrancePlaying);c.CloseMessage();yield return null;
+                    Assert.That(follow.enabled,Is.True);Assert.That(camera.orthographicSize,Is.EqualTo(size).Within(.01f));
+                    Assert.That(boss.GetComponent<Rigidbody2D>().simulated,Is.True);Assert.That(CampaignFinalAllies.Active.CombatActive,Is.True);
+                    boss.enabled=false;boss.Stagger(10);boss.GetComponent<HealthSystem>().SetInvincibilityDuration(0);
+                    Assert.That(boss.GetComponent<VarginhaCombatTarget>().ReceiveHit(9999,Vector2.right,0),Is.True);
+                    yield return null;yield return null;
+                    Assert.That(c.BattleExitPlaying,Is.True);Assert.That(c.Actor.IsInputLocked,Is.True);
+                    Assert.That(c.State.manifestationDispelled,Is.True);Assert.That(CampaignStorySave.Load().continuation.manifestationDispelled,Is.True);
+                    Assert.That(CampaignFinalAllies.Active.CombatActive,Is.False);
+                    c.State.finalRegulators=new[]{1,0,1};Assert.That(c.SubmitCalibration(),Is.False,"The final panel must wait for the cinematic.");
+                    yield return new WaitUntil(()=>boss.CinematicProgress>.48f);
+                    if(!reduced)CaptureBossFrame("Saida.png",camera);
+                    c.TogglePause();progress=boss.CinematicProgress;yield return new WaitForSecondsRealtime(.2f);
+                    Assert.That(boss.CinematicProgress,Is.EqualTo(progress));c.TogglePause();
+                    yield return new WaitUntil(()=>!c.BattleExitPlaying);c.CloseMessage();yield return null;
+                    Assert.That(follow.enabled,Is.True);Assert.That(camera.orthographicSize,Is.EqualTo(size).Within(.01f));
+                    Assert.That(boss.transform.Find("Cinematica_da_manifestacao"),Is.Null);Assert.That(boss.ActiveMinions,Is.Zero);
+                    Assert.That(boss.GetComponents<Collider2D>().All(x=>!x.enabled),Is.True);
+                    Assert.That(c.State.solved[9],Is.False);Assert.That(c.State.finalCalibrated,Is.False);
+                    Assert.That(c.SubmitCalibration(),Is.True);
+                    yield return Load(20);Assert.That(Object.FindObjectsByType<CampaignManifestationCombat>().Length,Is.Zero,"Reload must not repeat the defeated manifestation.");
+                }
+            }
+            finally{VarginhaGameSettings.Current.reducedMotion=originalMotion;Time.timeScale=1;}
+        }
+        static void CaptureBossFrame(string name,Camera camera)
+        {
+            string folder=Path.Combine(Directory.GetCurrentDirectory(),"Docs","QABossCinematic20261005");Directory.CreateDirectory(folder);
+            var previous=camera.targetTexture;var active=RenderTexture.active;
+            var target=RenderTexture.GetTemporary(960,720,24);var image=new Texture2D(960,720,TextureFormat.RGB24,false);
+            try
+            {
+                camera.targetTexture=target;camera.Render();RenderTexture.active=target;image.ReadPixels(new Rect(0,0,960,720),0,0);image.Apply();
+                File.WriteAllBytes(Path.Combine(folder,name),image.EncodeToPNG());
+            }
+            finally{camera.targetTexture=previous;RenderTexture.active=active;RenderTexture.ReleaseTemporary(target);Object.Destroy(image);}
+        }
+        [UnityTest,Timeout(90000)] public IEnumerator BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails()
+        {
+            CampaignStorySave.Write(new CampaignStory{phase=20});yield return Load(20);
+            var c=CampaignContinuationController.Active;
+            var boss=CampaignManifestationCombat.Spawn(c.transform,c.Actor,c.Plan,new Vector2(0,2));
+            var child=CampaignManifestationCombat.Spawn(c.transform,c.Actor,c.Plan,new Vector2(3,2),true);
+            boss.enabled=child.enabled=false;
+            var pose=typeof(CampaignManifestationCombat).GetMethod("Pose",System.Reflection.BindingFlags.Instance|System.Reflection.BindingFlags.NonPublic);
+            foreach(var enemy in new[]{boss,child})
+            {
+                var hurt=enemy.GetComponent<CapsuleCollider2D>();var feet=enemy.GetComponent<CircleCollider2D>();
+                Assert.That(hurt.isTrigger,Is.True);Assert.That(feet.isTrigger,Is.False);
+                Assert.That(enemy.GetComponent<Rigidbody2D>().interpolation,Is.EqualTo(RigidbodyInterpolation2D.Interpolate));
+                for(int direction=0;direction<4;direction++)
+                {
+                    pose.Invoke(enemy,new object[]{direction,0,false});Vector2 standing=hurt.size;
+                    pose.Invoke(enemy,new object[]{direction,2,false});Assert.That(hurt.size.y,Is.LessThan(standing.y),"Crouch lowers the body.");
+                    for(int frame=0;frame<8;frame++)
+                    {
+                        pose.Invoke(enemy,new object[]{direction,frame,false});
+                        Assert.That(hurt.size.x,Is.EqualTo(standing.x).Within(.001f));
+                        Assert.That(hurt.size.y,Is.LessThanOrEqualTo(standing.y+.001f),"Raised claws never enlarge the body.");
+                        Assert.That(hurt.offset.y-hurt.size.y*.5f,Is.EqualTo(-.52f).Within(.001f),"The lower body stays anchored above the feet.");
+                    }
+                    for(int frame=0;frame<6;frame++)
+                    {
+                        pose.Invoke(enemy,new object[]{direction,frame,true});
+                        Assert.That(hurt.size.x,Is.EqualTo(standing.x).Within(.001f));
+                        Assert.That(hurt.size.y,Is.LessThanOrEqualTo(standing.y+.001f));
+                    }
+                    pose.Invoke(enemy,new object[]{direction,4,false});Physics2D.SyncTransforms();
+                    Vector2 outside=(Vector2)enemy.transform.position+Vector2.up*hurt.offset.y+Vector2.right*(hurt.size.x*.5f+.2f);
+                    Assert.That(hurt.OverlapPoint(outside),Is.False,"Energy around the claws is outside the hurtbox.");
+                }
+                pose.Invoke(enemy,new object[]{0,4,true});
+            }
+            var camera=Camera.main;var follow=camera.GetComponent<Game.Level.CameraFollow2D>();follow.enabled=false;
+            camera.orthographicSize=4.4f;camera.transform.position=new Vector3(1.2f,3,camera.transform.position.z);
+            yield return null;CaptureBossFrame("Combate.png",camera);
+        }
+        [UnityTest,Timeout(90000)] public IEnumerator InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition()
+        {
+            CampaignStorySave.Write(new CampaignStory{phase=20});yield return Load(20);
+            var c=CampaignContinuationController.Active;c.enabled=false;c.Actor.enabled=false;c.Actor.SetInputLocked(false);
+            var playerBody=c.Actor.GetComponent<Rigidbody2D>();playerBody.position=new Vector2(20,.58f);
+            var root=new GameObject("QA_Movimento_manifestacao");
+            var plan=new CampaignMapPlan{bounds=new Rect(-50,-50,100,100)};
+            foreach(bool minor in new[]{false,true})
+            {
+                var enemy=CampaignManifestationCombat.Spawn(root.transform,c.Actor,plan,Vector2.zero,minor);
+                var body=enemy.GetComponent<Rigidbody2D>();yield return null;yield return new WaitForFixedUpdate();
+                Vector2 start=body.position;int ticks=20;
+                for(int i=0;i<ticks;i++)yield return new WaitForFixedUpdate();
+                float expected=(minor?2.3f:1.2f)*ticks*Time.fixedDeltaTime;
+                Assert.That(body.position.x-start.x,Is.EqualTo(expected).Within(.04f),"Interpolation must not shorten or jitter physics steps.");
+                enemy.Repel(body.position+Vector2.right, .5f);float before=body.position.x;
+                yield return new WaitForFixedUpdate();yield return new WaitForFixedUpdate();
+                Assert.That(body.position.x,Is.LessThan(before-.35f),"The shield moves the creature away even while it pursues Edelzio.");
+                c.Actor.SetInputLocked(true);yield return null;Vector2 stopped=body.position;
+                yield return new WaitForSeconds(.12f);Assert.That(Vector2.Distance(stopped,body.position),Is.LessThan(.001f));
+                c.Actor.SetInputLocked(false);Object.Destroy(enemy.gameObject);yield return null;
+            }
+            Object.Destroy(root);
+        }
+        [UnityTest,Timeout(90000)] public IEnumerator NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover()
+        {
+            CampaignStorySave.Write(new CampaignStory{phase=20});yield return Load(20);
+            var c=CampaignContinuationController.Active;c.enabled=false;c.Actor.enabled=false;c.Actor.SetInputLocked(false);
+            var playerBody=c.Actor.GetComponent<Rigidbody2D>();var health=c.Actor.GetComponent<HealthSystem>();
+            // With the controller disabled, no FixedUpdate cancels velocity imparted by
+            // the previous enemy. Keep this deliberately stationary target stationary.
+            playerBody.constraints=RigidbodyConstraints2D.FreezeAll;playerBody.linearVelocity=Vector2.zero;
+            health.SetMaxHealth(2000,false);health.SetInvincibilityDuration(0);
+            var root=new GameObject("QA_Ataques_manifestacao");var plan=new CampaignMapPlan{bounds=new Rect(-50,-50,100,100)};
+            foreach(bool minor in new[]{false,true})
+            {
+                playerBody.position=new Vector2(1.3f,.58f);yield return new WaitForFixedUpdate();
+                var enemy=CampaignManifestationCombat.Spawn(root.transform,c.Actor,plan,Vector2.zero,minor);
+                var warning=root.transform.Find("Aviso_de_ataque").GetComponent<SpriteRenderer>();
+                var poses=new System.Collections.Generic.HashSet<string>();float deadline=Time.time+6;
+                while(!warning.enabled&&Time.time<deadline){poses.Add(enemy.GetComponent<SpriteRenderer>().sprite.name);yield return null;}
+                Assert.That(warning.enabled,Is.True,"The floor warning precedes the attack.");
+                float before=health.CurrentHealth;yield return new WaitForSeconds(.55f);
+                Assert.That(health.CurrentHealth,Is.EqualTo(before),"Preparation never deals contact damage.");
+                Assert.That(enemy.CanReceiveHit,Is.EqualTo(minor),"The boss is protected while preparing; children remain vulnerable.");
+                deadline=Time.time+2;
+                while(health.CurrentHealth>=before&&Time.time<deadline){poses.Add(enemy.GetComponent<SpriteRenderer>().sprite.name);yield return null;}
+                Assert.That(health.CurrentHealth,Is.EqualTo(before-(minor?10:24)),"The actual lunge connects exactly once.");
+                yield return new WaitForSeconds(.55f);
+                Assert.That(health.CurrentHealth,Is.EqualTo(before-(minor?10:24)),"Remaining close during recovery adds no hits.");
+                Assert.That(enemy.CanReceiveHit,Is.True,"Recovery opens the boss to the player's counterattack.");
+                Assert.That(warning.enabled,Is.False);
+                Assert.That(poses.Any(p=>p.StartsWith(minor?"EchoFlow_":"BossFlow_")),Is.True,"The live attack uses intermediate poses.");
+                var body=enemy.GetComponent<Rigidbody2D>();Vector2 recovered=body.position;
+                yield return new WaitForSeconds(.2f);Assert.That(Vector2.Distance(recovered,body.position),Is.LessThan(.001f),"Recovery does not retain the dash.");
+                Object.Destroy(enemy.gameObject);yield return null;yield return null;
+            }
+            Object.Destroy(root);
+        }
         [UnityTest,Timeout(180000)] public IEnumerator InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions()
         {
             var route=new System.Collections.Generic.List<Vector2>();
@@ -177,7 +339,9 @@ namespace Game.Tests.PlayMode
             c.Actor.GetComponent<Rigidbody2D>().position=new Vector2(-4,.58f);yield return new WaitForFixedUpdate();
             Assert.That(support.DamageMultiplier,Is.EqualTo(1),"The priest's protection has a bounded area.");
             boss.Stagger(100);health.SetInvincibilityDuration(0);boss.GetComponent<VarginhaCombatTarget>().ReceiveHit(20000,Vector2.right,0);yield return null;
-            Assert.That(c.State.manifestationDispelled,Is.True);Assert.That(c.State.solved[9],Is.True);Assert.That(support.CombatActive,Is.False);
+            Assert.That(c.State.manifestationDispelled,Is.True);Assert.That(c.State.solved[9],Is.False);Assert.That(support.CombatActive,Is.False);
+            yield return new WaitUntil(()=>!c.BattleExitPlaying);
+            c.CloseMessage();c.State.finalRegulators=new[]{1,0,1};Assert.That(c.SubmitCalibration(),Is.True);
         }
         [UnityTest,Timeout(90000)] public IEnumerator ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue()
         {
