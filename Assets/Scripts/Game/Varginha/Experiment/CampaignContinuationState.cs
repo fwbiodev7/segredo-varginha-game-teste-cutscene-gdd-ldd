@@ -12,6 +12,10 @@ namespace Game.Varginha.Experiment
         public int[] chamberValues = { 0, 0, 0 };
         public int[] battleStudents={-1,-1,-1};
         public int battleSupport=-1;
+        public int[] finalRegulators={0,0,0};
+        public bool finalSealActive=true,finalCalibrated;
+        public int FinalReading(int index)=>(2*finalRegulators[index]+finalRegulators[(index+2)%3])%4;
+        public bool FinalStable=>finalSealActive&&FinalReading(0)==3&&FinalReading(1)==1&&FinalReading(2)==2;
         public void Repair()
         {
             if (clues == null || clues.Length != 11) Array.Resize(ref clues,11);
@@ -23,6 +27,10 @@ namespace Game.Varginha.Experiment
             if(battleStudents==null||battleStudents.Length!=3)battleStudents=new[]{-1,-1,-1};
             for(int i=0;i<3;i++){battleStudents[i]=Mathf.Clamp(battleStudents[i],-1,8);for(int j=0;j<i;j++)if(battleStudents[j]==battleStudents[i])battleStudents[i]=-1;}
             battleSupport=Mathf.Clamp(battleSupport,-1,2);
+            if(finalRegulators==null||finalRegulators.Length!=3)finalRegulators=new int[3];
+            for(int i=0;i<3;i++)finalRegulators[i]=Mathf.Clamp(finalRegulators[i],0,3);
+            // Preserve completed campaigns made before the new calibration step.
+            if(manifestationDispelled&&solved[9])finalCalibrated=true;
         }
         public bool HasAll(int phase,int count) => (clues[phase-11]&((1<<count)-1))==((1<<count)-1);
         public void Read(int phase,int index) => clues[phase-11] |= 1<<index;

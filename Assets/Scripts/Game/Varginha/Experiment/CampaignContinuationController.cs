@@ -28,6 +28,10 @@ namespace Game.Varginha.Experiment
         private SpriteRenderer _portal;
         private float _endingFade;
         private bool _sequence,_resumeBattlePending;
+        private Camera _shotCamera;
+        private Game.Level.CameraFollow2D _shotFollow;
+        private float _shotSize;
+        private bool _shotFollowing;
         private bool _creditsPending,_creditsVisible;
         private float _creditsTime;
         private Texture2D _memoryImage;
@@ -162,8 +166,8 @@ namespace Game.Varginha.Experiment
             if(phase==17)Pursuit();
             if(phase==20&&_boss!=null&&_boss.Defeated&&!State.manifestationDispelled)
             {
-                _boss.ClearMinions();State.manifestationDispelled=true;State.solved[9]=true;_allies.CombatActive=false;
-                Say("A manifestação se desfaz. A entidade ferida se acalma. A passagem ainda precisa ser aberta; o acordo poderá terminar com segurança.");Save();
+                _boss.ClearMinions();State.manifestationDispelled=true;State.solved[9]=State.finalCalibrated;_allies.CombatActive=false;
+                Save();StartCoroutine(ExitBattle());
             }
             Actor.SetInputLocked(Modal);
         }
@@ -180,32 +184,73 @@ namespace Game.Varginha.Experiment
             if(_boss!=null||State.manifestationDispelled||State.chambersPrepared!=7)return;
             StartCoroutine(EnterBattle());
         }
-        public bool BattleEntrancePlaying=>_boss!=null&&_boss.EntrancePlaying;
+        public bool BattleEntrancePlaying=>phase==20&&_sequence&&_boss!=null&&!_boss.Defeated;
+        public bool BattleExitPlaying=>phase==20&&_sequence&&_boss!=null&&_boss.Defeated;
         private IEnumerator EnterBattle()
         {
             _sequence=true;_message=null;_panel=null;Actor.SetInputLocked(true);_allies.CombatActive=false;
             _boss=CampaignManifestationCombat.Spawn(transform,Actor,Plan,Plan.bounds.center+Vector2.up*2);
             var camera=Camera.main;if(camera!=null&&camera.GetComponent<VarginhaCameraShake>()==null)camera.gameObject.AddComponent<VarginhaCameraShake>();
-            var follow=camera?.GetComponent<Game.Level.CameraFollow2D>();bool following=follow!=null&&follow.enabled;
-            Vector3 shotStart=camera!=null?camera.transform.position:Vector3.zero;
-            Vector3 shotGoal=new Vector3(_boss.transform.position.x,_boss.transform.position.y+1,shotStart.z);
-            if(follow!=null){shotGoal=follow.ConstrainPosition(shotGoal);follow.enabled=false;}
-            _sound.Play("AlienBurst");var entrance=_boss.Enter();float shotTime=0;
-            try
-            {
-                while(entrance.MoveNext())
-                {
-                    shotTime+=Time.deltaTime;
-                    if(camera!=null)camera.transform.position=Vector3.Lerp(shotStart,shotGoal,Mathf.SmoothStep(0,1,shotTime/.85f));
-                    yield return entrance.Current;
-                }
-            }
-            finally{if(follow!=null)follow.enabled=following;}
-            _sound.Play("Impact");
+            yield return BossShot(false);
             _sequence=false;
             Actor.CanDodge=true;var attack=Actor.GetComponent<VarginhaPlayerAttack>()??Actor.gameObject.AddComponent<VarginhaPlayerAttack>();attack.enabled=true;
             _allies.CombatActive=true;
             Say("A manifestação protege o mecanismo. Desvie do aviso no chão; ataque durante a recuperação. Na mochila, equipe três ALUNOS e um APOIO. Use 1, 2 ou 3 para atacar com um aluno por vez. O comando de aluno alterna entre os equipados; o comando de professor aciona Renan, Ouzana ou Padre Fábio separadamente. No controle: LB aluno, RB professor.");
+        }
+        private IEnumerator ExitBattle()
+        {
+            _sequence=true;_message=null;_panel=null;Actor.SetInputLocked(true);
+            Actor.GetComponent<VarginhaPlayerAttack>()?.EndHitstopForModal();_allies.CombatActive=false;
+            yield return BossShot(true);
+            _sequence=false;
+            Say("A manifestação se desfaz. Recalibre o painel de retorno usando as três leituras das câmaras. O selo de Edelzio deve permanecer ativo até a travessia.");Save();
+        }
+        private IEnumerator BossShot(bool exiting)
+        {
+            _shotCamera=Camera.main;_shotFollow=_shotCamera?.GetComponent<Game.Level.CameraFollow2D>();
+            _shotFollowing=_shotFollow!=null&&_shotFollow.enabled;
+            _shotSize=_shotCamera!=null?_shotCamera.orthographicSize:0;
+            bool reduced=VarginhaGameSettings.Current.reducedMotion;
+            Vector3 shotStart=_shotCamera!=null?_shotCamera.transform.position:Vector3.zero;
+            Vector3 shotGoal=new Vector3(_boss.transform.position.x,_boss.transform.position.y+.65f,shotStart.z);
+            if(_shotFollow!=null)_shotFollow.enabled=false;
+            var animation=exiting?_boss.Exit():_boss.Enter();float shotTime=0;
+            _sound.CinematicDucking(1);
+            try
+            {
+                while(animation.MoveNext())
+                {
+                    shotTime+=Time.deltaTime;
+                    if(_shotCamera!=null&&Time.timeScale>0)
+                    {
+                        float push=reduced?1:Mathf.SmoothStep(0,1,shotTime/1.15f);
+                        _shotCamera.orthographicSize=reduced?_shotSize:Mathf.Lerp(_shotSize,Mathf.Min(_shotSize,4.4f),push);
+                        Vector3 position=Vector3.Lerp(shotStart,shotGoal,push);
+                        _shotCamera.transform.position=_shotFollow!=null?_shotFollow.ConstrainPosition(position):position;
+                    }
+                    yield return animation.Current;
+                }
+                if(_shotCamera!=null)
+                {
+                    Vector3 returnStart=_shotCamera.transform.position;float closeSize=_shotCamera.orthographicSize,t=0;
+                    while(t<(reduced?0:.6f))
+                    {
+                        if(Time.timeScale<=0){yield return null;continue;}
+                        t+=Time.deltaTime;float p=Mathf.SmoothStep(0,1,t/.6f);
+                        _shotCamera.orthographicSize=Mathf.Lerp(closeSize,_shotSize,p);
+                        Vector3 position=Vector3.Lerp(returnStart,new Vector3(Actor.transform.position.x,Actor.transform.position.y,returnStart.z),p);
+                        _shotCamera.transform.position=_shotFollow!=null?_shotFollow.ConstrainPosition(position):position;
+                        yield return null;
+                    }
+                }
+            }
+            finally{(animation as System.IDisposable)?.Dispose();RestoreBossShot();}
+        }
+        private void RestoreBossShot()
+        {
+            if(_shotCamera!=null)_shotCamera.orthographicSize=_shotSize;
+            if(_shotFollow!=null)_shotFollow.enabled=_shotFollowing;
+            _shotCamera=null;_shotFollow=null;_sound?.CinematicDucking(0);
         }
         private CampaignMapPlan.Point Nearest()
         {
@@ -221,12 +266,13 @@ namespace Game.Varginha.Experiment
         }
         public void Interact(string id)
         {
+            if(_sequence)return;
             if(phase==21){Finale(id);return;}
             if(phase==20)
             {
                 int station=System.Array.IndexOf(_definition.ids,id);
                 if(station>=0){State.chambersPrepared|=1<<station;ReadEvidence(station);if(State.chambersPrepared==7)StartBattle();}
-                else if(id=="exit"||id=="procedure") {if(State.manifestationDispelled)_panel="complete";else Say("Prepare os três circuitos e dissipe a manifestação para alcançar a entidade com segurança.");}Save();return;
+                else if(id=="exit"||id=="procedure") {if(State.manifestationDispelled)_panel=State.finalCalibrated?"complete":"calibration";else Say("Prepare os três circuitos e dissipe a manifestação para alcançar a entidade com segurança.");}Save();return;
             }
             if(phase==17)
             {
@@ -282,6 +328,13 @@ namespace Game.Varginha.Experiment
             State.solved[phase-11]=true;_panel=null;Save();
             if(phase==13||phase==15||phase==18||phase==19)StartCoroutine(Memory());else Say(_definition.success);
             return true;
+        }
+        public bool SubmitCalibration()
+        {
+            if(_sequence)return false;
+            if(phase!=20||!State.manifestationDispelled||State.chambersPrepared!=7||!State.FinalStable)
+            {Say(State.finalSealActive?"As três câmaras precisam atingir suas referências simultaneamente. Cada regulador afeta também a câmara seguinte.":"Sem o selo ativo, a ruptura perde a proteção durante a travessia. Reative a ligação de Edelzio.");return false;}
+            State.finalCalibrated=State.solved[9]=true;_panel="complete";Save();return true;
         }
         private void Finale(string id)
         {
@@ -377,12 +430,23 @@ namespace Game.Varginha.Experiment
             float hudScale=Mathf.Max(.01f,Mathf.Min(Screen.width/1280f,Screen.height/720f));
             float hudLeft=24-(Screen.width/hudScale-1280)*.5f;
             float hudTop=24-(Screen.height/hudScale-720)*.5f;
-            if(BattleEntrancePlaying&&!_paused)
+            if((BattleEntrancePlaying||BattleExitPlaying)&&!_paused)
             {
                 float width=Screen.width/hudScale;
+                float left=(1280-width)/2,height=Screen.height/hudScale,top=(720-height)/2;
+                // Soft darkness at the edges holds attention on the apparition, without obscuring its eyes.
+                for(int i=0;i<8;i++)
+                {
+                    float inset=i*18;var shade=new Color(0,.015f,.025f,Mathf.Lerp(.18f,.015f,i/7f));
+                    ExperimentGUI.Box(new Rect(left,top+62+inset,width,18),shade);
+                    ExperimentGUI.Box(new Rect(left,top+height-80-inset,width,18),shade);
+                    ExperimentGUI.Box(new Rect(left+inset,top+62,18,height-124),shade);
+                    ExperimentGUI.Box(new Rect(left+width-inset-18,top+62,18,height-124),shade);
+                }
+                ExperimentGUI.Box(new Rect(left,top,width,height),new Color(.35f,.8f,.9f,_boss.CinematicFlash));
                 ExperimentGUI.Box(new Rect((1280-width)/2,hudTop-24,width,62),Color.black);
                 ExperimentGUI.Box(new Rect((1280-width)/2,682-hudTop,width,62),Color.black);
-                ExperimentGUI.Label(new Rect(310,624,660,32),"A MANIFESTAÇÃO DESPERTA",small:true);
+                ExperimentGUI.Label(new Rect(310,624,660,32),_boss.CinematicCaption,small:true);
                 GUI.matrix=matrix;return;
             }
             if(_creditsVisible){if(CampaignCredits.Draw(_creditsTime))Menu();GUI.matrix=matrix;return;}
@@ -451,6 +515,18 @@ namespace Game.Varginha.Experiment
                 {int index=i;bool seen=(State.clues[phase-11]&(1<<i))!=0;bool canRead=seen||_panel=="evidence"&&phase==11;GUI.enabled=canRead;if(ExperimentGUI.Button(new Rect(145,250+i*64,990,52),(seen?"✓ ":"EXAMINAR NO CENÁRIO • ")+_definition.labels[i]))ReadEvidence(index);GUI.enabled=true;}
                 if(_panel=="evidence"&&ExperimentGUI.Button(new Rect(440,500,400,50),"COMPARAR AS CÓPIAS"))OpenPuzzle();
             }
+            else if(_panel=="calibration")
+            {
+                ExperimentGUI.Label(new Rect(145,250,990,60),"Recalibre com as leituras ÁRVORE 3, RIO 1, CAPELA 2. Cada leitura soma duas partes do regulador local e uma do anterior, retornando a 0 após 3.");
+                for(int i=0;i<3;i++)
+                {
+                    int index=i;string name=new[]{"ÁRVORE","RIO","CAPELA"}[i];
+                    ExperimentGUI.Label(new Rect(145+i*320,330,300,45),name+" • LEITURA "+State.FinalReading(i));
+                    if(ExperimentGUI.Button(new Rect(145+i*320,390,300,55),"REGULADOR "+State.finalRegulators[i])){State.finalRegulators[index]=(State.finalRegulators[index]+1)%4;Save();}
+                }
+                if(ExperimentGUI.Button(new Rect(145,475,540,50),"SELO DE EDELZIO • "+(State.finalSealActive?"ATIVO":"DESLIGADO"))){State.finalSealActive=!State.finalSealActive;Save();}
+                if(ExperimentGUI.Button(new Rect(755,500,360,45),"VALIDAR RETORNO SEGURO"))SubmitCalibration();
+            }
             else if(_panel=="puzzle")
             {
                 ExperimentGUI.Label(new Rect(145,250,990,95),_definition.question);
@@ -472,6 +548,6 @@ namespace Game.Varginha.Experiment
         }
         private void Menu(){Save();Time.timeScale=1;CampaignCinematics.Load("Menu_MisterioDeVarginha");}
         private void OnApplicationPause(bool value){if(value)Save();}
-        private void OnDestroy(){if(Active==this)Active=null;Time.timeScale=1;}
+        private void OnDestroy(){RestoreBossShot();if(Active==this)Active=null;Time.timeScale=1;}
     }
 }

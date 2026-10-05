@@ -1,0 +1,76 @@
+{
+  "status": "completed",
+  "duration": 237.0,
+  "summary": {
+    "total": 9,
+    "passed": 8,
+    "failed": 1,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork",
+      "Status": "Passed",
+      "Duration": 57.0410976,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ArenaNavigationSpawnPoolAndDefeatAllowRetry",
+      "Status": "Passed",
+      "Duration": 17.6745938,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard",
+      "Status": "Passed",
+      "Duration": 16.0783277,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails",
+      "Status": "Passed",
+      "Duration": 3.1071222,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition",
+      "Status": "Passed",
+      "Duration": 4.2917129,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions",
+      "Status": "Passed",
+      "Duration": 68.1058455,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration",
+      "Status": "Passed",
+      "Duration": 36.9074171,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover",
+      "Status": "Failed",
+      "Duration": 13.2360314,
+      "Message": "  The actual lunge connects exactly once.\r\n  Expected: 1966.0f\r\n  But was:  1976.0f\r\n",
+      "StackTrace": "at Game.Tests.PlayMode.CampaignContinuationPlayTests+<NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover>d__10.MoveNext () [0x00385] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-05-06-44-30\\Assets\\Tests\\PlayMode\\CampaignContinuationPlayTests.cs:179\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue",
+      "Status": "Passed",
+      "Duration": 20.3215458,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

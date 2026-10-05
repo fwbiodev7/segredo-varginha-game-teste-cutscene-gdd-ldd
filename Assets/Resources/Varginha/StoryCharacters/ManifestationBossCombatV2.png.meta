@@ -1,0 +1,1471 @@
+fileFormatVersion: 2
+guid: 2f405da62fcb10842809243ad2391205
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7354251282794815633
+    second: ManifestationBossCombatV2_0
+  - first:
+      213: 263613237702499214
+    second: ManifestationBossCombatV2_1
+  - first:
+      213: 4535392415510992946
+    second: ManifestationBossCombatV2_2
+  - first:
+      213: -8566772104961788350
+    second: ManifestationBossCombatV2_3
+  - first:
+      213: 5342767488824368141
+    second: ManifestationBossCombatV2_4
+  - first:
+      213: 4239560769505367434
+    second: ManifestationBossCombatV2_5
+  - first:
+      213: 7726841412956353397
+    second: ManifestationBossCombatV2_6
+  - first:
+      213: -4531960248773562268
+    second: ManifestationBossCombatV2_7
+  - first:
+      213: 2499803893896878997
+    second: ManifestationBossCombatV2_8
+  - first:
+      213: -3492531089971832754
+    second: ManifestationBossCombatV2_9
+  - first:
+      213: 6586293395579471361
+    second: ManifestationBossCombatV2_10
+  - first:
+      213: -2644617578900445087
+    second: ManifestationBossCombatV2_11
+  - first:
+      213: 3245908653618135931
+    second: ManifestationBossCombatV2_12
+  - first:
+      213: -3254044822039511684
+    second: ManifestationBossCombatV2_13
+  - first:
+      213: -8884234757033546417
+    second: ManifestationBossCombatV2_14
+  - first:
+      213: 3889153799093774851
+    second: ManifestationBossCombatV2_15
+  - first:
+      213: 5924791240349649336
+    second: ManifestationBossCombatV2_16
+  - first:
+      213: -2011333289700314094
+    second: ManifestationBossCombatV2_17
+  - first:
+      213: -4460884750555139933
+    second: ManifestationBossCombatV2_18
+  - first:
+      213: 5948020447600276922
+    second: ManifestationBossCombatV2_19
+  - first:
+      213: -3153283511848149759
+    second: ManifestationBossCombatV2_20
+  - first:
+      213: -4876407675889633656
+    second: ManifestationBossCombatV2_21
+  - first:
+      213: 7563052710911821475
+    second: ManifestationBossCombatV2_22
+  - first:
+      213: 1583475648817659941
+    second: ManifestationBossCombatV2_23
+  - first:
+      213: 3386875102488248262
+    second: ManifestationBossCombatV2_24
+  - first:
+      213: 5297104968762349539
+    second: ManifestationBossCombatV2_25
+  - first:
+      213: 1578234115760544647
+    second: ManifestationBossCombatV2_26
+  - first:
+      213: 6691148995045646827
+    second: ManifestationBossCombatV2_27
+  - first:
+      213: 6386843649420254855
+    second: ManifestationBossCombatV2_28
+  - first:
+      213: 140509292257058991
+    second: ManifestationBossCombatV2_29
+  - first:
+      213: 4516166174907974993
+    second: ManifestationBossCombatV2_30
+  - first:
+      213: -6076588960936651355
+    second: ManifestationBossCombatV2_31
+  - first:
+      213: -3607517833524308147
+    second: ManifestationBossCombatV2_32
+  - first:
+      213: 36854453579207691
+    second: ManifestationBossCombatV2_33
+  - first:
+      213: -6204830421885466325
+    second: ManifestationBossCombatV2_34
+  - first:
+      213: -7019909994120380683
+    second: ManifestationBossCombatV2_35
+  - first:
+      213: -1066307225390369603
+    second: ManifestationBossCombatV2_36
+  - first:
+      213: 2850032612452449721
+    second: ManifestationBossCombatV2_37
+  - first:
+      213: 7742924568399520705
+    second: ManifestationBossCombatV2_38
+  - first:
+      213: 2758239734048667300
+    second: ManifestationBossCombatV2_39
+  - first:
+      213: -4741273197051936997
+    second: ManifestationBossCombatV2_40
+  - first:
+      213: 7972661439330964512
+    second: ManifestationBossCombatV2_41
+  - first:
+      213: -6405740487560999256
+    second: ManifestationBossCombatV2_42
+  - first:
+      213: -5264051660294905371
+    second: ManifestationBossCombatV2_43
+  - first:
+      213: 7812115220630576555
+    second: ManifestationBossCombatV2_44
+  - first:
+      213: -68797163451419862
+    second: ManifestationBossCombatV2_45
+  - first:
+      213: 7952602167216535378
+    second: ManifestationBossCombatV2_46
+  - first:
+      213: 2961545528604169061
+    second: ManifestationBossCombatV2_47
+  - first:
+      213: -2382393141424647709
+    second: ManifestationBossCombatV2_48
+  - first:
+      213: -1155629423174419177
+    second: ManifestationBossCombatV2_49
+  - first:
+      213: 8496827249093964138
+    second: ManifestationBossCombatV2_50
+  - first:
+      213: 3510533283048269801
+    second: ManifestationBossCombatV2_51
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 583
+        width: 108
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19022f3c39c8f0660800000000000000
+      internalID: 7354251282794815633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 583
+        width: 111
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8b195fc7da88a300800000000000000
+      internalID: 263613237702499214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_2
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 583
+        width: 132
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23898835f53f0fe30800000000000000
+      internalID: 4535392415510992946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_3
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 639
+        width: 14
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 246f604c826bc1980800000000000000
+      internalID: -8566772104961788350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_4
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 583
+        width: 132
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0cd1e059b2552a40800000000000000
+      internalID: 5342767488824368141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_5
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 583
+        width: 132
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a859c06ce02f5da30800000000000000
+      internalID: 4239560769505367434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_6
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 583
+        width: 132
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5737a0793514b3b60800000000000000
+      internalID: 7726841412956353397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_7
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 583
+        width: 132
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46039a34a2e3b11c0800000000000000
+      internalID: -4531960248773562268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_8
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 639
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b9cdf956611b220800000000000000
+      internalID: 2499803893896878997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_9
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 621
+        width: 12
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4898375a79088fc0800000000000000
+      internalID: -3492531089971832754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_10
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 583
+        width: 123
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 106040692f6376b50800000000000000
+      internalID: 6586293395579471361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_11
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 583
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168a2e2e25e6c4bd0800000000000000
+      internalID: -2644617578900445087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_12
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 391
+        width: 97
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b73864019b8cb0d20800000000000000
+      internalID: 3245908653618135931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_13
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 391
+        width: 99
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7db22b997f47d2d0800000000000000
+      internalID: -3254044822039511684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_14
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 391
+        width: 114
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d26d52f8bd4b480800000000000000
+      internalID: -8884234757033546417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_15
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 391
+        width: 124
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30a68df46cc09f530800000000000000
+      internalID: 3889153799093774851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_16
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 391
+        width: 132
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b903610e36193250800000000000000
+      internalID: 5924791240349649336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_17
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 426
+        width: 30
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 214be7e870f4614e0800000000000000
+      internalID: -2011333289700314094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_18
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 391
+        width: 109
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a0343344f0c712c0800000000000000
+      internalID: -4460884750555139933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_19
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 427
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab579f7451d9b8250800000000000000
+      internalID: 5948020447600276922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_20
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 391
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10dd1305a594d34d0800000000000000
+      internalID: -3153283511848149759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_21
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 391
+        width: 109
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8863c9a1e05835cb0800000000000000
+      internalID: -4876407675889633656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_22
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 391
+        width: 120
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a6447bae5c55f860800000000000000
+      internalID: 7563052710911821475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_23
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 199
+        width: 118
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 520024686b2a9f510800000000000000
+      internalID: 1583475648817659941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_24
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 199
+        width: 127
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cf3d6616f8900f20800000000000000
+      internalID: 3386875102488248262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_25
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 199
+        width: 132
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e7590167e8138940800000000000000
+      internalID: 5297104968762349539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_26
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 199
+        width: 132
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78b5f42019307e510800000000000000
+      internalID: 1578234115760544647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_27
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 230
+        width: 41
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be168ec4f8cbbdc50800000000000000
+      internalID: 6691148995045646827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_28
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 290
+        width: 79
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e57afc570a2a850800000000000000
+      internalID: 6386843649420254855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_29
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 321
+        width: 29
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0af94f47033f100800000000000000
+      internalID: 140509292257058991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_30
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 199
+        width: 115
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 155460a5535acae30800000000000000
+      internalID: 4516166174907974993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_31
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 305
+        width: 125
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a59f41098e9baba0800000000000000
+      internalID: -6076588960936651355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_32
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 199
+        width: 132
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4795e3d4a58fedc0800000000000000
+      internalID: -3607517833524308147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_33
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 257
+        width: 13
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b04daf52eeee28000800000000000000
+      internalID: 36854453579207691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_34
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 199
+        width: 116
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b29cafb1b9304e9a0800000000000000
+      internalID: -6204830421885466325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_35
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 199
+        width: 131
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe7d3dad05449e90800000000000000
+      internalID: -7019909994120380683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_36
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 224
+        width: 8
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db4bc216a37b331f0800000000000000
+      internalID: -1066307225390369603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_37
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 223
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bdb1879f895d8720800000000000000
+      internalID: 2850032612452449721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_38
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 199
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c329160fd4647b60800000000000000
+      internalID: 7742924568399520705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_39
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 199
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a6b651ac6c374620800000000000000
+      internalID: 2758239734048667300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_40
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 7
+        width: 98
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1f73aac52d933eb0800000000000000
+      internalID: -4741273197051936997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_41
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 7
+        width: 108
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 024d6cd865594ae60800000000000000
+      internalID: 7972661439330964512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_42
+      rect:
+        serializedVersion: 2
+        x: 503
+        y: 7
+        width: 114
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aec69337fc3a17a0800000000000000
+      internalID: -6405740487560999256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_43
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 7
+        width: 131
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e121d4b7e452f6b0800000000000000
+      internalID: -5264051660294905371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_44
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 118
+        width: 123
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad9b1e17653a6c60800000000000000
+      internalID: 7812115220630576555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_45
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 16
+        width: 8
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a237ce628559b0ff0800000000000000
+      internalID: -68797163451419862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_46
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 7
+        width: 113
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25771f059815d5e60800000000000000
+      internalID: 7952602167216535378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_47
+      rect:
+        serializedVersion: 2
+        x: 814
+        y: 7
+        width: 132
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5631992a7f5891920800000000000000
+      internalID: 2961545528604169061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_48
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 7
+        width: 130
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e19e027f0a00fed0800000000000000
+      internalID: -2382393141424647709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_49
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 54
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71df2b3992166ffe0800000000000000
+      internalID: -1155629423174419177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_50
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 7
+        width: 124
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61fa1c6d5bcae570800000000000000
+      internalID: 8496827249093964138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossCombatV2_51
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 7
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7274cdb6be7b030800000000000000
+      internalID: 3510533283048269801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ManifestationBossCombatV2_0: 7354251282794815633
+      ManifestationBossCombatV2_1: 263613237702499214
+      ManifestationBossCombatV2_10: 6586293395579471361
+      ManifestationBossCombatV2_11: -2644617578900445087
+      ManifestationBossCombatV2_12: 3245908653618135931
+      ManifestationBossCombatV2_13: -3254044822039511684
+      ManifestationBossCombatV2_14: -8884234757033546417
+      ManifestationBossCombatV2_15: 3889153799093774851
+      ManifestationBossCombatV2_16: 5924791240349649336
+      ManifestationBossCombatV2_17: -2011333289700314094
+      ManifestationBossCombatV2_18: -4460884750555139933
+      ManifestationBossCombatV2_19: 5948020447600276922
+      ManifestationBossCombatV2_2: 4535392415510992946
+      ManifestationBossCombatV2_20: -3153283511848149759
+      ManifestationBossCombatV2_21: -4876407675889633656
+      ManifestationBossCombatV2_22: 7563052710911821475
+      ManifestationBossCombatV2_23: 1583475648817659941
+      ManifestationBossCombatV2_24: 3386875102488248262
+      ManifestationBossCombatV2_25: 5297104968762349539
+      ManifestationBossCombatV2_26: 1578234115760544647
+      ManifestationBossCombatV2_27: 6691148995045646827
+      ManifestationBossCombatV2_28: 6386843649420254855
+      ManifestationBossCombatV2_29: 140509292257058991
+      ManifestationBossCombatV2_3: -8566772104961788350
+      ManifestationBossCombatV2_30: 4516166174907974993
+      ManifestationBossCombatV2_31: -6076588960936651355
+      ManifestationBossCombatV2_32: -3607517833524308147
+      ManifestationBossCombatV2_33: 36854453579207691
+      ManifestationBossCombatV2_34: -6204830421885466325
+      ManifestationBossCombatV2_35: -7019909994120380683
+      ManifestationBossCombatV2_36: -1066307225390369603
+      ManifestationBossCombatV2_37: 2850032612452449721
+      ManifestationBossCombatV2_38: 7742924568399520705
+      ManifestationBossCombatV2_39: 2758239734048667300
+      ManifestationBossCombatV2_4: 5342767488824368141
+      ManifestationBossCombatV2_40: -4741273197051936997
+      ManifestationBossCombatV2_41: 7972661439330964512
+      ManifestationBossCombatV2_42: -6405740487560999256
+      ManifestationBossCombatV2_43: -5264051660294905371
+      ManifestationBossCombatV2_44: 7812115220630576555
+      ManifestationBossCombatV2_45: -68797163451419862
+      ManifestationBossCombatV2_46: 7952602167216535378
+      ManifestationBossCombatV2_47: 2961545528604169061
+      ManifestationBossCombatV2_48: -2382393141424647709
+      ManifestationBossCombatV2_49: -1155629423174419177
+      ManifestationBossCombatV2_5: 4239560769505367434
+      ManifestationBossCombatV2_50: 8496827249093964138
+      ManifestationBossCombatV2_51: 3510533283048269801
+      ManifestationBossCombatV2_6: 7726841412956353397
+      ManifestationBossCombatV2_7: -4531960248773562268
+      ManifestationBossCombatV2_8: 2499803893896878997
+      ManifestationBossCombatV2_9: -3492531089971832754
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
