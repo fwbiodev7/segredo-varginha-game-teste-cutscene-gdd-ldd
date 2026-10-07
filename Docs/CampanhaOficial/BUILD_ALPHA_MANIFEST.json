@@ -40,5 +40,10 @@
     "scope": "Inicialização do executável Windows, sem jogada manual completa",
     "engine_initialized": true,
     "input_initialized": true
+  },
+  "publication": {
+    "published": true,
+    "release_id": 406241358,
+    "source_commit": "a9f7e374a15c67c8c558c21a1ae40d2017a59263"
   }
 }

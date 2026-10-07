@@ -30,6 +30,6 @@ O material público é uma amostra sem respostas dos puzzles. Não copie guias i
 
 ## Atualização de 07.10.2026
 
-Campanha apresentada como 14 fases em 5 atos, com novidades sobre dicas, caderno, leitura, dificuldade e iluminação dinâmica dos personagens. O site aponta para as instruções de acesso ao projeto Unity no README do GitHub. O conteúdo promocional permanece sem soluções dos puzzles. Não há executável público para download confirmado.
+Campanha apresentada como 14 fases em 5 atos, com novidades sobre dicas, caderno, leitura, dificuldade e iluminação dinâmica dos personagens. O site aponta para as instruções de acesso ao projeto Unity no README do GitHub. O conteúdo promocional permanece sem soluções dos puzzles. A alpha Windows está publicada no GitHub: https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/releases/tag/jogo_varginha_build_alpha. O botão de download aponta para o asset confirmado da versão.
 
 A revisão inclui remapeamento com diagrama em pixel art, HUD adaptável e link para o tutorial de controles XInput no GitHub.

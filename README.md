@@ -12,11 +12,21 @@ Trinta anos depois de uma noite esquecida, Edelzio encontra uma caixa que devolv
 
 ## Posso jogar agora?
 
-A campanha está implementada no projeto Unity deste repositório. **Ainda não há um executável público para download nem uma versão jogável no site.** O site apresenta o jogo, personagens, imagens e novidades. Para jogar esta versão, abra o projeto no Unity e use o modo Play.
+**A alpha Windows 64 bits já está disponível:** [baixar jogo_varginha_build_alpha.zip](https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/releases/download/jogo_varginha_build_alpha/jogo_varginha_build_alpha.zip). Extraia todo o ZIP e abra `jogo_varginha_build_alpha.exe`, mantendo a pasta `_Data` e as bibliotecas junto dele. **Não é necessário instalar o Unity para jogar a build.** Consulte as [instruções da alpha](Docs/CampanhaOficial/NOTAS_BUILD_ALPHA.md) e os [arquivos desta versão no GitHub](https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/releases/tag/jogo_varginha_build_alpha).
+
+O site apresenta o jogo e oferece o link de download. A campanha não roda diretamente no navegador. O projeto Unity permanece disponível para desenvolvimento e testes no Editor.
 
 O projeto foi validado com **Unity 6000.6.0f1 no Windows**. Ainda não há requisitos mínimos de hardware medidos, duração oficial da campanha ou suporte certificado para outras plataformas.
 
 ## Como começar
+
+### Jogar a alpha no Windows
+
+1. [Baixe o pacote da alpha](https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/releases/download/jogo_varginha_build_alpha/jogo_varginha_build_alpha.zip) e extraia **todo** o ZIP.
+2. Abra `jogo_varginha_build_alpha.exe`, mantendo os outros arquivos e pastas ao lado dele.
+3. Escolha **Jogar → Iniciar campanha**, ou **Continuar** para retomar o save. Configure teclado ou controle em **Configurações → Controles**.
+
+### Testar ou desenvolver no Unity Editor
 
 1. Instale o Unity Hub e o Editor **6000.6.0f1**.
 2. Baixe pelo botão **Code → Download ZIP** e extraia a pasta, ou clone este repositório com Git. Para testar uma atualização em outra branch, selecione essa branch antes de baixar.
@@ -117,7 +127,7 @@ Para fazer uma cópia de segurança, procure `CampaignStory2026.json` na pasta d
 
 ## Dúvidas frequentes
 
-**O site abre o jogo?** Nesta versão, o site é a apresentação pública. A campanha roda pelo projeto Unity.
+**O site abre o jogo?** O site apresenta o jogo e oferece o download da alpha Windows. A campanha roda pelo executável ou pelo projeto Unity.
 
 **Continuar está desativado?** Ele depende de um save existente. Comece uma campanha e avance pela investigação.
 
@@ -136,8 +146,8 @@ Este é o repositório experimental [segredo-varginha-game-teste-cutscene-gdd-ld
 - Use **Unity 6000.6.0f1** e as dependências de [Packages/manifest.json](Packages/manifest.json).
 - A renderização validada é **Built-in**, com materiais específicos para personagens. A presença do pacote URP não significa que o projeto use essa pipeline.
 - A sequência fica em [CampaignSequence.cs](Assets/Scripts/Game/Varginha/Experiment/CampaignSequence.cs). Preserve os IDs internos ao alterar a ordem.
-- Abra **Window → General → Test Runner** e execute Edit Mode e Play Mode. Consulte o [relatório desta revisão](Docs/CampanhaOficial/RELATORIO_15_FASES_20261007.md).
-- Para gerar uma distribuição, confira as cenas habilitadas em **File → Build Profiles** e teste a plataforma escolhida. Esta revisão não produz um executável.
+- Abra **Window → General → Test Runner** e execute Edit Mode e Play Mode. Consulte o [relatório desta revisão](Docs/CampanhaOficial/RELATORIO_REVISAO_20261007.md).
+- Para gerar uma distribuição, confira as cenas habilitadas em **File → Build Profiles** e teste a plataforma escolhida. Use **Varginha → Build → Alpha Windows x64** para reproduzir a build desta revisão.
 - O laboratório antigo fica em **Varginha → Experimentos → Abrir laboratório**. `Preview/` contém materiais auxiliares; a campanha é o projeto Unity.
 
 ```text
@@ -158,7 +168,9 @@ ProjectSettings/                 Configuração do projeto
 - [Sequência atual e compatibilidade dos saves](Docs/CampanhaOficial/CAMPANHA_14_FASES.md) — inclui detalhes narrativos.
 - [Guia completo de puzzles](Docs/CampanhaOficial/GUIA_COMPLETO_PUZZLES.md) — contém spoilers.
 - [Iluminação e capturas no Unity](Docs/QAIluminacao20261007/README.md).
-- [Relatório de validação](Docs/CampanhaOficial/RELATORIO_15_FASES_20261007.md) e [evidências dos testes](Docs/CampanhaOficial/EVIDENCIAS_15_FASES_20261007.json).
+- [Relatório da revisão atual](Docs/CampanhaOficial/RELATORIO_REVISAO_20261007.md) e [evidências dos testes](Docs/CampanhaOficial/EVIDENCIAS_REVISAO_20261007.json).
+- [Instruções da alpha Windows](Docs/CampanhaOficial/NOTAS_BUILD_ALPHA.md) e [manifesto com SHA-256](Docs/CampanhaOficial/BUILD_ALPHA_MANIFEST.json).
+- [Validação histórica de 15 fases](Docs/CampanhaOficial/RELATORIO_15_FASES_20261007.md).
 - [Referências pesquisadas e melhorias](Docs/CampanhaOficial/REFERENCIAS_E_MELHORIAS_20261007.md).
 - [GDD](Docs/GDD.md), [arquitetura](Docs/ARCHITECTURE.md) e [histórico de alterações](Docs/CHANGELOG.md).
 - [Arte e animações de Edelzio](Docs/EdelzioV3.md).

@@ -30,7 +30,17 @@ O único aviso da build informa que o conector de automação Pipeline do Editor
 
 - [Capturas no Unity](../QARevisao20261007/README.md): controle, alunos, pia e Fusca.
 
-O usuário confirmou funcionamento do controle físico. Gamepad simulado verifica software; motores do Harrow e novo remapeamento no dispositivo exigem conferência física. Não há uma certificação de hardware, requisitos mínimos medidos ou jogada manual completa em todas as fases. A abertura da build é registrada separadamente no pacote. Capturas históricas permanecem preservadas.
+O único aviso da build informa que o conector de automação Pipeline do Editor ficará desativado no executável. Os controles usam o Input System e não dependem desse conector.
+
+O usuário confirmou funcionamento do controle físico. Gamepad simulado verifica software; motores do Harrow e novo remapeamento no dispositivo exigem conferência física. Não há uma certificação de hardware, requisitos mínimos medidos ou jogada manual completa em todas as fases. A build Windows abriu com motor e Input System inicializados, sem exceções no log do teste de abertura. Isso não substitui uma jogada completa. Capturas históricas permanecem preservadas.
+
+## Download e apresentação
+
+A [alpha Windows está publicada no GitHub](https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/releases/tag/jogo_varginha_build_alpha), com ZIP de 209.392.131 bytes (199,7 MiB). O GitHub confirmou o digest SHA-256 do pacote. O código da build e os seis slides estão no commit `a9f7e374a15c67c8c558c21a1ae40d2017a59263`; o executável é distribuído como asset da release.
+
+O [site oficial](https://o-segredo-de-varginha.zfabiobrronaldo.chatgpt.site) foi publicado na versão 5 com botão para o pacote confirmado. As verificações estáticas passaram. A ferramenta de inspeção visual do navegador estava indisponível, portanto não foi realizada uma revisão manual final do site no navegador.
+
+A [apresentação de seis slides](../Apresentacao/Atualizacoes_O_Segredo_de_Varginha_Alpha_Final.pptx) inclui texto editável, capturas do projeto e notas para o apresentador. Estrutura e geometria do PPTX foram verificadas, e todos os slides finais foram renderizados e inspecionados. Não foi executado o aplicativo PowerPoint nativo durante essa verificação.
 
 ## Arquivos desta revisão
 

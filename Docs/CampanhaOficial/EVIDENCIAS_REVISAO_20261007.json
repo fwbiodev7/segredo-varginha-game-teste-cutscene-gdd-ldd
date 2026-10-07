@@ -313,5 +313,29 @@
     ]
   },
   "original_fusca_sha256": "048dfd8c37a00d2fc84407871ea931f81927efd71bc69d50c733a549292f7344",
-  "physical_gamepad": "Usuário confirmou funcionamento nesta conversa; motores e novo remapeamento físico não verificados automaticamente."
+  "physical_gamepad": "Usuário confirmou funcionamento nesta conversa; motores e novo remapeamento físico não verificados automaticamente.",
+  "publication": {
+    "release_id": 406241358,
+    "tag": "jogo_varginha_build_alpha",
+    "target_commit": "a9f7e374a15c67c8c558c21a1ae40d2017a59263",
+    "url": "https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/releases/tag/jogo_varginha_build_alpha",
+    "asset_url": "https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/releases/download/jogo_varginha_build_alpha/jogo_varginha_build_alpha.zip",
+    "bytes": 209392131,
+    "sha256": "d92b86d21ae640ac0e3fab1b75af82ae80d6278456ad0e0586bdc0be93da3dc0",
+    "published": true
+  },
+  "presentation": {
+    "slides": 6,
+    "path": "Docs/Apresentacao/Atualizacoes_O_Segredo_de_Varginha_Alpha_Final.pptx",
+    "package_validated": true,
+    "all_final_slides_rendered_and_reviewed": true,
+    "sha256": "c5a2d2f5d45b50f00edb4ee58d3db0dfa4bff7abf40c0ec87fd8f28825a98280",
+    "native_powerpoint_execution_verified": false
+  },
+  "site_publication": {
+    "status": "succeeded",
+    "url": "https://o-segredo-de-varginha.zfabiobrronaldo.chatgpt.site",
+    "version_number": 5,
+    "source_commit": "96c05dcfacf9a5f73a91312f502600cf98e1e18a"
+  }
 }

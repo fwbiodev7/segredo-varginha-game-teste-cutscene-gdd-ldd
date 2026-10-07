@@ -7,7 +7,7 @@ window.GAME_SITE = {
   available: '14 fases em 5 atos · do início ao desfecho',
   planned: 'Investigação · puzzles · aliados · combate',
   siteUrl: 'https://o-segredo-de-varginha.zfabiobrronaldo.chatgpt.site',
-  download: null,
+  download: 'https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/releases/download/jogo_varginha_build_alpha/jogo_varginha_build_alpha.zip',
   stores: { steam: null, itch: null },
   socials: [],
   credits: [],
@@ -49,6 +49,7 @@ window.GAME_SITE = {
     }
   ],
   updates: [
+    { date: '07 OUT 2026', title: 'Alpha Windows disponível', text: 'Baixe jogo_varginha_build_alpha para testar a campanha no Windows 64 bits, sem instalar o Unity Editor. O pacote inclui instruções, tutorial de controle e guia opcional de puzzles com spoilers.' },
     { date: '07 OUT 2026', title: 'Seu controle, seus comandos', text: 'Configurações com desenho do controle em pixel art e remapeamento de botões. Pausa, mochila e caderno mostram os atalhos atuais. O Fusca original substitui o carro do cenário, com faróis e novas vistas direcionais.' },
     { date: '07 OUT 2026', title: 'Controle e passagens revisados', text: 'Menus, investigação e combate recebem suporte a controles XInput, com prompts automáticos e vibração opcional. Portas, alunos sentados, a interação da pia e a transição para 2026 foram revisados. O Fusca usa W no teclado e A no controle, preservando sua arte.' },
     { date: '07 OUT 2026', title: 'Personagens na luz dos cenários', text: 'A arte dos personagens foi preservada. Luzes do mapa, lanterna e faróis agora contribuem para suas cores, volume e direção das sombras, acompanhando o movimento durante o jogo.' },
