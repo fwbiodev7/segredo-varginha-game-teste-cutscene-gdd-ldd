@@ -29,6 +29,7 @@ namespace Game.Varginha.Experiment
                 var go=new GameObject("Farol_Fusca");go.transform.SetParent(car,false);go.transform.localPosition=new Vector3(side,.84f,0);go.transform.localScale=new Vector3(1,3.5f,1);
                 go.AddComponent<MeshFilter>().sharedMesh=_mesh;var r=go.AddComponent<MeshRenderer>();r.sharedMaterial=_material;r.sortingOrder=6;
                 r.shadowCastingMode=UnityEngine.Rendering.ShadowCastingMode.Off;r.receiveShadows=false;
+                go.AddComponent<CampaignDynamicLight>();
             }
         }
         public static void SetEnabled(Transform car,bool enabled)

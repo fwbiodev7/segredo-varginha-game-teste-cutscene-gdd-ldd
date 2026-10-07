@@ -56,11 +56,13 @@ namespace Game.Tests.EditMode
 
         [Test] public void BattleCalibrationAndCrossingRemainIndependentAndPersist()
         {
-            var s=new CampaignContinuationState{chambersPrepared=7,chamberValues=new[]{0,2,1}};
-            Assert.That(s.CalibrateReturn(),Is.False);s.manifestationDispelled=true;s.chamberValues=new[]{0,0,0};Assert.That(s.CalibrateReturn(),Is.False);
-            s.chamberValues=new[]{0,2,1};Assert.That(s.CalibrateReturn(),Is.True);Assert.That(s.finalStep,Is.Zero);
+            var s=new CampaignContinuationState{chambersPrepared=7,finalRegulators=new[]{1,0,1}};
+            Assert.That(s.CalibrateReturn(),Is.False);s.manifestationDispelled=true;s.finalRegulators=new[]{0,0,0};Assert.That(s.CalibrateReturn(),Is.False);
+            s.finalRegulators=new[]{1,0,1};Assert.That(s.CalibrateReturn(),Is.True);Assert.That(s.finalStep,Is.Zero);
             var restored=JsonUtility.FromJson<CampaignContinuationState>(JsonUtility.ToJson(s));restored.Repair();Assert.That(restored.CanReturn,Is.True);Assert.That(restored.finalStep,Is.Zero);
-            restored.TurnChamber(0);Assert.That(restored.CanReturn,Is.False);Assert.That(restored.returnCalibrated,Is.False);
+            restored.TurnFinalRegulator(0);Assert.That(restored.CanReturn,Is.False);Assert.That(restored.finalCalibrated,Is.False);
+            restored.Repair();Assert.That(restored.finalCalibrated,Is.False,"Repair cannot resurrect an invalidated calibration.");
+            s.SetFinalSeal(false);Assert.That(s.CanReturn,Is.False);Assert.That(s.CalibrateReturn(),Is.False);
         }
 
         [Test] public void MergedAgreementKeepsLegacyEvidenceWithoutSkippingTheUnfinishedProcedure()

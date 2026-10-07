@@ -62,6 +62,7 @@ namespace Game.Varginha
             if (shader == null) { Debug.LogError("Shader da lanterna ausente.", this); enabled = false; return; }
             _material = new Material(shader) { name = "Lanterna_Luz_Quente" };
             _renderer.sharedMaterial = _material;
+            _light.AddComponent<Game.Varginha.Experiment.CampaignDynamicLight>().flashlight = this;
             var triangles = new int[Rays * Rings * 6];
             int index = 0;
             for (int ray = 0; ray < Rays; ray++) for (int ring = 0; ring < Rings; ring++)

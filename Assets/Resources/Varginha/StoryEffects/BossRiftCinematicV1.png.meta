@@ -1,0 +1,1003 @@
+fileFormatVersion: 2
+guid: 055a4cc3d259c3d449c2c8753a32f4ba
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2900001215707911738
+    second: BossRiftCinematicV1_0
+  - first:
+      213: 538205543174158952
+    second: BossRiftCinematicV1_1
+  - first:
+      213: 3754682114790357192
+    second: BossRiftCinematicV1_2
+  - first:
+      213: 3541637941994954734
+    second: BossRiftCinematicV1_3
+  - first:
+      213: 6587135664546919879
+    second: BossRiftCinematicV1_4
+  - first:
+      213: 7862361200016020857
+    second: BossRiftCinematicV1_5
+  - first:
+      213: 4564508462330557173
+    second: BossRiftCinematicV1_6
+  - first:
+      213: -4500434297661130570
+    second: BossRiftCinematicV1_7
+  - first:
+      213: 6493875852650542568
+    second: BossRiftCinematicV1_8
+  - first:
+      213: -1959792372897487207
+    second: BossRiftCinematicV1_9
+  - first:
+      213: 666493516399181795
+    second: BossRiftCinematicV1_10
+  - first:
+      213: -5533719615445568580
+    second: BossRiftCinematicV1_11
+  - first:
+      213: 3724910463323154199
+    second: BossRiftCinematicV1_12
+  - first:
+      213: -6994869735730706443
+    second: BossRiftCinematicV1_13
+  - first:
+      213: 3505276366192661709
+    second: BossRiftCinematicV1_14
+  - first:
+      213: -582232649050161415
+    second: BossRiftCinematicV1_15
+  - first:
+      213: -497651663195604207
+    second: BossRiftCinematicV1_16
+  - first:
+      213: 3112063195801566469
+    second: BossRiftCinematicV1_17
+  - first:
+      213: 4030416563668092560
+    second: BossRiftCinematicV1_18
+  - first:
+      213: -2458298048802234190
+    second: BossRiftCinematicV1_19
+  - first:
+      213: 7221376045748086546
+    second: BossRiftCinematicV1_20
+  - first:
+      213: 9158032245609719673
+    second: BossRiftCinematicV1_21
+  - first:
+      213: -968862658007967195
+    second: BossRiftCinematicV1_22
+  - first:
+      213: 9063861309639606446
+    second: BossRiftCinematicV1_23
+  - first:
+      213: 7204662752818521455
+    second: BossRiftCinematicV1_24
+  - first:
+      213: 4545730921497473629
+    second: BossRiftCinematicV1_25
+  - first:
+      213: 3738990703442345015
+    second: BossRiftCinematicV1_26
+  - first:
+      213: -1829048697098270679
+    second: BossRiftCinematicV1_27
+  - first:
+      213: -2520148459021062969
+    second: BossRiftCinematicV1_28
+  - first:
+      213: -1098399736796185034
+    second: BossRiftCinematicV1_29
+  - first:
+      213: -4117326627497181221
+    second: BossRiftCinematicV1_30
+  - first:
+      213: -1055873631789943682
+    second: BossRiftCinematicV1_31
+  - first:
+      213: 282348661896601846
+    second: BossRiftCinematicV1_32
+  - first:
+      213: 6341505447501274823
+    second: BossRiftCinematicV1_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_0
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 167
+        width: 143
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a369876adbfde3820800000000000000
+      internalID: 2900001215707911738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_1
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 235
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86aba090717187700800000000000000
+      internalID: 538205543174158952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_2
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 167
+        width: 149
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c877908d7f4b1430800000000000000
+      internalID: 3754682114790357192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_3
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 167
+        width: 150
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef97af91fc662130800000000000000
+      internalID: 3541637941994954734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_4
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 167
+        width: 149
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c530ac9cf43a6b50800000000000000
+      internalID: 6587135664546919879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_5
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 167
+        width: 140
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 975d4c6dad7bc1d60800000000000000
+      internalID: 7862361200016020857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_6
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 167
+        width: 136
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f23a7f3344685f30800000000000000
+      internalID: 4564508462330557173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_7
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 7
+        width: 128
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b87ce0c9de3b81c0800000000000000
+      internalID: -4500434297661130570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_8
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 128
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e5f8b49ea1ee1a50800000000000000
+      internalID: 6493875852650542568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_9
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 129
+        width: 13
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 996ece3683b6dc4e0800000000000000
+      internalID: -1959792372897487207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_10
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 125
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eff21a625cdf3900800000000000000
+      internalID: 666493516399181795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_11
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 7
+        width: 123
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb371c224574433b0800000000000000
+      internalID: -5533719615445568580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_12
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 109
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 717238ab45a81b330800000000000000
+      internalID: 3724910463323154199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_13
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 130
+        width: 20
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f704a7290b3dee90800000000000000
+      internalID: -6994869735730706443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_14
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 113
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc45c76884e35a030800000000000000
+      internalID: 3505276366192661709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_15
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 120
+        width: 37
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fefab09d7e7be7f0800000000000000
+      internalID: -582232649050161415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_16
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 111
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11bf751f27cf719f0800000000000000
+      internalID: -497651663195604207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_17
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 115
+        width: 50
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50db158fcf4403b20800000000000000
+      internalID: 3112063195801566469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_18
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 68
+        width: 133
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0968946b28aeee730800000000000000
+      internalID: 4030416563668092560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_19
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 92
+        width: 33
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b06b1103fe52edd0800000000000000
+      internalID: -2458298048802234190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_20
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 73
+        width: 47
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 217645cc04b773460800000000000000
+      internalID: 7221376045748086546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_21
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 7
+        width: 139
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 977e3295ecdd71f70800000000000000
+      internalID: 9158032245609719673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_22
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 7
+        width: 134
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52a5b49bb88ed82f0800000000000000
+      internalID: -968862658007967195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_23
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 74
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea0c976b6dd49cd70800000000000000
+      internalID: 9063861309639606446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_24
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 81
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f656c3c0a9a1cf360800000000000000
+      internalID: 7204662752818521455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_25
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 7
+        width: 131
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d52bd54503ea51f30800000000000000
+      internalID: 4545730921497473629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_26
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 7
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73c3b291c3093e330800000000000000
+      internalID: 3738990703442345015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_27
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 43
+        width: 9
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928019496e9ed96e0800000000000000
+      internalID: -1829048697098270679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_28
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 39
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cc2dce2452a60dd0800000000000000
+      internalID: -2520148459021062969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_29
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 37
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63e71ea4243b1c0f0800000000000000
+      internalID: -1098399736796185034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_30
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 32
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdff5cf2f315cd6c0800000000000000
+      internalID: -4117326627497181221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_31
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 24
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e747571b688c851f0800000000000000
+      internalID: -1055873631789943682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_32
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 23
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f0672fac9a1be300800000000000000
+      internalID: 282348661896601846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossRiftCinematicV1_33
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 7
+        width: 34
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ce94831b9d810850800000000000000
+      internalID: 6341505447501274823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      BossRiftCinematicV1_0: 2900001215707911738
+      BossRiftCinematicV1_1: 538205543174158952
+      BossRiftCinematicV1_10: 666493516399181795
+      BossRiftCinematicV1_11: -5533719615445568580
+      BossRiftCinematicV1_12: 3724910463323154199
+      BossRiftCinematicV1_13: -6994869735730706443
+      BossRiftCinematicV1_14: 3505276366192661709
+      BossRiftCinematicV1_15: -582232649050161415
+      BossRiftCinematicV1_16: -497651663195604207
+      BossRiftCinematicV1_17: 3112063195801566469
+      BossRiftCinematicV1_18: 4030416563668092560
+      BossRiftCinematicV1_19: -2458298048802234190
+      BossRiftCinematicV1_2: 3754682114790357192
+      BossRiftCinematicV1_20: 7221376045748086546
+      BossRiftCinematicV1_21: 9158032245609719673
+      BossRiftCinematicV1_22: -968862658007967195
+      BossRiftCinematicV1_23: 9063861309639606446
+      BossRiftCinematicV1_24: 7204662752818521455
+      BossRiftCinematicV1_25: 4545730921497473629
+      BossRiftCinematicV1_26: 3738990703442345015
+      BossRiftCinematicV1_27: -1829048697098270679
+      BossRiftCinematicV1_28: -2520148459021062969
+      BossRiftCinematicV1_29: -1098399736796185034
+      BossRiftCinematicV1_3: 3541637941994954734
+      BossRiftCinematicV1_30: -4117326627497181221
+      BossRiftCinematicV1_31: -1055873631789943682
+      BossRiftCinematicV1_32: 282348661896601846
+      BossRiftCinematicV1_33: 6341505447501274823
+      BossRiftCinematicV1_4: 6587135664546919879
+      BossRiftCinematicV1_5: 7862361200016020857
+      BossRiftCinematicV1_6: 4564508462330557173
+      BossRiftCinematicV1_7: -4500434297661130570
+      BossRiftCinematicV1_8: 6493875852650542568
+      BossRiftCinematicV1_9: -1959792372897487207
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

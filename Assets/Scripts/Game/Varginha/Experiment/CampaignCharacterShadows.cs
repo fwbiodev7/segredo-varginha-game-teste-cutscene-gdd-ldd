@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 namespace Game.Varginha.Experiment
 {
     // Shared sprite projections and contact ellipses; no real-time shadow maps or texture copies.
+    [DefaultExecutionOrder(11500)]
     public sealed class CampaignCharacterShadows : MonoBehaviour
     {
         private CampaignIllustratedMaps.Layout _layout;
         private readonly List<CampaignCharacterShadow> _actors = new();
-        private float _discover, _refresh;
+        private float _discover;
         public void Configure(CampaignIllustratedMaps.Layout layout) => _layout = layout;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -47,8 +48,6 @@ namespace Game.Varginha.Experiment
                     shadow.Configure(sr, transform); _actors.Add(shadow);
                 }
             }
-            if (Time.unscaledTime < _refresh) return;
-            _refresh = Time.unscaledTime + .1f;
             foreach (var actor in _actors) if (actor != null)
                 actor.SetLight(_layout, actor.Feet);
         }
@@ -123,7 +122,9 @@ namespace Game.Varginha.Experiment
             // Legacy maps use the original floor ordering instead of the illustrated ground layer.
             _projection.sortingOrder = _contact.sortingOrder = layout == null ? 4 : -950;
             _outdoor = CampaignCharacterShadows.OpenAir(layout, feet);
-            _direction = CampaignCharacterShadows.AwayFromNearestLight(layout, feet, out float proximity);
+            var light = CampaignLightField.Evaluate(layout, feet);
+            _direction = -light.direction;
+            float proximity = Mathf.Clamp01(light.strength / .65f);
             _length = Mathf.Lerp(.5f, 1.05f, proximity);
             _opacity = Mathf.Lerp(.16f, .3f, proximity);
         }

@@ -1,0 +1,743 @@
+fileFormatVersion: 2
+guid: 9c01a6b6caf8af84885f59e9f53e3727
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 514651893863919733
+    second: ManifestationBossFlowV1_0
+  - first:
+      213: -3913406346536752403
+    second: ManifestationBossFlowV1_1
+  - first:
+      213: 340758015875874982
+    second: ManifestationBossFlowV1_2
+  - first:
+      213: 2102905575077636720
+    second: ManifestationBossFlowV1_3
+  - first:
+      213: -2885116664185398198
+    second: ManifestationBossFlowV1_4
+  - first:
+      213: -5919728548944894546
+    second: ManifestationBossFlowV1_5
+  - first:
+      213: 3494577057542207681
+    second: ManifestationBossFlowV1_6
+  - first:
+      213: -7267053723987401018
+    second: ManifestationBossFlowV1_7
+  - first:
+      213: 3868362026059433694
+    second: ManifestationBossFlowV1_8
+  - first:
+      213: 6592797751564689373
+    second: ManifestationBossFlowV1_9
+  - first:
+      213: -5496219866518014693
+    second: ManifestationBossFlowV1_10
+  - first:
+      213: -5328648784416664166
+    second: ManifestationBossFlowV1_11
+  - first:
+      213: 8922039317113075549
+    second: ManifestationBossFlowV1_12
+  - first:
+      213: 2744012805538305008
+    second: ManifestationBossFlowV1_13
+  - first:
+      213: -3689903501988178264
+    second: ManifestationBossFlowV1_14
+  - first:
+      213: 7269888776628068591
+    second: ManifestationBossFlowV1_15
+  - first:
+      213: -7997504530716542216
+    second: ManifestationBossFlowV1_16
+  - first:
+      213: 3480821609138468178
+    second: ManifestationBossFlowV1_17
+  - first:
+      213: -4744397187850718836
+    second: ManifestationBossFlowV1_18
+  - first:
+      213: 217341701874101230
+    second: ManifestationBossFlowV1_19
+  - first:
+      213: 4451836392952017143
+    second: ManifestationBossFlowV1_20
+  - first:
+      213: -1559104731092893364
+    second: ManifestationBossFlowV1_21
+  - first:
+      213: 3469647582558073747
+    second: ManifestationBossFlowV1_22
+  - first:
+      213: -9204180411092828660
+    second: ManifestationBossFlowV1_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 583
+        width: 93
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 570bdb4bb29642700800000000000000
+      internalID: 514651893863919733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 583
+        width: 95
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deaeae479a9c0b9c0800000000000000
+      internalID: -3913406346536752403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_2
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 583
+        width: 102
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a006aa2c9d9ab400800000000000000
+      internalID: 340758015875874982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_3
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 583
+        width: 99
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07ae0b69a750f2d10800000000000000
+      internalID: 2102905575077636720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_4
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 583
+        width: 117
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c5baf0ea106f7d0800000000000000
+      internalID: -2885116664185398198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_5
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 583
+        width: 92
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea5a661bf36e8dda0800000000000000
+      internalID: -5919728548944894546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_6
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 391
+        width: 84
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c8780b915b3f7030800000000000000
+      internalID: 3494577057542207681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_7
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 391
+        width: 85
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c62d0af32d362b90800000000000000
+      internalID: -7267053723987401018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_8
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 391
+        width: 88
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed602e964ce2fa530800000000000000
+      internalID: 3868362026059433694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_9
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 391
+        width: 88
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddfd10aff925e7b50800000000000000
+      internalID: 6592797751564689373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_10
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 391
+        width: 121
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b15bfb0d62189b3b0800000000000000
+      internalID: -5496219866518014693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_11
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 391
+        width: 83
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a951708b926dc06b0800000000000000
+      internalID: -5328648784416664166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_12
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 199
+        width: 92
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57f798ec7371db70800000000000000
+      internalID: 8922039317113075549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 199
+        width: 96
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f3db35bb11b41620800000000000000
+      internalID: 2744012805538305008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_14
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 199
+        width: 103
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a6568c9054daccc0800000000000000
+      internalID: -3689903501988178264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_15
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 199
+        width: 98
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe0e3872355d3e460800000000000000
+      internalID: 7269888776628068591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_16
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 199
+        width: 124
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fa301d7008230190800000000000000
+      internalID: -7997504530716542216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_17
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 199
+        width: 93
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 255b333bfcc5e4030800000000000000
+      internalID: 3480821609138468178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_18
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 7
+        width: 85
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c81bbc005e3882eb0800000000000000
+      internalID: -4744397187850718836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_19
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 7
+        width: 83
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeba5175027240300800000000000000
+      internalID: 217341701874101230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_20
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 7
+        width: 93
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f0bf00dc9918cd30800000000000000
+      internalID: 4451836392952017143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_21
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 7
+        width: 97
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c41c39fe182fc5ae0800000000000000
+      internalID: -1559104731092893364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_22
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 7
+        width: 119
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 393ba26e71aa62030800000000000000
+      internalID: 3469647582558073747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ManifestationBossFlowV1_23
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 7
+        width: 81
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0ef3349eae244080800000000000000
+      internalID: -9204180411092828660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ManifestationBossFlowV1_0: 514651893863919733
+      ManifestationBossFlowV1_1: -3913406346536752403
+      ManifestationBossFlowV1_10: -5496219866518014693
+      ManifestationBossFlowV1_11: -5328648784416664166
+      ManifestationBossFlowV1_12: 8922039317113075549
+      ManifestationBossFlowV1_13: 2744012805538305008
+      ManifestationBossFlowV1_14: -3689903501988178264
+      ManifestationBossFlowV1_15: 7269888776628068591
+      ManifestationBossFlowV1_16: -7997504530716542216
+      ManifestationBossFlowV1_17: 3480821609138468178
+      ManifestationBossFlowV1_18: -4744397187850718836
+      ManifestationBossFlowV1_19: 217341701874101230
+      ManifestationBossFlowV1_2: 340758015875874982
+      ManifestationBossFlowV1_20: 4451836392952017143
+      ManifestationBossFlowV1_21: -1559104731092893364
+      ManifestationBossFlowV1_22: 3469647582558073747
+      ManifestationBossFlowV1_23: -9204180411092828660
+      ManifestationBossFlowV1_3: 2102905575077636720
+      ManifestationBossFlowV1_4: -2885116664185398198
+      ManifestationBossFlowV1_5: -5919728548944894546
+      ManifestationBossFlowV1_6: 3494577057542207681
+      ManifestationBossFlowV1_7: -7267053723987401018
+      ManifestationBossFlowV1_8: 3868362026059433694
+      ManifestationBossFlowV1_9: 6592797751564689373
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

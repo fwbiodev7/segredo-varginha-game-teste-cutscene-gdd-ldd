@@ -41,8 +41,9 @@ namespace Game.Varginha.Experiment
             var state = story.continuation;
             if(state.finished)state.finalStep=4;
             if (state.finalStep > 0 || state.finished)
-            { state.manifestationDispelled = true; state.chambersPrepared = 7; state.chamberValues=new[]{0,2,1}; state.returnCalibrated = true; }
-            else if (state.manifestationDispelled && state.solved[9] && state.ChambersStable) state.returnCalibrated = true;
+            { state.manifestationDispelled = true; state.chambersPrepared = 7; state.finalRegulators=new[]{1,0,1}; state.finalSealActive=state.finalStep<4; state.finalCalibrated = true; }
+            else if (state.manifestationDispelled && (state.finalCalibrated || state.solved[9]))
+            {state.finalCalibrated=true;state.finalRegulators=new[]{1,0,1};state.finalSealActive=true;state.chambersPrepared=7;}
             // The removed descent is completed, but its documents remain in their old slots.
             state.solved[5] = true;
             story.version = SaveVersion;

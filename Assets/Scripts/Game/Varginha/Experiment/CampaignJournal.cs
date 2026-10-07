@@ -27,7 +27,7 @@ namespace Game.Varginha.Experiment
                 for(int i=0;i<d.documents.Length;i++)if((story.continuation.clues[phase-11]&(1<<i))!=0)
                     entries.Add(d.labels[i]+" • "+d.documents[i]);
             }
-            if(story.continuation.returnCalibrated)entries.Add("RETORNO CALIBRADO • A manifestação foi dissipada. Edelzio mantém o selo até a entidade ferida atravessar.");
+            if(story.continuation.finalCalibrated)entries.Add("RETORNO CALIBRADO • A manifestação foi dissipada. Edelzio mantém o selo até a entidade ferida atravessar.");
             if(story.continuation.finalStep>=2)entries.Add("TRAVESSIA • A entidade ferida atravessou. A ligação pode ser encerrada.");
             if(story.continuation.finalStep==4)entries.Add("ACORDO CUMPRIDO • A ruptura se fechou. Edelzio está livre.");
             return entries;

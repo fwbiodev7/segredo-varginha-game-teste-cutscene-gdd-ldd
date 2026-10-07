@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.Varginha.Experiment
 {
-    // One shared material; property blocks are updated at 10 Hz, with no frame allocations.
+    // One shared material; moving sources update each frame, without per-actor materials.
     [DefaultExecutionOrder(11000)]
     public sealed class CampaignIllustratedLighting:MonoBehaviour
     {
@@ -11,23 +11,32 @@ namespace Game.Varginha.Experiment
         private readonly List<SpriteRenderer> _actors=new();
         private MaterialPropertyBlock _block;
         private static Material _material;
-        private float _discover,_refresh,_discoverUntil;
-        private static readonly int Tint=Shader.PropertyToID("_SceneTint"),Key=Shader.PropertyToID("_KeyLight"),Shine=Shader.PropertyToID("_Shine");
+        private float _discover;
+        private static readonly int Tint=Shader.PropertyToID("_SceneTint"),Key=Shader.PropertyToID("_KeyLight"),Shine=Shader.PropertyToID("_Shine"),Body=Shader.PropertyToID("_ActorBounds");
         public void Configure(CampaignIllustratedMaps.Layout data)
         {
-            _block ??=new MaterialPropertyBlock();_data=data;_discoverUntil=data.phase>=11?float.PositiveInfinity:Time.unscaledTime+6;
+            _block ??=new MaterialPropertyBlock();_data=data;
             // Preview construction must not assign runtime materials to the authored editor scene.
             if(Application.isPlaying)Discover();
         }
         private void Start()=>Discover();
+        public static bool IsActor(SpriteRenderer renderer)
+        {
+            if(renderer==null||renderer.name.StartsWith("Sombra_")||renderer.name.StartsWith("Contato_")||renderer.name.Contains("Shadow"))return false;
+            return renderer.GetComponentInParent<EdelzioTopDownController>()!=null
+                ||renderer.GetComponent<VarginhaStudentAnimation>()!=null||renderer.GetComponent<CampaignSchoolLife>()!=null
+                ||renderer.GetComponent<VarginhaCombatEnemy>()!=null||renderer.GetComponent<EntityManifestationAI>()!=null
+                ||renderer.GetComponent<CampaignManifestationCombat>()!=null||renderer.name.StartsWith("Refem_")
+                ||renderer.name.StartsWith("Renan_")||renderer.name=="Ouzana"||renderer.name=="Padre Fábio"
+                ||renderer.name.EndsWith("_Apoio")||renderer.name=="Entidade ferida"||renderer.name=="Manifestação não combatível"
+                ||renderer.name.StartsWith("Fusca_TopView")||renderer.name=="Fusca";
+        }
         private void Discover()
         {
             if(_material==null)_material=new Material(Resources.Load<Shader>("Varginha/IllustratedMaps/ActorLighting")){name="Iluminação leve dos personagens",hideFlags=HideFlags.DontSave};
             foreach(var renderer in FindObjectsByType<SpriteRenderer>())
             {
-                bool actor=renderer.GetComponentInParent<EdelzioTopDownController>()!=null||renderer.GetComponent<VarginhaStudentAnimation>()!=null||renderer.GetComponent<CampaignSchoolLife>()!=null||renderer.GetComponent<VarginhaCombatEnemy>()!=null||renderer.GetComponent<EntityManifestationAI>()!=null||renderer.name.StartsWith("Refem_")||renderer.name.StartsWith("Renan_")||renderer.name=="Ouzana"||renderer.name=="Padre Fábio"||renderer.name.StartsWith("Fusca_TopView")||(_data.phase==10&&renderer.name=="Fusca");
-                actor|=_data.phase>=11&&(renderer.GetComponent<CampaignManifestationCombat>()!=null||renderer.name=="Renan_Apoio"||renderer.name=="Ouzana_Apoio"||renderer.name=="Padre Fábio_Apoio");
-                if(!actor||_actors.Contains(renderer))continue;
+                if(!IsActor(renderer)||_actors.Contains(renderer))continue;
                 if(renderer.sprite!=null)renderer.sprite.texture.filterMode=FilterMode.Point;
                 renderer.sharedMaterial=_material;_actors.Add(renderer);
             }
@@ -35,9 +44,7 @@ namespace Game.Varginha.Experiment
         }
         private void LateUpdate()
         {
-            if(_data==null)return;if(Time.unscaledTime<=_discoverUntil&&Time.unscaledTime>=_discover)Discover();
-            if(Time.unscaledTime<_refresh)return;_refresh=Time.unscaledTime+.1f;
-            var ambient=new Vector3(_data.ambient[0],_data.ambient[1],_data.ambient[2]);
+            if(_data==null)return;if(Time.unscaledTime>=_discover)Discover();
             for(int i=_actors.Count-1;i>=0;i--)
             {
                 var renderer=_actors[i];if(renderer==null){_actors.RemoveAt(i);continue;}
@@ -45,16 +52,12 @@ namespace Game.Varginha.Experiment
                 var feet=renderer.transform.position;
                 var ground=renderer.GetComponent<CircleCollider2D>();
                 if(ground!=null)feet=ground.transform.TransformPoint(ground.offset);
-                Vector3 color=ambient;float best=0;Vector2 key=new(-.35f,.65f);
-                foreach(var lamp in _data.lights)
-                {
-                    var p=_data.Position(lamp.pixel);if(_data.repeat)p.y=_data.Bounds.yMin+_data.height*_data.Scale-lamp.pixel[1]*_data.Scale+Mathf.Floor((feet.y-_data.Bounds.yMin)/(_data.height*_data.Scale))*(_data.height*_data.Scale);
-                    var delta=p-(Vector2)feet;float weight=Mathf.Max(0,1-delta.sqrMagnitude/(lamp.radius*lamp.radius));weight*=weight;
-                    color+=new Vector3(lamp.color[0],lamp.color[1],lamp.color[2])*(weight*.42f);
-                    if(weight>best){best=weight;key=delta.normalized;}
-                }
-                renderer.GetPropertyBlock(_block);_block.SetColor(Tint,new Color(Mathf.Min(1.18f,color.x),Mathf.Min(1.18f,color.y),Mathf.Min(1.18f,color.z),1));
-                _block.SetVector(Key,new Vector4(key.x,key.y,.45f+best*.25f,0));_block.SetFloat(Shine,renderer.name.Contains("Fusca")?.2f:.07f);renderer.SetPropertyBlock(_block);
+                var sample=CampaignLightField.Evaluate(_data,feet);
+                renderer.GetPropertyBlock(_block);_block.SetColor(Tint,sample.tint);
+                _block.SetVector(Key,new Vector4(sample.direction.x,sample.direction.y,.45f+sample.strength*.6f,sample.strength));
+                var bounds=renderer.bounds;
+                _block.SetVector(Body,new Vector4(bounds.center.x,bounds.center.y,Mathf.Max(.01f,bounds.size.x),Mathf.Max(.01f,bounds.size.y)));
+                _block.SetFloat(Shine,renderer.name.Contains("Fusca")?.2f:.09f);renderer.SetPropertyBlock(_block);
             }
         }
     }

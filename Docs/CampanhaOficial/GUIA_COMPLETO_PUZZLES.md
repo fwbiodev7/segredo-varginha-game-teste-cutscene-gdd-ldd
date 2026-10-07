@@ -156,8 +156,8 @@ Não há outra exploração longa da casa. Derrotar a manifestação não signif
 2. Na mochila, equipe **três alunos** e **um apoio** entre Renan, Ouzana e Padre Fábio.
 3. Aguarde a entrada cinematográfica. Saia das áreas de aviso; ataque durante a recuperação ou após um efeito de atordoamento. Respeite as recargas dos aliados.
 4. A arena permite no máximo **cinco filhotes simultâneos**. A vitória dissipa a manifestação e fica salva.
-5. No mecanismo central, calibre o retorno: leituras **1, 2, 0**. A configuração de reguladores **0, 2, 1** é válida.
-6. Confirme **CALIBRAR RETORNO** e prossiga.
+5. No mecanismo central, calibre o retorno: leituras **ÁRVORE 3, RIO 1, CAPELA 2**. A configuração de reguladores **ÁRVORE 1, RIO 0, CAPELA 1** é válida. Este painel é diferente do desafio das câmaras na fase 12: cada leitura soma duas partes do regulador local e uma do anterior, retornando a 0 após 3.
+6. Mantenha **SELO DE EDELZIO • ATIVO**, confirme **VALIDAR RETORNO SEGURO** e prossiga.
 
 Recarregar após a vitória não repete o chefe. Sem calibração confirmada, a passagem do capítulo seguinte permanece bloqueada.
 
