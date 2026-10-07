@@ -12,6 +12,7 @@ namespace Game.Varginha.Experiment
         private VarginhaPlayerSpriteAnimation _action;
         private bool _always;
         private bool _chairBehind;
+        private string _student;
         public bool IsOfficeSeat => _chair!=null&&_chair.name=="Office_Chair";
         public Collider2D SeatCollider => _chair!=null?_chair.GetComponent<Collider2D>():null;
         public static Sprite StudentPose(string name)
@@ -30,6 +31,12 @@ namespace Game.Varginha.Experiment
             if(actor==null||chair==null)return;
             var layer=actor.GetComponent<CampaignSeatingLayers>()??actor.gameObject.AddComponent<CampaignSeatingLayers>();
             layer._actor=actor;layer._chair=chair;layer._always=always;layer._action=actor.GetComponent<VarginhaPlayerSpriteAnimation>();
+            if(always)
+            {
+                layer._student=actor.GetComponent<CampaignSchoolLife>()?.StudentName
+                    ?? (actor.name.StartsWith("Refem_")?actor.name.Substring(6).Replace("_"," "):actor.name);
+                layer.AlignStudent();
+            }
             if(layer._back!=null)return;
             var s=chair.sprite;var rect=s.rect;
             float inset=rect.width*margin,trim=rect.height*lower,height=rect.height*(upper-lower);
@@ -42,6 +49,7 @@ namespace Game.Varginha.Experiment
         private void LateUpdate()
         {
             if(_back==null||_chair==null)return;
+            if(_always)AlignStudent();
             _back.enabled=_actor.enabled&&(_always||_action?.IsSeated==true&&_action.ActionFacingDirection.y>0);
             bool behind=IsOfficeSeat&&_back.enabled;
             if(behind!=_chairBehind)
@@ -51,6 +59,25 @@ namespace Game.Varginha.Experiment
             }
             _back.transform.SetPositionAndRotation(_chair.transform.position,_chair.transform.rotation);
             _back.transform.localScale=_chair.transform.lossyScale;
+        }
+        private void AlignStudent()
+        {
+            var pose=StudentPose(_student);if(pose==null||_actor==null||_chair==null)return;
+            _actor.sprite=pose;
+            // Anchor the cropped torso to the seat itself, not an arbitrary point
+            // below the chair. The same calculation serves the school and epilogue.
+            var seat=_chair.bounds;
+            Vector2 position=new(seat.center.x,seat.center.y+seat.size.y*.05f-pose.bounds.min.y*_actor.transform.lossyScale.y);
+            _actor.transform.position=new Vector3(position.x,position.y,_actor.transform.position.z);
+            var body=_actor.GetComponent<Rigidbody2D>();if(body!=null){body.position=position;body.linearVelocity=Vector2.zero;}
+            var feet=_actor.GetComponent<CircleCollider2D>();
+            if(feet!=null)
+            {
+                float ground=SeatCollider!=null?SeatCollider.bounds.min.y-feet.radius-.025f:seat.min.y+.08f;
+                feet.offset=new Vector2(0,(ground-position.y)/Mathf.Max(.01f,_actor.transform.lossyScale.y));
+            }
+            var life=_actor.GetComponent<CampaignSchoolLife>();if(life!=null)life.Home=position;
+            VarginhaWorldDepth.Ensure(_actor,ground:feet,supportingObject:_chair.transform,offset:1);
         }
         private void OnDestroy(){if(_back!=null){Destroy(_back.sprite);Destroy(_back.gameObject);}}
     }

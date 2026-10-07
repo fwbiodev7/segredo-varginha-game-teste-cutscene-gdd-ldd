@@ -49,6 +49,7 @@ namespace Game.Varginha.Experiment
         }
         public static void Pause(bool paused)
         {
+            if(paused)VarginhaRumble.Stop();
             if (!paused) { if (_instance != null) _instance.ReleasePause(); return; }
             Instance.CapturePause();
         }

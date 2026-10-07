@@ -94,7 +94,7 @@ namespace Game.Varginha.Experiment
                 && Vector2.Distance(_player.transform.position, _renan.position) < 2.2f
                 && VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact))
                 SetView(View.Dialogue);
-            if (_view != View.Opening && Keyboard.current?.escapeKey.wasPressedThisFrame == true && _view != View.World)
+            if (_view != View.Opening && (VarginhaInputActions.PausePressed || VarginhaInputActions.CancelPressed) && _view != View.World)
                 SetView(View.World);
         }
         private void SetView(View view)
@@ -130,6 +130,7 @@ namespace Game.Varginha.Experiment
         }
         private void OnGUI()
         {
+            VarginhaGamepadUI.Begin("lab:"+GetEntityId()+":"+_view,_view!=View.World,50);
             if (_data == null) return;
             ExperimentGUI.Init();
             GUI.depth = -3000;
@@ -229,7 +230,7 @@ namespace Game.Varginha.Experiment
                         ExperimentGUI.Label(new Rect(card.x + 10, card.y + 135, 295, 22), puzzle.items[order[i]], small: true);
                     }
                     else ExperimentGUI.Label(new Rect(card.x + 16, card.y + 18, 283, 128), puzzle.items[order[i]]);
-                    if (GUI.Button(card, GUIContent.none, GUIStyle.none))
+                    if (VarginhaGamepadUI.Button(card, GUIContent.none, GUIStyle.none))
                     {
                         if (_selected < 0) _selected = i;
                         else { Swap(_selected, i); _selected = -1; _feedback = ""; }

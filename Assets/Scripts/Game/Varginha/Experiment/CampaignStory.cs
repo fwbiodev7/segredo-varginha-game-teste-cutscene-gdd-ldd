@@ -120,12 +120,13 @@ namespace Game.Varginha.Experiment
         public static string Scene(int phase) => phase >= 11 ? CampaignContinuationDefinition.SceneName(phase) : phase == 1 ? VarginhaCampaignPhase1.SceneName
             : phase == 3 ? VarginhaCampaignDrive.SceneName : phase >= 6 ? CampaignExpansionController.SceneName(phase)
             : "Ato2_Fase" + phase + "_" + (phase == 2 ? "A_Chave_e_a_Caixa" : phase == 4 ? "Entre_Aulas_e_Pistas" : "O_Codigo_das_2323");
-        public static void GoTo(int phase, int area = 0)
+        public static void GoTo(int phase, int area = 0, Vector2? entrance = null)
         {
             phase = CampaignSequence.Resume(phase);
             string scene = phase >= 11 ? CampaignContinuationDefinition.SceneName(phase, area) : Scene(phase);
             if (!Application.CanStreamedLevelBeLoaded(scene)) { Debug.LogError("Cena da campanha ausente: " + scene); return; }
-            var progress = Load(); progress.phase = phase; progress.positionPhase = 0; progress.continuation.area = area; Write(progress);
+            var progress = Load(); progress.phase = phase; progress.positionPhase = entrance.HasValue?phase:0; progress.continuation.area = area;
+            if(entrance.HasValue){progress.x=entrance.Value.x;progress.y=entrance.Value.y+.58f;}Write(progress);
             CampaignCinematics.Load(scene);
         }
     }

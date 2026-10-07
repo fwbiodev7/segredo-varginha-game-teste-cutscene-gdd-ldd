@@ -1,0 +1,38 @@
+{
+  "originalFile": "FuscaOriginal.png",
+  "originalSha256": "048dfd8c37a00d2fc84407871ea931f81927efd71bc69d50c733a549292f7344",
+  "sourceSize": [
+    300,
+    100
+  ],
+  "sideRectTopLeft": [
+    1,
+    12,
+    99,
+    53
+  ],
+  "originalSideUnchanged": true,
+  "newViews": {
+    "Front": [
+      50,
+      38
+    ],
+    "TopNorth": [
+      50,
+      95
+    ],
+    "TopSouth": [
+      50,
+      95
+    ],
+    "TopEast": [
+      95,
+      50
+    ],
+    "TopWest": [
+      95,
+      50
+    ]
+  },
+  "newViewsNote": "Front and overhead inferred from original; other strictly overhead orientations are lossless 90-degree rotations. Side uses original pixels unchanged."
+}

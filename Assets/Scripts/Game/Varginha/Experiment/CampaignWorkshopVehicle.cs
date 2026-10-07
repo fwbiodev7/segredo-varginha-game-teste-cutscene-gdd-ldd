@@ -7,9 +7,6 @@ namespace Game.Varginha.Experiment
     public sealed class CampaignWorkshopVehicle : MonoBehaviour
     {
         public enum Facing { North,South,East,West }
-        [Serializable] private sealed class Frame { public string name;public int x,y,width,height; }
-        [Serializable] private sealed class Atlas { public int sourceWidth,sourceHeight;public Frame[] frames; }
-        private static readonly Sprite[] Frames=new Sprite[4];
         private static Sprite _line;
         private readonly RaycastHit2D[] _hits=new RaycastHit2D[16];
         private readonly Collider2D[] _contacts=new Collider2D[16];
@@ -26,15 +23,7 @@ namespace Game.Varginha.Experiment
 
         public static Sprite FrameSprite(Facing facing)
         {
-            int index=(int)facing;
-            if(Frames[index]!=null&&Frames[index].texture!=null)return Frames[index];
-            var texture=Resources.Load<Texture2D>("Varginha/StoryEffects/FuscaDirections");
-            var atlas=JsonUtility.FromJson<Atlas>(Resources.Load<TextAsset>("Varginha/StoryEffects/FuscaDirectionsAtlas").text);
-            var frame=atlas.frames[index];
-            float sx=texture.width/(float)atlas.sourceWidth,sy=texture.height/(float)atlas.sourceHeight;
-            var rect=new Rect(frame.x*sx,texture.height-(frame.y+frame.height)*sy,frame.width*sx,frame.height*sy);
-            Frames[index]=Sprite.Create(texture,rect,Vector2.one/2,Mathf.Max(rect.width,rect.height)/3.9f,0,SpriteMeshType.FullRect);
-            Frames[index].name="Fusca_Oficina_"+frame.name;return Frames[index];
+            return CampaignOriginalFusca.Top(facing);
         }
 
         public void Configure(CampaignExpansionState state)
@@ -49,8 +38,13 @@ namespace Game.Varginha.Experiment
             var layout=CampaignIllustratedMaps.Get(10);BayPosition=layout.Position(779,448);
             _lights=new GameObject("Luzes_do_Fusca").transform;_lights.SetParent(transform,false);
             CampaignFuscaLighting.Add(_lights);
-            // The existing light meshes were authored for a two-metre car.
-            _lights.localScale=new Vector3(2.25f,1.95f,1);
+            // Lamp centers measured in the original-model overhead view (50x95).
+            foreach(Transform beam in _lights)
+            {
+                beam.localPosition=new Vector3(Mathf.Sign(beam.localPosition.x)*.69f,1.62f,0);
+                beam.localScale=new Vector3(.7f,3.5f,1);
+                var light=beam.GetComponent<CampaignDynamicLight>();light.reach=3.5f;light.halfAngle=12f;
+            }
             _bay=new GameObject("Vaga_de_analise").transform;_bay.SetParent(transform.parent,false);_bay.position=BayPosition;
             DrawBay();
             if(state.workshopParked) ParkAtBay();
@@ -98,6 +92,7 @@ namespace Game.Varginha.Experiment
             var keyboard=Keyboard.current;
             Vector2 direction=new Vector2((keyboard?.dKey.isPressed==true||keyboard?.rightArrowKey.isPressed==true?1:0)-(keyboard?.aKey.isPressed==true||keyboard?.leftArrowKey.isPressed==true?1:0),
                 (keyboard?.wKey.isPressed==true||keyboard?.upArrowKey.isPressed==true?1:0)-(keyboard?.sKey.isPressed==true||keyboard?.downArrowKey.isPressed==true?1:0));
+            if(VarginhaInputActions.Move.sqrMagnitude>0)direction=VarginhaInputActions.Move;
             // Cardinal movement matches the four authored views and keeps garage turns readable.
             if(Mathf.Abs(direction.y)>0)direction.x=0;
             if(direction!=Vector2.zero)
@@ -109,7 +104,7 @@ namespace Game.Varginha.Experiment
                 }
             }
             _input=direction;
-            return CanPark&&VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact);
+            return CanPark&&VarginhaInputActions.CarPressed;
         }
         public void StopInput() { _input=Vector2.zero;_velocity=Vector2.zero; }
         private void FixedUpdate()

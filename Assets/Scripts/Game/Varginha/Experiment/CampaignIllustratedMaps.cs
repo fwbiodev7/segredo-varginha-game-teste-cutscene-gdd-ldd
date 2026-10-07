@@ -163,9 +163,34 @@ namespace Game.Varginha.Experiment
             {
                 var source=Array.Find(data.props,p=>p.name==prop.name);
                 var sr=Render(layer,prop.name,texture,SourceRect(data,source.art),prop.size.x,prop.size.y);
+                if(prop.name=="Fusca")
+                {
+                    sr.sprite=source.art[2]<source.art[3]?CampaignOriginalFusca.Top(CampaignWorkshopVehicle.Facing.North):CampaignOriginalFusca.Side;
+                    CampaignOriginalFusca.Fit(sr,prop.size);
+                    if(plan.phase==2&&Application.isPlaying)
+                    {
+                        var headlights=new GameObject("Faróis_do_Fusca_original").transform;headlights.SetParent(sr.transform,false);
+                        headlights.localRotation=Quaternion.Euler(0,0,-90);
+                        var body=sr.sprite.bounds.size;
+                        // Lamp center at pixel (98, 51.5) in the preserved 300x100 sheet.
+                        headlights.localPosition=new Vector3(body.x*.48f,-body.y*.245f,0);
+                        CampaignFuscaLighting.Add(headlights);
+                        int visibleLamp=0;
+                        foreach(Transform beam in headlights)
+                        {
+                            // Only the near lamp is visible in the original side-view sprite.
+                            if(visibleLamp++>0){beam.gameObject.SetActive(false);continue;}
+                            beam.localPosition=Vector3.zero;
+                            beam.localScale=new Vector3(body.y*.35f,body.x*.48f,1);
+                            var light=beam.GetComponent<CampaignDynamicLight>();
+                            light.reach=body.x*sr.transform.localScale.x*.48f;
+                            light.intensity=.4f;
+                        }
+                    }
+                }
                 sr.transform.position=prop.position;
                 // Car/background must not duplicate after it leaves the workshop.
-                if(source.outline?.Length>=6)
+                if(prop.name!="Fusca"&&source.outline?.Length>=6)
                 {
                     var outline=new Vector2[source.outline.Length/2];
                     for(int i=0;i<outline.Length;i++)outline[i]=new Vector2(source.outline[i*2],1-source.outline[i*2+1]);
@@ -203,7 +228,8 @@ namespace Game.Varginha.Experiment
             var go=new GameObject(name);go.transform.SetParent(parent,false);
             var sr=go.AddComponent<SpriteRenderer>();sr.sprite=sprite;
             // Tightening the cached mesh changes bounds; the source rect fixes world scale.
-            go.transform.localScale=new Vector3(width*sprite.pixelsPerUnit/sprite.rect.width,height*sprite.pixelsPerUnit/sprite.rect.height,1);return sr;
+            go.transform.localScale=new Vector3(width*sprite.pixelsPerUnit/sprite.rect.width,height*sprite.pixelsPerUnit/sprite.rect.height,1);
+            if(name=="Fusca")go.transform.localScale=Vector3.one*Mathf.Min(go.transform.localScale.x,go.transform.localScale.y);return sr;
         }
         private static void Contour(SpriteRenderer sr,Vector2[] contour)
         {

@@ -20,6 +20,11 @@ namespace Game.Varginha.Experiment
         public const float ChurchVisualScale=ChurchStandingHeight/StandingHeight;
         public static bool IsChurch => CampaignExpansionController.Active != null && CampaignExpansionController.Active.phase == 8
             || CampaignContinuationController.Active != null && CampaignContinuationController.Active.phase == 14;
+        public static int WashFrame(float time)
+        {
+            // Reach, scoop, wash twice, lower hands. Existing poses, no sprite edits.
+            int[] frames={0,1,2,3,2,3,2,1,0};return frames[Mathf.Clamp((int)(time/.18f),0,frames.Length-1)];
+        }
         public static float CurrentStandingHeight => IsChurch ? ChurchStandingHeight : StandingHeight;
         private bool _wasPunching;
         private float _punchStarted;
@@ -77,7 +82,7 @@ namespace Game.Varginha.Experiment
                 pose=StoryFrame("Punch",direction,punchFrame+(equipped?4:0));
             }
             else if(acting && interaction=="Edelzio_WashFace")
-                pose=StoryFrame(equipped?"LifeGray":"Life",direction,8+Mathf.Min(3,(int)((Time.time-_interactionStarted)*4)));
+                pose=StoryFrame(equipped?"LifeGray":"Life",direction,8+WashFrame(Time.time-_interactionStarted));
             else if(_actions!=null&&_actions.IsSeated)
                 pose=face.y>.5f&&GetComponent<CampaignSeatingLayers>()?.IsOfficeSeat==true
                     ?StoryFrame("SeatedDeskNorth",0,(interaction=="Edelzio_UseNotebook"?3:0)+(int)(Time.time*2)%3)

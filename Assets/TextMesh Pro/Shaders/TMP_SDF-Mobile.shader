@@ -81,7 +81,7 @@ SubShader {
 
 	Pass {
 		CGPROGRAM
-		#pragma enable_d3d11_debug_symbols
+		#pragma enable_debug_symbols
 		#pragma vertex VertShader
 		#pragma fragment PixShader
 		#pragma shader_feature __ OUTLINE_ON
@@ -92,7 +92,7 @@ SubShader {
 
 		#include "UnityCG.cginc"
 		#include "UnityUI.cginc"
-		#include "TMPro_Properties.cginc"
+		#include "Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc"
 
 		struct vertex_t {
 			UNITY_VERTEX_INPUT_INSTANCE_ID

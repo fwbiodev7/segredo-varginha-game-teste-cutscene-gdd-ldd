@@ -53,9 +53,7 @@ namespace Game.Varginha.Experiment
                 if(sprite!=null) { }
                 else if (prop.motif == "Fusca")
                 {
-                    var source = VarginhaExperimentArt.Load("FuscaTopView");
-                    int w=source.width/2,h=source.height/2;
-                    sprite = Sprite.Create(source, new Rect(0,h,w,h), Vector2.one / 2, h / prop.size.y,0,SpriteMeshType.FullRect);
+                    sprite=prop.size.x<prop.size.y?CampaignOriginalFusca.Top(CampaignWorkshopVehicle.Facing.North):CampaignOriginalFusca.Side;
                 }
                 else if (prop.name.StartsWith("Árvore"))
                 {
@@ -64,6 +62,7 @@ namespace Game.Varginha.Experiment
                 }
                 else sprite = VarginhaFurnitureArt.Create(prop.motif, prop.size) ?? VarginhaSceneryArt.Create(prop.motif, prop.size);
                 var renderer = Render(layer, prop.name, sprite, prop.position, prop.size, 5);
+                if(prop.motif=="Fusca")CampaignOriginalFusca.Fit(renderer,prop.size);
                 if(plan.phase==1||motif.StartsWith("Ouzana_")||CampaignInteriorArt.Contains(motif))
                 {
                     renderer.drawMode=SpriteDrawMode.Simple;

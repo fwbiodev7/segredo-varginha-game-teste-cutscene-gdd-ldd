@@ -84,15 +84,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Ato5_Fase16_A_Descida.unity
     guid: 19156fd4e98b43e4cb9c6a508b4b21f7
   - enabled: 1
-    path: Assets/Scenes/Ato5_Fase17_Camaras_do_Selo.unity
-    guid: a0bbaa4081f1a224fbba96f8edcb82fb
-  - enabled: 1
-    path: Assets/Scenes/Ato5_Fase17_Camaras_do_Selo_Area1.unity
-    guid: 356590cd4ca61f24688780acfa05ca6e
-  - enabled: 1
-    path: Assets/Scenes/Ato5_Fase17_Camaras_do_Selo_Area2.unity
-    guid: 5c276d32b2fb5e546a20e6049bddf596
-  - enabled: 1
     path: Assets/Scenes/Ato6_Fase18_A_Criatura_Ferida.unity
     guid: 8a6bedd0ae22aa14ebd676e74b504463
   - enabled: 0

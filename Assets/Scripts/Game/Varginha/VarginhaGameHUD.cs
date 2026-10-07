@@ -68,6 +68,7 @@ namespace Game.Varginha
         private bool _isPaused;
         public bool IsPaused => _isPaused;
         private bool _isControlsOpen;
+        private bool _carDialogue;
         private GUIStyle _pauseTextStyle;
         private Vector2 _controlsScroll;
         private static readonly string[] PauseLabels = { "CONTINUAR", "CONTROLES", "SAIR AO MENU" };
@@ -126,7 +127,7 @@ namespace Game.Varginha
             var keyboard = Keyboard.current;
 
             // Pause toggle — ESC or P, always available unless victory/game-over
-            if (keyboard != null && (keyboard.escapeKey.wasPressedThisFrame || keyboard.pKey.wasPressedThisFrame))
+            if (VarginhaInputActions.PausePressed || VarginhaInputActions.CancelPressed && (_isPaused||_isControlsOpen||_isDialogueOpen) || keyboard?.pKey.wasPressedThisFrame==true)
             {
                 if (!_isVictoryOpen && !_isGameOver)
                 {
@@ -170,8 +171,8 @@ namespace Game.Varginha
                     return;
                 }
             }
+            if (VarginhaInputActions.InventoryPressed) { _selectedSlot = 0; OpenBackpack(); }
             if (keyboard == null) return;
-            if (keyboard.gKey.wasPressedThisFrame) { _selectedSlot = 0; OpenBackpack(); }
             if (keyboard.digit1Key.wasPressedThisFrame) _selectedSlot = 0;
             if (keyboard.digit2Key.wasPressedThisFrame) _selectedSlot = 1;
             if (keyboard.digit3Key.wasPressedThisFrame) _selectedSlot = 2;
@@ -331,6 +332,7 @@ namespace Game.Varginha
 
         public void ShowDialogue(string speaker, string message)
         {
+            _carDialogue=false;
             CloseBackpack();
             _activeSpeaker = speaker;
             _speakerPortrait = VarginhaDialoguePortraits.ForSpeaker(speaker);
@@ -343,7 +345,9 @@ namespace Game.Varginha
         public void CloseDialogue()
         {
             _isDialogueOpen = false;
+            _carDialogue=false;
         }
+        public void ShowCarDialogue(string speaker,string message){ShowDialogue(speaker,message);_carDialogue=true;}
 
         public void ShowRodrigoHint(string hint)
         {
@@ -374,6 +378,7 @@ namespace Game.Varginha
 
         private void OnGUI()
         {
+            VarginhaGamepadUI.Begin("hud",false);
             if (CampaignInventoryOnly && !IsGameOver && GameManager.Instance?.IsGameOver != true) return;
             if (!IsGameplayVisible) return;
             if (IsInventoryOpen) return;
@@ -389,7 +394,7 @@ namespace Game.Varginha
                 PlayTypewriterBlip();
             }
 
-            if (_isDialogueOpen && Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.Space)
+            if (_isDialogueOpen && !_carDialogue && Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.Space)
             {
                 if (_dialogueTypewriter.IsComplete) CloseDialogue();
                 else _dialogueTypewriter.RevealImmediately();
@@ -565,7 +570,7 @@ namespace Game.Varginha
             }
             Rect description = new Rect(x, y + slotSize + (Screen.height < 420f ? 14f : 24f), width, 20f);
             DrawHudBlock(description, new Color(.035f, .045f, .055f, .92f));
-            GUI.Label(description, label, _hotbarLabelStyle);
+            GUI.Label(description, VarginhaInputActions.Prompt(label), _hotbarLabelStyle);
         }
 
         private void DrawInteractionPrompt()
@@ -573,7 +578,7 @@ namespace Game.Varginha
             if (_edelzio == null || _edelzio.NearestInteractable == null || _isDialogueOpen || _isVictoryOpen) return;
 
             var prop = _edelzio.NearestInteractable;
-            string instruction = $"[E] EXAMINAR\n{prop.PropName.ToUpperInvariant()}";
+            string instruction = $"[{(prop.Type==PropType.FuscaVehicle?VarginhaInputActions.CarLabel:VarginhaInputActions.InteractLabel)}] EXAMINAR\n{prop.PropName.ToUpperInvariant()}";
             float maxWidth = Mathf.Min(620f, Screen.width - 32f);
             float desiredWidth = _promptStyle.CalcSize(new GUIContent(instruction)).x + 44f;
             float w = Mathf.Clamp(desiredWidth, 260f, maxWidth);
@@ -635,6 +640,7 @@ namespace Game.Varginha
 
         private void DrawDialogueWindow()
         {
+            VarginhaGamepadUI.Begin("hud:dialogue:"+GetEntityId(),true,90,_carDialogue);
             Rect modal = GetBottomDialogRect(900f, Mathf.Min(280f, Screen.height * .48f));
             float pad = Mathf.Clamp(modal.width * .055f, 12f, 34f);
             float buttonHeight = Mathf.Clamp(modal.height * .18f, 30f, 46f);
@@ -656,13 +662,13 @@ namespace Game.Varginha
             Rect textArea = new Rect(textX, modal.y + speakerHeight + pad, textWidth,
                 Mathf.Max(24f, modal.height - speakerHeight - buttonHeight - pad * 2.5f));
             float contentHeight = _dialogueTextStyle.CalcHeight(new GUIContent(_activeDialogue), textWidth - 18f);
-            _dialogueScroll = GUI.BeginScrollView(textArea, _dialogueScroll,
+            _dialogueScroll = VarginhaGamepadUI.BeginScrollView(textArea, _dialogueScroll,
                 new Rect(0, 0, textWidth - 18f, Mathf.Max(textArea.height, contentHeight)));
             GUI.Label(new Rect(0, 0, textWidth - 18f, Mathf.Max(textArea.height, contentHeight)), _dialogueTypewriter.VisibleText, _dialogueTextStyle);
-            GUI.EndScrollView();
+            VarginhaGamepadUI.EndScrollView();
 
             float buttonWidth = Mathf.Min(modal.width - pad * 2f, 250f);
-            if (GUI.Button(new Rect(modal.x + (modal.width - buttonWidth) * .5f, modal.yMax - buttonHeight - pad * .55f, buttonWidth, buttonHeight), "CONTINUAR", _buttonStyle))
+            if (VarginhaGamepadUI.Button(new Rect(modal.x + (modal.width - buttonWidth) * .5f, modal.yMax - buttonHeight - pad * .55f, buttonWidth, buttonHeight), "CONTINUAR", _buttonStyle))
             {
                 if (_dialogueTypewriter.IsComplete) CloseDialogue();
                 else _dialogueTypewriter.RevealImmediately();
@@ -673,7 +679,7 @@ namespace Game.Varginha
                 float blink = Mathf.PingPong(Time.unscaledTime * 3.5f, 1f);
                 if (blink > 0.25f)
                 {
-                    GUI.Label(new Rect(modal.xMax - pad - 120f, modal.yMax - buttonHeight - pad * .45f, 110f, 20f), "[ESPAÇO] ▼", _hotbarNumberStyle);
+                    GUI.Label(new Rect(modal.xMax - pad - 120f, modal.yMax - buttonHeight - pad * .45f, 110f, 20f), "["+VarginhaInputActions.InteractLabel+"] ▼", _hotbarNumberStyle);
                 }
             }
         }
@@ -770,11 +776,12 @@ namespace Game.Varginha
                 Mathf.RoundToInt(9f * scale), hover ? accent : new Color(.48f, .59f, .61f));
             PauseLabel(new Rect(rect.x + 48f, rect.y, rect.width - 60f, rect.height), label,
                 Mathf.RoundToInt(12f * scale), hover ? Color.white : PaperColor);
-            return GUI.Button(rect, GUIContent.none, GUIStyle.none);
+            return VarginhaGamepadUI.Button(rect, GUIContent.none, GUIStyle.none);
         }
 
         private void DrawPauseScreen()
         {
+            VarginhaGamepadUI.Begin("hud:pause:"+GetEntityId(),true,90);
             DrawHudBlock(new Rect(0, 0, Screen.width, Screen.height), new Color(.005f, .01f, .015f, .76f));
             if (_isControlsOpen)
             {
@@ -801,7 +808,7 @@ namespace Game.Varginha
             }
             PauseSeparator(modal, modal.yMax - 43f * scale);
             PauseLabel(new Rect(modal.x + 22f, modal.yMax - 34f * scale, modal.width - 44f, 20f * scale),
-                "[ESC] / [P]  RETOMAR INVESTIGACAO", Mathf.RoundToInt(9f * scale),
+                VarginhaInputActions.UsingGamepad?"[START] / [B]  RETOMAR INVESTIGACAO":"[ESC] / [P]  RETOMAR INVESTIGACAO", Mathf.RoundToInt(9f * scale),
                 new Color(.64f, .73f, .75f), TextAnchor.MiddleCenter);
         }
 
@@ -817,7 +824,7 @@ namespace Game.Varginha
             const float rowHeight = 32f;
             float contentHeight = ControlActions.Length * rowHeight;
             float contentWidth = viewport.width - (contentHeight > viewport.height ? 18f : 0f);
-            _controlsScroll = GUI.BeginScrollView(viewport, _controlsScroll,
+            _controlsScroll = VarginhaGamepadUI.BeginScrollView(viewport, _controlsScroll,
                 new Rect(0, 0, contentWidth, contentHeight));
             // Both columns use the same measured size, even with long custom bindings.
             int rowFont = Mathf.Clamp(Mathf.FloorToInt(contentWidth / 48f), 6, 10);
@@ -831,7 +838,7 @@ namespace Game.Varginha
                     VarginhaInputBindings.DisplayName(ControlActions[i]), rowFont,
                     new Color(.64f, .84f, .86f), TextAnchor.MiddleRight);
             }
-            GUI.EndScrollView();
+            VarginhaGamepadUI.EndScrollView();
             PauseSeparator(modal, modal.yMax - 66f * scale);
             if (PauseButton(new Rect(modal.x + 22f, modal.yMax - 54f * scale, modal.width - 44f, 38f * scale),
                 "VOLTAR", "<", scale)) _isControlsOpen = false;
@@ -844,6 +851,7 @@ namespace Game.Varginha
 
         private void DrawVictoryWindow()
         {
+            VarginhaGamepadUI.Begin("hud:victory:"+GetEntityId(),true,90);
             Rect modal = GetModalRect(800f, Mathf.Min(520f, Screen.height * .88f));
             float pad = Mathf.Clamp(modal.width * .06f, 12f, 42f);
             float buttonHeight = Mathf.Clamp(modal.height * .15f, 30f, 52f);
@@ -868,7 +876,7 @@ namespace Game.Varginha
             GUI.Label(new Rect(modal.x + pad, descriptionY, modal.width - pad * 2f, Mathf.Min(descriptionHeight, availableHeight)), _victoryDescription, descStyle);
 
             float buttonWidth = Mathf.Min(modal.width - pad * 2f, 300f);
-            if (GUI.Button(new Rect(modal.x + (modal.width - buttonWidth) * .5f, modal.yMax - buttonHeight - pad * .55f, buttonWidth, buttonHeight), "JOGAR NOVAMENTE", _buttonStyle))
+            if (VarginhaGamepadUI.Button(new Rect(modal.x + (modal.width - buttonWidth) * .5f, modal.yMax - buttonHeight - pad * .55f, buttonWidth, buttonHeight), "JOGAR NOVAMENTE", _buttonStyle))
             {
                 RestartScene();
             }
@@ -876,6 +884,7 @@ namespace Game.Varginha
 
         private void DrawGameOverWindow()
         {
+            VarginhaGamepadUI.Begin("hud:game-over:"+GetEntityId(),true,90);
             float fade = Mathf.Clamp01((Time.unscaledTime - _gameOverOpenedAt) / .4f);
             DrawHudBlock(new Rect(0, 0, Screen.width, Screen.height), new Color(.005f, .01f, .015f, .84f * fade));
             Rect modal = GetModalRect(560f, 390f);

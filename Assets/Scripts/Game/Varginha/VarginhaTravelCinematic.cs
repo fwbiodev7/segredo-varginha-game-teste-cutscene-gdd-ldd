@@ -82,7 +82,7 @@ namespace Game.Varginha
         {
             if (_art != null || _artUnavailable) return;
             var night = Load("TravelPixel/NightRoad");
-            var car = Load("TravelPixel/FuscaReference");
+            var car = Load("StoryEffects/FuscaOriginal");
             var tree = Load("TravelPixel/TreeReference");
             if (night == null || car == null || tree == null)
             {

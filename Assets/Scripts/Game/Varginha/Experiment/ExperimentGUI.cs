@@ -33,7 +33,7 @@ namespace Game.Varginha.Experiment
         {
             var style = title ? _title : small ? _small : _text;
             int original = style.fontSize;
-            var content = new GUIContent(text);
+            var content = new GUIContent(VarginhaInputActions.Prompt(text));
             while (style.fontSize > 10 && style.CalcHeight(content, rect.width) > rect.height) style.fontSize--;
             GUI.Label(rect, content, style); style.fontSize = original;
         }
@@ -57,7 +57,7 @@ namespace Game.Varginha.Experiment
             if (Button(new Rect(430, 325, 420, 48), "CONTINUAR")) action = 1;
             if (Button(new Rect(430, 390, 420, 48), "CONFIGURAÇÕES")) action = 2;
             if (Button(new Rect(430, 455, 420, 48), "SALVAR E VOLTAR AO MENU")) action = 3;
-            PixelMenuTheme.Label(new Rect(430, 530, 420, 22), "ESC • VOLTAR À HISTÓRIA", 9, Muted, TextAnchor.MiddleCenter);
+            PixelMenuTheme.Label(new Rect(430, 530, 420, 22), VarginhaInputActions.PauseLabel+" • VOLTAR À HISTÓRIA", 9, Muted, TextAnchor.MiddleCenter);
             return action;
         }
         public static void Caption(Rect rect, string text, int size)

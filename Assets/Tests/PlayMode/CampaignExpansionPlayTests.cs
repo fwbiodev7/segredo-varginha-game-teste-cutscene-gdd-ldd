@@ -13,6 +13,8 @@ namespace Game.Tests.PlayMode
 {
     public class CampaignExpansionPlayTests : InputTestFixture
     {
+        public override void Setup(){Game.Varginha.VarginhaInputActions.Shutdown();base.Setup();}
+        public override void TearDown(){Game.Varginha.VarginhaInputActions.Shutdown();base.TearDown();}
         private string _save;
         [SetUp] public void Preserve() => _save=File.Exists(CampaignStorySave.Path)?File.ReadAllText(CampaignStorySave.Path):null;
         [TearDown] public void Restore()
@@ -121,7 +123,7 @@ namespace Game.Tests.PlayMode
             yield return new WaitForFixedUpdate();yield return null;
             Assert.That(actor.GetComponent<CircleCollider2D>().Distance(map.Find("02_Mobilia_Colisoes/Kitchen_Cabinet").GetComponent<BoxCollider2D>()).isOverlapped,Is.False);
             yield return HoldKey(keyboard,Key.E,.1f);
-            yield return new WaitForSeconds(1.2f);
+            yield return new WaitForSeconds(2.2f);
             Assert.That(stage.Progress.routine,Is.EqualTo(15),"A reachable hygiene action completes the saved routine=14 state.");
             stage.CloseDialogue();stage.Interact("box");Assert.That(stage.Progress.boxFound,Is.True);
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
@@ -286,8 +288,8 @@ namespace Game.Tests.PlayMode
             poses.ClearActionPose();
             var motion=actor.GetComponent<VarginhaPlayerActionAnimation>();motion.StartCoroutine(motion.WashFaceRoutine());
             yield return new WaitForSeconds(.35f);
-            Assert.That(renderer.sprite.name,Does.Contain("LifeGray_3_9"));Assert.That(actor.IsInputLocked,Is.True);
-            yield return new WaitForSeconds(.8f);Assert.That(motion.IsActing,Is.False);
+            Assert.That(renderer.sprite.name,Does.Contain("LifeGray_0_"));Assert.That(actor.IsInputLocked,Is.True);
+            yield return new WaitForSeconds(1.8f);Assert.That(motion.IsActing,Is.False);
             Assert.That(poses.HasActionPose,Is.False);Assert.That(actor.IsInputLocked,Is.False,"Daily action restores movement before jumping.");
             var body=actor.GetComponent<Rigidbody2D>();var before=body.position;var keyboard=InputSystem.AddDevice<Keyboard>();
             InputSystem.QueueStateEvent(keyboard,new KeyboardState(VarginhaInputBindings.GetKeyboard(VarginhaInputAction.Jump)));yield return null;

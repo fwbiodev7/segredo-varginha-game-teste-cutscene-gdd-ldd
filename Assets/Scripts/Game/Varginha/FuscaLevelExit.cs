@@ -20,12 +20,12 @@ namespace Game.Varginha
             if (_isEscaped) return;
             if (!edelzio.HasFuscaKey)
             {
-                VarginhaGameHUD.Instance?.ShowDialogue("Fusca Trancado", "O Fusca esta trancado. Encontre a chave antes de sair.");
+                VarginhaGameHUD.Instance?.ShowCarDialogue("Fusca Trancado", "O Fusca esta trancado. Encontre a chave antes de sair.");
                 return;
             }
             if (!edelzio.HasResearchNotebook)
             {
-                VarginhaGameHUD.Instance?.ShowDialogue("Edelzio", "Nao posso partir sem o caderno de pesquisas de 1996.");
+                VarginhaGameHUD.Instance?.ShowCarDialogue("Edelzio", "Nao posso partir sem o caderno de pesquisas de 1996.");
                 return;
             }
 
@@ -55,7 +55,7 @@ namespace Game.Varginha
             if (exitCollider != null) exitCollider.enabled = false;
 
             BoardImmediately(edelzio);
-            VarginhaGameHUD.Instance?.ShowDialogue("Edelzio", "O motor pegou. Segure firme - vamos sair daqui!");
+            VarginhaGameHUD.Instance?.ShowCarDialogue("Edelzio", "O motor pegou. Segure firme - vamos sair daqui!");
             yield return new WaitForSeconds(0.65f);
             VarginhaGameHUD.Instance?.CloseDialogue();
 

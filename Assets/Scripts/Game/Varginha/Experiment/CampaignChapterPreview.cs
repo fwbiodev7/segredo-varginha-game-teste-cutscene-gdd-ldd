@@ -11,7 +11,7 @@ namespace Game.Varginha.Experiment
             5=>"UMA FOTO. DUAS ANOTAÇÕES.",6=>"CADA FRAGMENTO CONTA UMA HISTÓRIA",
             7=>"ALÉM DA PONTE",8=>"A LUZ GUARDA MEMÓRIAS",9=>"O QUE A LUZ REVELA",10=>"DE VOLTA À OFICINA",
             11=>"AS CÓPIAS NÃO CONCORDAM",12=>"A CASA POR TRÁS DOS REGISTROS",13=>"1898",14=>"UMA PÁGINA AUSENTE",
-            15=>"ANTES DO CLARÃO",16=>"SOB A CIDADE",17=>"TRÊS CÂMARAS. UMA LIGAÇÃO.",18=>"DO OUTRO LADO DO MECANISMO",
+            15=>"ANTES DO CLARÃO",16=>"SOB A CIDADE",18=>"DO OUTRO LADO DO MECANISMO",
             19=>"A LEMBRANÇA CONTINUA",20=>"MANTENHA A ESTABILIDADE",21=>"CUMPRA O ACORDO",_=>"VARGINHA"
         };
         public static void Background(int phase,float elapsed=0)
@@ -34,7 +34,21 @@ namespace Game.Varginha.Experiment
         }
         public static void Draw(int phase,float elapsed,float total=3)
         {
-            ExperimentGUI.Init();Background(phase,elapsed);
+            ExperimentGUI.Init();
+            if(phase==2)
+            {
+                float opacity=1-Mathf.SmoothStep(0,1,Mathf.InverseLerp(total-.6f,total,elapsed));
+                var color=GUI.color;GUI.color=new Color(1,1,1,opacity);
+                var before=GUI.matrix;GUI.matrix=Matrix4x4.identity;
+                ExperimentGUI.Box(new Rect(0,0,Screen.width,Screen.height),new Color(.025f,.035f,.045f,opacity));GUI.matrix=before;
+                var canvas=ExperimentGUI.BeginCanvas();
+                ExperimentGUI.Panel(new Rect(220,242,840,218));
+                ExperimentGUI.Label(new Rect(260,268,760,30),"TRINTA ANOS DEPOIS",small:true);
+                ExperimentGUI.Label(new Rect(260,318,760,55),"A LEMBRANÇA VOLTA",true);
+                ExperimentGUI.Label(new Rect(260,401,760,30),"VARGINHA, 2026 • FASE 2",small:true);
+                GUI.matrix=canvas;GUI.color=color;return;
+            }
+            Background(phase,elapsed);
             var matrix=ExperimentGUI.BeginCanvas();
             ExperimentGUI.Panel(new Rect(155,510,970,130));
             ExperimentGUI.Label(new Rect(185,529,910,55),Caption(phase),true);

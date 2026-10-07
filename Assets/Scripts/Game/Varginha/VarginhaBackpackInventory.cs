@@ -45,7 +45,7 @@ namespace Game.Varginha
             "Anotações de 1996. Necessário para viajar.",
             "Usado na decodificação de dados.",
             "Pista histórica importante.",
-            "Equipe na Hotbar [G] e ligue com [V]."
+            "Equipe na mochila e use V / RT para ligar."
         };
 
         private TMP_Text _name, _description, _availability, _equipped, _items;
@@ -125,12 +125,14 @@ namespace Game.Varginha
         private void OnDisable() => Close();
         private void OnDestroy() => Close();
 
+        private float _navigationRepeat; private Vector2 _lastNavigation;
+        private bool _lastDevice;
         private void Update()
         {
             if (!IsOpen || Time.frameCount == _openedFrame) return;
             var keyboard = Keyboard.current;var pad=Gamepad.current;
 
-            if (keyboard?.escapeKey.wasPressedThisFrame==true || keyboard?.gKey.wasPressedThisFrame==true || pad?.buttonEast.wasPressedThisFrame==true)
+            if (VarginhaInputActions.CancelPressed || VarginhaInputActions.InventoryPressed)
             {
                 VarginhaGameHUD.Instance?.CloseBackpack();
                 return;
@@ -143,15 +145,24 @@ namespace Game.Varginha
                 return;
             }
 
+            if(_lastDevice!=VarginhaInputActions.UsingGamepad){_lastDevice=VarginhaInputActions.UsingGamepad;Refresh();}
             int next = _inspected;
             int count=ShowingSupport?3:ShowingStudents?9:6;
             if (keyboard?.leftArrowKey.wasPressedThisFrame==true||pad?.dpad.left.wasPressedThisFrame==true) next = (_inspected + count-1) % count;
             if (keyboard?.rightArrowKey.wasPressedThisFrame==true||pad?.dpad.right.wasPressedThisFrame==true) next = (_inspected + 1) % count;
             if (keyboard?.upArrowKey.wasPressedThisFrame==true||pad?.dpad.up.wasPressedThisFrame==true) next = (_inspected + count-3) % count;
             if (keyboard?.downArrowKey.wasPressedThisFrame==true||pad?.dpad.down.wasPressedThisFrame==true) next = (_inspected + 3) % count;
+            Vector2 raw=VarginhaInputActions.UI("Navigate").ReadValue<Vector2>();
+            Vector2 nav=raw.sqrMagnitude<.16f?Vector2.zero:Mathf.Abs(raw.x)>Mathf.Abs(raw.y)?new Vector2(Mathf.Sign(raw.x),0):new Vector2(0,Mathf.Sign(raw.y));
+            if(nav.sqrMagnitude<.16f)_lastNavigation=Vector2.zero;
+            else if(_lastNavigation!=nav||Time.unscaledTime>=_navigationRepeat)
+            {
+                _navigationRepeat=Time.unscaledTime+(_lastNavigation==Vector2.zero?.32f:.12f);_lastNavigation=nav;
+                int step=Mathf.Abs(nav.x)>Mathf.Abs(nav.y)?(nav.x>0?1:-1):(nav.y>0?-3:3);next=(_inspected+count+step)%count;
+            }
             if (next != _inspected) { _inspected = next; Refresh(); }
 
-            if (keyboard?.enterKey.wasPressedThisFrame==true||pad?.buttonSouth.wasPressedThisFrame==true) Equip();
+            if (VarginhaInputActions.UI("Submit").WasPressedThisFrame()) Equip();
         }
 
         private void Equip()
@@ -188,6 +199,7 @@ namespace Game.Varginha
         private void Refresh()
         {
             EnsureTextures();
+            if(EventSystem.current!=null&&_cells[_inspected]!=null)EventSystem.current.SetSelectedGameObject(_cells[_inspected].gameObject);
             bool finalCombat=Experiment.CampaignFinalAllies.Active!=null;
             _supportTab.gameObject.SetActive(finalCombat);
             SetTabWidth(_itemsTab,_itemsTabLabel,finalCombat?150:200);
@@ -315,7 +327,7 @@ namespace Game.Varginha
             _description.text = VarginhaStudentAlly.DescribeAttack(studentName);
             _description.color = PaperColor;
 
-            _availability.text = finalCombat?"Até 3 alunos e 1 apoio.\nEquipe ou remova clicando no botão. Uma quarta escolha substitui a última vaga.\nRecargas são individuais.":unlocked
+            _availability.text = finalCombat?"Até 3 alunos e 1 apoio.\nA / Enter equipa ou remove. Uma quarta escolha substitui a última vaga.\nRecargas são individuais.":unlocked
                 ? "Recarga individual: 5 segundos.\n\nTrocar de aluno não reinicia recargas. O comando de aliado chama o aluno equipado."
                 : "Este aliado ainda não foi resgatado. Encontre a turma na escola; os especiais ficam ativos na igreja.";
             _availability.color = unlocked ? PaperColor : MutedCyan;

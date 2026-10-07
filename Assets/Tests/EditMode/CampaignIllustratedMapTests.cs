@@ -159,7 +159,9 @@ namespace Game.Tests.EditMode
                 foreach(var item in plan.furniture)
                 {
                     var go=map.Find("02_Mobilia_Colisoes/"+item.name);var renderer=go.GetComponent<SpriteRenderer>();
-                    Assert.That(renderer.sprite.texture,Is.SameAs(texture),item.name+" shared GPU texture");
+                    if(item.name=="Fusca")
+                        Assert.That(renderer.sprite,Is.SameAs(phase==2?CampaignOriginalFusca.Side:CampaignOriginalFusca.Top(CampaignWorkshopVehicle.Facing.North)),"Fusca original cached sprite");
+                    else Assert.That(renderer.sprite.texture,Is.SameAs(texture),item.name+" shared GPU texture");
                     if(item.footprint.width<=0)continue;
                     var collider=go.GetComponent<BoxCollider2D>();
                     Assert.That(collider.bounds.center.x,Is.EqualTo(item.footprint.center.x).Within(.001f));

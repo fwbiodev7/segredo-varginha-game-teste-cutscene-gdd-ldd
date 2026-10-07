@@ -25,6 +25,7 @@ namespace Game.Varginha.Experiment
         private readonly List<CampaignSchoolLife> _students = new();
         public bool IsActing => _busy;
         private float _titleTime, _saveTime, _cutTime;
+        private bool _carContext;
         private string _dialogue, _speaker, _feedback, _cutTitle, _cutText;
         private int _selected = -1;
         private View _afterCut;
@@ -146,9 +147,10 @@ namespace Game.Varginha.Experiment
             if (CampaignCinematics.IsTransitioning) return;
             if (!_ready) return;
             if (VarginhaGameHUD.Instance?.IsInventoryOpen == true) return;
-            if (Keyboard.current?.escapeKey.wasPressedThisFrame == true)
+            if(_paused&&_settings&&VarginhaInputActions.CancelPressed&&!VarginhaInputActions.PausePressed){_settings=false;return;}
+            if ((VarginhaInputActions.PausePressed || VarginhaInputActions.CancelPressed && (_paused || _dialogue!=null || _view!=View.World)))
             {
-                if (_dialogue != null) CloseDialogue();
+                if (_dialogue != null && !_carContext) CloseDialogue();
                 else if (_view != View.World && _view != View.Cutscene && _view != View.Complete) Show(View.World);
                 else TogglePause();
             }
@@ -158,10 +160,10 @@ namespace Game.Varginha.Experiment
             { _cutTime += Time.unscaledDeltaTime; if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)) FinishCutscene(); return; }
             if (IsBlocked) return;
             if (Keyboard.current?.f1Key.wasPressedThisFrame == true) { OpenHints(); return; }
-            if (Keyboard.current?.gKey.wasPressedThisFrame == true) { OpenBackpack(); return; }
-            if (Keyboard.current?.tabKey.wasPressedThisFrame == true) Show(View.Notebook);
-            if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact))
-            { int nearby = Nearest(); if (nearby >= 0) Interact(_points[nearby].id); }
+            if (VarginhaInputActions.InventoryPressed) { OpenBackpack(); return; }
+            if (VarginhaInputActions.JournalPressed) Show(View.Notebook);
+            int nearby = Nearest();
+            if(nearby>=0 && (_points[nearby].id=="car" ? VarginhaInputActions.CarPressed : VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact))) Interact(_points[nearby].id);
             _saveTime += Time.deltaTime; if (_saveTime > 5) { _saveTime = 0; Save(); }
         }
         private int Nearest()
@@ -174,6 +176,7 @@ namespace Game.Varginha.Experiment
         public void Interact(string id)
         {
             if (!_ready || _busy) return;
+            _carContext=id=="car";
             if (id == "car" && phase == 2 && _progress.CanLeaveHouse) { DepartForSchool(); return; }
             _sound?.Play(id == "box" || id == "notebook" ? "Paper" : "UI");
             if (id.StartsWith("student:")) StudentInteraction(int.Parse(id.Substring(8)));
@@ -335,6 +338,7 @@ namespace Game.Varginha.Experiment
         }
         private void OnGUI()
         {
+            VarginhaGamepadUI.Begin("house-school:"+GetEntityId()+":"+_view+":"+_paused+":"+(_dialogue!=null),_view!=View.World||_dialogue!=null||_paused,50);
             if (!_ready) return;
             if (VarginhaGameHUD.Instance?.IsInventoryOpen == true) return;
             ExperimentGUI.Init(); GUI.depth = -3100;
@@ -357,7 +361,7 @@ namespace Game.Varginha.Experiment
                 if (_view == View.World && _dialogue == null && VarginhaGameSettings.Current.interactionHints)
                 {
                     int near = Nearest(); ExperimentGUI.Panel(new Rect(230, 654, 820, 44));
-                    ExperimentGUI.Label(new Rect(250, 664, 780, 30), near < 0 ? "WASD / SETAS • ANDAR     E • EXAMINAR" : "[E] " + _points[near].label, small: true);
+                    ExperimentGUI.Label(new Rect(250, 664, 780, 30), near < 0 ? "WASD / SETAS • ANDAR     E • EXAMINAR" : "[" + (_points[near].id=="car"?VarginhaInputActions.CarLabel:VarginhaInputActions.InteractLabel) + "] " + _points[near].label, small: true);
                 }
                 if (_view != View.World) DrawInvestigation();
             }
@@ -380,7 +384,7 @@ namespace Game.Varginha.Experiment
                     if (ExperimentGUI.Button(new Rect(385,607,210,38), "ANOTAÇÕES")) DiscussWithRenan(1);
                     if (ExperimentGUI.Button(new Rect(615,607,210,38), "PESQUISA")) DiscussWithRenan(2);
                 }
-                if (ExperimentGUI.Button(new Rect(870, 607, 250, 38), "CONTINUAR")) CloseDialogue();
+                if (_carContext ? VarginhaGamepadUI.CarButton(new Rect(870,607,250,38),"CONTINUAR") : ExperimentGUI.Button(new Rect(870,607,250,38),"CONTINUAR")) CloseDialogue();
             }
             if (_paused)
             {

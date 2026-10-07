@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using Game.UI;
 
@@ -30,6 +31,7 @@ namespace Game.Varginha
         private Vector2 _controlsScroll;
         private Vector2 _bindingsScroll;
         private VarginhaInputAction? _rebindingAction;
+        private Key _padBinding=Key.E;
         private int _rebindArmedFrame = -1;
         private Texture2D pixel;
         private Texture2D backgroundTexture;
@@ -61,12 +63,21 @@ namespace Game.Varginha
             pixel.Apply();
             backgroundTexture = Resources.Load<Texture2D>("Varginha/MenuBackgroundV1");
         }
+        private void Update()
+        {
+            if(!VarginhaInputActions.CancelPressed)return;
+            if(_rebindingAction.HasValue){_rebindingAction=null;return;}
+            if(panel==Panel.Keybinds)panel=Panel.Settings;
+            else if(panel!=Panel.None)panel=Panel.None;
+        }
 
         private void OnGUI()
         {
+            VarginhaGamepadUI.Begin("menu:"+GetEntityId()+":"+panel,true,70);
             if (Game.Varginha.VarginhaTravelCinematic.IsTravelling || Experiment.CampaignCinematics.IsTransitioning) return;
             BuildStyles();
             DrawBackground();
+            if(_rebindingAction.HasValue && VarginhaInputActions.UsingGamepad){DrawPadBindingPicker();return;}
 
             if (panel != Panel.None)
             {
@@ -136,16 +147,29 @@ namespace Game.Varginha
             panelTypewriter.Tick(32f);
             Rect viewport = new Rect(x + 24, y + 65, width - 48, height - (panel == Panel.Controls ? 165 : 130));
             float contentHeight = infoStyle.CalcHeight(new GUIContent(panelTypewriter.VisibleText), viewport.width - 24);
-            _controlsScroll = GUI.BeginScrollView(viewport, _controlsScroll, new Rect(0, 0, viewport.width - 24, contentHeight));
+            _controlsScroll = VarginhaGamepadUI.BeginScrollView(viewport, _controlsScroll, new Rect(0, 0, viewport.width - 24, contentHeight));
             GUI.Label(new Rect(0, 0, viewport.width - 24, contentHeight), panelTypewriter.VisibleText, infoStyle);
-            GUI.EndScrollView();
-            if (panel == Panel.Controls && GUI.Button(new Rect(x + width * .5f - 180, y + height - 92, 360, 32),
+            VarginhaGamepadUI.EndScrollView();
+            if (panel == Panel.Controls && VarginhaGamepadUI.Button(new Rect(x + width * .5f - 180, y + height - 92, 360, 32),
                 "EDITAR CONTROLES DO TECLADO E MOUSE", buttonStyle))
                 OpenPanel(Panel.Keybinds);
-            if (GUI.Button(new Rect(x + width * .5f - 100, y + height - 55, 200, 34), "VOLTAR", buttonStyle))
+            if (VarginhaGamepadUI.Button(new Rect(x + width * .5f - 100, y + height - 55, 200, 34), "VOLTAR", buttonStyle))
                 panel = Panel.Settings;
         }
 
+        private void DrawPadBindingPicker()
+        {
+            VarginhaGamepadUI.Begin("key-picker",true,110);
+            float x=(Screen.width-600)/2f,y=(Screen.height-330)/2f;
+            PixelMenuTheme.Panel(new Rect(x,y,600,330));
+            GUI.Label(new Rect(x+30,y+24,540,42),"TECLA DO COMANDO",subtitleStyle);
+            GUI.Label(new Rect(x+30,y+75,540,45),VarginhaInputBindings.ActionName(_rebindingAction.Value)+": "+_padBinding,smallStyle);
+            if(VarginhaGamepadUI.Button(new Rect(x+30,y+135,255,45),"TECLA ANTERIOR",buttonStyle))_padBinding=(Key)Mathf.Max(1,(int)_padBinding-1);
+            if(VarginhaGamepadUI.Button(new Rect(x+315,y+135,255,45),"PRÓXIMA TECLA",buttonStyle))_padBinding=(Key)Mathf.Min((int)Key.OEM5,(int)_padBinding+1);
+            if(VarginhaGamepadUI.Button(new Rect(x+30,y+220,255,45),"CONFIRMAR",buttonStyle))
+            { VarginhaInputBindings.SetKeyboard(_rebindingAction.Value,_padBinding);_rebindingAction=null; }
+            if(VarginhaGamepadUI.Button(new Rect(x+315,y+220,255,45),"CANCELAR",buttonStyle))_rebindingAction=null;
+        }
         private void DrawKeybinds()
         {
             float width = Mathf.Min(820f, Screen.width - 32f);
@@ -162,7 +186,7 @@ namespace Game.Varginha
             Rect viewport = new Rect(x + 26, y + 88, width - 52, height - 158);
             float rowHeight = 45f;
             float contentHeight = Enum.GetValues(typeof(VarginhaInputAction)).Length * rowHeight + 12f;
-            _bindingsScroll = GUI.BeginScrollView(viewport, _bindingsScroll,
+            _bindingsScroll = VarginhaGamepadUI.BeginScrollView(viewport, _bindingsScroll,
                 new Rect(0f, 0f, viewport.width - 18f, contentHeight));
 
             Rect activeBindingRect = Rect.zero;
@@ -186,16 +210,16 @@ namespace Game.Varginha
                 if (Event.current.type == EventType.MouseDown
                     && (bindingScreenRect.Contains(Event.current.mousePosition) || resetScreenRect.Contains(Event.current.mousePosition)))
                     pointerOverKeybindControl = true;
-                string bindingText = _rebindingAction == action ? "PRESSIONE..." : VarginhaInputBindings.DisplayName(action);
-                if (GUI.Button(bindingRect, bindingText, buttonStyle))
+                string bindingText = _rebindingAction == action ? "PRESSIONE..." : VarginhaInputBindings.DisplayName(action,false);
+                if (VarginhaGamepadUI.Button(bindingRect, bindingText, buttonStyle))
                 {
-                    _rebindingAction = action;
+                    _rebindingAction = action;_padBinding=VarginhaInputBindings.GetKeyboard(action);
                     _rebindArmedFrame = Time.frameCount;
                 }
                 if (_rebindingAction == action)
                     activeBindingRect = bindingScreenRect;
 
-                if (GUI.Button(resetButton, "RESET", buttonStyle))
+                if (VarginhaGamepadUI.Button(resetButton, "RESET", buttonStyle))
                 {
                     VarginhaInputBindings.Reset(action);
                     if (_rebindingAction == action) _rebindingAction = null;
@@ -203,12 +227,12 @@ namespace Game.Varginha
                 if (_rebindingAction == action)
                     resetRect = resetScreenRect;
             }
-            GUI.EndScrollView();
+            VarginhaGamepadUI.EndScrollView();
 
             Rect backRect = new Rect(x + width * .5f - 125, y + height - 54, 250, 34);
             bool pointerOverBack = Event.current.type == EventType.MouseDown && backRect.Contains(Event.current.mousePosition);
             CaptureRebindInput(activeBindingRect, resetRect, pointerOverKeybindControl || pointerOverBack);
-            if (GUI.Button(backRect, "VOLTAR", buttonStyle))
+            if (VarginhaGamepadUI.Button(backRect, "VOLTAR", buttonStyle))
             {
                 _rebindingAction = null;
                 panel = Panel.Settings;
@@ -321,7 +345,7 @@ namespace Game.Varginha
                 GUI.Label(new Rect(card.x + 20, card.y + 24, 280, 35), titles[i], subtitleStyle);
                 GUI.color = Color.white;
                 GUI.Label(new Rect(card.x + 24, card.y + 75, 272, 140), descriptions[i], infoStyle);
-                if (GUI.Button(new Rect(card.x + 25, card.y + 235, 270, 40), "JOGAR NO " + titles[i], buttonStyle))
+                if (VarginhaGamepadUI.Button(new Rect(card.x + 25, card.y + 235, 270, 40), "JOGAR NO " + titles[i], buttonStyle))
                 {
                     if (Application.CanStreamedLevelBeLoaded(_pendingScene))
                     {
@@ -332,7 +356,7 @@ namespace Game.Varginha
                     }
                 }
             }
-            if (GUI.Button(new Rect(490, 580, 300, 40), "VOLTAR", buttonStyle)) panel = Panel.None;
+            if (VarginhaGamepadUI.Button(new Rect(490, 580, 300, 40), "VOLTAR", buttonStyle)) panel = Panel.None;
             GUI.matrix = previous;
         }
 

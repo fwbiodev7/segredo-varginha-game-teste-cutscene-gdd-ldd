@@ -4,7 +4,7 @@
 
 Trinta anos depois de uma noite esquecida, Edelzio encontra uma caixa que devolve perguntas sobre seu passado. Explore casas, a Escola Industrial, trilhas e laboratórios; converse com Renan, Padre Fábio e Ouzana; reúna pistas e conte com seus aliados quando a investigação se transformar em combate.
 
-**Em desenvolvimento · 15 fases em 5 atos · atualização: 07/10/2026.**
+**Em desenvolvimento · 14 fases em 5 atos · atualização: 07/10/2026.**
 
 [Site oficial](https://o-segredo-de-varginha.zfabiobrronaldo.chatgpt.site) · [Como começar](#como-começar) · [Controles](#controles) · [Ajuda para puzzles](#ajuda-para-puzzles) · [Reportar um problema](https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/issues)
 
@@ -43,26 +43,32 @@ Os mapas ilustrados e personagens atuais mantêm sua identidade. A luz local aju
 
 ## Controles
 
-Estes são os controles padrão. Os comandos de movimento, interação e combate podem ser remapeados em **Configurações → Controles → Remapear teclado e mouse**. A escolha fica salva entre as cenas.
+Estes são os controles padrão. Os comandos de movimento, interação e combate podem ser remapeados em **Configurações → Controles → Remapear teclado e mouse**. A escolha fica salva entre as cenas. Para o gamepad, abra **Configurações → Controles → Controle**: o desenho em pixel art mostra os comandos. Selecione uma ação, solte os botões e pressione o novo botão. A troca é salva automaticamente; botões repetidos trocam de ação. **Start ou Esc** cancela a captura. **Restaurar botões do controle** recupera o padrão. A/B nos menus, Start para pausa e os analógicos/D-Pad mantêm suas funções de navegação.
 
-| Ação | Teclado / mouse |
-| --- | --- |
-| Mover | WASD ou setas |
-| Correr | Shift esquerdo |
-| Examinar / conversar | E; Espaço e Enter também são aceitos nas interações correspondentes |
-| Caderno de pistas | Tab |
-| Mochila / equipamentos | G |
-| Dicas graduais, a partir da fase 2 | F1 ou **Preciso de uma dica** no caderno |
-| Pausar / voltar | Esc |
-| Atacar / encadear combo | Mouse esquerdo ou J |
-| Comandar aluno | Mouse direito ou L |
-| Comandar apoio / professor | H |
-| Esquivar | Ctrl esquerdo |
-| Pular, quando disponível | K |
-| Alternar lanterna equipada | V |
-| Usar os três alunos equipados na batalha da campanha | 1, 2 e 3 |
+| Ação | Teclado / mouse | Controle XInput |
+| --- | --- | --- |
+| Mover e navegar | WASD / setas; setas nos menus | Analógico esquerdo / D-Pad |
+| Correr | Shift esquerdo | LT |
+| Examinar / conversar / confirmar | E; Espaço / Enter onde já aceitos; mouse nos menus | A |
+| Fusca: entrar, estacionar, examinar e confirmar | **Somente W** | **A** |
+| Voltar / cancelar | Esc | B |
+| Pausa | Esc | Start |
+| Caderno de pistas | Tab | Back / View |
+| Mochila / equipamentos | G | Y |
+| Trocar abas da mochila | Tab | RB |
+| Dicas graduais | F1 ou **Preciso de uma dica** no caderno | Back → **Preciso de uma dica**, A |
+| Atacar / combo | Mouse esquerdo ou J | X |
+| Comandar aluno | Mouse direito ou L; 1, 2, 3 na batalha | LB |
+| Comandar apoio / professor | H | RB |
+| Esquivar / pular, quando liberados | Ctrl esquerdo / K | B / L3 |
+| Mirar no combate | Mouse | Analógico direito |
+| Alternar lanterna equipada | V | RT |
 
-Clique nos botões dos puzzles para selecionar ou trocar elementos e confirmar. Ações e equipamentos ficam disponíveis conforme a campanha. Os números dos alunos na batalha têm função própria; diferem da seleção de itens dos protótipos antigos.
+Nos puzzles, selecione peças e botões com o analógico/D-Pad e confirme com A, ou use o mouse. Todos os menus abrem com uma seleção; nos sliders, use esquerda/direita. Os prompts e os ícones de pausa, mochila e caderno acompanham o último dispositivo usado e o remapeamento. No padrão: E/A nas interações e W/A no Fusca. O controle usa deadzone de 20%. O teclado e mouse continuam disponíveis; **W do Fusca permanece fixo**, separado do remapeamento geral.
+
+Na mochila, use o analógico/D-Pad para selecionar um item, A para equipar/remover, RB para alternar abas e B/Y para fechar. Configure **Vibração: Ligada/Desligada** e intensidade nas configurações. A vibração termina ao fim do efeito, na pausa, na troca de cena e ao perder foco; dispositivos sem suporte são ignorados.
+
+Veja [configuração e teste do Redragon Harrow G808 no Editor](Docs/CampanhaOficial/CONTROLE_XINPUT.md).
 
 **No combate:** mantenha o ataque pressionado para encadear os socos, acompanhe os avisos no chão e saia da área antes do golpe. Na mochila, equipe três alunos e um apoio. Use as habilidades quando estiverem prontas; paredes, alcance e recarga influenciam o comando. A interface informa as ações disponíveis.
 
@@ -75,6 +81,7 @@ Abra **Configurações** no menu principal ou pela pausa durante a campanha.
 | Fácil / Médio / Difícil | Ajusta fases com combate; a abertura continua sem combate |
 | Legendas e tamanho | Ativa legendas e escolhe tamanho pequeno, médio ou grande |
 | Reduzir distorções e clarão | Reduz efeitos e adapta os trechos cinematográficos que usam essa opção |
+| Vibração / intensidade | Liga ou desliga os motores do controle e ajusta a intensidade |
 | Indicações de interação | Mostra ou oculta as indicações dos pontos investigáveis |
 | Áudio | Ajusta volume geral, música/ambiência, efeitos e vozes |
 | Vídeo | Resoluções 960×540, 1280×720, 1600×900 e 1920×1080; janela, janela sem bordas ou tela cheia |
@@ -89,16 +96,16 @@ Após mudar resolução ou modo de janela, use **Aplicar exibição**. No modo P
 | I — A Lembrança Volta | 1–3 | Infância, a caixa esquecida e pistas na Escola Industrial |
 | II — O Caminho da Capela | 4–6 | Fragmentos, trilhas e registros históricos |
 | III — Evidências que Mudam | 7–9 | Ouzana, reagentes e investigação de áreas conectadas |
-| IV — A Noite Esquecida | 10–12 | Memórias, arquivos e preparação dos equipamentos |
-| V — O Verdadeiro Segredo | 13–15 | Descobertas, confronto e desfecho |
+| IV — A Noite Esquecida | 10–11 | Arquivos e memórias |
+| V — O Verdadeiro Segredo | 12–14 | Descobertas, confronto e desfecho |
 
-A campanha tem um desfecho principal. Estes são os números apresentados ao jogador. Nomes de cenas e IDs antigos foram preservados para compatibilidade; áreas da oficina e do casarão não acrescentam capítulos à contagem de 15.
+A campanha tem um desfecho principal. Estes são os números apresentados ao jogador. Nomes de cenas e IDs antigos foram preservados para compatibilidade; áreas da oficina e do casarão não acrescentam capítulos à contagem de 14.
 
 ## Ajuda para puzzles
 
 Consulte primeiro o caderno com **Tab**. A partir da fase 2, use **F1** ou **Preciso de uma dica**. Cada puzzle oferece três níveis: orientação, local e solução. Avance apenas até a ajuda que deseja; abrir uma dica não resolve o puzzle nem altera o progresso.
 
-Para um passo a passo, abra o [guia completo de puzzles das 15 fases](Docs/CampanhaOficial/GUIA_COMPLETO_PUZZLES.md). **Contém spoilers, respostas e detalhes do final.** O guia usa a numeração atual e inclui equipe, reguladores, combate e retorno.
+Para um passo a passo, abra o [guia completo de puzzles das 14 fases](Docs/CampanhaOficial/GUIA_COMPLETO_PUZZLES.md). **Contém spoilers, respostas e detalhes do final.** O guia usa a numeração atual e inclui equipe, calibração final, combate e retorno.
 
 ## Salvamento e retomada
 
@@ -147,7 +154,8 @@ ProjectSettings/                 Configuração do projeto
 
 ## Documentação e estado da revisão
 
-- [Sequência atual e compatibilidade dos saves](Docs/CampanhaOficial/CAMPANHA_15_FASES.md) — inclui detalhes narrativos.
+- [Apresentação das atualizações: 6 slides em PowerPoint](Docs/Apresentacao/Atualizacoes_O_Segredo_de_Varginha_Alpha_Final.pptx), com notas para apresentar.
+- [Sequência atual e compatibilidade dos saves](Docs/CampanhaOficial/CAMPANHA_14_FASES.md) — inclui detalhes narrativos.
 - [Guia completo de puzzles](Docs/CampanhaOficial/GUIA_COMPLETO_PUZZLES.md) — contém spoilers.
 - [Iluminação e capturas no Unity](Docs/QAIluminacao20261007/README.md).
 - [Relatório de validação](Docs/CampanhaOficial/RELATORIO_15_FASES_20261007.md) e [evidências dos testes](Docs/CampanhaOficial/EVIDENCIAS_15_FASES_20261007.json).
@@ -155,8 +163,10 @@ ProjectSettings/                 Configuração do projeto
 - [GDD](Docs/GDD.md), [arquitetura](Docs/ARCHITECTURE.md) e [histórico de alterações](Docs/CHANGELOG.md).
 - [Arte e animações de Edelzio](Docs/EdelzioV3.md).
 
-Documentos antigos de 20/21 fases continuam como histórico. A sequência atual é de **15 fases em 5 atos**. Os testes automatizados verificam sistemas e percursos específicos; ainda faltam uma sessão manual completa, revisão visual em diferentes telas e avaliação de jogadores. O relatório informa a cobertura e os limites.
+Documentos antigos de 20/21 fases continuam como histórico. A sequência atual é de **14 fases em 5 atos**. Os testes automatizados verificam sistemas e percursos específicos; ainda faltam uma sessão manual completa, revisão visual em diferentes telas e avaliação de jogadores. O relatório informa a cobertura e os limites.
 
 ## Arte e créditos
 
 Os mapas ilustrados foram gerados com GPT e integrados ao projeto. Esta revisão preserva a composição dos mapas e a identidade dos personagens, ajustando a resposta dos sprites à iluminação. Referências e detalhes de arte estão nos documentos do projeto e na apresentação pública. A fonte do site usa a [licença SIL Open Font License](Website/dist/assets/FONT-LICENSE.txt).
+
+A revisão de portas, assentos, loading, pia e controle está detalhada no [relatório desta revisão](Docs/CampanhaOficial/RELATORIO_REVISAO_20261007.md), com a lista exata de arquivos e limites dos testes.

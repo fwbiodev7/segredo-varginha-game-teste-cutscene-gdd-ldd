@@ -1,10 +1,10 @@
 // Atualize apenas com materiais públicos e links oficiais confirmados.
 window.GAME_SITE = {
   name: 'O Segredo de Varginha',
-  version: 'Campanha de 15 fases',
+  version: 'Campanha de 14 fases',
   stage: 'Em desenvolvimento',
   updated: '07.10.2026',
-  available: '15 fases em 5 atos · do início ao desfecho',
+  available: '14 fases em 5 atos · do início ao desfecho',
   planned: 'Investigação · puzzles · aliados · combate',
   siteUrl: 'https://o-segredo-de-varginha.zfabiobrronaldo.chatgpt.site',
   download: null,
@@ -49,8 +49,10 @@ window.GAME_SITE = {
     }
   ],
   updates: [
+    { date: '07 OUT 2026', title: 'Seu controle, seus comandos', text: 'Configurações com desenho do controle em pixel art e remapeamento de botões. Pausa, mochila e caderno mostram os atalhos atuais. O Fusca original substitui o carro do cenário, com faróis e novas vistas direcionais.' },
+    { date: '07 OUT 2026', title: 'Controle e passagens revisados', text: 'Menus, investigação e combate recebem suporte a controles XInput, com prompts automáticos e vibração opcional. Portas, alunos sentados, a interação da pia e a transição para 2026 foram revisados. O Fusca usa W no teclado e A no controle, preservando sua arte.' },
     { date: '07 OUT 2026', title: 'Personagens na luz dos cenários', text: 'A arte dos personagens foi preservada. Luzes do mapa, lanterna e faróis agora contribuem para suas cores, volume e direção das sombras, acompanhando o movimento durante o jogo.' },
-    { date: '07 OUT 2026', title: 'Quinze fases. Uma investigação mais direta.', text: 'A campanha agora percorre cinco atos, com fotografia e código na mesma visita à Industrial, investigação conectada no casarão e menos tarefas repetidas. Estacionamento, aliados e combate final continuam na história.' },
+    { date: '07 OUT 2026', title: 'Quatorze fases. Uma investigação mais direta.', text: 'A campanha agora percorre cinco atos, com fotografia e código na mesma visita à Industrial, investigação conectada no casarão e menos tarefas repetidas. Estacionamento, aliados e combate final continuam na história.' },
     { date: '07 OUT 2026', title: 'Ajuda no seu ritmo', text: 'Dicas opcionais avançam da orientação à solução, só quando você pedir. O caderno reúne as evidências, os close-ups de investigação aguardam sua leitura e a dificuldade escolhida passa a valer também no combate final.' },
     { date: '04 OUT 2026', title: 'A investigação chega à oficina', text: 'O laboratório de Ouzana e a sequência da oficina receberam revisão de progressão. A chegada agora permite conduzir e estacionar o Fusca antes de examiná-lo.' },
     { date: '03 OUT 2026', title: 'Mais presença, menos interrupções', text: 'Interface com fonte e ícones em pixel art, pausa com fundo pixelizado, transições visuais e ajustes na escola. Personagens, poses e iluminação receberam melhorias.' }

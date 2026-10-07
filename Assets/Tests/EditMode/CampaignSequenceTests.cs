@@ -11,26 +11,26 @@ namespace Game.Tests.EditMode
     {
         private static string DetectPipeline() => GraphicsSettings.currentRenderPipeline == null ? "Built-in" : GraphicsSettings.currentRenderPipeline.GetType().FullName;
 
-        [Test] public void FifteenChaptersUseShippedScenesAndNeverEnterRemovedTasks()
+        [Test] public void FourteenChaptersUseShippedScenesAndNeverEnterRemovedTasks()
         {
             Debug.Log("CAMPAIGN_RENDER_PIPELINE="+DetectPipeline());
-            Assert.That(CampaignSequence.Entries.Length,Is.EqualTo(15));
-            Assert.That(CampaignSequence.Entries.Select(CampaignSequence.Chapter),Is.EqualTo(Enumerable.Range(1,15)));
+            Assert.That(CampaignSequence.Entries.Length,Is.EqualTo(14));
+            Assert.That(CampaignSequence.Entries.Select(CampaignSequence.Chapter),Is.EqualTo(Enumerable.Range(1,14)));
             var enabled=EditorBuildSettings.scenes.Where(s=>s.enabled).Select(s=>System.IO.Path.GetFileNameWithoutExtension(s.path)).ToArray();
             foreach(int id in CampaignSequence.Entries.Concat(new[]{10,13}))Assert.That(enabled,Does.Contain(CampaignStorySave.Scene(id)));
-            foreach(int id in new[]{3,5,16,19})Assert.That(enabled,Does.Not.Contain(CampaignStorySave.Scene(id)));
+            foreach(int id in new[]{3,5,16,17,19})Assert.That(enabled,Does.Not.Contain(CampaignStorySave.Scene(id)));
             int current=1,guard=0;
-            while(current!=21&&guard++<22){Assert.That(new[]{3,5,16,19}.Contains(current),Is.False);current=CampaignSequence.Next(current);}
-            Assert.That(current,Is.EqualTo(21));Assert.That(guard,Is.EqualTo(16),"15 chapters plus workshop and cellar areas.");
+            while(current!=21&&guard++<22){Assert.That(new[]{3,5,16,17,19}.Contains(current),Is.False);current=CampaignSequence.Next(current);}
+            Assert.That(current,Is.EqualTo(21));Assert.That(guard,Is.EqualTo(15),"14 chapters plus workshop and cellar areas.");
         }
 
-        [TestCase(3,4)] [TestCase(5,4)] [TestCase(16,17)] [TestCase(19,18)]
+        [TestCase(3,4)] [TestCase(5,4)] [TestCase(16,18)] [TestCase(17,18)] [TestCase(19,18)]
         public void LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(int before,int after)
         {
             var s=new CampaignStory{version=1,phase=before,positionPhase=before,x=4,y=2};
             s.continuation.clues[before>=11?before-11:0]=7;
             s.Repair();Assert.That(s.phase,Is.EqualTo(after));Assert.That(s.positionPhase,Is.Zero);
-            Assert.That(s.version,Is.EqualTo(2));string first=JsonUtility.ToJson(s);s.Repair();Assert.That(JsonUtility.ToJson(s),Is.EqualTo(first));
+            Assert.That(s.version,Is.EqualTo(3));string first=JsonUtility.ToJson(s);s.Repair();Assert.That(JsonUtility.ToJson(s),Is.EqualTo(first));
         }
 
         [Test] public void MigrationPreservesEvidencePuzzlesEquipmentVictoryAndCrossing()
@@ -73,7 +73,7 @@ namespace Game.Tests.EditMode
             story.continuation.solved[8]=true;Assert.That(story.continuation.AgreementComplete,Is.True);
         }
 
-        [TestCase(11,0)] [TestCase(12,1)] [TestCase(17,2)] [TestCase(20,0)] [TestCase(21,1)]
+        [TestCase(11,0)] [TestCase(12,1)]  [TestCase(20,0)] [TestCase(21,1)]
         public void ResumeAreaIsLimitedToScenesThatExist(int phase,int maximum)
         {
             var story=new CampaignStory{phase=phase,positionPhase=phase};story.continuation.area=2;story.Repair();
@@ -97,7 +97,7 @@ namespace Game.Tests.EditMode
             {
                 CampaignStorySave.Write(new CampaignStory{version=1,phase=3,positionPhase=3,boxFound=true,pagesSolved=true});
                 var migrated=CampaignStorySave.Load();Assert.That(migrated.phase,Is.EqualTo(4));Assert.That(migrated.pagesSolved,Is.True);
-                var disk=JsonUtility.FromJson<CampaignStory>(System.IO.File.ReadAllText(CampaignStorySave.Path));Assert.That(disk.version,Is.EqualTo(2));Assert.That(disk.positionPhase,Is.Zero);
+                var disk=JsonUtility.FromJson<CampaignStory>(System.IO.File.ReadAllText(CampaignStorySave.Path));Assert.That(disk.version,Is.EqualTo(3));Assert.That(disk.positionPhase,Is.Zero);
                 System.IO.File.SetLastWriteTimeUtc(CampaignStorySave.Path,new System.DateTime(2020,1,1,0,0,0,System.DateTimeKind.Utc));
                 var stamp=System.IO.File.GetLastWriteTimeUtc(CampaignStorySave.Path);
                 Assert.That(CampaignStorySave.Load().phase,Is.EqualTo(4));Assert.That(System.IO.File.GetLastWriteTimeUtc(CampaignStorySave.Path),Is.EqualTo(stamp));

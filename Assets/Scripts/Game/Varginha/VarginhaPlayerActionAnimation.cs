@@ -51,9 +51,15 @@ namespace Game.Varginha
         public IEnumerator WashFaceRoutine()
         {
             if (_isActing) yield break;
-            BeginAction(); _spriteAnimation?.SetActionPose("Edelzio_WashFace");
-            yield return new WaitForSeconds(1.05f);
-            _spriteAnimation?.ClearActionPose(); EndAction();
+            BeginAction();
+            try
+            {
+                if(Experiment.VarginhaCampaignStage.Active?.phase==2)
+                    yield return MoveToPosition(Experiment.CampaignAdultHouse.WashApproach,.28f);
+                _spriteAnimation?.SetActionPose("Edelzio_WashFace");
+                yield return new WaitForSeconds(1.65f);
+            }
+            finally { _spriteAnimation?.ClearActionPose(); EndAction(); }
         }
 
         public void PlayNotebookSession(Transform notebook, Action onReady)

@@ -238,16 +238,17 @@ namespace Game.Varginha
 
             _isRunning = VarginhaInputBindings.IsPressed(VarginhaInputAction.Run);
 
-            if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact))
-                TryInteract();
+            if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)||VarginhaInputActions.CarPressed)
+                TryInteract(true);
 
             // V key toggles the flashlight on/off if equipped in hotbar
             var kb = Keyboard.current;
-            if (kb != null && kb.vKey.wasPressedThisFrame && HasFlashlight && IsFlashlightEquippedInHotbar)
+            if (VarginhaInputActions.FlashlightPressed && HasFlashlight && IsFlashlightEquippedInHotbar)
                 ToggleFlashlight();
 
             if (IsGameplayBlocked) return;
-            _moveInput = new Vector2(x, y).normalized;
+            var movement = VarginhaInputActions.Move;
+            _moveInput = movement.sqrMagnitude > .0001f ? Vector2.ClampMagnitude(movement, 1) : new Vector2(x, y).normalized;
 
             if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Dodge)) TryDodge(_moveInput);
 
@@ -307,11 +308,14 @@ namespace Game.Varginha
             _nearestInteractable = closest;
         }
 
-        public void TryInteract()
+        public void TryInteract(bool requireInput=false)
         {
             if (IsGameplayBlocked || IsDodging) return;
             if (_nearestInteractable != null)
             {
+                bool car = _nearestInteractable.Type==PropType.FuscaVehicle;
+                if(requireInput && car && !VarginhaInputActions.CarPressed)return;
+                if(requireInput && !car && !VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact))return;
                 _nearestInteractable.Interact(this);
             }
         }

@@ -192,7 +192,8 @@ namespace Game.Varginha.Experiment
         {
             if (CampaignCinematics.IsTransitioning) return;
             if (!_ready) return;
-            if (Keyboard.current?.escapeKey.wasPressedThisFrame == true)
+            if(_paused&&_settings&&VarginhaInputActions.CancelPressed&&!VarginhaInputActions.PausePressed){_settings=false;return;}
+            if ((VarginhaInputActions.PausePressed || VarginhaInputActions.CancelPressed && (_paused || _stage!=Stage.Explore)))
             {
                 if (_dialogue != null) CloseDialogue(); else TogglePause();
             }
@@ -261,6 +262,7 @@ namespace Game.Varginha.Experiment
         private void OnApplicationPause(bool paused) { if (paused && _memory != null) Save(); }
         private void OnGUI()
         {
+            VarginhaGamepadUI.Begin("opening:"+GetEntityId()+":"+_stage+":"+_paused+":"+(_dialogue!=null),_paused||_dialogue!=null||_stage!=Stage.Explore,50);
             if (!_ready) return;
             ExperimentGUI.Init(); GUI.depth = -3100;
             if (_stage == Stage.Opening || _stage == Stage.ActTitle || _stage == Stage.Complete )

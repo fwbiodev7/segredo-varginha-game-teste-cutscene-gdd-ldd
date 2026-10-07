@@ -13,6 +13,8 @@ namespace Game.Tests.PlayMode
 {
     public class CampaignChaptersTests : InputTestFixture
     {
+        public override void Setup(){VarginhaInputActions.Shutdown();base.Setup();}
+        public override void TearDown(){VarginhaInputActions.Shutdown();base.TearDown();}
         private string _previousStory, _previousMemory;
         private static IEnumerator HoldKey(Keyboard keyboard,Key key,float seconds)
         {
@@ -143,14 +145,14 @@ namespace Game.Tests.PlayMode
         [UnityTest] public IEnumerator OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters()
         {
             var keyboard=InputSystem.AddDevice<Keyboard>();
-            foreach(int phase in new[]{2,10,17})
+            foreach(int phase in new[]{2,10,18})
             {
                 var story=new CampaignStory{phase=phase};story.expansion.workshopParked=true;
                 CampaignStorySave.Write(story);yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(phase));yield return new WaitForSeconds(3.3f);
                 var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
                 if(phase==2)Assert.That(VarginhaCampaignStage.Active.OpenHints(),Is.True);
                 if(phase==10){CampaignExpansionController.Active.ClosePanel();Assert.That(CampaignExpansionController.Active.OpenHints(),Is.True);}
-                if(phase==17){CampaignContinuationController.Active.CloseMessage();Assert.That(CampaignContinuationController.Active.OpenHints(),Is.True);}
+                if(phase==18){CampaignContinuationController.Active.CloseMessage();Assert.That(CampaignContinuationController.Active.OpenHints(),Is.True);}
                 yield return null;Assert.That(actor.IsInputLocked,Is.True);
                 Assert.That(CampaignStorySave.Load().continuation.solved[6],Is.False,"Reading hints cannot complete the chambers.");
                 InputSystem.QueueStateEvent(keyboard,new KeyboardState(Key.Escape));yield return null;

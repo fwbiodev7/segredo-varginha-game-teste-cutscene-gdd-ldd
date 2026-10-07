@@ -45,10 +45,8 @@ namespace Game.Varginha.Experiment
             var plan=CampaignMapPlan.Create(3);CampaignMapConstruction.Build(transform,plan);
             var car = new GameObject("Fusca_TopView_Campanha"); car.transform.SetParent(transform); _car = car.transform;
             _car.position = new Vector3(plan.spawn.x, _progress.driveDistance);
-            var texture = Resources.Load<Texture2D>("Varginha/IllustratedMaps/FuscaActors")??VarginhaExperimentArt.Load("FuscaTopView");
-            if (texture == null) throw new System.InvalidOperationException("Arte topview do Fusca ausente.");
             _carFrames = new Sprite[4];
-            for (int i = 0; i < 4; i++) _carFrames[i] = CampaignFuscaLighting.Frame(texture,i);
+            for (int i = 0; i < 4; i++) _carFrames[i] = CampaignOriginalFusca.Top(CampaignWorkshopVehicle.Facing.North,2f);
             _carSprite = _carFrames[1];
             _carRenderer = car.AddComponent<SpriteRenderer>(); _carRenderer.sprite = _carSprite; _carRenderer.sortingOrder = 5;
             _body = car.AddComponent<Rigidbody2D>(); _body.gravityScale = 0; _body.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -70,7 +68,7 @@ namespace Game.Varginha.Experiment
         private void Update()
         {
             if (CampaignCinematics.IsTransitioning) return;
-            if (Keyboard.current?.escapeKey.wasPressedThisFrame == true)
+            if ((VarginhaInputActions.PausePressed || VarginhaInputActions.CancelPressed && (_paused || _inspect)))
             { if (_inspect) _inspect = false; else TogglePause(); }
             if (_paused) return;
             if (_titleTime < 3) { _titleTime += Time.unscaledDeltaTime; return; }
@@ -84,6 +82,7 @@ namespace Game.Varginha.Experiment
                     _input.x = (keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed ? 1 : 0) - (keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed ? 1 : 0);
                     _input.y = (keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed ? 1 : 0) - (keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed ? 1 : 0);
                 }
+                if(VarginhaInputActions.Move.sqrMagnitude>0)_input=VarginhaInputActions.Move;
                 if (_progress.driveDistance >= 55 && _progress.inspection != 7) BreakDown();
                 if (_progress.driveDistance >= 120) { _progress.arrival = true; _state = State.Arrived; _radio.Stop(); _sound.Engine(false); Save(); }
                 _radio.volume = _progress.driveDistance < 25 ? .008f : .025f;
@@ -92,7 +91,7 @@ namespace Game.Varginha.Experiment
             else if (_state == State.Breakdown)
             {
                 _radio.Stop();
-                if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)) _inspect = true;
+                if (VarginhaInputActions.CarPressed) _inspect = true;
                 _sound.Engine(false);
                 if (_progress.inspection == 7 && !_inspect) { _state = State.Restart; _stateTime = 0; _frameTick = -1; Save(); }
             }
@@ -128,6 +127,7 @@ namespace Game.Varginha.Experiment
         public void Save() { if (_progress != null) CampaignStorySave.Write(_progress); }
         private void OnGUI()
         {
+            VarginhaGamepadUI.Begin("drive:"+GetEntityId(),true,50);
             ExperimentGUI.Init(); GUI.depth = -3100;
             if(_titleTime<3){CampaignChapterPreview.Draw(3,_titleTime);return;}
             if(_state==State.Arrived)CampaignChapterPreview.Background(4);
@@ -138,12 +138,12 @@ namespace Game.Varginha.Experiment
                 var facade = Resources.Load<Texture2D>(VarginhaIndustrialSchoolFacade.ResourcePath); if (facade != null) GUI.DrawTexture(new Rect(64, 110, 1152, 365), facade, ScaleMode.ScaleToFit);
                 ExperimentGUI.Panel(new Rect(150, 460, 980, 145));
                 ExperimentGUI.Label(new Rect(180, 481, 920, 90), "INDUSTRIAL • 2026\nO Fusca para em frente à escola. A rotina continua, mas você não consegue esquecer a pane.");
-                if (ExperimentGUI.Button(new Rect(420, 627, 440, 45), "ENTRAR • FASE 4")) CampaignStorySave.GoTo(4);
+                if (VarginhaGamepadUI.CarButton(new Rect(420, 627, 440, 45), "ENTRAR • FASE 4")) CampaignStorySave.GoTo(4);
             }
             else if (_inspect || _state == State.Restart) DrawInspection();
             else
             {
-                ExperimentGUI.Objective("ATO II • FASE 3 • 2026", "NÃO DEIXE ELA SAIR", _state == State.Breakdown ? "O motor parou. [E] examine ignição, rádio e painel."
+                ExperimentGUI.Objective("ATO II • FASE 3 • 2026", "NÃO DEIXE ELA SAIR", _state == State.Breakdown ? "O motor parou. ["+VarginhaInputActions.CarLabel+"] examine ignição, rádio e painel."
                     : _state == State.Restart ? "Silêncio. O motor recomeça sozinho..." : "W / ↑: ACELERAR • A/D: DIREÇÃO • S / ↓: RECUAR");
                 if (!_paused && CampaignHudIcons.Button(1174, CampaignHudIcons.Icon.Pause, "ESC", "Pausa")) TogglePause();
                 string signal = _progress.driveDistance < 25 ? "RÁDIO: previsão do tempo e notícias locais."
@@ -179,8 +179,8 @@ namespace Game.Varginha.Experiment
             if (_state != State.Restart)
             {
                 string[] parts={"IGNIÇÃO","RÁDIO","PAINEL"};
-                for(int i=0;i<3;i++) if(ExperimentGUI.Button(new Rect(110+i*245,630,230,47),parts[i]+((_progress.inspection & 1<<i)!=0 ? " • VISTO" : ""))) Inspect(i);
-                if(ExperimentGUI.Button(new Rect(875,630,295,47),_progress.inspection==7 ? "AGUARDAR O MOTOR" : "VOLTAR AO CARRO")) CloseInspection();
+                for(int i=0;i<3;i++) if(VarginhaGamepadUI.CarButton(new Rect(110+i*245,630,230,47),parts[i]+((_progress.inspection & 1<<i)!=0 ? " • VISTO" : ""))) Inspect(i);
+                if(VarginhaGamepadUI.CarButton(new Rect(875,630,295,47),_progress.inspection==7 ? "AGUARDAR O MOTOR" : "VOLTAR AO CARRO")) CloseInspection();
             }
         }
         private void OnApplicationPause(bool value) { if (value) Save(); }

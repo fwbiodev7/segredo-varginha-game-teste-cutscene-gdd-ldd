@@ -59,14 +59,14 @@ namespace Game.Varginha
             int carX = (int)Math.Round(-190f + arrival * 275f);
             float bounce = (float)Math.Sin(time * 14f) * 0.85f;
             int carY = (int)Math.Round(78f + bounce);
-            int carW = 168, carH = 94;
+            int carW = 168, carH = (int)Math.Round(carW * 53f / 99f);
 
             // Feixe volumétrico dos faróis iluminando a pista à frente
             DrawHeadlights(carX + carW - 25, carY + 60);
 
             // Fusca avançando na pista (alterna quadros para calotas girando)
             int frame = (tick / 3) % 2;
-            Blit(_car, carX, carY, carW, carH, frame * 100, 10, 100, 56);
+            Blit(_car, carX, carY, carW, carH, frame * 100 + 1, 12, 99, 53);
 
             // Fumaça sutil saindo do escapamento
             for (int i = 0; i < 4; i++)

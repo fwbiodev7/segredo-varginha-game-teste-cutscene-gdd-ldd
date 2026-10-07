@@ -197,7 +197,7 @@ namespace Game.Varginha
         public void SetActionPose(string poseId)
         {
             CurrentActionPose=poseId;ActionFrame=poseId=="Edelzio_UseNotebook"?1:0;
-            ActionFacingDirection = poseId == "Edelzio_WashFace" ? Vector2.up : poseId == "Edelzio_Sit" || poseId == "Edelzio_UseNotebook" ? _seatingFacing : Vector2.down;
+            ActionFacingDirection = poseId == "Edelzio_WashFace" ? Vector2.down : poseId == "Edelzio_Sit" || poseId == "Edelzio_UseNotebook" ? _seatingFacing : Vector2.down;
             _attackPose = false;
             EnsureFrames();
             IsSeated = poseId == "Edelzio_Sit" || poseId == "Edelzio_UseNotebook";

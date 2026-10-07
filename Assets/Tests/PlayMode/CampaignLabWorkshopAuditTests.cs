@@ -15,6 +15,8 @@ namespace Game.Tests.PlayMode
 {
     public class CampaignLabWorkshopAuditTests : InputTestFixture
     {
+        public override void Setup(){Game.Varginha.VarginhaInputActions.Shutdown();base.Setup();}
+        public override void TearDown(){Game.Varginha.VarginhaInputActions.Shutdown();base.TearDown();}
         private byte[] _storySave,_memorySave;
         private Keyboard _keyboard;
         private const BindingFlags Private=BindingFlags.Instance|BindingFlags.NonPublic;
@@ -70,18 +72,19 @@ namespace Game.Tests.PlayMode
                 float deadline=Time.realtimeSinceStartup+2;
                 while(Vector2.Distance(body.position-Vector2.up*.58f,waypoint)>.11f)
                 {
-                    Assert.That(Time.realtimeSinceStartup,Is.LessThan(deadline),"Movement blocked on route to "+id+" at "+waypoint+" from "+(body.position-Vector2.up*.58f));
+                    Assert.That(Time.realtimeSinceStartup,Is.LessThan(deadline),"Movement blocked on route to "+id+" at "+waypoint+" from "+(body.position-Vector2.up*.58f)+" panel="+Modal(stage,"_panel")+" message="+Modal(stage,"_message")+" locked="+actor.IsInputLocked);
                     Vector2 delta=waypoint-(body.position-Vector2.up*.58f);
-                    Key key=Mathf.Abs(delta.x)>Mathf.Abs(delta.y)?delta.x>0?Key.D:Key.A:delta.y>0?Key.W:Key.S;
+                    // W is now the explicit car command; arrows exercise movement separately.
+                    Key key=Mathf.Abs(delta.x)>Mathf.Abs(delta.y)?delta.x>0?Key.RightArrow:Key.LeftArrow:delta.y>0?Key.UpArrow:Key.DownArrow;
                     InputSystem.QueueStateEvent(_keyboard,new KeyboardState(key));yield return null;
                 }
             }
             InputSystem.QueueStateEvent(_keyboard,new KeyboardState());yield return null;yield return new WaitForFixedUpdate();
             var nearest=typeof(CampaignExpansionController).GetMethod("Nearest",Private).Invoke(stage,null);
             Assert.That(((CampaignMapPlan.Point)nearest)?.id,Is.EqualTo(id),"Physical approach chooses the visible target");
-            yield return KeyFor(Key.E,.06f);
+            yield return KeyFor(stage.phase==10?Key.W:Key.E,.06f);
             bool departing=(bool)typeof(CampaignExpansionController).GetField("_departing",Private).GetValue(stage);
-            Assert.That(Modal(stage,"_panel")!=null||Modal(stage,"_message")!=null||departing,Is.True,"E interacts with "+id);
+            Assert.That(Modal(stage,"_panel")!=null||Modal(stage,"_message")!=null||departing,Is.True,(stage.phase==10?"W":"E")+" interacts with "+id);
         }
 
         [UnityTest] public IEnumerator LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload()
@@ -159,7 +162,7 @@ namespace Game.Tests.PlayMode
             }
             InputSystem.QueueStateEvent(_keyboard,new KeyboardState());yield return new WaitForSeconds(.65f);
             Assert.That(vehicle.CanPark,Is.True,"Vehicle stopped inside the bay");
-            yield return KeyFor(Key.E,.06f);
+            yield return KeyFor(Key.W,.06f);
             actor=Object.FindAnyObjectByType<EdelzioTopDownController>();Assert.That(actor,Is.Not.Null);
             Assert.That(stage.Progress.expansion.workshopParked,Is.True);stage.ClosePanel();
             Assert.That(car.GetComponent<BoxCollider2D>().Distance(actor.GetComponent<CircleCollider2D>()).isOverlapped,Is.False);

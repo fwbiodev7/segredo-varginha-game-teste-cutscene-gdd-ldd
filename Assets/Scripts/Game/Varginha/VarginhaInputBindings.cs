@@ -85,6 +85,7 @@ namespace Game.Varginha
         public static bool IsPressed(VarginhaInputAction action)
         {
             EnsureLoaded();
+            if (VarginhaInputActions.Button(action).IsPressed()) return true;
             var keyboard = Keyboard.current;
             if (keyboard != null && GetKeyboard(action) != Key.None && keyboard[GetKeyboard(action)].isPressed)
                 return true;
@@ -95,6 +96,7 @@ namespace Game.Varginha
         public static bool WasPressedThisFrame(VarginhaInputAction action)
         {
             EnsureLoaded();
+            if (VarginhaInputActions.Button(action).WasPressedThisFrame()) return true;
             var keyboard = Keyboard.current;
             if (keyboard != null && GetKeyboard(action) != Key.None && keyboard[GetKeyboard(action)].wasPressedThisFrame)
                 return true;
@@ -128,8 +130,9 @@ namespace Game.Varginha
             Save(action);
         }
 
-        public static string DisplayName(VarginhaInputAction action)
+        public static string DisplayName(VarginhaInputAction action, bool device = true)
         {
+            if (device && VarginhaInputActions.UsingGamepad) return VarginhaInputActions.PadLabel(action);
             Key key = GetKeyboard(action);
             int mouse = GetMouseButton(action);
             if (mouse >= 0 && key != Key.None) return MouseName(mouse) + " + " + KeyName(key);
@@ -304,6 +307,7 @@ namespace Game.Varginha
             PlayerPrefs.SetInt(KeyPref(action), (int)_bindings[index].Keyboard);
             PlayerPrefs.SetInt(MousePref(action), _bindings[index].MouseButton);
             PlayerPrefs.Save();
+            VarginhaInputActions.Rebuild();
         }
     }
 }

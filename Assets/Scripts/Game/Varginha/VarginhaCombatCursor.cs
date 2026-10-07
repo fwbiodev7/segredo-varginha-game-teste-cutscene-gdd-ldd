@@ -58,10 +58,15 @@ namespace Game.Varginha
             }
 
             var mouse = Mouse.current;
-            if (mouse == null) return;
+            if (mouse == null && !VarginhaInputActions.UsingGamepad) return;
 
-            Vector2 mouseScreen = mouse.position.ReadValue();
-            if (_mainCamera != null)
+            Vector2 mouseScreen = mouse?.position.ReadValue()??Vector2.zero;
+            if(VarginhaInputActions.UsingGamepad)
+            {
+                var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
+                if(actor!=null){var aim=VarginhaInputActions.Aim;WorldAimPosition=(Vector2)actor.transform.position+(aim.sqrMagnitude>.01f?aim.normalized:actor.FacingDirection)*3;}
+            }
+            else if (_mainCamera != null)
             {
                 Vector3 world = _mainCamera.ScreenToWorldPoint(new Vector3(mouseScreen.x, mouseScreen.y, -_mainCamera.transform.position.z));
                 WorldAimPosition = new Vector2(world.x, world.y);

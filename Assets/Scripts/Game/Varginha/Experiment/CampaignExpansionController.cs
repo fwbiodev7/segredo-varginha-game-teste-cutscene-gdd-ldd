@@ -37,7 +37,7 @@ namespace Game.Varginha.Experiment
             : phase == 7 ? "Árvore → rio → capela. Use o esconderijo durante a perseguição."
             : phase == 8 ? "Cruze ano, símbolo e número no Livro do Tombo."
             : phase == 9 ? "Compare as leituras com Ouzana e receba o reagente para a oficina."
-            : _parking ? "Conduza o Fusca para a vaga na oficina. Pare voltado para cima e pressione E."
+            : _parking ? "Conduza o Fusca para a vaga na oficina. Pare voltado para cima e pressione "+VarginhaInputActions.CarLabel+"."
             : _departing ? "As marcas continuam. A investigação também."
             : "Use o reagente uma vez no Fusca para revelar as três marcas necessárias.";
         private void Awake()
@@ -59,6 +59,7 @@ namespace Game.Varginha.Experiment
             if (Progress.positionPhase == phase && Plan.IsClear(new Vector2(Progress.x, Progress.y - .58f))) _actor.transform.position = new Vector3(Progress.x, Progress.y);
             _sound = gameObject.AddComponent<CampaignSoundscape>(); _sound.Configure(phase == 7 ? "Forest" : phase == 8 ? "Church" : phase == 9 ? "Lab" : phase == 10 ? "Workshop" : "House", _actor);
             if (phase == 7) CreateEntity();
+            if(phase==9)CreateExitDoor();
             if (phase == 10)
             {
                 var car=transform.Find("Mapa_Campanha/02_Mobilia_Colisoes/Fusca");
@@ -80,6 +81,15 @@ namespace Game.Varginha.Experiment
             VarginhaWorldDepth.Ensure(renderer, ground: collider);
             return go;
         }
+        private void CreateExitDoor()
+        {
+            var point=Plan.points.Find(p=>p.id=="exit");point.label="PORTA DE SAÍDA • IR À OFICINA";
+            var go=new GameObject("Porta_de_saida_Ouzana");go.transform.SetParent(transform,false);
+            go.transform.position=point.position+Vector2.down*.22f;
+            var sr=go.AddComponent<SpriteRenderer>();sr.sprite=CampaignVisualAssets.Prop("Door");
+            float fit=1.1f/Mathf.Max(.01f,sr.sprite.bounds.size.x);go.transform.localScale=Vector3.one*fit;
+            VarginhaWorldDepth.Ensure(sr,offset:2);
+        }
         private void CreateEntity()
         {
             var go = new GameObject("Manifestação não combatível"); go.transform.SetParent(transform); go.transform.position = new Vector3(-8,2);
@@ -91,9 +101,10 @@ namespace Game.Varginha.Experiment
             if (CampaignCinematics.IsTransitioning) return;
             if (Progress == null) return;
             if (VarginhaGameHUD.Instance?.IsInventoryOpen == true) return;
-            if (Keyboard.current?.escapeKey.wasPressedThisFrame == true)
+            if(_paused&&_settings&&VarginhaInputActions.CancelPressed&&!VarginhaInputActions.PausePressed){_settings=false;return;}
+            if ((VarginhaInputActions.PausePressed || VarginhaInputActions.CancelPressed && (_paused || _message!=null || _panel!=null)))
             {
-                if (_message != null) _message = null;
+                if (_message != null && phase!=10) _message = null;
                 else if (_panel != null && _panel != "complete") _panel = null;
                 else TogglePause();
                 Lock();
@@ -115,12 +126,10 @@ namespace Game.Varginha.Experiment
             if (_departing) { Departure();return; }
             if (_driving) { Drive(); return; }
             if (Keyboard.current?.f1Key.wasPressedThisFrame == true) { OpenHints(); return; }
-            if (Keyboard.current?.tabKey.wasPressedThisFrame == true) { _panel = "journal"; Lock(); return; }
-            if (Keyboard.current?.gKey.wasPressedThisFrame == true) { OpenBackpack(); return; }
-            if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact))
-            {
-                var point = Nearest(); if (point != null) Interact(point.id);
-            }
+            if (VarginhaInputActions.JournalPressed) { _panel = "journal"; Lock(); return; }
+            if (VarginhaInputActions.InventoryPressed) { OpenBackpack(); return; }
+            var point=Nearest();
+            if(point!=null && (phase==10 ? VarginhaInputActions.CarPressed : VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact))) Interact(point.id);
             if (_hidden && (_actor.transform.position - (Vector3)(Plan.points.Find(p=>p.id=="hide").position+Vector2.up*.58f)).sqrMagnitude > 2) _hidden = false;
             if (phase == 7) Chase();
             _saveTimer += Time.deltaTime; if (_saveTimer > 5) { _saveTimer = 0; Save(); }
@@ -262,6 +271,7 @@ namespace Game.Varginha.Experiment
             var car = transform.Find("Mapa_Campanha/02_Mobilia_Colisoes/Fusca");
             float movement = (Keyboard.current?.dKey.isPressed == true || Keyboard.current?.rightArrowKey.isPressed == true ? 1 : 0)
                 - (Keyboard.current?.aKey.isPressed == true || Keyboard.current?.leftArrowKey.isPressed == true ? 1 : 0);
+            if(VarginhaInputActions.Move.sqrMagnitude>0)movement=VarginhaInputActions.Move.x;
             _vehicle.SetPosition(new Vector2(Mathf.Clamp(car.position.x + movement * Time.deltaTime * 4,-8,8),-4.5f));
             if(movement!=0)_vehicle.SetFacing(movement<0?CampaignWorkshopVehicle.Facing.West:CampaignWorkshopVehicle.Facing.East);
             if (car.position.x < 7.5f) return;
@@ -326,6 +336,7 @@ namespace Game.Varginha.Experiment
         }
         private void OnGUI()
         {
+            VarginhaGamepadUI.Begin("expansion:"+GetEntityId()+":"+_panel+":"+_paused+":"+(_message!=null),_panel!=null||_message!=null||_paused,50,phase==10&&!_paused&&(_message!=null||_panel=="complete"||_panel=="seal"));
             if (Progress == null) return;
             if (VarginhaGameHUD.Instance?.IsInventoryOpen == true) return;
             GUI.depth = -3100;
@@ -357,7 +368,7 @@ namespace Game.Varginha.Experiment
             else if (_parking)
             {
                 ExperimentGUI.Panel(new Rect(190,648,900,50));
-                ExperimentGUI.Label(new Rect(210,660,870,30),_vehicle.CanPark?"[E] ESTACIONAR E SAIR DO FUSCA":"WASD / SETAS • CONDUZIR     E • ESTACIONAR     ESC • PAUSA",small:true);
+                ExperimentGUI.Label(new Rect(210,660,870,30),_vehicle.CanPark?"["+VarginhaInputActions.CarLabel+"] ESTACIONAR E SAIR DO FUSCA":(VarginhaInputActions.UsingGamepad?"ANALÓGICO / D-PAD • CONDUZIR     A • ESTACIONAR     START • PAUSA":"WASD / SETAS • CONDUZIR     W • ESTACIONAR     ESC • PAUSA"),small:true);
             }
             else if (_driving) ExperimentGUI.Label(new Rect(200,620,950,70), "A / D OU SETAS • conduza até o fim da pista. ESC • pausa");
             else
@@ -366,7 +377,7 @@ namespace Game.Varginha.Experiment
                 {
                 ExperimentGUI.Panel(new Rect(190,648,900,50));
                 ExperimentGUI.Label(new Rect(210,660,870,30), _hidden ? "ABRIGADO • E: sair • mover-se abandona o abrigo"
-                    : point == null ? "WASD / SETAS • ANDAR     E • EXAMINAR" : "[E] " + point.label, small:true);
+                    : point == null ? "WASD / SETAS • ANDAR     E • EXAMINAR" : "["+(phase==10?VarginhaInputActions.CarLabel:VarginhaInputActions.InteractLabel)+"] "+point.label, small:true);
                 }
             }
             if (phase == 7) ExperimentGUI.Label(new Rect(35,158,610,40), "SANIDADE " + Mathf.RoundToInt(_actor.CurrentSanity) + " • MARCAS " + State.forestSigns + "/3",small:true);
@@ -376,7 +387,7 @@ namespace Game.Varginha.Experiment
             {
                 ExperimentGUI.Panel(new Rect(150,395,980,235));
                 ExperimentGUI.Caption(new Rect(180,420,920,145),_message,VarginhaGameSettings.Current.subtitleSize);
-                if (ExperimentGUI.Button(new Rect(820,570,270,42),"CONTINUAR")) { _message = null; Lock(); }
+                if (phase==10 ? VarginhaGamepadUI.CarButton(new Rect(820,570,270,42),"CONTINUAR") : ExperimentGUI.Button(new Rect(820,570,270,42),"CONTINUAR")) { _message = null; Lock(); }
             }
             if (_paused)
             {
@@ -403,7 +414,7 @@ namespace Game.Varginha.Experiment
                 ExperimentGUI.Label(new Rect(165,175,950,55),phase==9?"ANÁLISE CONCLUÍDA • IR À OFICINA":"FASE " + CampaignSequence.Chapter(phase) + " CONCLUÍDA",true);
                 ExperimentGUI.Label(new Rect(165,250,950,155),phase == 10 ? "O rádio recebe uma ligação. Renan: Edelzio, preciso que você volte. A imagem está diferente da que imprimimos. A cópia em papel conservou o detalhe anterior."
                     : "Pistas e progresso salvos. Próxima etapa: " + CampaignSequence.Title(CampaignSequence.Next(phase)) + ".");
-                if (ExperimentGUI.Button(new Rect(365,465,550,50),CampaignSequence.ContinueLabel(phase))) { Save(); CampaignStorySave.GoTo(CampaignSequence.Next(phase)); }
+                if (phase==10 ? VarginhaGamepadUI.CarButton(new Rect(365,465,550,50),CampaignSequence.ContinueLabel(phase)) : ExperimentGUI.Button(new Rect(365,465,550,50),CampaignSequence.ContinueLabel(phase))) { Save(); CampaignStorySave.GoTo(CampaignSequence.Next(phase)); }
                 if (ExperimentGUI.Button(new Rect(365,535,550,45),"SALVAR E VOLTAR AO MENU")) Menu(); return;
             }
             if (_panel == "hints") CampaignHints.Draw(Progress,phase,ref _hintLevel);

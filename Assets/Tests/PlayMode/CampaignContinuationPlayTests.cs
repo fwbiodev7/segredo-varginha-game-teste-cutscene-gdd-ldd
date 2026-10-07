@@ -15,6 +15,8 @@ namespace Game.Tests.PlayMode
 {
     public class CampaignContinuationPlayTests : InputTestFixture
     {
+        public override void Setup(){VarginhaInputActions.Shutdown();base.Setup();}
+        public override void TearDown(){VarginhaInputActions.Shutdown();base.TearDown();}
         string saved;bool background;
         [SetUp] public void PreserveSave(){saved=File.Exists(CampaignStorySave.Path)?File.ReadAllText(CampaignStorySave.Path):null;background=Application.runInBackground;Application.runInBackground=true;}
         [TearDown] public void RestoreSave(){Time.timeScale=1;Application.runInBackground=background;if(saved!=null)File.WriteAllText(CampaignStorySave.Path,saved);else if(File.Exists(CampaignStorySave.Path))File.Delete(CampaignStorySave.Path);}
@@ -194,10 +196,10 @@ namespace Game.Tests.PlayMode
         [UnityTest,Timeout(180000)] public IEnumerator InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions()
         {
             var route=new System.Collections.Generic.List<Vector2>();
-            foreach(int phase in new[]{11,12,13,14,15,17,18})
+            foreach(int phase in new[]{11,12,13,14,15,18})
             {
                 CampaignStorySave.Write(new CampaignStory{phase=phase});
-                int areas=phase==12?2:phase==17?3:1;
+                int areas=phase==12?2:1;
                 for(int area=0;area<areas;area++)
                 {
                     var progress=CampaignStorySave.Load();progress.continuation.area=area;CampaignStorySave.Write(progress);
@@ -220,21 +222,14 @@ namespace Game.Tests.PlayMode
                     if(phase==11){c.Interact("renan");c.CloseMessage();}
                     if(phase==14){c.Interact("fabio");c.CloseMessage();}
                     var definition=CampaignContinuationDefinition.Get(phase,area);
-                    if(phase==17){c.Interact("reading"+area);c.CloseMessage();c.Interact("diagram");c.CloseMessage();c.Interact("hide");c.CloseMessage();}
-                    else foreach(var id in definition.ids){c.Interact(id);c.CloseMessage();}
+                    foreach(var id in definition.ids){c.Interact(id);c.CloseMessage();}
                     if(phase==12&&area==0)
                     {
                         c.Interact("entrance");yield return new WaitUntil(()=>CampaignContinuationController.Active!=null&&CampaignContinuationController.Active.area==1);
                         yield return new WaitForSeconds(2.3f);CampaignContinuationController.Active.CloseMessage();
                     }
-                    if(phase==17&&area<2)
-                    {
-                        c.Interact("next");int target=area+1;
-                        yield return new WaitUntil(()=>CampaignContinuationController.Active!=null&&CampaignContinuationController.Active.area==target);
-                    }
                 }
                 var current=CampaignContinuationController.Active;
-                if(phase==17){current.State.chamberValues=new[]{0,2,1};Assert.That(current.State.ChambersStable,Is.True);}
                 var finalDefinition=CampaignContinuationDefinition.Get(phase,current.area);
                 Assert.That(current.Submit(0,System.Linq.Enumerable.Range(0,finalDefinition.cards.Length).ToArray()),Is.True,"Puzzle "+phase);
                 yield return new WaitForSeconds(3.1f);current.CloseMessage();

@@ -23,6 +23,7 @@ namespace Game.Varginha.Experiment
             for(int i=0;i<3;i++)if((e.truthClues&(1<<i))!=0)entries.Add(new[]{"DEPOIMENTO • Um relato foi retirado da reportagem de 1996.","RELATÓRIO • Veículo sem placa próximo ao clarão.","1898 • Zé Gomes registrou a contenção na região da mata."}[i]);
             for(int phase=11;phase<=21;phase++)
             {
+                if(phase==17)continue; // Removed scene; serialized evidence slots remain untouched.
                 var d=CampaignContinuationDefinition.Get(phase);
                 for(int i=0;i<d.documents.Length;i++)if((story.continuation.clues[phase-11]&(1<<i))!=0)
                     entries.Add(d.labels[i]+" • "+d.documents[i]);
@@ -36,9 +37,9 @@ namespace Game.Varginha.Experiment
         public static void Draw(CampaignStory story, ref Vector2 scroll, Rect bounds)
         {
             var entries=Entries(story);
-            scroll=GUI.BeginScrollView(bounds,scroll,new Rect(0,0,bounds.width-25,Mathf.Max(bounds.height,entries.Count*190)));
+            scroll=VarginhaGamepadUI.BeginScrollView(bounds,scroll,new Rect(0,0,bounds.width-25,Mathf.Max(bounds.height,entries.Count*190)));
             for(int i=0;i<entries.Count;i++)ExperimentGUI.Label(new Rect(10,i*190+5,bounds.width-55,180),entries[i],small:true);
-            GUI.EndScrollView();
+            VarginhaGamepadUI.EndScrollView();
         }
     }
 }

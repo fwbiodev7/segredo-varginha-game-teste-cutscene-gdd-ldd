@@ -12,6 +12,8 @@ namespace Game.Tests.PlayMode
 {
     public class VarginhaCampaignTests : InputTestFixture
     {
+        public override void Setup(){Game.Varginha.VarginhaInputActions.Shutdown();base.Setup();}
+        public override void TearDown(){Game.Varginha.VarginhaInputActions.Shutdown();base.TearDown();}
         private string _memoryBefore,_storyBefore;
         [SetUp]public void PreserveSaves()
         {

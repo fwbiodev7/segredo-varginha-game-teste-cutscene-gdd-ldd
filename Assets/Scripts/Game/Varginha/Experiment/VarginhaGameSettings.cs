@@ -11,6 +11,9 @@ namespace Game.Varginha.Experiment
         public float master = .8f, music = .55f, effects = .75f, voice = .8f;
         public int resolution = 1, display = 1, frameRate = 60, difficulty = 1, subtitleSize = 1;
         public bool vsync = true, subtitles = true, reducedMotion, interactionHints = true;
+        public bool vibration = true;
+        public float vibrationIntensity = .65f;
+        public int inputVersion = 1;
         public void Validate()
         {
             master = Mathf.Clamp01(master); music = Mathf.Clamp01(music);
@@ -18,6 +21,7 @@ namespace Game.Varginha.Experiment
             resolution = Mathf.Clamp(resolution, 0, 3); display = Mathf.Clamp(display, 0, 2);
             difficulty = Mathf.Clamp(difficulty, 0, 2); subtitleSize = Mathf.Clamp(subtitleSize, 0, 2);
             frameRate = frameRate == 120 ? 120 : 60;
+            vibrationIntensity = Mathf.Clamp01(vibrationIntensity);
         }
     }
     public static class VarginhaGameSettings
@@ -32,7 +36,9 @@ namespace Game.Varginha.Experiment
                 if (_current != null) return _current;
                 try { _current = JsonUtility.FromJson<GameSettingsData>(PlayerPrefs.GetString(Key, "")); }
                 catch (ArgumentException) { _current = null; }
-                _current ??= new GameSettingsData(); _current.Validate(); return _current;
+                _current ??= new GameSettingsData();
+                if(_current.inputVersion<1){_current.vibration=true;_current.vibrationIntensity=.65f;_current.inputVersion=1;}
+                _current.Validate(); return _current;
             }
         }
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
@@ -66,6 +72,9 @@ namespace Game.Varginha.Experiment
         }
         public static bool Draw(Action controls = null)
         {
+            if(VarginhaInputActions.CancelPressed)return true;
+            bool enabled=GUI.enabled;GUI.enabled=enabled&&!VarginhaGamepadBindings.Suspended;
+            VarginhaGamepadUI.Begin("settings:"+SceneManager.GetActiveScene().name+":"+_tab,true,100);
             ExperimentGUI.Init(); var matrix = ExperimentGUI.BeginCanvas();
             ExperimentGUI.Panel(new Rect(120, 70, 1040, 585));
             ExperimentGUI.Label(new Rect(155, 92, 900, 45), "CONFIGURAÇÕES", true);
@@ -76,7 +85,11 @@ namespace Game.Varginha.Experiment
             string old = JsonUtility.ToJson(settings);
             if (_tab == 0)
             {
-                ExperimentGUI.Label(new Rect(175, 222, 900, 55), "WASD / setas: andar • Shift: correr\nE / Espaço: examinar • Esc: pausar", small: true);
+                CampaignControllerSettings.DrawTabs();
+                if(CampaignControllerSettings.ControllerView) CampaignControllerSettings.Draw();
+                else
+                {
+                ExperimentGUI.Label(new Rect(175, 263, 900, 35), "WASD / setas: andar • Shift: correr • E: examinar • W: Fusca", small: true);
                 if (controls != null && ExperimentGUI.Button(new Rect(175, 300, 890, 48), "REMAPEAR TECLADO E MOUSE")) controls();
                 else if (controls == null) ExperimentGUI.Label(new Rect(175, 300, 890, 48), "Remapeamento completo disponível nas configurações do menu principal.", small: true);
                 ExperimentGUI.Label(new Rect(175, 378, 890, 35), "DIFICULDADE DAS FASES COM COMBATE", small: true);
@@ -84,6 +97,7 @@ namespace Game.Varginha.Experiment
                 for (int i = 0; i < 3; i++) if (ExperimentGUI.Button(new Rect(175 + i * 297, 420, 280, 45),
                     (settings.difficulty == i ? "• " : "") + names[i])) settings.difficulty = i;
                 ExperimentGUI.Label(new Rect(175, 486, 890, 38), "A infância do Ato I não possui combate, independentemente da dificuldade.", small: true);
+                }
             }
             else if (_tab == 1)
             {
@@ -111,17 +125,20 @@ namespace Game.Varginha.Experiment
                 settings.reducedMotion = Toggle(295, "REDUZIR DISTORÇÕES E CLARÃO", settings.reducedMotion);
                 settings.interactionHints = Toggle(360, "INDICAÇÕES DE INTERAÇÃO", settings.interactionHints);
                 string[] sizes = { "PEQUENA", "MÉDIA", "GRANDE" };
-                if (ExperimentGUI.Button(new Rect(175, 425, 890, 42), "TAMANHO DAS LEGENDAS: " + sizes[settings.subtitleSize])) settings.subtitleSize = (settings.subtitleSize + 1) % 3;
+                if (ExperimentGUI.Button(new Rect(175, 417, 890, 38), "TAMANHO DAS LEGENDAS: " + sizes[settings.subtitleSize])) settings.subtitleSize = (settings.subtitleSize + 1) % 3;
+                settings.vibration = Toggle(468, "VIBRAÇÃO", settings.vibration);
+                settings.vibrationIntensity = Slider(522, "INTENSIDADE DA VIBRAÇÃO", settings.vibrationIntensity);
+                if(!settings.vibration)VarginhaRumble.Stop();
             }
             if (old != JsonUtility.ToJson(settings)) Save();
             if (ExperimentGUI.Button(new Rect(155, 580, 370, 45), "RESTAURAR CONFIGURAÇÕES")) { _current = new GameSettingsData(); Save(); }
             bool close = ExperimentGUI.Button(new Rect(745, 580, 370, 45), "VOLTAR");
-            GUI.matrix = matrix; return close;
+            GUI.matrix = matrix; GUI.enabled=enabled; return close;
         }
         private static float Slider(float y, string label, float value)
         {
             ExperimentGUI.Label(new Rect(175, y, 390, 36), label + " " + Mathf.RoundToInt(value * 100) + "%", small: true);
-            return GUI.HorizontalSlider(new Rect(590, y + 12, 475, 28), value, 0, 1);
+            return VarginhaGamepadUI.HorizontalSlider(new Rect(590, y + 12, 475, 28), value, 0, 1);
         }
         private static bool Toggle(float y, string label, bool value)
         {

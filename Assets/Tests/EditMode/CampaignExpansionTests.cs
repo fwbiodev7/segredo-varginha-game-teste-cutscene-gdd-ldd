@@ -178,7 +178,7 @@ namespace Game.Tests.EditMode
                     else Assert.That(map.Find("02_Mobilia_Colisoes/"+prop.name).GetComponent<Collider2D>(),Is.Null);
                 if(phase==4||phase==10)
                     Assert.That(map.Find("02_Mobilia_Colisoes/Fusca").GetComponent<SpriteRenderer>().sprite.texture,
-                        Is.EqualTo(Resources.Load<Texture2D>("Varginha/IllustratedMaps/"+CampaignIllustratedMaps.Get(phase).image)));
+                        Is.SameAs(CampaignOriginalFusca.Top(CampaignWorkshopVehicle.Facing.North).texture));
             }
             finally{Object.DestroyImmediate(root);}
         }

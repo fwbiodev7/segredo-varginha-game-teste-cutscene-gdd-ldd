@@ -23,7 +23,7 @@ namespace Game.Varginha.Experiment
         private int[] _order;
         private float _title,_saveTimer;
         private CampaignSoundscape _sound;
-        private CampaignManifestationCombat _boss,_pursuer;
+        private CampaignManifestationCombat _boss;
         private CampaignFinalAllies _allies;
         private SpriteRenderer _entity;
         private SpriteRenderer _portal;
@@ -39,7 +39,6 @@ namespace Game.Varginha.Experiment
         private string _memoryCaption;
         private float _memoryTime;
         public bool CreditsVisible=>_creditsVisible;
-        private float _shelterUntil,_pursuitAt;
         private readonly Sprite[,] _childFrames=new Sprite[4,3];
         public bool Childhood=>phase==15||phase==19;
         public Vector2 Feet=>(Vector2)Actor.transform.position-(Childhood?Vector2.zero:Vector2.up*.58f);
@@ -66,14 +65,6 @@ namespace Game.Varginha.Experiment
             if(Childhood){LoadChild();CreateChildhoodPresence();}
             if(phase==14)NPC("Padre Fábio",VarginhaReferenceSprites.PadreFabio(),Plan.points.Find(p=>p.id=="fabio").position);
             if(phase==16){NPC("Padre Fábio",CampaignFinalAllies.PortraitForFinalScene(2),Plan.spawn+Vector2.left*.8f);NPC("Ouzana",CampaignFinalAllies.Portrait(1),Plan.spawn+Vector2.right*.8f);}
-            if(phase==17)
-            {
-                _pursuitAt=Time.time+12;
-                var glyph=new GameObject("Símbolo_"+new[]{"Árvore","Rio","Capela"}[area]);glyph.transform.SetParent(transform);
-                glyph.transform.position=Plan.points.Find(p=>p.id=="reading"+area).position+Vector2.up*.9f;
-                var sr=glyph.AddComponent<SpriteRenderer>();sr.sprite=CampaignReagentMarks.FrameSprite(area);sr.sortingOrder=22000;
-                glyph.transform.localScale=Vector3.one*.65f;
-            }
             if(phase==18||phase==21&&area==0)
             {
                 var entityPoint=Plan.points.Find(p=>p.id==(phase==18?"wounds":"entity"));
@@ -117,6 +108,7 @@ namespace Game.Varginha.Experiment
                 var student=NPC(VarginhaPhase2Controller.StudentNames[i],VarginhaStudentSprites.Frame(VarginhaPhase2Controller.StudentNames[i],3,0),point,false);
                 var chair=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/Cadeira azul "+indexes[i])?.GetComponent<SpriteRenderer>();
                 CampaignSeatingLayers.Attach(student.GetComponent<SpriteRenderer>(),chair,true);
+                if(chair!=null){var feet=student.GetComponent<CircleCollider2D>();point=student.transform.TransformPoint(feet.offset);}
                 Plan.points.Add(new CampaignMapPlan.Point("student"+i,VarginhaPhase2Controller.StudentNames[i]+" • CONVERSAR",point.x,point.y));
             }
             // Revisit the same frontage and classroom; night colour affects this new scene only.
@@ -144,12 +136,13 @@ namespace Game.Varginha.Experiment
             if(_creditsVisible)
             {
                 _creditsTime+=Time.unscaledDeltaTime;Actor.SetInputLocked(true);
-                if(_creditsTime>.8f&&(Keyboard.current?.escapeKey.wasPressedThisFrame==true||Gamepad.current?.startButton.wasPressedThisFrame==true||VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)))Menu();
+                if(_creditsTime>.8f&&(VarginhaInputActions.PausePressed||VarginhaInputActions.CancelPressed||VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)))Menu();
                 return;
             }
             if(VarginhaGameHUD.Instance?.IsGameOver==true){Actor.SetInputLocked(true);return;}
             if(VarginhaGameHUD.Instance?.IsInventoryOpen==true)return;
-            if(Keyboard.current?.escapeKey.wasPressedThisFrame==true||Gamepad.current?.startButton.wasPressedThisFrame==true)
+            if(_paused&&_settings&&VarginhaInputActions.CancelPressed&&!VarginhaInputActions.PausePressed){_settings=false;return;}
+            if((VarginhaInputActions.PausePressed||VarginhaInputActions.CancelPressed && (_paused || _message!=null || _panel!=null)))
             {
                 if(_message!=null)CloseMessage();else if(_panel!=null)_panel=null;else TogglePause();
             }
@@ -160,26 +153,17 @@ namespace Game.Varginha.Experiment
             {
                 if(_resumeBattlePending){_resumeBattlePending=false;StartBattle();Actor.SetInputLocked(true);return;}
                 if(Keyboard.current?.f1Key.wasPressedThisFrame==true){OpenHints();return;}
-                if(Keyboard.current?.tabKey.wasPressedThisFrame==true||Gamepad.current?.selectButton.wasPressedThisFrame==true)_panel="journal";
-                if(Keyboard.current?.gKey.wasPressedThisFrame==true||Gamepad.current?.buttonNorth.wasPressedThisFrame==true)VarginhaGameHUD.Instance?.OpenBackpack();
-                if(VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)) {var point=Nearest();if(point!=null)Interact(point.id);}
+                if(VarginhaInputActions.JournalPressed)_panel="journal";
+                if(VarginhaInputActions.InventoryPressed)VarginhaGameHUD.Instance?.OpenBackpack();
+                if(VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)||VarginhaInputActions.CarPressed) {var point=Nearest();if(point!=null && (point.id=="car"?VarginhaInputActions.CarPressed:VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)))Interact(point.id);}
                 _saveTimer+=Time.deltaTime;if(_saveTimer>5){_saveTimer=0;Save();}
             }
-            if(phase==17)Pursuit();
             if(phase==20&&_boss!=null&&_boss.Defeated&&!State.manifestationDispelled)
             {
                 _boss.ClearMinions();State.manifestationDispelled=true;State.solved[9]=State.finalCalibrated;_allies.CombatActive=false;
                 Save();StartCoroutine(ExitBattle());
             }
             Actor.SetInputLocked(Modal);
-        }
-        private void Pursuit()
-        {
-            if(Modal)return;
-            if(_pursuer==null&&Time.time>=_pursuitAt&&Time.time>=_shelterUntil)
-                _pursuer=CampaignManifestationCombat.Spawn(transform,Actor,Plan,Plan.points.Find(p=>p.id=="reading"+area).position,true);
-            if(_pursuer!=null&&(Time.time<_shelterUntil||_pursuer.Defeated||Time.time>=_pursuitAt+7))
-            {Destroy(_pursuer.gameObject);_pursuer=null;_pursuitAt=Time.time+18;}
         }
         public void StartBattle()
         {
@@ -283,18 +267,12 @@ namespace Game.Varginha.Experiment
                 if(station>=0){State.chambersPrepared|=1<<station;ReadEvidence(station);if(State.chambersPrepared==7)StartBattle();}
                 else if(id=="exit"||id=="procedure") {if(State.manifestationDispelled)_panel=State.finalCalibrated?"complete":"calibration";else Say("Prepare os três circuitos e dissipe a manifestação para alcançar a entidade com segurança.");}Save();return;
             }
-            if(phase==17)
-            {
-                if(id=="diagram") { for(int i=0;i<3;i++)State.Read(17,i); ReadEvidence(3); return; }
-                if(id=="previous"||id=="next"){ChangeArea((area+(id=="previous"?2:1))%3);return;}
-                if(id=="hide"){_shelterUntil=Time.time+8;Say("O abrigo interrompe a aproximação. Observe o caminho antes de sair.");return;}
-            }
             if(phase==14&&id=="fabio"){State.Read(14,7);Say("Fábio: Estes são os registros que escondemos. Compare o início do mecanismo, a transferência de 1996 e a falha atual. A página ocultada está no Tombo.");Save();return;}
             if(phase==14&&(id=="page"||id=="timeline")&&(State.clues[3]&128)==0){Say("Apresente os registros do casarão a Fábio primeiro.");return;}
             if(id=="timeline"){OpenPuzzle();return;}
             if(phase==12&&id=="entrance"){ChangeArea(1);return;}
-            if(phase==12&&area==1&&id=="exit"){if(State.serviceRevealed&&State.serviceKey){State.solved[1]=true;Save();CampaignStorySave.GoTo(13);}else ChangeArea(0);return;}
-            if(phase==13&&id=="ground"){Save();CampaignStorySave.GoTo(12,1);return;}
+            if(phase==12&&area==1&&id=="garden"){ChangeArea(0);return;}
+            if(phase==13&&id=="ground"){Save();var entry=CampaignContinuationDefinition.Plan(12,1).points.Find(p=>p.id=="service").position+Vector2.down*.5f;CampaignStorySave.GoTo(12,1,entry);return;}
             if(phase==12&&id=="service")
             {
                 if(!State.serviceRevealed||!State.serviceKey)Say("A planta indica uma porta aqui. Revele o contorno com reagente e procure a chave no escritório.");
@@ -320,7 +298,13 @@ namespace Game.Varginha.Experiment
             Save();Actor.SetInputLocked(Modal);
         }
         private void ChangeArea(int target)
-        {Save();State.area=target;Progress.positionPhase=0;CampaignStorySave.Write(Progress);CampaignCinematics.Load(CampaignContinuationDefinition.SceneName(phase,target));}
+        {
+            Save();State.area=target;
+            var next=CampaignContinuationDefinition.Plan(phase,target);
+            Vector2 feet=target==0?next.points.Find(p=>p.id=="entrance").position+Vector2.down*.85f:next.spawn;
+            Progress.positionPhase=phase;Progress.x=feet.x;Progress.y=feet.y+.58f;
+            CampaignStorySave.Write(Progress);CampaignCinematics.Load(CampaignContinuationDefinition.SceneName(phase,target));
+        }
         private void MarkService()
         {
             if(transform.Find("Marca_da_passagem")!=null)return;
@@ -334,7 +318,7 @@ namespace Game.Varginha.Experiment
         {if(!State.HasAll(phase,_definition.required))Say("Ainda faltam evidências: "+_definition.goal);else {_panel="puzzle";_selected=_choice=-1;}}
         public bool Submit(int choice,int[] order=null)
         {
-            bool correct=State.HasAll(phase,_definition.required)&&(phase==17?State.ChambersStable:_definition.choice?choice==0:CampaignStory.Sequence(order,_identity()));
+            bool correct=State.HasAll(phase,_definition.required)&&(_definition.choice?choice==0:CampaignStory.Sequence(order,_identity()));
             if(!correct){Say("A combinação não corresponde aos registros. As pistas continuam no caderno.");return false;}
             State.solved[phase-11]=true;_panel=null;
             if(phase==18) { State.solved[8]=true; State.clues[8]|=15; }
@@ -440,6 +424,7 @@ namespace Game.Varginha.Experiment
         {_paused=!_paused;_settings=false;Time.timeScale=_paused?0:1;CampaignCinematics.Pause(_paused);_sound?.Suspend(_paused);Actor.SetInputLocked(Modal);}
         private void OnGUI()
         {
+            VarginhaGamepadUI.Begin("continuation:"+GetEntityId()+":"+_panel+":"+_paused+":"+(_message!=null),_panel!=null||_message!=null||_paused,50);
             if(Progress?.continuation==null||Actor==null||VarginhaGameHUD.Instance?.IsInventoryOpen==true)return;
             _definition??=CampaignContinuationDefinition.Get(phase,area);
             ExperimentGUI.Init();var matrix=ExperimentGUI.BeginCanvas();
@@ -482,7 +467,7 @@ namespace Game.Varginha.Experiment
                     ExperimentGUI.Box(new Rect(385,hudTop+40,510,16),new Color(.15f,.08f,.12f));ExperimentGUI.Box(new Rect(385,hudTop+40,510*_boss.HealthPercent,16),new Color(.73f,.19f,.24f));
                     ExperimentGUI.Label(new Rect(385,hudTop+61,510,18),_boss.CanReceiveHit?"VULNERÁVEL • ATAQUE AGORA":"OBSERVE O AVISO E DESVIE",small:true);
                     _allies?.DrawCommands(365,hudTop+94);
-                    ExperimentGUI.Label(new Rect(365,hudTop+145,550,32),"ESQUIVA: "+VarginhaInputBindings.DisplayName(VarginhaInputAction.Dodge)+" • PRÓXIMO ALUNO: "+(Gamepad.current!=null?"LB":VarginhaInputBindings.DisplayName(VarginhaInputAction.AllyCommand)),small:true);
+                    ExperimentGUI.Label(new Rect(365,hudTop+145,550,32),"ESQUIVA: "+VarginhaInputBindings.DisplayName(VarginhaInputAction.Dodge)+" • PRÓXIMO ALUNO: "+(VarginhaInputActions.UsingGamepad?"LB":VarginhaInputBindings.DisplayName(VarginhaInputAction.AllyCommand)),small:true);
                 }
                 if(phase==20)
                 {
@@ -495,7 +480,7 @@ namespace Game.Varginha.Experiment
                         ExperimentGUI.Box(new Rect(hudLeft+20,hudTop+62,230,12),new Color(.15f,.08f,.12f));ExperimentGUI.Box(new Rect(hudLeft+20,hudTop+62,230*health.HealthPercent,12),new Color(.23f,.74f,.51f));
                     }
                 }
-                if(!Modal&&VarginhaGameSettings.Current.interactionHints){var point=Nearest();if(point!=null){ExperimentGUI.Panel(new Rect(160,620,960,70));string label=phase==21&&area==0&&(point.id=="procedure"||point.id=="exit")?new[]{"ABRIR PASSAGEM DE RETORNO","AGUARDAR A TRAVESSIA","ENCERRAR O SELO","O ACORDO TERMINOU","VOLTAR À INDUSTRIAL"}[State.finalStep]:point.label;ExperimentGUI.Label(new Rect(180,639,920,36),"["+VarginhaInputBindings.DisplayName(VarginhaInputAction.Interact)+"] "+label,small:true);}}
+                if(!Modal&&VarginhaGameSettings.Current.interactionHints){var point=Nearest();if(point!=null){ExperimentGUI.Panel(new Rect(160,620,960,70));string label=phase==21&&area==0&&(point.id=="procedure"||point.id=="exit")?new[]{"ABRIR PASSAGEM DE RETORNO","AGUARDAR A TRAVESSIA","ENCERRAR O SELO","O ACORDO TERMINOU","VOLTAR À INDUSTRIAL"}[State.finalStep]:point.label;ExperimentGUI.Label(new Rect(180,639,920,36),"["+(point.id=="car"?VarginhaInputActions.CarLabel:VarginhaInputActions.InteractLabel)+"] "+label,small:true);}}
             }
             if(_paused)
             {
@@ -558,10 +543,6 @@ namespace Game.Varginha.Experiment
             else if(_panel=="puzzle")
             {
                 ExperimentGUI.Label(new Rect(145,250,990,95),_definition.question);
-                if(phase==17)
-                {
-                    DrawRegulators(false);return;
-                }
                 for(int i=0;i<_order.Length;i++)
                 {
                     int value=_definition.choice?i:_order[i];float w=960f/_order.Length;
@@ -570,17 +551,6 @@ namespace Game.Varginha.Experiment
                 }
                 if(ExperimentGUI.Button(new Rect(755,500,360,45),"CONFIRMAR"))Submit(_choice,_order);
             }
-            if(ExperimentGUI.Button(new Rect(145,570,360,40),"VOLTAR À EXPLORAÇÃO"))_panel=null;
-        }
-        private void DrawRegulators(bool calibration)
-        {
-            for(int i=0;i<3;i++)
-            {
-                ExperimentGUI.Label(new Rect(145+i*320,355,300,55),new[]{"ÁRVORE","RIO","CAPELA"}[i]+" • LEITURA "+State.ChamberReading(i),small:true);
-                if(ExperimentGUI.Button(new Rect(145+i*320,425,300,45),"GIRAR • "+State.chamberValues[i])){State.TurnChamber(i);Save();}
-            }
-            if(ExperimentGUI.Button(new Rect(755,500,360,45),calibration?"CALIBRAR RETORNO":"VALIDAR ESTABILIDADE"))
-            {if(calibration)SubmitReturnCalibration();else Submit(0);}
             if(ExperimentGUI.Button(new Rect(145,570,360,40),"VOLTAR À EXPLORAÇÃO"))_panel=null;
         }
         private void Menu(){Save();Time.timeScale=1;CampaignCinematics.Load("Menu_MisterioDeVarginha");}

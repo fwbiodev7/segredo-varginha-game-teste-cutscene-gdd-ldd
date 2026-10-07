@@ -12,7 +12,7 @@ namespace Game.Tests.EditMode
             for(int i=0;i<4;i++)
             {
                 var sprite=CampaignWorkshopVehicle.FrameSprite((CampaignWorkshopVehicle.Facing)i);
-                Assert.That(sprite.texture,Is.SameAs(first.texture));Assert.That(sprite.texture.isReadable,Is.False);
+                Assert.That(sprite.name,Does.StartWith("Fusca_Original_Top"));Assert.That(sprite.texture.isReadable,Is.False);
                 Assert.That(sprite.texture.filterMode,Is.EqualTo(FilterMode.Point));
                 Assert.That(sprite,Is.SameAs(CampaignWorkshopVehicle.FrameSprite((CampaignWorkshopVehicle.Facing)i)));
                 Assert.That(Mathf.Max(sprite.bounds.size.x,sprite.bounds.size.y),Is.EqualTo(3.9f).Within(.01f));

@@ -28,7 +28,6 @@ namespace Game.Varginha.Experiment
                 case 13:tips=new[]{"A contenção respondeu a um problema anterior.","Compare páginas, fotografias e materiais na mesa de investigação.","Organize DESCOBERTA → EXPERIÊNCIAS → RUPTURA → CONTENÇÃO."};break;
                 case 14:tips=new[]{"As três datas mostram como a ligação permaneceu.","Apresente as provas a Fábio e compare os registros no Tombo.","Ordene 1898 • MECANISMO → 1996 • EDELZIO, SELO VIVO → 2026 • FALHA DA LIGAÇÃO."};break;
                 case 15:tips=new[]{"A presença apareceu depois que a energia falhou.","Compare TV, desenho, falta de energia e presença no quintal.","Organize NOTÍCIA → DESENHO → FALTA DE ENERGIA → PRESENÇA."};break;
-                case 16:case 17:tips=Circuits();break;
                 case 18:case 19:tips=new[]{"Retorno e contenção têm funções diferentes.","Compare registros humanos, ferimentos e leituras; a memória explica o acordo temporário.","Organize ESTABILIZAR → ABRIR RETORNO → ENTIDADE ATRAVESSA → ENCERRAR LIGAÇÃO."};break;
                 case 20:tips=s.continuation.manifestationDispelled
                     ?s.continuation.finalCalibrated?new[]{"O caminho seguro foi preparado.","A calibração está confirmada.","Siga pela saída para abrir a passagem de retorno."}:new[]{"A dissipação permite preparar o retorno.","No mecanismo, mantenha o selo de Edelzio ativo e ajuste as referências 3, 1, 2.","Use reguladores ÁRVORE 1, RIO 0, CAPELA 1; mantenha o selo ATIVO e valide o retorno seguro."}
@@ -38,7 +37,6 @@ namespace Game.Varginha.Experiment
             }
             return tips[Mathf.Clamp(level,0,2)];
         }
-        private static string[] Circuits()=>new[]{"Cada regulador afeta duas leituras.","O diagrama reúne as leituras. Ajuste os três reguladores no painel central.","Leituras ÁRVORE 1, RIO 2, CAPELA 0: use reguladores ÁRVORE 0, RIO 2, CAPELA 1 e confirme a estabilidade ou a calibração."};
         public static void Draw(CampaignStory story,int id,ref int level)
         {
             ExperimentGUI.Label(new Rect(145,250,980,55),level==2?"SOLUÇÃO • SPOILER":"DICA "+(level+1)+" DE 3",true);

@@ -63,9 +63,9 @@ namespace Game.Varginha.Experiment
     if(keyboard?.digit1Key.wasPressedThisFrame==true)Squad.TryInvokeSelectedAttack(0);
     else if(keyboard?.digit2Key.wasPressedThisFrame==true)Squad.TryInvokeSelectedAttack(1);
     else if(keyboard?.digit3Key.wasPressedThisFrame==true)Squad.TryInvokeSelectedAttack(2);
-    else if(VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.AllyCommand)||pad?.leftShoulder.wasPressedThisFrame==true)Squad.TryInvokeAttack(null);
+    else if(VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.AllyCommand))Squad.TryInvokeAttack(null);
    }
-   if(SelectedSupport>=0&&(VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.SupportCommand)||pad?.rightShoulder.wasPressedThisFrame==true))InvokeSupport(SelectedSupport);
+   if(SelectedSupport>=0&&VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.SupportCommand))InvokeSupport(SelectedSupport);
    if(Time.time<shieldUntil)foreach(var e in Object.FindObjectsByType<CampaignManifestationCombat>())if(e.IsMinor&&Vector2.Distance(e.transform.position,shieldCentre)<2.6f)e.Repel(shieldCentre,Time.deltaTime*3);
   }
   public bool InvokeSupport(int i){if(!Running||i<0||i>2||Cooldown(i)>0||Squad.CommandInProgress||Time.time<commandBusyUntil)return false;commandBusyUntil=Time.time+1;ready[i]=Time.time+(i==2?12:8);captionUntil[i]=Time.time+1.6f;captionPositions[i]=player.transform.position+Vector3.up*2.3f;StartCoroutine(Present(i));return true;}
@@ -84,7 +84,7 @@ namespace Game.Varginha.Experiment
     }
     else
     {
-     label=(Gamepad.current!=null?"RB":VarginhaInputBindings.DisplayName(VarginhaInputAction.SupportCommand))+" • "+(SelectedSupport<0?"APOIO":Names[SelectedSupport]);
+     label=VarginhaInputBindings.DisplayName(VarginhaInputAction.SupportCommand)+" • "+(SelectedSupport<0?"APOIO":Names[SelectedSupport]);
      status=SelectedSupport<0?"EQUIPE NA MOCHILA":Cooldown(SelectedSupport)>0?"RECARGA "+Mathf.CeilToInt(Cooldown(SelectedSupport))+"s":"PRONTO";
     }
     PixelMenuTheme.Label(new Rect(rect.x+8,rect.y+5,rect.width-16,19),label.ToUpperInvariant(),7,ExperimentGUI.Paper);

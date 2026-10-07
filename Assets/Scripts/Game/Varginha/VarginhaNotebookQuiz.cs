@@ -79,6 +79,7 @@ namespace Game.Varginha
 
         private void OnGUI()
         {
+            VarginhaGamepadUI.Begin("quiz:"+GetEntityId(),_isOpen,80);
             if (Game.Varginha.VarginhaTravelCinematic.IsTravelling) return;
             if (!_isOpen) return;
             if (_questionIndex < 0 || _questionIndex >= _questions.Length)
@@ -150,7 +151,7 @@ namespace Game.Varginha
             {
                 Rect answerRect = new Rect(buttonX, firstButtonY + i * (buttonHeight + 8f * scale), buttonWidth, buttonHeight);
                 PixelHUDFrame.Draw(answerRect, _pixel, new Color(.025f, .10f, .16f), new Color(.10f, .40f, .54f));
-                if (GUI.Button(answerRect, GUIContent.none, GUIStyle.none))
+                if (VarginhaGamepadUI.Button(answerRect, GUIContent.none, GUIStyle.none))
                 {
                     Answer(i);
                     GUI.depth = 0;
@@ -164,7 +165,7 @@ namespace Game.Varginha
             GUI.Label(new Rect(terminal.x + 14f * scale, terminal.y + 30f * scale, terminal.width - 180f * scale, terminal.height - 32f * scale), $"> {_feedback}", _feedbackStyle);
             Rect exitRect = new Rect(terminal.xMax - 108f * scale, terminal.y + terminal.height - 29f * scale, 92f * scale, 20f * scale);
             PixelHUDFrame.Draw(exitRect, _pixel, new Color(.13f, .04f, .06f), new Color(.62f, .20f, .25f));
-            if (GUI.Button(exitRect, GUIContent.none, GUIStyle.none))
+            if (VarginhaGamepadUI.Button(exitRect, GUIContent.none, GUIStyle.none))
                 Close();
             GUI.Label(exitRect, "SAIR", _buttonStyle);
 

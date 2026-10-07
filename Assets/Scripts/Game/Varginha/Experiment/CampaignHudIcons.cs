@@ -14,6 +14,7 @@ namespace Game.Varginha.Experiment
 
         public static bool Button(float x, Icon icon, string key, string description)
         {
+            key=KeyLabel(icon);
             if (_texture == null) _texture = Resources.Load<Texture2D>("Varginha/Interface/StoryHudIcons");
             if (_atlas == null)
             {
@@ -42,7 +43,13 @@ namespace Game.Varginha.Experiment
                 ExperimentGUI.Panel(tooltip);
                 PixelMenuTheme.Label(tooltip, description, 9, PixelMenuTheme.Paper, TextAnchor.MiddleCenter);
             }
-            return GUI.Button(rect, new GUIContent("", description), GUIStyle.none);
+            return VarginhaGamepadUI.Button(rect, new GUIContent("", description), GUIStyle.none);
         }
+        public static string KeyLabel(Icon icon) => icon switch
+        {
+            Icon.Notebook=>VarginhaInputActions.JournalLabel,
+            Icon.Backpack=>VarginhaInputActions.InventoryLabel,
+            _=>VarginhaInputActions.PauseLabel
+        };
     }
 }

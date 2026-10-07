@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 38a7f3f663587534e9d1d5098b54ddb8
+guid: c696f30cc0437c14597f425a2abf1d7b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3078557491648522241
-    second: Continuation17_0
+      213: -3738960478776666256
+    second: FuscaOriginal_0
+  - first:
+      213: 2062280153326680276
+    second: FuscaOriginal_1
+  - first:
+      213: 2918599602451357509
+    second: FuscaOriginal_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -38,7 +44,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: 0
+    aniso: 1
     mipBias: 0
     wrapU: 1
     wrapV: 1
@@ -54,8 +60,8 @@ TextureImporter:
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
-  alphaUsage: 0
-  alphaIsTransparency: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
   spriteTessellationMethod: 0
   spriteTessellationDetail: -1
   spriteGeometrySubdivision: -1
@@ -102,13 +108,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Continuation17_0
+      name: FuscaOriginal_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 476
-        height: 289
+        y: 34
+        width: 101
+        height: 55
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,8 +123,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 108e35e4abb39ba20800000000000000
-      internalID: 3078557491648522241
+      spriteID: 077da41214b8c1cc0800000000000000
+      internalID: -3738960478776666256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaOriginal_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 34
+        width: 101
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d8ff5e7fd0be9c10800000000000000
+      internalID: 2062280153326680276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FuscaOriginal_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 35
+        width: 100
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54f95b100e2f08820800000000000000
+      internalID: 2918599602451357509
       vertices: []
       indices: 
       edges: []
@@ -137,7 +187,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Continuation17_0: 3078557491648522241
+      FuscaOriginal_0: -3738960478776666256
+      FuscaOriginal_1: 2062280153326680276
+      FuscaOriginal_2: 2918599602451357509
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

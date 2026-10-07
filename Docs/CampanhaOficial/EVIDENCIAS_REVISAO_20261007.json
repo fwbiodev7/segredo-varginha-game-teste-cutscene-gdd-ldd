@@ -1,0 +1,317 @@
+{
+  "startup_smoke": {
+    "exceptions": 0,
+    "running": true,
+    "scope": "Inicialização do executável Windows, sem jogada manual completa",
+    "engine_initialized": true,
+    "input_initialized": true
+  },
+  "date": "2026-10-07",
+  "baseline": "910a790",
+  "unity": "6000.6.0f1",
+  "editmode": {
+    "total": 99,
+    "passed": 99,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "playmode": {
+    "distinct_cases": 45,
+    "passed": 45,
+    "runs": [
+      {
+        "file": "Campaign14FinalPlayResults.json",
+        "summary": {
+          "total": 45,
+          "passed": 44,
+          "failed": 1,
+          "skipped": 0,
+          "inconclusive": 0
+        },
+        "duration": 408.78
+      },
+      {
+        "file": "WorkshopFinalResults.json",
+        "summary": {
+          "total": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "inconclusive": 0
+        },
+        "duration": 44.87
+      },
+      {
+        "file": "HeadlightsFinalRequestedResults.json",
+        "summary": {
+          "total": 5,
+          "passed": 5,
+          "failed": 0,
+          "skipped": 0,
+          "inconclusive": 0
+        },
+        "duration": 37.98
+      }
+    ],
+    "final_cases": [
+      {
+        "name": "Game.Tests.PlayMode.CampaignChaptersTests.AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignChaptersTests.MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignChaptersTests.OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignChaptersTests.PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ArenaNavigationSpawnPoolAndDefeatAllowRetry",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignControllerRemapTests.CancelAndDisconnectRestoreInputsWithoutChangingBindings",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignControllerRemapTests.CaptureWaitsForOpeningButtonReleaseAndResumesAfterNewButtonRelease",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignControllerRemapTests.ControllerDiagramAppearsInSettingsAndCanBeNavigatedWithoutMouse",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignControllerRemapTests.HudLabelsFollowDeviceAndRemapping",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignControllerRemapTests.RemappingSwapsConflictsAndSurvivesActionRebuild",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.ActualCharacterReceivesMovingLightAndItsShadowUsesTheSameDirection",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.CharactersCreatedAfterSixSecondsStillReceiveMapLighting",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.EquippedFlashlightLightsACharacterButStopsAtScenery",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.FuscaHeadlightsFollowTheCarAndRegisterOnlyWhileSwitchedOn",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaDepartsAfterMarksWithoutRequiringTrack",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload",
+        "status": "Passed",
+        "source": "WorkshopFinalResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload",
+        "status": "Passed",
+        "source": "WorkshopFinalResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt",
+        "status": "Passed",
+        "source": "WorkshopFinalResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent",
+        "status": "Passed",
+        "source": "WorkshopFinalResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignRequestedChangesTests.DeadzoneCarIsolationAndLastDevicePrompts",
+        "status": "Passed",
+        "source": "HeadlightsFinalRequestedResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignRequestedChangesTests.OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations",
+        "status": "Passed",
+        "source": "HeadlightsFinalRequestedResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignRequestedChangesTests.RealMenuSettingsAndCancelWorkWithoutMouse",
+        "status": "Passed",
+        "source": "HeadlightsFinalRequestedResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignRequestedChangesTests.RumbleExpiresAndUnsupportedDevicesNeverThrow",
+        "status": "Passed",
+        "source": "HeadlightsFinalRequestedResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.CampaignRequestedChangesTests.SchoolSeatingAndFaceWashKeepSourceArtAndStopCleanly",
+        "status": "Passed",
+        "source": "HeadlightsFinalRequestedResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.VarginhaCampaignTests.AlienBurstKnocksTheChildBackAndLeavesHimLyingWithNoMemory",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      },
+      {
+        "name": "Game.Tests.PlayMode.VarginhaCampaignTests.OpeningHandsControlToChildWithoutCombatAndPauseRestoresInput",
+        "status": "Passed",
+        "source": "Campaign14FinalPlayResults.json"
+      }
+    ]
+  },
+  "build": {
+    "result": "Succeeded",
+    "output": "C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Builds/jogo_varginha_build_alpha/jogo_varginha_build_alpha.exe",
+    "unity": "6000.6.0f1",
+    "bytes": 294944887,
+    "seconds": 84.4864304,
+    "errors": 0,
+    "warnings": 1,
+    "scenes": [
+      "Assets/Scenes/Menu_MisterioDeVarginha.unity",
+      "Assets/Scenes/Ato1_Fase1_O_Caso_de_Varginha.unity",
+      "Assets/Scenes/Ato2_Fase2_A_Chave_e_a_Caixa.unity",
+      "Assets/Scenes/Ato2_Fase4_Entre_Aulas_e_Pistas.unity",
+      "Assets/Scenes/Ato3_Fase6_Fragmentos.unity",
+      "Assets/Scenes/Ato3_Fase7_A_Mata.unity",
+      "Assets/Scenes/Ato3_Fase8_A_Ancora.unity",
+      "Assets/Scenes/Ato4_Fase9_Ouzana.unity",
+      "Assets/Scenes/Ato4_Fase11_Arquivos_Alterados.unity",
+      "Assets/Scenes/Ato4_Fase12_Casarao_de_Ze_Gomes.unity",
+      "Assets/Scenes/Ato5_Fase14_O_Que_Fabio_Escondeu.unity",
+      "Assets/Scenes/Ato5_Fase15_A_Noite_Interrompida.unity",
+      "Assets/Scenes/Ato6_Fase18_A_Criatura_Ferida.unity",
+      "Assets/Scenes/Ato6_Fase20_O_Verdadeiro_Segredo.unity",
+      "Assets/Scenes/Ato6_Fase21_O_Retorno.unity",
+      "Assets/Scenes/Ato4_Fase10_O_Fusca_Marcado.unity",
+      "Assets/Scenes/Ato4_Fase13_Registros_de_1898.unity",
+      "Assets/Scenes/Ato4_Fase12_Casarao_de_Ze_Gomes_Area1.unity",
+      "Assets/Scenes/Ato6_Fase21_O_Retorno_Area1.unity"
+    ]
+  },
+  "original_fusca_sha256": "048dfd8c37a00d2fc84407871ea931f81927efd71bc69d50c733a549292f7344",
+  "physical_gamepad": "Usuário confirmou funcionamento nesta conversa; motores e novo remapeamento físico não verificados automaticamente."
+}

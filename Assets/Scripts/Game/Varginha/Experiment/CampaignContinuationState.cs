@@ -39,9 +39,6 @@ namespace Game.Varginha.Experiment
         }
         public bool HasAll(int phase,int count) => (clues[phase-11]&((1<<count)-1))==((1<<count)-1);
         public void Read(int phase,int index) => clues[phase-11] |= 1<<index;
-        public int ChamberReading(int chamber)=>(chamberValues[chamber]+chamberValues[(chamber+2)%3])%3;
-        public bool ChambersStable=>ChamberReading(0)==1&&ChamberReading(1)==2&&ChamberReading(2)==0;
-        public void TurnChamber(int chamber)=>chamberValues[chamber]=(chamberValues[chamber]+1)%3;
         public void TurnFinalRegulator(int index)
         {
             finalRegulators[index]=(finalRegulators[index]+1)%4;

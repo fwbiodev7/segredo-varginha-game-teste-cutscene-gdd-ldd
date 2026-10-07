@@ -70,10 +70,6 @@ namespace Game.Varginha.Experiment
                     new[]{"scheme","water","panel","supplies"},new[]{"ESQUEMA PRESERVADO","ÁREA INUNDADA","PAINEL DE MANUTENÇÃO","SUPRIMENTOS DE OUZANA"},
                     new[]{"O esquema separa dois circuitos: passagem norte e área inundada. A alimentação da porta pode ser ligada sem energizar a água.","Os condutores expostos entram na água. Este circuito precisa permanecer desligado enquanto a passagem recebe alimentação.","PAINEL: desviar alimentação para PASSAGEM; manter ÁREA INUNDADA desligada. O circuito geral não é seguro.","Ouzana deixou reagente e as leituras essenciais. Renan preservou cópias do mapa e do arquivo; nenhum documento opcional é exigido para o retorno."},
                     "Qual circuito abre a passagem sem energizar a água?",new[]{"PASSAGEM LIGADA • ÁGUA DESLIGADA","CIRCUITO GERAL LIGADO","ÁGUA LIGADA • PASSAGEM DESLIGADA"},"A passagem recebe alimentação, a água permanece isolada. O rádio repete uma voz infantil. Além da alvenaria, as paredes mudam de aparência.",true,3);
-                case 17:return D(17,17+area*100,"AS CÂMARAS DO SELO","Consulte o diagrama e estabilize ligação, circulação e contenção no painel central.","Os fragmentos identificam ÁRVORE, RIO e CAPELA. Cada regulador afeta sua câmara e a seguinte. Observe a ameaça; o abrigo interrompe a perseguição.",
-                    new[]{"reading0","reading1","reading2","diagram"},new[]{"ÁRVORE • LIGAÇÃO","RIO • CIRCULAÇÃO","CAPELA • CONTENÇÃO","DIAGRAMA DOS REGULADORES"},
-                    new[]{"ÁRVORE: a leitura estável de ligação é 1. Ela soma os reguladores da árvore e da capela; valores acima de 2 retornam a 0.","RIO: a circulação estável é 2. Ela soma os reguladores do rio e da árvore; valores acima de 2 retornam a 0.","CAPELA: a contenção estável é 0. Ela soma os reguladores da capela e do rio; valores acima de 2 retornam a 0.","Cada regulador possui 0, 1 e 2. A configuração segura precisa produzir leituras ÁRVORE 1, RIO 2, CAPELA 0 simultaneamente. O diagrama reúne as leituras; o painel central comanda os três reguladores."},
-                    "Use o painel central para ajustar os três reguladores e conferir as leituras do conjunto.",new[]{"ÁRVORE • 1","RIO • 2","CAPELA • 0"},"As três leituras se estabilizam. A presença permanece visível e aponta para uma abertura além do mecanismo.",false,3);
                 case 18:return D(18,18,"A CRIATURA FERIDA","Compare os registros humanos, as marcas de ferimento e a leitura do reagente.","O complexo foi construído sobre a ruptura. Os instrumentos mantêm a entidade presa; Ouzana acompanha as leituras.",
                     new[]{"human","wounds","reading"},new[]{"REGISTROS HUMANOS","MARCAS DA CONTENÇÃO","LEITURAS DE OUZANA"},
                     new[]{"Os registros diferenciam a passagem de retorno da ligação de contenção. Edelzio é o selo vivo; romper sua ligação antes da travessia deixaria a ruptura instável.","Os ferimentos coincidem com os pontos de contenção. A presença procura Edelzio para recuperar o vínculo necessário à passagem.","O reagente destaca dois circuitos: símbolos externos abrem a passagem; marcas internas mantêm o selo. É necessário estabilizar, abrir o retorno e só então encerrar a ligação."},
@@ -98,20 +94,17 @@ namespace Game.Varginha.Experiment
             if(phase==13)plan.points.Add(new CampaignMapPlan.Point("ground","ESCADA • VOLTAR AO TÉRREO",plan.spawn.x,plan.spawn.y));
             foreach(var point in plan.points)
             {
-                if(phase==17&&point.id=="reading")point.id="reading"+area;
                 int index=System.Array.IndexOf(definition.ids,point.id);
                 if(index>=0)point.label=definition.labels[index];
                 if(point.id=="renan")point.label="RENAN • CONVERSAR";
                 else if(point.id=="notebook")point.label="NOTEBOOK • COMPARAR EVIDÊNCIAS";
-                else if(point.id=="exit")point.label=phase==11?"PARTIR PARA O CASARÃO":phase==12&&area==1?"ACESSO DE SERVIÇO • DESCER AO PORÃO":"SAÍDA • CONTINUAR A INVESTIGAÇÃO";
+                else if(point.id=="exit")point.label=phase==11?"PARTIR PARA O CASARÃO":"SAÍDA • CONTINUAR A INVESTIGAÇÃO";
                 else if(point.id=="entrance")point.label="PORTA PRINCIPAL • ENTRAR NO TÉRREO";
+                else if(point.id=="garden")point.label="PORTA PRINCIPAL • VOLTAR AO JARDIM";
                 else if(point.id=="service")point.label="PORTA DE SERVIÇO • ABRIR PASSAGEM";
                 else if(point.id=="puzzle")point.label="CONFERIR AS EVIDÊNCIAS";
                 else if(point.id=="fabio")point.label="FÁBIO • APRESENTAR REGISTROS";
                 else if(point.id=="timeline")point.label="TOMBO • COMPARAR DATAS";
-                else if(point.id=="hide")point.label="ABRIGO • AGUARDAR A AMEAÇA";
-                else if(point.id=="previous")point.label="CÂMARA ANTERIOR";
-                else if(point.id=="next")point.label="PRÓXIMA CÂMARA";
                 else if(point.id=="procedure")point.label=phase==20?"MECANISMO • CALIBRAR RETORNO":"PROCEDIMENTO DE RETORNO";
             }
             return plan;
