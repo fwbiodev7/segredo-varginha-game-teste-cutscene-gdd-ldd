@@ -1,5 +1,7 @@
 # Experimento jogável — 01/10/2026
 
+> Referência histórica. A sequência vigente é [Campanha de 15 fases](CAMPANHA_15_FASES.md), atualizada em 07/10/2026.
+
 O laboratório reaproveita a construção da escola do protótipo, a câmera ortográfica 2D, movimento, colisões, animação e mochila de Edelzio. Os layouts originais da casa, escola e igreja não foram substituídos. A fachada fotográfica serve de referência para uma imagem da cutscene; não altera a perspectiva topview do mapa.
 
 ## Validação desta entrega

@@ -22,6 +22,7 @@ namespace Game.Varginha.Experiment
         private EdelzioTopDownController _actor;
         private CampaignSoundscape _sound;
         private string _message, _panel;
+        private Vector2 _journalScroll;
         private bool _paused, _settings, _hidden, _driving, _parking, _departing;
         private CampaignWorkshopVehicle _vehicle;
         private float _departureTime;
@@ -35,10 +36,10 @@ namespace Game.Varginha.Experiment
         private string Objective => phase == 6 ? "Examine livro, globo e painel na biblioteca da Industrial. Alinhe os fragmentos na mesa central."
             : phase == 7 ? "Árvore → rio → capela. Use o esconderijo durante a perseguição."
             : phase == 8 ? "Cruze ano, símbolo e número no Livro do Tombo."
-            : phase == 9 ? "Apresente provas e teste controle, resíduo e reagente."
+            : phase == 9 ? "Compare as leituras com Ouzana e receba o reagente para a oficina."
             : _parking ? "Conduza o Fusca para a vaga na oficina. Pare voltado para cima e pressione E."
             : _departing ? "As marcas continuam. A investigação também."
-            : "Revele as três marcas, estabilize o Fusca e teste na pista.";
+            : "Use o reagente uma vez no Fusca para revelar as três marcas necessárias.";
         private void Awake()
         {
             Active = this; Plan = CampaignMapPlan.Create(phase); CampaignMapConstruction.Build(transform, Plan);
@@ -113,6 +114,7 @@ namespace Game.Varginha.Experiment
             }
             if (_departing) { Departure();return; }
             if (_driving) { Drive(); return; }
+            if (Keyboard.current?.f1Key.wasPressedThisFrame == true) { OpenHints(); return; }
             if (Keyboard.current?.tabKey.wasPressedThisFrame == true) { _panel = "journal"; Lock(); return; }
             if (Keyboard.current?.gKey.wasPressedThisFrame == true) { OpenBackpack(); return; }
             if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact))
@@ -198,11 +200,11 @@ namespace Game.Varginha.Experiment
             }
             else if (phase == 9)
             {
-                if (id == "ouzana") { State.evidencePresented = State.anchorFound; Say(State.anchorFound ? "Ouzana: o registro de 1996 e as marcas merecem um teste. Siga o protocolo da bancada." : "Ouzana precisa do registro de Edelzio e das evidências da mata."); }
+                if (id == "ouzana") { State.evidencePresented = State.anchorFound; if(State.evidencePresented){State.labClues=7;State.SolveSamples();} Say(State.anchorFound ? "Ouzana: o controle é neutro, o resíduo reage. A comparação confirma as marcas de contenção. Leve o reagente à oficina; as leituras ficaram no caderno." : "Ouzana precisa do registro de Edelzio e das evidências da mata."); }
                 else if (id == "control") { State.labClues |= 1; Say("Controle: leitura neutra. É o primeiro passo do protocolo."); }
                 else if (id == "residue") { State.labClues |= 2; Say("Resíduo: leitura instável. Compare com o controle antes de aplicar o reagente."); }
                 else if (id == "protocol") { State.labClues |= 4; Say("Protocolo: CONTROLE → RESÍDUO → REAGENTE. A reação deve ser observada depois da comparação."); }
-                else if (id == "samples") Open("samples");
+                else if (id == "samples") Say("Controle neutro e resíduo instável: Ouzana confirma a análise e entrega o reagente ao receber o registro de Edelzio.");
                 else if (id == "tutorial") Say(State.reagentUnlocked ? "O reagente revela uma marca invisível na amostra. Este teste não consome cargas. Ouzana entrega seis cargas para a oficina." : "Complete o teste da bancada antes de usar o reagente.");
             }
             else if (phase == 10)
@@ -210,12 +212,12 @@ namespace Game.Varginha.Experiment
                 if (id.StartsWith("spray"))
                 {
                     int region = int.Parse(id.Substring(5));
-                    if (State.Spray(region)) { RevealMark(region); Say(new[] { "Capô: marca da ÁRVORE • I.", "Porta: marca do RIO • II.", "Motor: marca da CAPELA • III." }[region]); }
+                    if (State.Spray(region)) { for(int i=0;i<3;i++)RevealMark(i); Say("Uma aplicação revela ÁRVORE • I, RIO • II e CAPELA • III. O reagente confirma a estabilidade do Fusca; as três marcas estão no caderno."); }
                     else Say((State.sprayed & (1 << region)) != 0 ? "Esta marca já foi registrada." : "Reagente indisponível. Confira a bancada de reserva.");
                 }
-                else if (id == "seal") Open("seal");
+                else if (id == "seal") Say(State.stabilized ? "ÁRVORE • I, RIO • II e CAPELA • III registrados. O Fusca pode partir." : "Aplique o reagente no Fusca para revelar as marcas.");
                 else if (id == "refill") { if (State.reagentUnlocked) State.reagentCharges = 6; Say("Reserva recarregada. Ouzana deixou reagente suficiente para repetir os testes sem bloquear a investigação."); }
-                else if (id == "drive") { if (!State.stabilized) Say("Conecte as três marcas na bancada antes de testar o Fusca."); else BeginDrive(); }
+                else if (id == "drive") { if (!State.stabilized) Say("Revele as marcas com o reagente antes de partir."); else BeginDeparture(); }
             }
             Save(); Lock();
         }
@@ -309,7 +311,7 @@ namespace Game.Varginha.Experiment
             if (result) { _panel = null; _sound.Play("Success"); Say(phase == 6 ? "As coordenadas revelam a entrada da mata. Destino registrado."
                 : phase == 8 ? "SELO DA ENTIDADE: EDELZIO / CONTENÇÃO: ESTÁVEL. Você é o selo que mantém a entidade contida desde 1996."
                 : phase == 9 ? "A reação contradiz as leituras normais. Ouzana aceita ajudar e entrega o reagente."
-                : "As marcas reproduzem o trajeto árvore, rio e capela. Estabilizador temporário instalado. Faça o teste na pista."); }
+                : "As marcas reproduzem o trajeto árvore, rio e capela. As marcas estão registradas; o Fusca pode partir."); }
             else Say("A combinação não corresponde às pistas. Confira os registros e tente novamente; nenhuma pista foi perdida.");
             Save(); return result;
         }
@@ -334,7 +336,7 @@ namespace Game.Varginha.Experiment
             ExperimentGUI.Init(); var matrix = ExperimentGUI.BeginCanvas();
             if(!_departing)
             {
-                ExperimentGUI.Objective("ATO " + (phase <= 8 ? "III" : "IV") + " • FASE " + phase + " • 2026", Plan.title, Objective);
+                ExperimentGUI.Objective(CampaignSequence.Heading(phase) + " • 2026", CampaignSequence.Title(phase).ToUpperInvariant(), Objective);
                 bool hudEnabled=GUI.enabled; GUI.enabled=hudEnabled&&!_paused&&_panel==null&&_message==null;
                 if (CampaignHudIcons.Button(1010, CampaignHudIcons.Icon.Notebook, "TAB", "Caderno") && !Blocked && !_driving && !_parking) { _panel = "journal"; Lock(); }
                 if (CampaignHudIcons.Button(1092, CampaignHudIcons.Icon.Backpack, "G", "Mochila")) OpenBackpack();
@@ -360,9 +362,12 @@ namespace Game.Varginha.Experiment
             else if (_driving) ExperimentGUI.Label(new Rect(200,620,950,70), "A / D OU SETAS • conduza até o fim da pista. ESC • pausa");
             else
             {
-                var point = Nearest(); ExperimentGUI.Panel(new Rect(190,648,900,50));
+                var point = Nearest(); if(VarginhaGameSettings.Current.interactionHints)
+                {
+                ExperimentGUI.Panel(new Rect(190,648,900,50));
                 ExperimentGUI.Label(new Rect(210,660,870,30), _hidden ? "ABRIGADO • E: sair • mover-se abandona o abrigo"
                     : point == null ? "WASD / SETAS • ANDAR     E • EXAMINAR" : "[E] " + point.label, small:true);
+                }
             }
             if (phase == 7) ExperimentGUI.Label(new Rect(35,158,610,40), "SANIDADE " + Mathf.RoundToInt(_actor.CurrentSanity) + " • MARCAS " + State.forestSigns + "/3",small:true);
             if (phase == 10 && !_departing && !_parking) ExperimentGUI.Label(new Rect(35,158,610,40), "REAGENTE " + State.reagentCharges + " • MARCAS " + Count(State.sprayed) + "/3",small:true);
@@ -376,7 +381,7 @@ namespace Game.Varginha.Experiment
             if (_paused)
             {
                 if (_settings) { GUI.matrix = matrix; if (VarginhaGameSettings.Draw()) _settings = false; return; }
-                int action = ExperimentGUI.PausePanel("FASE " + phase + " • " + Plan.title);
+                int action = ExperimentGUI.PausePanel("FASE " + CampaignSequence.Chapter(phase) + " • " + Plan.title);
                 if (action == 1) TogglePause();
                 if (action == 2) _settings = true;
                 if (action == 3) Menu();
@@ -384,23 +389,29 @@ namespace Game.Varginha.Experiment
             GUI.matrix = matrix;
         }
         private static int Count(int bits) => (bits & 1) + ((bits >> 1) & 1) + ((bits >> 2) & 1);
+        private int _hintLevel;
+        public bool OpenHints()
+        {
+            if (Progress == null || _paused || _parking || _departing || _driving || _message != null || CampaignCinematics.IsTransitioning || VarginhaGameHUD.Instance?.IsInventoryOpen == true) return false;
+            _hintLevel=0; _panel="hints"; Lock(); return true;
+        }
         private void DrawPanel()
         {
             ExperimentGUI.Box(new Rect(0,115,1280,605),new Color(0,0,0,.8f)); ExperimentGUI.Panel(new Rect(125,145,1030,480));
             if (_panel == "complete")
             {
-                ExperimentGUI.Label(new Rect(165,175,950,55),"FASE " + phase + " CONCLUÍDA",true);
+                ExperimentGUI.Label(new Rect(165,175,950,55),phase==9?"ANÁLISE CONCLUÍDA • IR À OFICINA":"FASE " + CampaignSequence.Chapter(phase) + " CONCLUÍDA",true);
                 ExperimentGUI.Label(new Rect(165,250,950,155),phase == 10 ? "O rádio recebe uma ligação. Renan: Edelzio, preciso que você volte. A imagem está diferente da que imprimimos. A cópia em papel conservou o detalhe anterior."
-                    : "Pistas e progresso salvos. Próxima fase: " + CampaignMapPlan.Create(phase+1).title + ".");
-                if (ExperimentGUI.Button(new Rect(365,465,550,50),"CONTINUAR PARA A FASE " + (phase+1))) { Save(); CampaignStorySave.GoTo(phase+1); }
+                    : "Pistas e progresso salvos. Próxima etapa: " + CampaignSequence.Title(CampaignSequence.Next(phase)) + ".");
+                if (ExperimentGUI.Button(new Rect(365,465,550,50),CampaignSequence.ContinueLabel(phase))) { Save(); CampaignStorySave.GoTo(CampaignSequence.Next(phase)); }
                 if (ExperimentGUI.Button(new Rect(365,535,550,45),"SALVAR E VOLTAR AO MENU")) Menu(); return;
             }
-            if (_panel == "journal")
+            if (_panel == "hints") CampaignHints.Draw(Progress,phase,ref _hintLevel);
+            else if (_panel == "journal")
             {
                 ExperimentGUI.Label(new Rect(165,170,950,45),"CADERNO • REGISTROS",true);
-                ExperimentGUI.Label(new Rect(165,240,950,225),"Equipamento: mochila • notebook • caderno de 1996 • chave do Fusca\nFragmentos " + Progress.MapFragments + "/3 • pistas opcionais desta extensão " + Count(State.truthClues) + "/3\n"
-                    + (State.mapSolved ? "Mapa: ÁRVORE → RIO → CAPELA. Entrada da mata localizada.\n" : "Consulte livro, globo e painel da biblioteca. Alinhe os fragmentos na mesa central.\n")
-                    + (State.anchorFound ? "Tombo: 1996 • ÂNCORA • 23. Edelzio é o selo da entidade.\n" : "") + (State.reagentUnlocked ? "Reagente desbloqueado. Protocolo: CONTROLE → RESÍDUO → REAGENTE." : ""));
+                if (ExperimentGUI.Button(new Rect(710,175,405,40),"PRECISO DE UMA DICA • F1")) OpenHints();
+                CampaignJournal.Draw(Progress,ref _journalScroll,new Rect(165,240,950,250));
                 if (phase == 6)
                 {
                     string[] names = { "LIVRO", "GLOBO", "PAINEL" }, ids = { "archive", "school", "square" };

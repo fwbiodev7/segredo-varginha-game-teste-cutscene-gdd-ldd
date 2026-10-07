@@ -91,7 +91,7 @@ namespace Game.Varginha
             if (PixelMenuTheme.Button(new Rect(72, 340, 470, 88), "")) Experiment.VarginhaCampaignPhase1.StartCampaign(true);
             PixelMenuTheme.Label(new Rect(120, 355, 400, 25), "CONTINUAR", 14, PixelMenuTheme.Paper);
             string chapter = _resumeAvailable ? (_resumePhase == 1 ? "A lembrança • 1996"
-                : "Fase " + _resumePhase + " • " + Experiment.CampaignMapPlan.Create(_resumePhase).title) : "Sua história começa aqui";
+                : "Fase " + Experiment.CampaignSequence.Chapter(_resumePhase) + " • " + Experiment.CampaignSequence.Title(_resumePhase)) : "Sua história começa aqui";
             PixelMenuTheme.Label(new Rect(120, 393, 400, 20), chapter, 8, PixelMenuTheme.Muted);
             GUI.enabled = enabled;
             if (PixelMenuTheme.Button(new Rect(72, 449, 470, 56), "NOVA HISTÓRIA")) panel = Panel.Play;

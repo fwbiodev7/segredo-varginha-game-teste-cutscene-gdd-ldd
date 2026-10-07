@@ -279,7 +279,7 @@ namespace Game.Varginha.Experiment
             }
             else if (_stage == Stage.ActTitle)
             {
-                ExperimentGUI.Label(new Rect(295, 245, 700, 60), "ATO I — A LEMBRANÇA", true);
+                ExperimentGUI.Label(new Rect(295, 245, 700, 60), "ATO 1 — A LEMBRANÇA VOLTA", true);
                 ExperimentGUI.Label(new Rect(295, 322, 700, 60), "FASE 1 • O CASO DE VARGINHA\nEdelzio, seis anos. Varginha, 1996.");
             }
             else if (_stage == Stage.Explore)
@@ -308,9 +308,9 @@ namespace Game.Varginha.Experiment
             {
                 ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(.008f, .015f, .025f, 1));
                 ExperimentGUI.Label(new Rect(275, 210, 760, 60), "A LEMBRANÇA SE INTERROMPE", true);
-                ExperimentGUI.Label(new Rect(275, 300, 760, 100), "Edelzio desperta sem lembrar do clarão ou da queda.\n\nPróximo ato: O Chamado — trinta anos depois.");
+                ExperimentGUI.Label(new Rect(275, 300, 760, 100), "Edelzio desperta sem lembrar do clarão ou da queda.\n\nTrinta anos depois, a caixa esquecida devolve a primeira pista.");
                 ExperimentGUI.Label(new Rect(275, 445, 760, 70), "Trinta anos depois, uma chave desaparecida traz essa noite de volta.", small: true);
-                if (ExperimentGUI.Button(new Rect(430, 550, 420, 50), "CONTINUAR • ATO II")) CampaignStorySave.GoTo(2);
+                if (ExperimentGUI.Button(new Rect(430, 550, 420, 50), "CONTINUAR • FASE 2")) CampaignStorySave.GoTo(2);
             }
             if (_dialogue != null)
             {

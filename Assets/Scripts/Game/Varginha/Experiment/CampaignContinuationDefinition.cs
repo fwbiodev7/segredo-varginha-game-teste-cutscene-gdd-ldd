@@ -10,6 +10,18 @@ namespace Game.Varginha.Experiment
         public bool choice;
         public static CampaignContinuationDefinition Get(int phase,int area=0)
         {
+            if(phase==18)
+            {
+                var d=Later(18,area);var agreement=Later(19,0);
+                d.title="A CRIATURA E O ACORDO";
+                d.goal="Investigue a criatura ferida e reconstrua o procedimento do acordo temporário.";
+                d.documents[0]+="\n"+agreement.documents[0]+"\n"+agreement.documents[1];
+                d.documents[1]+="\n"+agreement.documents[3];
+                d.documents[2]+="\n"+agreement.documents[2];
+                d.question=agreement.question;d.cards=agreement.cards;d.choice=false;
+                d.success="A memória completa chega ao clarão: Edelzio aceitou ser um selo temporário para proteger Varginha. A criatura ferida precisa voltar; a manifestação do mecanismo impede o retorno. Dissipe a manifestação, calibre a passagem, aguarde a travessia e só então encerre a ligação.";
+                return d;
+            }
             if(phase>=13)return Later(phase,area);
             if(phase==12)return new CampaignContinuationDefinition {
                 phase=12,map=area==0?12:112,title="O CASARÃO DE ZÉ GOMES",required=3,choice=true,
@@ -58,14 +70,14 @@ namespace Game.Varginha.Experiment
                     new[]{"scheme","water","panel","supplies"},new[]{"ESQUEMA PRESERVADO","ÁREA INUNDADA","PAINEL DE MANUTENÇÃO","SUPRIMENTOS DE OUZANA"},
                     new[]{"O esquema separa dois circuitos: passagem norte e área inundada. A alimentação da porta pode ser ligada sem energizar a água.","Os condutores expostos entram na água. Este circuito precisa permanecer desligado enquanto a passagem recebe alimentação.","PAINEL: desviar alimentação para PASSAGEM; manter ÁREA INUNDADA desligada. O circuito geral não é seguro.","Ouzana deixou reagente e as leituras essenciais. Renan preservou cópias do mapa e do arquivo; nenhum documento opcional é exigido para o retorno."},
                     "Qual circuito abre a passagem sem energizar a água?",new[]{"PASSAGEM LIGADA • ÁGUA DESLIGADA","CIRCUITO GERAL LIGADO","ÁGUA LIGADA • PASSAGEM DESLIGADA"},"A passagem recebe alimentação, a água permanece isolada. O rádio repete uma voz infantil. Além da alvenaria, as paredes mudam de aparência.",true,3);
-                case 17:return D(17,17+area*100,"AS CÂMARAS DO SELO","Leia as três câmaras. Ajuste ligação, circulação e contenção até estabilizar o conjunto.","Os fragmentos identificam ÁRVORE, RIO e CAPELA. Cada regulador afeta sua câmara e a seguinte. Observe a ameaça; o abrigo interrompe a perseguição.",
+                case 17:return D(17,17+area*100,"AS CÂMARAS DO SELO","Consulte o diagrama e estabilize ligação, circulação e contenção no painel central.","Os fragmentos identificam ÁRVORE, RIO e CAPELA. Cada regulador afeta sua câmara e a seguinte. Observe a ameaça; o abrigo interrompe a perseguição.",
                     new[]{"reading0","reading1","reading2","diagram"},new[]{"ÁRVORE • LIGAÇÃO","RIO • CIRCULAÇÃO","CAPELA • CONTENÇÃO","DIAGRAMA DOS REGULADORES"},
-                    new[]{"ÁRVORE: a leitura estável de ligação é 1. Ela soma os reguladores da árvore e da capela; valores acima de 2 retornam a 0.","RIO: a circulação estável é 2. Ela soma os reguladores do rio e da árvore; valores acima de 2 retornam a 0.","CAPELA: a contenção estável é 0. Ela soma os reguladores da capela e do rio; valores acima de 2 retornam a 0.","Cada regulador possui 0, 1 e 2. A configuração segura precisa produzir leituras ÁRVORE 1, RIO 2, CAPELA 0 simultaneamente. Os controles permanecem nas três câmaras."},
-                    "Ajuste o regulador desta câmara e confira as três leituras. Volte às outras câmaras quando necessário.",new[]{"ÁRVORE • 1","RIO • 2","CAPELA • 0"},"As três leituras se estabilizam. A presença permanece visível e aponta para uma abertura além do mecanismo.",false,3);
+                    new[]{"ÁRVORE: a leitura estável de ligação é 1. Ela soma os reguladores da árvore e da capela; valores acima de 2 retornam a 0.","RIO: a circulação estável é 2. Ela soma os reguladores do rio e da árvore; valores acima de 2 retornam a 0.","CAPELA: a contenção estável é 0. Ela soma os reguladores da capela e do rio; valores acima de 2 retornam a 0.","Cada regulador possui 0, 1 e 2. A configuração segura precisa produzir leituras ÁRVORE 1, RIO 2, CAPELA 0 simultaneamente. O diagrama reúne as leituras; o painel central comanda os três reguladores."},
+                    "Use o painel central para ajustar os três reguladores e conferir as leituras do conjunto.",new[]{"ÁRVORE • 1","RIO • 2","CAPELA • 0"},"As três leituras se estabilizam. A presença permanece visível e aponta para uma abertura além do mecanismo.",false,3);
                 case 18:return D(18,18,"A CRIATURA FERIDA","Compare os registros humanos, as marcas de ferimento e a leitura do reagente.","O complexo foi construído sobre a ruptura. Os instrumentos mantêm a entidade presa; Ouzana acompanha as leituras.",
                     new[]{"human","wounds","reading"},new[]{"REGISTROS HUMANOS","MARCAS DA CONTENÇÃO","LEITURAS DE OUZANA"},
                     new[]{"Os registros diferenciam a passagem de retorno da ligação de contenção. Edelzio é o selo vivo; romper sua ligação antes da travessia deixaria a ruptura instável.","Os ferimentos coincidem com os pontos de contenção. A presença procura Edelzio para recuperar o vínculo necessário à passagem.","O reagente destaca dois circuitos: símbolos externos abrem a passagem; marcas internas mantêm o selo. É necessário estabilizar, abrir o retorno e só então encerrar a ligação."},
-                    "Qual interpretação reúne os registros e as leituras?",new[]{"PASSAGEM EXTERNA • SELO INTERNO","ROMPER O SELO ANTES DE ABRIR","MANTER A CONTENÇÃO PARA SEMPRE"},"Edelzio: Você está tentando voltar. A entidade projeta a casa de 1996. Uma ruptura sem preparação colocaria a cidade em risco.",true);
+                    "Qual interpretação reúne os registros e as leituras?",new[]{"PASSAGEM EXTERNA • SELO INTERNO","ROMPER O SELO ANTES DE ABRIR","MANTER A CONTENÇÃO PARA SEMPRE"},"Edelzio: Você está tentando voltar. A entidade projeta a memória de 1996. Uma ruptura sem preparação colocaria a cidade em risco.",true);
                 case 19:return D(19,19,"O ACORDO ESQUECIDO","Reúna a página, o arquivo, o caderno e a memória. Reconstrua o acordo temporário.","O quintal reaparece até o instante do acidente. A página ocultada e as cópias preservadas ajudam a completar a conversa.",
                     new[]{"hiddenpage","records","notebook","memory"},new[]{"PÁGINA OCULTADA","REGISTROS DE 1898","CADERNO PRESERVADO","LEMBRANÇA COMPLETA"},
                     new[]{"A página registra uma ligação temporária: ajudar a impedir que a ruptura atingisse as pessoas enquanto o retorno fosse preparado.","1898 explica o risco de uma ruptura aberta sem estabilidade. A contenção permanente foi uma decisão posterior dos guardiões.","As anotações recentes eram lembranças que voltavam durante a interferência. As cópias de Renan recuperam qualquer prova essencial que Edelzio tenha deixado para trás.","Não deixa ela sair: pela ruptura instável. A frase pedia que Edelzio evitasse o desastre; não ordenava destruir a criatura. O acordo terminaria depois de um retorno seguro."},
@@ -83,6 +95,7 @@ namespace Game.Varginha.Experiment
         {
             var definition=Get(phase,area);var plan=new CampaignMapPlan{phase=definition.map,title=definition.title};
             CampaignIllustratedMaps.Apply(plan);
+            if(phase==13)plan.points.Add(new CampaignMapPlan.Point("ground","ESCADA • VOLTAR AO TÉRREO",plan.spawn.x,plan.spawn.y));
             foreach(var point in plan.points)
             {
                 if(phase==17&&point.id=="reading")point.id="reading"+area;
@@ -90,7 +103,7 @@ namespace Game.Varginha.Experiment
                 if(index>=0)point.label=definition.labels[index];
                 if(point.id=="renan")point.label="RENAN • CONVERSAR";
                 else if(point.id=="notebook")point.label="NOTEBOOK • COMPARAR EVIDÊNCIAS";
-                else if(point.id=="exit")point.label=phase==11?"PARTIR PARA O CASARÃO":phase==12&&area==1?"VOLTAR AO JARDIM":"SAÍDA • CONTINUAR A INVESTIGAÇÃO";
+                else if(point.id=="exit")point.label=phase==11?"PARTIR PARA O CASARÃO":phase==12&&area==1?"ACESSO DE SERVIÇO • DESCER AO PORÃO":"SAÍDA • CONTINUAR A INVESTIGAÇÃO";
                 else if(point.id=="entrance")point.label="PORTA PRINCIPAL • ENTRAR NO TÉRREO";
                 else if(point.id=="service")point.label="PORTA DE SERVIÇO • ABRIR PASSAGEM";
                 else if(point.id=="puzzle")point.label="CONFERIR AS EVIDÊNCIAS";
@@ -99,7 +112,7 @@ namespace Game.Varginha.Experiment
                 else if(point.id=="hide")point.label="ABRIGO • AGUARDAR A AMEAÇA";
                 else if(point.id=="previous")point.label="CÂMARA ANTERIOR";
                 else if(point.id=="next")point.label="PRÓXIMA CÂMARA";
-                else if(point.id=="procedure")point.label="PROCEDIMENTO DE RETORNO";
+                else if(point.id=="procedure")point.label=phase==20?"MECANISMO • CALIBRAR RETORNO":"PROCEDIMENTO DE RETORNO";
             }
             return plan;
         }

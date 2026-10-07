@@ -84,70 +84,39 @@ namespace Game.Tests.PlayMode
             Assert.That(Modal(stage,"_panel")!=null||Modal(stage,"_message")!=null||departing,Is.True,"E interacts with "+id);
         }
 
-        [UnityTest] public IEnumerator LaboratoryRequiresEvidenceAndAllCluesAndSurvivesReload()
+        [UnityTest] public IEnumerator LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload()
         {
             CampaignStorySave.Write(Ready(9));yield return Load(9);
             var stage=CampaignExpansionController.Active;var state=stage.Progress.expansion;
-            state.sampleOrder=new[]{0,1,2};stage.Interact("samples");
-            Assert.That(stage.SubmitPuzzle(),Is.False,"Correct protocol still requires presenting evidence and reading three clues");stage.ClosePanel();
+            Assert.That(state.reagentUnlocked,Is.False);
             yield return WalkToAndInteract("ouzana");Assert.That(state.evidencePresented,Is.True);stage.ClosePanel();
-            foreach(string id in new[]{"protocol","control","residue"})
-            { yield return WalkToAndInteract(id);stage.ClosePanel(); }
-            Assert.That(state.labClues,Is.EqualTo(7));
-            yield return WalkToAndInteract("samples");
-            state.sampleOrder=new[]{2,1,0};Assert.That(stage.SubmitPuzzle(),Is.False);stage.ClosePanel();
-            stage.Interact("samples");state.sampleOrder=new[]{0,1,2};Assert.That(stage.SubmitPuzzle(),Is.True);stage.ClosePanel();
-            Assert.That(state.reagentUnlocked,Is.True);Assert.That(state.reagentCharges,Is.EqualTo(6));
+            Assert.That(state.labClues,Is.EqualTo(7));Assert.That(state.reagentUnlocked,Is.True);Assert.That(state.reagentCharges,Is.EqualTo(6));
             yield return WalkToAndInteract("tutorial");Assert.That(state.reagentCharges,Is.EqualTo(6));stage.ClosePanel();
             stage.Save();yield return Load(9);stage=CampaignExpansionController.Active;
-            Assert.That(stage.Progress.expansion.Complete(9),Is.True);Assert.That(stage.Progress.expansion.reagentCharges,Is.EqualTo(6));
+            Assert.That(stage.Progress.expansion.Complete(9),Is.True);
             Assert.That(GameObject.Find("Ouzana").GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("OuzanaBiologist"));
             yield return WalkToAndInteract("exit");Assert.That(Modal(stage,"_panel"),Is.EqualTo("complete"));
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
 
-        [UnityTest] public IEnumerator WorkshopChargesMarksRefillAndTrackRemainConsistent()
+        [UnityTest] public IEnumerator WorkshopSingleApplicationReloadAndDepartureRemainConsistent()
         {
-            var story=Ready(10);var saved=story.expansion;saved.evidencePresented=true;saved.labClues=7;saved.sampleOrder=new[]{0,1,2};saved.SolveSamples();
-            saved.reagentCharges=0;CampaignStorySave.Write(story);yield return Load(10);
+            var story=Ready(10);var saved=story.expansion;saved.evidencePresented=true;saved.SolveSamples();saved.reagentCharges=0;
+            CampaignStorySave.Write(story);yield return Load(10);
             var stage=CampaignExpansionController.Active;var state=stage.Progress.expansion;
-            stage.Interact("drive");Assert.That(Object.FindAnyObjectByType<EdelzioTopDownController>().gameObject.activeSelf,Is.True);stage.ClosePanel();
-            stage.Interact("spray0");Assert.That(state.sprayed,Is.Zero);stage.ClosePanel();
+            yield return WalkToAndInteract("spray2");Assert.That(state.sprayed,Is.Zero);stage.ClosePanel();
             yield return WalkToAndInteract("refill");Assert.That(state.reagentCharges,Is.EqualTo(6));stage.ClosePanel();
-            foreach(string id in new[]{"spray2","spray0","spray1"})
-            { yield return WalkToAndInteract(id);stage.ClosePanel(); }
-            Assert.That(state.sprayed,Is.EqualTo(7));Assert.That(state.reagentCharges,Is.EqualTo(3));
-            stage.Interact("spray1");Assert.That(state.reagentCharges,Is.EqualTo(3));stage.ClosePanel();
-            var car=GameObject.Find("Fusca");Assert.That(car.GetComponent<CampaignReagentMarks>(),Is.Not.Null);
-            for(int i=0;i<3;i++)
-                Assert.That(car.transform.Find("Marca_"+i).GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("ReagentMarks"));
-            stage.Save();yield return Load(10);stage=CampaignExpansionController.Active;state=stage.Progress.expansion;car=GameObject.Find("Fusca");
-            Assert.That(car.transform.Find("Marca_0"),Is.Not.Null);Assert.That(state.reagentCharges,Is.EqualTo(3));
-            yield return WalkToAndInteract("seal");state.sealOrder=new[]{2,0,1};Assert.That(stage.SubmitPuzzle(),Is.False);stage.ClosePanel();
-            stage.Interact("seal");state.sealOrder=new[]{0,1,2};Assert.That(stage.SubmitPuzzle(),Is.True);stage.ClosePanel();
-            yield return WalkToAndInteract("exit");Assert.That(Modal(stage,"_panel"),Is.Null,"Stabilization alone cannot end the campaign");stage.ClosePanel();
-            var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
-            stage.Interact("drive");Assert.That(actor.gameObject.activeSelf,Is.False);
-            yield return KeyFor(Key.D,.8f);float forward=car.transform.position.x;
-            Assert.That(forward,Is.GreaterThan(-7));Assert.That(state.testDriven,Is.False);
-            yield return KeyFor(Key.A,.25f);Assert.That(car.transform.position.x,Is.LessThan(forward));
-            Assert.That(car.GetComponent<CampaignWorkshopVehicle>().Direction,Is.EqualTo(CampaignWorkshopVehicle.Facing.West));
-            Assert.That(car.transform.Find("Marca_0").localPosition.x,Is.LessThan(0),"Bonnet marking mirrors with the car");
-            yield return KeyFor(Key.Escape,.06f);Assert.That(Time.timeScale,Is.Zero);
-            float pausedX=car.transform.position.x;yield return KeyFor(Key.D,.25f);Assert.That(car.transform.position.x,Is.EqualTo(pausedX));
-            yield return KeyFor(Key.Escape,.06f);Assert.That(Time.timeScale,Is.EqualTo(1));
-            stage.Save();var resume=CampaignStorySave.Load().expansion;
-            Assert.That(resume.stabilized,Is.True);Assert.That(resume.testDriven,Is.False);Assert.That(resume.reagentCharges,Is.EqualTo(3));
-            yield return Load(10);stage=CampaignExpansionController.Active;car=GameObject.Find("Fusca");stage.Interact("drive");
-            yield return KeyFor(Key.RightArrow,4.1f);
-            Assert.That(stage.Progress.expansion.Complete(10),Is.True);
-            Assert.That(CampaignStorySave.Load().expansion.testDriven,Is.True);
-            Assert.That(car.GetComponent<BoxCollider2D>().Distance(Object.FindAnyObjectByType<EdelzioTopDownController>().GetComponent<CircleCollider2D>()).isOverlapped,Is.False,"Exit spawn must be clear of the parked car");
-            stage.ClosePanel();yield return WalkToAndInteract("exit");
-            yield return new WaitForSeconds(3.4f);
-            Assert.That(Modal(stage,"_panel"),Is.EqualTo("complete"));
-            Assert.That(stage.Progress.expansion.workshopDeparted,Is.True);
+            yield return WalkToAndInteract("spray2");stage.ClosePanel();
+            Assert.That(state.sprayed,Is.EqualTo(7));Assert.That(state.reagentCharges,Is.EqualTo(5));Assert.That(state.Complete(10),Is.True);
+            stage.Interact("spray1");Assert.That(state.reagentCharges,Is.EqualTo(5));stage.ClosePanel();
+            stage.Save();yield return Load(10);stage=CampaignExpansionController.Active;state=stage.Progress.expansion;
+            var car=GameObject.Find("Fusca");
+            for(int i=0;i<3;i++)Assert.That(car.transform.Find("Marca_"+i),Is.Not.Null);
+            Assert.That(state.reagentCharges,Is.EqualTo(5));Assert.That(state.testDriven,Is.False);
+            yield return WalkToAndInteract("exit");yield return new WaitForSeconds(3.4f);
+            Assert.That(Modal(stage,"_panel"),Is.EqualTo("complete"));Assert.That(state.workshopDeparted,Is.True);
             Assert.That(car.transform.position.x,Is.GreaterThan(stage.Plan.bounds.xMax));
+            stage.Save();Assert.That(CampaignStorySave.Load().expansion.workshopDeparted,Is.True);
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
 

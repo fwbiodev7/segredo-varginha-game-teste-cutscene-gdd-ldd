@@ -8,7 +8,14 @@ namespace Game.Varginha.Experiment
         public int[] clues = new int[11];
         public bool[] solved = new bool[11];
         public int area, chambersPrepared, finalStep;
-        public bool serviceRevealed, serviceKey, manifestationDispelled, finished;
+        public bool serviceRevealed, serviceKey, manifestationDispelled, finished, returnCalibrated;
+        public bool AgreementComplete => solved[7] && solved[8];
+        public bool CanReturn => manifestationDispelled && returnCalibrated && chambersPrepared == 7 && ChambersStable;
+        public bool CalibrateReturn()
+        {
+            if (!manifestationDispelled || chambersPrepared != 7 || !ChambersStable) return false;
+            return returnCalibrated = true;
+        }
         public int[] chamberValues = { 0, 0, 0 };
         public int[] battleStudents={-1,-1,-1};
         public int battleSupport=-1;
@@ -28,6 +35,10 @@ namespace Game.Varginha.Experiment
         public void Read(int phase,int index) => clues[phase-11] |= 1<<index;
         public int ChamberReading(int chamber)=>(chamberValues[chamber]+chamberValues[(chamber+2)%3])%3;
         public bool ChambersStable=>ChamberReading(0)==1&&ChamberReading(1)==2&&ChamberReading(2)==0;
-        public void TurnChamber(int chamber)=>chamberValues[chamber]=(chamberValues[chamber]+1)%3;
+        public void TurnChamber(int chamber)
+        {
+            chamberValues[chamber]=(chamberValues[chamber]+1)%3;
+            returnCalibrated=false;
+        }
     }
 }

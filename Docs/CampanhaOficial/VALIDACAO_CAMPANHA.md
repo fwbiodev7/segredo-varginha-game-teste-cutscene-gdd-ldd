@@ -1,5 +1,7 @@
 # Validação da campanha remasterizada
 
+> Referência histórica. A sequência vigente é [Campanha de 15 fases](CAMPANHA_15_FASES.md), atualizada em 07/10/2026.
+
 ## Fechamento — igreja e Ouzana (3/10/2026)
 
 Branch codex/fechamento-2026-10-03: **66/66 EditMode** e **15/15 PlayMode** passaram na versão final, com Edelzio reduzido somente na igreja e tamanho original restaurado nas demais fases. A validação inclui Livro do Tombo, save/reload e novo personagem de Ouzana. Ver CORRECOES_IGREJA_OUZANA_20261003.md e relatórios ValidacaoIgrejaOuzana20261003*.json.

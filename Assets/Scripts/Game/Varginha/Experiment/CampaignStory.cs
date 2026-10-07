@@ -8,7 +8,7 @@ namespace Game.Varginha.Experiment
     [Serializable]
     public sealed class CampaignStory
     {
-        public int version = 1, phase = 1, routine, inspection;
+        public int version = CampaignSequence.SaveVersion, phase = 1, routine, inspection;
         public bool boxFound, pagesSolved, arrival, renanMet, lesson, archive, buildingSolved;
         public bool symbolsFound, legendFound, codeSolved, renanConfirmed;
         public int studentsTalked;
@@ -20,7 +20,7 @@ namespace Game.Varginha.Experiment
         public CampaignExpansionState expansion = new();
         public CampaignContinuationState continuation = new();
         public int MapFragments => (pagesSolved ? 1 : 0) + (codeSolved ? 1 : 0) + ((expansion.visited & 1) != 0 ? 1 : 0);
-        public bool CanLeaveHouse => routine == 15 && pagesSolved;
+        public bool CanLeaveHouse => pagesSolved;
         public string RemainingHouseTasks
         {
             get
@@ -40,7 +40,7 @@ namespace Game.Varginha.Experiment
         public bool CanDecode => buildingSolved && timeOpened;
         public bool SubmitPages()
         {
-            if (!boxFound || routine != 15 || !Sequence(pages, new[] { 0, 1, 2 })) return false;
+            if (!boxFound || !Sequence(pages, new[] { 0, 1, 2 })) return false;
             pagesSolved = true; return true;
         }
         public bool SubmitPhotoClue(int choice)
@@ -63,6 +63,9 @@ namespace Game.Varginha.Experiment
         {
             phase = Mathf.Clamp(phase, 1, 21); routine &= 15; inspection &= 7;
             continuation ??= new CampaignContinuationState(); continuation.Repair();
+            CampaignSequence.Migrate(this);
+            int maxArea=phase==17?2:phase==12||phase==21?1:0;
+            if(continuation.area>maxArea){continuation.area=maxArea;positionPhase=0;}
             expansion ??= new CampaignExpansionState(); expansion.Repair();
             if (pages == null || pages.Length != 3 || !IsPermutation(pages)) pages = new[] { 2, 0, 1 };
             if (symbols == null || symbols.Length != 4) symbols = new[] { 1, 0, 1, 0 };
@@ -71,7 +74,7 @@ namespace Game.Varginha.Experiment
             if (float.IsNaN(driveDistance) || float.IsInfinity(driveDistance)) driveDistance = 0;
             driveDistance = Mathf.Clamp(driveDistance, 0, 120);
             if (float.IsNaN(x) || float.IsInfinity(x) || float.IsNaN(y) || float.IsInfinity(y)) positionPhase = 0;
-            if (!boxFound || routine != 15) pagesSolved = false;
+            if (!boxFound) pagesSolved = false;
             // Completed legacy chapters migrate without making the player repeat removed puzzles.
             if (buildingSolved && renanMet) photoOpened = true;
             if (codeSolved && buildingSolved) { timeOpened = true; schoolTimeChoice = 1; }
@@ -91,7 +94,7 @@ namespace Game.Varginha.Experiment
             try
             {
                 var data = File.Exists(Path) ? JsonUtility.FromJson<CampaignStory>(File.ReadAllText(Path)) : null;
-                if (data != null && data.version == 1) { data.Repair(); return data; }
+                if (data != null && data.version >= 1 && data.version <= CampaignSequence.SaveVersion) { int previousVersion=data.version; data.Repair(); if(previousVersion!=data.version)Write(data); return data; }
             }
             catch (Exception e) when (e is IOException || e is ArgumentException || e is UnauthorizedAccessException)
             { Debug.LogWarning("Progresso da campanha recuperado: " + e.GetType().Name); }
@@ -117,11 +120,12 @@ namespace Game.Varginha.Experiment
         public static string Scene(int phase) => phase >= 11 ? CampaignContinuationDefinition.SceneName(phase) : phase == 1 ? VarginhaCampaignPhase1.SceneName
             : phase == 3 ? VarginhaCampaignDrive.SceneName : phase >= 6 ? CampaignExpansionController.SceneName(phase)
             : "Ato2_Fase" + phase + "_" + (phase == 2 ? "A_Chave_e_a_Caixa" : phase == 4 ? "Entre_Aulas_e_Pistas" : "O_Codigo_das_2323");
-        public static void GoTo(int phase)
+        public static void GoTo(int phase, int area = 0)
         {
-            string scene = Scene(phase);
+            phase = CampaignSequence.Resume(phase);
+            string scene = phase >= 11 ? CampaignContinuationDefinition.SceneName(phase, area) : Scene(phase);
             if (!Application.CanStreamedLevelBeLoaded(scene)) { Debug.LogError("Cena da campanha ausente: " + scene); return; }
-            var progress = Load(); progress.phase = phase; progress.positionPhase = 0; Write(progress);
+            var progress = Load(); progress.phase = phase; progress.positionPhase = 0; progress.continuation.area = area; Write(progress);
             CampaignCinematics.Load(scene);
         }
     }

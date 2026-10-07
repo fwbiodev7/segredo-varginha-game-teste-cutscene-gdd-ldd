@@ -32,7 +32,7 @@ namespace Game.Tests.EditMode
             var state=new CampaignExpansionState { evidencePresented=true,labClues=7,sampleOrder=new[]{0,1,2} };
             state.SolveAnchor(1996,1,23);state.SolveSamples();state.Spray(0);
             var restored=JsonUtility.FromJson<CampaignExpansionState>(JsonUtility.ToJson(state));restored.Repair();
-            Assert.That(restored.workshopParked,Is.True);Assert.That(restored.sprayed,Is.EqualTo(1));Assert.That(restored.reagentCharges,Is.EqualTo(5));
+            Assert.That(restored.workshopParked,Is.True);Assert.That(restored.sprayed,Is.EqualTo(7));Assert.That(restored.reagentCharges,Is.EqualTo(5));
             Assert.That(restored.workshopDeparted,Is.False);
         }
         [Test] public void InvalidParkingCoordinatesCannotCorruptTheNextArrival()

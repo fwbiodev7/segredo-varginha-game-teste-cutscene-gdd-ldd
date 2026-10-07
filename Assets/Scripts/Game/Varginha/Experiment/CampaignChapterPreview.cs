@@ -38,7 +38,7 @@ namespace Game.Varginha.Experiment
             var matrix=ExperimentGUI.BeginCanvas();
             ExperimentGUI.Panel(new Rect(155,510,970,130));
             ExperimentGUI.Label(new Rect(185,529,910,55),Caption(phase),true);
-            ExperimentGUI.Label(new Rect(185,598,910,28),"FASE "+phase+" • VARGINHA, "+(phase==15||phase==19?"1996":"2026"),small:true);
+            ExperimentGUI.Label(new Rect(185,598,910,28),CampaignSequence.Heading(phase)+" • VARGINHA, "+(phase==15||phase==19?"1996":"2026"),small:true);
             GUI.matrix=Matrix4x4.identity;
             float alpha=Mathf.Max(1-Mathf.Clamp01(elapsed/.3f),Mathf.Clamp01((elapsed-total+.35f)/.35f));
             ExperimentGUI.Box(new Rect(0,0,Screen.width,Screen.height),new Color(0,0,0,alpha));GUI.matrix=matrix;

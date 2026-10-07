@@ -16,7 +16,7 @@ namespace Game.Varginha
             public float pivotX, pivotY, pixelsPerUnit;
         }
         private static Dictionary<(string, int), Entry> _entries;
-        private static readonly Dictionary<(string, int), Sprite> Frames = new();
+        private static readonly Dictionary<(string, int, Vector2, Vector2, float), Sprite> Frames = new();
         public static void ClearCache() { _entries = null; Frames.Clear(); }
 
         public static Sprite Frame(Sprite body, int direction)
@@ -32,18 +32,19 @@ namespace Game.Varginha
                 foreach (var entry in catalog.frames)
                     _entries[(entry.source, entry.direction)] = entry;
             }
-            var key = (body.name, Mathf.Clamp(direction, 0, 7));
+            var poseKey = (body.name, Mathf.Clamp(direction, 0, 7));
+            var key = (body.name, poseKey.Item2, body.rect.size, body.pivot, body.pixelsPerUnit);
             // Native sprites can be destroyed when entering Play with domain reload disabled.
             // A managed reference survives: Unity's overloaded null check must validate it.
             if (Frames.TryGetValue(key, out var cached) && cached != null && cached.texture != null) return cached;
-            if (!_entries.TryGetValue(key, out var pose)) return null;
+            if (!_entries.TryGetValue(poseKey, out var pose)) return null;
             var texture = Resources.Load<Texture2D>("Varginha/Equipment/" + pose.sheet);
             if (texture == null || pose.width <= 0 || pose.height <= 0 || pose.pixelsPerUnit <= 0
                 || pose.x < 0 || pose.y < 0 || pose.x + pose.width > texture.width || pose.y + pose.height > texture.height) return null;
-            bool campaign = Experiment.VarginhaCampaignStage.Active != null;
-            var pivot = campaign ? new Vector2(body.pivot.x / body.rect.width, body.pivot.y / body.rect.height) : new Vector2(pose.pivotX, pose.pivotY);
+            if (pose.width != body.rect.width || pose.height != body.rect.height) return null;
+            var pivot = new Vector2(body.pivot.x / body.rect.width, body.pivot.y / body.rect.height);
             var result = Sprite.Create(texture, new Rect(pose.x, pose.y, pose.width, pose.height),
-                pivot, campaign ? body.pixelsPerUnit : pose.pixelsPerUnit, 0, SpriteMeshType.FullRect);
+                pivot, body.pixelsPerUnit, 0, SpriteMeshType.FullRect);
             result.name = pose.source + "_ComMochila_" + pose.direction;
             Frames[key] = result;
             return result;

@@ -1,5 +1,7 @@
 # O Segredo de Varginha — Game Design Document
 
+> Campanha experimental atual: [15 fases em 5 atos](CampanhaOficial/CAMPANHA_15_FASES.md). As descrições do protótipo abaixo permanecem como referência.
+
 **Equipe:** 3º Sistemas. **Versão documental:** 1.2.0. **Atualização:** 15/09/2026.
 
 Base narrativa: GDD 1.0.0 fornecido pelo grupo nesta revisão. Base de implementação: `c331760` (14/09/2026), incluindo as entregas de `ca185c2` (12/09/2026). O repositório e o menu também usam o título **O Mistério de Varginha**; esta revisão preserva o título do GDD original, sem renomear o jogo nos arquivos de implementação.

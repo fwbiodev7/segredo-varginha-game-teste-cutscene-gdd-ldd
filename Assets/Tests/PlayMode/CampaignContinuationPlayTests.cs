@@ -32,7 +32,7 @@ namespace Game.Tests.PlayMode
         [UnityTest,Timeout(180000)] public IEnumerator InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions()
         {
             var route=new System.Collections.Generic.List<Vector2>();
-            for(int phase=11;phase<=19;phase++)
+            foreach(int phase in new[]{11,12,13,14,15,17,18})
             {
                 CampaignStorySave.Write(new CampaignStory{phase=phase});
                 int areas=phase==12?2:phase==17?3:1;
@@ -178,12 +178,27 @@ namespace Game.Tests.PlayMode
             Assert.That(support.DamageMultiplier,Is.EqualTo(1),"The priest's protection has a bounded area.");
             boss.Stagger(100);health.SetInvincibilityDuration(0);boss.GetComponent<VarginhaCombatTarget>().ReceiveHit(20000,Vector2.right,0);yield return null;
             Assert.That(c.State.manifestationDispelled,Is.True);Assert.That(c.State.solved[9],Is.True);Assert.That(support.CombatActive,Is.False);
+            Assert.That(CampaignStorySave.Load().continuation.manifestationDispelled,Is.True);
+            yield return Load(20);c=CampaignContinuationController.Active;
+            Assert.That(Object.FindAnyObjectByType<CampaignManifestationCombat>(),Is.Null,"Saved victory must never replay the boss.");
+            Assert.That(c.SubmitReturnCalibration(),Is.False);c.CloseMessage();
+            c.State.chamberValues=new[]{0,2,1};Assert.That(c.SubmitReturnCalibration(),Is.True);c.CloseMessage();
+            yield return Load(20);c=CampaignContinuationController.Active;Assert.That(c.State.CanReturn,Is.True);
+            CampaignStorySave.GoTo(21);yield return new WaitForSeconds(3.2f);c=CampaignContinuationController.Active;c.CloseMessage();
+            c.Interact("procedure");c.CloseMessage();c.Interact("procedure");yield return new WaitForSeconds(2.9f);
+            Assert.That(c.State.finalStep,Is.EqualTo(2));c.CloseMessage();c.Interact("procedure");
+            c.Interact("exit");Assert.That(c.State.area,Is.Zero,"Release cannot be skipped.");
+            yield return new WaitForSeconds(3.1f);c.CloseMessage();c.Interact("exit");yield return new WaitForSeconds(3.2f);
+            c=CampaignContinuationController.Active;c.CloseMessage();c.Interact("renan");c.CloseMessage();c.Interact("notebook");c.CloseMessage();c.Interact("fusca");c.CloseMessage();
+            Assert.That(c.State.finished&&c.CreditsVisible,Is.True);
         }
         [UnityTest,Timeout(90000)] public IEnumerator ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue()
         {
-            var story=new CampaignStory{phase=21};story.continuation.manifestationDispelled=true;story.continuation.chambersPrepared=7;CampaignStorySave.Write(story);yield return Load(21);
+            var story=new CampaignStory{phase=21};story.continuation.manifestationDispelled=true;story.continuation.chambersPrepared=7;story.continuation.returnCalibrated=true;story.continuation.chamberValues=new[]{0,2,1};CampaignStorySave.Write(story);yield return Load(21);
             Assert.That(GameObject.Find("Padre Fábio").GetComponent<SpriteRenderer>().sprite.bounds.size.y,Is.GreaterThan(VarginhaReferenceSprites.PadreFabio().bounds.size.y*1.6f),"The epilogue keeps the arena priest's adult scale.");
             var c=CampaignContinuationController.Active;c.Interact("procedure");Assert.That(c.State.finalStep,Is.EqualTo(1));c.CloseMessage();
+            yield return Load(21);c=CampaignContinuationController.Active;
+            Assert.That(c.State.finalStep,Is.EqualTo(1),"The opened passage survives reload before crossing.");
             c.Interact("procedure");Assert.That(c.State.finalStep,Is.EqualTo(1),"The seal stays active throughout crossing.");
             yield return new WaitForSeconds(2.9f);Assert.That(c.State.finalStep,Is.EqualTo(2));
             yield return Load(21);c=CampaignContinuationController.Active;
@@ -197,6 +212,16 @@ namespace Game.Tests.PlayMode
             Assert.That(c.CreditsVisible,Is.True);Assert.That(c.Modal,Is.True);
             Assert.That(CampaignCredits.Names[0],Is.EqualTo("fabio, joao pedro matias, asafe e marcos"));
             Assert.That(CampaignCredits.Participation,Is.EqualTo("edelzio, renan, ouzana, professor fabio e ET de Varginha"));
+        }
+        [UnityTest,Timeout(90000)] public IEnumerator ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease()
+        {
+            CampaignStorySave.Write(new CampaignStory{phase=21});yield return Load(21);
+            var c=CampaignContinuationController.Active;c.Interact("procedure");
+            Assert.That(c.State.finalStep,Is.Zero,"Return must require victory and calibration.");
+            c.CloseMessage();c.State.manifestationDispelled=true;c.Interact("procedure");
+            Assert.That(c.State.finalStep,Is.Zero,"Victory alone must not bypass calibration.");
+            c.CloseMessage();c.State.finalStep=3;c.Interact("exit");
+            yield return null;Assert.That(c.State.area,Is.Zero,"Release must complete before the school epilogue.");
         }
         IEnumerator Click(Mouse mouse,string name)
         {

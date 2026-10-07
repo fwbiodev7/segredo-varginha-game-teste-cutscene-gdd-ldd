@@ -14,7 +14,7 @@ namespace Game.Varginha.Experiment
         public static VarginhaCampaignStage Active { get; private set; }
         public static bool IsModalOpen => Active != null && Active.IsBlocked;
         private bool IsBlocked => !_ready || _titleTime < 3 || _paused || _busy || _dialogue != null || _view != View.World || VarginhaGameHUD.Instance?.IsInventoryOpen == true;
-        private enum View { World, Pages, Photo, Code, Notebook, Cutscene, Complete }
+        private enum View { World, Pages, Photo, Code, Notebook, Hint, Cutscene, Complete }
         private View _view;
         private Vector2 _journalScroll;
         private CampaignStory _progress;
@@ -35,7 +35,7 @@ namespace Game.Varginha.Experiment
             public Point(string key, string name, Vector2 pos, Transform follow = null) { id = key; label = name; position = pos; target = follow; }
         }
         public CampaignStory Progress => _progress;
-        private string PhaseTitle => phase == 2 ? "A CHAVE E A CAIXA" : phase == 4 ? "ENTRE AULAS E PISTAS" : "O CÓDIGO DAS 23:23";
+        private string PhaseTitle => CampaignSequence.Title(phase).ToUpperInvariant();
         private void Awake()
         {
             Active = this;
@@ -75,9 +75,10 @@ namespace Game.Varginha.Experiment
         }
         private void RestoreInventory()
         {
-            _player.HasBackpack = phase > 2 || (_progress.routine & 8) != 0;
+            _player.HasBackpack = phase > 2 || _progress.boxFound || (_progress.routine & 8) != 0;
             _player.HasFuscaKey = _player.HasResearchNotebook = phase > 2 || _progress.pagesSolved;
-            _player.HasDecodedData = phase > 2 || (_progress.routine & 4) != 0;
+            _player.HasDecodedData = phase > 2 || _progress.boxFound || (_progress.routine & 4) != 0;
+            if(_progress.boxFound)GameObject.Find("Backpack_Prop")?.SetActive(false);
         }
         private void BuildHousePoints()
         {
@@ -89,7 +90,7 @@ namespace Game.Varginha.Experiment
             _points.Add(new Point("car", "FUSCA • IR À INDUSTRIAL", new(20, 0)));
             if(CampaignIllustratedMaps.Get(2)!=null)foreach(var point in _points)point.position=CampaignMapPlan.Create(2).points.Find(p=>p.id==point.id).position+Vector2.up*.58f;
             foreach (var exit in FindObjectsByType<FuscaLevelExit>(FindObjectsInactive.Include)) exit.enabled = false;
-            var bag = GameObject.Find("Backpack_Prop"); if (bag != null && (_progress.routine & 8) != 0) bag.SetActive(false);
+            var bag = GameObject.Find("Backpack_Prop"); if (bag != null && (_progress.boxFound || (_progress.routine & 8) != 0)) bag.SetActive(false);
         }
         private void BuildSchoolPoints()
         {
@@ -134,6 +135,12 @@ namespace Game.Varginha.Experiment
             var layoutSchool=CampaignIllustratedMaps.Get(phase);
             if(layoutSchool!=null)_points.Find(point=>point.id=="notebook").position=layoutSchool.Objective("notebook")+Vector2.up*.58f;
         }
+        private int _hintLevel;
+        public bool OpenHints()
+        {
+            if (!_ready || _busy || _paused || _dialogue != null || _view == View.Cutscene || _view == View.Complete || VarginhaGameHUD.Instance?.IsInventoryOpen == true) return false;
+            _hintLevel=0; Show(View.Hint); return true;
+        }
         private void Update()
         {
             if (CampaignCinematics.IsTransitioning) return;
@@ -148,8 +155,9 @@ namespace Game.Varginha.Experiment
             if (_paused) return;
             if (_titleTime < 3) { _titleTime += Time.unscaledDeltaTime; Lock(); return; }
             if (_view == View.Cutscene)
-            { _cutTime += Time.unscaledDeltaTime; if (_cutTime >= 7) FinishCutscene(); return; }
+            { _cutTime += Time.unscaledDeltaTime; if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)) FinishCutscene(); return; }
             if (IsBlocked) return;
+            if (Keyboard.current?.f1Key.wasPressedThisFrame == true) { OpenHints(); return; }
             if (Keyboard.current?.gKey.wasPressedThisFrame == true) { OpenBackpack(); return; }
             if (Keyboard.current?.tabKey.wasPressedThisFrame == true) Show(View.Notebook);
             if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact))
@@ -166,11 +174,20 @@ namespace Game.Varginha.Experiment
         public void Interact(string id)
         {
             if (!_ready || _busy) return;
-            if (id == "car" && phase == 2 && _progress.CanLeaveHouse) { CampaignStorySave.GoTo(3); return; }
+            if (id == "car" && phase == 2 && _progress.CanLeaveHouse) { DepartForSchool(); return; }
             _sound?.Play(id == "box" || id == "notebook" ? "Paper" : "UI");
             if (id.StartsWith("student:")) StudentInteraction(int.Parse(id.Substring(8)));
             else if (phase == 2) HouseInteraction(id); else SchoolInteraction(id);
             RestoreInventory(); Save(); Lock();
+        }
+        private void DepartForSchool() { Save(); StartCoroutine(SchoolTransition()); }
+        private IEnumerator SchoolTransition()
+        {
+            _busy = true; Lock(); _sound?.Play("Starter");
+            _dialogue = "O Fusca atravessa Varginha. Uma pane breve, o rádio sem energia e uma voz: Não deixa ela sair. O motor volta a responder. A Industrial está próxima."; _speaker = "A CAMINHO DA INDUSTRIAL";
+            yield return new WaitForSeconds(VarginhaGameSettings.Current.reducedMotion ? 2 : 3.5f);
+            _progress.arrival = true; _progress.inspection = 7; _progress.driveDistance = 120; Save();
+            CampaignStorySave.GoTo(4);
         }
         private void HouseInteraction(string id)
         {
@@ -182,7 +199,7 @@ namespace Game.Varginha.Experiment
                 case "bag":
                     StartCoroutine(RoutineAction("bag")); break;
                 case "box":
-                    if (_progress.routine != 15) { Say("Edelzio", "Antes de investigar a caixa, falta: "+_progress.RemainingHouseTasks+"."); break; }
+
                     if (_progress.pagesSolved) { Say("Edelzio", "Guardei a chave, o caderno e o primeiro fragmento de mapa. A mensagem continua ali: ELA AINDA ESTÁ AQUI."); break; }
                     if (!_progress.boxFound)
                     {
@@ -192,8 +209,8 @@ namespace Game.Varginha.Experiment
                     else Show(View.Pages);
                     break;
                 case "car":
-                    if (_progress.CanLeaveHouse) CampaignStorySave.GoTo(3);
-                    else Say("Edelzio", "Falta a chave. Termine a rotina e investigue a caixa sob a cama antes de sair.");
+                    if (_progress.CanLeaveHouse) DepartForSchool();
+                    else Say("Edelzio", "Investigue a caixa sob a cama e organize as páginas para encontrar a chave.");
                     break;
             }
         }
@@ -202,7 +219,7 @@ namespace Game.Varginha.Experiment
             if(id=="renan")
             {
                 _progress.renanMet=true;
-                if(phase==5&&_progress.codeSolved)
+                if(phase>=4&&_progress.codeSolved)
                 {
                     _progress.renanConfirmed=true;
                     Cutscene("UM HORÁRIO QUE SE REPETE", "Renan: 23:23. Essa anotação também aparece nos registros da cidade.\nLeve a fotografia à biblioteca; pode haver outra parte dessa história lá.", View.Complete);
@@ -214,8 +231,8 @@ namespace Game.Varginha.Experiment
             else if(id=="notebook")
             {
                 if(!_progress.renanMet){Say("Edelzio","Vou conversar com Renan antes de usar o notebook dele.");return;}
-                if(phase==4){_progress.photoOpened=true;Show(View.Photo);}
-                else if(!_progress.buildingSolved)Say("Edelzio","Preciso analisar primeiro a fotografia encontrada com Renan.");
+                if(!_progress.buildingSolved){_progress.photoOpened=true;Show(View.Photo);}
+
                 else if(_progress.codeSolved)Say("Edelzio","23:23. Vou mostrar essa descoberta a Renan.");
                 else{_progress.timeOpened=true;Show(View.Code);}
             }
@@ -272,7 +289,7 @@ namespace Game.Varginha.Experiment
                 "O projetor piscou com o cabo conectado. Renan também viu.",
                 "Renan está mostrando documentos antigos à turma."
             };
-            Say(student.StudentName, phase == 5 && _progress.codeSolved
+            Say(student.StudentName, phase >= 4 && _progress.codeSolved
                 ? "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo."
                 : ("Estou " + student.Activity + ". ") + first[index]);
         }
@@ -301,7 +318,7 @@ namespace Game.Varginha.Experiment
         {
             if (!_progress.SubmitPhotoClue(choice)) { _feedback = "Observe o portão: o que parece estar fora do lugar?"; return false; }
             Save();_sound?.Play("Success");
-            Cutscene("ALGUÉM NO PORTÃO", "Há um vulto no portão da fotografia de 1996. Edelzio salva uma cópia no caderno.\nNa margem, duas anotações iguais parecem formar um horário.", View.Complete); return true;
+            Cutscene("ALGUÉM NO PORTÃO", "Há um vulto no portão da fotografia de 1996. Edelzio salva uma cópia no caderno.\nNa margem, duas anotações iguais parecem formar um horário.", View.World); return true;
         }
         public bool SubmitCode()
         {
@@ -311,10 +328,9 @@ namespace Game.Varginha.Experiment
         }
         private string Objective()
         {
-            if (phase == 2) return _progress.routine != 15 ? "Falta: "+_progress.RemainingHouseTasks+"."
-                : !_progress.pagesSolved ? "A chave sumiu. Investigue a caixa sob a cama e organize as páginas." : "Leve as pistas ao trabalho. Vá ao Fusca no quintal à direita.";
+            if (phase == 2) return !_progress.pagesSolved ? "A chave sumiu. Investigue a caixa sob a cama e organize as páginas." : "Leve as pistas ao trabalho. Vá ao Fusca no quintal à direita.";
             if (!_progress.renanMet) return "Entre na sala e converse com Renan junto ao quadro branco.";
-            if (phase == 4) return "Abra a fotografia no notebook do professor e observe o portão.";
+            if (!_progress.buildingSolved) return "Abra a fotografia no notebook do professor e observe o portão.";
             return !_progress.codeSolved ? "Reabra a fotografia no notebook e descubra o horário na margem." : "Mostre a descoberta das 23:23 a Renan junto ao quadro branco.";
         }
         private void OnGUI()
@@ -330,7 +346,7 @@ namespace Game.Varginha.Experiment
             else if (_view == View.Complete) DrawComplete();
             else
             {
-                ExperimentGUI.Objective("ATO II • FASE " + phase + " • 2026", PhaseTitle, Objective());
+                ExperimentGUI.Objective(CampaignSequence.Heading(phase) + " • 2026", PhaseTitle, Objective());
                 bool hudEnabled=GUI.enabled; GUI.enabled=hudEnabled&&!_paused&&_view==View.World&&_dialogue==null;
                 if (CampaignHudIcons.Button(1010, CampaignHudIcons.Icon.Notebook, "TAB", "Caderno")) Show(View.Notebook);
                 bool enabled = GUI.enabled; GUI.enabled = enabled&&_player.HasBackpack;
@@ -369,7 +385,7 @@ namespace Game.Varginha.Experiment
             if (_paused)
             {
                 if (_settings) { GUI.matrix = matrix; if (VarginhaGameSettings.Draw()) _settings = false; return; }
-                int action = ExperimentGUI.PausePanel("FASE " + phase + " • " + PhaseTitle);
+                int action = ExperimentGUI.PausePanel("FASE " + CampaignSequence.Chapter(phase) + " • " + PhaseTitle);
                 if (action == 1) TogglePause();
                 if (action == 2) _settings = true;
                 if (action == 3) Menu();
@@ -409,6 +425,7 @@ namespace Game.Varginha.Experiment
                 for(int i=0;i<3;i++)if(ExperimentGUI.Button(new Rect(730,331+i*60,390,48),choices[i]))
                 {if(_view==View.Photo)SubmitPhotoClue(i);else{_progress.schoolTimeChoice=i;SubmitCode();}}
             }
+            else if (_view == View.Hint) CampaignHints.Draw(_progress,phase,ref _hintLevel);
             else DrawNotebook();
             if (!string.IsNullOrEmpty(_feedback)) ExperimentGUI.Label(new Rect(145, 506, 955, 42), _feedback, small: true);
             if (ExperimentGUI.Button(new Rect(145, 578, 270, 50), "VOLTAR")) { Save(); Show(View.World); }
@@ -416,18 +433,11 @@ namespace Game.Varginha.Experiment
         private void DrawNotebook()
         {
             ExperimentGUI.Label(new Rect(140, 143, 995, 55), "CADERNO • EVIDÊNCIAS", true);
-            var entries = new List<string>();
-            if (_progress.boxFound) entries.Add("Caixa de 1996: chave, fotografia e páginas com desenhos.");
-            if (_progress.pagesSolved) entries.Add("Mensagem recente: ELA AINDA ESTÁ AQUI. Fragmento de mapa 1 recolhido.");
-            if (_progress.arrival) entries.Add("Pane no Fusca: rádio, ignição e painel contradizem o que vi.");
-            if (_progress.buildingSolved) entries.Add("Fotografia de 1996 no notebook de Renan: um vulto aparece no portão. Duas anotações iguais na margem.");
-            if (_progress.codeSolved) entries.Add("Horário descoberto: 23:23. Fragmento de mapa 2 revelado na ampliação. Investigar os registros da cidade.");
-            _journalScroll = GUI.BeginScrollView(new Rect(140, 206, 675, 335), _journalScroll, new Rect(0, 0, 650, Mathf.Max(335, entries.Count * 94)));
-            ExperimentGUI.Label(new Rect(0, 0, 650, Mathf.Max(335, entries.Count * 94)), entries.Count == 0 ? "Nenhuma pista recolhida. Observe os objetos e converse com as pessoas." : string.Join("\n\n", entries), small: true);
-            GUI.EndScrollView();
+            CampaignJournal.Draw(_progress,ref _journalScroll,new Rect(140,206,675,335));
             ExperimentGUI.Label(new Rect(860, 207, 265, 42), "MAPA • " + _progress.MapFragments + "/3", true);
             for (int i = 0; i < _progress.MapFragments; i++) GUI.DrawTextureWithTexCoords(new Rect(860 + i * 130, 270, 125, 115), VarginhaExperimentArt.Map(), VarginhaExperimentArt.MapUV(i == 0 ? 2 : 0));
             ExperimentGUI.Label(new Rect(860, 420, 255, 90), "Os registros da cidade podem revelar o próximo fragmento.", small: true);
+            if (ExperimentGUI.Button(new Rect(860,540,265,45),"PRECISO DE UMA DICA")) OpenHints();
         }
         private void DrawCutscene()
         {
@@ -445,19 +455,16 @@ namespace Game.Varginha.Experiment
             ExperimentGUI.Panel(new Rect(220, 185, 840, 380));
             if (phase == 2 && _progress.pagesSolved)
                 GUI.DrawTextureWithTexCoords(new Rect(250, 203, 210, 145), VarginhaExperimentArt.Map(), VarginhaExperimentArt.MapUV(2));
-            if (phase == 5 && _progress.codeSolved) ExperimentGUI.Label(new Rect(480, 207, 500, 55), "23 : 23", true);
+            if (phase >= 4 && _progress.codeSolved) ExperimentGUI.Label(new Rect(480, 207, 500, 55), "23 : 23", true);
             ExperimentGUI.Caption(new Rect(250, 353, 780, 202), _cutText, VarginhaGameSettings.Current.subtitleSize);
             if (ExperimentGUI.Button(new Rect(890, 615, 275, 44), "CONTINUAR")) FinishCutscene();
         }
         private void DrawComplete()
         {
             ExperimentGUI.Panel(new Rect(180,130,930,510));
-            ExperimentGUI.Label(new Rect(220, 165, 895, 55), "FASE " + phase + " CONCLUÍDA", true);
-            ExperimentGUI.Label(new Rect(220, 270, 870, 155), phase == 4
-                ? "A fotografia está no caderno. O vulto no portão não deveria estar ali. Duas anotações na margem pedem uma segunda análise."
-                : "Renan confirmou o horário. A ampliação revelou outro fragmento. Leve a fotografia aos registros da cidade.\n\nPróxima fase: Fragmentos.");
-            if (phase == 4 && ExperimentGUI.Button(new Rect(370, 490, 540, 55), "CONTINUAR PARA A FASE 5")) CampaignStorySave.GoTo(5);
-            if (phase == 5 && ExperimentGUI.Button(new Rect(370, 490, 540, 55), "CONTINUAR PARA A FASE 6 • FRAGMENTOS")) CampaignStorySave.GoTo(6);
+            ExperimentGUI.Label(new Rect(220, 165, 895, 55), "FASE " + CampaignSequence.Chapter(phase) + " CONCLUÍDA", true);
+            ExperimentGUI.Label(new Rect(220, 270, 870, 155), "Renan confirmou o horário. A ampliação revelou outro fragmento. Leve a fotografia aos registros da cidade.\n\nPróxima fase: Fragmentos.");
+            if (phase >= 4 && ExperimentGUI.Button(new Rect(370, 490, 540, 55), "CONTINUAR • FASE 4 • FRAGMENTOS")) CampaignStorySave.GoTo(6);
             if (ExperimentGUI.Button(new Rect(370, 570, 540, 45), "SALVAR E VOLTAR AO MENU")) Menu();
         }
         public void Save()

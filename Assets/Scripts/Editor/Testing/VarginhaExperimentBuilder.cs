@@ -39,7 +39,7 @@ namespace Game.Editor.Testing
             if (!scenes.Any(item => item.path == ScenePath))
                 scenes.Add(new EditorBuildSettingsScene(ScenePath, true));
             else foreach (var item in scenes) if (item.path == ScenePath) item.enabled = true;
-            EditorBuildSettings.scenes = scenes.ToArray();
+            EditorBuildSettings.scenes = scenes.ToArray(); CampaignSequenceBuilder.Apply();
             AssetDatabase.SaveAssets();
             ExportFrames();
             BuildCampaign();
@@ -53,7 +53,7 @@ namespace Game.Editor.Testing
             EditorSceneManager.SaveScene(house, path);
             var scenes = EditorBuildSettings.scenes.ToList();
             if (!scenes.Any(s => s.path == path)) scenes.Add(new EditorBuildSettingsScene(path, true));
-            EditorBuildSettings.scenes = scenes.ToArray();
+            EditorBuildSettings.scenes = scenes.ToArray(); CampaignSequenceBuilder.Apply();
             BuildFollowingChapters();
             EditorSceneManager.OpenScene("Assets/Scenes/Menu_MisterioDeVarginha.unity");
             AssetDatabase.SaveAssets();
@@ -72,7 +72,7 @@ namespace Game.Editor.Testing
                 EditorSceneManager.SaveScene(scene, path);
                 var scenes = EditorBuildSettings.scenes.ToList();
                 if (!scenes.Any(s => s.path == path)) scenes.Add(new EditorBuildSettingsScene(path, true));
-                EditorBuildSettings.scenes = scenes.ToArray();
+                EditorBuildSettings.scenes = scenes.ToArray(); CampaignSequenceBuilder.Apply();
             }
             // Remove the synthetic speech from shipped Resources through the asset database.
             foreach (string name in new[] { "NewsAnchor", "Witness", "Memory" })

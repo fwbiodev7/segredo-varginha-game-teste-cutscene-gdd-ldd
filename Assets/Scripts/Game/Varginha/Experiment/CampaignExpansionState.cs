@@ -29,21 +29,21 @@ namespace Game.Varginha.Experiment
         }
         public bool SolveSamples()
         {
-            if (!anchorFound || !evidencePresented || labClues != 7 || !CampaignStory.Sequence(sampleOrder, new[] { 0, 1, 2 })) return false;
+            if (!anchorFound || !evidencePresented) return false;
             reagentUnlocked = true; reagentCharges = Mathf.Max(6, reagentCharges); return true;
         }
         public bool Spray(int region)
         {
             if (!reagentUnlocked || region < 0 || region > 2 || reagentCharges <= 0 || (sprayed & (1 << region)) != 0) return false;
-            sprayed |= 1 << region; reagentCharges--; return true;
+            sprayed = 7; reagentCharges--; stabilized = true; return true;
         }
         public bool Stabilize()
         {
-            if (!reagentUnlocked || sprayed != 7 || !CampaignStory.Sequence(sealOrder, new[] { 0, 1, 2 })) return false;
+            if (!reagentUnlocked || sprayed != 7) return false;
             return stabilized = true;
         }
         public bool Complete(int phase) => phase == 6 ? mapSolved : phase == 7 ? fabioMet : phase == 8 ? anchorFound
-            : phase == 9 ? reagentUnlocked : phase == 10 && stabilized && testDriven;
+            : phase == 9 ? reagentUnlocked : phase == 10 && stabilized;
         public void Repair()
         {
             visited &= 7; truthClues &= 7; forestSigns = Mathf.Clamp(forestSigns, 0, 3); anchorClues &= 7; labClues &= 7; sprayed &= 7;
@@ -57,13 +57,13 @@ namespace Game.Varginha.Experiment
             if (anchorFound && anchorClues != 7 && (anchorYear != 1996 || anchorSymbol != 1 || anchorRecord != 23)) anchorFound = false;
             if (anchorFound) { anchorClues = 7; anchorYear = 1996; anchorSymbol = 1; anchorRecord = 23; }
             if (!anchorFound) evidencePresented = false;
-            if (!anchorFound || !evidencePresented || labClues != 7) reagentUnlocked = false;
+            if (!anchorFound || !evidencePresented) reagentUnlocked = false;
             if (!reagentUnlocked) { sprayed = 0; stabilized = false; }
             if (sprayed != 7) stabilized = false;
             if (!stabilized) testDriven = false;
             // Existing investigations resume at the bench rather than repeating the arrival.
             if(sprayed!=0||stabilized||testDriven)workshopParked=true;
-            if(!testDriven)workshopDeparted=false;
+            if(!stabilized)workshopDeparted=false;
             workshopHeading=Mathf.Clamp(workshopHeading,0,3);
             if(float.IsNaN(workshopCarX)||float.IsInfinity(workshopCarX)||float.IsNaN(workshopCarY)||float.IsInfinity(workshopCarY))
             {workshopHasCarPosition=false;workshopCarX=workshopCarY=0;}

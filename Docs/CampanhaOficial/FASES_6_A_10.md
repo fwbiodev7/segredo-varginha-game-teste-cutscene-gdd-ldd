@@ -1,5 +1,7 @@
 # Campanha — cinco novas fases em 2D pixel art
 
+> Referência histórica. A sequência vigente é [Campanha de 15 fases](CAMPANHA_15_FASES.md), atualizada em 07/10/2026.
+
 Continuação da Fase 5, seguindo as **fases 06–10 do LDD de referência**. A numeração desse LDD difere do antigo plano resumido da campanha. A revisão refaz a arquitetura e a mobília das fases 1, 3, 4, 5, 6, 7, 8, 9 e 10 em pixel art 2D, com atlas e objetos produzidos pela ImageGen e referências do projeto original. O arquivo da cena adulta da Fase 2, a fachada real da Industrial e o modelo original do Fusca são preservados. Após o feedback posterior, a casa adulta recebe texturas, móveis proporcionais, luz suave e portais abertos durante o jogo. Não houve redesenho dos alunos.
 
 ## Construção dos mapas

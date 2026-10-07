@@ -44,7 +44,7 @@ namespace Game.Editor.Testing
                 var entry = scenes.FirstOrDefault(s => s.path == path);
                 if (entry == null) scenes.Add(new EditorBuildSettingsScene(path,true)); else entry.enabled = true;
             }
-            EditorBuildSettings.scenes = scenes.ToArray(); AssetDatabase.SaveAssets();
+            EditorBuildSettings.scenes = scenes.ToArray(); CampaignSequenceBuilder.Apply(); AssetDatabase.SaveAssets();
             ExportPreviews();
             EditorSceneManager.OpenScene("Assets/Scenes/Menu_MisterioDeVarginha.unity");
             Debug.Log("CAMPAIGN_EXPANSION_READY=6-10");

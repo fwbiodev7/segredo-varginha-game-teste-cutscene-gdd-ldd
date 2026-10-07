@@ -1,5 +1,7 @@
 # Campanha proposta — 20 fases, 6 atos
 
+> Referência histórica. A sequência vigente é [Campanha de 15 fases](CAMPANHA_15_FASES.md), atualizada em 07/10/2026.
+
 Status: planejamento, sem implementação das novas fases nesta entrega.
 
 ## Cânone e escopo

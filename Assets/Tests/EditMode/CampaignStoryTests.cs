@@ -32,7 +32,7 @@ namespace Game.Tests.EditMode
         {
             var state = new CampaignStory { phase = 900, pagesSolved = true, buildingSolved = true, codeSolved = true, renanConfirmed = true, pages = new[] { 2, 2, 2 }, driveDistance = float.NaN, x = float.PositiveInfinity, positionPhase = 2 };
             state.Repair();
-            Assert.That(state.phase, Is.EqualTo(10));
+            Assert.That(state.phase, Is.EqualTo(21));
             Assert.That(state.MapFragments, Is.Zero);
             Assert.That(state.codeSolved || state.renanConfirmed, Is.False);
             Assert.That(state.positionPhase, Is.Zero);

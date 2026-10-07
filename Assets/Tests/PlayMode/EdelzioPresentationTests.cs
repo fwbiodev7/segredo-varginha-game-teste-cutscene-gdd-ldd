@@ -143,7 +143,8 @@ namespace Game.Tests.PlayMode
                 animation.SetActionPose(pose);
                 var body = renderer.sprite;
                 var atlas = pose == "Edelzio_Crouch" || pose == "Edelzio_Reach"
-                    ? VarginhaReferenceSprites.EdelzioWalkFrames()[0][0].texture : interactionAtlas;
+                    ? VarginhaReferenceSprites.EdelzioWalkFrames()[0][0].texture
+                    : pose == "Edelzio_Sit" || pose == "Edelzio_UseNotebook" ? VarginhaSeatedSprites.Frame(0,2).texture : interactionAtlas;
                 Assert.AreSame(atlas, body.texture);
                 _player.EquipBackpack();
                 yield return null;

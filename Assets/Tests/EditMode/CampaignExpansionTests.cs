@@ -139,13 +139,13 @@ namespace Game.Tests.EditMode
             Assert.That(state.SolveAnchor(1898,1,23),Is.False); Assert.That(state.SolveAnchor(1996,1,23),Is.True);
             state.labClues=7; Assert.That(state.SolveSamples(),Is.False); state.evidencePresented=true; Assert.That(state.SolveSamples(),Is.True);
             Assert.That(state.Spray(0),Is.True); int remaining=state.reagentCharges; Assert.That(state.Spray(0),Is.False); Assert.That(state.reagentCharges,Is.EqualTo(remaining));
-            Assert.That(state.Spray(1)&&state.Spray(2)&&state.Stabilize(),Is.True); Assert.That(state.Complete(10),Is.False); state.testDriven=true; state.truthClues=7;
+            Assert.That(state.sprayed,Is.EqualTo(7)); Assert.That(state.Complete(10),Is.True); Assert.That(state.testDriven,Is.False); state.truthClues=7;
             var restored=JsonUtility.FromJson<CampaignExpansionState>(JsonUtility.ToJson(state));restored.Repair();
             Assert.That(restored.Complete(10),Is.True); Assert.That(restored.truthClues,Is.EqualTo(7));
         }
         [Test] public void OldSavesAndMalformedOrdersAreRecovered()
         {
-            var story=JsonUtility.FromJson<CampaignStory>("{\"version\":1,\"phase\":5}"); story.Repair(); Assert.That(story.expansion,Is.Not.Null); Assert.That(story.phase,Is.EqualTo(5));
+            var story=JsonUtility.FromJson<CampaignStory>("{\"version\":1,\"phase\":5}"); story.Repair(); Assert.That(story.expansion,Is.Not.Null); Assert.That(story.phase,Is.EqualTo(4));
             var state=new CampaignExpansionState { mapOrder=new[]{9,9,9},sampleOrder=null,anchorFound=true,reagentUnlocked=true,stabilized=true,testDriven=true,reagentCharges=-1 };
             state.Repair(); Assert.That(state.Complete(10),Is.False); Assert.That(state.reagentCharges,Is.Zero); Assert.That(state.mapOrder,Is.EqualTo(new[]{2,0,1}));
         }

@@ -1,5 +1,7 @@
 # Continuação da campanha — 4 de outubro de 2026
 
+> Referência histórica. A sequência vigente é [Campanha de 15 fases](CAMPANHA_15_FASES.md), atualizada em 07/10/2026.
+
 A continuação utiliza o planejamento anexado pelo autor e os mapas como documentação de organização, colisões e passagens. O roteiro prevalece sobre os títulos das imagens. O projeto existente utiliza cenas Unity com mapas ilustrados e Collider2D; essa estrutura foi mantida, sem migrar as fases prontas para Tilemaps.
 
 ## Correspondência de locais

@@ -1,0 +1,558 @@
+{
+  "date": "2026-10-07",
+  "editor": "6000.6.0f1",
+  "renderPipeline": "Built-in",
+  "runs": [
+    {
+      "xml": "Logs/Campaign15Baseline.xml",
+      "sha256": "a49536e7ff9f6d7f2a71e783b87a49f55771ae339b8317baf6cace6fafcd039e",
+      "start-time": "2026-10-07 17:40:23Z",
+      "end-time": "2026-10-07 17:40:26Z",
+      "duration": "3,0330221",
+      "total": "1",
+      "passed": "0",
+      "failed": "1",
+      "result": "Failed(Child)",
+      "failures": [
+        {
+          "test": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease",
+          "message": "  Return must require victory and calibration.\n  Expected: 0\n  But was:  1\n"
+        }
+      ]
+    },
+    {
+      "xml": "Logs/Campaign15Edit.xml",
+      "sha256": "d8cdcc41f21cb4fe904f9107b47af9b6b418c2faa3726dd0bf14f188ed9bc97b",
+      "start-time": "2026-10-07 17:44:01Z",
+      "end-time": "2026-10-07 17:44:04Z",
+      "duration": "2,431104",
+      "total": "37",
+      "passed": "33",
+      "failed": "4",
+      "result": "Failed(Child)",
+      "failures": [
+        {
+          "test": "Game.Tests.EditMode.CampaignExpansionTests.ExpansionRequiresPhysicalEvidenceAndPreservesOptionalClues",
+          "message": "  Expected: True\n  But was:  False\n"
+        },
+        {
+          "test": "Game.Tests.EditMode.CampaignExpansionTests.OldSavesAndMalformedOrdersAreRecovered",
+          "message": "  Expected: 5\n  But was:  4\n"
+        },
+        {
+          "test": "Game.Tests.EditMode.CampaignStoryTests.CorruptProgressCannotUnlockImpossibleClues",
+          "message": "  Expected: 10\n  But was:  21\n"
+        },
+        {
+          "test": "Game.Tests.EditMode.CampaignWorkshopStateTests.EarlierInvestigationsMigrateToAParkedVehicle",
+          "message": "  Expected: 1\n  But was:  7\n"
+        }
+      ]
+    },
+    {
+      "xml": "Logs/Campaign15EditFinal.xml",
+      "sha256": "6137f0e93ad42baa8bcbea637a11abc7f233f962fb87d8932a10beef24939265",
+      "start-time": "2026-10-07 17:50:43Z",
+      "end-time": "2026-10-07 17:50:46Z",
+      "duration": "2,8382435",
+      "total": "48",
+      "passed": "48",
+      "failed": "0",
+      "result": "Passed",
+      "failures": []
+    },
+    {
+      "xml": "Logs/Campaign15Play.xml",
+      "sha256": "ce400c424db7858b4540be99df0052d43f8f8b0c2708d166306b836093ef13f0",
+      "start-time": "2026-10-07 17:52:18Z",
+      "end-time": "2026-10-07 17:57:03Z",
+      "duration": "285,607521",
+      "total": "36",
+      "passed": "32",
+      "failed": "4",
+      "result": "Failed(Child)",
+      "failures": [
+        {
+          "test": "Game.Tests.PlayMode.CampaignChaptersTests.AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight",
+          "message": "System.ArgumentNullException : Value cannot be null.\nParameter name: Control 'Key:/Keyboard/w' does not have an associated state"
+        },
+        {
+          "test": "Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign",
+          "message": "  Routine cannot be bypassed.\n  Expected: False\n  But was:  True\n"
+        },
+        {
+          "test": "Game.Tests.PlayMode.EdelzioPresentationTests.ActionsKeepNewAppearanceAndColliderSize",
+          "message": "  Expected: (32.50, 31.60)\n  But was:  (32.00, 28.03)\n"
+        },
+        {
+          "test": "Game.Tests.PlayMode.EdelzioPresentationTests.BackpackStateControlsIntegratedAppearanceInEveryDirection",
+          "message": "  Expected: (32.50, 31.60)\n  But was:  (32.00, 28.03)\n"
+        }
+      ]
+    },
+    {
+      "xml": "Logs/CampaignDifficultyBaseline.xml",
+      "sha256": "6cb9b67dfb641cdb9c02fc1391c2e6f56990017940c07d12570f9ff3c9b605aa",
+      "start-time": "2026-10-07 18:00:52Z",
+      "end-time": "2026-10-07 18:00:52Z",
+      "duration": "0,1388474",
+      "total": "1",
+      "passed": "0",
+      "failed": "1",
+      "result": "Failed(Child)",
+      "failures": [
+        {
+          "test": "Game.Tests.EditMode.CampaignUsabilityTests.DifficultyOptionsAffectCampaignBoss",
+          "message": "  Expected: less than 650.0f\n  But was:  650.0f\n"
+        }
+      ]
+    },
+    {
+      "xml": "Logs/Campaign15EditVerified.xml",
+      "sha256": "1b21c62ac395152991707ab78588bd417f0bae4cf78c6219954586f542a6b05e",
+      "start-time": "2026-10-07 18:09:53Z",
+      "end-time": "2026-10-07 18:09:56Z",
+      "duration": "2,9570185",
+      "total": "53",
+      "passed": "53",
+      "failed": "0",
+      "result": "Passed",
+      "failures": []
+    },
+    {
+      "xml": "Logs/Campaign15PlayVerified.xml",
+      "sha256": "6c33bead15cae50bd15cc8b44e607389efe62538f47db91443243fed191d7608",
+      "start-time": "2026-10-07 18:10:40Z",
+      "end-time": "2026-10-07 18:15:34Z",
+      "duration": "294,7136269",
+      "total": "38",
+      "passed": "36",
+      "failed": "2",
+      "result": "Failed(Child)",
+      "failures": [
+        {
+          "test": "Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign",
+          "message": "  Backpack open: has=True, locked=True, dialogue=False, scale=1\n  Expected: True\n  But was:  False\n"
+        },
+        {
+          "test": "Game.Tests.PlayMode.EdelzioPresentationTests.ActionsKeepNewAppearanceAndColliderSize",
+          "message": "  Expected: same as <EdelzioInteractionsV1 (UnityEngine.Texture2D)>\n  But was:  <EdelzioSeatedV2 (UnityEngine.Texture2D)>\n"
+        }
+      ]
+    },
+    {
+      "xml": "Logs/Campaign15PlayCorrections.xml",
+      "sha256": "53f369776a65a23621ea29018ac04c575bc5c56f7fab400306bb0a79ae9539aa",
+      "start-time": "2026-10-07 18:16:54Z",
+      "end-time": "2026-10-07 18:19:05Z",
+      "duration": "130,2863613",
+      "total": "14",
+      "passed": "14",
+      "failed": "0",
+      "result": "Passed",
+      "failures": []
+    },
+    {
+      "xml": "Logs/Campaign15EditComplete.xml",
+      "sha256": "99ee00f22d6c9d061d85b038879d1ee2bfab311ab879985eca61d1e6967152c8",
+      "start-time": "2026-10-07 18:20:49Z",
+      "end-time": "2026-10-07 18:20:51Z",
+      "duration": "2,1403803",
+      "total": "57",
+      "passed": "57",
+      "failed": "0",
+      "result": "Passed",
+      "failures": []
+    }
+  ],
+  "finalLatestResults": {
+    "EditMode": {
+      "Game.Tests.EditMode.CampaignExpansionTests.AllNewPosesUseDedicatedBackpackSheetsWithCompleteHeadsAndStableFeet": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.ArchitectureAndFurnitureHaveSeparateIdempotentLayers": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.AtmosphericLandmarksUseTheirDedicatedCompleteTransparentSheets": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.ChildhoodFurnitureKeepsItsAspectAndCollisionWithinItsBase": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.ChurchAndBiologyHouseHaveIndependentFloorLightingAndEquipment": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(1)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(3)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(4)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(5)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(6)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(7)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(8)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(9)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(10)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.ExpansionRequiresPhysicalEvidenceAndPreservesOptionalClues": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.GeneratedCharacterFramesHaveCompleteOutlinesAndStableFootAnchors": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.HouseListsOnlyActualPendingTasksAndUsesRequestedTextures": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.JournalistMovesOnlyHisMouthAndClosesItAfterTheReport": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.LongUrbanMapFloorLayersRemainBelowBuildingsAndFurniture": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.OldSavesAndMalformedOrdersAreRecovered": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.RemasteredSchoolRetainsTheOriginalTwelveDeskOpenLaboratory": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.RoamingStudentsCanReachTheYardWithoutEnteringRenansSpace": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.SchoolFrontagePreservesWholeArtworkGateAndAspectRatio": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.WalkingFramesKeepTheirHeadCenteredInEveryDirection": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.WallConnectionsFinishCornersWithoutBlockingOpenings": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(1)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(4)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(7)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(9)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(10)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.BattleCalibrationAndCrossingRemainIndependentAndPersist": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.FifteenChaptersUseShippedScenesAndNeverEnterRemovedTasks": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.GraduatedHintsFollowCurrentProgressWithoutSolvingPuzzles": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.HouseAndWorkshopRequireEvidenceWithoutRoutineOrRepeatedPuzzles": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(3,4)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(5,4)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(16,17)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(19,18)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.LoadingLegacySavePersistsMigrationAndDoesNotRewriteItOnNextLoad": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.MergedAgreementKeepsLegacyEvidenceWithoutSkippingTheUnfinishedProcedure": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.MigrationPreservesEvidencePuzzlesEquipmentVictoryAndCrossing": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.ResumeAreaIsLimitedToScenesThatExist(11,0)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.ResumeAreaIsLimitedToScenesThatExist(12,1)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.ResumeAreaIsLimitedToScenesThatExist(17,2)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.ResumeAreaIsLimitedToScenesThatExist(20,0)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignSequenceTests.ResumeAreaIsLimitedToScenesThatExist(21,1)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignStoryTests.CorrectAnswersCannotBypassInvestigatedEvidence": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignStoryTests.CorruptProgressCannotUnlockImpossibleClues": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignStoryTests.InvestigationSurvivesReloadAndRetainsBothMapFragments": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignStoryTests.SchoolUsesOnlyPhotoThenOneTimePuzzleAndKeepsLegacyCompletions": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignUsabilityTests.DifficultyOptionsAffectCampaignBoss": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignWorkshopStateTests.EarlierInvestigationsMigrateToAParkedVehicle": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignWorkshopStateTests.InvalidParkingCoordinatesCannotCorruptTheNextArrival": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.CampaignWorkshopStateTests.VehicleAndReagentAtlasesShareCachedGpuOnlyPointTextures": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing(\"FaseTopView_Varginha\",-9.0f,-7.0f,27.0f,7.0f,3.8f)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing(\"Fase2_Escola_Resgate\",-12.3f,-14.0f,12.3f,6.0f,4.2f)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      },
+      "Game.Tests.EditMode.VarginhaCameraFramingTests.ViewportStaysInsideMapAtCornersAndAfterResizing(\"Fase3_Igreja_Guardiao\",-8.5f,-6.5f,9.5f,6.5f,4.0f)": {
+        "result": "Passed",
+        "source": "Logs/Campaign15EditComplete.xml"
+      }
+    },
+    "PlayMode": {
+      "Game.Tests.PlayMode.CampaignChaptersTests.AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayCorrections.xml"
+      },
+      "Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayCorrections.xml"
+      },
+      "Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayCorrections.xml"
+      },
+      "Game.Tests.PlayMode.CampaignChaptersTests.MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayCorrections.xml"
+      },
+      "Game.Tests.PlayMode.CampaignChaptersTests.PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayCorrections.xml"
+      },
+      "Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayCorrections.xml"
+      },
+      "Game.Tests.PlayMode.CampaignContinuationPlayTests.ArenaNavigationSpawnPoolAndDefeatAllowRetry": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayCorrections.xml"
+      },
+      "Game.Tests.PlayMode.CampaignContinuationPlayTests.BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignExpansionPlayTests.CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaDepartsAfterMarksWithoutRequiringTrack": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.EdelzioPresentationTests.ActionsKeepNewAppearanceAndColliderSize": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayCorrections.xml"
+      },
+      "Game.Tests.PlayMode.EdelzioPresentationTests.BackpackStateControlsIntegratedAppearanceInEveryDirection": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayCorrections.xml"
+      },
+      "Game.Tests.PlayMode.EdelzioPresentationTests.CombatPosesKeepEquipmentWithoutChangingGeometry": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayCorrections.xml"
+      },
+      "Game.Tests.PlayMode.EdelzioPresentationTests.HotbarReflectsActualCollectedItems": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayCorrections.xml"
+      },
+      "Game.Tests.PlayMode.EdelzioPresentationTests.LockStopsResidualMotion": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayCorrections.xml"
+      },
+      "Game.Tests.PlayMode.EdelzioPresentationTests.ReferenceArtCoversDirectionsWeaponsAndPortrait": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayCorrections.xml"
+      },
+      "Game.Tests.PlayMode.VarginhaCampaignTests.AlienBurstKnocksTheChildBackAndLeavesHimLyingWithNoMemory": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.VarginhaCampaignTests.OpeningHandsControlToChildWithoutCombatAndPauseRestoresInput": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.VarginhaPlayerPolishTests.ComboCyclesThreeStepsThenExpires": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.VarginhaPlayerPolishTests.DialogueCancelsWindupWithoutDamage": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.VarginhaPlayerPolishTests.DirectionAndMultipleCollidersProduceOnlyOneHit": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.VarginhaPlayerPolishTests.DodgeHasBoundedDurationCooldownAndBlocksAttack": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.VarginhaPlayerPolishTests.MeleeCannotDamageThroughSolidWall": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.VarginhaPlayerPolishTests.PauseAndDialogueBlockDodgeAndAttack": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.VarginhaPlayerPolishTests.PausingDuringHitstopDoesNotResumeGame": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayVerified.xml"
+      },
+      "Game.Tests.PlayMode.CampaignChaptersTests.OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters": {
+        "result": "Passed",
+        "source": "Logs/Campaign15PlayCorrections.xml"
+      }
+    }
+  }
+}

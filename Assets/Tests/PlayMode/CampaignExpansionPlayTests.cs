@@ -54,12 +54,12 @@ namespace Game.Tests.PlayMode
                 if(phase==9)
                 {
                     foreach(string point in new[]{"ouzana","control","residue","protocol"}){stage.Interact(point);stage.ClosePanel();}
-                    stage.Progress.expansion.sampleOrder=new[]{0,1,2};stage.Interact("samples");Assert.That(stage.SubmitPuzzle(),Is.True);stage.ClosePanel();
+                    Assert.That(stage.Progress.expansion.reagentUnlocked,Is.True);
                 }
                 if(phase==10)
                 {
                     foreach(string point in new[]{"spray0","spray1","spray2"}){stage.Interact(point);stage.ClosePanel();}
-                    stage.Progress.expansion.sealOrder=new[]{0,1,2};stage.Interact("seal");Assert.That(stage.SubmitPuzzle(),Is.True);stage.ClosePanel();
+                    Assert.That(stage.Progress.expansion.stabilized,Is.True);
                     Assert.That(stage.Progress.expansion.truthClues,Is.EqualTo(7));
                     stage.Save();
                 }
@@ -196,7 +196,7 @@ namespace Game.Tests.PlayMode
             }
             yield return new WaitForFixedUpdate();yield return new WaitForFixedUpdate();
         }
-        [UnityTest] public IEnumerator FuscaRequiresStabilizationAndCompletesOnlyAfterDrivingTheTrack()
+        [UnityTest] public IEnumerator FuscaDepartsAfterMarksWithoutRequiringTrack()
         {
             var story=new CampaignStory{phase=10};var s=story.expansion;
             s.visited=7;s.mapSolved=true;s.forestSigns=3;s.fabioMet=true;s.anchorClues=7;s.anchorFound=true;s.evidencePresented=true;s.labClues=7;s.reagentUnlocked=true;s.sprayed=7;s.stabilized=true;
@@ -204,7 +204,7 @@ namespace Game.Tests.PlayMode
             var stage=CampaignExpansionController.Active;stage.Interact("drive");Assert.That(stage.Progress.expansion.testDriven,Is.False);
             var keyboard=InputSystem.AddDevice<Keyboard>();Press(keyboard.dKey);yield return new WaitForSeconds(4.2f);Release(keyboard.dKey);
             Assert.That(stage.Progress.expansion.Complete(10),Is.True);
-            Assert.That(CampaignStorySave.Load().expansion.testDriven,Is.True);
+            Assert.That(CampaignStorySave.Load().expansion.workshopDeparted,Is.True);
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
         [UnityTest] public IEnumerator SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture()

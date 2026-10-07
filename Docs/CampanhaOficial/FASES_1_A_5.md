@@ -1,5 +1,7 @@
 # Campanha experimental — fases 1 a 5
 
+> Referência histórica. A sequência vigente é [Campanha de 15 fases](CAMPANHA_15_FASES.md), atualizada em 07/10/2026.
+
 O menu Jogar → Iniciar campanha começa no jornal e na infância de Edelzio. Ao concluir a lembrança, **Continuar • Ato II** abre a rotina adulta. O botão Continuar do menu recupera a fase atual, as pistas, o arranjo dos puzzles e a posição salva. Iniciar campanha reinicia apenas os dois arquivos desta campanha experimental.
 
 ## Ato I — A Lembrança

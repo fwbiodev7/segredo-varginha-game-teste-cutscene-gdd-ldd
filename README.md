@@ -1,13 +1,15 @@
 # O Segredo de Varginha — laboratório de cutscenes e campanha
 
-Esta é uma cópia independente do protótipo principal, criada em 01/10/2026 a partir do commit `f34e0db`. Mantém os mapas 2D topview da casa, escola e igreja. O menu **Jogar → Iniciar campanha** apresenta reportagens ficcionais de 1996 e inicia o **Ato I / Fase 1**, com Edelzio criança na casa existente, exploração, documentos opcionais e o encontro incompleto no quintal. A campanha experimental agora segue até a Fase 5: rotina e caixa antiga, viagem dirigível de Fusca, investigação na Industrial com Renan e o código das 23:23. Os dois fragmentos de mapa e documentos ficam no caderno. As fases 6 a 20 continuam em planejamento.
+Esta é a cópia experimental do protótipo principal, criada em 01/10/2026 a partir do commit `f34e0db`. A campanha agora apresenta **15 fases em 5 atos**, da casa de 1996 ao retorno verdadeiro da criatura. Mantém os mapas ilustrados 2D topview, personagens, fachada da Industrial, investigação, três fragmentos e combate final. A rotina da casa, inspeções da viagem, tarefas repetidas da oficina e puzzle da descida deixaram de ser obrigatórios. Os saves antigos migram para a versão 2. [Sequência vigente e compatibilidade](Docs/CampanhaOficial/CAMPANHA_15_FASES.md).
 
 Abra `Assets/Scenes/Menu_MisterioDeVarginha.unity`, pressione Play e escolha **Jogar → Iniciar campanha**. **Configurações** reúne remapeamento de controles, áudio, vídeo e acessibilidade. O laboratório anterior de três puzzles e Renan permanece disponível pelo menu de desenvolvimento `Varginha > Experimentos > Abrir laboratório`, separado do início da campanha. [Detalhes do experimento](Docs/CampanhaOficial/EXPERIMENTO_JOGAVEL.md).
 
 `Preview/` é uma página auxiliar para avaliar cutscene e pistas; o jogo é o projeto Unity.
 
-- [Fases 1 a 5 jogáveis](Docs/CampanhaOficial/FASES_1_A_5.md)
-- [Planejamento da campanha: 20 fases em 6 atos](Docs/CampanhaOficial/PLANO_20_FASES.md)
+- [Campanha atual: 15 fases em 5 atos](Docs/CampanhaOficial/CAMPANHA_15_FASES.md)
+- [Relatório desta atualização](Docs/CampanhaOficial/RELATORIO_15_FASES_20261007.md)
+- [Referências pesquisadas e melhorias gerais](Docs/CampanhaOficial/REFERENCIAS_E_MELHORIAS_20261007.md)
+- [Planejamento anterior da campanha (histórico)](Docs/CampanhaOficial/PLANO_20_FASES.md)
 - [Reaproveitamento e primeira experiência de cutscene](Docs/CampanhaOficial/ADAPTACAO_E_CUTSCENE.md)
 - [GDD fornecido pelo usuário](Docs/CampanhaOficial/Referencias/GDD_Usuario.md)
 - [LDD de referência](Docs/CampanhaOficial/Referencias/O_Segredo_de_Varginha_LDD.md)

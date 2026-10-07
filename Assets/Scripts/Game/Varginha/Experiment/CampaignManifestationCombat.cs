@@ -17,6 +17,7 @@ namespace Game.Varginha.Experiment
         private Vector2 _target;
         private float _timer,_nextSpawn,_slowUntil,_staggerUntil;
         private int _stage;
+        private float _healthScale=1,_damageScale=1,_telegraphScale=1,_intervalScale=1,_speedScale=1;
         private bool _minor;
         private bool _entering,_enraged,_attackHit,_waveAttack;
         private int _attackCycle;
@@ -46,9 +47,11 @@ namespace Game.Varginha.Experiment
             // Movement uses the feet; punches use a separate, non-solid body hurtbox.
             var hurt=go.AddComponent<CapsuleCollider2D>();hurt.isTrigger=true;hurt.direction=CapsuleDirection2D.Vertical;
             hurt.size=minor?new Vector2(.65f,1.2f):new Vector2(1.8f,3.1f);hurt.offset=minor?new Vector2(0,.02f):new Vector2(0,.95f);
-            var health=go.AddComponent<HealthSystem>();health.SetMaxHealth(minor?65:650,false);
+            var health=go.AddComponent<HealthSystem>();health.SetMaxHealth((minor?65:650)*VarginhaDifficulty.EnemyHealth/1.55f,false);
             var target=go.AddComponent<VarginhaCombatTarget>();target.SetKind(minor?VarginhaCombatTarget.EnemyKind.MinorManifestation:VarginhaCombatTarget.EnemyKind.AlteredCreature);
             var combat=go.AddComponent<CampaignManifestationCombat>();combat._player=player;combat._plan=plan;combat._health=health;combat._renderer=sr;combat._body=body;combat._minor=minor;
+            combat._healthScale=VarginhaDifficulty.EnemyHealth/1.55f;combat._damageScale=VarginhaDifficulty.EnemyDamage;
+            combat._telegraphScale=VarginhaDifficulty.TelegraphSeconds/.6f;combat._intervalScale=VarginhaDifficulty.EnemyAttackInterval/1.15f;combat._speedScale=VarginhaDifficulty.EnemySpeed/1.1f;
             combat._nextSpawn=Time.time+5;
             VarginhaWorldDepth.Ensure(sr,ground:collider);
             var warning=new GameObject("Aviso_de_ataque");warning.transform.SetParent(owner);combat._warning=warning.AddComponent<SpriteRenderer>();
@@ -92,13 +95,13 @@ namespace Game.Varginha.Experiment
             if(_stage==0)
             {
                 _renderer.sprite=Frame(direction,(int)(Time.time*4)%2,_minor);
-                if(delta.magnitude>1.3f)MoveTowards(_player.transform.position,(_minor?2.3f:_enraged?1.55f:1.2f)*Time.deltaTime);
-                if(_timer>(_minor?2.2f:_enraged?2.35f:3f)){_stage=1;_timer=0;_waveAttack=!_minor&&_attackCycle++%2==1;_target=_waveAttack?(Vector2)transform.position:(Vector2)_player.transform.position;_warning.transform.position=_target-Vector2.up*.58f;_warning.transform.localScale=Vector3.one*(_waveAttack?5.9f:_minor?1.6f:2.6f);_warning.enabled=true;}
+                if(delta.magnitude>1.3f)MoveTowards(_player.transform.position,(_minor?2.3f:_enraged?1.55f:1.2f)*_speedScale*Time.deltaTime);
+                if(_timer>(_minor?2.2f:_enraged?2.35f:3f)*_intervalScale){_stage=1;_timer=0;_waveAttack=!_minor&&_attackCycle++%2==1;_target=_waveAttack?(Vector2)transform.position:(Vector2)_player.transform.position;_warning.transform.position=_target-Vector2.up*.58f;_warning.transform.localScale=Vector3.one*(_waveAttack?5.9f:_minor?1.6f:2.6f);_warning.enabled=true;}
             }
             else if(_stage==1)
             {
                 _renderer.sprite=Frame(direction,_timer<.4f?2:3,_minor);
-                if(_timer>(_minor?.7f:1.05f))
+                if(_timer>(_minor?.7f:1.05f)*_telegraphScale)
                 {
                     _timer=0;_attackHit=false;
                     if(_waveAttack){_shockUntil=Time.time+.6f;_shock.enabled=true;_shock.transform.position=transform.position-Vector3.up*.58f;Strike(2.6f);_stage=2;_warning.enabled=false;}
@@ -123,7 +126,7 @@ namespace Game.Varginha.Experiment
             var map=transform.parent.Find("Mapa_Campanha");
             foreach(var hit in Physics2D.LinecastAll(transform.position-Vector3.up*.58f,_player.transform.position-Vector3.up*.58f))
                 if(map!=null&&hit.collider.transform.IsChildOf(map))return;
-            _attackHit=true;_player.GetComponent<HealthSystem>().TakeDamage((_minor?10:_waveAttack?20:24)*(CampaignFinalAllies.Active?.DamageMultiplier??1));
+            _attackHit=true;_player.GetComponent<HealthSystem>().TakeDamage((_minor?10:_waveAttack?20:24)*_damageScale*(CampaignFinalAllies.Active?.DamageMultiplier??1));
         }
         private void MoveTowards(Vector2 target,float step)
         {
@@ -144,10 +147,15 @@ namespace Game.Varginha.Experiment
                 float angle=(i+ActiveMinions)*Mathf.PI/6;Vector2 p=feet+new Vector2(Mathf.Cos(angle),Mathf.Sin(angle))*1.7f;
                 if(!_plan.IsClear(p,.25f)||Vector2.Distance(p+Vector2.up*.58f,_player.transform.position)<1.2f)continue;
                 CampaignManifestationCombat item=_pool.Find(m=>m!=null&&!m.gameObject.activeSelf);
-                if(item==null){item=Spawn(transform.parent,_player,_plan,p,true);_pool.Add(item);}
+                if(item==null)
+                {
+                    item=Spawn(transform.parent,_player,_plan,p,true);
+                    item._healthScale=_healthScale;item._damageScale=_damageScale;item._telegraphScale=_telegraphScale;item._intervalScale=_intervalScale;item._speedScale=_speedScale;
+                    item._health.SetMaxHealth(65*_healthScale,false);_pool.Add(item);
+                }
                 else
                 {
-                    item.transform.position=p+Vector2.up*.58f;item._health.SetMaxHealth(65,false);
+                    item.transform.position=p+Vector2.up*.58f;item._health.SetMaxHealth(65*item._healthScale,false);
                     item.gameObject.SetActive(true);item._body.simulated=true;
                     foreach(var r in item.GetComponentsInChildren<SpriteRenderer>())r.enabled=true;
                     foreach(var c in item.GetComponentsInChildren<Collider2D>())c.enabled=true;
