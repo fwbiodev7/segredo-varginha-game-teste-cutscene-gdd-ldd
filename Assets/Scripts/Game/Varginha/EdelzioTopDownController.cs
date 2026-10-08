@@ -115,6 +115,7 @@ namespace Game.Varginha
         public bool CanDodge { get; set; } = true;
         public float DodgeCooldownRemaining => Mathf.Max(0f, _dodgeCooldown);
         private bool IsGameplayBlocked => IsInputLocked || Time.timeScale <= 0f || currentSanity <= 0f
+            || Experiment.CampaignCinematics.IsTransitioning
             || GetComponent<Game.Player.HealthSystem>()?.IsDead == true
             || VarginhaGameHUD.Instance?.IsDialogueOpen == true
             || VarginhaGameHUD.Instance?.IsVictoryOpen == true;

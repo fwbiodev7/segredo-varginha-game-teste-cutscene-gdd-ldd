@@ -159,6 +159,11 @@ namespace Game.Varginha.Experiment
         {
             if (Progress == null || _driving || _parking || _departing) return;
             _sound?.Play("Paper");
+            if (id != "exit" && id != "fusca")
+            {
+                var point = Plan.points.Find(p => p.id == id);
+                if (point != null) CampaignCameraDirector.Reveal(point.position);
+            }
             if (id.StartsWith("truth"))
             {
                 int bit = int.Parse(id.Substring(5)); State.truthClues |= 1 << bit;

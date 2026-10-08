@@ -235,7 +235,24 @@ namespace Game.Varginha.Experiment
                 if (_stageTime > 5.8f) { _memory.complete = true;_memory.memoryLost=_memory.headHit; Save(); SetStage(Stage.Complete); }
             }
         }
-        public void TriggerPowerFailure() { _memory.powerFailed = true; if(_stage==Stage.Explore && _preFlashGlow!=null)_preFlashGlow.gameObject.SetActive(true); Save(); }
+        public void TriggerPowerFailure()
+        {
+            bool first = !_memory.powerFailed; _memory.powerFailed = true;
+            if(_stage==Stage.Explore && _preFlashGlow!=null)_preFlashGlow.gameObject.SetActive(true);
+            if (first)
+            {
+                CampaignAtmosphereLayer.Interference(transform);
+                CampaignCameraDirector.Reveal(new Vector3(3.4f,5.55f), 3.5f);
+                _sound?.CinematicDucking(.65f);
+                StartCoroutine(RestorePowerFailureAmbience());
+            }
+            Save();
+        }
+        private IEnumerator RestorePowerFailureAmbience()
+        {
+            yield return new WaitForSeconds(3.5f);
+            _sound?.CinematicDucking(0);
+        }
         private int NearestEvidence()
         {
             int found = -1; float distance = 1.85f;
@@ -248,6 +265,7 @@ namespace Game.Varginha.Experiment
             if (index < 0 || index >= _lines.Length) return;
             _memory.evidence |= 1 << index; _dialogue = _lines[index];
             _sound?.Play("Paper");
+            CampaignCameraDirector.Reveal(_points[index]);
             _player.SetInputLocked(true); if (index == 0) TriggerPowerFailure(); Save();
         }
         private void CloseDialogue() { _dialogue = null; _player.SetInputLocked(_paused || _stage != Stage.Explore); }

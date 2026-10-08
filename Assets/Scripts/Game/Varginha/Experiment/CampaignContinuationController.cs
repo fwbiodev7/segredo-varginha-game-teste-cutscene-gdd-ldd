@@ -313,7 +313,11 @@ namespace Game.Varginha.Experiment
             var sr=go.AddComponent<SpriteRenderer>();sr.sprite=CampaignReagentMarks.FrameSprite(2);sr.color=new Color(.55f,.9f,.8f,.75f);sr.sortingOrder=21000;go.transform.localScale=Vector3.one*.6f;
         }
         public void ReadEvidence(int index)
-        {State.Read(phase,index);Say(_definition.documents[index]);Save();}
+        {
+            var point = Plan.points.Find(p => p.id == _definition.ids[index]);
+            if (point != null) CampaignCameraDirector.Reveal(point.position);
+            State.Read(phase,index);Say(_definition.documents[index]);Save();
+        }
         public void OpenPuzzle()
         {if(!State.HasAll(phase,_definition.required))Say("Ainda faltam evidências: "+_definition.goal);else {_panel="puzzle";_selected=_choice=-1;}}
         public bool Submit(int choice,int[] order=null)

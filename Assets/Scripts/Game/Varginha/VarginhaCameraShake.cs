@@ -19,7 +19,7 @@ namespace Game.Varginha
 
         public void Shake(float duration, float magnitude)
         {
-            if (duration <= 0f || magnitude <= 0f || !isActiveAndEnabled) return;
+            if (duration <= 0f || magnitude <= 0f || !isActiveAndEnabled || Experiment.VarginhaGameSettings.Current.reducedMotion) return;
             VarginhaRumble.Play(Mathf.Clamp01(magnitude*2),Mathf.Clamp01(magnitude*3),Mathf.Min(.45f,duration));
             if (_time <= 0f) { _duration = 0f; _magnitude = 0f; }
             _duration = Mathf.Max(_duration, duration);

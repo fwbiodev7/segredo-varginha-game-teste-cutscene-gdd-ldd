@@ -6,8 +6,12 @@ namespace Game.Varginha.Experiment
     /// <summary>Original ambient beds and tactile effects; no synthetic speech.</summary>
     public sealed class CampaignSoundscape : MonoBehaviour
     {
-        private readonly Dictionary<string, AudioClip> _clips = new();
-        private AudioSource _effects, _ambience, _engine;
+        private static readonly Dictionary<string, AudioClip> Clips = new();
+        private static readonly float[] SuccessNotes = { 261.63f, 329.63f, 392, 523.25f };
+        private AudioSource _effects, _engine;
+        private AudioSource _positional;
+        private CampaignAmbientBridge _ambient;
+        private float _cinematicDuck;
         private EdelzioTopDownController _actor;
         private Vector3 _previous;
         private float _stride;
@@ -16,8 +20,8 @@ namespace Game.Varginha.Experiment
         {
             _actor = actor; _school = environment == "School" || environment == "Lab" || environment == "Church" || environment == "Workshop";
             _effects = gameObject.AddComponent<AudioSource>(); _effects.playOnAwake = false; _effects.volume = .48f;
-            _ambience = gameObject.AddComponent<AudioSource>(); _ambience.playOnAwake = false; _ambience.loop = true; _ambience.volume = .12f;
-            _ambience.clip = Clip(environment + "Ambience"); _ambience.Play();
+            _ambient = CampaignAmbientBridge.Instance;
+            _ambient.Suspend(false); _ambient.Duck(0); _ambient.Transition(Clip(environment + "Ambience"));
             if (_actor != null) _previous = _actor.transform.position;
             if (environment == "Road")
             {
@@ -32,24 +36,39 @@ namespace Game.Varginha.Experiment
             if (running && !_engine.isPlaying) _engine.Play(); else if (!running && _engine.isPlaying) _engine.Stop();
         }
         public void Play(string sound) { if (_effects != null) _effects.PlayOneShot(Clip(sound), sound.StartsWith("Foot") ? .16f : 1f); }
-        public void CinematicDucking(float weight){if(_ambience!=null)_ambience.volume=Mathf.Lerp(.12f,.025f,Mathf.Clamp01(weight));}
+        public void PlayAt(string sound, Vector3 position)
+        {
+            if (_positional == null)
+            {
+                var emitter = new GameObject("Som_posicional"); emitter.transform.SetParent(transform);
+                _positional = emitter.AddComponent<AudioSource>(); _positional.playOnAwake = false;
+                _positional.spatialBlend = .25f; _positional.rolloffMode = AudioRolloffMode.Linear;
+                _positional.minDistance = 2; _positional.maxDistance = 16; _positional.volume = .48f;
+                _positional.dopplerLevel = 0;
+            }
+            _positional.transform.position = position;
+            _positional.PlayOneShot(Clip(sound), sound.StartsWith("Foot") ? .16f : 1);
+        }
+        public void CinematicDucking(float weight) { _cinematicDuck = Mathf.Clamp01(weight); _ambient?.Duck(_cinematicDuck); }
         public void Suspend(bool value)
         {
-            if (_ambience == null) return;
-            if (value) { _ambience.Pause(); _engine?.Pause(); _effects.Pause(); }
-            else { _ambience.UnPause(); _engine?.UnPause(); _effects.UnPause(); }
+            _ambient?.Suspend(value);
+            if (value) { _engine?.Pause(); _effects?.Pause(); _positional?.Pause(); }
+            else { _engine?.UnPause(); _effects?.UnPause(); _positional?.UnPause(); }
         }
         private void Update()
         {
+            if (_ambient != null && Time.timeScale > 0)
+                _ambient.Duck(Mathf.Max(_cinematicDuck, _actor != null && _actor.IsInputLocked ? .55f : 0));
             if (_actor == null) return;
             float distance = Vector2.Distance(_previous, _actor.transform.position); _previous = _actor.transform.position;
             if (Time.timeScale <= 0 || _actor.IsInputLocked || distance > .5f) return;
             _stride += distance;
-            if (_stride > (_actor.IsRunning ? .85f : .65f)) { _stride = 0; Play(_school ? "FootTile" : "FootWood"); }
+            if (_stride > (_actor.IsRunning ? .85f : .65f)) { _stride = 0; PlayAt(_school ? "FootTile" : "FootWood", _actor.transform.position); }
         }
-        private AudioClip Clip(string id)
+        public static AudioClip Clip(string id)
         {
-            if (_clips.TryGetValue(id, out var clip)) return clip;
+            if (Clips.TryGetValue(id, out var clip) && clip != null) return clip;
             const int rate = 22050;
             bool ambient = id.Contains("Ambience"), engine = id == "Engine";
             float duration = ambient ? 6 : engine ? 2 : id == "AlienBurst" ? .9f : id == "Success" ? 1.1f : id == "Starter" ? 1.2f : id == "Typing" ? .65f : .22f;
@@ -77,8 +96,8 @@ namespace Game.Varginha.Experiment
                 }
                 else if (id == "Success")
                 {
-                    int note = Mathf.Clamp((int)(t * 4), 0, 3); float[] notes = { 261.63f, 329.63f, 392, 523.25f };
-                    value = Mathf.Sin(t * Mathf.PI * 2 * notes[note]) * .16f * Mathf.Exp(-(t % .25f) * 9);
+                    int note = Mathf.Clamp((int)(t * 4), 0, 3);
+                    value = Mathf.Sin(t * Mathf.PI * 2 * SuccessNotes[note]) * .16f * Mathf.Exp(-(t % .25f) * 9);
                 }
                 else if (id == "Starter") value = filtered * .4f * (.5f + .5f * Mathf.Sin(t * 95)) + Mathf.Sin(t * Mathf.PI * 2 * (28 + t * 20)) * .25f;
                 else if(id=="AlienBurst")value=(filtered*.32f+Mathf.Sin(t*Mathf.PI*2*(70-t*35))*.24f+Mathf.Sin(t*Mathf.PI*2*190)*.06f)*Mathf.Exp(-t*4);
@@ -98,8 +117,7 @@ namespace Game.Varginha.Experiment
                 else value = Mathf.Sin(t * 2 * Mathf.PI * (id == "Key" ? 1400 : 640)) * .17f * Mathf.Exp(-t * 28) + filtered * .12f * Mathf.Exp(-t * 40);
                 data[i] = Mathf.Clamp(value * envelope, -.7f, .7f);
             }
-            clip = AudioClip.Create("Campaign_" + id, data.Length, 1, rate, false); clip.SetData(data, 0); _clips[id] = clip; return clip;
+            clip = AudioClip.Create("Campaign_" + id, data.Length, 1, rate, false); clip.SetData(data, 0); Clips[id] = clip; return clip;
         }
-        private void OnDestroy() { foreach (var clip in _clips.Values) if (clip != null) Destroy(clip); }
     }
 }

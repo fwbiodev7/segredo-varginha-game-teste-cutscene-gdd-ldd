@@ -156,6 +156,8 @@ namespace Game.Varginha.Experiment
             _next = Time.unscaledTime + .3f;
             foreach (var source in FindObjectsByType<AudioSource>())
             {
+                // Cinematic beds own their evolving mix and apply the same music slider.
+                if (source.GetComponent<CampaignAmbientBridge>() != null) continue;
                 if (!_bases.TryGetValue(source, out float baseline)) { baseline = source.volume; _bases[source] = baseline; }
                 var settings = VarginhaGameSettings.Current;
                 string label = source.clip != null ? source.clip.name : source.name;

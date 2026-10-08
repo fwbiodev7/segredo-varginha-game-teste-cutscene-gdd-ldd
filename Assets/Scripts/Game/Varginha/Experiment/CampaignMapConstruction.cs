@@ -104,6 +104,7 @@ namespace Game.Varginha.Experiment
             var camera = cameraObject.AddComponent<Camera>(); camera.orthographic = true; camera.orthographicSize = 6;
             camera.backgroundColor = new Color(.025f,.035f,.05f); cameraObject.AddComponent<AudioListener>();
             cameraObject.AddComponent<CameraFollow2D>().ConfigureMap(player.transform, plan.bounds, 6);
+            cameraObject.AddComponent<VarginhaCameraShake>();
             VarginhaPixelPresentation.Configure(camera);
             return controller;
         }

@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="47" result="Failed(Child)" total="47" passed="46" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-08 21:48:51Z" end-time="2026-10-08 21:56:10Z" duration="438,5137336">
+  <test-suite type="TestSuite" id="1274" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="233" result="Failed" site="Child" start-time="2026-10-08 21:48:51Z" end-time="2026-10-08 21:56:10Z" duration="438.513734" total="47" passed="46" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1541" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="233" result="Failed" site="Child" start-time="2026-10-08 21:48:51Z" end-time="2026-10-08 21:56:10Z" duration="438.495480" total="47" passed="46" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="34380" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1542" name="Game" fullname="Game" runstate="Runnable" testcasecount="233" result="Failed" site="Child" start-time="2026-10-08 21:48:51Z" end-time="2026-10-08 21:56:10Z" duration="438.492528" total="47" passed="46" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1543" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="233" result="Failed" site="Child" start-time="2026-10-08 21:48:51Z" end-time="2026-10-08 21:56:10Z" duration="438.484120" total="47" passed="46" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1544" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="233" result="Failed" site="Child" start-time="2026-10-08 21:48:51Z" end-time="2026-10-08 21:56:10Z" duration="438.475505" total="47" passed="46" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1275" name="CampaignChaptersTests" fullname="Game.Tests.PlayMode.CampaignChaptersTests" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-08 21:48:51Z" end-time="2026-10-08 21:49:44Z" duration="52.870400" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1278" name="AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight" fullname="Game.Tests.PlayMode.CampaignChaptersTests.AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight" methodname="AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="586658751" result="Passed" start-time="2026-10-08 21:48:51Z" end-time="2026-10-08 21:49:02Z" duration="10.657862" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignChaptersTests.AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight
+QA test: Game.Tests.PlayMode.CampaignChaptersTests.AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight
+]]></output>
+              </test-case>
+              <test-case id="1276" name="ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor" fullname="Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor" methodname="ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="316633528" result="Passed" start-time="2026-10-08 21:49:02Z" end-time="2026-10-08 21:49:04Z" duration="2.222826" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor
+QA test: Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor
+]]></output>
+              </test-case>
+              <test-case id="1281" name="HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" fullname="Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" methodname="HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="1557953757" result="Passed" start-time="2026-10-08 21:49:04Z" end-time="2026-10-08 21:49:22Z" duration="17.913332" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+QA test: Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+]]></output>
+              </test-case>
+              <test-case id="1277" name="MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame" fullname="Game.Tests.PlayMode.CampaignChaptersTests.MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame" methodname="MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="1028177006" result="Passed" start-time="2026-10-08 21:49:22Z" end-time="2026-10-08 21:49:26Z" duration="4.397329" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignChaptersTests.MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame
+QA test: Game.Tests.PlayMode.CampaignChaptersTests.MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame
+]]></output>
+              </test-case>
+              <test-case id="1280" name="OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters" fullname="Game.Tests.PlayMode.CampaignChaptersTests.OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters" methodname="OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="444420462" result="Passed" start-time="2026-10-08 21:49:26Z" end-time="2026-10-08 21:49:38Z" duration="11.344120" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignChaptersTests.OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters
+QA test: Game.Tests.PlayMode.CampaignChaptersTests.OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters
+]]></output>
+              </test-case>
+              <test-case id="1279" name="PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening" fullname="Game.Tests.PlayMode.CampaignChaptersTests.PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening" methodname="PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="1703785431" result="Passed" start-time="2026-10-08 21:49:38Z" end-time="2026-10-08 21:49:44Z" duration="6.311161" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignChaptersTests.PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening
+QA test: Game.Tests.PlayMode.CampaignChaptersTests.PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1282" name="CampaignContinuationPlayTests" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-08 21:49:44Z" end-time="2026-10-08 21:53:14Z" duration="209.645462" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1289" name="AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork" methodname="AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="444863954" result="Passed" start-time="2026-10-08 21:49:44Z" end-time="2026-10-08 21:50:52Z" duration="68.272627" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+QA continuation scene loaded: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: controller ready
+QA skills: target prepared
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation ready: 20 / 0
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+]]></output>
+              </test-case>
+              <test-case id="1288" name="ArenaNavigationSpawnPoolAndDefeatAllowRetry" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.ArenaNavigationSpawnPoolAndDefeatAllowRetry" methodname="ArenaNavigationSpawnPoolAndDefeatAllowRetry" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="897768761" result="Passed" start-time="2026-10-08 21:50:52Z" end-time="2026-10-08 21:51:08Z" duration="15.374067" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.ArenaNavigationSpawnPoolAndDefeatAllowRetry
+QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.ArenaNavigationSpawnPoolAndDefeatAllowRetry
+QA continuation scene loaded: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation ready: 20 / 0
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.ArenaNavigationSpawnPoolAndDefeatAllowRetry
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.ArenaNavigationSpawnPoolAndDefeatAllowRetry
+]]></output>
+              </test-case>
+              <test-case id="1292" name="BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard" methodname="BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="137016462" result="Passed" start-time="2026-10-08 21:51:08Z" end-time="2026-10-08 21:51:22Z" duration="14.668283" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard
+QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard
+QA continuation scene loaded: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation ready: 20 / 0
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard
+]]></output>
+              </test-case>
+              <test-case id="1284" name="BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails" methodname="BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="1449655289" result="Passed" start-time="2026-10-08 21:51:22Z" end-time="2026-10-08 21:51:25Z" duration="2.760998" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails
+QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails
+QA continuation scene loaded: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation ready: 20 / 0
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails
+]]></output>
+              </test-case>
+              <test-case id="1285" name="InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition" methodname="InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="390071057" result="Passed" start-time="2026-10-08 21:51:25Z" end-time="2026-10-08 21:51:29Z" duration="3.849038" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition
+QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition
+QA continuation scene loaded: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation ready: 20 / 0
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition
+]]></output>
+              </test-case>
+              <test-case id="1287" name="InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions" methodname="InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="1573063700" result="Passed" start-time="2026-10-08 21:51:29Z" end-time="2026-10-08 21:52:08Z" duration="39.123961" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="180000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+QA continuation scene loaded: 11 / 0
+QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+QA continuation ready: 12 / 1
+QA investigation passed: 12
+QA investigation passed: 12
+QA continuation scene loaded: 13 / 0
+QA continuation scene loaded: 13 / 0
+QA continuation ready: 13 / 0
+QA continuation ready: 13 / 0
+QA investigation passed: 13
+QA investigation passed: 13
+QA continuation scene loaded: 14 / 0
+QA continuation scene loaded: 14 / 0
+QA continuation ready: 14 / 0
+QA continuation ready: 14 / 0
+QA investigation passed: 14
+QA investigation passed: 14
+QA continuation scene loaded: 15 / 0
+QA continuation scene loaded: 15 / 0
+QA continuation ready: 15 / 0
+QA continuation ready: 15 / 0
+QA investigation passed: 15
+QA investigation passed: 15
+QA continuation scene loaded: 18 / 0
+QA continuation scene loaded: 18 / 0
+QA continuation ready: 18 / 0
+QA continuation ready: 18 / 0
+QA investigation passed: 18
+QA investigation passed: 18
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+]]></output>
+              </test-case>
+              <test-case id="1283" name="ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration" methodname="ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="1745373663" result="Passed" start-time="2026-10-08 21:52:08Z" end-time="2026-10-08 21:52:42Z" duration="34.303473" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration
+QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration
+QA continuation scene loaded: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation ready: 20 / 0
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration
+]]></output>
+              </test-case>
+              <test-case id="1286" name="NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover" methodname="NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="308048243" result="Passed" start-time="2026-10-08 21:52:42Z" end-time="2026-10-08 21:52:54Z" duration="11.459409" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover
+QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover
+QA continuation scene loaded: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation ready: 20 / 0
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover
+]]></output>
+              </test-case>
+              <test-case id="1291" name="ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease" methodname="ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="1023960334" result="Passed" start-time="2026-10-08 21:52:54Z" end-time="2026-10-08 21:52:56Z" duration="2.587490" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease
+QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease
+QA continuation scene loaded: 21 / 0
+QA continuation scene loaded: 21 / 0
+QA continuation ready: 21 / 0
+QA continuation ready: 21 / 0
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease
+]]></output>
+              </test-case>
+              <test-case id="1290" name="ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue" methodname="ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="1175059487" result="Passed" start-time="2026-10-08 21:52:56Z" end-time="2026-10-08 21:53:14Z" duration="17.197551" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue
+QA test: Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue
+QA continuation scene loaded: 21 / 0
+QA continuation scene loaded: 21 / 0
+QA continuation ready: 21 / 0
+QA continuation ready: 21 / 0
+QA continuation scene loaded: 21 / 0
+QA continuation scene loaded: 21 / 0
+QA continuation ready: 21 / 0
+QA continuation ready: 21 / 0
+QA continuation scene loaded: 21 / 0
+QA continuation scene loaded: 21 / 0
+QA continuation ready: 21 / 0
+QA continuation ready: 21 / 0
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue
+QA result: Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1293" name="CampaignControllerRemapTests" fullname="Game.Tests.PlayMode.CampaignControllerRemapTests" classname="Game.Tests.PlayMode.CampaignControllerRemapTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-08 21:53:14Z" end-time="2026-10-08 21:53:17Z" duration="3.278522" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1297" name="CancelAndDisconnectRestoreInputsWithoutChangingBindings" fullname="Game.Tests.PlayMode.CampaignControllerRemapTests.CancelAndDisconnectRestoreInputsWithoutChangingBindings" methodname="CancelAndDisconnectRestoreInputsWithoutChangingBindings" classname="Game.Tests.PlayMode.CampaignControllerRemapTests" runstate="Runnable" seed="1255587464" result="Passed" start-time="2026-10-08 21:53:14Z" end-time="2026-10-08 21:53:14Z" duration="0.113113" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignControllerRemapTests.CancelAndDisconnectRestoreInputsWithoutChangingBindings
+QA test: Game.Tests.PlayMode.CampaignControllerRemapTests.CancelAndDisconnectRestoreInputsWithoutChangingBindings
+QA result: Passed Game.Tests.PlayMode.CampaignControllerRemapTests.CancelAndDisconnectRestoreInputsWithoutChangingBindings
+QA result: Passed Game.Tests.PlayMode.CampaignControllerRemapTests.CancelAndDisconnectRestoreInputsWithoutChangingBindings
+]]></output>
+              </test-case>
+              <test-case id="1296" name="CaptureWaitsForOpeningButtonReleaseAndResumesAfterNewButtonRelease" fullname="Game.Tests.PlayMode.CampaignControllerRemapTests.CaptureWaitsForOpeningButtonReleaseAndResumesAfterNewButtonRelease" methodname="CaptureWaitsForOpeningButtonReleaseAndResumesAfterNewButtonRelease" classname="Game.Tests.PlayMode.CampaignControllerRemapTests" runstate="Runnable" seed="571961202" result="Passed" start-time="2026-10-08 21:53:14Z" end-time="2026-10-08 21:53:14Z" duration="0.050826" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignControllerRemapTests.CaptureWaitsForOpeningButtonReleaseAndResumesAfterNewButtonRelease
+QA test: Game.Tests.PlayMode.CampaignControllerRemapTests.CaptureWaitsForOpeningButtonReleaseAndResumesAfterNewButtonRelease
+QA result: Passed Game.Tests.PlayMode.CampaignControllerRemapTests.CaptureWaitsForOpeningButtonReleaseAndResumesAfterNewButtonRelease
+QA result: Passed Game.Tests.PlayMode.CampaignControllerRemapTests.CaptureWaitsForOpeningButtonReleaseAndResumesAfterNewButtonRelease
+]]></output>
+              </test-case>
+              <test-case id="1299" name="ControllerDiagramAppearsInSettingsAndCanBeNavigatedWithoutMouse" fullname="Game.Tests.PlayMode.CampaignControllerRemapTests.ControllerDiagramAppearsInSettingsAndCanBeNavigatedWithoutMouse" methodname="ControllerDiagramAppearsInSettingsAndCanBeNavigatedWithoutMouse" classname="Game.Tests.PlayMode.CampaignControllerRemapTests" runstate="Runnable" seed="102038076" result="Passed" start-time="2026-10-08 21:53:14Z" end-time="2026-10-08 21:53:17Z" duration="2.972279" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="30000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignControllerRemapTests.ControllerDiagramAppearsInSettingsAndCanBeNavigatedWithoutMouse
+QA test: Game.Tests.PlayMode.CampaignControllerRemapTests.ControllerDiagramAppearsInSettingsAndCanBeNavigatedWithoutMouse
+QA result: Passed Game.Tests.PlayMode.CampaignControllerRemapTests.ControllerDiagramAppearsInSettingsAndCanBeNavigatedWithoutMouse
+QA result: Passed Game.Tests.PlayMode.CampaignControllerRemapTests.ControllerDiagramAppearsInSettingsAndCanBeNavigatedWithoutMouse
+]]></output>
+              </test-case>
+              <test-case id="1298" name="FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering" fullname="Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering" methodname="FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering" classname="Game.Tests.PlayMode.CampaignControllerRemapTests" runstate="Runnable" seed="731071542" result="Passed" start-time="2026-10-08 21:53:17Z" end-time="2026-10-08 21:53:17Z" duration="0.023615" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering
+QA test: Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering
+QA result: Passed Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering
+QA result: Passed Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering
+]]></output>
+              </test-case>
+              <test-case id="1295" name="HudLabelsFollowDeviceAndRemapping" fullname="Game.Tests.PlayMode.CampaignControllerRemapTests.HudLabelsFollowDeviceAndRemapping" methodname="HudLabelsFollowDeviceAndRemapping" classname="Game.Tests.PlayMode.CampaignControllerRemapTests" runstate="Runnable" seed="469981802" result="Passed" start-time="2026-10-08 21:53:17Z" end-time="2026-10-08 21:53:17Z" duration="0.019882" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignControllerRemapTests.HudLabelsFollowDeviceAndRemapping
+QA test: Game.Tests.PlayMode.CampaignControllerRemapTests.HudLabelsFollowDeviceAndRemapping
+QA result: Passed Game.Tests.PlayMode.CampaignControllerRemapTests.HudLabelsFollowDeviceAndRemapping
+QA result: Passed Game.Tests.PlayMode.CampaignControllerRemapTests.HudLabelsFollowDeviceAndRemapping
+]]></output>
+              </test-case>
+              <test-case id="1294" name="RemappingSwapsConflictsAndSurvivesActionRebuild" fullname="Game.Tests.PlayMode.CampaignControllerRemapTests.RemappingSwapsConflictsAndSurvivesActionRebuild" methodname="RemappingSwapsConflictsAndSurvivesActionRebuild" classname="Game.Tests.PlayMode.CampaignControllerRemapTests" runstate="Runnable" seed="761822571" result="Passed" start-time="2026-10-08 21:53:17Z" end-time="2026-10-08 21:53:17Z" duration="0.027705" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignControllerRemapTests.RemappingSwapsConflictsAndSurvivesActionRebuild
+QA test: Game.Tests.PlayMode.CampaignControllerRemapTests.RemappingSwapsConflictsAndSurvivesActionRebuild
+QA result: Passed Game.Tests.PlayMode.CampaignControllerRemapTests.RemappingSwapsConflictsAndSurvivesActionRebuild
+QA result: Passed Game.Tests.PlayMode.CampaignControllerRemapTests.RemappingSwapsConflictsAndSurvivesActionRebuild
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1300" name="CampaignDynamicLightingPlayTests" fullname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests" classname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-08 21:53:17Z" end-time="2026-10-08 21:53:32Z" duration="14.980927" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1301" name="ActualCharacterReceivesMovingLightAndItsShadowUsesTheSameDirection" fullname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.ActualCharacterReceivesMovingLightAndItsShadowUsesTheSameDirection" methodname="ActualCharacterReceivesMovingLightAndItsShadowUsesTheSameDirection" classname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests" runstate="Runnable" seed="728680644" result="Passed" start-time="2026-10-08 21:53:17Z" end-time="2026-10-08 21:53:19Z" duration="1.823472" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.ActualCharacterReceivesMovingLightAndItsShadowUsesTheSameDirection
+QA test: Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.ActualCharacterReceivesMovingLightAndItsShadowUsesTheSameDirection
+QA result: Passed Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.ActualCharacterReceivesMovingLightAndItsShadowUsesTheSameDirection
+QA result: Passed Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.ActualCharacterReceivesMovingLightAndItsShadowUsesTheSameDirection
+]]></output>
+              </test-case>
+              <test-case id="1302" name="CharactersCreatedAfterSixSecondsStillReceiveMapLighting" fullname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.CharactersCreatedAfterSixSecondsStillReceiveMapLighting" methodname="CharactersCreatedAfterSixSecondsStillReceiveMapLighting" classname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests" runstate="Runnable" seed="1817315631" result="Passed" start-time="2026-10-08 21:53:19Z" end-time="2026-10-08 21:53:28Z" duration="9.451993" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.CharactersCreatedAfterSixSecondsStillReceiveMapLighting
+QA test: Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.CharactersCreatedAfterSixSecondsStillReceiveMapLighting
+QA result: Passed Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.CharactersCreatedAfterSixSecondsStillReceiveMapLighting
+QA result: Passed Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.CharactersCreatedAfterSixSecondsStillReceiveMapLighting
+]]></output>
+              </test-case>
+              <test-case id="1303" name="EquippedFlashlightLightsACharacterButStopsAtScenery" fullname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.EquippedFlashlightLightsACharacterButStopsAtScenery" methodname="EquippedFlashlightLightsACharacterButStopsAtScenery" classname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests" runstate="Runnable" seed="2052825791" result="Passed" start-time="2026-10-08 21:53:28Z" end-time="2026-10-08 21:53:32Z" duration="3.543418" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.EquippedFlashlightLightsACharacterButStopsAtScenery
+QA test: Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.EquippedFlashlightLightsACharacterButStopsAtScenery
+QA result: Passed Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.EquippedFlashlightLightsACharacterButStopsAtScenery
+QA result: Passed Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.EquippedFlashlightLightsACharacterButStopsAtScenery
+]]></output>
+              </test-case>
+              <test-case id="1304" name="FuscaHeadlightsFollowTheCarAndRegisterOnlyWhileSwitchedOn" fullname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.FuscaHeadlightsFollowTheCarAndRegisterOnlyWhileSwitchedOn" methodname="FuscaHeadlightsFollowTheCarAndRegisterOnlyWhileSwitchedOn" classname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests" runstate="Runnable" seed="1955972766" result="Passed" start-time="2026-10-08 21:53:32Z" end-time="2026-10-08 21:53:32Z" duration="0.137272" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.FuscaHeadlightsFollowTheCarAndRegisterOnlyWhileSwitchedOn
+QA test: Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.FuscaHeadlightsFollowTheCarAndRegisterOnlyWhileSwitchedOn
+QA result: Passed Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.FuscaHeadlightsFollowTheCarAndRegisterOnlyWhileSwitchedOn
+QA result: Passed Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.FuscaHeadlightsFollowTheCarAndRegisterOnlyWhileSwitchedOn
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1305" name="CampaignExpansionPlayTests" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-08 21:53:32Z" end-time="2026-10-08 21:54:25Z" duration="53.410461" total="8" passed="8" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1308" name="AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox" methodname="AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="980990324" result="Passed" start-time="2026-10-08 21:53:32Z" end-time="2026-10-08 21:53:40Z" duration="7.986681" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox
+QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox
+]]></output>
+              </test-case>
+              <test-case id="1306" name="AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions" methodname="AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1047698793" result="Passed" start-time="2026-10-08 21:53:40Z" end-time="2026-10-08 21:53:42Z" duration="2.036488" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions
+QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions
+]]></output>
+              </test-case>
+              <test-case id="1312" name="CharacterActionsAndPunchUseNewTransparentAnimationSheets" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets" methodname="CharacterActionsAndPunchUseNewTransparentAnimationSheets" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="928742938" result="Passed" start-time="2026-10-08 21:53:42Z" end-time="2026-10-08 21:53:46Z" duration="3.962619" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+]]></output>
+              </test-case>
+              <test-case id="1307" name="CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags" methodname="CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1943805250" result="Passed" start-time="2026-10-08 21:53:46Z" end-time="2026-10-08 21:53:47Z" duration="1.188025" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags
+QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags
+]]></output>
+              </test-case>
+              <test-case id="1313" name="DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens" methodname="DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1381616325" result="Passed" start-time="2026-10-08 21:53:47Z" end-time="2026-10-08 21:53:53Z" duration="6.339372" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens
+QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens
+]]></output>
+              </test-case>
+              <test-case id="1310" name="FuscaDepartsAfterMarksWithoutRequiringTrack" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaDepartsAfterMarksWithoutRequiringTrack" methodname="FuscaDepartsAfterMarksWithoutRequiringTrack" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1475129889" result="Passed" start-time="2026-10-08 21:53:53Z" end-time="2026-10-08 21:54:01Z" duration="7.445335" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaDepartsAfterMarksWithoutRequiringTrack
+QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaDepartsAfterMarksWithoutRequiringTrack
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaDepartsAfterMarksWithoutRequiringTrack
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaDepartsAfterMarksWithoutRequiringTrack
+]]></output>
+              </test-case>
+              <test-case id="1309" name="IndustrialLibraryHasPhysicalPassagesAndReachableEvidence" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence" methodname="IndustrialLibraryHasPhysicalPassagesAndReachableEvidence" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="579069714" result="Passed" start-time="2026-10-08 21:54:01Z" end-time="2026-10-08 21:54:19Z" duration="17.745718" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence
+QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence
+]]></output>
+              </test-case>
+              <test-case id="1311" name="SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" methodname="SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="2131718058" result="Passed" start-time="2026-10-08 21:54:19Z" end-time="2026-10-08 21:54:25Z" duration="6.692429" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1314" name="CampaignLabWorkshopAuditTests" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-08 21:54:25Z" end-time="2026-10-08 21:55:10Z" duration="44.181606" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1315" name="LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload" methodname="LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="594541354" result="Passed" start-time="2026-10-08 21:54:25Z" end-time="2026-10-08 21:54:36Z" duration="10.153587" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload
+QA test: Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload
+QA result: Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload
+QA result: Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload
+]]></output>
+              </test-case>
+              <test-case id="1318" name="PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload" methodname="PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="924348686" result="Passed" start-time="2026-10-08 21:54:36Z" end-time="2026-10-08 21:54:49Z" duration="13.643330" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload
+QA test: Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload
+QA result: Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload
+QA result: Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload
+]]></output>
+              </test-case>
+              <test-case id="1317" name="PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt" methodname="PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="1462372179" result="Passed" start-time="2026-10-08 21:54:49Z" end-time="2026-10-08 21:54:50Z" duration="0.608971" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt
+QA test: Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt
+QA result: Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt
+QA result: Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt
+]]></output>
+              </test-case>
+              <test-case id="1316" name="WorkshopSingleApplicationReloadAndDepartureRemainConsistent" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent" methodname="WorkshopSingleApplicationReloadAndDepartureRemainConsistent" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="225060063" result="Passed" start-time="2026-10-08 21:54:50Z" end-time="2026-10-08 21:55:10Z" duration="19.736981" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent
+QA test: Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent
+QA result: Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent
+QA result: Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1319" name="CampaignRemasterPlayTests" fullname="Game.Tests.PlayMode.CampaignRemasterPlayTests" classname="Game.Tests.PlayMode.CampaignRemasterPlayTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-08 21:55:10Z" end-time="2026-10-08 21:55:34Z" duration="24.511897" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1323" name="AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend" fullname="Game.Tests.PlayMode.CampaignRemasterPlayTests.AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend" methodname="AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend" classname="Game.Tests.PlayMode.CampaignRemasterPlayTests" runstate="Runnable" seed="961409831" result="Passed" start-time="2026-10-08 21:55:10Z" end-time="2026-10-08 21:55:11Z" duration="1.903842" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend
+QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend
+QA result: Passed Game.Tests.PlayMode.CampaignRemasterPlayTests.AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend
+QA result: Passed Game.Tests.PlayMode.CampaignRemasterPlayTests.AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend
+]]></output>
+              </test-case>
+              <test-case id="1320" name="ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion" fullname="Game.Tests.PlayMode.CampaignRemasterPlayTests.ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion" methodname="ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion" classname="Game.Tests.PlayMode.CampaignRemasterPlayTests" runstate="Runnable" seed="889883568" result="Passed" start-time="2026-10-08 21:55:11Z" end-time="2026-10-08 21:55:16Z" duration="4.616443" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion
+QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion
+QA result: Passed Game.Tests.PlayMode.CampaignRemasterPlayTests.ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion
+QA result: Passed Game.Tests.PlayMode.CampaignRemasterPlayTests.ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion
+]]></output>
+              </test-case>
+              <test-case id="1322" name="ContextTransitionsReachSchoolAndFuscaWithScreenshots" fullname="Game.Tests.PlayMode.CampaignRemasterPlayTests.ContextTransitionsReachSchoolAndFuscaWithScreenshots" methodname="ContextTransitionsReachSchoolAndFuscaWithScreenshots" classname="Game.Tests.PlayMode.CampaignRemasterPlayTests" runstate="Runnable" seed="188029094" result="Passed" start-time="2026-10-08 21:55:16Z" end-time="2026-10-08 21:55:27Z" duration="10.435105" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.ContextTransitionsReachSchoolAndFuscaWithScreenshots
+QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.ContextTransitionsReachSchoolAndFuscaWithScreenshots
+QA result: Passed Game.Tests.PlayMode.CampaignRemasterPlayTests.ContextTransitionsReachSchoolAndFuscaWithScreenshots
+QA result: Passed Game.Tests.PlayMode.CampaignRemasterPlayTests.ContextTransitionsReachSchoolAndFuscaWithScreenshots
+]]></output>
+              </test-case>
+              <test-case id="1321" name="CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls" fullname="Game.Tests.PlayMode.CampaignRemasterPlayTests.CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls" methodname="CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls" classname="Game.Tests.PlayMode.CampaignRemasterPlayTests" runstate="Runnable" seed="1165636844" result="Failed" start-time="2026-10-08 21:55:27Z" end-time="2026-10-08 21:55:34Z" duration="7.513379" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: False
+  But was:  True
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.CampaignRemasterPlayTests+<CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls>d__8.MoveNext () [0x00195] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\PlayMode\CampaignRemasterPlayTests.cs:82
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls
+QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls
+QA result: Failed Game.Tests.PlayMode.CampaignRemasterPlayTests.CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls
+QA result: Failed Game.Tests.PlayMode.CampaignRemasterPlayTests.CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1324" name="CampaignRequestedChangesTests" fullname="Game.Tests.PlayMode.CampaignRequestedChangesTests" classname="Game.Tests.PlayMode.CampaignRequestedChangesTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-08 21:55:34Z" end-time="2026-10-08 21:56:10Z" duration="35.585288" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1325" name="DeadzoneCarIsolationAndLastDevicePrompts" fullname="Game.Tests.PlayMode.CampaignRequestedChangesTests.DeadzoneCarIsolationAndLastDevicePrompts" methodname="DeadzoneCarIsolationAndLastDevicePrompts" classname="Game.Tests.PlayMode.CampaignRequestedChangesTests" runstate="Runnable" seed="564236662" result="Passed" start-time="2026-10-08 21:55:34Z" end-time="2026-10-08 21:55:34Z" duration="0.078117" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignRequestedChangesTests.DeadzoneCarIsolationAndLastDevicePrompts
+QA test: Game.Tests.PlayMode.CampaignRequestedChangesTests.DeadzoneCarIsolationAndLastDevicePrompts
+QA result: Passed Game.Tests.PlayMode.CampaignRequestedChangesTests.DeadzoneCarIsolationAndLastDevicePrompts
+QA result: Passed Game.Tests.PlayMode.CampaignRequestedChangesTests.DeadzoneCarIsolationAndLastDevicePrompts
+]]></output>
+              </test-case>
+              <test-case id="1327" name="OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations" fullname="Game.Tests.PlayMode.CampaignRequestedChangesTests.OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations" methodname="OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations" classname="Game.Tests.PlayMode.CampaignRequestedChangesTests" runstate="Runnable" seed="492504411" result="Passed" start-time="2026-10-08 21:55:34Z" end-time="2026-10-08 21:55:59Z" duration="24.876070" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignRequestedChangesTests.OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations
+QA test: Game.Tests.PlayMode.CampaignRequestedChangesTests.OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations
+QA result: Passed Game.Tests.PlayMode.CampaignRequestedChangesTests.OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations
+QA result: Passed Game.Tests.PlayMode.CampaignRequestedChangesTests.OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations
+]]></output>
+              </test-case>
+              <test-case id="1326" name="RealMenuSettingsAndCancelWorkWithoutMouse" fullname="Game.Tests.PlayMode.CampaignRequestedChangesTests.RealMenuSettingsAndCancelWorkWithoutMouse" methodname="RealMenuSettingsAndCancelWorkWithoutMouse" classname="Game.Tests.PlayMode.CampaignRequestedChangesTests" runstate="Runnable" seed="1363904115" result="Passed" start-time="2026-10-08 21:55:59Z" end-time="2026-10-08 21:56:00Z" duration="0.839432" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="40000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignRequestedChangesTests.RealMenuSettingsAndCancelWorkWithoutMouse
+QA test: Game.Tests.PlayMode.CampaignRequestedChangesTests.RealMenuSettingsAndCancelWorkWithoutMouse
+QA result: Passed Game.Tests.PlayMode.CampaignRequestedChangesTests.RealMenuSettingsAndCancelWorkWithoutMouse
+QA result: Passed Game.Tests.PlayMode.CampaignRequestedChangesTests.RealMenuSettingsAndCancelWorkWithoutMouse
+]]></output>
+              </test-case>
+              <test-case id="1329" name="RumbleExpiresAndUnsupportedDevicesNeverThrow" fullname="Game.Tests.PlayMode.CampaignRequestedChangesTests.RumbleExpiresAndUnsupportedDevicesNeverThrow" methodname="RumbleExpiresAndUnsupportedDevicesNeverThrow" classname="Game.Tests.PlayMode.CampaignRequestedChangesTests" runstate="Runnable" seed="1463920536" result="Passed" start-time="2026-10-08 21:56:00Z" end-time="2026-10-08 21:56:00Z" duration="0.231982" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignRequestedChangesTests.RumbleExpiresAndUnsupportedDevicesNeverThrow
+QA test: Game.Tests.PlayMode.CampaignRequestedChangesTests.RumbleExpiresAndUnsupportedDevicesNeverThrow
+QA result: Passed Game.Tests.PlayMode.CampaignRequestedChangesTests.RumbleExpiresAndUnsupportedDevicesNeverThrow
+QA result: Passed Game.Tests.PlayMode.CampaignRequestedChangesTests.RumbleExpiresAndUnsupportedDevicesNeverThrow
+]]></output>
+              </test-case>
+              <test-case id="1328" name="SchoolSeatingAndFaceWashKeepSourceArtAndStopCleanly" fullname="Game.Tests.PlayMode.CampaignRequestedChangesTests.SchoolSeatingAndFaceWashKeepSourceArtAndStopCleanly" methodname="SchoolSeatingAndFaceWashKeepSourceArtAndStopCleanly" classname="Game.Tests.PlayMode.CampaignRequestedChangesTests" runstate="Runnable" seed="2137562260" result="Passed" start-time="2026-10-08 21:56:00Z" end-time="2026-10-08 21:56:10Z" duration="9.549856" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="40000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignRequestedChangesTests.SchoolSeatingAndFaceWashKeepSourceArtAndStopCleanly
+QA test: Game.Tests.PlayMode.CampaignRequestedChangesTests.SchoolSeatingAndFaceWashKeepSourceArtAndStopCleanly
+QA result: Passed Game.Tests.PlayMode.CampaignRequestedChangesTests.SchoolSeatingAndFaceWashKeepSourceArtAndStopCleanly
+QA result: Passed Game.Tests.PlayMode.CampaignRequestedChangesTests.SchoolSeatingAndFaceWashKeepSourceArtAndStopCleanly
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

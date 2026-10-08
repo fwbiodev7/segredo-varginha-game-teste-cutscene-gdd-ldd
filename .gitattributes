@@ -1,0 +1,5 @@
+# Distribution and presentation files must retain their exact bytes.
+*.pdf binary
+*.pptx binary
+*.png binary
+*.wav binary

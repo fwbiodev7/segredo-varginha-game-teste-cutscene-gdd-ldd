@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-08",
+  "duration_seconds": 15,
+  "mode": "batchmode with graphics enabled",
+  "started": true,
+  "running_at_end": true,
+  "termination": "Only the test process was stopped after observation",
+  "graphics": "Direct3D 12",
+  "errors_or_exceptions": [],
+  "nonfatal_diagnostics": [
+    "d3d12: failed to query info queue interface (0x80004002)."
+  ],
+  "scope": "Initialization at menu, no campaign started",
+  "full_playthrough": false
+}

@@ -4,7 +4,7 @@
 
 Trinta anos depois de uma noite esquecida, Edelzio encontra uma caixa que devolve perguntas sobre seu passado. Explore casas, a Escola Industrial, trilhas e laboratórios; converse com Renan, Padre Fábio e Ouzana; reúna pistas e conte com seus aliados quando a investigação se transformar em combate.
 
-**Em desenvolvimento · 14 fases em 5 atos · atualização: 07/10/2026.**
+**Em desenvolvimento · 14 fases em 5 atos · atualização: 08/10/2026.**
 
 [Site oficial](https://o-segredo-de-varginha.zfabiobrronaldo.chatgpt.site) · [Como começar](#como-começar) · [Controles](#controles) · [Ajuda para puzzles](#ajuda-para-puzzles) · [Reportar um problema](https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/issues)
 
@@ -17,6 +17,8 @@ Trinta anos depois de uma noite esquecida, Edelzio encontra uma caixa que devolv
 O site apresenta o jogo e oferece o link de download. A campanha não roda diretamente no navegador. O projeto Unity permanece disponível para desenvolvimento e testes no Editor.
 
 O projeto foi validado com **Unity 6000.6.0f1 no Windows**. Ainda não há requisitos mínimos de hardware medidos, duração oficial da campanha ou suporte certificado para outras plataformas.
+
+O remaster de 08/10 acrescenta transições por contexto, enquadramentos nas pistas, continuidade dos ambientes sonoros e variações discretas da iluminação. Mantém arte, roteiro, controles e campanha. Consulte a [entrega e os slides da sprint](Docs/Remaster20261008/ENTREGA.md), as [notas da nova build](Docs/Remaster20261008/BUILD_WINDOWS.md) e os [resultados dos testes](Docs/Remaster20261008/results-summary.json). O download acima continua apontando para a alpha publicada em 07/10; a nova build do remaster está separada dessa versão.
 
 ## Como começar
 
@@ -164,6 +166,8 @@ ProjectSettings/                 Configuração do projeto
 
 ## Documentação e estado da revisão
 
+- [Remaster de 08/10 e sprint de 09/10: slides, relatório, prints e testes](Docs/Remaster20261008/ENTREGA.md).
+- [Build Windows x64 do remaster: resultado, integridade e reprodução](Docs/Remaster20261008/BUILD_WINDOWS.md).
 - [Apresentação das atualizações: 6 slides em PowerPoint](Docs/Apresentacao/Atualizacoes_O_Segredo_de_Varginha_Alpha_Final.pptx), com notas para apresentar.
 - [Sequência atual e compatibilidade dos saves](Docs/CampanhaOficial/CAMPANHA_14_FASES.md) — inclui detalhes narrativos.
 - [Guia completo de puzzles](Docs/CampanhaOficial/GUIA_COMPLETO_PUZZLES.md) — contém spoilers.

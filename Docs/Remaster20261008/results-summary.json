@@ -1,0 +1,77 @@
+{
+  "date": "2026-10-08",
+  "meeting_date": "2026-10-09",
+  "unity": "6000.6.0f1",
+  "pipeline": "BuiltIn",
+  "base_commit": "412cd5f",
+  "editmode": {
+    "file": "editmode-verified-results.xml",
+    "total": 241,
+    "passed": 229,
+    "failed": 12,
+    "result": "Failed(Child)",
+    "duration_seconds": 12.9183253
+  },
+  "baseline": {
+    "file": "baseline-results.xml",
+    "total": 16,
+    "passed": 4,
+    "failed": 12,
+    "result": "Failed(Child)",
+    "duration_seconds": 0.2756737
+  },
+  "playmode": {
+    "total": 47,
+    "passed": 47,
+    "failed": 0,
+    "runs": [
+      {
+        "file": "playmode-results.xml",
+        "total": 47,
+        "passed": 46,
+        "failed": 1,
+        "result": "Failed(Child)",
+        "duration_seconds": 438.5137336
+      },
+      {
+        "file": "remaster-retest-results.xml",
+        "total": 4,
+        "passed": 3,
+        "failed": 1,
+        "result": "Failed(Child)",
+        "duration_seconds": 25.2851524
+      },
+      {
+        "file": "remaster-final-results.xml",
+        "total": 4,
+        "passed": 3,
+        "failed": 1,
+        "result": "Failed(Child)",
+        "duration_seconds": 25.6734302
+      },
+      {
+        "file": "verification-results.xml",
+        "total": 14,
+        "passed": 14,
+        "failed": 0,
+        "result": "Passed",
+        "duration_seconds": 42.254553
+      }
+    ]
+  },
+  "inherited_sprite_failures": [
+    "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Ana Tavares\")",
+    "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Anna Sabia\")",
+    "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Fabio\")",
+    "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Luis Martins\")",
+    "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Luis Miguel Messias\")",
+    "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Marcos\")",
+    "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Matias\")",
+    "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Pedro\")",
+    "Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(\"Yasmin\")",
+    "Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights",
+    "Game.Tests.EditMode.VarginhaVisualPolishTests.EveryAttackHasDedicatedWindupContactAndRecoveryWithStableGeometry",
+    "Game.Tests.EditMode.VarginhaVisualPolishTests.ProtagonistIsLargerWithoutMovingHisFootBaseline"
+  ],
+  "new_release_published": false
+}

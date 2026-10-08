@@ -109,6 +109,7 @@ namespace Game.Varginha
             baked._texture.SetPixels32(pixels); baked._texture.Apply(false, false);
             baked._sprite = Sprite.Create(baked._texture, new Rect(0, 0, width, height), Vector2.one * .5f, ppu, 0, SpriteMeshType.FullRect);
             var output = go.AddComponent<SpriteRenderer>(); output.sprite = baked._sprite; output.sortingOrder = 1;
+            go.AddComponent<Experiment.CampaignAtmosphereLayer>().Configure(output);
         }
 
         private static float Visibility(Vector2 emitter, Vector2 point, List<Rect> blockers, float sourceHalfWidth)

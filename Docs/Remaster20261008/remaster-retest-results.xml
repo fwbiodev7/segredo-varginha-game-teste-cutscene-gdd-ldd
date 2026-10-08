@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Failed(Child)" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-08 21:57:14Z" end-time="2026-10-08 21:57:39Z" duration="25,2851524">
+  <test-suite type="TestSuite" id="1274" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="233" result="Failed" site="Child" start-time="2026-10-08 21:57:14Z" end-time="2026-10-08 21:57:39Z" duration="25.285152" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1541" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="233" result="Failed" site="Child" start-time="2026-10-08 21:57:14Z" end-time="2026-10-08 21:57:39Z" duration="25.274856" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="18252" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1542" name="Game" fullname="Game" runstate="Runnable" testcasecount="233" result="Failed" site="Child" start-time="2026-10-08 21:57:14Z" end-time="2026-10-08 21:57:39Z" duration="25.272131" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1543" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="233" result="Failed" site="Child" start-time="2026-10-08 21:57:14Z" end-time="2026-10-08 21:57:39Z" duration="25.262500" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1544" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="233" result="Failed" site="Child" start-time="2026-10-08 21:57:14Z" end-time="2026-10-08 21:57:39Z" duration="25.253947" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1319" name="CampaignRemasterPlayTests" fullname="Game.Tests.PlayMode.CampaignRemasterPlayTests" classname="Game.Tests.PlayMode.CampaignRemasterPlayTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-08 21:57:14Z" end-time="2026-10-08 21:57:39Z" duration="25.248417" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1323" name="AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend" fullname="Game.Tests.PlayMode.CampaignRemasterPlayTests.AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend" methodname="AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend" classname="Game.Tests.PlayMode.CampaignRemasterPlayTests" runstate="Runnable" seed="171199956" result="Failed" start-time="2026-10-08 21:57:14Z" end-time="2026-10-08 21:57:15Z" duration="0.904143" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: 0.0898211896f
+  But was:  0.0659999996f
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.CampaignRemasterPlayTests+<AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend>d__10.MoveNext () [0x00183] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\PlayMode\CampaignRemasterPlayTests.cs:112
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend
+QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend
+QA result: Failed Game.Tests.PlayMode.CampaignRemasterPlayTests.AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend
+QA result: Failed Game.Tests.PlayMode.CampaignRemasterPlayTests.AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend
+]]></output>
+              </test-case>
+              <test-case id="1320" name="ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion" fullname="Game.Tests.PlayMode.CampaignRemasterPlayTests.ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion" methodname="ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion" classname="Game.Tests.PlayMode.CampaignRemasterPlayTests" runstate="Runnable" seed="1379102855" result="Passed" start-time="2026-10-08 21:57:15Z" end-time="2026-10-08 21:57:20Z" duration="5.266825" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion
+QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion
+QA result: Passed Game.Tests.PlayMode.CampaignRemasterPlayTests.ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion
+QA result: Passed Game.Tests.PlayMode.CampaignRemasterPlayTests.ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion
+]]></output>
+              </test-case>
+              <test-case id="1322" name="ContextTransitionsReachSchoolAndFuscaWithScreenshots" fullname="Game.Tests.PlayMode.CampaignRemasterPlayTests.ContextTransitionsReachSchoolAndFuscaWithScreenshots" methodname="ContextTransitionsReachSchoolAndFuscaWithScreenshots" classname="Game.Tests.PlayMode.CampaignRemasterPlayTests" runstate="Runnable" seed="906442159" result="Passed" start-time="2026-10-08 21:57:20Z" end-time="2026-10-08 21:57:31Z" duration="10.527441" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.ContextTransitionsReachSchoolAndFuscaWithScreenshots
+QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.ContextTransitionsReachSchoolAndFuscaWithScreenshots
+QA result: Passed Game.Tests.PlayMode.CampaignRemasterPlayTests.ContextTransitionsReachSchoolAndFuscaWithScreenshots
+QA result: Passed Game.Tests.PlayMode.CampaignRemasterPlayTests.ContextTransitionsReachSchoolAndFuscaWithScreenshots
+]]></output>
+              </test-case>
+              <test-case id="1321" name="CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls" fullname="Game.Tests.PlayMode.CampaignRemasterPlayTests.CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls" methodname="CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls" classname="Game.Tests.PlayMode.CampaignRemasterPlayTests" runstate="Runnable" seed="52798956" result="Passed" start-time="2026-10-08 21:57:31Z" end-time="2026-10-08 21:57:39Z" duration="8.530775" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls
+QA test: Game.Tests.PlayMode.CampaignRemasterPlayTests.CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls
+QA result: Passed Game.Tests.PlayMode.CampaignRemasterPlayTests.CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls
+QA result: Passed Game.Tests.PlayMode.CampaignRemasterPlayTests.CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -22,6 +22,7 @@ namespace Game.Level
         private bool _bounded;
         private Rect _mapBounds;
         private float _preferredSize;
+        private Game.Varginha.Experiment.CampaignCameraDirector _director;
 
         public Transform Target
         {
@@ -82,7 +83,7 @@ namespace Game.Level
 
         private void LateUpdate()
         {
-            if (target == null) return;
+            if (target == null || Time.timeScale <= 0) return;
 
             if (target.GetComponent<Game.Varginha.EdelzioTopDownController>() != null)
             {
@@ -102,6 +103,8 @@ namespace Game.Level
             }
 
             targetPos = ConstrainPosition(targetPos);
+            if (_director == null) _director = GetComponent<Game.Varginha.Experiment.CampaignCameraDirector>();
+            if (_director != null && _director.IsActive) targetPos = ConstrainPosition(_director.Compose(targetPos));
             transform.position = ConstrainPosition(Vector3.SmoothDamp(transform.position, targetPos, ref _velocity, smoothTime));
         }
     }

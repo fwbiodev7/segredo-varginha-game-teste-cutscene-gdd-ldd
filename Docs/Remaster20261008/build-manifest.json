@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-08",
+  "platform": "Windows x64",
+  "base_commit": "412cd5fea9c4f856e7cecf457eaa838a14ba0b19",
+  "source_state": "Base commit plus remaster changes committed in this delivery",
+  "build": {
+    "result": "Succeeded",
+    "output": "C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Builds/jogo_varginha_build_alpha/jogo_varginha_build_alpha.exe",
+    "unity": "6000.6.0f1",
+    "bytes": 294953581,
+    "seconds": 74.69546129999999,
+    "errors": 0,
+    "warnings": 1,
+    "scenes": [
+      "Assets/Scenes/Menu_MisterioDeVarginha.unity",
+      "Assets/Scenes/Ato1_Fase1_O_Caso_de_Varginha.unity",
+      "Assets/Scenes/Ato2_Fase2_A_Chave_e_a_Caixa.unity",
+      "Assets/Scenes/Ato2_Fase4_Entre_Aulas_e_Pistas.unity",
+      "Assets/Scenes/Ato3_Fase6_Fragmentos.unity",
+      "Assets/Scenes/Ato3_Fase7_A_Mata.unity",
+      "Assets/Scenes/Ato3_Fase8_A_Ancora.unity",
+      "Assets/Scenes/Ato4_Fase9_Ouzana.unity",
+      "Assets/Scenes/Ato4_Fase11_Arquivos_Alterados.unity",
+      "Assets/Scenes/Ato4_Fase12_Casarao_de_Ze_Gomes.unity",
+      "Assets/Scenes/Ato5_Fase14_O_Que_Fabio_Escondeu.unity",
+      "Assets/Scenes/Ato5_Fase15_A_Noite_Interrompida.unity",
+      "Assets/Scenes/Ato6_Fase18_A_Criatura_Ferida.unity",
+      "Assets/Scenes/Ato6_Fase20_O_Verdadeiro_Segredo.unity",
+      "Assets/Scenes/Ato6_Fase21_O_Retorno.unity",
+      "Assets/Scenes/Ato4_Fase10_O_Fusca_Marcado.unity",
+      "Assets/Scenes/Ato4_Fase13_Registros_de_1898.unity",
+      "Assets/Scenes/Ato4_Fase12_Casarao_de_Ze_Gomes_Area1.unity",
+      "Assets/Scenes/Ato6_Fase21_O_Retorno_Area1.unity"
+    ]
+  },
+  "package": {
+    "local_path": "Builds/jogo_varginha_remaster_2026-10-08.zip",
+    "bytes": 209388496,
+    "sha256": "89e2c9bd4c6ae4d5b87c1ed743b42b4a2c8b3393ef4a5e18d4c47b812b3c813b",
+    "file_count": 199,
+    "crc_verified": true
+  },
+  "exe_sha256": "a4c71b1bfc3e42d02f2f129fe04adef3ebf2343a662884e4b99598e9dfc90e7d",
+  "game_assembly": "jogo_varginha_build_alpha_Data/Managed/Game.dll",
+  "game_assembly_sha256": "3c7115c44e5e3625ce8e394f77c802686a4392b612b2caaed05f27b5f55647a4"
+}

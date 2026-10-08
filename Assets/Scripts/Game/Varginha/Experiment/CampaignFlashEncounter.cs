@@ -40,7 +40,7 @@ namespace Game.Varginha.Experiment
         {
             if(_actor==null||Time.timeScale<=0)return;
             _time+=Time.deltaTime;
-            if(!_burstPlayed&&_time>=Launch){_burstPlayed=true;_sound?.Play("AlienBurst");}
+            if(!_burstPlayed&&_time>=Launch){_burstPlayed=true;_sound?.PlayAt("AlienBurst",_blast.transform.position);CampaignAtmosphereLayer.Interference(transform.root);Camera.main?.GetComponent<VarginhaCameraShake>()?.Shake(.22f,.025f);}
             int pose=0;for(int i=1;i<PoseCues.Length;i++)if(_time>=PoseCues[i])pose=i;
             _child.sprite=CampaignFlashArt.Fall[pose];
             // Hold the small core briefly; expand once, then disperse the ring.

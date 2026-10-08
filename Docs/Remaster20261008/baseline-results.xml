@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="16" result="Failed(Child)" total="16" passed="4" failed="12" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:43Z" duration="0,2756737">
+  <test-suite type="TestSuite" id="1000" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="235" result="Failed" site="Child" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:43Z" duration="0.275674" total="16" passed="4" failed="12" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1276" name="GameEditModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Library/ScriptAssemblies/GameEditModeTests.dll" runstate="Runnable" testcasecount="235" result="Failed" site="Child" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:43Z" duration="0.257040" total="16" passed="4" failed="12" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="32004" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1277" name="Game" fullname="Game" runstate="Runnable" testcasecount="235" result="Failed" site="Child" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:43Z" duration="0.245783" total="16" passed="4" failed="12" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1278" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="235" result="Failed" site="Child" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:43Z" duration="0.241127" total="16" passed="4" failed="12" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1279" name="EditMode" fullname="Game.Tests.EditMode" runstate="Runnable" testcasecount="235" result="Failed" site="Child" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:43Z" duration="0.236168" total="16" passed="4" failed="12" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1256" name="VarginhaStudentSpriteTests" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" testcasecount="13" result="Failed" site="Child" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:43Z" duration="0.123362" total="13" passed="3" failed="10" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-suite type="ParameterizedMethod" id="1271" name="BriefNameVariantsResolveToTheExistingStudent" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:42Z" duration="0.047742" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1269" name="BriefNameVariantsResolveToTheExistingStudent(&quot;Anna Tavares&quot;,&quot;Ana Tavares&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent(&quot;Anna Tavares&quot;,&quot;Ana Tavares&quot;)" methodname="BriefNameVariantsResolveToTheExistingStudent" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="871504493" result="Passed" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:42Z" duration="0.035219" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Tavares","Ana Tavares")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Tavares","Ana Tavares")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Tavares","Ana Tavares")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Tavares","Ana Tavares")
+]]></output>
+                </test-case>
+                <test-case id="1270" name="BriefNameVariantsResolveToTheExistingStudent(&quot;Luis Messias&quot;,&quot;Luis Miguel Messias&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent(&quot;Luis Messias&quot;,&quot;Luis Miguel Messias&quot;)" methodname="BriefNameVariantsResolveToTheExistingStudent" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1967994748" result="Passed" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:42Z" duration="0.002161" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Luis Messias","Luis Miguel Messias")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Luis Messias","Luis Miguel Messias")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Luis Messias","Luis Miguel Messias")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Luis Messias","Luis Miguel Messias")
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1266" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" testcasecount="9" result="Failed" site="Child" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:43Z" duration="0.057610" total="9" passed="0" failed="9" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <failure>
+                  <message><![CDATA[One or more child tests had errors]]></message>
+                </failure>
+                <test-case id="1257" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Yasmin&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Yasmin&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="2123616106" result="Failed" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:42Z" duration="0.018040" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Yasmin precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Yasmin")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Yasmin")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Yasmin")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Yasmin")
+]]></output>
+                </test-case>
+                <test-case id="1258" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Pedro&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Pedro&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1586113647" result="Failed" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:42Z" duration="0.003227" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Pedro precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Pedro")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Pedro")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Pedro")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Pedro")
+]]></output>
+                </test-case>
+                <test-case id="1259" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Matias&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Matias&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="610817582" result="Failed" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:42Z" duration="0.003563" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Matias precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Matias")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Matias")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Matias")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Matias")
+]]></output>
+                </test-case>
+                <test-case id="1260" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Marcos&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Marcos&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="2011011880" result="Failed" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:42Z" duration="0.002936" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Marcos precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Marcos")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Marcos")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Marcos")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Marcos")
+]]></output>
+                </test-case>
+                <test-case id="1261" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Anna Sabia&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Anna Sabia&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="388851247" result="Failed" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:42Z" duration="0.003171" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Anna Sabia precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Anna Sabia")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Anna Sabia")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Anna Sabia")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Anna Sabia")
+]]></output>
+                </test-case>
+                <test-case id="1262" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Ana Tavares&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Ana Tavares&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="379017492" result="Failed" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:42Z" duration="0.000809" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Ana Tavares precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Ana Tavares")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Ana Tavares")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Ana Tavares")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Ana Tavares")
+]]></output>
+                </test-case>
+                <test-case id="1263" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Luis Miguel Messias&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Luis Miguel Messias&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="574141914" result="Failed" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:42Z" duration="0.003843" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Luis Miguel Messias precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Miguel Messias")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Miguel Messias")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Miguel Messias")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Miguel Messias")
+]]></output>
+                </test-case>
+                <test-case id="1264" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Luis Martins&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Luis Martins&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="913283614" result="Failed" start-time="2026-10-08 21:47:42Z" end-time="2026-10-08 21:47:43Z" duration="0.008195" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Luis Martins precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Martins")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Martins")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Martins")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Martins")
+]]></output>
+                </test-case>
+                <test-case id="1265" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Fabio&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Fabio&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="487618449" result="Failed" start-time="2026-10-08 21:47:43Z" end-time="2026-10-08 21:47:43Z" duration="0.004006" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <failure>
+                    <message><![CDATA[  Fabio precisa manter os pés alinhados.
+  Expected: 6
+  But was:  4
+]]></message>
+                    <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits (System.String student) [0x00174] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:43
+]]></stack-trace>
+                  </failure>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Fabio")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Fabio")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Fabio")
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Fabio")
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-case id="1267" name="FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons" methodname="FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1259732557" result="Passed" start-time="2026-10-08 21:47:43Z" end-time="2026-10-08 21:47:43Z" duration="0.004494" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons
+]]></output>
+              </test-case>
+              <test-case id="1268" name="ShortAnnaAndTallAnaKeepDifferentHeights" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights" methodname="ShortAnnaAndTallAnaKeepDifferentHeights" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="778895272" result="Failed" start-time="2026-10-08 21:47:43Z" end-time="2026-10-08 21:47:43Z" duration="0.001919" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: greater than or equal to 4
+  But was:  -2
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights () [0x0004d] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\EditMode\VarginhaStudentSpriteTests.cs:93
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights
+QA result: Failed Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1272" name="VarginhaVisualPolishTests" fullname="Game.Tests.EditMode.VarginhaVisualPolishTests" classname="Game.Tests.EditMode.VarginhaVisualPolishTests" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2026-10-08 21:47:43Z" end-time="2026-10-08 21:47:43Z" duration="0.095433" total="3" passed="1" failed="2" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1275" name="ClearCombatPoseClearsAttackPose" fullname="Game.Tests.EditMode.VarginhaVisualPolishTests.ClearCombatPoseClearsAttackPose" methodname="ClearCombatPoseClearsAttackPose" classname="Game.Tests.EditMode.VarginhaVisualPolishTests" runstate="Runnable" seed="411736664" result="Passed" start-time="2026-10-08 21:47:43Z" end-time="2026-10-08 21:47:43Z" duration="0.029762" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaVisualPolishTests.ClearCombatPoseClearsAttackPose
+QA test: Game.Tests.EditMode.VarginhaVisualPolishTests.ClearCombatPoseClearsAttackPose
+QA result: Passed Game.Tests.EditMode.VarginhaVisualPolishTests.ClearCombatPoseClearsAttackPose
+QA result: Passed Game.Tests.EditMode.VarginhaVisualPolishTests.ClearCombatPoseClearsAttackPose
+]]></output>
+              </test-case>
+              <test-case id="1274" name="EveryAttackHasDedicatedWindupContactAndRecoveryWithStableGeometry" fullname="Game.Tests.EditMode.VarginhaVisualPolishTests.EveryAttackHasDedicatedWindupContactAndRecoveryWithStableGeometry" methodname="EveryAttackHasDedicatedWindupContactAndRecoveryWithStableGeometry" classname="Game.Tests.EditMode.VarginhaVisualPolishTests" runstate="Runnable" seed="646349061" result="Failed" start-time="2026-10-08 21:47:43Z" end-time="2026-10-08 21:47:43Z" duration="0.058300" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: (32.50, 31.60)
+  But was:  (32.00, 28.03)
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaVisualPolishTests.EveryAttackHasDedicatedWindupContactAndRecoveryWithStableGeometry () [0x0006f] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\EditMode\VarginhaVisualPolishTests.cs:34
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaVisualPolishTests.EveryAttackHasDedicatedWindupContactAndRecoveryWithStableGeometry
+QA test: Game.Tests.EditMode.VarginhaVisualPolishTests.EveryAttackHasDedicatedWindupContactAndRecoveryWithStableGeometry
+QA result: Failed Game.Tests.EditMode.VarginhaVisualPolishTests.EveryAttackHasDedicatedWindupContactAndRecoveryWithStableGeometry
+QA result: Failed Game.Tests.EditMode.VarginhaVisualPolishTests.EveryAttackHasDedicatedWindupContactAndRecoveryWithStableGeometry
+]]></output>
+              </test-case>
+              <test-case id="1273" name="ProtagonistIsLargerWithoutMovingHisFootBaseline" fullname="Game.Tests.EditMode.VarginhaVisualPolishTests.ProtagonistIsLargerWithoutMovingHisFootBaseline" methodname="ProtagonistIsLargerWithoutMovingHisFootBaseline" classname="Game.Tests.EditMode.VarginhaVisualPolishTests" runstate="Runnable" seed="174050831" result="Failed" start-time="2026-10-08 21:47:43Z" end-time="2026-10-08 21:47:43Z" duration="0.002350" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: -0.54843751797918294d +/- 0.0010000000474974513d
+  But was:  -0.63720011711120605d
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.EditMode.VarginhaVisualPolishTests.ProtagonistIsLargerWithoutMovingHisFootBaseline () [0x00061] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\EditMode\VarginhaVisualPolishTests.cs:17
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaVisualPolishTests.ProtagonistIsLargerWithoutMovingHisFootBaseline
+QA test: Game.Tests.EditMode.VarginhaVisualPolishTests.ProtagonistIsLargerWithoutMovingHisFootBaseline
+QA result: Failed Game.Tests.EditMode.VarginhaVisualPolishTests.ProtagonistIsLargerWithoutMovingHisFootBaseline
+QA result: Failed Game.Tests.EditMode.VarginhaVisualPolishTests.ProtagonistIsLargerWithoutMovingHisFootBaseline
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

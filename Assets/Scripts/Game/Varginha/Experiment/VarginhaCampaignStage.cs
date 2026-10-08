@@ -179,6 +179,8 @@ namespace Game.Varginha.Experiment
             _carContext=id=="car";
             if (id == "car" && phase == 2 && _progress.CanLeaveHouse) { DepartForSchool(); return; }
             _sound?.Play(id == "box" || id == "notebook" ? "Paper" : "UI");
+            var cinematicPoint = _points.Find(p => p.id == id);
+            if (cinematicPoint != null && id != "car") CampaignCameraDirector.Reveal(cinematicPoint.Position);
             if (id.StartsWith("student:")) StudentInteraction(int.Parse(id.Substring(8)));
             else if (phase == 2) HouseInteraction(id); else SchoolInteraction(id);
             RestoreInventory(); Save(); Lock();
