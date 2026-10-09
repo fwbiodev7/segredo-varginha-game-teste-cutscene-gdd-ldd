@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="36" result="Failed(Child)" total="36" passed="33" failed="3" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-09 11:17:35Z" end-time="2026-10-09 11:25:47Z" duration="491,833227">
+  <test-suite type="TestSuite" id="1279" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="236" result="Failed" site="Child" start-time="2026-10-09 11:17:35Z" end-time="2026-10-09 11:25:47Z" duration="491.833227" total="36" passed="33" failed="3" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1551" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="236" result="Failed" site="Child" start-time="2026-10-09 11:17:35Z" end-time="2026-10-09 11:25:47Z" duration="491.807318" total="36" passed="33" failed="3" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="17772" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1552" name="Game" fullname="Game" runstate="Runnable" testcasecount="236" result="Failed" site="Child" start-time="2026-10-09 11:17:35Z" end-time="2026-10-09 11:25:47Z" duration="491.797905" total="36" passed="33" failed="3" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1553" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="236" result="Failed" site="Child" start-time="2026-10-09 11:17:35Z" end-time="2026-10-09 11:25:47Z" duration="491.579436" total="36" passed="33" failed="3" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1554" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="236" result="Failed" site="Child" start-time="2026-10-09 11:17:35Z" end-time="2026-10-09 11:25:47Z" duration="491.547498" total="36" passed="33" failed="3" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1280" name="CampaignChaptersTests" fullname="Game.Tests.PlayMode.CampaignChaptersTests" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-09 11:17:35Z" end-time="2026-10-09 11:18:35Z" duration="59.563841" total="6" passed="6" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1283" name="AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight" fullname="Game.Tests.PlayMode.CampaignChaptersTests.AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight" methodname="AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="2025724953" result="Passed" start-time="2026-10-09 11:17:35Z" end-time="2026-10-09 11:17:48Z" duration="12.256285" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1281" name="ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor" fullname="Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor" methodname="ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="1234442749" result="Passed" start-time="2026-10-09 11:17:48Z" end-time="2026-10-09 11:17:50Z" duration="2.228187" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1286" name="HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" fullname="Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" methodname="HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="914856268" result="Passed" start-time="2026-10-09 11:17:50Z" end-time="2026-10-09 11:18:09Z" duration="19.533349" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1282" name="MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame" fullname="Game.Tests.PlayMode.CampaignChaptersTests.MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame" methodname="MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="237967740" result="Passed" start-time="2026-10-09 11:18:09Z" end-time="2026-10-09 11:18:15Z" duration="5.450714" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1285" name="OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters" fullname="Game.Tests.PlayMode.CampaignChaptersTests.OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters" methodname="OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="867582514" result="Passed" start-time="2026-10-09 11:18:15Z" end-time="2026-10-09 11:18:28Z" duration="12.769572" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1284" name="PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening" fullname="Game.Tests.PlayMode.CampaignChaptersTests.PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening" methodname="PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="569742032" result="Passed" start-time="2026-10-09 11:18:28Z" end-time="2026-10-09 11:18:35Z" duration="7.249200" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1287" name="CampaignContinuationPlayTests" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-09 11:18:35Z" end-time="2026-10-09 11:22:23Z" duration="228.591145" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1294" name="AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork" methodname="AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="360744446" result="Passed" start-time="2026-10-09 11:18:35Z" end-time="2026-10-09 11:19:46Z" duration="71.336885" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+]]></output>
+              </test-case>
+              <test-case id="1293" name="ArenaNavigationSpawnPoolAndDefeatAllowRetry" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.ArenaNavigationSpawnPoolAndDefeatAllowRetry" methodname="ArenaNavigationSpawnPoolAndDefeatAllowRetry" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="1614652148" result="Passed" start-time="2026-10-09 11:19:46Z" end-time="2026-10-09 11:20:03Z" duration="16.837885" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+]]></output>
+              </test-case>
+              <test-case id="1297" name="BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard" methodname="BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="683820288" result="Passed" start-time="2026-10-09 11:20:03Z" end-time="2026-10-09 11:20:20Z" duration="17.083121" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+]]></output>
+              </test-case>
+              <test-case id="1289" name="BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails" methodname="BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="519972100" result="Passed" start-time="2026-10-09 11:20:20Z" end-time="2026-10-09 11:20:24Z" duration="3.505435" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+]]></output>
+              </test-case>
+              <test-case id="1290" name="InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition" methodname="InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="1524718223" result="Passed" start-time="2026-10-09 11:20:24Z" end-time="2026-10-09 11:20:28Z" duration="4.681408" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+]]></output>
+              </test-case>
+              <test-case id="1292" name="InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions" methodname="InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="860841393" result="Passed" start-time="2026-10-09 11:20:28Z" end-time="2026-10-09 11:21:11Z" duration="42.834758" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="180000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+QA investigation passed: 12
+QA continuation scene loaded: 13 / 0
+QA continuation ready: 13 / 0
+QA investigation passed: 13
+QA continuation scene loaded: 14 / 0
+QA continuation ready: 14 / 0
+QA investigation passed: 14
+QA continuation scene loaded: 15 / 0
+QA continuation ready: 15 / 0
+QA investigation passed: 15
+QA continuation scene loaded: 18 / 0
+QA continuation ready: 18 / 0
+QA investigation passed: 18
+]]></output>
+              </test-case>
+              <test-case id="1288" name="ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration" methodname="ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="431002396" result="Passed" start-time="2026-10-09 11:21:11Z" end-time="2026-10-09 11:21:49Z" duration="37.676320" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+]]></output>
+              </test-case>
+              <test-case id="1291" name="NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover" methodname="NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="1205922776" result="Passed" start-time="2026-10-09 11:21:49Z" end-time="2026-10-09 11:22:01Z" duration="12.341694" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+]]></output>
+              </test-case>
+              <test-case id="1296" name="ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease" methodname="ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="1928693424" result="Passed" start-time="2026-10-09 11:22:01Z" end-time="2026-10-09 11:22:05Z" duration="3.298016" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA continuation scene loaded: 21 / 0
+QA continuation ready: 21 / 0
+]]></output>
+              </test-case>
+              <test-case id="1295" name="ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue" methodname="ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="1563173239" result="Passed" start-time="2026-10-09 11:22:05Z" end-time="2026-10-09 11:22:23Z" duration="18.825626" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA continuation scene loaded: 21 / 0
+QA continuation ready: 21 / 0
+QA continuation scene loaded: 21 / 0
+QA continuation ready: 21 / 0
+QA continuation scene loaded: 21 / 0
+QA continuation ready: 21 / 0
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1305" name="CampaignDynamicLightingPlayTests" fullname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests" classname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-09 11:22:23Z" end-time="2026-10-09 11:22:41Z" duration="17.649785" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1306" name="ActualCharacterReceivesMovingLightAndItsShadowUsesTheSameDirection" fullname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.ActualCharacterReceivesMovingLightAndItsShadowUsesTheSameDirection" methodname="ActualCharacterReceivesMovingLightAndItsShadowUsesTheSameDirection" classname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests" runstate="Runnable" seed="621647287" result="Passed" start-time="2026-10-09 11:22:24Z" end-time="2026-10-09 11:22:26Z" duration="2.517115" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1307" name="CharactersCreatedAfterSixSecondsStillReceiveMapLighting" fullname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.CharactersCreatedAfterSixSecondsStillReceiveMapLighting" methodname="CharactersCreatedAfterSixSecondsStillReceiveMapLighting" classname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests" runstate="Runnable" seed="1148804111" result="Passed" start-time="2026-10-09 11:22:26Z" end-time="2026-10-09 11:22:36Z" duration="9.703518" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1308" name="EquippedFlashlightLightsACharacterButStopsAtScenery" fullname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.EquippedFlashlightLightsACharacterButStopsAtScenery" methodname="EquippedFlashlightLightsACharacterButStopsAtScenery" classname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests" runstate="Runnable" seed="373928761" result="Passed" start-time="2026-10-09 11:22:36Z" end-time="2026-10-09 11:22:41Z" duration="4.645151" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1309" name="FuscaHeadlightsFollowTheCarAndRegisterOnlyWhileSwitchedOn" fullname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.FuscaHeadlightsFollowTheCarAndRegisterOnlyWhileSwitchedOn" methodname="FuscaHeadlightsFollowTheCarAndRegisterOnlyWhileSwitchedOn" classname="Game.Tests.PlayMode.CampaignDynamicLightingPlayTests" runstate="Runnable" seed="1413402994" result="Passed" start-time="2026-10-09 11:22:41Z" end-time="2026-10-09 11:22:41Z" duration="0.594828" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1310" name="CampaignExpansionPlayTests" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2026-10-09 11:22:41Z" end-time="2026-10-09 11:23:28Z" duration="47.125040" total="8" passed="7" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1313" name="AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox" methodname="AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1375258438" result="Passed" start-time="2026-10-09 11:22:41Z" end-time="2026-10-09 11:22:50Z" duration="9.100964" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1311" name="AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions" methodname="AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1281077784" result="Passed" start-time="2026-10-09 11:22:50Z" end-time="2026-10-09 11:22:54Z" duration="3.644650" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1317" name="CharacterActionsAndPunchUseNewTransparentAnimationSheets" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets" methodname="CharacterActionsAndPunchUseNewTransparentAnimationSheets" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="980358728" result="Passed" start-time="2026-10-09 11:22:54Z" end-time="2026-10-09 11:22:59Z" duration="5.229609" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1312" name="CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags" methodname="CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1090533660" result="Passed" start-time="2026-10-09 11:22:59Z" end-time="2026-10-09 11:23:01Z" duration="1.455940" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1318" name="DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens" methodname="DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1947691865" result="Passed" start-time="2026-10-09 11:23:01Z" end-time="2026-10-09 11:23:08Z" duration="7.705594" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1315" name="FuscaDepartsAfterMarksWithoutRequiringTrack" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaDepartsAfterMarksWithoutRequiringTrack" methodname="FuscaDepartsAfterMarksWithoutRequiringTrack" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1648938211" result="Passed" start-time="2026-10-09 11:23:08Z" end-time="2026-10-09 11:23:16Z" duration="8.025289" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1314" name="IndustrialLibraryHasPhysicalPassagesAndReachableEvidence" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence" methodname="IndustrialLibraryHasPhysicalPassagesAndReachableEvidence" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1207669012" result="Failed" start-time="2026-10-09 11:23:16Z" end-time="2026-10-09 11:23:21Z" duration="4.627748" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Blocked physical passage at (0.25, -2.38)
+  Expected: less than 0.280000001f
+  But was:  0.341318995f
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.CampaignExpansionPlayTests+<WalkLibrary>d__10.MoveNext () [0x00292] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:197
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1316" name="SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" methodname="SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1550021768" result="Passed" start-time="2026-10-09 11:23:21Z" end-time="2026-10-09 11:23:28Z" duration="7.294396" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1329" name="CampaignRequestedChangesTests" fullname="Game.Tests.PlayMode.CampaignRequestedChangesTests" classname="Game.Tests.PlayMode.CampaignRequestedChangesTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-09 11:23:28Z" end-time="2026-10-09 11:24:09Z" duration="41.195532" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1330" name="DeadzoneCarIsolationAndLastDevicePrompts" fullname="Game.Tests.PlayMode.CampaignRequestedChangesTests.DeadzoneCarIsolationAndLastDevicePrompts" methodname="DeadzoneCarIsolationAndLastDevicePrompts" classname="Game.Tests.PlayMode.CampaignRequestedChangesTests" runstate="Runnable" seed="1974335266" result="Passed" start-time="2026-10-09 11:23:28Z" end-time="2026-10-09 11:23:29Z" duration="0.229791" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1332" name="OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations" fullname="Game.Tests.PlayMode.CampaignRequestedChangesTests.OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations" methodname="OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations" classname="Game.Tests.PlayMode.CampaignRequestedChangesTests" runstate="Runnable" seed="106469180" result="Passed" start-time="2026-10-09 11:23:29Z" end-time="2026-10-09 11:23:56Z" duration="27.282599" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1331" name="RealMenuSettingsAndCancelWorkWithoutMouse" fullname="Game.Tests.PlayMode.CampaignRequestedChangesTests.RealMenuSettingsAndCancelWorkWithoutMouse" methodname="RealMenuSettingsAndCancelWorkWithoutMouse" classname="Game.Tests.PlayMode.CampaignRequestedChangesTests" runstate="Runnable" seed="1787922913" result="Passed" start-time="2026-10-09 11:23:56Z" end-time="2026-10-09 11:23:58Z" duration="1.863336" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="40000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1334" name="RumbleExpiresAndUnsupportedDevicesNeverThrow" fullname="Game.Tests.PlayMode.CampaignRequestedChangesTests.RumbleExpiresAndUnsupportedDevicesNeverThrow" methodname="RumbleExpiresAndUnsupportedDevicesNeverThrow" classname="Game.Tests.PlayMode.CampaignRequestedChangesTests" runstate="Runnable" seed="1600896422" result="Passed" start-time="2026-10-09 11:23:58Z" end-time="2026-10-09 11:23:58Z" duration="0.566779" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1333" name="SchoolSeatingAndFaceWashKeepSourceArtAndStopCleanly" fullname="Game.Tests.PlayMode.CampaignRequestedChangesTests.SchoolSeatingAndFaceWashKeepSourceArtAndStopCleanly" methodname="SchoolSeatingAndFaceWashKeepSourceArtAndStopCleanly" classname="Game.Tests.PlayMode.CampaignRequestedChangesTests" runstate="Runnable" seed="1229921995" result="Passed" start-time="2026-10-09 11:23:58Z" end-time="2026-10-09 11:24:09Z" duration="11.082554" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="40000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1338" name="CampaignVisualPolishMovementTests" fullname="Game.Tests.PlayMode.CampaignVisualPolishMovementTests" classname="Game.Tests.PlayMode.CampaignVisualPolishMovementTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-10-09 11:24:09Z" end-time="2026-10-09 11:24:14Z" duration="5.033917" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1339" name="FragmentosAllowsRealMovementBelowColumnAndBlocksTheSolidLadder" fullname="Game.Tests.PlayMode.CampaignVisualPolishMovementTests.FragmentosAllowsRealMovementBelowColumnAndBlocksTheSolidLadder" methodname="FragmentosAllowsRealMovementBelowColumnAndBlocksTheSolidLadder" classname="Game.Tests.PlayMode.CampaignVisualPolishMovementTests" runstate="Runnable" seed="780663959" result="Failed" label="Error" start-time="2026-10-09 11:24:10Z" end-time="2026-10-09 11:24:14Z" duration="4.984699" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[System.ArgumentNullException : Value cannot be null.
+Parameter name: Control 'Key:/Keyboard/w' does not have an associated state]]></message>
+                  <stack-trace><![CDATA[  at UnityEngine.InputSystem.LowLevel.DeltaStateEvent.From (UnityEngine.InputSystem.InputControl control, UnityEngine.InputSystem.LowLevel.InputEventPtr& eventPtr, Unity.Collections.Allocator allocator) [0x0011e] in .\Library\PackageCache\com.unity.inputsystem@7a4e1a2a8194\InputSystem\Runtime\Events\DeltaStateEvent.cs:104 
+  at UnityEngine.InputSystem.InputTestFixture.Set[TValue] (UnityEngine.InputSystem.InputControl`1[TValue] control, TValue state, System.Double time, System.Double timeOffset, System.Boolean queueEventOnly) [0x000a0] in .\Library\PackageCache\com.unity.inputsystem@7a4e1a2a8194\Tests\TestFixture\InputTestFixture.cs:608 
+  at UnityEngine.InputSystem.InputTestFixture.Press (UnityEngine.InputSystem.Controls.ButtonControl button, System.Double time, System.Double timeOffset, System.Boolean queueEventOnly) [0x00000] in .\Library\PackageCache\com.unity.inputsystem@7a4e1a2a8194\Tests\TestFixture\InputTestFixture.cs:484 
+  at Game.Tests.PlayMode.CampaignVisualPolishMovementTests+<FragmentosAllowsRealMovementBelowColumnAndBlocksTheSolidLadder>d__3.MoveNext () [0x00269] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\Assets\Tests\PlayMode\CampaignVisualPolishPlayTests.cs:136 
+  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52 ]]></stack-trace>
+                </failure>
+                <output><![CDATA[In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1335" name="CampaignVisualPolishPlayTests" fullname="Game.Tests.PlayMode.CampaignVisualPolishPlayTests" classname="Game.Tests.PlayMode.CampaignVisualPolishPlayTests" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2026-10-09 11:24:14Z" end-time="2026-10-09 11:25:47Z" duration="92.330668" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1337" name="EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders" fullname="Game.Tests.PlayMode.CampaignVisualPolishPlayTests.EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders" methodname="EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders" classname="Game.Tests.PlayMode.CampaignVisualPolishPlayTests" runstate="Runnable" seed="1043848308" result="Passed" start-time="2026-10-09 11:24:14Z" end-time="2026-10-09 11:25:42Z" duration="87.355340" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+]]></output>
+              </test-case>
+              <test-case id="1336" name="VitraisColourSpritesOnGpuAndFadeAtTheEdge" fullname="Game.Tests.PlayMode.CampaignVisualPolishPlayTests.VitraisColourSpritesOnGpuAndFadeAtTheEdge" methodname="VitraisColourSpritesOnGpuAndFadeAtTheEdge" classname="Game.Tests.PlayMode.CampaignVisualPolishPlayTests" runstate="Runnable" seed="1901832331" result="Failed" start-time="2026-10-09 11:25:42Z" end-time="2026-10-09 11:25:47Z" duration="4.968046" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: greater than 0.257254899f
+  But was:  0.235294104f
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.CampaignVisualPolishPlayTests+<VitraisColourSpritesOnGpuAndFadeAtTheEdge>d__5.MoveNext () [0x005ed] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\Assets\Tests\PlayMode\CampaignVisualPolishPlayTests.cs:63
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+In the render graph API, the output Render Texture must have a depth buffer. When you select a Render Texture in any camera's Output Texture property, the Depth Stencil Format property of the texture must be set to a value other than None.
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -38,13 +38,14 @@ namespace Game.Varginha.Experiment
             {
                 if(!IsActor(renderer)||_actors.Contains(renderer))continue;
                 if(renderer.sprite!=null)renderer.sprite.texture.filterMode=FilterMode.Point;
-                renderer.sharedMaterial=_material;_actors.Add(renderer);
+                renderer.sharedMaterial=CampaignStainedGlassLighting.Enabled(_data)?CampaignStainedGlassLighting.ActorMaterial:_material;_actors.Add(renderer);
             }
             _discover=Time.unscaledTime+2;
         }
         private void LateUpdate()
         {
             if(_data==null)return;if(Time.unscaledTime>=_discover)Discover();
+            _block??=new MaterialPropertyBlock();
             for(int i=_actors.Count-1;i>=0;i--)
             {
                 var renderer=_actors[i];if(renderer==null){_actors.RemoveAt(i);continue;}

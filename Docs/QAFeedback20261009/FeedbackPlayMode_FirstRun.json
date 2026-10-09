@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "duration": 22.6,
+  "summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.AudioRowsRespondToDpadAnalogKeyboardAndSaveAllFourVolumes",
+      "Status": "Passed",
+      "Duration": 4.9718724,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.RadioCueSharesThePhraseClockPausesAndContinuesToSchool",
+      "Status": "Passed",
+      "Duration": 17.1017917,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

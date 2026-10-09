@@ -10,7 +10,7 @@ namespace Game.Editor.Testing
 {
     public static class VarginhaAlphaBuild
     {
-        public const string Name = "jogo_varginha_build_alpha";
+        public const string Name = "jogo_varginha_alpha_0.1";
         public static string[] Scenes => new[] { "Assets/Scenes/Menu_MisterioDeVarginha.unity" }
             .Concat(CampaignSequence.Entries.Concat(new[] { 10, 13 }).Select(id => "Assets/Scenes/" + CampaignStorySave.Scene(id) + ".unity"))
             .Concat(new[] { "Assets/Scenes/" + CampaignContinuationDefinition.SceneName(12, 1) + ".unity", "Assets/Scenes/" + CampaignContinuationDefinition.SceneName(21, 1) + ".unity" })

@@ -1,0 +1,34 @@
+{
+  "status": "completed",
+  "duration": 139.48,
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.FiveDifferentPuzzleInterfacesAcceptControllerAnswersAndPreservePartialProgress",
+      "Status": "Passed",
+      "Duration": 80.485801,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.MansionDoorsConnectTheHallLivingRoomOfficeAndServicePassageWithRealMovement",
+      "Status": "Passed",
+      "Duration": 45.3539069,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.SpatialMapCanBePlacedRotatedAndConfirmedUsingTheController",
+      "Status": "Passed",
+      "Duration": 13.1050159,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

@@ -151,7 +151,7 @@ namespace Game.Tests.PlayMode
             var target = RenderTexture.GetTemporary(960, 640, 24);
             var oldTarget = camera.targetTexture; var oldRect = camera.rect;
             camera.targetTexture = target; camera.rect = new Rect(0, 0, 1, 1);
-            camera.Render(); RenderTexture.active = target;
+            VarginhaPixelPresentation.RenderInto(camera,target); RenderTexture.active = target;
             var texture = new Texture2D(960, 640, TextureFormat.RGB24, false);
             texture.ReadPixels(new Rect(0, 0, 960, 640), 0, 0); texture.Apply();
             Directory.CreateDirectory("scratch/gameplay-review");

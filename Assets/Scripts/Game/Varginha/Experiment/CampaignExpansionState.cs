@@ -13,9 +13,11 @@ namespace Game.Varginha.Experiment
         public float workshopCarX,workshopCarY;
         public int workshopHeading;
         public int[] mapOrder = { 2, 0, 1 }, sampleOrder = { 2, 1, 0 }, sealOrder = { 2, 0, 1 };
+        public int[] mapDirections = { 0, 2, 1 };
         public bool SolveMap()
         {
-            if (visited != 7 || !CampaignStory.Sequence(mapOrder, new[] { 0, 1, 2 })) return false;
+            if (visited != 7 || !CampaignStory.Sequence(mapOrder, new[] { 0, 1, 2 })
+                || !CampaignStory.Sequence(mapDirections, new[] { 1, 1, 0 })) return false;
             return mapSolved = true;
         }
         public bool SolveAnchor(int year, int symbol, int record)
@@ -50,6 +52,9 @@ namespace Game.Varginha.Experiment
             reagentCharges = Mathf.Clamp(reagentCharges, 0, 6); trust = Mathf.Clamp(trust, -1, 1);
             anchorYear = anchorYear == 1996 ? 1996 : 1898; anchorSymbol = Mathf.Clamp(anchorSymbol,0,1); anchorRecord = anchorRecord == 23 ? 23 : 1;
             RepairOrder(ref mapOrder); RepairOrder(ref sampleOrder); RepairOrder(ref sealOrder);
+            if(mapDirections==null||mapDirections.Length!=3)mapDirections=new[]{0,2,1};
+            for(int i=0;i<3;i++)mapDirections[i]=Mathf.Clamp(mapDirections[i],0,3);
+            if(mapSolved)mapDirections=new[]{1,1,0};
             if (visited != 7) mapSolved = false;
             if (!mapSolved || forestSigns < 3) fabioMet = false;
             // A solved book remains solved across reloads, including older saves

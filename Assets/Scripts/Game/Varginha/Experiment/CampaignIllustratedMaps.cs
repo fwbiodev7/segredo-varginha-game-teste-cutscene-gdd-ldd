@@ -17,6 +17,8 @@ namespace Game.Varginha.Experiment
             public float[] bounds,spawn,ambient,laneBorders;
             public bool repeat;
             public Wall[] walls;public Prop[] props;public Point[] points;public Light[] lights;public Patch[] patches;
+            public Glass[] stainedGlass;
+            public RoomZone[] rooms;
             // JsonUtility doesn't support nested arrays; seats are derived from desk bounds instead.
             public Rect Bounds=>new(bounds[0],bounds[1],bounds[2],bounds[3]);
             public float Scale=>bounds[2]/width;
@@ -25,11 +27,15 @@ namespace Game.Varginha.Experiment
             public Rect Area(float[] p)=>new(Position(p[0],p[1]+p[3]),new Vector2(p[2],p[3])*Scale);
             public Vector2 Objective(string id)=>Position(Array.Find(points,p=>p.id==id).pixel);
         }
-        [Serializable]public sealed class Wall {public float[] rect,art;public bool water,skipBodyGuard;}
-        [Serializable]public sealed class Prop {public string name,motif;public float[] art, @base,outline;public bool movable;}
+        [Serializable]public sealed class Wall {public float[] rect,art;public bool water,skipBodyGuard,exact;}
+        // collision is an authored floor polygon in source pixels, independent of the visual outline.
+        [Serializable]public sealed class Prop {public string name,motif,support;public float[] art, @base,outline,ground,collision;public Piece[] pieces;public bool movable;}
+        [Serializable]public sealed class Piece {public float[] outline;}
+        [Serializable]public sealed class Glass {public string name;public float[] outline,color;public float intensity,falloff;}
         [Serializable]public sealed class Point {public string id;public float[] pixel;}
         [Serializable]public sealed class Light {public float[] pixel,color;public float radius;}
         [Serializable]public sealed class Patch {public float[] sample,rect,ground;public bool cap;}
+        [Serializable]public sealed class RoomZone {public string name;public float[] rect;}
         private static Manifest _manifest;
         private static readonly Dictionary<string,Sprite> Sprites=new();
         public static void Reload()=>_manifest=null;
@@ -52,6 +58,8 @@ namespace Game.Varginha.Experiment
             if(plan.phase==3)plan.spawn=new Vector2(data.Position((data.laneBorders[0]+data.laneBorders[1])/2,0).x,0);
             plan.rooms.Clear();plan.walls.Clear();plan.bodyWalls.Clear();plan.furniture.Clear();
             plan.rooms.Add(new CampaignMapPlan.Surface("Cenário ilustrado", "Illustrated",plan.bounds,Color.white));
+            if(data.rooms!=null)foreach(var room in data.rooms)
+                plan.rooms.Add(new CampaignMapPlan.Surface(room.name,"Illustrated",data.Area(room.rect),Color.white));
             if(plan.phase==1)plan.rooms.Add(new CampaignMapPlan.Surface("Circulação da casa","Illustrated",data.Area(new[]{0f,54f,914f,732f}),Color.white));
             float tileHeight=data.height*data.Scale;
             int count=data.repeat?Mathf.CeilToInt(plan.bounds.height/tileHeight):1;
@@ -59,7 +67,7 @@ namespace Game.Varginha.Experiment
             {
                 var area=data.Area(wall.rect);if(data.repeat)area.y=plan.bounds.yMin+tile*tileHeight;
                 // A feet circle is narrower than the torso. Keep shoulders outside vertical plaster.
-                if(!data.repeat&&area.height>area.width*2)
+                if(!wall.exact&&!data.repeat&&area.height>area.width*2)
                 {float left=Mathf.Max(plan.bounds.xMin,area.xMin-.12f),right=Mathf.Min(plan.bounds.xMax,area.xMax+.12f);area.xMin=left;area.xMax=right;}
                 if(data.repeat)area.height=Mathf.Min(tileHeight,plan.bounds.yMax-area.y);
                 if(area.height>0)
@@ -76,7 +84,13 @@ namespace Game.Varginha.Experiment
             foreach(var prop in data.props)
             {
                 var art=data.Area(prop.art);var feet=prop.@base!=null&&prop.@base.Length==4?data.Area(prop.@base):new Rect(art.center,Vector2.zero);
-                plan.furniture.Add(new CampaignMapPlan.Furnishing(prop.name,prop.motif,art.center,art.size,feet));
+                var furnishing=new CampaignMapPlan.Furnishing(prop.name,prop.motif,art.center,art.size,feet);
+                if(prop.collision?.Length>=6&&prop.collision.Length%2==0&&feet.width>0&&feet.height>0)
+                {
+                    furnishing.collision=new Vector2[prop.collision.Length/2];
+                    for(int i=0;i<furnishing.collision.Length;i++)furnishing.collision[i]=data.Position(prop.collision[i*2],prop.collision[i*2+1]);
+                }
+                plan.furniture.Add(furnishing);
             }
             foreach(var target in data.points)
             {
@@ -146,6 +160,7 @@ namespace Game.Varginha.Experiment
                 }
             }
             if(furnished)Furnish(map,plan);
+            CampaignStainedGlassLighting.Build(map,data);
             var lighting=map.gameObject.AddComponent<CampaignIllustratedLighting>();lighting.Configure(data);
             if(Application.isPlaying)
             {
@@ -190,25 +205,36 @@ namespace Game.Varginha.Experiment
                 }
                 sr.transform.position=prop.position;
                 // Car/background must not duplicate after it leaves the workshop.
-                if(prop.name!="Fusca"&&source.outline?.Length>=6)
+                if(prop.name!="Fusca"&&source.outline?.Length>=6)Contour(sr,source);
+                Collider2D collider=null;
+                if(prop.footprint.width>0&&prop.footprint.height>0)
                 {
-                    var outline=new Vector2[source.outline.Length/2];
-                    for(int i=0;i<outline.Length;i++)outline[i]=new Vector2(source.outline[i*2],1-source.outline[i*2+1]);
-                    Contour(sr,outline);
+                    if(prop.collision!=null)
+                    {
+                        var polygon=sr.gameObject.AddComponent<PolygonCollider2D>();
+                        var vertices=new Vector2[prop.collision.Length];
+                        for(int i=0;i<vertices.Length;i++)vertices[i]=sr.transform.InverseTransformPoint(prop.collision[i]);
+                        polygon.SetPath(0,vertices);collider=polygon;
+                    }
+                    else
+                    {
+                        var box=sr.gameObject.AddComponent<BoxCollider2D>();
+                        box.size=prop.footprint.size/(Vector2)sr.transform.lossyScale;
+                        box.offset=(prop.footprint.center-prop.position)/(Vector2)sr.transform.lossyScale;
+                        collider=box;
+                    }
                 }
-                if(prop.footprint.width<=0||prop.footprint.height<=0){sr.sortingOrder=2;continue;}
-                var collider=sr.gameObject.AddComponent<BoxCollider2D>();
-                collider.size=prop.footprint.size/(Vector2)sr.transform.lossyScale;
-                collider.offset=(prop.footprint.center-prop.position)/(Vector2)sr.transform.lossyScale;
-                if(plan.phase>=11&&plan.phase!=14&&plan.phase!=15&&plan.phase!=19)
+                if(source.ground?.Length==2||collider!=null)
                 {
-                    // A prop's front ground edge decides occlusion, independently of its blocking footprint.
+                    // Foreground sorting follows the visible floor contact, independently of the blocking shape.
                     var contact=new GameObject("Contato_"+prop.name).transform;contact.SetParent(layer,false);
-                    contact.position=new Vector2(prop.footprint.center.x,prop.footprint.yMin+.03f);
+                    contact.position=source.ground?.Length==2?data.Position(source.ground):new Vector2(prop.footprint.center.x,prop.footprint.yMin+.03f);
                     VarginhaWorldDepth.Ensure(sr,supportingObject:contact);sr.spriteSortPoint=SpriteSortPoint.Pivot;
                 }
-                else VarginhaWorldDepth.Ensure(sr,ground:collider);
+                else sr.sortingOrder=2;
             }
+            foreach(var source in data.props)if(!string.IsNullOrEmpty(source.support))
+                VarginhaWorldDepth.Ensure(layer.Find(source.name).GetComponent<SpriteRenderer>(),supportingObject:layer.Find(source.support),offset:1);
         }
         private static Texture2D Texture(string id)=>Resources.Load<Texture2D>("Varginha/IllustratedMaps/"+id)
             ??throw new InvalidOperationException("Imagem de cenário ausente: "+id);
@@ -231,15 +257,19 @@ namespace Game.Varginha.Experiment
             go.transform.localScale=new Vector3(width*sprite.pixelsPerUnit/sprite.rect.width,height*sprite.pixelsPerUnit/sprite.rect.height,1);
             if(name=="Fusca")go.transform.localScale=Vector3.one*Mathf.Min(go.transform.localScale.x,go.transform.localScale.y);return sr;
         }
-        private static void Contour(SpriteRenderer sr,Vector2[] contour)
+        private static void Contour(SpriteRenderer sr,Prop source)
         {
-            // OverrideGeometry affects only the mesh, never the user PNG or its alpha.
             var sprite=sr.sprite;var size=sprite.rect.size;
-            var vertices=new Vector2[contour.Length];for(int i=0;i<vertices.Length;i++)vertices[i]=contour[i]*size;
-            var triangles=CampaignIllustratedContour.Triangulate(contour);
-            // Unity allows this API only inside its player loop, after Awake.
-            // The unmodified source image provides the identical editor preview.
-            if(Application.isPlaying)sr.gameObject.AddComponent<CampaignIllustratedContour>().Configure(sprite,vertices,triangles);
+            var vertices=new List<Vector2>();var triangles=new List<ushort>();
+            void Add(float[] path)
+            {
+                var contour=new Vector2[path.Length/2];int offset=vertices.Count;
+                for(int i=0;i<contour.Length;i++){contour[i]=new Vector2(path[i*2],1-path[i*2+1]);vertices.Add(contour[i]*size);}
+                foreach(var index in CampaignIllustratedContour.Triangulate(contour))triangles.Add((ushort)(index+offset));
+            }
+            if(source.pieces?.Length>0)foreach(var piece in source.pieces)Add(piece.outline);else Add(source.outline);
+            // Separate rails, legs and tabletop plants share the original texture but never a floor-filled mesh.
+            sr.gameObject.AddComponent<CampaignIllustratedContour>().Configure(sprite,vertices.ToArray(),triangles.ToArray());
         }
         public static Vector2[] SchoolSeats(int phase)
         {

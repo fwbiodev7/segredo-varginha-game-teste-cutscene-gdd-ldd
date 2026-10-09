@@ -1,0 +1,7 @@
+{
+  "aliveAfterStartup": true,
+  "runtimeProblemCount": 0,
+  "messages": [],
+  "rendererFallback": "Direct3D 11",
+  "graphicsDiagnostic": "D3D12 device unavailable; GpuFence ID3D11Fence unavailable"
+}

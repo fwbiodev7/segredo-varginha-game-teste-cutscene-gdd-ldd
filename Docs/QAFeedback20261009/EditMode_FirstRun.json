@@ -1,0 +1,1098 @@
+{
+  "status": "completed",
+  "duration": 4.68,
+  "summary": {
+    "total": 155,
+    "passed": 146,
+    "failed": 9,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.EditMode.CampaignDynamicLightingTests.CharacterDiscoveryIncludesSupportAndExcludesShadowVisuals(\"Renan_Apoio\",True)",
+      "Status": "Passed",
+      "Duration": 0.0185562,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignDynamicLightingTests.CharacterDiscoveryIncludesSupportAndExcludesShadowVisuals(\"Entidade ferida\",True)",
+      "Status": "Passed",
+      "Duration": 0.000294,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignDynamicLightingTests.CharacterDiscoveryIncludesSupportAndExcludesShadowVisuals(\"Sombra_Renan_Apoio\",False)",
+      "Status": "Passed",
+      "Duration": 0.0001241,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignDynamicLightingTests.CharacterDiscoveryIncludesSupportAndExcludesShadowVisuals(\"Contato_Edelzio\",False)",
+      "Status": "Passed",
+      "Duration": 0.0001181,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignDynamicLightingTests.ConeRejectsSidesRangeAndAuthoredWalls",
+      "Status": "Passed",
+      "Duration": 0.0091119,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignDynamicLightingTests.MovingLightChangesTintAndDirectionAndDisableRestoresAmbient",
+      "Status": "Passed",
+      "Duration": 0.0030534,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignDynamicLightingTests.PaintedLampDoesNotLightTheNeighbouringRoom",
+      "Status": "Passed",
+      "Duration": 0.0005971,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.AllNewPosesUseDedicatedBackpackSheetsWithCompleteHeadsAndStableFeet",
+      "Status": "Passed",
+      "Duration": 0.875269,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.ArchitectureAndFurnitureHaveSeparateIdempotentLayers",
+      "Status": "Passed",
+      "Duration": 0.0700899,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.AtmosphericLandmarksUseTheirDedicatedCompleteTransparentSheets",
+      "Status": "Passed",
+      "Duration": 0.2512005,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.ChildhoodFurnitureKeepsItsAspectAndCollisionWithinItsBase",
+      "Status": "Passed",
+      "Duration": 0.0348432,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.ChurchAndBiologyHouseHaveIndependentFloorLightingAndEquipment",
+      "Status": "Passed",
+      "Duration": 0.0519541,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(1)",
+      "Status": "Passed",
+      "Duration": 0.0313629,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(3)",
+      "Status": "Passed",
+      "Duration": 0.0799512,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(4)",
+      "Status": "Passed",
+      "Duration": 0.0320293,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(5)",
+      "Status": "Passed",
+      "Duration": 0.0304361,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(6)",
+      "Status": "Passed",
+      "Duration": 0.0639414,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(7)",
+      "Status": "Passed",
+      "Duration": 0.0611643,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(8)",
+      "Status": "Passed",
+      "Duration": 0.0103209,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(9)",
+      "Status": "Passed",
+      "Duration": 0.0192337,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(10)",
+      "Status": "Passed",
+      "Duration": 0.0193106,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.ExpansionRequiresPhysicalEvidenceAndPreservesOptionalClues",
+      "Status": "Passed",
+      "Duration": 0.0020915,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.GeneratedCharacterFramesHaveCompleteOutlinesAndStableFootAnchors",
+      "Status": "Passed",
+      "Duration": 0.0026716,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.HouseListsOnlyActualPendingTasksAndUsesRequestedTextures",
+      "Status": "Passed",
+      "Duration": 0.0019852,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.JournalistMovesOnlyHisMouthAndClosesItAfterTheReport",
+      "Status": "Passed",
+      "Duration": 0.5189312,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.LongUrbanMapFloorLayersRemainBelowBuildingsAndFurniture",
+      "Status": "Passed",
+      "Duration": 0.0121287,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.OldSavesAndMalformedOrdersAreRecovered",
+      "Status": "Passed",
+      "Duration": 0.0021932,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.RemasteredSchoolRetainsTheOriginalTwelveDeskOpenLaboratory",
+      "Status": "Passed",
+      "Duration": 0.0150648,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.RoamingStudentsCanReachTheYardWithoutEnteringRenansSpace",
+      "Status": "Passed",
+      "Duration": 0.0316049,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.SchoolFrontagePreservesWholeArtworkGateAndAspectRatio",
+      "Status": "Passed",
+      "Duration": 0.0044963,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.WalkingFramesKeepTheirHeadCenteredInEveryDirection",
+      "Status": "Passed",
+      "Duration": 0.1763575,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.WallConnectionsFinishCornersWithoutBlockingOpenings",
+      "Status": "Passed",
+      "Duration": 0.0042941,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(1)",
+      "Status": "Passed",
+      "Duration": 0.0170758,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(4)",
+      "Status": "Passed",
+      "Duration": 0.0217428,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(7)",
+      "Status": "Passed",
+      "Duration": 0.0258997,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(9)",
+      "Status": "Passed",
+      "Duration": 0.0097612,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(10)",
+      "Status": "Passed",
+      "Duration": 0.0198759,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(1)",
+      "Status": "Passed",
+      "Duration": 0.0024092,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(2)",
+      "Status": "Passed",
+      "Duration": 0.0002979,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(3)",
+      "Status": "Passed",
+      "Duration": 0.000571,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(4)",
+      "Status": "Passed",
+      "Duration": 0.0002812,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(5)",
+      "Status": "Passed",
+      "Duration": 0.0002722,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(6)",
+      "Status": "Passed",
+      "Duration": 0.0002993,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(7)",
+      "Status": "Passed",
+      "Duration": 0.000378,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(8)",
+      "Status": "Passed",
+      "Duration": 0.0002306,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(9)",
+      "Status": "Passed",
+      "Duration": 0.00023,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(10)",
+      "Status": "Passed",
+      "Duration": 0.0001458,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(11)",
+      "Status": "Passed",
+      "Duration": 0.0010962,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(12)",
+      "Status": "Passed",
+      "Duration": 0.000188,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(112)",
+      "Status": "Failed",
+      "Duration": 0.0066502,
+      "Message": "System.ArgumentOutOfRangeException : Specified argument was out of the range of valid values.\r\nParameter name: phase",
+      "StackTrace": "  at Game.Varginha.Experiment.CampaignContinuationDefinition.Later (System.Int32 phase, System.Int32 area) [0x005c3] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Scripts\\Game\\Varginha\\Experiment\\CampaignContinuationDefinition.cs:87 \r\n  at Game.Varginha.Experiment.CampaignContinuationDefinition.Get (System.Int32 phase, System.Int32 area) [0x000e8] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Scripts\\Game\\Varginha\\Experiment\\CampaignContinuationDefinition.cs:25 \r\n  at Game.Varginha.Experiment.CampaignContinuationDefinition.Plan (System.Int32 phase, System.Int32 area) [0x00000] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Scripts\\Game\\Varginha\\Experiment\\CampaignContinuationDefinition.cs:92 \r\n  at Game.Varginha.Experiment.CampaignMapPlan.Create (System.Int32 phase) [0x00005] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Scripts\\Game\\Varginha\\Experiment\\CampaignMapPlan.cs:60 \r\n  at Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase (System.Int32 phase) [0x00007] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\EditMode\\CampaignFeedbackTests.cs:13 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 "
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(13)",
+      "Status": "Passed",
+      "Duration": 0.0003597,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(14)",
+      "Status": "Passed",
+      "Duration": 0.0001797,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(15)",
+      "Status": "Passed",
+      "Duration": 0.0002109,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(16)",
+      "Status": "Passed",
+      "Duration": 0.0001087,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(18)",
+      "Status": "Passed",
+      "Duration": 0.0001782,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(19)",
+      "Status": "Passed",
+      "Duration": 0.0001905,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(20)",
+      "Status": "Passed",
+      "Duration": 0.0001105,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(21)",
+      "Status": "Passed",
+      "Duration": 9.9E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(121)",
+      "Status": "Failed",
+      "Duration": 0.0002593,
+      "Message": "System.ArgumentOutOfRangeException : Specified argument was out of the range of valid values.\r\nParameter name: phase",
+      "StackTrace": "  at Game.Varginha.Experiment.CampaignContinuationDefinition.Later (System.Int32 phase, System.Int32 area) [0x005c3] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Scripts\\Game\\Varginha\\Experiment\\CampaignContinuationDefinition.cs:87 \r\n  at Game.Varginha.Experiment.CampaignContinuationDefinition.Get (System.Int32 phase, System.Int32 area) [0x000e8] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Scripts\\Game\\Varginha\\Experiment\\CampaignContinuationDefinition.cs:25 \r\n  at Game.Varginha.Experiment.CampaignContinuationDefinition.Plan (System.Int32 phase, System.Int32 area) [0x00000] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Scripts\\Game\\Varginha\\Experiment\\CampaignContinuationDefinition.cs:92 \r\n  at Game.Varginha.Experiment.CampaignMapPlan.Create (System.Int32 phase) [0x00005] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Scripts\\Game\\Varginha\\Experiment\\CampaignMapPlan.cs:60 \r\n  at Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase (System.Int32 phase) [0x00007] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\EditMode\\CampaignFeedbackTests.cs:13 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 "
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.RadioStaticIsShortBoundedAndHasQuietEndpoints",
+      "Status": "Passed",
+      "Duration": 0.0099829,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.RoundedPotCornersDoNotBlockEmptyFloorAndItsCentreRemainsSolid",
+      "Status": "Passed",
+      "Duration": 0.0007122,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ChurchScaleUsesSeparateCachedFramesAndOtherMapsKeepNormalSize",
+      "Status": "Passed",
+      "Duration": 0.0269244,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ClassroomFeetRemainClearWhenForegroundDeskCropsChange(4)",
+      "Status": "Passed",
+      "Duration": 0.0006016,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ClassroomFeetRemainClearWhenForegroundDeskCropsChange(5)",
+      "Status": "Passed",
+      "Duration": 0.0002494,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.CorrectChurchCombinationSurvivesReloadWithoutHiddenInspectionGates(0)",
+      "Status": "Passed",
+      "Duration": 0.0004913,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.CorrectChurchCombinationSurvivesReloadWithoutHiddenInspectionGates(1)",
+      "Status": "Passed",
+      "Duration": 7.55E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.CorrectChurchCombinationSurvivesReloadWithoutHiddenInspectionGates(3)",
+      "Status": "Passed",
+      "Duration": 6.89E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.CorrectChurchCombinationSurvivesReloadWithoutHiddenInspectionGates(7)",
+      "Status": "Passed",
+      "Duration": 6.56E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.DrivingLaneFollowsTheSuppliedAsphaltAndExcludesTheSidewalk",
+      "Status": "Passed",
+      "Duration": 0.0006033,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.FlashCanBeReplayedAfterUnityDiscardsNativeSprites",
+      "Status": "Passed",
+      "Duration": 0.0100772,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(1)",
+      "Status": "Failed",
+      "Duration": 0.0115959,
+      "Message": "UnityEngine.MissingComponentException : There is no 'BoxCollider2D' attached to the \"Árvore do clarão\" game object, but a script is trying to access it.\nYou probably need to add a BoxCollider2D to the game object \"Árvore do clarão\". Or your script needs to check if the component is attached before using it.",
+      "StackTrace": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000b4] in <d5ea965f39d74501b56f4006ef80da34>:0 \r\n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \r\n  at UnityEngine.Collider2D.get_bounds () [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \r\n  at Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact (System.Int32 phase) [0x0010d] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\EditMode\\CampaignIllustratedMapTests.cs:167 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 "
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(2)",
+      "Status": "Failed",
+      "Duration": 0.0294527,
+      "Message": "UnityEngine.MissingComponentException : There is no 'BoxCollider2D' attached to the \"Árvore quintal norte\" game object, but a script is trying to access it.\nYou probably need to add a BoxCollider2D to the game object \"Árvore quintal norte\". Or your script needs to check if the component is attached before using it.",
+      "StackTrace": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000b4] in <d5ea965f39d74501b56f4006ef80da34>:0 \r\n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \r\n  at UnityEngine.Collider2D.get_bounds () [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \r\n  at Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact (System.Int32 phase) [0x0010d] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\EditMode\\CampaignIllustratedMapTests.cs:167 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 "
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(4)",
+      "Status": "Failed",
+      "Duration": 0.0137375,
+      "Message": "UnityEngine.MissingComponentException : There is no 'BoxCollider2D' attached to the \"Árvore jardim oeste\" game object, but a script is trying to access it.\nYou probably need to add a BoxCollider2D to the game object \"Árvore jardim oeste\". Or your script needs to check if the component is attached before using it.",
+      "StackTrace": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000b4] in <d5ea965f39d74501b56f4006ef80da34>:0 \r\n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \r\n  at UnityEngine.Collider2D.get_bounds () [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \r\n  at Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact (System.Int32 phase) [0x0010d] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\EditMode\\CampaignIllustratedMapTests.cs:167 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 "
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(6)",
+      "Status": "Failed",
+      "Duration": 0.0190106,
+      "Message": "UnityEngine.MissingComponentException : There is no 'BoxCollider2D' attached to the \"Cadeira central sul oeste\" game object, but a script is trying to access it.\nYou probably need to add a BoxCollider2D to the game object \"Cadeira central sul oeste\". Or your script needs to check if the component is attached before using it.",
+      "StackTrace": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000b4] in <d5ea965f39d74501b56f4006ef80da34>:0 \r\n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \r\n  at UnityEngine.Collider2D.get_bounds () [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \r\n  at Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact (System.Int32 phase) [0x0010d] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\EditMode\\CampaignIllustratedMapTests.cs:167 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 "
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(7)",
+      "Status": "Failed",
+      "Duration": 0.0224443,
+      "Message": "UnityEngine.MissingComponentException : There is no 'BoxCollider2D' attached to the \"Árvore oeste\" game object, but a script is trying to access it.\nYou probably need to add a BoxCollider2D to the game object \"Árvore oeste\". Or your script needs to check if the component is attached before using it.",
+      "StackTrace": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000b4] in <d5ea965f39d74501b56f4006ef80da34>:0 \r\n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \r\n  at UnityEngine.Collider2D.get_bounds () [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \r\n  at Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact (System.Int32 phase) [0x0010d] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\EditMode\\CampaignIllustratedMapTests.cs:167 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 "
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(8)",
+      "Status": "Failed",
+      "Duration": 0.0072287,
+      "Message": "UnityEngine.MissingComponentException : There is no 'BoxCollider2D' attached to the \"Pia batismal\" game object, but a script is trying to access it.\nYou probably need to add a BoxCollider2D to the game object \"Pia batismal\". Or your script needs to check if the component is attached before using it.",
+      "StackTrace": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000b4] in <d5ea965f39d74501b56f4006ef80da34>:0 \r\n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \r\n  at UnityEngine.Collider2D.get_bounds () [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \r\n  at Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact (System.Int32 phase) [0x0010d] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\EditMode\\CampaignIllustratedMapTests.cs:167 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 "
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(9)",
+      "Status": "Failed",
+      "Duration": 0.0113015,
+      "Message": "UnityEngine.MissingComponentException : There is no 'BoxCollider2D' attached to the \"Samambaia\" game object, but a script is trying to access it.\nYou probably need to add a BoxCollider2D to the game object \"Samambaia\". Or your script needs to check if the component is attached before using it.",
+      "StackTrace": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x000b4] in <d5ea965f39d74501b56f4006ef80da34>:0 \r\n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \r\n  at UnityEngine.Collider2D.get_bounds () [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \r\n  at Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact (System.Int32 phase) [0x0010d] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\EditMode\\CampaignIllustratedMapTests.cs:167 \r\n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\r\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 "
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(10)",
+      "Status": "Passed",
+      "Duration": 0.0034321,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.FurnitureContoursExcludeConcaveFloorGapsAndTriangulateEveryMap",
+      "Status": "Passed",
+      "Duration": 0.0317714,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.FuscaPosesKeepAStableBodyPivotWithOptimizedTransparentTexture",
+      "Status": "Passed",
+      "Duration": 0.0052033,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.LegacySolvedChurchRecordsRecoverTheirConfirmedCombination",
+      "Status": "Passed",
+      "Duration": 0.0002979,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.NewAnimationSheetsHaveAllFramesWithoutReadableCpuTextureCopies",
+      "Status": "Passed",
+      "Duration": 0.0805328,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ShadowsTurnAwayFromTheNearestLampAndOpenAirKeepsContactOnly",
+      "Status": "Passed",
+      "Duration": 0.0012048,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(1)",
+      "Status": "Passed",
+      "Duration": 0.0280472,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(2)",
+      "Status": "Passed",
+      "Duration": 0.0494023,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(3)",
+      "Status": "Passed",
+      "Duration": 0.0321226,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(4)",
+      "Status": "Passed",
+      "Duration": 0.0307611,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(5)",
+      "Status": "Passed",
+      "Duration": 0.0304285,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(6)",
+      "Status": "Passed",
+      "Duration": 0.0627839,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(7)",
+      "Status": "Passed",
+      "Duration": 0.0612494,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(8)",
+      "Status": "Passed",
+      "Duration": 0.0102822,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(9)",
+      "Status": "Passed",
+      "Duration": 0.0190824,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(10)",
+      "Status": "Passed",
+      "Duration": 0.0193627,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryCharacters/ManifestationBossCombatV2\",8,4,160,192)",
+      "Status": "Passed",
+      "Duration": 0.1031417,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryCharacters/ManifestationChildCombatV2\",8,4,96,128)",
+      "Status": "Passed",
+      "Duration": 0.0623178,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryCharacters/ManifestationBossFlowV1\",6,4,160,192)",
+      "Status": "Passed",
+      "Duration": 0.0845365,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryCharacters/ManifestationChildFlowV1\",6,4,96,128)",
+      "Status": "Passed",
+      "Duration": 0.0324546,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryEffects/BossManifestationCinematicV1\",6,2,128,160)",
+      "Status": "Passed",
+      "Duration": 0.0754773,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryEffects/BossRiftCinematicV1\",6,2,160,160)",
+      "Status": "Passed",
+      "Duration": 0.038566,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignRemasterTests.InteriorChangesCrossfadeAndMenuDoesNotPreviewHouseAudio",
+      "Status": "Passed",
+      "Duration": 0.0012674,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignRemasterTests.NarrativeTransitionsMatchImplementedLocations(3,CameraPan,\"Road\")",
+      "Status": "Passed",
+      "Duration": 0.0009585,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignRemasterTests.NarrativeTransitionsMatchImplementedLocations(7,Fade,\"Forest\")",
+      "Status": "Passed",
+      "Duration": 0.000346,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignRemasterTests.NarrativeTransitionsMatchImplementedLocations(9,Fade,\"Lab\")",
+      "Status": "Passed",
+      "Duration": 8.84E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignRemasterTests.NarrativeTransitionsMatchImplementedLocations(11,Fade,\"School\")",
+      "Status": "Passed",
+      "Duration": 8.38E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignRemasterTests.NarrativeTransitionsMatchImplementedLocations(15,Paranormal,\"House\")",
+      "Status": "Passed",
+      "Duration": 8.53E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.BattleCalibrationAndCrossingRemainIndependentAndPersist",
+      "Status": "Passed",
+      "Duration": 0.0009618,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.FourteenChaptersUseShippedScenesAndNeverEnterRemovedTasks",
+      "Status": "Passed",
+      "Duration": 0.006364,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.GraduatedHintsFollowCurrentProgressWithoutSolvingPuzzles",
+      "Status": "Passed",
+      "Duration": 0.00193,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.HouseAndWorkshopRequireEvidenceWithoutRoutineOrRepeatedPuzzles",
+      "Status": "Passed",
+      "Duration": 0.0004397,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(3,4)",
+      "Status": "Passed",
+      "Duration": 0.0004423,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(5,4)",
+      "Status": "Passed",
+      "Duration": 9.8E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(16,18)",
+      "Status": "Passed",
+      "Duration": 9.67E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(17,18)",
+      "Status": "Passed",
+      "Duration": 9.2E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(19,18)",
+      "Status": "Passed",
+      "Duration": 0.0001029,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.LoadingLegacySavePersistsMigrationAndDoesNotRewriteItOnNextLoad",
+      "Status": "Passed",
+      "Duration": 0.0349753,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.MergedAgreementKeepsLegacyEvidenceWithoutSkippingTheUnfinishedProcedure",
+      "Status": "Passed",
+      "Duration": 0.0004303,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.MigrationPreservesEvidencePuzzlesEquipmentVictoryAndCrossing",
+      "Status": "Passed",
+      "Duration": 0.002709,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.ResumeAreaIsLimitedToScenesThatExist(11,0)",
+      "Status": "Passed",
+      "Duration": 0.0001915,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.ResumeAreaIsLimitedToScenesThatExist(12,1)",
+      "Status": "Passed",
+      "Duration": 4.56E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.ResumeAreaIsLimitedToScenesThatExist(20,0)",
+      "Status": "Passed",
+      "Duration": 4.28E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.ResumeAreaIsLimitedToScenesThatExist(21,1)",
+      "Status": "Passed",
+      "Duration": 4.84E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignStoryTests.CorrectAnswersCannotBypassInvestigatedEvidence",
+      "Status": "Passed",
+      "Duration": 0.0004559,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignStoryTests.CorruptProgressCannotUnlockImpossibleClues",
+      "Status": "Passed",
+      "Duration": 0.0003412,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignStoryTests.InvestigationSurvivesReloadAndRetainsBothMapFragments",
+      "Status": "Passed",
+      "Duration": 0.0004046,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignStoryTests.SchoolUsesOnlyPhotoThenOneTimePuzzleAndKeepsLegacyCompletions",
+      "Status": "Passed",
+      "Duration": 0.001059,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignUsabilityTests.DifficultyOptionsAffectCampaignBoss",
+      "Status": "Passed",
+      "Duration": 0.0203742,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(1)",
+      "Status": "Passed",
+      "Duration": 0.0025661,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(2)",
+      "Status": "Passed",
+      "Duration": 0.0011059,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(3)",
+      "Status": "Passed",
+      "Duration": 5.54E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(4)",
+      "Status": "Passed",
+      "Duration": 0.0015198,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(5)",
+      "Status": "Passed",
+      "Duration": 0.0015107,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(6)",
+      "Status": "Passed",
+      "Duration": 0.0339994,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(7)",
+      "Status": "Passed",
+      "Duration": 0.0009088,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(8)",
+      "Status": "Passed",
+      "Duration": 0.0006332,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(9)",
+      "Status": "Passed",
+      "Duration": 0.017659,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(10)",
+      "Status": "Passed",
+      "Duration": 0.0004329,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(11)",
+      "Status": "Passed",
+      "Duration": 0.0015854,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(12)",
+      "Status": "Passed",
+      "Duration": 0.0030316,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(112)",
+      "Status": "Passed",
+      "Duration": 0.0029352,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(13)",
+      "Status": "Passed",
+      "Duration": 0.0028556,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(14)",
+      "Status": "Passed",
+      "Duration": 0.0007005,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(15)",
+      "Status": "Passed",
+      "Duration": 0.0008805,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(16)",
+      "Status": "Passed",
+      "Duration": 0.0035606,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(18)",
+      "Status": "Passed",
+      "Duration": 0.0049844,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(19)",
+      "Status": "Passed",
+      "Duration": 0.0009325,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(20)",
+      "Status": "Passed",
+      "Duration": 0.0070421,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(21)",
+      "Status": "Passed",
+      "Duration": 0.0001605,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(121)",
+      "Status": "Passed",
+      "Duration": 0.0015916,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.FragmentosHasClearCrossingBelowPillarsAndLadderStopsAtItsFeet",
+      "Status": "Passed",
+      "Duration": 0.0013055,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.ReusedChurchHasAllThreeStainedGlassColoursWithSmoothEdges(8)",
+      "Status": "Passed",
+      "Duration": 0.000943,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.ReusedChurchHasAllThreeStainedGlassColoursWithSmoothEdges(14)",
+      "Status": "Passed",
+      "Duration": 5.93E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.TabletopPlantsHaveIndependentMeshesAndNoFloorBlockingShape",
+      "Status": "Passed",
+      "Duration": 0.0005819,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignWorkshopStateTests.EarlierInvestigationsMigrateToAParkedVehicle",
+      "Status": "Passed",
+      "Duration": 0.0003083,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignWorkshopStateTests.InvalidParkingCoordinatesCannotCorruptTheNextArrival",
+      "Status": "Passed",
+      "Duration": 0.0002348,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignWorkshopStateTests.VehicleAndReagentAtlasesShareCachedGpuOnlyPointTextures",
+      "Status": "Passed",
+      "Duration": 0.0034017,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

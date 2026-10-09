@@ -32,6 +32,7 @@ namespace Game.Varginha.Experiment
         private SpriteRenderer _entity;
         private readonly List<Vector2> _chasePath = new();
         private Vector2 _safePoint;
+        private string _guideTarget;
         private bool Blocked => _paused || _title < 2.5f || _message != null || _panel != null || VarginhaGameHUD.Instance?.IsInventoryOpen == true || _actor?.GetComponent<VarginhaPlayerActionAnimation>()?.IsActing == true;
         private string Objective => phase == 6 ? "Examine livro, globo e painel na biblioteca da Industrial. Alinhe os fragmentos na mesa central."
             : phase == 7 ? "Árvore → rio → capela. Use o esconderijo durante a perseguição."
@@ -158,6 +159,7 @@ namespace Game.Varginha.Experiment
         public void Interact(string id)
         {
             if (Progress == null || _driving || _parking || _departing) return;
+            if(id==_guideTarget)_guideTarget=null;
             _sound?.Play("Paper");
             if (id != "exit" && id != "fusca")
             {
@@ -173,16 +175,16 @@ namespace Game.Varginha.Experiment
             }
             else if (id == "exit")
             {
-                if (!State.Complete(phase)) Say("Ainda faltam etapas da investigação. Consulte o caderno.");
+                if (!State.Complete(phase)) Say(CampaignGuidance.Next(Progress,phase));
                 else if(phase==10&&!State.workshopDeparted)BeginDeparture();
                 else { _panel = "complete"; Lock(); }
             }
             else if (phase == 6)
             {
                 if (id == "map") Open("map");
-                else if (id == "archive") { State.visited |= 1; Say("O livro aberto da biblioteca guarda um registro da região: ÁRVORE, margem oeste. Terceiro fragmento de mapa recolhido. O carimbo de 23:23 corresponde à diocese."); }
-                else if (id == "school") { State.visited |= 2; Say("Uma anotação junto ao globo ajuda a orientar o levantamento: o RIO atravessa o centro, ligando a árvore à capela."); }
-                else if (id == "square") { State.visited |= 4; Say("O painel conserva um relato de 1996: a CAPELA fica a leste. Alinhe ÁRVORE → RIO → CAPELA na mesa central, do oeste ao leste."); }
+                else if (id == "archive") { State.visited |= 1; Say("O livro aberto da biblioteca guarda um registro da região: ÁRVORE, margem oeste. Terceiro fragmento de mapa recolhido. O carimbo de 23:23 corresponde à diocese.\nNota do levantamento: da árvore, a trilha segue para leste."); }
+                else if (id == "school") { State.visited |= 2; Say("Uma anotação junto ao globo ajuda a orientar o levantamento: o RIO atravessa o centro, ligando a árvore à capela.\nNota do levantamento: a ponte cruza o rio de oeste para leste."); }
+                else if (id == "square") { State.visited |= 4; Say("O painel conserva um relato de 1996: a CAPELA fica a leste. Alinhe ÁRVORE → RIO → CAPELA na mesa central, do oeste ao leste.\nNota do levantamento: a entrada da capela fica ao sul; siga para norte ao chegar."); }
                 else if (id.StartsWith("library_shelf")) Say("Estantes da biblioteca da Industrial. Livros de história local, atlas e registros escolares. Os documentos da investigação estão no livro aberto, junto ao globo e no painel de avisos.");
                 else if (id.StartsWith("library_plant")) Say("As plantas recebem a luz das janelas. Entre as estantes, a biblioteca continua silenciosa.");
             }
@@ -327,7 +329,7 @@ namespace Game.Varginha.Experiment
                 : phase == 8 ? "SELO DA ENTIDADE: EDELZIO / CONTENÇÃO: ESTÁVEL. Você é o selo que mantém a entidade contida desde 1996."
                 : phase == 9 ? "A reação contradiz as leituras normais. Ouzana aceita ajudar e entrega o reagente."
                 : "As marcas reproduzem o trajeto árvore, rio e capela. As marcas estão registradas; o Fusca pode partir."); }
-            else Say("A combinação não corresponde às pistas. Confira os registros e tente novamente; nenhuma pista foi perdida.");
+            else Say(_panel=="map"?"Confira os marcos e suas setas: a trilha precisa conectar árvore, ponte e entrada da capela. Os registros continuam no caderno.":"A combinação não corresponde às pistas. Confira os registros e tente novamente; nenhuma pista foi perdida.");
             Save(); return result;
         }
         public void Save()
@@ -352,7 +354,8 @@ namespace Game.Varginha.Experiment
             ExperimentGUI.Init(); var matrix = ExperimentGUI.BeginCanvas();
             if(!_departing)
             {
-                ExperimentGUI.Objective(CampaignSequence.Heading(phase) + " • 2026", CampaignSequence.Title(phase).ToUpperInvariant(), Objective);
+                ExperimentGUI.Objective(CampaignSequence.Heading(phase) + " • 2026", CampaignSequence.Title(phase).ToUpperInvariant(), CampaignGuidance.Next(Progress,phase));
+                if(!Blocked&&!_parking&&!_departing)CampaignGuidance.DrawMarker(Plan,Progress,phase,waypoint:_guideTarget);
                 bool hudEnabled=GUI.enabled; GUI.enabled=hudEnabled&&!_paused&&_panel==null&&_message==null;
                 if (CampaignHudIcons.Button(1010, CampaignHudIcons.Icon.Notebook, "TAB", "Caderno") && !Blocked && !_driving && !_parking) { _panel = "journal"; Lock(); }
                 if (CampaignHudIcons.Button(1092, CampaignHudIcons.Icon.Backpack, "G", "Mochila")) OpenBackpack();
@@ -431,7 +434,7 @@ namespace Game.Varginha.Experiment
                 if (phase == 6)
                 {
                     string[] names = { "LIVRO", "GLOBO", "PAINEL" }, ids = { "archive", "school", "square" };
-                    for (int i = 0; i < 3; i++) if (ExperimentGUI.Button(new Rect(165+i*320,470,300,42),names[i])) { _actor.GetComponent<Rigidbody2D>().position = Plan.points.Find(p=>p.id==ids[i]).position+Vector2.up*.58f; ClosePanel(); Save(); }
+                    for (int i = 0; i < 3; i++) if (ExperimentGUI.Button(new Rect(165+i*320,470,300,42),"MARCAR "+names[i])) { _guideTarget=ids[i]; ClosePanel(); Save(); }
                 }
             }
             else if (_panel == "trust")
@@ -450,6 +453,8 @@ namespace Game.Varginha.Experiment
                 if (ExperimentGUI.Button(new Rect(785,365,280,55),"REGISTRO: " + _record)) { _record = _record == 1 ? 23 : 1; Save(); }
                 if (ExperimentGUI.Button(new Rect(785,475,280,50),"ABRIR COMPARTIMENTO")) SubmitPuzzle();
             }
+            else if(_panel=="map")
+                CampaignPuzzleDesign.DrawMap(State,ref _selected,()=>SubmitPuzzle(),Save);
             else
             {
                 bool samples = _panel == "samples"; int[] order = samples ? State.sampleOrder : _panel == "map" ? State.mapOrder : State.sealOrder;

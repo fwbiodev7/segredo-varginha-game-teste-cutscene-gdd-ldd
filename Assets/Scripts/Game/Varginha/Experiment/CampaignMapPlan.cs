@@ -14,6 +14,7 @@ namespace Game.Varginha.Experiment
         public sealed class Furnishing
         {
             public string name, motif; public Vector2 position, size; public Rect footprint;
+            public Vector2[] collision;
             public Furnishing(string n, string m, Vector2 p, Vector2 s, Rect f) { name = n; motif = m; position = p; size = s; footprint = f; }
         }
         public sealed class Point
@@ -636,8 +637,22 @@ namespace Game.Varginha.Experiment
             bool torso=illustrated&&(CampaignWallBody.SolidWalls(phase)||phase>=11);
             var upperBody=new Rect(point.x-radius,point.y+.03f,radius*2,CampaignWallBody.Height(phase==1||phase==15||phase==19));
             foreach (var wall in walls) if (Touches(wall, point, radius)||(torso&&bodyWalls.Contains(wall)&&wall.Overlaps(upperBody))) return false;
-            foreach (var prop in furniture) if (prop.footprint.width > 0 && prop.footprint.height > 0 && Touches(prop.footprint, point, radius)) return false;
+            foreach (var prop in furniture) if (prop.footprint.width > 0 && prop.footprint.height > 0 &&
+                (prop.collision!=null ? Touches(prop.collision,point,radius) : Touches(prop.footprint, point, radius))) return false;
             return true;
+        }
+        private static bool Touches(Vector2[] polygon, Vector2 point, float radius)
+        {
+            bool inside=false;
+            for(int i=0,j=polygon.Length-1;i<polygon.Length;j=i++)
+            {
+                var a=polygon[j];var b=polygon[i];var segment=b-a;
+                float length=segment.sqrMagnitude;
+                var nearest=a+segment*(length>0?Mathf.Clamp01(Vector2.Dot(point-a,segment)/length):0);
+                if((point-nearest).sqrMagnitude<radius*radius)return true;
+                if((a.y>point.y)!=(b.y>point.y)&&point.x<(b.x-a.x)*(point.y-a.y)/(b.y-a.y)+a.x)inside=!inside;
+            }
+            return inside;
         }
         private static bool Touches(Rect rect, Vector2 point, float radius)
         {

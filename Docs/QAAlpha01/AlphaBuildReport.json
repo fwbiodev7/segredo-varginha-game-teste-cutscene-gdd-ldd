@@ -1,0 +1,30 @@
+{
+    "result": "Succeeded",
+    "output": "C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28/Builds/jogo_varginha_alpha_0.1/jogo_varginha_alpha_0.1.exe",
+    "unity": "6000.6.0f1",
+    "bytes": 300598632,
+    "seconds": 165.3931137,
+    "errors": 0,
+    "warnings": 2,
+    "scenes": [
+        "Assets/Scenes/Menu_MisterioDeVarginha.unity",
+        "Assets/Scenes/Ato1_Fase1_O_Caso_de_Varginha.unity",
+        "Assets/Scenes/Ato2_Fase2_A_Chave_e_a_Caixa.unity",
+        "Assets/Scenes/Ato2_Fase4_Entre_Aulas_e_Pistas.unity",
+        "Assets/Scenes/Ato3_Fase6_Fragmentos.unity",
+        "Assets/Scenes/Ato3_Fase7_A_Mata.unity",
+        "Assets/Scenes/Ato3_Fase8_A_Ancora.unity",
+        "Assets/Scenes/Ato4_Fase9_Ouzana.unity",
+        "Assets/Scenes/Ato4_Fase11_Arquivos_Alterados.unity",
+        "Assets/Scenes/Ato4_Fase12_Casarao_de_Ze_Gomes.unity",
+        "Assets/Scenes/Ato5_Fase14_O_Que_Fabio_Escondeu.unity",
+        "Assets/Scenes/Ato5_Fase15_A_Noite_Interrompida.unity",
+        "Assets/Scenes/Ato6_Fase18_A_Criatura_Ferida.unity",
+        "Assets/Scenes/Ato6_Fase20_O_Verdadeiro_Segredo.unity",
+        "Assets/Scenes/Ato6_Fase21_O_Retorno.unity",
+        "Assets/Scenes/Ato4_Fase10_O_Fusca_Marcado.unity",
+        "Assets/Scenes/Ato4_Fase13_Registros_de_1898.unity",
+        "Assets/Scenes/Ato4_Fase12_Casarao_de_Ze_Gomes_Area1.unity",
+        "Assets/Scenes/Ato6_Fase21_O_Retorno_Area1.unity"
+    ]
+}

@@ -36,6 +36,8 @@ namespace Game.Varginha.Experiment
             if (running && !_engine.isPlaying) _engine.Play(); else if (!running && _engine.isPlaying) _engine.Stop();
         }
         public void Play(string sound) { if (_effects != null) _effects.PlayOneShot(Clip(sound), sound.StartsWith("Foot") ? .16f : 1f); }
+        public void PlayRadioInterference(bool reducedMotion)
+        { if (_effects != null) _effects.PlayOneShot(Clip("RadioInterference"), reducedMotion ? .3f : .55f); }
         public void PlayAt(string sound, Vector3 position)
         {
             if (_positional == null)
@@ -75,6 +77,7 @@ namespace Game.Varginha.Experiment
             if(id=="ManifestationRise")duration=6.2f;
             if(id=="ManifestationCollapse")duration=4.7f;
             if(id=="ManifestationTear"||id=="SealClose")duration=.85f;
+            if(id=="RadioInterference")duration=.65f;
             var data = new float[Mathf.RoundToInt(rate * duration)];
             var random = new System.Random(1996 + id.Length * 71); float filtered = 0;
             for (int i = 0; i < data.Length; i++)
@@ -99,6 +102,7 @@ namespace Game.Varginha.Experiment
                     int note = Mathf.Clamp((int)(t * 4), 0, 3);
                     value = Mathf.Sin(t * Mathf.PI * 2 * SuccessNotes[note]) * .16f * Mathf.Exp(-(t % .25f) * 9);
                 }
+                else if (id == "RadioInterference") value = (filtered * .22f + noise * .025f) * Mathf.Sin(Mathf.Clamp01(t / duration) * Mathf.PI);
                 else if (id == "Starter") value = filtered * .4f * (.5f + .5f * Mathf.Sin(t * 95)) + Mathf.Sin(t * Mathf.PI * 2 * (28 + t * 20)) * .25f;
                 else if(id=="AlienBurst")value=(filtered*.32f+Mathf.Sin(t*Mathf.PI*2*(70-t*35))*.24f+Mathf.Sin(t*Mathf.PI*2*190)*.06f)*Mathf.Exp(-t*4);
                 else if(id=="ManifestationRise"||id=="ManifestationCollapse")

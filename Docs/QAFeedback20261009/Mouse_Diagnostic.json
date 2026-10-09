@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "duration": 1.64,
+  "summary": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.MouseDragUpdatesEveryAudioRowAndSavesTheSelectedValue",
+      "Status": "Failed",
+      "Duration": 1.0771238,
+      "Message": "  Mouse drag changes audio row 0\r\n  Expected: greater than 0.649999976f\r\n  But was:  0.5f\r\n",
+      "StackTrace": "at Game.Tests.PlayMode.CampaignFeedbackPlayTests+<MouseDragUpdatesEveryAudioRowAndSavesTheSelectedValue>d__12.MoveNext () [0x00240] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\PlayMode\\CampaignFeedbackPlayTests.cs:98\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+    }
+  ]
+}

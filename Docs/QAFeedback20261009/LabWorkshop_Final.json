@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "duration": 92.42,
+  "summary": {
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload",
+      "Status": "Passed",
+      "Duration": 24.4384045,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload",
+      "Status": "Passed",
+      "Duration": 16.345272,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt",
+      "Status": "Passed",
+      "Duration": 1.5610049,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent",
+      "Status": "Passed",
+      "Duration": 49.502437,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

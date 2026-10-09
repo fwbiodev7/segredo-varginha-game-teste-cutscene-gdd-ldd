@@ -1,0 +1,433 @@
+{
+  "status": "completed",
+  "duration": 1020.8,
+  "summary": {
+    "total": 60,
+    "passed": 58,
+    "failed": 2,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight",
+      "Status": "Passed",
+      "Duration": 12.5269307,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor",
+      "Status": "Passed",
+      "Duration": 2.4660681,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign",
+      "Status": "Passed",
+      "Duration": 20.3636105,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame",
+      "Status": "Passed",
+      "Duration": 5.6605916,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters",
+      "Status": "Passed",
+      "Duration": 12.9284024,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening",
+      "Status": "Passed",
+      "Duration": 7.3600015,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork",
+      "Status": "Passed",
+      "Duration": 72.5496,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ArenaNavigationSpawnPoolAndDefeatAllowRetry",
+      "Status": "Passed",
+      "Duration": 17.3406525,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard",
+      "Status": "Passed",
+      "Duration": 17.8212553,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails",
+      "Status": "Passed",
+      "Duration": 3.6593685,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition",
+      "Status": "Passed",
+      "Duration": 5.3314604,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions",
+      "Status": "Passed",
+      "Duration": 45.4404564,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration",
+      "Status": "Passed",
+      "Duration": 38.1921489,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover",
+      "Status": "Passed",
+      "Duration": 13.0161582,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease",
+      "Status": "Passed",
+      "Duration": 3.5563275,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue",
+      "Status": "Passed",
+      "Duration": 19.2382209,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignControllerRemapTests.CancelAndDisconnectRestoreInputsWithoutChangingBindings",
+      "Status": "Passed",
+      "Duration": 0.3993815,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignControllerRemapTests.CaptureWaitsForOpeningButtonReleaseAndResumesAfterNewButtonRelease",
+      "Status": "Passed",
+      "Duration": 0.466479,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignControllerRemapTests.ControllerDiagramAppearsInSettingsAndCanBeNavigatedWithoutMouse",
+      "Status": "Passed",
+      "Duration": 2.2243092,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering",
+      "Status": "Passed",
+      "Duration": 0.0153712,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignControllerRemapTests.HudLabelsFollowDeviceAndRemapping",
+      "Status": "Passed",
+      "Duration": 0.0128514,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignControllerRemapTests.RemappingSwapsConflictsAndSurvivesActionRebuild",
+      "Status": "Passed",
+      "Duration": 0.0127909,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.ActualCharacterReceivesMovingLightAndItsShadowUsesTheSameDirection",
+      "Status": "Passed",
+      "Duration": 3.2731271,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.CharactersCreatedAfterSixSecondsStillReceiveMapLighting",
+      "Status": "Passed",
+      "Duration": 9.9497667,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.EquippedFlashlightLightsACharacterButStopsAtScenery",
+      "Status": "Passed",
+      "Duration": 4.5190869,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.FuscaHeadlightsFollowTheCarAndRegisterOnlyWhileSwitchedOn",
+      "Status": "Passed",
+      "Duration": 0.665501,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox",
+      "Status": "Passed",
+      "Duration": 8.8308,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions",
+      "Status": "Passed",
+      "Duration": 3.8134699,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets",
+      "Status": "Passed",
+      "Duration": 5.1319321,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags",
+      "Status": "Passed",
+      "Duration": 1.9280578,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens",
+      "Status": "Passed",
+      "Duration": 8.4787928,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaDepartsAfterMarksWithoutRequiringTrack",
+      "Status": "Passed",
+      "Duration": 8.1085648,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence",
+      "Status": "Passed",
+      "Duration": 53.3419377,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture",
+      "Status": "Passed",
+      "Duration": 7.5865083,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.AudioRowsRespondToDpadAnalogKeyboardAndSaveAllFourVolumes",
+      "Status": "Passed",
+      "Duration": 4.6127171,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.AuthoredGroundShapesBlockMovementFromEveryAccessibleSide",
+      "Status": "Passed",
+      "Duration": 99.7917545,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.MouseDragUpdatesEveryAudioRowAndSavesTheSelectedValue",
+      "Status": "Passed",
+      "Duration": 3.4123315,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.RadioCueSharesThePhraseClockPausesAndContinuesToSchool",
+      "Status": "Passed",
+      "Duration": 18.0679608,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload",
+      "Status": "Passed",
+      "Duration": 27.5370819,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload",
+      "Status": "Failed",
+      "Duration": 12.8788384,
+      "Message": "  Vehicle stopped inside the bay\r\n  Expected: True\r\n  But was:  False\r\n",
+      "StackTrace": "at Game.Tests.PlayMode.CampaignLabWorkshopAuditTests+<PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload>d__18.MoveNext () [0x00445] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\PlayMode\\CampaignLabWorkshopAuditTests.cs:170\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt",
+      "Status": "Passed",
+      "Duration": 1.5781732,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent",
+      "Status": "Passed",
+      "Duration": 61.8569167,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.BasementStairsKeepTheNextChapterSeparateFromReturningUpstairs",
+      "Status": "Failed",
+      "Duration": 3.8949796,
+      "Message": "  Expected string length 4 but was 5. Strings differ at index 0.\r\n  Expected: \"exit\"\r\n  But was:  \"pages\"\r\n  -----------^\r\n",
+      "StackTrace": "at Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests+<BasementStairsKeepTheNextChapterSeparateFromReturningUpstairs>d__16.MoveNext () [0x00156] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\PlayMode\\CampaignPuzzleDesignPlayTests.cs:176\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.FiveDifferentPuzzleInterfacesAcceptControllerAnswersAndPreservePartialProgress",
+      "Status": "Passed",
+      "Duration": 95.6866111,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.MansionDoorsConnectTheHallLivingRoomOfficeAndServicePassageWithRealMovement",
+      "Status": "Passed",
+      "Duration": 60.5788189,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.SpatialMapCanBePlacedRotatedAndConfirmedUsingTheController",
+      "Status": "Passed",
+      "Duration": 15.6904474,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRemasterPlayTests.AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend",
+      "Status": "Passed",
+      "Duration": 2.8084133,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRemasterPlayTests.ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion",
+      "Status": "Passed",
+      "Duration": 6.1110779,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRemasterPlayTests.ContextTransitionsReachSchoolAndFuscaWithScreenshots",
+      "Status": "Passed",
+      "Duration": 13.4712579,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRemasterPlayTests.CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls",
+      "Status": "Passed",
+      "Duration": 10.5540838,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRequestedChangesTests.DeadzoneCarIsolationAndLastDevicePrompts",
+      "Status": "Passed",
+      "Duration": 0.2751812,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRequestedChangesTests.OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations",
+      "Status": "Passed",
+      "Duration": 29.6651412,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRequestedChangesTests.RealMenuSettingsAndCancelWorkWithoutMouse",
+      "Status": "Passed",
+      "Duration": 2.7832894,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRequestedChangesTests.RumbleExpiresAndUnsupportedDevicesNeverThrow",
+      "Status": "Passed",
+      "Duration": 1.0458592,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRequestedChangesTests.SchoolSeatingAndFaceWashKeepSourceArtAndStopCleanly",
+      "Status": "Passed",
+      "Duration": 12.0713005,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignVisualPolishMovementTests.FragmentosAllowsRealMovementBelowColumnAndBlocksTheSolidLadder",
+      "Status": "Passed",
+      "Duration": 7.3341003,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignVisualPolishPlayTests.EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders",
+      "Status": "Passed",
+      "Duration": 94.6706579,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignVisualPolishPlayTests.VitraisColourSpritesOnGpuAndFadeAtTheEdge",
+      "Status": "Passed",
+      "Duration": 5.7138161,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.VarginhaCampaignTests.AlienBurstKnocksTheChildBackAndLeavesHimLyingWithNoMemory",
+      "Status": "Passed",
+      "Duration": 7.8054243,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.VarginhaCampaignTests.OpeningHandsControlToChildWithoutCombatAndPauseRestoresInput",
+      "Status": "Passed",
+      "Duration": 1.6071335,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "layouts": 22,
+  "preservedFields": [
+    "image",
+    "width",
+    "height",
+    "bounds",
+    "spawn",
+    "points",
+    "lights",
+    "ambient"
+  ],
+  "differences": [],
+  "modifiedOriginalPngs": [],
+  "authoredGroundPolygons": 38,
+  "exactWalls": 63
+}

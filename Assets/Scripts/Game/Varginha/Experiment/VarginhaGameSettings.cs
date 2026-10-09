@@ -74,7 +74,8 @@ namespace Game.Varginha.Experiment
         {
             if(VarginhaInputActions.CancelPressed)return true;
             bool enabled=GUI.enabled;GUI.enabled=enabled&&!VarginhaGamepadBindings.Suspended;
-            VarginhaGamepadUI.Begin("settings:"+SceneManager.GetActiveScene().name+":"+_tab,true,100);
+            VarginhaGamepadUI.Begin("settings:"+SceneManager.GetActiveScene().name+":"+_tab,true,100,
+                verticalRows: true, initialSelection: new Rect(155 + _tab * 245, 153, 230, 42));
             ExperimentGUI.Init(); var matrix = ExperimentGUI.BeginCanvas();
             ExperimentGUI.Panel(new Rect(120, 70, 1040, 585));
             ExperimentGUI.Label(new Rect(155, 92, 900, 45), "CONFIGURAÇÕES", true);
@@ -133,7 +134,7 @@ namespace Game.Varginha.Experiment
             if (old != JsonUtility.ToJson(settings)) Save();
             if (ExperimentGUI.Button(new Rect(155, 580, 370, 45), "RESTAURAR CONFIGURAÇÕES")) { _current = new GameSettingsData(); Save(); }
             bool close = ExperimentGUI.Button(new Rect(745, 580, 370, 45), "VOLTAR");
-            GUI.matrix = matrix; GUI.enabled=enabled; return close;
+            VarginhaGamepadUI.End(); GUI.matrix = matrix; GUI.enabled=enabled; return close;
         }
         private static float Slider(float y, string label, float value)
         {

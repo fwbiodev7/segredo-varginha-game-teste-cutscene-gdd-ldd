@@ -163,7 +163,8 @@ namespace Game.Tests.EditMode
                         Assert.That(renderer.sprite,Is.SameAs(phase==2?CampaignOriginalFusca.Side:CampaignOriginalFusca.Top(CampaignWorkshopVehicle.Facing.North)),"Fusca original cached sprite");
                     else Assert.That(renderer.sprite.texture,Is.SameAs(texture),item.name+" shared GPU texture");
                     if(item.footprint.width<=0)continue;
-                    var collider=go.GetComponent<BoxCollider2D>();
+                    var collider=go.GetComponent<Collider2D>();
+                    Assert.That(collider,Is.Not.Null,item.name+" solid floor contact");
                     Assert.That(collider.bounds.center.x,Is.EqualTo(item.footprint.center.x).Within(.001f));
                     Assert.That(collider.bounds.center.y,Is.EqualTo(item.footprint.center.y).Within(.001f));
                     Assert.That(renderer.GetComponent<Game.Varginha.VarginhaWorldDepth>(),Is.Not.Null,item.name+" depth");

@@ -1,0 +1,1098 @@
+{
+  "status": "completed",
+  "duration": 4.11,
+  "summary": {
+    "total": 155,
+    "passed": 155,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.EditMode.CampaignDynamicLightingTests.CharacterDiscoveryIncludesSupportAndExcludesShadowVisuals(\"Renan_Apoio\",True)",
+      "Status": "Passed",
+      "Duration": 0.0247314,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignDynamicLightingTests.CharacterDiscoveryIncludesSupportAndExcludesShadowVisuals(\"Entidade ferida\",True)",
+      "Status": "Passed",
+      "Duration": 0.0004872,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignDynamicLightingTests.CharacterDiscoveryIncludesSupportAndExcludesShadowVisuals(\"Sombra_Renan_Apoio\",False)",
+      "Status": "Passed",
+      "Duration": 0.0001788,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignDynamicLightingTests.CharacterDiscoveryIncludesSupportAndExcludesShadowVisuals(\"Contato_Edelzio\",False)",
+      "Status": "Passed",
+      "Duration": 0.0001538,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignDynamicLightingTests.ConeRejectsSidesRangeAndAuthoredWalls",
+      "Status": "Passed",
+      "Duration": 0.009556,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignDynamicLightingTests.MovingLightChangesTintAndDirectionAndDisableRestoresAmbient",
+      "Status": "Passed",
+      "Duration": 0.0032582,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignDynamicLightingTests.PaintedLampDoesNotLightTheNeighbouringRoom",
+      "Status": "Passed",
+      "Duration": 0.0005204,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.AllNewPosesUseDedicatedBackpackSheetsWithCompleteHeadsAndStableFeet",
+      "Status": "Passed",
+      "Duration": 0.335264,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.ArchitectureAndFurnitureHaveSeparateIdempotentLayers",
+      "Status": "Passed",
+      "Duration": 0.0813018,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.AtmosphericLandmarksUseTheirDedicatedCompleteTransparentSheets",
+      "Status": "Passed",
+      "Duration": 0.2080504,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.ChildhoodFurnitureKeepsItsAspectAndCollisionWithinItsBase",
+      "Status": "Passed",
+      "Duration": 0.0417553,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.ChurchAndBiologyHouseHaveIndependentFloorLightingAndEquipment",
+      "Status": "Passed",
+      "Duration": 0.0447673,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(1)",
+      "Status": "Passed",
+      "Duration": 0.0301431,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(3)",
+      "Status": "Passed",
+      "Duration": 0.0740641,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(4)",
+      "Status": "Passed",
+      "Duration": 0.0314263,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(5)",
+      "Status": "Passed",
+      "Duration": 0.0301789,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(6)",
+      "Status": "Passed",
+      "Duration": 0.0627859,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(7)",
+      "Status": "Passed",
+      "Duration": 0.0610616,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(8)",
+      "Status": "Passed",
+      "Duration": 0.0103317,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(9)",
+      "Status": "Passed",
+      "Duration": 0.0193773,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.EveryObjectiveHasFootClearanceAndAConnectedRoute(10)",
+      "Status": "Passed",
+      "Duration": 0.020029,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.ExpansionRequiresPhysicalEvidenceAndPreservesOptionalClues",
+      "Status": "Passed",
+      "Duration": 0.002473,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.GeneratedCharacterFramesHaveCompleteOutlinesAndStableFootAnchors",
+      "Status": "Passed",
+      "Duration": 0.003214,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.HouseListsOnlyActualPendingTasksAndUsesRequestedTextures",
+      "Status": "Passed",
+      "Duration": 0.0021805,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.JournalistMovesOnlyHisMouthAndClosesItAfterTheReport",
+      "Status": "Passed",
+      "Duration": 0.4971707,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.LongUrbanMapFloorLayersRemainBelowBuildingsAndFurniture",
+      "Status": "Passed",
+      "Duration": 0.0062047,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.OldSavesAndMalformedOrdersAreRecovered",
+      "Status": "Passed",
+      "Duration": 0.0019776,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.RemasteredSchoolRetainsTheOriginalTwelveDeskOpenLaboratory",
+      "Status": "Passed",
+      "Duration": 0.0138261,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.RoamingStudentsCanReachTheYardWithoutEnteringRenansSpace",
+      "Status": "Passed",
+      "Duration": 0.0292228,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.SchoolFrontagePreservesWholeArtworkGateAndAspectRatio",
+      "Status": "Passed",
+      "Duration": 0.0039981,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.WalkingFramesKeepTheirHeadCenteredInEveryDirection",
+      "Status": "Passed",
+      "Duration": 0.2377686,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.WallConnectionsFinishCornersWithoutBlockingOpenings",
+      "Status": "Passed",
+      "Duration": 0.0052853,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(1)",
+      "Status": "Passed",
+      "Duration": 0.0152635,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(4)",
+      "Status": "Passed",
+      "Duration": 0.0162144,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(7)",
+      "Status": "Passed",
+      "Duration": 0.0216724,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(9)",
+      "Status": "Passed",
+      "Duration": 0.0092044,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignExpansionTests.WorldCollidersMatchPlansIncludingRotatedWalls(10)",
+      "Status": "Passed",
+      "Duration": 0.0119029,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(1)",
+      "Status": "Passed",
+      "Duration": 0.0023309,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(2)",
+      "Status": "Passed",
+      "Duration": 0.0002245,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(3)",
+      "Status": "Passed",
+      "Duration": 0.0002425,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(4)",
+      "Status": "Passed",
+      "Duration": 0.0002399,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(5)",
+      "Status": "Passed",
+      "Duration": 0.0001287,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(6)",
+      "Status": "Passed",
+      "Duration": 0.0002715,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(7)",
+      "Status": "Passed",
+      "Duration": 0.0002245,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(8)",
+      "Status": "Passed",
+      "Duration": 8.46E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(9)",
+      "Status": "Passed",
+      "Duration": 0.0001293,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(10)",
+      "Status": "Passed",
+      "Duration": 9.18E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(11)",
+      "Status": "Passed",
+      "Duration": 0.0001427,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(12)",
+      "Status": "Passed",
+      "Duration": 0.0001448,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(112)",
+      "Status": "Passed",
+      "Duration": 0.0001572,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(13)",
+      "Status": "Passed",
+      "Duration": 0.0001162,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(14)",
+      "Status": "Passed",
+      "Duration": 9.53E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(15)",
+      "Status": "Passed",
+      "Duration": 0.0001634,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(16)",
+      "Status": "Passed",
+      "Duration": 5.77E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(18)",
+      "Status": "Passed",
+      "Duration": 0.0001242,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(19)",
+      "Status": "Passed",
+      "Duration": 0.0001639,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(20)",
+      "Status": "Passed",
+      "Duration": 5.34E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(21)",
+      "Status": "Passed",
+      "Duration": 4.83E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.AuthoredContactShapesMatchNavigationAndStayWithinThePhysicalBase(121)",
+      "Status": "Passed",
+      "Duration": 0.0001325,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.RadioStaticIsShortBoundedAndHasQuietEndpoints",
+      "Status": "Passed",
+      "Duration": 0.0087213,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignFeedbackTests.RoundedPotCornersDoNotBlockEmptyFloorAndItsCentreRemainsSolid",
+      "Status": "Passed",
+      "Duration": 0.0003271,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ChurchScaleUsesSeparateCachedFramesAndOtherMapsKeepNormalSize",
+      "Status": "Passed",
+      "Duration": 0.0401346,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ClassroomFeetRemainClearWhenForegroundDeskCropsChange(4)",
+      "Status": "Passed",
+      "Duration": 0.0006428,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ClassroomFeetRemainClearWhenForegroundDeskCropsChange(5)",
+      "Status": "Passed",
+      "Duration": 0.0002991,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.CorrectChurchCombinationSurvivesReloadWithoutHiddenInspectionGates(0)",
+      "Status": "Passed",
+      "Duration": 0.0004481,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.CorrectChurchCombinationSurvivesReloadWithoutHiddenInspectionGates(1)",
+      "Status": "Passed",
+      "Duration": 9.08E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.CorrectChurchCombinationSurvivesReloadWithoutHiddenInspectionGates(3)",
+      "Status": "Passed",
+      "Duration": 8.21E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.CorrectChurchCombinationSurvivesReloadWithoutHiddenInspectionGates(7)",
+      "Status": "Passed",
+      "Duration": 8.59E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.DrivingLaneFollowsTheSuppliedAsphaltAndExcludesTheSidewalk",
+      "Status": "Passed",
+      "Duration": 0.0007165,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.FlashCanBeReplayedAfterUnityDiscardsNativeSprites",
+      "Status": "Passed",
+      "Duration": 0.0078627,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(1)",
+      "Status": "Passed",
+      "Duration": 0.0130753,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(2)",
+      "Status": "Passed",
+      "Duration": 0.0263846,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(4)",
+      "Status": "Passed",
+      "Duration": 0.0125752,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(6)",
+      "Status": "Passed",
+      "Duration": 0.0166181,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(7)",
+      "Status": "Passed",
+      "Duration": 0.0213268,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(8)",
+      "Status": "Passed",
+      "Duration": 0.0059616,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(9)",
+      "Status": "Passed",
+      "Duration": 0.008891,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ForegroundUsesSourceTextureAndSharesRealFloorContact(10)",
+      "Status": "Passed",
+      "Duration": 0.0028431,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.FurnitureContoursExcludeConcaveFloorGapsAndTriangulateEveryMap",
+      "Status": "Passed",
+      "Duration": 0.0115092,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.FuscaPosesKeepAStableBodyPivotWithOptimizedTransparentTexture",
+      "Status": "Passed",
+      "Duration": 0.0038611,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.LegacySolvedChurchRecordsRecoverTheirConfirmedCombination",
+      "Status": "Passed",
+      "Duration": 0.0002877,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.NewAnimationSheetsHaveAllFramesWithoutReadableCpuTextureCopies",
+      "Status": "Passed",
+      "Duration": 0.0423734,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.ShadowsTurnAwayFromTheNearestLampAndOpenAirKeepsContactOnly",
+      "Status": "Passed",
+      "Duration": 0.0011431,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(1)",
+      "Status": "Passed",
+      "Duration": 0.0268794,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(2)",
+      "Status": "Passed",
+      "Duration": 0.0488814,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(3)",
+      "Status": "Passed",
+      "Duration": 0.0315782,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(4)",
+      "Status": "Passed",
+      "Duration": 0.0299676,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(5)",
+      "Status": "Passed",
+      "Duration": 0.0300272,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(6)",
+      "Status": "Passed",
+      "Duration": 0.0606507,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(7)",
+      "Status": "Passed",
+      "Duration": 0.0598235,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(8)",
+      "Status": "Passed",
+      "Duration": 0.0102753,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(9)",
+      "Status": "Passed",
+      "Duration": 0.0186116,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignIllustratedMapTests.SuppliedArtworkHasWalkableObjectivesAndCollidersWithinFurniture(10)",
+      "Status": "Passed",
+      "Duration": 0.0186403,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryCharacters/ManifestationBossCombatV2\",8,4,160,192)",
+      "Status": "Passed",
+      "Duration": 0.1138457,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryCharacters/ManifestationChildCombatV2\",8,4,96,128)",
+      "Status": "Passed",
+      "Duration": 0.0571431,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryCharacters/ManifestationBossFlowV1\",6,4,160,192)",
+      "Status": "Passed",
+      "Duration": 0.0738437,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryCharacters/ManifestationChildFlowV1\",6,4,96,128)",
+      "Status": "Passed",
+      "Duration": 0.0524557,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryEffects/BossManifestationCinematicV1\",6,2,128,160)",
+      "Status": "Passed",
+      "Duration": 0.0489526,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignManifestationArtTests.EveryPoseHasTransparentGuttersAndSharpRuntimeImport(\"StoryEffects/BossRiftCinematicV1\",6,2,160,160)",
+      "Status": "Passed",
+      "Duration": 0.0282471,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignRemasterTests.InteriorChangesCrossfadeAndMenuDoesNotPreviewHouseAudio",
+      "Status": "Passed",
+      "Duration": 0.0012809,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignRemasterTests.NarrativeTransitionsMatchImplementedLocations(3,CameraPan,\"Road\")",
+      "Status": "Passed",
+      "Duration": 0.0006097,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignRemasterTests.NarrativeTransitionsMatchImplementedLocations(7,Fade,\"Forest\")",
+      "Status": "Passed",
+      "Duration": 0.0003624,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignRemasterTests.NarrativeTransitionsMatchImplementedLocations(9,Fade,\"Lab\")",
+      "Status": "Passed",
+      "Duration": 0.000109,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignRemasterTests.NarrativeTransitionsMatchImplementedLocations(11,Fade,\"School\")",
+      "Status": "Passed",
+      "Duration": 8.5E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignRemasterTests.NarrativeTransitionsMatchImplementedLocations(15,Paranormal,\"House\")",
+      "Status": "Passed",
+      "Duration": 8.2E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.BattleCalibrationAndCrossingRemainIndependentAndPersist",
+      "Status": "Passed",
+      "Duration": 0.002393,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.FourteenChaptersUseShippedScenesAndNeverEnterRemovedTasks",
+      "Status": "Passed",
+      "Duration": 0.0121502,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.GraduatedHintsFollowCurrentProgressWithoutSolvingPuzzles",
+      "Status": "Passed",
+      "Duration": 0.0034511,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.HouseAndWorkshopRequireEvidenceWithoutRoutineOrRepeatedPuzzles",
+      "Status": "Passed",
+      "Duration": 0.0008585,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(3,4)",
+      "Status": "Passed",
+      "Duration": 0.0011941,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(5,4)",
+      "Status": "Passed",
+      "Duration": 0.0002481,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(16,18)",
+      "Status": "Passed",
+      "Duration": 0.0003905,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(17,18)",
+      "Status": "Passed",
+      "Duration": 0.0001644,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.LegacyRemovedScenesMigrateOnceAndDiscardOnlyTheirPosition(19,18)",
+      "Status": "Passed",
+      "Duration": 0.0001528,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.LoadingLegacySavePersistsMigrationAndDoesNotRewriteItOnNextLoad",
+      "Status": "Passed",
+      "Duration": 0.0753527,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.MergedAgreementKeepsLegacyEvidenceWithoutSkippingTheUnfinishedProcedure",
+      "Status": "Passed",
+      "Duration": 0.0005192,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.MigrationPreservesEvidencePuzzlesEquipmentVictoryAndCrossing",
+      "Status": "Passed",
+      "Duration": 0.00896,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.ResumeAreaIsLimitedToScenesThatExist(11,0)",
+      "Status": "Passed",
+      "Duration": 0.0006837,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.ResumeAreaIsLimitedToScenesThatExist(12,1)",
+      "Status": "Passed",
+      "Duration": 7.04E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.ResumeAreaIsLimitedToScenesThatExist(20,0)",
+      "Status": "Passed",
+      "Duration": 4.81E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignSequenceTests.ResumeAreaIsLimitedToScenesThatExist(21,1)",
+      "Status": "Passed",
+      "Duration": 4.46E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignStoryTests.CorrectAnswersCannotBypassInvestigatedEvidence",
+      "Status": "Passed",
+      "Duration": 0.0006073,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignStoryTests.CorruptProgressCannotUnlockImpossibleClues",
+      "Status": "Passed",
+      "Duration": 0.0006862,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignStoryTests.InvestigationSurvivesReloadAndRetainsBothMapFragments",
+      "Status": "Passed",
+      "Duration": 0.0008413,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignStoryTests.SchoolUsesOnlyPhotoThenOneTimePuzzleAndKeepsLegacyCompletions",
+      "Status": "Passed",
+      "Duration": 0.0023333,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignUsabilityTests.DifficultyOptionsAffectCampaignBoss",
+      "Status": "Passed",
+      "Duration": 0.024053,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(1)",
+      "Status": "Passed",
+      "Duration": 0.002437,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(2)",
+      "Status": "Passed",
+      "Duration": 0.0010976,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(3)",
+      "Status": "Passed",
+      "Duration": 5.23E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(4)",
+      "Status": "Passed",
+      "Duration": 0.0015687,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(5)",
+      "Status": "Passed",
+      "Duration": 0.0015265,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(6)",
+      "Status": "Passed",
+      "Duration": 0.0128728,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(7)",
+      "Status": "Passed",
+      "Duration": 0.0008165,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(8)",
+      "Status": "Passed",
+      "Duration": 0.0005845,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(9)",
+      "Status": "Passed",
+      "Duration": 0.0350129,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(10)",
+      "Status": "Passed",
+      "Duration": 0.0004036,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(11)",
+      "Status": "Passed",
+      "Duration": 0.0015411,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(12)",
+      "Status": "Passed",
+      "Duration": 0.0016427,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(112)",
+      "Status": "Passed",
+      "Duration": 0.0017533,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(13)",
+      "Status": "Passed",
+      "Duration": 0.0017029,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(14)",
+      "Status": "Passed",
+      "Duration": 0.0006905,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(15)",
+      "Status": "Passed",
+      "Duration": 0.0008098,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(16)",
+      "Status": "Passed",
+      "Duration": 0.001446,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(18)",
+      "Status": "Passed",
+      "Duration": 0.0025312,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(19)",
+      "Status": "Passed",
+      "Duration": 0.0009255,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(20)",
+      "Status": "Passed",
+      "Duration": 0.0033033,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(21)",
+      "Status": "Passed",
+      "Duration": 0.0001189,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.EveryForegroundMeshHasValidCutsSupportsAndOriginalPixelSampling(121)",
+      "Status": "Passed",
+      "Duration": 0.0015451,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.FragmentosHasClearCrossingBelowPillarsAndLadderStopsAtItsFeet",
+      "Status": "Passed",
+      "Duration": 0.0010606,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.ReusedChurchHasAllThreeStainedGlassColoursWithSmoothEdges(8)",
+      "Status": "Passed",
+      "Duration": 0.0008973,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.ReusedChurchHasAllThreeStainedGlassColoursWithSmoothEdges(14)",
+      "Status": "Passed",
+      "Duration": 5.83E-05,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignVisualPolishTests.TabletopPlantsHaveIndependentMeshesAndNoFloorBlockingShape",
+      "Status": "Passed",
+      "Duration": 0.0006906,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignWorkshopStateTests.EarlierInvestigationsMigrateToAParkedVehicle",
+      "Status": "Passed",
+      "Duration": 0.0003171,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignWorkshopStateTests.InvalidParkingCoordinatesCannotCorruptTheNextArrival",
+      "Status": "Passed",
+      "Duration": 0.0002467,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.CampaignWorkshopStateTests.VehicleAndReagentAtlasesShareCachedGpuOnlyPointTextures",
+      "Status": "Passed",
+      "Duration": 0.0031935,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

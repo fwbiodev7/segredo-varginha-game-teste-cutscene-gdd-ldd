@@ -1,0 +1,4 @@
+Play=False
+Pipeline=CampaignPixelPipeline (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset)
+Quality=CampaignPixelPipeline (UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset)
+Scenes=Assets/InitTestScene06c56c46-f84f-4253-bce1-4a86269a6162.unity

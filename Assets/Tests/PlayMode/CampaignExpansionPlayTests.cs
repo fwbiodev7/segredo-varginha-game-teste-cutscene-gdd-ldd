@@ -40,7 +40,7 @@ namespace Game.Tests.PlayMode
                 if(phase==6)
                 {
                     foreach(string point in new[]{"archive","school","square","truth0","truth1"}){stage.Interact(point);stage.ClosePanel();}
-                    stage.Progress.expansion.mapOrder=new[]{0,1,2}; stage.Interact("map"); Assert.That(stage.SubmitPuzzle(),Is.True); stage.ClosePanel();
+                    stage.Progress.expansion.mapOrder=new[]{0,1,2};stage.Progress.expansion.mapDirections=new[]{1,1,0}; stage.Interact("map"); Assert.That(stage.SubmitPuzzle(),Is.True); stage.ClosePanel();
                 }
                 if(phase==7)
                 {
@@ -145,7 +145,7 @@ namespace Game.Tests.PlayMode
             Assert.That(CampaignCharacterShadows.OpenAir(data,stage.Plan.spawn),Is.False,"The school library is indoors.");
             // The entrance and rug are floor, while the central chair stops real movement.
             yield return WalkLibrary(stage.Plan,body,keyboard,stage.Plan.points.Find(p=>p.id=="map").position);
-            var chair=GameObject.Find("Mapa_Campanha").transform.Find("02_Mobilia_Colisoes/Cadeira central sul meio").GetComponent<BoxCollider2D>();
+            var chair=GameObject.Find("Mapa_Campanha").transform.Find("02_Mobilia_Colisoes/Cadeira central sul meio").GetComponent<Collider2D>();
             body.position=data.Position(480,507)+Vector2.up*.58f;body.linearVelocity=Vector2.zero;yield return new WaitForFixedUpdate();
             yield return HoldKey(keyboard,Key.W,.6f);
             Assert.That(actor.GetComponent<CircleCollider2D>().Distance(chair).distance,Is.GreaterThanOrEqualTo(-.01f),"The chair cannot be walked through (physics contact tolerance).");
@@ -168,7 +168,7 @@ namespace Game.Tests.PlayMode
             yield return WalkLibrary(stage.Plan,body,keyboard,stage.Plan.points.Find(p=>p.id=="map").position);
             yield return HoldKey(keyboard,Key.E,.1f);
             stage.Progress.expansion.mapOrder=new[]{2,1,0};Assert.That(stage.SubmitPuzzle(),Is.False);
-            stage.ClosePanel();stage.Interact("map");stage.Progress.expansion.mapOrder=new[]{0,1,2};Assert.That(stage.SubmitPuzzle(),Is.True);stage.ClosePanel();
+            stage.ClosePanel();stage.Interact("map");stage.Progress.expansion.mapOrder=new[]{0,1,2};stage.Progress.expansion.mapDirections=new[]{1,1,0};Assert.That(stage.SubmitPuzzle(),Is.True);stage.ClosePanel();
             Assert.That(CampaignStorySave.Load().expansion.mapSolved,Is.True);
             yield return WalkLibrary(stage.Plan,body,keyboard,stage.Plan.points.Find(p=>p.id=="exit").position);
             yield return HoldKey(keyboard,Key.E,.1f);
@@ -177,6 +177,11 @@ namespace Game.Tests.PlayMode
         }
         private static IEnumerator WalkLibrary(CampaignMapPlan plan,Rigidbody2D body,Keyboard keyboard,Vector2 target)
         {
+            // Rendering load must not cause several movement steps between key updates.
+            float capture = Time.captureDeltaTime;
+            Time.captureDeltaTime = Time.fixedDeltaTime;
+            try
+            {
             var path=new System.Collections.Generic.List<Vector2>();
             Assert.That(plan.Route(body.position-Vector2.up*.58f,target,path),Is.True,"Physical route to "+target);
             var corners=new System.Collections.Generic.List<Vector2>();
@@ -194,9 +199,11 @@ namespace Game.Tests.PlayMode
                     InputSystem.QueueStateEvent(keyboard,new KeyboardState(keys.ToArray()));yield return null;
                 }
                 InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return null;
-                Assert.That(Vector2.Distance(body.position-Vector2.up*.58f,corner),Is.LessThan(.28f),"Blocked physical passage at "+corner);
+                Assert.That(Vector2.Distance(body.position-Vector2.up*.58f,corner),Is.LessThan(.28f),"Blocked physical passage at "+corner+" from "+(body.position-Vector2.up*.58f)+" velocity="+body.linearVelocity+" locked="+body.GetComponent<EdelzioTopDownController>().IsInputLocked+" contacts="+string.Join(",",System.Array.ConvertAll(Physics2D.OverlapCircleAll(body.position-Vector2.up*.58f,.35f),c=>c.name)));
             }
             yield return new WaitForFixedUpdate();yield return new WaitForFixedUpdate();
+            }
+            finally { Time.captureDeltaTime = capture; }
         }
         [UnityTest] public IEnumerator FuscaDepartsAfterMarksWithoutRequiringTrack()
         {

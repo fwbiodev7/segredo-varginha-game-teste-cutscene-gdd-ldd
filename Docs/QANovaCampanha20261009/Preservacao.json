@@ -1,0 +1,21 @@
+{
+  "layouts": 22,
+  "preservedFields": [
+    "image",
+    "width",
+    "height",
+    "bounds",
+    "spawn",
+    "points",
+    "lights",
+    "ambient"
+  ],
+  "differences": [],
+  "modifiedOriginalPngs": [],
+  "authoredGroundPolygons": 39,
+  "exactWalls": 63,
+  "mansionRoomPhases": [
+    112,
+    13
+  ]
+}

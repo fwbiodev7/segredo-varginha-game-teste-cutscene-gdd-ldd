@@ -1,0 +1,120 @@
+1 Árvore do clarão (-1.00, 0.00) PASS
+1 Árvore do clarão (1.00, 0.00) PASS
+1 Árvore do clarão (0.00, 1.00) PASS
+1 Árvore do clarão (0.00, -1.00) PASS
+1 Árvore sul (-1.00, 0.00) PASS
+1 Árvore sul (1.00, 0.00) PASS
+1 Árvore sul (0.00, 1.00) PASS
+1 Árvore sul (0.00, -1.00) PASS
+2 Árvore quintal norte (-1.00, 0.00) PASS
+2 Árvore quintal norte (1.00, 0.00) PASS
+2 Árvore quintal norte (0.00, 1.00) PASS
+2 Árvore quintal norte (0.00, -1.00) PASS
+2 Árvore quintal nordeste (-1.00, 0.00) PASS
+2 Árvore quintal nordeste (1.00, 0.00) PASS
+2 Árvore quintal nordeste (0.00, 1.00) unavailable side: neighbouring obstacle
+2 Árvore quintal nordeste (0.00, -1.00) PASS
+2 Árvore quintal sul (-1.00, 0.00) PASS
+2 Árvore quintal sul (1.00, 0.00) PASS
+2 Árvore quintal sul (0.00, 1.00) PASS
+2 Árvore quintal sul (0.00, -1.00) PASS
+4 Árvore jardim oeste (-1.00, 0.00) PASS
+4 Árvore jardim oeste (1.00, 0.00) PASS
+4 Árvore jardim oeste (0.00, 1.00) PASS
+4 Árvore jardim oeste (0.00, -1.00) PASS
+4 Árvore jardim leste (-1.00, 0.00) PASS
+4 Árvore jardim leste (1.00, 0.00) PASS
+4 Árvore jardim leste (0.00, 1.00) PASS
+4 Árvore jardim leste (0.00, -1.00) PASS
+6 Cadeira central sul oeste (-1.00, 0.00) PASS
+6 Cadeira central sul oeste (1.00, 0.00) PASS
+6 Cadeira central sul oeste (0.00, 1.00) PASS
+6 Cadeira central sul oeste (0.00, -1.00) unavailable side: neighbouring obstacle
+6 Cadeira central sul meio (-1.00, 0.00) PASS
+6 Cadeira central sul meio (1.00, 0.00) PASS
+6 Cadeira central sul meio (0.00, 1.00) PASS
+6 Cadeira central sul meio (0.00, -1.00) unavailable side: neighbouring obstacle
+6 Cadeira central sul leste (-1.00, 0.00) PASS
+6 Cadeira central sul leste (1.00, 0.00) PASS
+6 Cadeira central sul leste (0.00, 1.00) PASS
+6 Cadeira central sul leste (0.00, -1.00) unavailable side: neighbouring obstacle
+6 Planta oeste (-1.00, 0.00) PASS
+6 Planta oeste (1.00, 0.00) unavailable side: neighbouring obstacle
+6 Planta oeste (0.00, 1.00) PASS
+6 Planta oeste (0.00, -1.00) unavailable side: neighbouring obstacle
+6 Planta leste (-1.00, 0.00) unavailable side: neighbouring obstacle
+6 Planta leste (1.00, 0.00) PASS
+6 Planta leste (0.00, 1.00) unavailable side: neighbouring obstacle
+6 Planta leste (0.00, -1.00) PASS
+6 Planta entrada oeste (-1.00, 0.00) PASS
+6 Planta entrada oeste (1.00, 0.00) unavailable side: neighbouring obstacle
+6 Planta entrada oeste (0.00, 1.00) unavailable side: neighbouring obstacle
+6 Planta entrada oeste (0.00, -1.00) PASS
+6 Planta entrada leste (-1.00, 0.00) PASS
+6 Planta entrada leste (1.00, 0.00) PASS
+6 Planta entrada leste (0.00, 1.00) unavailable side: neighbouring obstacle
+6 Planta entrada leste (0.00, -1.00) PASS
+7 Árvore oeste (-1.00, 0.00) PASS
+7 Árvore oeste (1.00, 0.00) PASS
+7 Árvore oeste (0.00, 1.00) PASS
+7 Árvore oeste (0.00, -1.00) PASS
+7 Árvore norte (-1.00, 0.00) PASS
+7 Árvore norte (1.00, 0.00) PASS
+7 Árvore norte (0.00, 1.00) PASS
+7 Árvore norte (0.00, -1.00) PASS
+7 Árvore bifurcação (-1.00, 0.00) PASS
+7 Árvore bifurcação (1.00, 0.00) PASS
+7 Árvore bifurcação (0.00, 1.00) PASS
+7 Árvore bifurcação (0.00, -1.00) PASS
+7 Árvore clareira (-1.00, 0.00) PASS
+7 Árvore clareira (1.00, 0.00) PASS
+7 Árvore clareira (0.00, 1.00) PASS
+7 Árvore clareira (0.00, -1.00) PASS
+7 Árvore esconderijo (-1.00, 0.00) PASS
+7 Árvore esconderijo (1.00, 0.00) PASS
+7 Árvore esconderijo (0.00, 1.00) PASS
+7 Árvore esconderijo (0.00, -1.00) PASS
+7 Árvore margem (-1.00, 0.00) PASS
+7 Árvore margem (1.00, 0.00) PASS
+7 Árvore margem (0.00, 1.00) PASS
+7 Árvore margem (0.00, -1.00) PASS
+7 Árvore sul (-1.00, 0.00) PASS
+7 Árvore sul (1.00, 0.00) PASS
+7 Árvore sul (0.00, 1.00) unavailable side: neighbouring obstacle
+7 Árvore sul (0.00, -1.00) PASS
+8 Pia batismal (-1.00, 0.00) unavailable side: neighbouring obstacle
+8 Pia batismal (1.00, 0.00) PASS
+8 Pia batismal (0.00, 1.00) PASS
+8 Pia batismal (0.00, -1.00) PASS
+9 Samambaia (-1.00, 0.00) PASS
+9 Samambaia (1.00, 0.00) unavailable side: neighbouring obstacle
+9 Samambaia (0.00, 1.00) PASS
+9 Samambaia (0.00, -1.00) PASS
+9 Samambaia laboratório (-1.00, 0.00) PASS
+9 Samambaia laboratório (1.00, 0.00) PASS
+9 Samambaia laboratório (0.00, 1.00) PASS
+9 Samambaia laboratório (0.00, -1.00) PASS
+12 Árvore central (-1.00, 0.00) PASS
+12 Árvore central (1.00, 0.00) PASS
+12 Árvore central (0.00, 1.00) unavailable side: neighbouring obstacle
+12 Árvore central (0.00, -1.00) PASS
+12 Árvore leste (-1.00, 0.00) PASS
+12 Árvore leste (1.00, 0.00) PASS
+12 Árvore leste (0.00, 1.00) unavailable side: neighbouring obstacle
+12 Árvore leste (0.00, -1.00) PASS
+14 Pia batismal (-1.00, 0.00) unavailable side: neighbouring obstacle
+14 Pia batismal (1.00, 0.00) PASS
+14 Pia batismal (0.00, 1.00) PASS
+14 Pia batismal (0.00, -1.00) PASS
+15 Árvore do clarão (-1.00, 0.00) PASS
+15 Árvore do clarão (1.00, 0.00) PASS
+15 Árvore do clarão (0.00, 1.00) PASS
+15 Árvore do clarão (0.00, -1.00) PASS
+15 Árvore sul (-1.00, 0.00) PASS
+15 Árvore sul (1.00, 0.00) PASS
+15 Árvore sul (0.00, 1.00) PASS
+15 Árvore sul (0.00, -1.00) PASS
+18 Cilindro da ruptura (-1.00, 0.00) PASS
+18 Cilindro da ruptura (1.00, 0.00) PASS
+18 Cilindro da ruptura (0.00, 1.00) PASS
+18 Cilindro da ruptura (0.00, -1.00) PASS

@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "duration": 3.45,
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.MouseDragUpdatesEveryAudioRowAndSavesTheSelectedValue",
+      "Status": "Passed",
+      "Duration": 2.9257795,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

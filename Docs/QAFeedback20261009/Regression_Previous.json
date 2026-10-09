@@ -1,0 +1,398 @@
+{
+  "status": "completed",
+  "duration": 676.87,
+  "summary": {
+    "total": 55,
+    "passed": 50,
+    "failed": 5,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight",
+      "Status": "Passed",
+      "Duration": 12.2806588,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor",
+      "Status": "Passed",
+      "Duration": 2.4844787,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign",
+      "Status": "Passed",
+      "Duration": 20.7696469,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame",
+      "Status": "Passed",
+      "Duration": 5.7237164,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters",
+      "Status": "Passed",
+      "Duration": 13.1263734,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignChaptersTests.PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening",
+      "Status": "Failed",
+      "Duration": 1.9467068,
+      "Message": "  The child's visible body cannot enter the lower wall beside the refrigerator.\r\n  Expected: greater than or equal to -0.706297338f\r\n  But was:  -0.724797368f\r\n",
+      "StackTrace": "at Game.Tests.PlayMode.CampaignChaptersTests+<PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening>d__11.MoveNext () [0x00174] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\PlayMode\\CampaignChaptersTests.cs:136\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork",
+      "Status": "Passed",
+      "Duration": 74.144874,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ArenaNavigationSpawnPoolAndDefeatAllowRetry",
+      "Status": "Passed",
+      "Duration": 17.1821569,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard",
+      "Status": "Passed",
+      "Duration": 18.0586857,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails",
+      "Status": "Passed",
+      "Duration": 4.0513544,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition",
+      "Status": "Passed",
+      "Duration": 4.6040821,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions",
+      "Status": "Passed",
+      "Duration": 43.5133757,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration",
+      "Status": "Passed",
+      "Duration": 39.3074839,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover",
+      "Status": "Passed",
+      "Duration": 12.774495,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease",
+      "Status": "Passed",
+      "Duration": 3.5597561,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue",
+      "Status": "Passed",
+      "Duration": 19.010623,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignControllerRemapTests.CancelAndDisconnectRestoreInputsWithoutChangingBindings",
+      "Status": "Passed",
+      "Duration": 0.2587912,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignControllerRemapTests.CaptureWaitsForOpeningButtonReleaseAndResumesAfterNewButtonRelease",
+      "Status": "Passed",
+      "Duration": 0.4471073,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignControllerRemapTests.ControllerDiagramAppearsInSettingsAndCanBeNavigatedWithoutMouse",
+      "Status": "Passed",
+      "Duration": 2.2409472,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering",
+      "Status": "Passed",
+      "Duration": 0.0120782,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignControllerRemapTests.HudLabelsFollowDeviceAndRemapping",
+      "Status": "Passed",
+      "Duration": 0.0133453,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignControllerRemapTests.RemappingSwapsConflictsAndSurvivesActionRebuild",
+      "Status": "Passed",
+      "Duration": 0.0138833,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.ActualCharacterReceivesMovingLightAndItsShadowUsesTheSameDirection",
+      "Status": "Passed",
+      "Duration": 3.2180942,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.CharactersCreatedAfterSixSecondsStillReceiveMapLighting",
+      "Status": "Passed",
+      "Duration": 10.0682217,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.EquippedFlashlightLightsACharacterButStopsAtScenery",
+      "Status": "Passed",
+      "Duration": 4.6178158,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.FuscaHeadlightsFollowTheCarAndRegisterOnlyWhileSwitchedOn",
+      "Status": "Passed",
+      "Duration": 0.6530365,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox",
+      "Status": "Passed",
+      "Duration": 8.9607397,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions",
+      "Status": "Passed",
+      "Duration": 3.8368619,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets",
+      "Status": "Passed",
+      "Duration": 5.229841,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags",
+      "Status": "Passed",
+      "Duration": 1.8021912,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens",
+      "Status": "Passed",
+      "Duration": 8.5372215,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaDepartsAfterMarksWithoutRequiringTrack",
+      "Status": "Passed",
+      "Duration": 8.1479712,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence",
+      "Status": "Failed",
+      "Duration": 4.2561367,
+      "Message": "  Blocked physical passage at (0.25, -4.63)\r\n  Expected: less than 0.280000001f\r\n  But was:  0.560802937f\r\n",
+      "StackTrace": "at Game.Tests.PlayMode.CampaignExpansionPlayTests+<WalkLibrary>d__10.MoveNext () [0x00292] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\PlayMode\\CampaignExpansionPlayTests.cs:197\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture",
+      "Status": "Passed",
+      "Duration": 7.5355882,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.AudioRowsRespondToDpadAnalogKeyboardAndSaveAllFourVolumes",
+      "Status": "Passed",
+      "Duration": 4.6802147,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.AuthoredGroundShapesBlockMovementFromEveryAccessibleSide",
+      "Status": "Failed",
+      "Duration": 64.7067601,
+      "Message": "  8 Pia batismal remains on the entry side\r\n  Expected: greater than 0\r\n  But was:  -0.0755028725f\r\n",
+      "StackTrace": "at Game.Tests.PlayMode.CampaignFeedbackPlayTests+<AuthoredGroundShapesBlockMovementFromEveryAccessibleSide>d__16.MoveNext () [0x005f9] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\PlayMode\\CampaignFeedbackPlayTests.cs:154\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.RadioCueSharesThePhraseClockPausesAndContinuesToSchool",
+      "Status": "Passed",
+      "Duration": 17.0410197,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload",
+      "Status": "Failed",
+      "Duration": 9.7538582,
+      "Message": "  Movement blocked on route to tutorial at (-3.50, -2.25) from (-3.36, -1.90) panel= message= locked=False\r\n  Expected: less than 463.881104f\r\n  But was:  463.919769f\r\n",
+      "StackTrace": "at Game.Tests.PlayMode.CampaignLabWorkshopAuditTests+<WalkToAndInteract>d__14.MoveNext () [0x0014b] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\PlayMode\\CampaignLabWorkshopAuditTests.cs:75\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload",
+      "Status": "Passed",
+      "Duration": 16.3351217,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt",
+      "Status": "Passed",
+      "Duration": 1.4856467,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent",
+      "Status": "Failed",
+      "Duration": 12.7540805,
+      "Message": "  Movement blocked on route to refill at (1.50, -0.75) from (1.30, -0.86) panel= message= locked=False\r\n  Expected: less than 494.454437f\r\n  But was:  494.495544f\r\n",
+      "StackTrace": "at Game.Tests.PlayMode.CampaignLabWorkshopAuditTests+<WalkToAndInteract>d__14.MoveNext () [0x0014b] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\PlayMode\\CampaignLabWorkshopAuditTests.cs:75\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRemasterPlayTests.AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend",
+      "Status": "Passed",
+      "Duration": 2.596111,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRemasterPlayTests.ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion",
+      "Status": "Passed",
+      "Duration": 5.6681552,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRemasterPlayTests.ContextTransitionsReachSchoolAndFuscaWithScreenshots",
+      "Status": "Passed",
+      "Duration": 12.2274435,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRemasterPlayTests.CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls",
+      "Status": "Passed",
+      "Duration": 10.8498963,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRequestedChangesTests.DeadzoneCarIsolationAndLastDevicePrompts",
+      "Status": "Passed",
+      "Duration": 0.2176725,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRequestedChangesTests.OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations",
+      "Status": "Passed",
+      "Duration": 28.227199,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRequestedChangesTests.RealMenuSettingsAndCancelWorkWithoutMouse",
+      "Status": "Passed",
+      "Duration": 2.0668666,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRequestedChangesTests.RumbleExpiresAndUnsupportedDevicesNeverThrow",
+      "Status": "Passed",
+      "Duration": 0.7440453,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignRequestedChangesTests.SchoolSeatingAndFaceWashKeepSourceArtAndStopCleanly",
+      "Status": "Passed",
+      "Duration": 11.4292703,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignVisualPolishMovementTests.FragmentosAllowsRealMovementBelowColumnAndBlocksTheSolidLadder",
+      "Status": "Passed",
+      "Duration": 6.6708978,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignVisualPolishPlayTests.EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders",
+      "Status": "Passed",
+      "Duration": 90.332617,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignVisualPolishPlayTests.VitraisColourSpritesOnGpuAndFadeAtTheEdge",
+      "Status": "Passed",
+      "Duration": 5.8071748,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.VarginhaCampaignTests.AlienBurstKnocksTheChildBackAndLeavesHimLyingWithNoMemory",
+      "Status": "Passed",
+      "Duration": 7.7985309,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.VarginhaCampaignTests.OpeningHandsControlToChildWithoutCombatAndPauseRestoresInput",
+      "Status": "Passed",
+      "Duration": 1.28319,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

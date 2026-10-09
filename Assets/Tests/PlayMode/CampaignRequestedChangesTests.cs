@@ -132,7 +132,7 @@ namespace Game.Tests.PlayMode
         {
             string folder=Path.Combine(Directory.GetCurrentDirectory(),"Docs","QARevisao20261007");Directory.CreateDirectory(folder);
             var original=camera.targetTexture;var active=RenderTexture.active;var rt=RenderTexture.GetTemporary(1280,960,24);var tex=new Texture2D(1280,960,TextureFormat.RGB24,false);
-            try{camera.targetTexture=rt;camera.Render();RenderTexture.active=rt;tex.ReadPixels(new Rect(0,0,1280,960),0,0);tex.Apply();File.WriteAllBytes(Path.Combine(folder,name),tex.EncodeToPNG());}
+            try{camera.targetTexture=rt;VarginhaPixelPresentation.RenderInto(camera,rt);RenderTexture.active=rt;tex.ReadPixels(new Rect(0,0,1280,960),0,0);tex.Apply();File.WriteAllBytes(Path.Combine(folder,name),tex.EncodeToPNG());}
             finally{camera.targetTexture=original;RenderTexture.active=active;RenderTexture.ReleaseTemporary(rt);Object.Destroy(tex);}
         }
     }

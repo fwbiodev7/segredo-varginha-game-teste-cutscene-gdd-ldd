@@ -22,10 +22,13 @@ namespace Game.Varginha.Experiment
         private readonly List<Point> _points = new();
         private bool _ready, _paused, _settings, _busy;
         private CampaignSoundscape _sound;
+        private CampaignMapPlan _guidancePlan;
         private readonly List<CampaignSchoolLife> _students = new();
         public bool IsActing => _busy;
         private float _titleTime, _saveTime, _cutTime;
         private bool _carContext;
+        private bool _schoolTransition, _radioReducedMotion;
+        private float _radioCueTime = -1;
         private string _dialogue, _speaker, _feedback, _cutTitle, _cutText;
         private int _selected = -1;
         private View _afterCut;
@@ -72,6 +75,7 @@ namespace Game.Varginha.Experiment
             else _player.transform.position = (Vector3)(CampaignMapPlan.Create(phase).spawn+Vector2.up*.58f);
             RestoreInventory();
             _sound = gameObject.AddComponent<CampaignSoundscape>(); _sound.Configure(phase == 2 ? "House" : "School", _player);
+            _guidancePlan=CampaignMapPlan.Create(phase);
             GameManager.Instance?.StartGame(); _ready = true; Lock(); Save();
         }
         private void RestoreInventory()
@@ -188,9 +192,18 @@ namespace Game.Varginha.Experiment
         private void DepartForSchool() { Save(); StartCoroutine(SchoolTransition()); }
         private IEnumerator SchoolTransition()
         {
-            _busy = true; Lock(); _sound?.Play("Starter");
+            _schoolTransition = _busy = true; Lock(); _sound?.Play("Starter");
+            _speaker = "A CAMINHO DA INDUSTRIAL";
+            _dialogue = "O Fusca atravessa Varginha. Uma pane breve, o rádio sem energia e uma voz:";
+            _radioReducedMotion = VarginhaGameSettings.Current.reducedMotion;
+            yield return new WaitForSeconds(.9f);
             _dialogue = "O Fusca atravessa Varginha. Uma pane breve, o rádio sem energia e uma voz: Não deixa ela sair. O motor volta a responder. A Industrial está próxima."; _speaker = "A CAMINHO DA INDUSTRIAL";
-            yield return new WaitForSeconds(VarginhaGameSettings.Current.reducedMotion ? 2 : 3.5f);
+            _radioCueTime = Time.time;
+            _sound?.PlayRadioInterference(_radioReducedMotion);
+            _sound?.CinematicDucking(.3f);
+            yield return new WaitForSeconds(.65f);
+            _radioCueTime = -1; _sound?.CinematicDucking(0);
+            yield return new WaitForSeconds(_radioReducedMotion ? .45f : 1.95f);
             _progress.arrival = true; _progress.inspection = 7; _progress.driveDistance = 120; Save();
             CampaignStorySave.GoTo(4);
         }
@@ -305,7 +318,7 @@ namespace Game.Varginha.Experiment
             _sound?.Play("Zip"); return VarginhaGameHUD.Instance != null && VarginhaGameHUD.Instance.OpenBackpack();
         }
         private void Say(string speaker, string line) { _speaker = speaker; _dialogue = line; Lock(); }
-        public void CloseDialogue() { _dialogue = null; Lock(); }
+        public void CloseDialogue() { if (_schoolTransition) return; _dialogue = null; Lock(); }
         private void Show(View value) { _view = value; _selected = -1; _feedback = null; Lock(); }
         private void Cutscene(string title, string line, View next)
         { _cutTitle = title; _cutText = line; _afterCut = next; _cutTime = 0; Show(View.Cutscene); }
@@ -352,7 +365,8 @@ namespace Game.Varginha.Experiment
             else if (_view == View.Complete) DrawComplete();
             else
             {
-                ExperimentGUI.Objective(CampaignSequence.Heading(phase) + " • 2026", PhaseTitle, Objective());
+                ExperimentGUI.Objective(CampaignSequence.Heading(phase) + " • 2026", PhaseTitle, CampaignGuidance.Next(_progress,phase));
+                if(!IsBlocked)CampaignGuidance.DrawMarker(_guidancePlan,_progress,phase);
                 bool hudEnabled=GUI.enabled; GUI.enabled=hudEnabled&&!_paused&&_view==View.World&&_dialogue==null;
                 if (CampaignHudIcons.Button(1010, CampaignHudIcons.Icon.Notebook, "TAB", "Caderno")) Show(View.Notebook);
                 bool enabled = GUI.enabled; GUI.enabled = enabled&&_player.HasBackpack;
@@ -367,6 +381,7 @@ namespace Game.Varginha.Experiment
                 }
                 if (_view != View.World) DrawInvestigation();
             }
+            DrawRadioInterference();
             if (_dialogue != null)
             {
                 ExperimentGUI.Panel(new Rect(125, 405, 1030, 255));
@@ -386,7 +401,9 @@ namespace Game.Varginha.Experiment
                     if (ExperimentGUI.Button(new Rect(385,607,210,38), "ANOTAÇÕES")) DiscussWithRenan(1);
                     if (ExperimentGUI.Button(new Rect(615,607,210,38), "PESQUISA")) DiscussWithRenan(2);
                 }
+                bool dialogueEnabled = GUI.enabled; GUI.enabled = dialogueEnabled && !_schoolTransition;
                 if (_carContext ? VarginhaGamepadUI.CarButton(new Rect(870,607,250,38),"CONTINUAR") : ExperimentGUI.Button(new Rect(870,607,250,38),"CONTINUAR")) CloseDialogue();
+                GUI.enabled = dialogueEnabled;
             }
             if (_paused)
             {
@@ -397,6 +414,30 @@ namespace Game.Varginha.Experiment
                 if (action == 3) Menu();
             }
             GUI.matrix = matrix;
+        }
+        private void DrawRadioInterference()
+        {
+            if (_radioCueTime < 0 || _paused) return;
+            float elapsed = Time.time - _radioCueTime;
+            if (elapsed < 0 || elapsed >= .65f) return;
+            float fade = 1 - Mathf.SmoothStep(0, 1, elapsed / .65f);
+            // One soft pulse, with captions rendered afterwards. Reduced motion
+            // keeps a quiet tint only: no white pulse, jitter or changing static.
+            if (_radioReducedMotion || VarginhaGameSettings.Current.reducedMotion)
+            { ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(0, 0, 0, .08f * fade)); return; }
+            float pulse = elapsed < .07f ? elapsed / .07f : Mathf.Clamp01((.24f - elapsed) / .17f);
+            ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(1, 1, 1, .48f * pulse));
+            int tick = Mathf.FloorToInt(elapsed * 12);
+            for (int i = 0; i < 5; i++)
+            {
+                int y = ((i * 47 + tick * 17) % 210) * 3;
+                ExperimentGUI.Box(new Rect(0, y, 1280, (i % 2 + 1) * 3), new Color(.68f, .78f, .78f, .16f * fade));
+            }
+            for (int i = 0; i < 24; i++)
+            {
+                int x = ((i * 37 + tick * 23) % 420) * 3, y = ((i * 53 + tick * 11) % 240) * 3;
+                ExperimentGUI.Box(new Rect(x, y, 6, 3), new Color(1, 1, 1, .18f * fade));
+            }
         }
         public void DiscussWithRenan(int topic)
         {
@@ -480,6 +521,6 @@ namespace Game.Varginha.Experiment
         }
         private void Menu() { Save(); Time.timeScale = 1; CampaignCinematics.Load("Menu_MisterioDeVarginha"); }
         private void OnApplicationPause(bool value) { if (value) Save(); }
-        private void OnDestroy() { if (Active == this) Active = null; Time.timeScale = 1; }
+        private void OnDestroy() { _radioCueTime = -1; _sound?.CinematicDucking(0); if (Active == this) Active = null; Time.timeScale = 1; }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Game.Varginha.Experiment
 {
+    [ExecuteAlways]
     public sealed class CampaignIllustratedContour:MonoBehaviour
     {
         // Ear clipping preserves the empty space below tables and between furniture legs.
@@ -43,7 +44,7 @@ namespace Game.Varginha.Experiment
         private void Start()
         {
             if(GetComponent<SpriteRenderer>().sprite==_sprite)_sprite.OverrideGeometry(_vertices,_triangles);
-            Destroy(this);
+            if(Application.isPlaying)Destroy(this);else DestroyImmediate(this);
         }
     }
 }

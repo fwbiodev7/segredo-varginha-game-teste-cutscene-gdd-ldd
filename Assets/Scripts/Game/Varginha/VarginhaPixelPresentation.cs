@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 namespace Game.Varginha
 {
@@ -28,6 +29,19 @@ namespace Game.Varginha
             // O mapa combina folhas de 44.1379/66.2 PPU e sprites procedurais de 64 PPU.
             // Um PixelPerfectCamera imporia outro zoom/grade; manter o ortho de cada fase
             // evita recortar arenas e comprometer as animações existentes.
+        }
+
+        // Pause and transition captures must use URP's supported camera rendering request.
+        public static void RenderInto(Camera camera, RenderTexture target)
+        {
+            if (GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset)
+                RenderPipeline.SubmitRenderRequest(camera, new UniversalRenderPipeline.SingleCameraRequest { destination = target });
+            else
+            {
+                var previous = camera.targetTexture;
+                try { camera.targetTexture = target; camera.Render(); }
+                finally { camera.targetTexture = previous; }
+            }
         }
     }
 }

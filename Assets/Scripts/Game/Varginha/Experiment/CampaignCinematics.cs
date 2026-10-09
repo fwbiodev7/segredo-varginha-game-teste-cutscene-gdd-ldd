@@ -92,7 +92,7 @@ namespace Game.Varginha.Experiment
             _transitionFrame = new RenderTexture(width, height, 16, RenderTextureFormat.ARGB32) { filterMode = FilterMode.Point };
             _transitionFrame.Create();
             var target = camera.targetTexture; var active = RenderTexture.active; var rect = camera.rect;
-            try { camera.targetTexture = _transitionFrame; camera.rect = new Rect(0, 0, 1, 1); camera.Render(); }
+            try { camera.targetTexture = _transitionFrame; camera.rect = new Rect(0, 0, 1, 1); VarginhaPixelPresentation.RenderInto(camera, _transitionFrame); }
             finally { camera.targetTexture = target; camera.rect = rect; RenderTexture.active = active; }
         }
         public static void Pause(bool paused)
@@ -109,7 +109,7 @@ namespace Game.Varginha.Experiment
             _pauseFrame=new RenderTexture(width,90,16,RenderTextureFormat.ARGB32) { filterMode=FilterMode.Point, name="Pausa congelada em pixels" }; _pauseFrame.Create();
             var temporary=RenderTexture.GetTemporary(width,90,16,RenderTextureFormat.ARGB32);
             var target=camera.targetTexture; var active=RenderTexture.active;
-            try { camera.targetTexture=temporary; camera.Render(); Graphics.Blit(temporary,_pauseFrame,_blur); }
+            try { camera.targetTexture=temporary; VarginhaPixelPresentation.RenderInto(camera,temporary); Graphics.Blit(temporary,_pauseFrame,_blur); }
             finally { camera.targetTexture=target; RenderTexture.active=active; RenderTexture.ReleaseTemporary(temporary); }
         }
         public static void DrawPauseBackdrop()

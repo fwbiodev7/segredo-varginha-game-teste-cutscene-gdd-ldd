@@ -1,0 +1,1917 @@
+[
+  {
+    "phase": 1,
+    "wall": 6,
+    "rect": [
+      356,
+      77,
+      38,
+      147
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 1,
+    "wall": 7,
+    "rect": [
+      356,
+      343,
+      38,
+      207
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 1,
+    "wall": 9,
+    "rect": [
+      880,
+      77,
+      34,
+      254
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 1,
+    "wall": 10,
+    "rect": [
+      880,
+      491,
+      34,
+      295
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 1,
+    "wall": 12,
+    "rect": [
+      668,
+      543,
+      24,
+      40
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 1,
+    "wall": 13,
+    "rect": [
+      668,
+      647,
+      24,
+      113
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 1,
+    "wall": 14,
+    "rect": [
+      356,
+      667,
+      38,
+      118
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 1,
+    "prop": "Árvore do clarão",
+    "before": [
+      1587,
+      295,
+      57,
+      60
+    ],
+    "after": [
+      1587,
+      295,
+      57,
+      60
+    ],
+    "vertices": [
+      1604,
+      295,
+      1626,
+      295,
+      1630,
+      324,
+      1644,
+      347,
+      1616,
+      355,
+      1587,
+      345,
+      1601,
+      324
+    ]
+  },
+  {
+    "phase": 1,
+    "prop": "Árvore sul",
+    "before": [
+      1138,
+      721,
+      52,
+      60
+    ],
+    "after": [
+      1138,
+      721,
+      52,
+      60
+    ],
+    "vertices": [
+      1154,
+      721,
+      1173,
+      721,
+      1178,
+      751,
+      1190,
+      774,
+      1164,
+      781,
+      1138,
+      772,
+      1151,
+      750
+    ]
+  },
+  {
+    "phase": 2,
+    "wall": 6,
+    "rect": [
+      448,
+      60,
+      41,
+      215
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 2,
+    "wall": 7,
+    "rect": [
+      448,
+      385,
+      41,
+      85
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 2,
+    "wall": 8,
+    "rect": [
+      448,
+      576,
+      41,
+      197
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 2,
+    "wall": 11,
+    "rect": [
+      929,
+      42,
+      30,
+      270
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 2,
+    "wall": 12,
+    "rect": [
+      929,
+      485,
+      30,
+      279
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 2,
+    "prop": "Árvore quintal norte",
+    "before": [
+      1280,
+      198,
+      74,
+      52
+    ],
+    "after": [
+      1280,
+      198,
+      74,
+      52
+    ],
+    "vertices": [
+      1304,
+      198,
+      1330,
+      198,
+      1333,
+      220,
+      1354,
+      243,
+      1317,
+      250,
+      1280,
+      242,
+      1301,
+      219
+    ]
+  },
+  {
+    "phase": 2,
+    "prop": "Árvore quintal nordeste",
+    "before": [
+      1650,
+      180,
+      70,
+      58
+    ],
+    "after": [
+      1650,
+      180,
+      70,
+      58
+    ],
+    "vertices": [
+      1672,
+      180,
+      1698,
+      180,
+      1702,
+      208,
+      1720,
+      231,
+      1685,
+      238,
+      1650,
+      230,
+      1670,
+      207
+    ]
+  },
+  {
+    "phase": 2,
+    "prop": "Árvore quintal sul",
+    "before": [
+      1270,
+      695,
+      64,
+      52
+    ],
+    "after": [
+      1270,
+      695,
+      64,
+      52
+    ],
+    "vertices": [
+      1290,
+      695,
+      1314,
+      695,
+      1318,
+      720,
+      1334,
+      739,
+      1302,
+      747,
+      1270,
+      738,
+      1287,
+      719
+    ]
+  },
+  {
+    "phase": 4,
+    "wall": 9,
+    "rect": [
+      650,
+      511,
+      29,
+      127
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 4,
+    "wall": 10,
+    "rect": [
+      749,
+      511,
+      28,
+      127
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 4,
+    "prop": "Árvore jardim oeste",
+    "before": [
+      99,
+      646,
+      40,
+      49
+    ],
+    "after": [
+      99,
+      646,
+      40,
+      49
+    ],
+    "vertices": [
+      112,
+      646,
+      126,
+      646,
+      130,
+      670,
+      139,
+      689,
+      119,
+      695,
+      99,
+      688,
+      108,
+      669
+    ]
+  },
+  {
+    "phase": 4,
+    "prop": "Árvore jardim leste",
+    "before": [
+      1238,
+      648,
+      38,
+      52
+    ],
+    "after": [
+      1238,
+      648,
+      38,
+      52
+    ],
+    "vertices": [
+      1250,
+      648,
+      1264,
+      648,
+      1267,
+      674,
+      1276,
+      694,
+      1257,
+      700,
+      1238,
+      693,
+      1246,
+      674
+    ]
+  },
+  {
+    "phase": 5,
+    "wall": 9,
+    "rect": [
+      650,
+      511,
+      29,
+      127
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 5,
+    "wall": 10,
+    "rect": [
+      749,
+      511,
+      28,
+      127
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 5,
+    "prop": "Árvore jardim oeste",
+    "before": [
+      99,
+      646,
+      40,
+      49
+    ],
+    "after": [
+      99,
+      646,
+      40,
+      49
+    ],
+    "vertices": [
+      112,
+      646,
+      126,
+      646,
+      130,
+      670,
+      139,
+      689,
+      119,
+      695,
+      99,
+      688,
+      108,
+      669
+    ]
+  },
+  {
+    "phase": 5,
+    "prop": "Árvore jardim leste",
+    "before": [
+      1238,
+      648,
+      38,
+      52
+    ],
+    "after": [
+      1238,
+      648,
+      38,
+      52
+    ],
+    "vertices": [
+      1250,
+      648,
+      1264,
+      648,
+      1267,
+      674,
+      1276,
+      694,
+      1257,
+      700,
+      1238,
+      693,
+      1246,
+      674
+    ]
+  },
+  {
+    "phase": 6,
+    "wall": 5,
+    "rect": [
+      304,
+      585,
+      43,
+      138
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 6,
+    "wall": 6,
+    "rect": [
+      681,
+      585,
+      41,
+      138
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 6,
+    "wall": 9,
+    "rect": [
+      423,
+      719,
+      20,
+      57
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 6,
+    "wall": 10,
+    "rect": [
+      570,
+      719,
+      23,
+      57
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 6,
+    "prop": "Cadeira central sul oeste",
+    "before": [
+      404,
+      439,
+      29,
+      34
+    ],
+    "after": [
+      404,
+      450,
+      29,
+      23
+    ],
+    "vertices": [
+      404,
+      454,
+      409,
+      450,
+      428,
+      450,
+      433,
+      454,
+      433,
+      469,
+      429,
+      473,
+      409,
+      473,
+      404,
+      469
+    ]
+  },
+  {
+    "phase": 6,
+    "prop": "Cadeira central sul meio",
+    "before": [
+      467,
+      432,
+      26,
+      36
+    ],
+    "after": [
+      467,
+      446,
+      26,
+      22
+    ],
+    "vertices": [
+      467,
+      450,
+      472,
+      446,
+      489,
+      446,
+      493,
+      450,
+      493,
+      464,
+      489,
+      468,
+      471,
+      468,
+      467,
+      464
+    ]
+  },
+  {
+    "phase": 6,
+    "prop": "Cadeira central sul leste",
+    "before": [
+      540,
+      431,
+      25,
+      36
+    ],
+    "after": [
+      540,
+      446,
+      25,
+      21
+    ],
+    "vertices": [
+      540,
+      450,
+      544,
+      446,
+      561,
+      446,
+      565,
+      450,
+      565,
+      463,
+      561,
+      467,
+      544,
+      467,
+      540,
+      463
+    ]
+  },
+  {
+    "phase": 6,
+    "prop": "Planta oeste",
+    "before": [
+      69,
+      487,
+      22,
+      20
+    ],
+    "after": [
+      69,
+      487,
+      22,
+      20
+    ],
+    "vertices": [
+      75,
+      487,
+      85,
+      487,
+      91,
+      493,
+      88,
+      505,
+      81,
+      507,
+      72,
+      504,
+      69,
+      493
+    ]
+  },
+  {
+    "phase": 6,
+    "prop": "Planta leste",
+    "before": [
+      893,
+      517,
+      36,
+      33
+    ],
+    "after": [
+      893,
+      517,
+      36,
+      33
+    ],
+    "vertices": [
+      902,
+      517,
+      921,
+      517,
+      929,
+      526,
+      925,
+      545,
+      911,
+      550,
+      896,
+      544,
+      893,
+      526
+    ]
+  },
+  {
+    "phase": 6,
+    "prop": "Planta entrada oeste",
+    "before": [
+      379,
+      659,
+      25,
+      23
+    ],
+    "after": [
+      379,
+      659,
+      25,
+      23
+    ],
+    "vertices": [
+      385,
+      659,
+      398,
+      659,
+      404,
+      665,
+      401,
+      678,
+      391,
+      682,
+      381,
+      677,
+      379,
+      665
+    ]
+  },
+  {
+    "phase": 6,
+    "prop": "Planta entrada leste",
+    "before": [
+      614,
+      661,
+      25,
+      22
+    ],
+    "after": [
+      614,
+      661,
+      25,
+      22
+    ],
+    "vertices": [
+      620,
+      661,
+      633,
+      661,
+      639,
+      667,
+      636,
+      679,
+      626,
+      683,
+      616,
+      678,
+      614,
+      667
+    ]
+  },
+  {
+    "phase": 7,
+    "wall": 10,
+    "rect": [
+      1436,
+      60,
+      23,
+      294
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 7,
+    "wall": 11,
+    "rect": [
+      1130,
+      60,
+      22,
+      228
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 7,
+    "prop": "Árvore oeste",
+    "before": [
+      130,
+      141,
+      39,
+      41
+    ],
+    "after": [
+      130,
+      141,
+      39,
+      41
+    ],
+    "vertices": [
+      142,
+      141,
+      157,
+      141,
+      161,
+      159,
+      169,
+      176,
+      151,
+      182,
+      130,
+      175,
+      138,
+      157
+    ]
+  },
+  {
+    "phase": 7,
+    "prop": "Árvore norte",
+    "before": [
+      410,
+      147,
+      40,
+      42
+    ],
+    "after": [
+      410,
+      147,
+      40,
+      42
+    ],
+    "vertices": [
+      422,
+      147,
+      438,
+      147,
+      442,
+      165,
+      450,
+      182,
+      430,
+      189,
+      410,
+      181,
+      417,
+      162
+    ]
+  },
+  {
+    "phase": 7,
+    "prop": "Árvore bifurcação",
+    "before": [
+      278,
+      411,
+      66,
+      69
+    ],
+    "after": [
+      278,
+      411,
+      66,
+      69
+    ],
+    "vertices": [
+      298,
+      411,
+      323,
+      411,
+      326,
+      445,
+      344,
+      470,
+      311,
+      480,
+      278,
+      469,
+      295,
+      442
+    ]
+  },
+  {
+    "phase": 7,
+    "prop": "Árvore clareira",
+    "before": [
+      563,
+      414,
+      62,
+      66
+    ],
+    "after": [
+      563,
+      414,
+      62,
+      66
+    ],
+    "vertices": [
+      583,
+      414,
+      606,
+      414,
+      609,
+      446,
+      625,
+      470,
+      596,
+      480,
+      563,
+      470,
+      579,
+      446
+    ]
+  },
+  {
+    "phase": 7,
+    "prop": "Árvore esconderijo",
+    "before": [
+      641,
+      761,
+      57,
+      62
+    ],
+    "after": [
+      641,
+      761,
+      57,
+      62
+    ],
+    "vertices": [
+      660,
+      761,
+      679,
+      761,
+      682,
+      790,
+      698,
+      814,
+      670,
+      823,
+      641,
+      814,
+      657,
+      790
+    ]
+  },
+  {
+    "phase": 7,
+    "prop": "Árvore margem",
+    "before": [
+      1270,
+      644,
+      63,
+      58
+    ],
+    "after": [
+      1270,
+      644,
+      63,
+      58
+    ],
+    "vertices": [
+      1291,
+      644,
+      1313,
+      644,
+      1315,
+      672,
+      1333,
+      694,
+      1302,
+      702,
+      1270,
+      693,
+      1288,
+      672
+    ]
+  },
+  {
+    "phase": 7,
+    "prop": "Árvore sul",
+    "before": [
+      207,
+      953,
+      55,
+      54
+    ],
+    "after": [
+      207,
+      953,
+      55,
+      54
+    ],
+    "vertices": [
+      226,
+      953,
+      244,
+      953,
+      247,
+      978,
+      262,
+      999,
+      237,
+      1007,
+      207,
+      998,
+      223,
+      978
+    ]
+  },
+  {
+    "phase": 8,
+    "prop": "Pia batismal",
+    "before": [
+      1311,
+      797,
+      63,
+      40
+    ],
+    "after": [
+      1311,
+      797,
+      63,
+      40
+    ],
+    "vertices": [
+      1326,
+      797,
+      1359,
+      797,
+      1374,
+      809,
+      1370,
+      827,
+      1342,
+      837,
+      1316,
+      827,
+      1311,
+      809
+    ]
+  },
+  {
+    "phase": 9,
+    "wall": 4,
+    "rect": [
+      659,
+      0,
+      64,
+      442
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 9,
+    "wall": 5,
+    "rect": [
+      659,
+      642,
+      64,
+      331
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 9,
+    "prop": "Samambaia",
+    "before": [
+      75,
+      551,
+      67,
+      40
+    ],
+    "after": [
+      75,
+      551,
+      67,
+      40
+    ],
+    "vertices": [
+      90,
+      551,
+      126,
+      551,
+      142,
+      561,
+      135,
+      583,
+      108,
+      591,
+      81,
+      583,
+      75,
+      561
+    ]
+  },
+  {
+    "phase": 9,
+    "prop": "Samambaia laboratório",
+    "before": [
+      1410,
+      315,
+      65,
+      39
+    ],
+    "after": [
+      1410,
+      315,
+      65,
+      39
+    ],
+    "vertices": [
+      1425,
+      315,
+      1460,
+      315,
+      1475,
+      325,
+      1468,
+      346,
+      1443,
+      354,
+      1418,
+      346,
+      1410,
+      325
+    ]
+  },
+  {
+    "phase": 10,
+    "wall": 7,
+    "rect": [
+      496,
+      46,
+      63,
+      336
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 10,
+    "wall": 8,
+    "rect": [
+      1006,
+      46,
+      61,
+      336
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 10,
+    "wall": 9,
+    "rect": [
+      496,
+      451,
+      66,
+      142
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 10,
+    "wall": 10,
+    "rect": [
+      1006,
+      451,
+      69,
+      142
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 11,
+    "wall": 9,
+    "rect": [
+      650,
+      511,
+      29,
+      127
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 11,
+    "wall": 10,
+    "rect": [
+      749,
+      511,
+      28,
+      127
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 11,
+    "prop": "Árvore jardim oeste",
+    "before": [
+      99,
+      646,
+      40,
+      49
+    ],
+    "after": [
+      99,
+      646,
+      40,
+      49
+    ],
+    "vertices": [
+      112,
+      646,
+      126,
+      646,
+      130,
+      670,
+      139,
+      689,
+      119,
+      695,
+      99,
+      688,
+      108,
+      669
+    ]
+  },
+  {
+    "phase": 11,
+    "prop": "Árvore jardim leste",
+    "before": [
+      1238,
+      648,
+      38,
+      52
+    ],
+    "after": [
+      1238,
+      648,
+      38,
+      52
+    ],
+    "vertices": [
+      1250,
+      648,
+      1264,
+      648,
+      1267,
+      674,
+      1276,
+      694,
+      1257,
+      700,
+      1238,
+      693,
+      1246,
+      674
+    ]
+  },
+  {
+    "phase": 12,
+    "wall": 7,
+    "rect": [
+      822,
+      338,
+      22,
+      201
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 12,
+    "wall": 8,
+    "rect": [
+      814,
+      21,
+      22,
+      220
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 12,
+    "prop": "Árvore central",
+    "before": [
+      344,
+      434,
+      43,
+      44
+    ],
+    "after": [
+      344,
+      434,
+      43,
+      44
+    ],
+    "vertices": [
+      357,
+      434,
+      374,
+      434,
+      378,
+      455,
+      387,
+      471,
+      366,
+      478,
+      344,
+      470,
+      353,
+      454
+    ]
+  },
+  {
+    "phase": 12,
+    "prop": "Árvore leste",
+    "before": [
+      686,
+      437,
+      40,
+      38
+    ],
+    "after": [
+      686,
+      437,
+      40,
+      38
+    ],
+    "vertices": [
+      699,
+      437,
+      714,
+      437,
+      718,
+      455,
+      726,
+      468,
+      706,
+      475,
+      686,
+      467,
+      695,
+      454
+    ]
+  },
+  {
+    "phase": 112,
+    "wall": 2,
+    "rect": [
+      365,
+      3,
+      31,
+      180
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 112,
+    "wall": 3,
+    "rect": [
+      649,
+      6,
+      27,
+      198
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 112,
+    "wall": 12,
+    "rect": [
+      352,
+      176,
+      44,
+      80
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 112,
+    "wall": 13,
+    "rect": [
+      364,
+      334,
+      25,
+      82
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 112,
+    "wall": 15,
+    "rect": [
+      651,
+      176,
+      40,
+      79
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 112,
+    "wall": 16,
+    "rect": [
+      651,
+      330,
+      26,
+      84
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 13,
+    "wall": 11,
+    "rect": [
+      445,
+      486,
+      36,
+      111
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 13,
+    "wall": 12,
+    "rect": [
+      583,
+      486,
+      27,
+      110
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 13,
+    "wall": 18,
+    "rect": [
+      350,
+      399,
+      23,
+      141
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 13,
+    "wall": 19,
+    "rect": [
+      641,
+      399,
+      22,
+      140
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 13,
+    "wall": 20,
+    "rect": [
+      414,
+      396,
+      27,
+      50
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 13,
+    "wall": 21,
+    "rect": [
+      597,
+      390,
+      24,
+      57
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 14,
+    "prop": "Pia batismal",
+    "before": [
+      1311,
+      797,
+      63,
+      40
+    ],
+    "after": [
+      1311,
+      797,
+      63,
+      40
+    ],
+    "vertices": [
+      1326,
+      797,
+      1359,
+      797,
+      1374,
+      809,
+      1370,
+      827,
+      1342,
+      837,
+      1316,
+      827,
+      1311,
+      809
+    ]
+  },
+  {
+    "phase": 15,
+    "wall": 6,
+    "rect": [
+      356,
+      77,
+      38,
+      147
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 15,
+    "wall": 7,
+    "rect": [
+      356,
+      343,
+      38,
+      207
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 15,
+    "wall": 9,
+    "rect": [
+      880,
+      77,
+      34,
+      254
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 15,
+    "wall": 10,
+    "rect": [
+      880,
+      491,
+      34,
+      295
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 15,
+    "wall": 12,
+    "rect": [
+      668,
+      543,
+      24,
+      40
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 15,
+    "wall": 13,
+    "rect": [
+      668,
+      647,
+      24,
+      113
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 15,
+    "wall": 14,
+    "rect": [
+      356,
+      667,
+      38,
+      118
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 15,
+    "prop": "Árvore do clarão",
+    "before": [
+      1587,
+      295,
+      57,
+      60
+    ],
+    "after": [
+      1587,
+      295,
+      57,
+      60
+    ],
+    "vertices": [
+      1604,
+      295,
+      1626,
+      295,
+      1630,
+      324,
+      1644,
+      347,
+      1616,
+      355,
+      1587,
+      345,
+      1601,
+      324
+    ]
+  },
+  {
+    "phase": 15,
+    "prop": "Árvore sul",
+    "before": [
+      1138,
+      721,
+      52,
+      60
+    ],
+    "after": [
+      1138,
+      721,
+      52,
+      60
+    ],
+    "vertices": [
+      1154,
+      721,
+      1173,
+      721,
+      1178,
+      751,
+      1190,
+      774,
+      1164,
+      781,
+      1138,
+      772,
+      1151,
+      750
+    ]
+  },
+  {
+    "phase": 18,
+    "wall": 2,
+    "rect": [
+      112,
+      15,
+      20,
+      120
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 18,
+    "wall": 4,
+    "rect": [
+      620,
+      30,
+      13,
+      130
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 18,
+    "wall": 10,
+    "rect": [
+      727,
+      82,
+      14,
+      56
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 18,
+    "prop": "Cilindro da ruptura",
+    "before": [
+      356,
+      83,
+      57,
+      28
+    ],
+    "after": [
+      356,
+      83,
+      57,
+      28
+    ],
+    "vertices": [
+      368,
+      83,
+      401,
+      83,
+      413,
+      91,
+      408,
+      105,
+      385,
+      111,
+      361,
+      105,
+      356,
+      91
+    ]
+  },
+  {
+    "phase": 19,
+    "wall": 6,
+    "rect": [
+      356,
+      77,
+      38,
+      147
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 19,
+    "wall": 7,
+    "rect": [
+      356,
+      343,
+      38,
+      207
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 19,
+    "wall": 9,
+    "rect": [
+      880,
+      77,
+      34,
+      254
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 19,
+    "wall": 10,
+    "rect": [
+      880,
+      491,
+      34,
+      295
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 19,
+    "wall": 12,
+    "rect": [
+      668,
+      543,
+      24,
+      40
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 19,
+    "wall": 13,
+    "rect": [
+      668,
+      647,
+      24,
+      113
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 19,
+    "wall": 14,
+    "rect": [
+      356,
+      667,
+      38,
+      118
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 19,
+    "prop": "Árvore do clarão",
+    "before": [
+      1587,
+      295,
+      57,
+      60
+    ],
+    "after": [
+      1587,
+      295,
+      57,
+      60
+    ],
+    "vertices": [
+      1604,
+      295,
+      1626,
+      295,
+      1630,
+      324,
+      1644,
+      347,
+      1616,
+      355,
+      1587,
+      345,
+      1601,
+      324
+    ]
+  },
+  {
+    "phase": 19,
+    "prop": "Árvore sul",
+    "before": [
+      1138,
+      721,
+      52,
+      60
+    ],
+    "after": [
+      1138,
+      721,
+      52,
+      60
+    ],
+    "vertices": [
+      1154,
+      721,
+      1173,
+      721,
+      1178,
+      751,
+      1190,
+      774,
+      1164,
+      781,
+      1138,
+      772,
+      1151,
+      750
+    ]
+  },
+  {
+    "phase": 121,
+    "wall": 9,
+    "rect": [
+      650,
+      511,
+      29,
+      127
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 121,
+    "wall": 10,
+    "rect": [
+      749,
+      511,
+      28,
+      127
+    ],
+    "change": "explicit limits, no automatic side padding"
+  },
+  {
+    "phase": 121,
+    "prop": "Árvore jardim oeste",
+    "before": [
+      99,
+      646,
+      40,
+      49
+    ],
+    "after": [
+      99,
+      646,
+      40,
+      49
+    ],
+    "vertices": [
+      112,
+      646,
+      126,
+      646,
+      130,
+      670,
+      139,
+      689,
+      119,
+      695,
+      99,
+      688,
+      108,
+      669
+    ]
+  },
+  {
+    "phase": 121,
+    "prop": "Árvore jardim leste",
+    "before": [
+      1238,
+      648,
+      38,
+      52
+    ],
+    "after": [
+      1238,
+      648,
+      38,
+      52
+    ],
+    "vertices": [
+      1250,
+      648,
+      1264,
+      648,
+      1267,
+      674,
+      1276,
+      694,
+      1257,
+      700,
+      1238,
+      693,
+      1246,
+      674
+    ]
+  }
+]

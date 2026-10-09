@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="13" result="Failed(Child)" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-09 16:56:12Z" end-time="2026-10-09 17:01:24Z" duration="311,721338">
+  <test-suite type="TestSuite" id="1665" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="245" result="Failed" site="Child" start-time="2026-10-09 16:56:12Z" end-time="2026-10-09 17:01:24Z" duration="311.721338" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1948" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="245" result="Failed" site="Child" start-time="2026-10-09 16:56:12Z" end-time="2026-10-09 17:01:24Z" duration="311.704177" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="17772" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1949" name="Game" fullname="Game" runstate="Runnable" testcasecount="245" result="Failed" site="Child" start-time="2026-10-09 16:56:12Z" end-time="2026-10-09 17:01:24Z" duration="311.328680" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1950" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="245" result="Failed" site="Child" start-time="2026-10-09 16:56:12Z" end-time="2026-10-09 17:01:24Z" duration="311.323851" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1951" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="245" result="Failed" site="Child" start-time="2026-10-09 16:56:13Z" end-time="2026-10-09 17:01:24Z" duration="311.197274" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1710" name="CampaignLabWorkshopAuditTests" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-09 16:56:13Z" end-time="2026-10-09 16:58:05Z" duration="111.852966" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1711" name="LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload" methodname="LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="566520743" result="Passed" start-time="2026-10-09 16:56:13Z" end-time="2026-10-09 16:56:41Z" duration="28.109304" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1714" name="PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload" methodname="PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="826309457" result="Failed" start-time="2026-10-09 16:56:41Z" end-time="2026-10-09 16:57:01Z" duration="19.890284" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Vehicle stopped inside the bay: body=(-0.20, 1.09), rendered=(-0.20, 1.09, 0.00), bay=(0.17, 1.00), body distance=0,3820209, heading=North, speed=0
+  Expected: True
+  But was:  False
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.CampaignLabWorkshopAuditTests+<PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload>d__18.MoveNext () [0x004da] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\Assets\Tests\PlayMode\CampaignLabWorkshopAuditTests.cs:174
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1713" name="PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt" methodname="PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="1990089581" result="Passed" start-time="2026-10-09 16:57:01Z" end-time="2026-10-09 16:57:03Z" duration="1.701691" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1712" name="WorkshopSingleApplicationReloadAndDepartureRemainConsistent" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent" methodname="WorkshopSingleApplicationReloadAndDepartureRemainConsistent" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="1749026225" result="Passed" start-time="2026-10-09 16:57:03Z" end-time="2026-10-09 16:58:05Z" duration="62.029861" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1715" name="CampaignPuzzleDesignPlayTests" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-09 16:58:05Z" end-time="2026-10-09 17:01:17Z" duration="192.692994" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1719" name="BasementStairsKeepTheNextChapterSeparateFromReturningUpstairs" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.BasementStairsKeepTheNextChapterSeparateFromReturningUpstairs" methodname="BasementStairsKeepTheNextChapterSeparateFromReturningUpstairs" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" seed="654913201" result="Passed" start-time="2026-10-09 16:58:05Z" end-time="2026-10-09 16:58:17Z" duration="12.174971" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="120000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1720" name="CoveredOfficeSofaBlocksRealMovementFromEveryAccessibleSide" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.CoveredOfficeSofaBlocksRealMovementFromEveryAccessibleSide" methodname="CoveredOfficeSofaBlocksRealMovementFromEveryAccessibleSide" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" seed="1317445047" result="Passed" start-time="2026-10-09 16:58:17Z" end-time="2026-10-09 16:58:26Z" duration="9.081154" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="120000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1717" name="FiveDifferentPuzzleInterfacesAcceptControllerAnswersAndPreservePartialProgress" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.FiveDifferentPuzzleInterfacesAcceptControllerAnswersAndPreservePartialProgress" methodname="FiveDifferentPuzzleInterfacesAcceptControllerAnswersAndPreservePartialProgress" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" seed="21503819" result="Passed" start-time="2026-10-09 16:58:26Z" end-time="2026-10-09 17:00:01Z" duration="94.785116" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="240000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1718" name="MansionDoorsConnectTheHallLivingRoomOfficeAndServicePassageWithRealMovement" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.MansionDoorsConnectTheHallLivingRoomOfficeAndServicePassageWithRealMovement" methodname="MansionDoorsConnectTheHallLivingRoomOfficeAndServicePassageWithRealMovement" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" seed="1442788256" result="Passed" start-time="2026-10-09 17:00:01Z" end-time="2026-10-09 17:01:01Z" duration="60.663059" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="180000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1716" name="SpatialMapCanBePlacedRotatedAndConfirmedUsingTheController" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.SpatialMapCanBePlacedRotatedAndConfirmedUsingTheController" methodname="SpatialMapCanBePlacedRotatedAndConfirmedUsingTheController" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" seed="2115822153" result="Passed" start-time="2026-10-09 17:01:01Z" end-time="2026-10-09 17:01:17Z" duration="15.766145" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="180000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1922" name="VarginhaRequestedGameplayTests" fullname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" classname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-09 17:01:17Z" end-time="2026-10-09 17:01:24Z" duration="6.556703" total="4" passed="1" failed="3" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1925" name="ChurchHasDarknessAltarPriestAndClearFlashlightCone" fullname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests.ChurchHasDarknessAltarPriestAndClearFlashlightCone" methodname="ChurchHasDarknessAltarPriestAndClearFlashlightCone" classname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" runstate="Runnable" seed="1495951993" result="Failed" start-time="2026-10-09 17:01:18Z" end-time="2026-10-09 17:01:21Z" duration="3.123260" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: greater than 0.0f
+  But was:  0.0f
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaRequestedGameplayTests+<ChurchHasDarknessAltarPriestAndClearFlashlightCone>d__7.MoveNext () [0x00096] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\Assets\Tests\PlayMode\VarginhaRequestedGameplayTests.cs:112
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+]]></output>
+              </test-case>
+              <test-case id="1924" name="FuscaBoardsImmediatelyWithoutDoorAndKeepsRequirements" fullname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests.FuscaBoardsImmediatelyWithoutDoorAndKeepsRequirements" methodname="FuscaBoardsImmediatelyWithoutDoorAndKeepsRequirements" classname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" runstate="Runnable" seed="866771389" result="Passed" start-time="2026-10-09 17:01:21Z" end-time="2026-10-09 17:01:21Z" duration="0.542021" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[[Fusca] Edelzio deu a partida e acelerou pela noite de Varginha.
+]]></output>
+              </test-case>
+              <test-case id="1926" name="HouseFurnitureResizesOnceAndSurgesIncludeRecovery" fullname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests.HouseFurnitureResizesOnceAndSurgesIncludeRecovery" methodname="HouseFurnitureResizesOnceAndSurgesIncludeRecovery" classname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" runstate="Runnable" seed="1807953988" result="Failed" label="Error" start-time="2026-10-09 17:01:21Z" end-time="2026-10-09 17:01:21Z" duration="0.203947" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[System.NullReferenceException : Object reference not set to an instance of an object]]></message>
+                  <stack-trace><![CDATA[  at Game.Tests.PlayMode.VarginhaRequestedGameplayTests.HouseFurnitureResizesOnceAndSurgesIncludeRecovery () [0x0012d] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\Assets\Tests\PlayMode\VarginhaRequestedGameplayTests.cs:182 
+  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 ]]></stack-trace>
+                </failure>
+              </test-case>
+              <test-case id="1923" name="PewStopsWalkingAndSeatRestoresCollisionWhenInterrupted" fullname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests.PewStopsWalkingAndSeatRestoresCollisionWhenInterrupted" methodname="PewStopsWalkingAndSeatRestoresCollisionWhenInterrupted" classname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" runstate="Runnable" seed="213631225" result="Failed" start-time="2026-10-09 17:01:21Z" end-time="2026-10-09 17:01:24Z" duration="2.371863" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaRequestedGameplayTests+<PewStopsWalkingAndSeatRestoresCollisionWhenInterrupted>d__5.MoveNext () [0x0026b] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\Assets\Tests\PlayMode\VarginhaRequestedGameplayTests.cs:74
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,29 @@
+Mono path[0] = 'C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28/Builds/jogo_varginha_alpha_0.1/jogo_varginha_alpha_0.1_Data/Managed'
+Mono config path = 'C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28/Builds/jogo_varginha_alpha_0.1/MonoBleedingEdge/etc'
+CodeReloadManager initialized
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Loading player data from C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28/Builds/jogo_varginha_alpha_0.1/jogo_varginha_alpha_0.1_Data/data.unity3d
+Initialize engine version: 6000.6.0f1 (f7f8ed4d1e24)
+[EntityIdStore] init: VM path (explicit commit), pageSize=4096, blockCount=1048576, entitiesPerBlock=256, slots reserved=4294967296 bytes
+[Subsystems] Discovering subsystems at path C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28/Builds/jogo_varginha_alpha_0.1/jogo_varginha_alpha_0.1_Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+d3d12: failed to create D3D12 device (0x887a0004).
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 10.1]
+    Renderer: NVIDIA GeForce G210  (ID=0xa60)
+    Vendor:   NVIDIA
+    VRAM:     972 MB
+    Driver:   9.18.13.4174
+Begin MonoManager ReloadAssembly
+- Finished resetting the current domain, in  0.013 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+GpuFence::Create(): Failed to create ID3D11Fence, error 0x80070057
+UnloadTime: 2.477800 ms

@@ -89,7 +89,7 @@ namespace Game.Tests.PlayMode
             var target=RenderTexture.GetTemporary(960,720,24);var image=new Texture2D(960,720,TextureFormat.RGB24,false);
             try
             {
-                camera.targetTexture=target;camera.Render();RenderTexture.active=target;image.ReadPixels(new Rect(0,0,960,720),0,0);image.Apply();
+                camera.targetTexture=target;VarginhaPixelPresentation.RenderInto(camera,target);RenderTexture.active=target;image.ReadPixels(new Rect(0,0,960,720),0,0);image.Apply();
                 File.WriteAllBytes(Path.Combine(folder,name),image.EncodeToPNG());
             }
             finally{camera.targetTexture=previous;RenderTexture.active=active;RenderTexture.ReleaseTemporary(target);Object.Destroy(image);}
@@ -231,7 +231,7 @@ namespace Game.Tests.PlayMode
                 }
                 var current=CampaignContinuationController.Active;
                 var finalDefinition=CampaignContinuationDefinition.Get(phase,current.area);
-                Assert.That(current.Submit(0,System.Linq.Enumerable.Range(0,finalDefinition.cards.Length).ToArray()),Is.True,"Puzzle "+phase);
+                Assert.That(current.Submit(phase==11?3:0,CampaignPuzzleDesign.Redesigned(phase)?CampaignPuzzleDesign.Solution(phase):System.Linq.Enumerable.Range(0,finalDefinition.cards.Length).ToArray()),Is.True,"Puzzle "+phase);
                 yield return new WaitForSeconds(3.1f);current.CloseMessage();
                 Assert.That(current.State.solved[phase-11],Is.True);
                 current.Interact(phase==12?"service":"exit");

@@ -91,14 +91,14 @@ namespace Game.Varginha.Experiment
         {
             var definition=Get(phase,area);var plan=new CampaignMapPlan{phase=definition.map,title=definition.title};
             CampaignIllustratedMaps.Apply(plan);
-            if(phase==13)plan.points.Add(new CampaignMapPlan.Point("ground","ESCADA • VOLTAR AO TÉRREO",plan.spawn.x,plan.spawn.y));
+            if(phase==13)plan.points.Add(new CampaignMapPlan.Point("ground","ESCADA • VOLTAR AO TÉRREO",plan.spawn.x,plan.spawn.y-1.65f));
             foreach(var point in plan.points)
             {
                 int index=System.Array.IndexOf(definition.ids,point.id);
                 if(index>=0)point.label=definition.labels[index];
                 if(point.id=="renan")point.label="RENAN • CONVERSAR";
                 else if(point.id=="notebook")point.label="NOTEBOOK • COMPARAR EVIDÊNCIAS";
-                else if(point.id=="exit")point.label=phase==11?"PARTIR PARA O CASARÃO":"SAÍDA • CONTINUAR A INVESTIGAÇÃO";
+                else if(point.id=="exit")point.label="SAÍDA • "+CampaignGuidance.Destination(phase);
                 else if(point.id=="entrance")point.label="PORTA PRINCIPAL • ENTRAR NO TÉRREO";
                 else if(point.id=="garden")point.label="PORTA PRINCIPAL • VOLTAR AO JARDIM";
                 else if(point.id=="service")point.label="PORTA DE SERVIÇO • ABRIR PASSAGEM";

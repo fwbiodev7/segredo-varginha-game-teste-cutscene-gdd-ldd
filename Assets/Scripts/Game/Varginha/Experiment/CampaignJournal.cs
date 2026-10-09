@@ -17,6 +17,9 @@ namespace Game.Varginha.Experiment
             if((e.visited&1)!=0)entries.Add("TERCEIRO FRAGMENTO • O livro da biblioteca conserva ÁRVORE, margem oeste, com carimbo de 23:23 da diocese.");
             if((e.visited&2)!=0)entries.Add("BIBLIOTECA • O rio atravessa o centro entre a árvore e a capela.");
             if((e.visited&4)!=0)entries.Add("RELATO DE 1996 • A capela fica a leste. O mapa segue ÁRVORE → RIO → CAPELA.");
+            if((e.visited&1)!=0)entries.Add("LEVANTAMENTO • Da árvore, a trilha segue para leste.");
+            if((e.visited&2)!=0)entries.Add("LEVANTAMENTO • A ponte cruza o rio de oeste para leste.");
+            if((e.visited&4)!=0)entries.Add("LEVANTAMENTO • A entrada da capela fica ao sul: a trilha chega seguindo para norte.");
             if(e.anchorFound)entries.Add("LIVRO DO TOMBO • Registro 23, ano 1996, símbolo ÂNCORA. Edelzio é o selo vivo desde o acidente.");
             if(e.reagentUnlocked)entries.Add("ANÁLISE DE OUZANA • Controle neutro, resíduo instável: o reagente revela as marcas de contenção.");
             if(e.sprayed!=0)entries.Add("FUSCA • Marcas registradas: "+((e.sprayed&1)!=0?"ÁRVORE • I; ":"")+((e.sprayed&2)!=0?"RIO • II; ":"")+((e.sprayed&4)!=0?"CAPELA • III.":""));

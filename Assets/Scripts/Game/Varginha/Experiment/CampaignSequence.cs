@@ -21,8 +21,7 @@ namespace Game.Varginha.Experiment
         public static string Heading(int id) => "ATO " + Act(id) + " • " + Acts[Act(id) - 1] + " • FASE " + Chapter(id);
         public static int Resume(int id) => id == 3 || id == 5 ? 4 : id == 16 || id == 17 || id == 19 ? 18 : id;
         public static int Next(int id) => id == 2 || id == 3 ? 4 : id == 4 || id == 5 ? 6 : id == 15 || id == 16 || id == 17 ? 18 : id == 18 || id == 19 ? 20 : Mathf.Min(21, id + 1);
-        public static string ContinueLabel(int id) => Chapter(id) == Chapter(Next(id))
-            ? (id == 9 ? "IR À OFICINA" : "ENTRAR NO PORÃO") : "CONTINUAR • FASE " + Chapter(Next(id));
+        public static string ContinueLabel(int id) => "IR PARA "+CampaignGuidance.Destination(id);
 
         public static void Migrate(CampaignStory story)
         {

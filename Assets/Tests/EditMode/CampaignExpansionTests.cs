@@ -135,7 +135,7 @@ namespace Game.Tests.EditMode
         {
             var state=new CampaignExpansionState { mapOrder=new[]{0,1,2},sampleOrder=new[]{0,1,2},sealOrder=new[]{0,1,2} };
             Assert.That(state.SolveMap(),Is.False); Assert.That(state.SolveAnchor(1898,1,23),Is.False); Assert.That(state.SolveSamples(),Is.False); Assert.That(state.Stabilize(),Is.False);
-            state.visited=7; Assert.That(state.SolveMap(),Is.True); state.forestSigns=3; state.fabioMet=true; state.anchorClues=7;
+            state.visited=7; Assert.That(state.SolveMap(),Is.False,"A correctly placed map still needs connected directions."); state.mapDirections=new[]{1,1,0}; Assert.That(state.SolveMap(),Is.True); state.forestSigns=3; state.fabioMet=true; state.anchorClues=7;
             Assert.That(state.SolveAnchor(1898,1,23),Is.False); Assert.That(state.SolveAnchor(1996,1,23),Is.True);
             state.labClues=7; Assert.That(state.SolveSamples(),Is.False); state.evidencePresented=true; Assert.That(state.SolveSamples(),Is.True);
             Assert.That(state.Spray(0),Is.True); int remaining=state.reagentCharges; Assert.That(state.Spray(0),Is.False); Assert.That(state.reagentCharges,Is.EqualTo(remaining));

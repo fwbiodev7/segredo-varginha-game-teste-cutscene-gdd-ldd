@@ -10,7 +10,7 @@ namespace Game.Varginha.Experiment
         private EdelzioTopDownController _actor;
         private CapsuleCollider2D _body;
         public static bool SolidWalls(int phase)=>phase==1||phase==2||phase==6;
-        public static bool Guards(int phase,Rect wall,Rect bounds)=>phase==6||(SolidWalls(phase)||phase>=11)&&wall.height>wall.width*1.3f&&wall.xMin>bounds.xMin+.15f&&wall.xMax<bounds.xMax-.15f;
+        public static bool Guards(int phase,Rect wall,Rect bounds)=>(SolidWalls(phase)||phase>=11)&&wall.height>wall.width*1.3f&&wall.xMin>bounds.xMin+.15f&&wall.xMax<bounds.xMax-.15f;
         public static float Height(bool child)=>child?1.15f:CampaignTeamEdelzio.CurrentStandingHeight+.08f;
         public static void Ensure(EdelzioTopDownController actor,bool child)
         {
@@ -21,7 +21,7 @@ namespace Game.Varginha.Experiment
             float scaleX=Mathf.Max(.01f,Mathf.Abs(actor.transform.lossyScale.x)),scaleY=Mathf.Max(.01f,Mathf.Abs(actor.transform.lossyScale.y));
             float height=Height(child)/scaleY;
             component._body.direction=CapsuleDirection2D.Vertical;
-            component._body.size=new Vector2((child?.44f:.46f)/scaleX,height);
+            component._body.size=new Vector2((child?.48f:.46f)/scaleX,height);
             component._body.offset=feet.offset+Vector2.up*(height/2+.03f/scaleY);
             component._body.includeLayers=1<<WallLayer;component._body.excludeLayers=~(1<<WallLayer);
             component._body.sharedMaterial=feet.sharedMaterial;

@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "duration": 126.65,
+  "summary": {
+    "total": 4,
+    "passed": 3,
+    "failed": 1,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.AudioRowsRespondToDpadAnalogKeyboardAndSaveAllFourVolumes",
+      "Status": "Passed",
+      "Duration": 4.9915642,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.AuthoredGroundShapesBlockMovementFromEveryAccessibleSide",
+      "Status": "Passed",
+      "Duration": 101.885184,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.MouseDragUpdatesEveryAudioRowAndSavesTheSelectedValue",
+      "Status": "Failed",
+      "Duration": 1.185852,
+      "Message": "  Mouse drag changes audio row 0\r\n  Expected: greater than 0.649999976f\r\n  But was:  0.5f\r\n",
+      "StackTrace": "at Game.Tests.PlayMode.CampaignFeedbackPlayTests+<MouseDragUpdatesEveryAudioRowAndSavesTheSelectedValue>d__12.MoveNext () [0x00240] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\\Assets\\Tests\\PlayMode\\CampaignFeedbackPlayTests.cs:98\r\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\r\n"
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.RadioCueSharesThePhraseClockPausesAndContinuesToSchool",
+      "Status": "Passed",
+      "Duration": 18.1305628,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

@@ -19,6 +19,7 @@ namespace Game.Varginha.Experiment
         public int positionPhase;
         public CampaignExpansionState expansion = new();
         public CampaignContinuationState continuation = new();
+        public CampaignPuzzleProgress puzzles = new();
         public int MapFragments => (pagesSolved ? 1 : 0) + (codeSolved ? 1 : 0) + ((expansion.visited & 1) != 0 ? 1 : 0);
         public bool CanLeaveHouse => pagesSolved;
         public string RemainingHouseTasks
@@ -67,6 +68,7 @@ namespace Game.Varginha.Experiment
             int maxArea=phase==17?2:phase==12||phase==21?1:0;
             if(continuation.area>maxArea){continuation.area=maxArea;positionPhase=0;}
             expansion ??= new CampaignExpansionState(); expansion.Repair();
+            puzzles ??= new CampaignPuzzleProgress(); puzzles.Repair(continuation);
             if (pages == null || pages.Length != 3 || !IsPermutation(pages)) pages = new[] { 2, 0, 1 };
             if (symbols == null || symbols.Length != 4) symbols = new[] { 1, 0, 1, 0 };
             for (int i = 0; i < symbols.Length; i++) symbols[i] = Mathf.Clamp(symbols[i], 0, 1);

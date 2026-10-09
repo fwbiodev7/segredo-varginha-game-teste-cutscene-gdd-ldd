@@ -57,7 +57,7 @@ namespace Game.Editor.Testing
             var rt=RenderTexture.GetTemporary(w,h,16,RenderTextureFormat.ARGB32);var previous=RenderTexture.active;
             try
             {
-                camera.targetTexture=rt;camera.Render();RenderTexture.active=rt;
+                camera.targetTexture=rt;Game.Varginha.VarginhaPixelPresentation.RenderInto(camera,rt);RenderTexture.active=rt;
                 var image=new Texture2D(w,h,TextureFormat.RGBA32,false);image.ReadPixels(new Rect(0,0,w,h),0,0);image.Apply();
                 Directory.CreateDirectory("Preview/IllustratedMaps");File.WriteAllBytes("Preview/IllustratedMaps/"+(name??"Fase"+phase+(Application.isPlaying?"_Runtime":"_Integrada"))+".png",image.EncodeToPNG());Object.DestroyImmediate(image);
             }

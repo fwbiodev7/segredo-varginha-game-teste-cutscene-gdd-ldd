@@ -288,7 +288,7 @@ namespace Game.Varginha.Experiment
             else if(id.StartsWith("student"))Say("A turma observou a tela escurecer durante a ausência de Edelzio. As cópias de Renan permaneceram guardadas; esta conversa é opcional.");
             else if(id=="notebook"&&phase==11){if((State.clues[0]&128)==0)Say("Converse com Renan junto ao quadro branco primeiro.");else _panel="evidence";}
             else if(id=="exit")
-            {if(!(phase==18?State.AgreementComplete:State.solved[phase-11]))Say("Precisamos concluir a investigação desta fase. Consulte o caderno.");else _panel="complete";}
+            {if(!(phase==18?State.AgreementComplete:State.solved[phase-11]))Say(CampaignGuidance.Next(Progress,phase,area));else _panel="complete";}
             else
             {
                 int index=System.Array.IndexOf(_definition.ids,id);
@@ -319,11 +319,12 @@ namespace Game.Varginha.Experiment
             State.Read(phase,index);Say(_definition.documents[index]);Save();
         }
         public void OpenPuzzle()
-        {if(!State.HasAll(phase,_definition.required))Say("Ainda faltam evidências: "+_definition.goal);else {_panel="puzzle";_selected=_choice=-1;}}
+        {if(!State.HasAll(phase,_definition.required))Say(CampaignGuidance.Next(Progress,phase,area));else {_panel="puzzle";_selected=_choice=-1;Progress.puzzles.selected=-1;}}
         public bool Submit(int choice,int[] order=null)
         {
-            bool correct=State.HasAll(phase,_definition.required)&&(_definition.choice?choice==0:CampaignStory.Sequence(order,_identity()));
-            if(!correct){Say("A combinação não corresponde aos registros. As pistas continuam no caderno.");return false;}
+            bool correct=State.HasAll(phase,_definition.required)&&(CampaignPuzzleDesign.Redesigned(phase)
+                ?CampaignPuzzleDesign.Correct(phase,choice,order):_definition.choice?choice==0:CampaignStory.Sequence(order,_identity()));
+            if(!correct){Say(CampaignPuzzleDesign.Redesigned(phase)?CampaignPuzzleDesign.Feedback(phase):"A combinação não corresponde aos registros. As pistas continuam no caderno.");return false;}
             State.solved[phase-11]=true;_panel=null;
             if(phase==18) { State.solved[8]=true; State.clues[8]|=15; }
             Save();
@@ -459,9 +460,11 @@ namespace Game.Varginha.Experiment
             if(_title<2&&!_paused)CampaignChapterPreview.Draw(phase,_title,2);
             else if(!_paused)
             {
-                string goal=phase==20&&State.manifestationDispelled&&!State.finalCalibrated?"Calibre o retorno no mecanismo central. A entidade ferida espera.":phase==21&&area==0&&State.finalStep==4?"O acordo terminou. Volte à Industrial.":(phase==18?State.AgreementComplete:State.solved[phase-11])?"Etapa concluída. Siga para a saída.":_definition.goal;
+                string goal=CampaignGuidance.Next(Progress,phase,area);
                 if(phase!=20)ExperimentGUI.Objective(CampaignSequence.Heading(phase),CampaignSequence.Title(phase).ToUpperInvariant(),goal);
                 else if(_boss==null||State.manifestationDispelled){ExperimentGUI.Panel(new Rect(345,hudTop,590,74));ExperimentGUI.Label(new Rect(365,hudTop+14,550,47),goal,small:true);}
+                if(!Modal)CampaignGuidance.DrawMarker(Plan,Progress,phase,area);
+                if(!Modal)CampaignGuidance.DrawRoom(Plan,Feet);
                 if(CampaignHudIcons.Button(1058,CampaignHudIcons.Icon.Notebook,"TAB","Caderno"))_panel="journal";
                 if(CampaignHudIcons.Button(1116,CampaignHudIcons.Icon.Backpack,"G","Mochila"))VarginhaGameHUD.Instance?.OpenBackpack();
                 if(CampaignHudIcons.Button(1174,CampaignHudIcons.Icon.Pause,"ESC","Pausa"))TogglePause();
@@ -546,6 +549,10 @@ namespace Game.Varginha.Experiment
             }
             else if(_panel=="puzzle")
             {
+                if(CampaignPuzzleDesign.Redesigned(phase))
+                    CampaignPuzzleDesign.Draw(Progress,phase,(choice,order)=>Submit(choice,order),Save,_sound);
+                else
+                {
                 ExperimentGUI.Label(new Rect(145,250,990,95),_definition.question);
                 for(int i=0;i<_order.Length;i++)
                 {
@@ -554,6 +561,7 @@ namespace Game.Varginha.Experiment
                     {if(_definition.choice)_choice=i;else if(_selected<0)_selected=i;else{(_order[_selected],_order[i])=(_order[i],_order[_selected]);_selected=-1;}}
                 }
                 if(ExperimentGUI.Button(new Rect(755,500,360,45),"CONFIRMAR"))Submit(_choice,_order);
+                }
             }
             if(ExperimentGUI.Button(new Rect(145,570,360,40),"VOLTAR À EXPLORAÇÃO"))_panel=null;
         }

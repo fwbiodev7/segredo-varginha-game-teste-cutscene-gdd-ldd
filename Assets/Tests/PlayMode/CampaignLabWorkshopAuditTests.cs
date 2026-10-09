@@ -53,13 +53,17 @@ namespace Game.Tests.PlayMode
         }
         private IEnumerator KeyFor(Key key,float duration)
         {
-            float end=Time.realtimeSinceStartup+duration;
-            while(Time.realtimeSinceStartup<end)
+            float end=Time.time+duration;
+            while(Time.time<end)
             { InputSystem.QueueStateEvent(_keyboard,new KeyboardState(key));yield return null; }
             InputSystem.QueueStateEvent(_keyboard,new KeyboardState());yield return null;yield return null;
         }
         private IEnumerator WalkToAndInteract(string id)
         {
+            float capture = Time.captureDeltaTime;
+            Time.captureDeltaTime = Time.fixedDeltaTime;
+            try
+            {
             var stage=CampaignExpansionController.Active;
             var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
             var body=actor.GetComponent<Rigidbody2D>();
@@ -69,10 +73,10 @@ namespace Game.Tests.PlayMode
             route.Add(target);
             foreach(var waypoint in route)
             {
-                float deadline=Time.realtimeSinceStartup+2;
+                float deadline=Time.time+2;
                 while(Vector2.Distance(body.position-Vector2.up*.58f,waypoint)>.11f)
                 {
-                    Assert.That(Time.realtimeSinceStartup,Is.LessThan(deadline),"Movement blocked on route to "+id+" at "+waypoint+" from "+(body.position-Vector2.up*.58f)+" panel="+Modal(stage,"_panel")+" message="+Modal(stage,"_message")+" locked="+actor.IsInputLocked);
+                    Assert.That(Time.time,Is.LessThan(deadline),"Movement blocked on route to "+id+" at "+waypoint+" from "+(body.position-Vector2.up*.58f)+" panel="+Modal(stage,"_panel")+" message="+Modal(stage,"_message")+" locked="+actor.IsInputLocked+" contacts="+string.Join(",",System.Array.ConvertAll(Physics2D.OverlapCircleAll(body.position-Vector2.up*.58f,.35f),c=>c.name)));
                     Vector2 delta=waypoint-(body.position-Vector2.up*.58f);
                     // W is now the explicit car command; arrows exercise movement separately.
                     Key key=Mathf.Abs(delta.x)>Mathf.Abs(delta.y)?delta.x>0?Key.RightArrow:Key.LeftArrow:delta.y>0?Key.UpArrow:Key.DownArrow;
@@ -85,6 +89,8 @@ namespace Game.Tests.PlayMode
             yield return KeyFor(stage.phase==10?Key.W:Key.E,.06f);
             bool departing=(bool)typeof(CampaignExpansionController).GetField("_departing",Private).GetValue(stage);
             Assert.That(Modal(stage,"_panel")!=null||Modal(stage,"_message")!=null||departing,Is.True,(stage.phase==10?"W":"E")+" interacts with "+id);
+            }
+            finally { Time.captureDeltaTime = capture; }
         }
 
         [UnityTest] public IEnumerator LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload()
@@ -145,23 +151,37 @@ namespace Game.Tests.PlayMode
             var actor=Object.FindAnyObjectByType<EdelzioTopDownController>(FindObjectsInactive.Include);
             Assert.That(actor.gameObject.activeSelf,Is.False);Assert.That(stage.Progress.expansion.workshopParked,Is.False);
             stage.Interact("spray0");Assert.That(stage.Progress.expansion.sprayed,Is.Zero,"Park first, analyze second");
-            yield return KeyFor(Key.A,.18f);Assert.That(vehicle.Direction,Is.EqualTo(CampaignWorkshopVehicle.Facing.West));
-            yield return KeyFor(Key.D,.18f);Assert.That(vehicle.Direction,Is.EqualTo(CampaignWorkshopVehicle.Facing.East));
-            yield return KeyFor(Key.S,.1f);Assert.That(vehicle.Direction,Is.EqualTo(CampaignWorkshopVehicle.Facing.South));
-            yield return KeyFor(Key.UpArrow,1);
+            float steeringCapture=Time.captureDeltaTime;Time.captureDeltaTime=Time.fixedDeltaTime;
+            try
+            {
+                yield return KeyFor(Key.A,.18f);Assert.That(vehicle.Direction,Is.EqualTo(CampaignWorkshopVehicle.Facing.West));
+                yield return KeyFor(Key.D,.18f);Assert.That(vehicle.Direction,Is.EqualTo(CampaignWorkshopVehicle.Facing.East));
+                yield return KeyFor(Key.S,.1f);Assert.That(vehicle.Direction,Is.EqualTo(CampaignWorkshopVehicle.Facing.South));
+                yield return KeyFor(Key.UpArrow,1);
+            }
+            finally { Time.captureDeltaTime=steeringCapture; }
             yield return new WaitForSeconds(.5f);stage.Save();var saved=CampaignStorySave.Load().expansion;
             Assert.That(saved.workshopHasCarPosition,Is.True);Vector2 savedPosition=new Vector2(saved.workshopCarX,saved.workshopCarY);
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(10));yield return new WaitForSeconds(3);
             stage=CampaignExpansionController.Active;car=GameObject.Find("Fusca");vehicle=car.GetComponent<CampaignWorkshopVehicle>();
             Assert.That(Vector2.Distance(car.transform.position,savedPosition),Is.LessThan(.06f));
-            float deadline=Time.realtimeSinceStartup+7;
-            while(car.transform.position.y<vehicle.BayPosition.y-.48f)
+            float capture=Time.captureDeltaTime;Time.captureDeltaTime=Time.fixedDeltaTime;
+            try
             {
-                Assert.That(Time.realtimeSinceStartup,Is.LessThan(deadline),"Garage entrance must admit the actual car collider");
-                InputSystem.QueueStateEvent(_keyboard,new KeyboardState(Key.W));yield return null;
+                var carBody=car.GetComponent<Rigidbody2D>();float deadline=Time.time+7;
+                while(carBody.position.y<vehicle.BayPosition.y-.48f)
+                {
+                    Assert.That(Time.time,Is.LessThan(deadline),"Garage entrance must admit the actual car collider");
+                    InputSystem.QueueStateEvent(_keyboard,new KeyboardState(Key.W));yield return null;
+                }
+                InputSystem.QueueStateEvent(_keyboard,new KeyboardState());yield return new WaitForSeconds(.65f);
+                var velocity=(Vector2)typeof(CampaignWorkshopVehicle).GetField("_velocity",Private).GetValue(vehicle);
+                Assert.That(vehicle.CanPark,Is.True,"Vehicle stopped inside the bay: body="+carBody.position+
+                    ", rendered="+car.transform.position+", bay="+vehicle.BayPosition+
+                    ", body distance="+Vector2.Distance(carBody.position,vehicle.BayPosition)+
+                    ", heading="+vehicle.Direction+", speed="+velocity.magnitude);
             }
-            InputSystem.QueueStateEvent(_keyboard,new KeyboardState());yield return new WaitForSeconds(.65f);
-            Assert.That(vehicle.CanPark,Is.True,"Vehicle stopped inside the bay");
+            finally { Time.captureDeltaTime=capture; }
             yield return KeyFor(Key.W,.06f);
             actor=Object.FindAnyObjectByType<EdelzioTopDownController>();Assert.That(actor,Is.Not.Null);
             Assert.That(stage.Progress.expansion.workshopParked,Is.True);stage.ClosePanel();

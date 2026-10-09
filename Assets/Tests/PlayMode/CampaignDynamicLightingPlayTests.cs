@@ -117,7 +117,7 @@ namespace Game.Tests.PlayMode
             var target = RenderTexture.GetTemporary(1280, 960, 24); var image = new Texture2D(1280, 960, TextureFormat.RGB24, false);
             try
             {
-                camera.targetTexture = target; camera.Render(); RenderTexture.active = target;
+                camera.targetTexture = target; VarginhaPixelPresentation.RenderInto(camera,target); RenderTexture.active = target;
                 image.ReadPixels(new Rect(0, 0, 1280, 960), 0, 0); image.Apply();
                 Directory.CreateDirectory("Docs/QAIluminacao20261007"); File.WriteAllBytes("Docs/QAIluminacao20261007/" + name, image.EncodeToPNG());
             }
