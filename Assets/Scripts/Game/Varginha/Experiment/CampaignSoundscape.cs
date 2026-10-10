@@ -28,6 +28,8 @@ namespace Game.Varginha.Experiment
                 _engine = gameObject.AddComponent<AudioSource>(); _engine.playOnAwake = false; _engine.loop = true; _engine.volume = .22f;
                 _engine.clip = Clip("Engine"); _engine.Play();
             }
+            var atmosphere = GetComponent<CampaignAtmosphereDirector>() ?? gameObject.AddComponent<CampaignAtmosphereDirector>();
+            atmosphere.Configure(environment, actor);
         }
         public void Engine(bool running, float throttle = 0)
         {
@@ -35,9 +37,13 @@ namespace Game.Varginha.Experiment
             _engine.pitch = Mathf.Lerp(.85f, 1.35f, Mathf.Clamp01(throttle));
             if (running && !_engine.isPlaying) _engine.Play(); else if (!running && _engine.isPlaying) _engine.Stop();
         }
-        public void Play(string sound) { if (_effects != null) _effects.PlayOneShot(Clip(sound), sound.StartsWith("Foot") ? .16f : 1f); }
+        public void Play(string sound)
+        {
+            if (_effects != null) _effects.PlayOneShot(Clip(sound), sound.StartsWith("Foot") ? .16f : 1f);
+            if (sound == "ManifestationRise" || sound == "ManifestationTear" || sound == "AlienBurst") CampaignAtmosphereDirector.Interference(.65f);
+        }
         public void PlayRadioInterference(bool reducedMotion)
-        { if (_effects != null) _effects.PlayOneShot(Clip("RadioInterference"), reducedMotion ? .3f : .55f); }
+        { if (_effects != null) _effects.PlayOneShot(Clip("RadioInterference"), reducedMotion ? .3f : .55f); CampaignAtmosphereDirector.Interference(.2f); }
         public void PlayAt(string sound, Vector3 position)
         {
             if (_positional == null)

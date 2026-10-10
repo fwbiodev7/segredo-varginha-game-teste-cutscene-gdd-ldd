@@ -38,13 +38,52 @@ namespace Game.Varginha.Experiment
             GUI.Label(rect, content, style); style.fontSize = original;
         }
         public static bool Button(Rect rect, string text) => PixelMenuTheme.Button(rect, text, size: 13);
-        public static void Objective(string chapter, string title, string goal)
+        public static bool Choice(Rect rect,string text,bool selected)
         {
-            Panel(new Rect(28, 24, 620, 124));
-            PixelMenuTheme.Label(new Rect(48, 38, 580, 17), chapter, 9, Muted);
-            PixelMenuTheme.Label(new Rect(48, 62, 580, 26), title, 16, Paper);
-            int original = _small.fontSize; _small.fontSize = 11;
-            GUI.Label(new Rect(48, 98, 580, 43), goal, _small); _small.fontSize = original;
+            bool clicked=Button(rect,(selected?"• ":"")+text);
+            if(selected)Box(new Rect(rect.x,rect.y,3,rect.height),Accent);
+            return clicked;
+        }
+        public static void Objective(string chapter, string title, string goal,CampaignHudState state=null)
+        {
+            if(goal!=null&&goal.Length>105){int end=goal.LastIndexOf(' ',102);goal=goal.Substring(0,end>0?end:102)+"…";}
+            float alpha=state?.IdentificationAlpha??1;
+            var before=GUI.color;
+            if(alpha>0)
+            {
+                GUI.color=new Color(before.r,before.g,before.b,before.a*alpha);
+                Ribbon(new Rect(28,24,480,106));
+                PixelMenuTheme.Label(new Rect(44,34,448,18),chapter,9,Muted);
+                PixelMenuTheme.Label(new Rect(44,57,448,25),title,14,Paper);
+                Label(new Rect(44,89,448,35),goal,small:true);
+            }
+            else if(state!=null&&state.GoalAlpha>0)
+            {
+                GUI.color=new Color(before.r,before.g,before.b,before.a*state.GoalAlpha);
+                Ribbon(new Rect(28,24,440,62));
+                Label(new Rect(44,36,408,42),goal,small:true);
+            }
+            GUI.color=before;
+        }
+        public static void Ribbon(Rect rect)
+        {
+            // Small flat surfaces leave the scene visible; pixel type and palette stay original.
+            var before=GUI.color;
+            Box(rect,new Color(before.r*.025f,before.g*.045f,before.b*.055f,before.a*.86f));
+            Box(new Rect(rect.x,rect.y,2,rect.height),new Color(Accent.r,Accent.g,Accent.b,before.a*.7f));
+        }
+        public static void ContextPrompt(string interaction,string tutorial=null,CampaignHudState state=null)
+        {
+            bool training=string.IsNullOrEmpty(interaction);
+            string text=training?tutorial:interaction;
+            float alpha=training?(state?.TutorialAlpha??0):1;
+            if(string.IsNullOrEmpty(text)||alpha<=0)return;
+            text=VarginhaInputActions.Prompt(text);
+            float width=Mathf.Clamp(text.Length*8+36,220,760);
+            var before=GUI.color;GUI.color=new Color(before.r,before.g,before.b,before.a*alpha);
+            Ribbon(new Rect(640-width/2,653,width,38));
+            Label(new Rect(656-width/2,663,width-32,25),text,small:true);
+            GUI.color=before;
         }
         // Shared pause navigation keeps every chapter in the same visual language.
         public static int PausePanel(string chapter)

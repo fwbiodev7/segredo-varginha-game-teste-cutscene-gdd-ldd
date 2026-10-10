@@ -18,6 +18,8 @@ namespace Game.Tests.PlayMode
         const BindingFlags Fields=BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.Instance;
         string _save,_memory;
         Gamepad _pad;
+        Keyboard _keyboard;
+        bool _keyboardNavigation;
         public override void Setup(){VarginhaInputActions.Shutdown();base.Setup();}
         public override void TearDown(){Time.timeScale=1;VarginhaInputActions.Shutdown();VarginhaGamepadUI.Reset();base.TearDown();}
         [SetUp] public void Preserve()
@@ -48,6 +50,13 @@ namespace Game.Tests.PlayMode
         }
         IEnumerator Pad(GamepadButton button)
         {
+            if(_keyboardNavigation)
+            {
+                Key key=button==GamepadButton.South?Key.Enter:button==GamepadButton.DpadUp?Key.UpArrow:button==GamepadButton.DpadDown?Key.DownArrow:button==GamepadButton.DpadLeft?Key.LeftArrow:Key.RightArrow;
+                for(int i=0;i<2;i++){InputSystem.QueueStateEvent(_keyboard,new KeyboardState(key));yield return null;}
+                for(int i=0;i<2;i++){InputSystem.QueueStateEvent(_keyboard,new KeyboardState());yield return null;}
+                yield break;
+            }
             for(int i=0;i<2;i++){InputSystem.QueueStateEvent(_pad,new GamepadState().WithButton(button));yield return null;}
             for(int i=0;i<2;i++){InputSystem.QueueStateEvent(_pad,new GamepadState());yield return null;}
         }
@@ -72,27 +81,44 @@ namespace Game.Tests.PlayMode
             File.WriteAllBytes("Docs/QANovaCampanha20261009/"+name+".png",image.EncodeToPNG());Object.Destroy(image);
         }
         [UnityTest,Timeout(180000)]
-        public IEnumerator SpatialMapCanBePlacedRotatedAndConfirmedUsingTheController()
+        [Category("HudPuzzles")] public IEnumerator SpatialMapCanBePlacedRotatedAndConfirmedUsingTheController()
         {
             var story=new CampaignStory{phase=6};story.expansion.visited=7;CampaignStorySave.Write(story);
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(6));yield return new WaitForSeconds(3.2f);
             var c=CampaignExpansionController.Active;ShowGame();VarginhaGamepadUI.Reset();VarginhaInputActions.Rebuild();
             c.Interact("map");yield return new WaitForSecondsRealtime(.3f);
-            yield return Click(new Rect(165,292,290,35));yield return Click(new Rect(165,396,290,44));
-            yield return Click(new Rect(485,292,290,35));yield return Click(new Rect(485,396,290,44));
+            yield return Click(new Rect(165,292,290,35));yield return Click(new Rect(165,405,290,44));
+            yield return Click(new Rect(485,292,290,35));yield return Click(new Rect(485,405,290,44));
             Assert.That(c.Progress.expansion.mapOrder,Is.EqualTo(new[]{0,1,2}));
-            Rect[] rotate={new Rect(165,443,290,32),new Rect(485,443,290,32),new Rect(805,391,290,32)};
+            Rect[] rotate={new Rect(165,452,290,32),new Rect(485,452,290,32),new Rect(805,452,290,32)};
             int[] directions={1,1,0};
             for(int i=0;i<3;i++)while(c.Progress.expansion.mapDirections[i]!=directions[i])yield return Click(rotate[i]);
             yield return Capture("01_Fragmentos_Trilha");
-            yield return Click(new Rect(805,500,290,42));
+            yield return Click(new Rect(805,530,290,42));
             Assert.That(c.Progress.expansion.mapSolved,Is.True);
             Assert.That(CampaignStorySave.Load().expansion.mapSolved,Is.True);
             Assert.That(CampaignGuidance.Target(c.Progress,6),Is.EqualTo("exit"));
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
         [UnityTest,Timeout(240000)]
-        public IEnumerator FiveDifferentPuzzleInterfacesAcceptControllerAnswersAndPreservePartialProgress()
+        [Category("HudPuzzles")] public IEnumerator MemoryCanUndoAndSubmitWithKeyboardNavigation()
+        {
+            var story=new CampaignStory{phase=15};story.continuation.clues[4]=15;CampaignStorySave.Write(story);
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(15));yield return new WaitForSeconds(3.2f);
+            var c=CampaignContinuationController.Active;c.CloseMessage();c.OpenPuzzle();
+            ShowGame();_keyboard=InputSystem.AddDevice<Keyboard>();_keyboardNavigation=true;
+            VarginhaGamepadUI.Reset();VarginhaInputActions.Rebuild();yield return new WaitForSecondsRealtime(.3f);
+            yield return Click(new Rect(145,352,230,115));Assert.That(c.Progress.puzzles.memory,Is.EqualTo(new[]{3}));
+            yield return Click(new Rect(515,530,230,32));Assert.That(c.Progress.puzzles.memory,Is.Empty);
+            foreach(int x in new[]{390,880,635,145})yield return Click(new Rect(x,352,230,115));
+            Assert.That(VarginhaInputActions.UsingGamepad,Is.False);
+            yield return Click(new Rect(755,530,360,32));Assert.That(c.Progress.continuation.solved[4],Is.True);
+            Assert.That(CampaignStorySave.Load().continuation.solved[4],Is.True);
+            _keyboardNavigation=false;yield return new WaitForSeconds(4);
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
+        [UnityTest,Timeout(240000)]
+        [Category("HudPuzzles")] public IEnumerator FiveDifferentPuzzleInterfacesAcceptControllerAnswersAndPreservePartialProgress()
         {
             foreach(int phase in new[]{11,13,14,15,18})
             {

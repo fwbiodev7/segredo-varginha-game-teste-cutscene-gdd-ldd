@@ -40,6 +40,9 @@ namespace Game.Varginha.Experiment
         public static void Draw(CampaignStory story, ref Vector2 scroll, Rect bounds)
         {
             var entries=Entries(story);
+            ExperimentGUI.Ribbon(new Rect(bounds.x,bounds.y,bounds.width,64));
+            ExperimentGUI.Label(new Rect(bounds.x+12,bounds.y+8,bounds.width-24,50),"AGORA • "+CampaignGuidance.Next(story,story.phase,story.continuation.area),small:true);
+            bounds=new Rect(bounds.x,bounds.y+72,bounds.width,bounds.height-72);
             scroll=VarginhaGamepadUI.BeginScrollView(bounds,scroll,new Rect(0,0,bounds.width-25,Mathf.Max(bounds.height,entries.Count*190)));
             for(int i=0;i<entries.Count;i++)ExperimentGUI.Label(new Rect(10,i*190+5,bounds.width-55,180),entries[i],small:true);
             VarginhaGamepadUI.EndScrollView();

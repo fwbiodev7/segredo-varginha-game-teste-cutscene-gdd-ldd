@@ -310,7 +310,7 @@ namespace Game.Varginha
                 result[row] = new Sprite[6];
                 for (int frame = 0; frame < 6; frame++)
                 {
-                    result[row][frame] = Sprite.Create(sheet, new Rect(frame * sheet.width / 6f, (3 - row) * sheet.height / 4f,
+                    result[row][frame] = VarginhaCharacterFrameGeometry.Create(sheet, new Rect(frame * sheet.width / 6f, (3 - row) * sheet.height / 4f,
                         sheet.width / 6f, sheet.height / 4f), new Vector2(.5f, .5f), 44.1379f);
                     result[row][frame].name = "Edelzio_Ataque_" + row + "_" + frame;
                 }

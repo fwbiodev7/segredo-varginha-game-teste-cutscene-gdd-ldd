@@ -13,7 +13,7 @@ using UnityEngine.TestTools;
 
 namespace Game.Tests.PlayMode
 {
-    public class CampaignControllerRemapTests : InputTestFixture
+    [Category("HudPuzzles")] public class CampaignControllerRemapTests : InputTestFixture
     {
         readonly Dictionary<string,string> _preferences=new();
         const string Prefix="Varginha.Controls.Gamepad.";

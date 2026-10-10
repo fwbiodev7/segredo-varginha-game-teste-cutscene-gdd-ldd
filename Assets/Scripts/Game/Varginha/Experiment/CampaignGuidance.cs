@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Game.UI;
 using UnityEngine;
 
 namespace Game.Varginha.Experiment
@@ -113,15 +114,22 @@ namespace Game.Varginha.Experiment
             float scale=Mathf.Min(Screen.width/1280f,Screen.height/720f);
             var canvas=new Vector2((screen.x-(Screen.width-1280*scale)/2)/scale,
                 (Screen.height-screen.y-(Screen.height-720*scale)/2)/scale);
-            bool outside=canvas.x<120||canvas.x>1160||canvas.y<172||canvas.y>575;
+            bool outside=canvas.x<36||canvas.x>1244||canvas.y<96||canvas.y>600;
             string location=id=="exit"?"SAÍDA • "+Destination(phase):id=="service"?"ACESSO AO PORÃO"
                 :point.label.Split('•')[0].Trim();
             string direction=!outside?"PRÓXIMO":Mathf.Abs(canvas.x-640)>Mathf.Abs(canvas.y-360)
                 ?canvas.x<640?"À ESQUERDA":"À DIREITA":canvas.y<360?"ACIMA":"ABAIXO";
-            float x=Mathf.Clamp(canvas.x-125,28,1002),y=Mathf.Clamp(canvas.y-38,172,565);
-            var rect=new Rect(x,y,250,30);ExperimentGUI.Box(rect,new Color(.02f,.055f,.065f,.94f));
-            ExperimentGUI.Box(new Rect(x,y,3,30),new Color(.43f,.77f,.67f));
-            ExperimentGUI.Label(new Rect(x+10,y+4,230,24),direction+" • "+location,small:true);
+            float x=Mathf.Clamp(canvas.x,40,1240),y=Mathf.Clamp(canvas.y-28,100,598);
+            var accent=ExperimentGUI.Accent;
+            ExperimentGUI.Box(new Rect(x-3,y-3,6,6),accent);
+            if(outside||waypoint!=null)
+            {
+                string arrow=direction=="À ESQUERDA"?"←":direction=="À DIREITA"?"→":direction=="ACIMA"?"↑":"↓";
+                float labelX=Mathf.Clamp(x-85,28,1082);
+                ExperimentGUI.Ribbon(new Rect(labelX,y+9,170,24));
+                if(location.Length>19)location=location.Substring(0,18)+"…";
+                PixelMenuTheme.Label(new Rect(labelX+8,y+13,154,18),arrow+" "+location,8,ExperimentGUI.Muted);
+            }
         }
         public static string RoomName(CampaignMapPlan plan,Vector2 feet)
         {
@@ -137,8 +145,11 @@ namespace Game.Varginha.Experiment
         {
             if(plan.phase!=112&&plan.phase!=13)return;
             var name=RoomName(plan,feet);if(name==null)return;
-            ExperimentGUI.Box(new Rect(28,574,360,30),new Color(.02f,.055f,.065f,.9f));
-            ExperimentGUI.Label(new Rect(40,578,336,24),(plan.phase==112?"TÉRREO • ":"PORÃO • ")+name.ToUpperInvariant(),small:true);
+            float alpha=CampaignHud.For(plan.phase==112?12:13).RoomAlpha;if(alpha<=0)return;
+            var before=GUI.color;GUI.color=new Color(before.r,before.g,before.b,before.a*alpha);
+            ExperimentGUI.Ribbon(new Rect(28,598,310,28));
+            ExperimentGUI.Label(new Rect(40,603,286,21),(plan.phase==112?"TÉRREO • ":"PORÃO • ")+name.ToUpperInvariant(),small:true);
+            GUI.color=before;
         }
     }
 }

@@ -11,6 +11,7 @@ namespace Game.Varginha.Experiment
         public void Configure(SpriteRenderer light) { _light = light; _baseColor = light.color; }
         public static void Interference(Transform root)
         {
+            CampaignAtmosphereDirector.Interference();
             var layers = root.GetComponentsInChildren<CampaignAtmosphereLayer>();
             foreach (var layer in layers) layer._paranormal = 1;
         }
@@ -19,7 +20,8 @@ namespace Game.Varginha.Experiment
             if (_light == null || Time.timeScale <= 0) return;
             _time += Time.deltaTime; _paranormal = Mathf.MoveTowards(_paranormal, 0, Time.deltaTime * .6f);
             bool reduced = VarginhaGameSettings.Current.reducedMotion;
-            float breath = reduced ? 1 : 1 + Mathf.Sin(_time * .73f) * .025f + Mathf.Sin(_time * 1.19f) * .012f;
+            float tension = CampaignAtmosphereDirector.Active?.Tension ?? .2f;
+            float breath = reduced ? 1 : 1 + (Mathf.Sin(_time * .73f) * .025f + Mathf.Sin(_time * 1.19f) * .012f) * Mathf.Lerp(.2f, 1.4f, tension);
             var color = Color.Lerp(_baseColor, new Color(.48f, .77f, .85f, _baseColor.a), _paranormal * .18f);
             color.a = _baseColor.a * breath; _light.color = color;
         }

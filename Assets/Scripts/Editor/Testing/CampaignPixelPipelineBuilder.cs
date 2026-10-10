@@ -22,6 +22,9 @@ namespace Game.Editor.Testing
             var settings = new SerializedObject(renderer);
             settings.FindProperty("m_LightRenderTextureScale").floatValue = 1;
             settings.FindProperty("m_DefaultMaterialType").intValue = 1; // Existing scenery stays unlit unless explicitly opted in.
+            var post = AssetDatabase.LoadAssetAtPath<PostProcessData>("Packages/com.unity.render-pipelines.universal/Runtime/Data/PostProcessData.asset");
+            if (post == null) throw new System.InvalidOperationException("URP post-process resources are missing.");
+            settings.FindProperty("m_PostProcessData").objectReferenceValue = post;
             settings.ApplyModifiedPropertiesWithoutUndo();
             var pipeline = AssetDatabase.LoadAssetAtPath<UniversalRenderPipelineAsset>(Folder + "/CampaignPixelPipeline.asset");
             if (pipeline == null)

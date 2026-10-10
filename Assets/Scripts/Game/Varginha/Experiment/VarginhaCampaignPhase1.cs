@@ -84,7 +84,7 @@ namespace Game.Varginha.Experiment
         public static void StartCampaign(bool continueGame)
         {
             if (!Application.CanStreamedLevelBeLoaded(SceneName)) { Debug.LogError("Cena inicial da campanha ausente."); return; }
-            if (!continueGame) { CampaignMemorySave.Write(new CampaignMemory()); CampaignStorySave.Write(new CampaignStory()); }
+            if (!continueGame) { CampaignHud.Reset(); CampaignMemorySave.Write(new CampaignMemory()); CampaignStorySave.Write(new CampaignStory()); }
             else if (CampaignStorySave.Load().phase > 1) { var saved=CampaignStorySave.Load();Time.timeScale = 1; GameManager.Instance?.StartGame(); CampaignCinematics.Load(saved.phase>=11?CampaignContinuationDefinition.SceneName(saved.phase,saved.continuation.area):CampaignStorySave.Scene(saved.phase)); return; }
             Time.timeScale = 1; GameManager.Instance?.StartGame(); CampaignCinematics.Load(SceneName);
         }
@@ -213,6 +213,7 @@ namespace Game.Varginha.Experiment
             else if (_stage == Stage.Explore)
             {
                 _exploreTime += Time.deltaTime;
+                CampaignHud.For(1).Tick(Time.unscaledDeltaTime,true,_memory.powerFailed?"Uma luz vem do quintal. Siga pela porta à direita.":"Explore a casa e observe a televisão.");
                 if (_childFrames != null)
                 {
                     var face = _player.FacingDirection;
@@ -307,13 +308,12 @@ namespace Game.Varginha.Experiment
                 float shade = _memory.powerFailed ? .22f : .10f;
                 if (_memory.powerFailed && !settings.reducedMotion) shade += .035f * Mathf.Sin(Time.unscaledTime * .8f);
                 ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(.035f, .075f, .17f, shade));
-                ExperimentGUI.Objective("ATO I • FASE 1 • 1996", "A LEMBRANÇA", _memory.powerFailed ? "Uma luz vem do quintal. Siga pela porta à direita." : "Explore a casa e observe a televisão.");
+                if(!_paused&&_dialogue==null)ExperimentGUI.Objective("ATO I • FASE 1 • 1996", "A LEMBRANÇA", _memory.powerFailed ? "Uma luz vem do quintal. Siga pela porta à direita." : "Explore a casa e observe a televisão.",CampaignHud.For(1));
                 if (!_paused && CampaignHudIcons.Button(1174, CampaignHudIcons.Icon.Pause, "ESC", "Pausa")) TogglePause();
                 if (settings.interactionHints && !_paused && _dialogue == null)
                 {
                     int nearby = NearestEvidence();
-                    ExperimentGUI.Panel(new Rect(250, 647, 780, 48));
-                    ExperimentGUI.Label(new Rect(275, 658, 730, 30), nearby >= 0 ? "[E] " + _names[nearby] : "WASD / SETAS: ANDAR • E: EXAMINAR • ESC: PAUSAR", small: true);
+                    ExperimentGUI.ContextPrompt(nearby<0?null:"["+VarginhaInputActions.InteractLabel+"] "+_names[nearby],VarginhaInputActions.MoveLabel+" • ANDAR    "+VarginhaInputActions.InteractLabel+" • EXAMINAR",CampaignHud.For(1));
                 }
             }
             else if (_stage == Stage.Encounter)

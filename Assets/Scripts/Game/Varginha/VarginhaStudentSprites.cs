@@ -43,12 +43,12 @@ namespace Game.Varginha
             for (int frame = 0; frame < 4; frame++)
             {
                 var rect = new Rect(frame * CellSize, (3 - direction) * CellSize, CellSize, CellSize);
-                var sprite = Sprite.Create(texture, rect, new Vector2(.5f, .5f), PixelsPerUnit, 0, SpriteMeshType.FullRect);
+                var sprite = VarginhaCharacterFrameGeometry.Create(texture, rect, new Vector2(.5f, .5f), PixelsPerUnit, 0, SpriteMeshType.FullRect);
                 sprite.name = "Student_" + student + "_" + direction + "_" + frame;
                 atlas.Frames[direction * 4 + frame] = sprite;
             }
             // A tight head-and-shoulders crop of the actual character, never a second design.
-            atlas.Portrait = Sprite.Create(texture, PortraitRect(texture),
+            atlas.Portrait = VarginhaCharacterFrameGeometry.Create(texture, PortraitRect(texture),
                 new Vector2(.5f, .5f), PixelsPerUnit, 0, SpriteMeshType.FullRect);
             atlas.Portrait.name = "StudentHead_" + student;
             Atlases[assetName] = atlas;

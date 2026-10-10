@@ -30,7 +30,7 @@ namespace Game.Varginha.Experiment
    float ppu=source.pixelsPerUnit/1.7f;
    // Scale around the feet, keeping both the arena navigation anchor and church assets intact.
    var pivot=new Vector2(source.pivot.x/source.rect.width,(source.pivot.y-.58f*source.pixelsPerUnit+.58f*ppu)/source.rect.height);
-   sprite=Sprite.Create(source.texture,source.rect,pivot,ppu,0,SpriteMeshType.FullRect);sprite.name=source.name+"_Arena";
+   sprite=VarginhaCharacterFrameGeometry.Create(source.texture,source.rect,pivot,ppu,0,SpriteMeshType.FullRect);sprite.name=source.name+"_Arena";
    return arenaPriestSprites[source]=sprite;
   }
   public void Configure(EdelzioTopDownController p)
@@ -114,7 +114,7 @@ namespace Game.Varginha.Experiment
   static Sprite Effect(int row,int col)
   {
    if(effects[row,col]!=null)return effects[row,col];var t=Resources.Load<Texture2D>("Varginha/StoryCharacters/SupportEffects");
-   return effects[row,col]=Sprite.Create(t,new Rect(col*128,(2-row)*128,128,128),Vector2.one*.5f,48,0,SpriteMeshType.FullRect);
+   return effects[row,col]=VarginhaCharacterFrameGeometry.Create(t,new Rect(col*128,(2-row)*128,128,128),Vector2.one*.5f,48,0,SpriteMeshType.FullRect);
   }
   IEnumerator Present(int i)
   {

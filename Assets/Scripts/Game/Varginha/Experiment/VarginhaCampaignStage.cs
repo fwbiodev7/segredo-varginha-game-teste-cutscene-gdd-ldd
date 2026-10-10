@@ -144,7 +144,7 @@ namespace Game.Varginha.Experiment
         public bool OpenHints()
         {
             if (!_ready || _busy || _paused || _dialogue != null || _view == View.Cutscene || _view == View.Complete || VarginhaGameHUD.Instance?.IsInventoryOpen == true) return false;
-            _hintLevel=0; Show(View.Hint); return true;
+            Show(View.Hint); return true;
         }
         private void Update()
         {
@@ -163,6 +163,7 @@ namespace Game.Varginha.Experiment
             if (_view == View.Cutscene)
             { _cutTime += Time.unscaledDeltaTime; if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)) FinishCutscene(); return; }
             if (IsBlocked) return;
+            CampaignHud.For(phase).Tick(Time.unscaledDeltaTime,true,CampaignGuidance.Next(_progress,phase));
             if (Keyboard.current?.f1Key.wasPressedThisFrame == true) { OpenHints(); return; }
             if (VarginhaInputActions.InventoryPressed) { OpenBackpack(); return; }
             if (VarginhaInputActions.JournalPressed) Show(View.Notebook);
@@ -340,7 +341,7 @@ namespace Game.Varginha.Experiment
         }
         public bool SubmitCode()
         {
-            if (!_progress.SubmitCode()) { _feedback = "A margem mostra 23 de cada lado dos dois pontos. Tente novamente."; return false; }
+            if (!_progress.SubmitCode()) { _feedback = "Compare os dois grupos da anotação: os dois pontos separam horas e minutos. As pistas permanecem no notebook."; return false; }
             Save();RestoreInventory();_sound?.Play("Success");
             Cutscene("23:23", "Os dois grupos formam 23:23. Ao ampliar o documento, aparece outro fragmento do mapa.\nA anotação menciona registros da cidade. Mostre a descoberta a Renan.", View.World); return true;
         }
@@ -365,7 +366,7 @@ namespace Game.Varginha.Experiment
             else if (_view == View.Complete) DrawComplete();
             else
             {
-                ExperimentGUI.Objective(CampaignSequence.Heading(phase) + " • 2026", PhaseTitle, CampaignGuidance.Next(_progress,phase));
+                if(!IsBlocked)ExperimentGUI.Objective(CampaignSequence.Heading(phase) + " • 2026", PhaseTitle, CampaignGuidance.Next(_progress,phase),CampaignHud.For(phase));
                 if(!IsBlocked)CampaignGuidance.DrawMarker(_guidancePlan,_progress,phase);
                 bool hudEnabled=GUI.enabled; GUI.enabled=hudEnabled&&!_paused&&_view==View.World&&_dialogue==null;
                 if (CampaignHudIcons.Button(1010, CampaignHudIcons.Icon.Notebook, "TAB", "Caderno")) Show(View.Notebook);
@@ -376,8 +377,8 @@ namespace Game.Varginha.Experiment
                 GUI.enabled=hudEnabled;
                 if (_view == View.World && _dialogue == null && VarginhaGameSettings.Current.interactionHints)
                 {
-                    int near = Nearest(); ExperimentGUI.Panel(new Rect(230, 654, 820, 44));
-                    ExperimentGUI.Label(new Rect(250, 664, 780, 30), near < 0 ? "WASD / SETAS • ANDAR     E • EXAMINAR" : "[" + (_points[near].id=="car"?VarginhaInputActions.CarLabel:VarginhaInputActions.InteractLabel) + "] " + _points[near].label, small: true);
+                    int near=Nearest();
+                    ExperimentGUI.ContextPrompt(near<0?null:"["+(_points[near].id=="car"?VarginhaInputActions.CarLabel:VarginhaInputActions.InteractLabel)+"] "+_points[near].label);
                 }
                 if (_view != View.World) DrawInvestigation();
             }
@@ -426,7 +427,7 @@ namespace Game.Varginha.Experiment
             if (_radioReducedMotion || VarginhaGameSettings.Current.reducedMotion)
             { ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(0, 0, 0, .08f * fade)); return; }
             float pulse = elapsed < .07f ? elapsed / .07f : Mathf.Clamp01((.24f - elapsed) / .17f);
-            ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(1, 1, 1, .48f * pulse));
+            ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(.62f, .74f, .8f, .10f * pulse));
             int tick = Mathf.FloorToInt(elapsed * 12);
             for (int i = 0; i < 5; i++)
             {
@@ -453,7 +454,7 @@ namespace Game.Varginha.Experiment
             if (_view == View.Pages)
             {
                 ExperimentGUI.Label(new Rect(140, 143, 995, 55), "CADERNO • PÁGINAS DE 1996", true);
-                ExperimentGUI.Label(new Rect(140, 204, 995, 78), "Fotografia: a CASA está à esquerda, a ÁRVORE ocupa o centro e a FIGURA ficou à direita.\nClique em duas páginas para trocá-las. Alinhe o desenho à foto.");
+                ExperimentGUI.Label(new Rect(140, 204, 995, 78), "Fotografia: a CASA está à esquerda, a ÁRVORE ocupa o centro e a FIGURA ficou à direita.\nSelecione duas páginas para trocá-las. Alinhe o desenho à foto.");
                 string[] cards = { "CASA\n\nTelhado vermelho\nEscrita: ELA", "ÁRVORE\n\nGalhos sobre o muro\nEscrita: AINDA", "FIGURA\n\nSem rosto\nEscrita: ESTÁ AQUI" };
                 for (int i = 0; i < 3; i++)
                     if (ExperimentGUI.Button(new Rect(145 + i * 335, 305, 315, 180), (_selected == i ? "[SELECIONADA]\n" : "") + cards[_progress.pages[i]]))

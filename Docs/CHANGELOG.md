@@ -1,5 +1,14 @@
 # Histórico de atualizações
 
+## 09/10/2026 — Alpha 0.3
+
+- Nova build Windows x64, com versão 0.3.0, preservando as 14 fases e suas áreas adicionais.
+- Revisados os mapas do casarão, as divisões dos cômodos, os móveis e os contatos de colisão.
+- HUD com identificação temporária, controles contextuais e adaptação de instruções ao dispositivo; pistas progressivas nos puzzles.
+- Atmosfera com progressão de iluminação, áudio e efeitos ambientais ao longo da campanha.
+- Corrigidos os recortes e alinhamentos dos personagens; preservadas as dimensões nativas de 55 folhas e removidos fragmentos de frames vizinhos na renderização.
+- Três testes Play Mode de personagens aprovados, com 928 quadros e poses verificados. Manifesto e instruções em [Alpha03](Alpha03/README.md).
+
 ## 05/10/2026 — conclusão do boss cinematográfico da fase 20
 
 - Aparência da entrada mantida no combate, com quatro direções e poses de caminhada, preparação, golpe, recuperação e reação para o boss e os filhos.

@@ -1,0 +1,8 @@
+{
+  "game_version": "0.3.0",
+  "game_version_source": "PlayerSettings.bundleVersion usado na build",
+  "unity_player_version": "6000.6.0f1 (f7f8ed4d1e24)",
+  "running_after_12_seconds": true,
+  "runtime_errors": 0,
+  "scope": "Inicializacao no menu, sem iniciar campanha ou alterar o progresso"
+}

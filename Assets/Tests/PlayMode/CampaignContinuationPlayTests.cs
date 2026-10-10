@@ -31,7 +31,7 @@ namespace Game.Tests.PlayMode
             CampaignContinuationController.Active.CloseMessage();yield return null;
             Debug.Log("QA continuation ready: "+phase+" / "+area);
         }
-        [UnityTest,Timeout(90000)] public IEnumerator ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration()
+        [UnityTest,Timeout(90000)] [Category("HudPuzzles")] public IEnumerator ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration()
         {
             bool originalMotion=VarginhaGameSettings.Current.reducedMotion;
             try
@@ -349,7 +349,7 @@ namespace Game.Tests.PlayMode
             c=CampaignContinuationController.Active;c.CloseMessage();c.Interact("renan");c.CloseMessage();c.Interact("notebook");c.CloseMessage();c.Interact("fusca");c.CloseMessage();
             Assert.That(c.State.finished&&c.CreditsVisible,Is.True);
         }
-        [UnityTest,Timeout(90000)] public IEnumerator ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue()
+        [UnityTest,Timeout(90000)] [Category("HudPuzzles")] public IEnumerator ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue()
         {
             var story=new CampaignStory{phase=21};story.continuation.manifestationDispelled=true;story.continuation.chambersPrepared=7;story.continuation.finalCalibrated=true;story.continuation.finalRegulators=new[]{1,0,1};CampaignStorySave.Write(story);yield return Load(21);
             Assert.That(GameObject.Find("Padre Fábio").GetComponent<SpriteRenderer>().sprite.bounds.size.y,Is.GreaterThan(VarginhaReferenceSprites.PadreFabio().bounds.size.y*1.6f),"The epilogue keeps the arena priest's adult scale.");
@@ -370,7 +370,7 @@ namespace Game.Tests.PlayMode
             Assert.That(CampaignCredits.Names[0],Is.EqualTo("fabio, joao pedro matias, asafe e marcos"));
             Assert.That(CampaignCredits.Participation,Is.EqualTo("edelzio, renan, ouzana, professor fabio e ET de Varginha"));
         }
-        [UnityTest,Timeout(90000)] public IEnumerator ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease()
+        [UnityTest,Timeout(90000)] [Category("HudPuzzles")] public IEnumerator ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease()
         {
             CampaignStorySave.Write(new CampaignStory{phase=21});yield return Load(21);
             var c=CampaignContinuationController.Active;c.Interact("procedure");

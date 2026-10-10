@@ -38,7 +38,7 @@ namespace Game.Varginha
                     Rect bounds = Trim(pixels, new RectInt(f * width, rows[2 - r], width, rows[3 - r] - rows[2 - r]));
                     Vector2 pivot = r == 2 ? new Vector2(.5f, .5f)
                         : new Vector2((f * width + width * .5f - bounds.xMin) / bounds.width, -footY * ppu / bounds.height);
-                    var sprite = Sprite.Create(_texture, bounds, pivot, ppu, 0, SpriteMeshType.FullRect);
+                    var sprite = VarginhaCharacterFrameGeometry.Create(_texture, bounds, pivot, ppu, 0, SpriteMeshType.FullRect);
                     sprite.name = $"Edelzio_Interaction_{r}_{f}";
                     _frames[r * 4 + f] = sprite;
                 }

@@ -139,7 +139,7 @@ namespace Game.Varginha.Experiment
             // Outline rectangles retain the complete head even when artwork crosses a nominal grid edge.
             float bodyCenter=BodyAnchorX(texture,rectangles[row*columns+column]);
             float pivotX=Mathf.Clamp01((bodyCenter-rect.x)/rect.width);
-            var sprite=Sprite.Create(texture,rect,new Vector2(pivotX,ppu*.58f/rect.height),ppu,0,SpriteMeshType.FullRect);
+            var sprite=VarginhaCharacterFrameGeometry.Create(texture,rect,new Vector2(pivotX,ppu*.58f/rect.height),ppu,0,SpriteMeshType.FullRect);
             sprite.name="Team_"+key;Frames[key]=sprite;return sprite;
         }
         public static float BodyAnchorX(Texture2D texture,Rect outline)

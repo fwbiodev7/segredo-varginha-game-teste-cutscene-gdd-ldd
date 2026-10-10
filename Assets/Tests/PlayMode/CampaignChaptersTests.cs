@@ -142,7 +142,7 @@ namespace Game.Tests.PlayMode
             Assert.That(VisibleBounds(actor.GetComponent<SpriteRenderer>()).max.y,Is.LessThanOrEqualTo(wall.bounds.min.y+.12f),"Walking north cannot put the visible torso inside the partition end.");
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
-        [UnityTest] public IEnumerator OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters()
+        [UnityTest] [Category("HudPuzzles")] public IEnumerator OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters()
         {
             var keyboard=InputSystem.AddDevice<Keyboard>();
             foreach(int phase in new[]{2,10,18})
@@ -161,7 +161,7 @@ namespace Game.Tests.PlayMode
             }
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
-        [UnityTest] public IEnumerator HouseDriveSchoolAndCodeFormAPlayableSavedCampaign()
+        [UnityTest] [Category("HudPuzzles")] public IEnumerator HouseDriveSchoolAndCodeFormAPlayableSavedCampaign()
         {
             // Include the childhood wall/door check in the full campaign run as well.
             yield return ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor();

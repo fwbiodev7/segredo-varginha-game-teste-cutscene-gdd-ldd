@@ -20,9 +20,14 @@ namespace Game.Varginha.Experiment
                 if (pixels[y * sheet.width + x].a > 128) { upperLeft = Mathf.Min(upperLeft, x); upperRight = Mathf.Max(upperRight, x); }
             float anchorX = (upperLeft + upperRight + 1) * .5f;
             float anchorY = footPivot ? bottom + 2 : bottom + cell.height * .40f;
+            if (VarginhaCharacterFrameGeometry.TryBounds(sheet, new Rect(cell.x,cell.y,cell.width,cell.height), out var body, out var centre))
+            {
+                anchorX = centre;
+                anchorY = footPivot ? body.yMin + 2 : body.yMin + cell.height * .40f;
+            }
             // Retain the full authored cell: the original backpack compositor paints in this
             // 64-pixel coordinate system. Trimming it would shrink/misplace straps and pockets.
-            var sprite = Sprite.Create(sheet, new Rect(cell.x, cell.y, cell.width, cell.height),
+            var sprite = VarginhaCharacterFrameGeometry.Create(sheet, new Rect(cell.x, cell.y, cell.width, cell.height),
                 new Vector2((anchorX - cell.x) / cell.width, (anchorY - cell.y) / cell.height), ppu, 0, SpriteMeshType.FullRect);
             return sprite;
         }

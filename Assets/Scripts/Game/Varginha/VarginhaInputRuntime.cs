@@ -28,10 +28,16 @@ namespace Game.Varginha
         public static string JournalLabel => UsingGamepad ? VarginhaGamepadBindings.Label("Journal") : "TAB";
         public static string InventoryLabel => UsingGamepad ? VarginhaGamepadBindings.Label("Inventory") : "G";
         public static string PauseLabel => UsingGamepad ? "START" : "ESC";
+        public static string ActionLabel(VarginhaInputAction action)=>UsingGamepad?PadLabel(action):VarginhaInputBindings.DisplayName(action,false);
+        public static string MoveLabel=>UsingGamepad?"ANALÓGICO / D-PAD":string.Join(" / ",new[]{
+            ActionLabel(VarginhaInputAction.MoveUp),ActionLabel(VarginhaInputAction.MoveLeft),
+            ActionLabel(VarginhaInputAction.MoveDown),ActionLabel(VarginhaInputAction.MoveRight)});
+        public static string NavigationLabel=>UsingGamepad?"ANALÓGICO / D-PAD":"SETAS";
+        public static string SubmitLabel=>UsingGamepad?"A":"ENTER";
         public static string Prompt(string text)
         {
             if(string.IsNullOrEmpty(text))return text;
-            text=text.Replace("[E]","["+InteractLabel+"]");
+            text=text.Replace("E / A",InteractLabel).Replace("W / A",CarLabel).Replace("[E]","["+InteractLabel+"]");
             if(!UsingGamepad)return text;
             string result=text.Replace("WASD / SETAS","ANALÓGICO / D-PAD").Replace("WASD","ANALÓGICO / D-PAD")
                 .Replace("[W]","["+CarLabel+"]").Replace("[G]","["+InventoryLabel+"]").Replace("[V]","["+VarginhaGamepadBindings.Label("Flashlight")+"]").Replace("[ESPAÇO]","["+InteractLabel+"]")

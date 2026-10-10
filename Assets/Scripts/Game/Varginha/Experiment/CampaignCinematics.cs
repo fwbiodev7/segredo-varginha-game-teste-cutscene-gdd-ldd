@@ -50,7 +50,9 @@ namespace Game.Varginha.Experiment
             {
                 var ambient = CampaignAmbientBridge.Instance;
                 ambient.Suspend(false); ambient.Duck(0);
-                ambient.Transition(string.IsNullOrEmpty(profile.ambience) ? null : CampaignSoundscape.Clip(profile.ambience + "Ambience"));
+                // The arriving controller selects the chapter's bed. Keep the outgoing
+                // channels alive until then instead of inserting a generic third ambience.
+                if (string.IsNullOrEmpty(profile.ambience)) ambient.Transition(null);
                 if (_profile.style == CampaignTransitionStyle.CameraPan && Time.timeScale > 0)
                 {
                     var camera = Camera.main;

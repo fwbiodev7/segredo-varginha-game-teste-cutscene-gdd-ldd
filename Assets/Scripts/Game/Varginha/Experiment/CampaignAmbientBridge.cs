@@ -13,6 +13,7 @@ namespace Game.Varginha.Experiment
         private float _start0, _start1;
         private float _base0, _base1;
         private bool _suspended;
+        private float _atmosphereGain = 1;
         private AudioClip _requested;
         public static CampaignAmbientBridge Instance
         {
@@ -26,11 +27,23 @@ namespace Game.Varginha.Experiment
         private void Awake()
         {
             SceneManager.sceneLoaded += SceneLoaded;
+            EnsureChannels();
+        }
+        private void EnsureChannels()
+        {
+            if (_channels[0] != null && _channels[1] != null) return;
+            var existing = GetComponents<AudioSource>();
             for (int i = 0; i < 2; i++)
             {
-                _channels[i] = gameObject.AddComponent<AudioSource>();
+                _channels[i] = i < existing.Length ? existing[i] : gameObject.AddComponent<AudioSource>();
                 _channels[i].loop = true; _channels[i].playOnAwake = false; _channels[i].volume = 0;
             }
+        }
+        private void OnEnable()
+        {
+            // Reconnect retained native sources after an Editor script reload.
+            EnsureChannels(); _instance = this;
+            SceneManager.sceneLoaded -= SceneLoaded; SceneManager.sceneLoaded += SceneLoaded;
         }
         private void SceneLoaded(Scene scene, LoadSceneMode mode)
         {
@@ -38,6 +51,7 @@ namespace Game.Varginha.Experiment
         }
         public void Transition(AudioClip clip, float duration = .75f)
         {
+            EnsureChannels();
             if (_requested == clip) return;
             _requested = clip; _start0 = _base0; _start1 = _base1;
             // Reuse the quieter channel when a second request interrupts a blend.
@@ -50,6 +64,7 @@ namespace Game.Varginha.Experiment
             _elapsed = 0; _duration = Mathf.Max(.1f, duration);
         }
         public void Duck(float weight) => _duckTarget = Mathf.Lerp(1, .21f, Mathf.Clamp01(weight));
+        public void AtmosphereGain(float gain) => _atmosphereGain = Mathf.Clamp(gain, .5f, 1.5f);
         public void Suspend(bool value)
         {
             _suspended = value;
@@ -67,7 +82,7 @@ namespace Game.Varginha.Experiment
                 float end = i == _incoming && _requested != null ? .12f : 0;
                 float mixed = Mathf.Lerp(start, end, p);
                 if (i == 0) _base0 = mixed; else _base1 = mixed;
-                _channels[i].volume = mixed * _duck * VarginhaGameSettings.Current.music;
+                _channels[i].volume = mixed * _duck * _atmosphereGain * VarginhaGameSettings.Current.music;
                 if (p >= 1 && i != _incoming && _channels[i].isPlaying) _channels[i].Stop();
             }
         }

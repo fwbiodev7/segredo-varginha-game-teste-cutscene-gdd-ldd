@@ -113,6 +113,9 @@ namespace Game.Varginha.Experiment
             if (_paused) return;
             _title += Time.deltaTime;
             if (Blocked) { _vehicle?.StopInput(); Lock(); return; }
+            if(_parking)CampaignHud.For(phase).BeginTutorial("estacionar");
+            else if(_driving)CampaignHud.For(phase).BeginTutorial("conduzir");
+            CampaignHud.For(phase).Tick(Time.unscaledDeltaTime,_title>=2.5f&&!_departing,CampaignGuidance.Next(Progress,phase));
             if (_parking)
             {
                 if(_vehicle.TickParking())
@@ -354,7 +357,7 @@ namespace Game.Varginha.Experiment
             ExperimentGUI.Init(); var matrix = ExperimentGUI.BeginCanvas();
             if(!_departing)
             {
-                ExperimentGUI.Objective(CampaignSequence.Heading(phase) + " • 2026", CampaignSequence.Title(phase).ToUpperInvariant(), CampaignGuidance.Next(Progress,phase));
+                if(!Blocked&&!_parking)ExperimentGUI.Objective(CampaignSequence.Heading(phase) + " • 2026", CampaignSequence.Title(phase).ToUpperInvariant(), CampaignGuidance.Next(Progress,phase),CampaignHud.For(phase));
                 if(!Blocked&&!_parking&&!_departing)CampaignGuidance.DrawMarker(Plan,Progress,phase,waypoint:_guideTarget);
                 bool hudEnabled=GUI.enabled; GUI.enabled=hudEnabled&&!_paused&&_panel==null&&_message==null;
                 if (CampaignHudIcons.Button(1010, CampaignHudIcons.Icon.Notebook, "TAB", "Caderno") && !Blocked && !_driving && !_parking) { _panel = "journal"; Lock(); }
@@ -375,17 +378,14 @@ namespace Game.Varginha.Experiment
             }
             else if (_parking)
             {
-                ExperimentGUI.Panel(new Rect(190,648,900,50));
-                ExperimentGUI.Label(new Rect(210,660,870,30),_vehicle.CanPark?"["+VarginhaInputActions.CarLabel+"] ESTACIONAR E SAIR DO FUSCA":(VarginhaInputActions.UsingGamepad?"ANALÓGICO / D-PAD • CONDUZIR     A • ESTACIONAR     START • PAUSA":"WASD / SETAS • CONDUZIR     W • ESTACIONAR     ESC • PAUSA"),small:true);
+                ExperimentGUI.ContextPrompt(_vehicle.CanPark?"["+VarginhaInputActions.CarLabel+"] ESTACIONAR E SAIR":null,VarginhaInputActions.MoveLabel+" • CONDUZIR    "+VarginhaInputActions.CarLabel+" • ESTACIONAR",CampaignHud.For(phase));
             }
-            else if (_driving) ExperimentGUI.Label(new Rect(200,620,950,70), "A / D OU SETAS • conduza até o fim da pista. ESC • pausa");
+            else if (_driving) ExperimentGUI.ContextPrompt(null,VarginhaInputActions.MoveLabel+" • CONDUZIR    "+VarginhaInputActions.PauseLabel+" • PAUSA",CampaignHud.For(phase));
             else
             {
                 var point = Nearest(); if(VarginhaGameSettings.Current.interactionHints)
                 {
-                ExperimentGUI.Panel(new Rect(190,648,900,50));
-                ExperimentGUI.Label(new Rect(210,660,870,30), _hidden ? "ABRIGADO • E: sair • mover-se abandona o abrigo"
-                    : point == null ? "WASD / SETAS • ANDAR     E • EXAMINAR" : "["+(phase==10?VarginhaInputActions.CarLabel:VarginhaInputActions.InteractLabel)+"] "+point.label, small:true);
+                if(!Blocked)ExperimentGUI.ContextPrompt(_hidden?"ABRIGADO • "+VarginhaInputActions.InteractLabel+": SAIR":point==null?null:"["+(phase==10?VarginhaInputActions.CarLabel:VarginhaInputActions.InteractLabel)+"] "+point.label);
                 }
             }
             if (phase == 7) ExperimentGUI.Label(new Rect(35,158,610,40), "SANIDADE " + Mathf.RoundToInt(_actor.CurrentSanity) + " • MARCAS " + State.forestSigns + "/3",small:true);
@@ -412,7 +412,7 @@ namespace Game.Varginha.Experiment
         public bool OpenHints()
         {
             if (Progress == null || _paused || _parking || _departing || _driving || _message != null || CampaignCinematics.IsTransitioning || VarginhaGameHUD.Instance?.IsInventoryOpen == true) return false;
-            _hintLevel=0; _panel="hints"; Lock(); return true;
+            _panel="hints"; Lock(); return true;
         }
         private void DrawPanel()
         {

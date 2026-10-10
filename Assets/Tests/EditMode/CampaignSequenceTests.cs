@@ -7,7 +7,7 @@ using UnityEngine.Rendering;
 
 namespace Game.Tests.EditMode
 {
-    public class CampaignSequenceTests
+    [Category("HudPuzzles")] public class CampaignSequenceTests
     {
         private static string DetectPipeline() => GraphicsSettings.currentRenderPipeline == null ? "Built-in" : GraphicsSettings.currentRenderPipeline.GetType().FullName;
 

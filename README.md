@@ -4,7 +4,9 @@
 
 Trinta anos depois de uma noite esquecida, Edelzio encontra uma caixa que devolve perguntas sobre seu passado. Explore casas, a Escola Industrial, trilhas e laboratórios; converse com Renan, Padre Fábio e Ouzana; reúna pistas e conte com seus aliados quando a investigação se transformar em combate.
 
-**Em desenvolvimento · 14 fases em 5 atos · atualização: 08/10/2026.**
+**Em desenvolvimento · Alpha 0.3 · 14 fases em 5 atos · atualização: 09/10/2026.**
+
+Nova build Windows: `jogo_varginha_alpha_0.3_Windows_x64.zip`. Inclui revisões de mapas, HUD, puzzles, atmosfera e recortes dos personagens. Consulte as [notas e o manifesto da Alpha 0.3](Docs/Alpha03/README.md).
 
 [Site oficial](https://o-segredo-de-varginha.zfabiobrronaldo.chatgpt.site) · [Como começar](#como-começar) · [Controles](#controles) · [Ajuda para puzzles](#ajuda-para-puzzles) · [Reportar um problema](https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/issues)
 

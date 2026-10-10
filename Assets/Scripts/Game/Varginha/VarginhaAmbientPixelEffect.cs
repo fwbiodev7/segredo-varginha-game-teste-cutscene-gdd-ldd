@@ -24,8 +24,12 @@ namespace Game.Varginha
         private void Update()
         {
             if (_renderer == null || !_renderer.isVisible) return;
+            if (Experiment.VarginhaGameSettings.Current.reducedMotion)
+            { _renderer.color = _baseColor; if (drift) transform.position = _origin; return; }
             float t = Time.time + phase;
-            float pulse = drift ? .55f + .35f * Mathf.Sin(t * .8f) : .94f + .04f * Mathf.Sin(t * 3.1f) + .02f * Mathf.Sin(t * 7.3f);
+            float tension = Experiment.CampaignAtmosphereDirector.Active?.Tension ?? .2f;
+            float instability = .012f + .06f * tension;
+            float pulse = drift ? .55f + .35f * Mathf.Sin(t * .8f) : 1 - instability + instability * (.67f * Mathf.Sin(t * 3.1f) + .33f * Mathf.Sin(t * 7.3f));
             _renderer.color = new Color(_baseColor.r, _baseColor.g, _baseColor.b, _baseColor.a * pulse);
             if (!drift) return;
             var position = _origin + new Vector3(Mathf.Sin(t * .37f) * .12f, Mathf.Sin(t * .51f) * .16f, 0);

@@ -419,7 +419,7 @@ namespace Game.Varginha
             float ppu = Mathf.Max(cellWidth, cellHeight) / 1.45f;
             _actionFrames = new Sprite[8];
             for (int i = 0; i < 8; i++)
-                _actionFrames[i] = Sprite.Create(sheet,
+                _actionFrames[i] = VarginhaCharacterFrameGeometry.Create(sheet,
                     new Rect((i % 4) * cellWidth, (i < 4 ? 1 : 0) * cellHeight, cellWidth, cellHeight),
                     new Vector2(.5f, .5f), ppu);
             var directions = new Sprite[4][];
@@ -430,7 +430,7 @@ namespace Game.Varginha
                 float unityRow = 5f - direction;
                 for (int frame = 0; frame < directions[direction].Length; frame++)
                 {
-                    directions[direction][frame] = Sprite.Create(sheet,
+                    directions[direction][frame] = VarginhaCharacterFrameGeometry.Create(sheet,
                         new Rect(frame * cellWidth, unityRow * cellHeight, cellWidth, cellHeight),
                         new Vector2(.5f, .5f), ppu);
                     directions[direction][frame].name = "Edelzio_" + direction + "_Andar_" + frame;

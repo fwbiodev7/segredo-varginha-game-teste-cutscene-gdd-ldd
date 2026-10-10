@@ -151,6 +151,7 @@ namespace Game.Varginha.Experiment
             if(_message!=null&&VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)){CloseMessage();Actor.SetInputLocked(Modal);return;}
             if(!Modal)
             {
+                CampaignHud.For(phase).Tick(Time.unscaledDeltaTime,_title>=2,CampaignGuidance.Next(Progress,phase,area),CampaignGuidance.RoomName(Plan,Feet));
                 if(_resumeBattlePending){_resumeBattlePending=false;StartBattle();Actor.SetInputLocked(true);return;}
                 if(Keyboard.current?.f1Key.wasPressedThisFrame==true){OpenHints();return;}
                 if(VarginhaInputActions.JournalPressed)_panel="journal";
@@ -167,6 +168,7 @@ namespace Game.Varginha.Experiment
         }
         public void StartBattle()
         {
+            CampaignHud.For(phase).BeginTutorial("combate");
             if(_boss!=null||State.manifestationDispelled||State.chambersPrepared!=7)return;
             StartCoroutine(EnterBattle());
         }
@@ -324,7 +326,7 @@ namespace Game.Varginha.Experiment
         {
             bool correct=State.HasAll(phase,_definition.required)&&(CampaignPuzzleDesign.Redesigned(phase)
                 ?CampaignPuzzleDesign.Correct(phase,choice,order):_definition.choice?choice==0:CampaignStory.Sequence(order,_identity()));
-            if(!correct){Say(CampaignPuzzleDesign.Redesigned(phase)?CampaignPuzzleDesign.Feedback(phase):"A combinação não corresponde aos registros. As pistas continuam no caderno.");return false;}
+            if(!correct){Say(!State.HasAll(phase,_definition.required)?CampaignGuidance.Next(Progress,phase,area):CampaignPuzzleDesign.Redesigned(phase)?CampaignPuzzleDesign.Feedback(phase,choice,order):"A combinação não corresponde aos registros. As pistas continuam no caderno.");return false;}
             State.solved[phase-11]=true;_panel=null;
             if(phase==18) { State.solved[8]=true; State.clues[8]|=15; }
             Save();
@@ -335,7 +337,12 @@ namespace Game.Varginha.Experiment
         {
             if(_sequence)return false;
             if(phase!=20||!State.CalibrateReturn())
-            {Say(State.finalSealActive?"As três câmaras precisam atingir suas referências simultaneamente. Cada regulador afeta também a câmara seguinte.":"Sem o selo ativo, a ruptura perde a proteção durante a travessia. Reative a ligação de Edelzio.");return false;}
+            {
+                Say(!State.manifestationDispelled?"Dissipe a manifestação antes de calibrar o retorno."
+                    :State.chambersPrepared!=7?"Prepare os três circuitos no cenário antes de calibrar."
+                    :!State.finalSealActive?"Sem o selo ativo, a ruptura perde a proteção durante a travessia. Reative a ligação de Edelzio."
+                    :"As referências ainda não coincidem: ÁRVORE "+State.FinalReading(0)+" / 3, RIO "+State.FinalReading(1)+" / 1, CAPELA "+State.FinalReading(2)+" / 2. Cada regulador altera sua câmara e a seguinte.");return false;
+            }
             State.finalCalibrated=State.solved[9]=true;_panel="complete";Save();return true;
         }
         private void Finale(string id)
@@ -461,12 +468,14 @@ namespace Game.Varginha.Experiment
             else if(!_paused)
             {
                 string goal=CampaignGuidance.Next(Progress,phase,area);
-                if(phase!=20)ExperimentGUI.Objective(CampaignSequence.Heading(phase),CampaignSequence.Title(phase).ToUpperInvariant(),goal);
-                else if(_boss==null||State.manifestationDispelled){ExperimentGUI.Panel(new Rect(345,hudTop,590,74));ExperimentGUI.Label(new Rect(365,hudTop+14,550,47),goal,small:true);}
+                if(!Modal&&(phase!=20||_boss==null||State.manifestationDispelled))ExperimentGUI.Objective(CampaignSequence.Heading(phase),CampaignSequence.Title(phase).ToUpperInvariant(),goal,CampaignHud.For(phase));
+
                 if(!Modal)CampaignGuidance.DrawMarker(Plan,Progress,phase,area);
                 if(!Modal)CampaignGuidance.DrawRoom(Plan,Feet);
+                GUI.enabled=!Modal;
                 if(CampaignHudIcons.Button(1058,CampaignHudIcons.Icon.Notebook,"TAB","Caderno"))_panel="journal";
                 if(CampaignHudIcons.Button(1116,CampaignHudIcons.Icon.Backpack,"G","Mochila"))VarginhaGameHUD.Instance?.OpenBackpack();
+                GUI.enabled=true;
                 if(CampaignHudIcons.Button(1174,CampaignHudIcons.Icon.Pause,"ESC","Pausa"))TogglePause();
                 if(phase==20&&_boss!=null&&!State.manifestationDispelled)
                 {
@@ -474,7 +483,7 @@ namespace Game.Varginha.Experiment
                     ExperimentGUI.Box(new Rect(385,hudTop+40,510,16),new Color(.15f,.08f,.12f));ExperimentGUI.Box(new Rect(385,hudTop+40,510*_boss.HealthPercent,16),new Color(.73f,.19f,.24f));
                     ExperimentGUI.Label(new Rect(385,hudTop+61,510,18),_boss.CanReceiveHit?"VULNERÁVEL • ATAQUE AGORA":"OBSERVE O AVISO E DESVIE",small:true);
                     _allies?.DrawCommands(365,hudTop+94);
-                    ExperimentGUI.Label(new Rect(365,hudTop+145,550,32),"ESQUIVA: "+VarginhaInputBindings.DisplayName(VarginhaInputAction.Dodge)+" • PRÓXIMO ALUNO: "+(VarginhaInputActions.UsingGamepad?"LB":VarginhaInputBindings.DisplayName(VarginhaInputAction.AllyCommand)),small:true);
+                    if(!Modal)ExperimentGUI.ContextPrompt(null,"ESQUIVA: "+VarginhaInputActions.ActionLabel(VarginhaInputAction.Dodge)+" • ALUNO: "+VarginhaInputActions.ActionLabel(VarginhaInputAction.AllyCommand),CampaignHud.For(phase));
                 }
                 if(phase==20)
                 {
@@ -487,7 +496,7 @@ namespace Game.Varginha.Experiment
                         ExperimentGUI.Box(new Rect(hudLeft+20,hudTop+62,230,12),new Color(.15f,.08f,.12f));ExperimentGUI.Box(new Rect(hudLeft+20,hudTop+62,230*health.HealthPercent,12),new Color(.23f,.74f,.51f));
                     }
                 }
-                if(!Modal&&VarginhaGameSettings.Current.interactionHints){var point=Nearest();if(point!=null){ExperimentGUI.Panel(new Rect(160,620,960,70));string label=phase==21&&area==0&&(point.id=="procedure"||point.id=="exit")?new[]{"ABRIR PASSAGEM DE RETORNO","AGUARDAR A TRAVESSIA","ENCERRAR O SELO","O ACORDO TERMINOU","VOLTAR À INDUSTRIAL"}[State.finalStep]:point.label;ExperimentGUI.Label(new Rect(180,639,920,36),"["+(point.id=="car"?VarginhaInputActions.CarLabel:VarginhaInputActions.InteractLabel)+"] "+label,small:true);}}
+                if(!Modal&&VarginhaGameSettings.Current.interactionHints){var point=Nearest();if(point!=null){string label=phase==21&&area==0&&(point.id=="procedure"||point.id=="exit")?new[]{"ABRIR PASSAGEM DE RETORNO","AGUARDAR A TRAVESSIA","ENCERRAR O SELO","O ACORDO TERMINOU","VOLTAR À INDUSTRIAL"}[State.finalStep]:point.label;ExperimentGUI.ContextPrompt("["+(point.id=="car"?VarginhaInputActions.CarLabel:VarginhaInputActions.InteractLabel)+"] "+label);}}
             }
             if(_paused)
             {
@@ -512,7 +521,7 @@ namespace Game.Varginha.Experiment
         public bool OpenHints()
         {
             if (Progress==null || _paused || _sequence || _message!=null || CampaignCinematics.IsTransitioning || VarginhaGameHUD.Instance?.IsInventoryOpen==true) return false;
-            _hintLevel=0; _panel="hints"; Actor.SetInputLocked(true); return true;
+            _panel="hints"; Actor.SetInputLocked(true); return true;
         }
         private void Panel()
         {
@@ -542,7 +551,10 @@ namespace Game.Varginha.Experiment
                 {
                     int index=i;string name=new[]{"ÁRVORE","RIO","CAPELA"}[i];
                     ExperimentGUI.Label(new Rect(145+i*320,330,300,45),name+" • LEITURA "+State.FinalReading(i));
+                    int target=new[]{3,1,2}[i];
+                    ExperimentGUI.Label(new Rect(145+i*320,370,300,20),"REFERÊNCIA "+target+(State.FinalReading(i)==target?" • ESTÁVEL":" • AJUSTAR"),small:true);
                     if(ExperimentGUI.Button(new Rect(145+i*320,390,300,55),"REGULADOR "+State.finalRegulators[i])){State.TurnFinalRegulator(index);Save();}
+                    ExperimentGUI.Label(new Rect(145+i*320,448,300,24),"Afeta "+name+" e "+new[]{"RIO","CAPELA","ÁRVORE"}[i],small:true);
                 }
                 if(ExperimentGUI.Button(new Rect(145,475,540,50),"SELO DE EDELZIO • "+(State.finalSealActive?"ATIVO":"DESLIGADO"))){State.SetFinalSeal(!State.finalSealActive);Save();}
                 if(ExperimentGUI.Button(new Rect(755,500,360,45),"VALIDAR RETORNO SEGURO"))SubmitCalibration();

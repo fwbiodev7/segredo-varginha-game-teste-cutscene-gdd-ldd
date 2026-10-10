@@ -46,7 +46,7 @@ namespace Game.Varginha
             if (Cache.TryGetValue(key, out var cached) && cached != null && cached.texture != null) return cached;
             var texture = Resources.Load<Texture2D>("Varginha/PadreFabioV1");
             if (texture == null) return null;
-            var sprite = Sprite.Create(texture, new Rect(frame * 64, (3 - direction) * 64, 64, 64),
+            var sprite = VarginhaCharacterFrameGeometry.Create(texture, new Rect(frame * 64, (3 - direction) * 64, 64, 64),
                 new Vector2(.5f, .5f), 44f, 0, SpriteMeshType.FullRect);
             sprite.name = key;
             Cache[key] = sprite;
@@ -74,7 +74,7 @@ namespace Game.Varginha
             float height = rect.height * .40f;
             rect.y += rect.height - height;
             rect.height = height;
-            var portrait = Sprite.Create(body.texture, rect, new Vector2(.5f, .5f), height / .65f);
+            var portrait = VarginhaCharacterFrameGeometry.Create(body.texture, rect, new Vector2(.5f, .5f), height / .65f);
             portrait.name = key;
             Cache[key] = portrait;
             return portrait;
@@ -122,7 +122,8 @@ namespace Game.Varginha
                         pivot.x = (neutral.rect.center.x + column * texture.width / 4f - rect.x) / rect.width;
                 }
             }
-            var sprite = Sprite.Create(texture, rect, pivot, ppu, 0, SpriteMeshType.FullRect);
+            var sprite = prop ? Sprite.Create(texture, rect, pivot, ppu, 0, SpriteMeshType.FullRect)
+                : VarginhaCharacterFrameGeometry.Create(texture, rect, pivot, ppu, 0, SpriteMeshType.FullRect);
             sprite.name = key;
             Cache[key] = sprite;
             return sprite;
@@ -394,20 +395,11 @@ namespace Game.Varginha
                     _attack[d] = new Sprite[cols];
                     for (int f = 0; f < cols; f++)
                     {
-                        var cellPixels = texture.GetPixels(f * 64, (3 - d) * 64, 64, 64);
-                        var cellTex = new Texture2D(64, 64, TextureFormat.RGBA32, false)
-                        {
-                            name = $"Edelzio_Attack_{d}_{f}",
-                            filterMode = FilterMode.Point,
-                            wrapMode = TextureWrapMode.Clamp
-                        };
-                        cellTex.SetPixels(cellPixels);
-                        cellTex.Apply(false, false);
-                        _attack[d][f] = Sprite.Create(cellTex,
-                            new Rect(0, 0, 64, 64),
+                        _attack[d][f] = VarginhaCharacterFrameGeometry.Create(texture,
+                            new Rect(f * 64, (3 - d) * 64, 64, 64),
                             new Vector2(.5f, .5f - (26f / 64f) * (1f - 1f / EdelzioVisualScale)),
                             EdelzioPixelsPerUnit);
-                        _attack[d][f].name = cellTex.name;
+                        _attack[d][f].name = $"Edelzio_Attack_{d}_{f}";
                     }
                 }
                 return _attack;

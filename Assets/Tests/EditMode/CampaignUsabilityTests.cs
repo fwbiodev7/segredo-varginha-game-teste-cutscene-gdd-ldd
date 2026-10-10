@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Game.Tests.EditMode
 {
-    public class CampaignUsabilityTests
+    [Category("HudPuzzles")] public class CampaignUsabilityTests
     {
         [Test] public void DifficultyOptionsAffectCampaignBoss()
         {

@@ -28,7 +28,7 @@ namespace Game.Varginha.Experiment
                 case 13:tips=new[]{"A contenção respondeu a um problema anterior.","Compare páginas, fotografias e materiais na mesa de investigação.","Associe página à descoberta, fotografia às experiências, danos à ruptura e instrumentos à contenção."};break;
                 case 14:tips=new[]{"As três datas mostram como a ligação permaneceu.","Apresente as provas a Fábio e compare os registros no Tombo.","Associe instrumentos a 1898, ligação de Edelzio a 1996 e interferência atual a 2026."};break;
                 case 15:tips=new[]{"A presença apareceu depois que a energia falhou.","Compare TV, desenho, falta de energia e presença no quintal.","Acione TV → DESENHO → ENERGIA APAGADA → PRESENÇA para reconstruir a lembrança."};break;
-                case 18:case 19:tips=new[]{"Retorno e contenção têm funções diferentes.","Compare registros humanos, ferimentos e leituras; a memória explica o acordo temporário.","Associe ferimentos à contenção, reagente ao circuito externo e registros à manutenção do selo até a travessia."};break;
+                case 16:case 17:case 18:case 19:tips=new[]{"Retorno e contenção têm funções diferentes.","Compare registros humanos, ferimentos e leituras; a memória explica o acordo temporário.","Associe ferimentos à contenção, reagente ao circuito externo e registros à manutenção do selo até a travessia."};break;
                 case 20:tips=s.continuation.manifestationDispelled
                     ?s.continuation.finalCalibrated?new[]{"O caminho seguro foi preparado.","A calibração está confirmada.","Siga pela saída para abrir a passagem de retorno."}:new[]{"A dissipação permite preparar o retorno.","No mecanismo, mantenha o selo de Edelzio ativo e ajuste as referências 3, 1, 2.","Use reguladores ÁRVORE 1, RIO 0, CAPELA 1; mantenha o selo ATIVO e valide o retorno seguro."}
                     :new[]{"Os avisos revelam a preparação dos ataques.","Prepare ÁRVORE, RIO e CAPELA; equipe três alunos e um apoio na mochila.","Saia da área de aviso e ataque na recuperação. Respeite as recargas; FÁCIL nas configurações reduz a resistência e o dano dos inimigos."};break;
@@ -41,7 +41,7 @@ namespace Game.Varginha.Experiment
         {
             ExperimentGUI.Label(new Rect(145,250,980,55),level==2?"SOLUÇÃO • SPOILER":"DICA "+(level+1)+" DE 3",true);
             ExperimentGUI.Label(new Rect(145,325,980,160),Get(story,id,level));
-            if(level<2&&ExperimentGUI.Button(new Rect(650,510,460,45),level==1?"MOSTRAR A SOLUÇÃO":"QUERO MAIS UMA DICA"))level++;
+            if(level<2&&ExperimentGUI.Button(new Rect(650,510,460,45),level==1?"REVELAR SOLUÇÃO • SPOILER":"QUERO MAIS UMA DICA"))level++;
             if(level>0&&ExperimentGUI.Button(new Rect(145,510,380,45),"VOLTAR À DICA ANTERIOR"))level--;
         }
     }

@@ -60,7 +60,7 @@ namespace Game.Varginha.Experiment
             int size=minor?1:0;var sprite=Frames[size,direction,pose];if(sprite!=null&&sprite.texture!=null)return sprite;
             var texture=Resources.Load<Texture2D>("Varginha/StoryCharacters/EntityManifestation");
             float ppu=minor?100:34;
-            sprite=Sprite.Create(texture,new Rect(pose*128,(3-direction)*144,128,144),new Vector2(.5f,(8+ppu*.58f)/144),ppu,0,SpriteMeshType.FullRect);
+            sprite=VarginhaCharacterFrameGeometry.Create(texture,new Rect(pose*128,(3-direction)*144,128,144),new Vector2(.5f,(8+ppu*.58f)/144),ppu,0,SpriteMeshType.FullRect);
             sprite.name="Manifestation_"+direction+"_"+pose;return Frames[size,direction,pose]=sprite;
         }
         public static Sprite CombatFrame(int direction,int pose,bool minor=false)
@@ -69,7 +69,7 @@ namespace Game.Varginha.Experiment
             var texture=Resources.Load<Texture2D>("Varginha/StoryCharacters/"+(minor?"ManifestationChildCombatV2":"ManifestationBossCombatV2"));
             if(texture==null)return Frame(direction,pose,minor);
             int width=minor?96:160,height=minor?128:192;float ppu=minor?80:34;
-            sprite=Sprite.Create(texture,new Rect(pose*width,(3-direction)*height,width,height),new Vector2(.5f,(8+ppu*.58f)/height),ppu,0,SpriteMeshType.FullRect);
+            sprite=VarginhaCharacterFrameGeometry.Create(texture,new Rect(pose*width,(3-direction)*height,width,height),new Vector2(.5f,(8+ppu*.58f)/height),ppu,0,SpriteMeshType.FullRect);
             sprite.name=(minor?"EchoCombat_":"BossCombat_")+direction+"_"+pose;return CombatFrames[size,direction,pose]=sprite;
         }
         private static Sprite FlowFrame(int direction,int pose,bool minor)
@@ -78,7 +78,7 @@ namespace Game.Varginha.Experiment
             var texture=Resources.Load<Texture2D>("Varginha/StoryCharacters/Manifestation"+(minor?"Child":"Boss")+"FlowV1");
             if(texture==null)return CombatFrame(direction,pose<2?pose:pose==2?2:pose==3?3:pose==4?4:5,minor);
             int width=minor?96:160,height=minor?128:192;float ppu=minor?80:34;
-            sprite=Sprite.Create(texture,new Rect(pose*width,(3-direction)*height,width,height),new Vector2(.5f,(8+ppu*.58f)/height),ppu,0,SpriteMeshType.FullRect);
+            sprite=VarginhaCharacterFrameGeometry.Create(texture,new Rect(pose*width,(3-direction)*height,width,height),new Vector2(.5f,(8+ppu*.58f)/height),ppu,0,SpriteMeshType.FullRect);
             sprite.name=(minor?"EchoFlow_":"BossFlow_")+direction+"_"+pose;return FlowFrames[size,direction,pose]=sprite;
         }
         private void Pose(int direction,int pose,bool flow=false)

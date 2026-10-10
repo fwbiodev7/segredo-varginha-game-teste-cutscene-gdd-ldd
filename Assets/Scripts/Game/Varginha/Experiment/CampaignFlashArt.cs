@@ -48,7 +48,7 @@ namespace Game.Varginha.Experiment
             for(int i=0;i<frames.Length;i++)
             {
                 var f=frames[i];
-                result[i]=Sprite.Create(texture,new Rect(f.x,f.y,f.width,f.height),new Vector2(f.pivotX,f.pivotY),ppu,0,SpriteMeshType.FullRect);
+                result[i]=VarginhaCharacterFrameGeometry.Create(texture,new Rect(f.x,f.y,f.width,f.height),new Vector2(f.pivotX,f.pivotY),ppu,0,SpriteMeshType.FullRect);
                 result[i].name=name+"_"+f.name;
             }
             return result;

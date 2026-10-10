@@ -91,7 +91,7 @@ namespace Game.Varginha.Experiment
         {
             var definition=Get(phase,area);var plan=new CampaignMapPlan{phase=definition.map,title=definition.title};
             CampaignIllustratedMaps.Apply(plan);
-            if(phase==13)plan.points.Add(new CampaignMapPlan.Point("ground","ESCADA • VOLTAR AO TÉRREO",plan.spawn.x,plan.spawn.y-1.65f));
+            if(phase==13&&!plan.points.Exists(p=>p.id=="ground"))plan.points.Add(new CampaignMapPlan.Point("ground","ESCADA • VOLTAR AO TÉRREO",plan.spawn.x,plan.spawn.y-1.65f));
             foreach(var point in plan.points)
             {
                 int index=System.Array.IndexOf(definition.ids,point.id);
@@ -101,6 +101,7 @@ namespace Game.Varginha.Experiment
                 else if(point.id=="exit")point.label="SAÍDA • "+CampaignGuidance.Destination(phase);
                 else if(point.id=="entrance")point.label="PORTA PRINCIPAL • ENTRAR NO TÉRREO";
                 else if(point.id=="garden")point.label="PORTA PRINCIPAL • VOLTAR AO JARDIM";
+                else if(point.id=="ground")point.label="ESCADA • VOLTAR AO TÉRREO";
                 else if(point.id=="service")point.label="PORTA DE SERVIÇO • ABRIR PASSAGEM";
                 else if(point.id=="puzzle")point.label="CONFERIR AS EVIDÊNCIAS";
                 else if(point.id=="fabio")point.label="FÁBIO • APRESENTAR REGISTROS";

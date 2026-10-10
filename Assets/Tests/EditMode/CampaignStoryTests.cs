@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game.Tests.EditMode
 {
-    public class CampaignStoryTests
+    [Category("HudPuzzles")] public class CampaignStoryTests
     {
         [Test] public void CorrectAnswersCannotBypassInvestigatedEvidence()
         {

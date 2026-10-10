@@ -10,7 +10,8 @@ namespace Game.Editor.Testing
 {
     public static class VarginhaAlphaBuild
     {
-        public const string Name = "jogo_varginha_alpha_0.1";
+        public const string Version = "0.3.0";
+        public const string Name = "jogo_varginha_alpha_0.3";
         public static string[] Scenes => new[] { "Assets/Scenes/Menu_MisterioDeVarginha.unity" }
             .Concat(CampaignSequence.Entries.Concat(new[] { 10, 13 }).Select(id => "Assets/Scenes/" + CampaignStorySave.Scene(id) + ".unity"))
             .Concat(new[] { "Assets/Scenes/" + CampaignContinuationDefinition.SceneName(12, 1) + ".unity", "Assets/Scenes/" + CampaignContinuationDefinition.SceneName(21, 1) + ".unity" })
@@ -20,6 +21,8 @@ namespace Game.Editor.Testing
         public static void Build()
         {
             if (Application.isPlaying) throw new InvalidOperationException("Encerre o Play antes de gerar a build alpha.");
+            PlayerSettings.bundleVersion = Version;
+            AssetDatabase.SaveAssets();
             foreach (string scene in Scenes)
                 if (!File.Exists(scene)) throw new FileNotFoundException("Cena necessária à campanha.", scene);
             string folder = Path.GetFullPath(Path.Combine("Builds", Name));

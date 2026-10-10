@@ -44,7 +44,7 @@ namespace Game.Varginha
                     {
                         RectInt b = bounds[f];
                         var pivot = new Vector2(.5f, -footY * ppu / b.height);
-                        var sprite = Sprite.Create(texture, new Rect(b.x,b.y,b.width,b.height), pivot, ppu, 0, SpriteMeshType.FullRect);
+                        var sprite = VarginhaCharacterFrameGeometry.Create(texture, new Rect(b.x,b.y,b.width,b.height), pivot, ppu, 0, SpriteMeshType.FullRect);
                         sprite.name = $"Edelzio_SeatedV2_{d}_{f}";
                         _frames[d][f] = sprite;
                     }

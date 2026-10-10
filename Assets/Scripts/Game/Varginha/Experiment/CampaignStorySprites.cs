@@ -26,12 +26,20 @@ namespace Game.Varginha.Experiment
             if (sheet.sprites.TryGetValue(key, out var sprite) && sprite != null) return sprite;
             var f = sheet.data.frames[index]; int[] crop = f.rect;
             float sx = (float)sheet.texture.width/sheet.data.width, sy = (float)sheet.texture.height/sheet.data.height;
-            float height = portrait ? crop[3]*.47f : crop[3];
-            var rect = new Rect(crop[0]*sx, (sheet.data.height-crop[1]-height)*sy, crop[2]*sx, height*sy);
+            var body = new Rect(crop[0]*sx, (sheet.data.height-crop[1]-crop[3])*sy, crop[2]*sx, crop[3]*sy);
+            float anchorX = f.anchorX*sx;
+            if (VarginhaCharacterFrameGeometry.TryBounds(sheet.texture,body,out var visible,out var centre))
+            { body = visible; anchorX = centre; }
+            var rect = body;
+            if (portrait)
+            {
+                float height = Mathf.Ceil(body.height*.47f);
+                rect.y = body.yMax-height; rect.height = height;
+            }
             float ppu = sheet.data.pixelsPerUnit[row]*sy;
             if (reduced) ppu /= CampaignTeamEdelzio.ChurchVisualScale;
-            var pivot = new Vector2((f.anchorX-crop[0])/crop[2], portrait ? .5f : (.58f-f.lift)*ppu/rect.height);
-            sprite = Sprite.Create(sheet.texture, rect, pivot, ppu, 0, SpriteMeshType.FullRect);
+            var pivot = new Vector2((anchorX-rect.x)/rect.width, portrait ? .5f : (.58f-f.lift)*ppu/rect.height);
+            sprite = VarginhaCharacterFrameGeometry.Create(sheet.texture, rect, pivot, ppu, 0, SpriteMeshType.FullRect);
             sprite.name = "Team_V4_" + name + "_" + row + "_" + column + (portrait ? "_Head" : "");
             sheet.sprites[key] = sprite; return sprite;
         }

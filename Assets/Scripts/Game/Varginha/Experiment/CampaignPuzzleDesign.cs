@@ -54,6 +54,15 @@ namespace Game.Varginha.Experiment
             : phase == 15 ? "A lembrança ainda não respeita as relações dos vestígios. Compare o desenho com a falta de energia."
             : "Uma conclusão ainda não é sustentada pela prova associada. Compare intenção, ferimentos e função dos circuitos.";
 
+        public static string Feedback(int phase, int choice, int[] answer)
+        {
+            if (phase == 11 && choice == 0) return "Nenhum detalhe foi marcado. Compare as duas plantas antes de registrar.";
+            if (phase != 11 && (answer == null || answer.Length != Solution(phase).Length || Array.IndexOf(answer, -1) >= 0))
+                return phase == 15 ? "A lembrança está incompleta. Inclua os quatro vestígios; você pode desfazer a última escolha."
+                    : "Ainda há documentos sem associação. Selecione uma prova à esquerda e o acontecimento à direita; cada prova tem um único destino.";
+            return Feedback(phase);
+        }
+
         public static void DrawMap(CampaignExpansionState state, ref int selected, Action confirm, Action save)
         {
             ExperimentGUI.Label(new Rect(165,170,950,42), "FRAGMENTOS • RECONSTRUIR A TRILHA", true);
@@ -61,10 +70,17 @@ namespace Game.Varginha.Experiment
             string[] landmarks = { "ÁRVORE", "RIO", "CAPELA" };
             for (int i = 0; i < 3; i++)
                 if (ExperimentGUI.Button(new Rect(165+i*320,292,290,35), (selected==i?"• ":"")+landmarks[i])) selected=i;
-            var positions = new[] { new Vector2(165,396), new Vector2(485,396), new Vector2(805,344) };
-            ExperimentGUI.Box(new Rect(165,337,940,150),new Color(.035f,.09f,.1f));
-            ExperimentGUI.Box(new Rect(315,432,610,5),Line);
-            ExperimentGUI.Box(new Rect(944,381,5,56),Line);
+            // Keep the route above the controls so no button conceals a connection.
+            var positions = new[] { new Vector2(165,405), new Vector2(485,405), new Vector2(805,405) };
+            ExperimentGUI.Box(new Rect(165,337,930,62),new Color(.035f,.09f,.1f));
+            ExperimentGUI.Box(new Rect(310,374,640,3),Line);
+            ExperimentGUI.Box(new Rect(948,357,3,20),Line);
+            for(int i=0;i<3;i++)
+            {
+                int landmark=state.mapOrder[i];
+                ExperimentGUI.Box(new Rect(306+i*320,370,8,8),Line);
+                ExperimentGUI.Label(new Rect(175+i*320,342,270,26),landmarks[landmark]+" • "+Compass[state.mapDirections[landmark]],small:true);
+            }
             for (int i = 0; i < 3; i++)
             {
                 int landmark=state.mapOrder[i]; var p=positions[i];
@@ -79,8 +95,8 @@ namespace Game.Varginha.Experiment
             }
             ExperimentGUI.Label(new Rect(165,494,290,32), "OESTE",small:true);
             ExperimentGUI.Label(new Rect(485,494,290,32), "CENTRO",small:true);
-            ExperimentGUI.Label(new Rect(805,465,290,32), "LESTE",small:true);
-            if (ExperimentGUI.Button(new Rect(805,500,290,42),"CONFERIR CONEXÕES")) confirm();
+            ExperimentGUI.Label(new Rect(805,494,290,32), "LESTE",small:true);
+            if (ExperimentGUI.Button(new Rect(805,530,290,42),"CONFERIR CONEXÕES")) confirm();
         }
 
         public static void Draw(CampaignStory story, int phase, Action<int,int[]> submit, Action save, CampaignSoundscape sound)
@@ -113,12 +129,13 @@ namespace Game.Varginha.Experiment
                     claims=new[]{"A contenção feriu a criatura","O circuito externo abre o retorno","O selo dura até a travessia terminar"}; links=state.hypotheses;
                 }
                 ExperimentGUI.Label(new Rect(145,248,990,42),title,true);
-                ExperimentGUI.Label(new Rect(145,295,990,52),instruction,small:true);
+                ExperimentGUI.Label(new Rect(145,295,990,36),instruction,small:true);
+                ExperimentGUI.Label(new Rect(145,331,990,20),state.selected<0?"Selecione uma prova e depois seu destino.":"PROVA SELECIONADA • "+proofs[state.selected],small:true);
                 // The evidence rack changes order; the first button is not always the answer.
                 for (int row=0;row<proofs.Length;row++)
                 {
                     int proof=(row+1)%proofs.Length;
-                    if(ExperimentGUI.Button(new Rect(145,352+row*43,425,39),(state.selected==proof?"• ":"")+proofs[proof]))state.selected=proof;
+                    if(ExperimentGUI.Choice(new Rect(145,352+row*43,425,39),proofs[proof],state.selected==proof))state.selected=proof;
                     string assigned=links[row]<0?"— escolher prova —":proofs[links[row]];
                     if(ExperimentGUI.Button(new Rect(600,352+row*43,515,39),claims[row]+"\n"+assigned)&&state.selected>=0)
                     {
@@ -171,6 +188,9 @@ namespace Game.Varginha.Experiment
             string sequence=state.memory.Length==0?"Nenhum vestígio escolhido.":string.Join(" → ",Array.ConvertAll(state.memory,i=>names[i]));
             ExperimentGUI.Label(new Rect(145,476,990,43),sequence,small:true);
             if(ExperimentGUI.Button(new Rect(145,530,360,32),"RECOMEÇAR LEMBRANÇA")){state.memory=Array.Empty<int>();save();}
+            GUI.enabled=state.memory.Length>0;
+            if(ExperimentGUI.Button(new Rect(515,530,230,32),"DESFAZER ÚLTIMA")){Array.Resize(ref state.memory,state.memory.Length-1);save();}
+            GUI.enabled=true;
             if(ExperimentGUI.Button(new Rect(755,530,360,32),"CONFERIR LEMBRANÇA"))submit(-1,state.memory);
         }
         private static void Sprite(Rect r, Sprite sprite)

@@ -23,7 +23,7 @@ namespace Game.Varginha.Experiment
             if (sheet == null) return null;
             int w = sheet.width / 2, h = sheet.height / 2;
             // Same 64-pixel logical cells as the existing characters; no collider rescaling.
-            sprite = Sprite.Create(sheet, new Rect(cell % 2 * w, cell < 2 ? h : 0, w, h),
+            sprite = VarginhaCharacterFrameGeometry.Create(sheet, new Rect(cell % 2 * w, cell < 2 ? h : 0, w, h),
                 new Vector2(.5f, .18f), h / 1.8f, 0, SpriteMeshType.FullRect);
             sprite.name = "Experiment_Character_" + cell;
             Bodies[cell] = sprite;

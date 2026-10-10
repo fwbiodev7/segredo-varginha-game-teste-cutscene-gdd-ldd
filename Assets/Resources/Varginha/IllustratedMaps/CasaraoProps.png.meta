@@ -1,0 +1,5241 @@
+fileFormatVersion: 2
+guid: f4f583669efa78a4e8ae5770fb4e98cd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9035981575295700422
+    second: CasaraoProps_0
+  - first:
+      213: 3122213815501463843
+    second: CasaraoProps_1
+  - first:
+      213: 6871869715420387492
+    second: CasaraoProps_2
+  - first:
+      213: 6552174809485062748
+    second: CasaraoProps_3
+  - first:
+      213: -6837253669497565115
+    second: CasaraoProps_4
+  - first:
+      213: -2157328121064091551
+    second: CasaraoProps_5
+  - first:
+      213: -2143446436516435209
+    second: CasaraoProps_6
+  - first:
+      213: -6974539704737704627
+    second: CasaraoProps_7
+  - first:
+      213: -2982715919188084244
+    second: CasaraoProps_8
+  - first:
+      213: 5680241489440437387
+    second: CasaraoProps_9
+  - first:
+      213: -2284056297013096749
+    second: CasaraoProps_10
+  - first:
+      213: -4805486972209349713
+    second: CasaraoProps_11
+  - first:
+      213: -140314859819215772
+    second: CasaraoProps_12
+  - first:
+      213: -4480417824665709361
+    second: CasaraoProps_13
+  - first:
+      213: -5617822320283963253
+    second: CasaraoProps_14
+  - first:
+      213: 6916103341233634177
+    second: CasaraoProps_15
+  - first:
+      213: -8897779860199322423
+    second: CasaraoProps_16
+  - first:
+      213: -1822385972335076145
+    second: CasaraoProps_17
+  - first:
+      213: 4013255336206140017
+    second: CasaraoProps_18
+  - first:
+      213: -4821129186157411098
+    second: CasaraoProps_19
+  - first:
+      213: -739191138916844612
+    second: CasaraoProps_20
+  - first:
+      213: -74374948463107470
+    second: CasaraoProps_21
+  - first:
+      213: -9106450850636844294
+    second: CasaraoProps_22
+  - first:
+      213: -1175351699475072643
+    second: CasaraoProps_23
+  - first:
+      213: 1391893169021869351
+    second: CasaraoProps_24
+  - first:
+      213: -6841109634506841870
+    second: CasaraoProps_25
+  - first:
+      213: 8000763089424401225
+    second: CasaraoProps_26
+  - first:
+      213: 2336578390411165773
+    second: CasaraoProps_27
+  - first:
+      213: 8818081412535439390
+    second: CasaraoProps_28
+  - first:
+      213: -2953193934985857751
+    second: CasaraoProps_29
+  - first:
+      213: -5332424418299818067
+    second: CasaraoProps_30
+  - first:
+      213: 6774499132254163237
+    second: CasaraoProps_31
+  - first:
+      213: -1044564385016398257
+    second: CasaraoProps_32
+  - first:
+      213: 8067738231193620717
+    second: CasaraoProps_33
+  - first:
+      213: -5021103827364177924
+    second: CasaraoProps_34
+  - first:
+      213: -6986675511764125908
+    second: CasaraoProps_35
+  - first:
+      213: -2148464852268689667
+    second: CasaraoProps_36
+  - first:
+      213: 1375319042593186960
+    second: CasaraoProps_37
+  - first:
+      213: -3959851848243811118
+    second: CasaraoProps_38
+  - first:
+      213: -8290762827697611329
+    second: CasaraoProps_39
+  - first:
+      213: -139479545901445002
+    second: CasaraoProps_40
+  - first:
+      213: -5660424444411258255
+    second: CasaraoProps_41
+  - first:
+      213: -2913448734296484991
+    second: CasaraoProps_42
+  - first:
+      213: 1539039835975406364
+    second: CasaraoProps_43
+  - first:
+      213: -2019797598956798187
+    second: CasaraoProps_44
+  - first:
+      213: -8741106134424369240
+    second: CasaraoProps_45
+  - first:
+      213: 1854748716333234206
+    second: CasaraoProps_46
+  - first:
+      213: -2694721589852099143
+    second: CasaraoProps_47
+  - first:
+      213: -3984327543519462801
+    second: CasaraoProps_48
+  - first:
+      213: -2962558434106922736
+    second: CasaraoProps_49
+  - first:
+      213: 1941029225433852362
+    second: CasaraoProps_50
+  - first:
+      213: -8742689411116612443
+    second: CasaraoProps_51
+  - first:
+      213: 1708714423368022057
+    second: CasaraoProps_52
+  - first:
+      213: -9008407399800677827
+    second: CasaraoProps_53
+  - first:
+      213: 4260088928355131367
+    second: CasaraoProps_54
+  - first:
+      213: 8719299671833178779
+    second: CasaraoProps_55
+  - first:
+      213: 7291125514849403156
+    second: CasaraoProps_56
+  - first:
+      213: 5181204631273813316
+    second: CasaraoProps_57
+  - first:
+      213: -4957733635375874365
+    second: CasaraoProps_58
+  - first:
+      213: -8298763352906629917
+    second: CasaraoProps_59
+  - first:
+      213: -1185167425435407750
+    second: CasaraoProps_60
+  - first:
+      213: -466612778979769362
+    second: CasaraoProps_61
+  - first:
+      213: 7612120992334659449
+    second: CasaraoProps_62
+  - first:
+      213: 6604990665859636293
+    second: CasaraoProps_63
+  - first:
+      213: 7850780938196773813
+    second: CasaraoProps_64
+  - first:
+      213: -3815387851958126855
+    second: CasaraoProps_65
+  - first:
+      213: 4705268744489855165
+    second: CasaraoProps_66
+  - first:
+      213: 8668917534980922385
+    second: CasaraoProps_67
+  - first:
+      213: -3042130903617481355
+    second: CasaraoProps_68
+  - first:
+      213: 7329419502220554646
+    second: CasaraoProps_69
+  - first:
+      213: -8394292662691802169
+    second: CasaraoProps_70
+  - first:
+      213: 8776140759639078666
+    second: CasaraoProps_71
+  - first:
+      213: -4633732726450450884
+    second: CasaraoProps_72
+  - first:
+      213: 2825078473746101069
+    second: CasaraoProps_73
+  - first:
+      213: -147032010571668235
+    second: CasaraoProps_74
+  - first:
+      213: 6983848748062835130
+    second: CasaraoProps_75
+  - first:
+      213: -6653322295303340996
+    second: CasaraoProps_76
+  - first:
+      213: -4261764367112565407
+    second: CasaraoProps_77
+  - first:
+      213: -9100335333438700483
+    second: CasaraoProps_78
+  - first:
+      213: -1592105257047526880
+    second: CasaraoProps_79
+  - first:
+      213: -278668424212938567
+    second: CasaraoProps_80
+  - first:
+      213: 3743176295060603904
+    second: CasaraoProps_81
+  - first:
+      213: 5567820375579619476
+    second: CasaraoProps_82
+  - first:
+      213: -2604575378165501703
+    second: CasaraoProps_83
+  - first:
+      213: 5704358993678687051
+    second: CasaraoProps_84
+  - first:
+      213: -4720677771063860757
+    second: CasaraoProps_85
+  - first:
+      213: -3857019703083407915
+    second: CasaraoProps_86
+  - first:
+      213: 7473029812421979003
+    second: CasaraoProps_87
+  - first:
+      213: 558209259629318206
+    second: CasaraoProps_88
+  - first:
+      213: 5089678506913423916
+    second: CasaraoProps_89
+  - first:
+      213: -2905629115021713693
+    second: CasaraoProps_90
+  - first:
+      213: -849595792744315973
+    second: CasaraoProps_91
+  - first:
+      213: -7192001462195272366
+    second: CasaraoProps_92
+  - first:
+      213: -8963381913205310852
+    second: CasaraoProps_93
+  - first:
+      213: -7010393148515283790
+    second: CasaraoProps_94
+  - first:
+      213: 8618848301188716973
+    second: CasaraoProps_95
+  - first:
+      213: 1995582422000946219
+    second: CasaraoProps_96
+  - first:
+      213: -27861246907055629
+    second: CasaraoProps_97
+  - first:
+      213: 9133388104086817176
+    second: CasaraoProps_98
+  - first:
+      213: 7443250022184035244
+    second: CasaraoProps_99
+  - first:
+      213: 7400207812971075470
+    second: CasaraoProps_100
+  - first:
+      213: 7270768134169845950
+    second: CasaraoProps_101
+  - first:
+      213: 8728042722872957908
+    second: CasaraoProps_102
+  - first:
+      213: 6354301595447973814
+    second: CasaraoProps_103
+  - first:
+      213: -1484396406942764295
+    second: CasaraoProps_104
+  - first:
+      213: 2050122201252084011
+    second: CasaraoProps_105
+  - first:
+      213: 3920263602732145654
+    second: CasaraoProps_106
+  - first:
+      213: 4154208559893670668
+    second: CasaraoProps_107
+  - first:
+      213: 6546988796645281304
+    second: CasaraoProps_108
+  - first:
+      213: -2529184695916983304
+    second: CasaraoProps_109
+  - first:
+      213: 3071927096241790826
+    second: CasaraoProps_110
+  - first:
+      213: -7595720967948506891
+    second: CasaraoProps_111
+  - first:
+      213: -4504714650258333165
+    second: CasaraoProps_112
+  - first:
+      213: -493453494780200375
+    second: CasaraoProps_113
+  - first:
+      213: -4170781060158551559
+    second: CasaraoProps_114
+  - first:
+      213: 2879255414340960638
+    second: CasaraoProps_115
+  - first:
+      213: -2957636750502590506
+    second: CasaraoProps_116
+  - first:
+      213: 4671895964786039540
+    second: CasaraoProps_117
+  - first:
+      213: 8904896197383508633
+    second: CasaraoProps_118
+  - first:
+      213: -5413664264466527227
+    second: CasaraoProps_119
+  - first:
+      213: -6972632084600859800
+    second: CasaraoProps_120
+  - first:
+      213: -6596426315568703799
+    second: CasaraoProps_121
+  - first:
+      213: 4023554624573813950
+    second: CasaraoProps_122
+  - first:
+      213: -3926726824881555471
+    second: CasaraoProps_123
+  - first:
+      213: -234566620351876055
+    second: CasaraoProps_124
+  - first:
+      213: 7280487466046533990
+    second: CasaraoProps_125
+  - first:
+      213: 754697510916398968
+    second: CasaraoProps_126
+  - first:
+      213: 7842462637884741516
+    second: CasaraoProps_127
+  - first:
+      213: -1207303160965035786
+    second: CasaraoProps_128
+  - first:
+      213: 7743310424005715347
+    second: CasaraoProps_129
+  - first:
+      213: -7245468929499027762
+    second: CasaraoProps_130
+  - first:
+      213: 6511754820209504024
+    second: CasaraoProps_131
+  - first:
+      213: -1720355051026925687
+    second: CasaraoProps_132
+  - first:
+      213: 3249165576603417652
+    second: CasaraoProps_133
+  - first:
+      213: 4752225321788899523
+    second: CasaraoProps_134
+  - first:
+      213: -4021546694845200963
+    second: CasaraoProps_135
+  - first:
+      213: -5189171250220229848
+    second: CasaraoProps_136
+  - first:
+      213: -3160572400435473268
+    second: CasaraoProps_137
+  - first:
+      213: 5395405360654961253
+    second: CasaraoProps_138
+  - first:
+      213: 3323588997107379976
+    second: CasaraoProps_139
+  - first:
+      213: 9114344892589292478
+    second: CasaraoProps_140
+  - first:
+      213: 2972778199953147059
+    second: CasaraoProps_141
+  - first:
+      213: 1424184947271449882
+    second: CasaraoProps_142
+  - first:
+      213: -4728456310533885743
+    second: CasaraoProps_143
+  - first:
+      213: 3475810505896681943
+    second: CasaraoProps_144
+  - first:
+      213: -6532925448715457392
+    second: CasaraoProps_145
+  - first:
+      213: 963407976909829701
+    second: CasaraoProps_146
+  - first:
+      213: -6200755587707094710
+    second: CasaraoProps_147
+  - first:
+      213: -7400253389030567008
+    second: CasaraoProps_148
+  - first:
+      213: 6567257161991927039
+    second: CasaraoProps_149
+  - first:
+      213: -8996671415110030944
+    second: CasaraoProps_150
+  - first:
+      213: -256491648126109522
+    second: CasaraoProps_151
+  - first:
+      213: -8418866439361722143
+    second: CasaraoProps_152
+  - first:
+      213: -2065341358857839644
+    second: CasaraoProps_153
+  - first:
+      213: 4937909003752403553
+    second: CasaraoProps_154
+  - first:
+      213: 2539821632005856974
+    second: CasaraoProps_155
+  - first:
+      213: 2549341799280380683
+    second: CasaraoProps_156
+  - first:
+      213: -1532421958504295873
+    second: CasaraoProps_157
+  - first:
+      213: 4318906990933206543
+    second: CasaraoProps_158
+  - first:
+      213: 2020774323019936222
+    second: CasaraoProps_159
+  - first:
+      213: 4069472977771561152
+    second: CasaraoProps_160
+  - first:
+      213: -5972876415834409167
+    second: CasaraoProps_161
+  - first:
+      213: 6946955846435495406
+    second: CasaraoProps_162
+  - first:
+      213: 1487996579489210655
+    second: CasaraoProps_163
+  - first:
+      213: -6327001814780285552
+    second: CasaraoProps_164
+  - first:
+      213: -3620267442072722516
+    second: CasaraoProps_165
+  - first:
+      213: 3843488002377355037
+    second: CasaraoProps_166
+  - first:
+      213: -9161124628180477519
+    second: CasaraoProps_167
+  - first:
+      213: -4186065891278342774
+    second: CasaraoProps_168
+  - first:
+      213: 664946456920016037
+    second: CasaraoProps_169
+  - first:
+      213: -2332079900822788253
+    second: CasaraoProps_170
+  - first:
+      213: -9116525108040036729
+    second: CasaraoProps_171
+  - first:
+      213: -8266129754627463763
+    second: CasaraoProps_172
+  - first:
+      213: -6436626139707611525
+    second: CasaraoProps_173
+  - first:
+      213: 7669948206238527443
+    second: CasaraoProps_174
+  - first:
+      213: -1007478989734474714
+    second: CasaraoProps_175
+  - first:
+      213: -3267002861241963049
+    second: CasaraoProps_176
+  - first:
+      213: -3959757498260750198
+    second: CasaraoProps_177
+  - first:
+      213: 4070459714557885765
+    second: CasaraoProps_178
+  - first:
+      213: 1891676436279308827
+    second: CasaraoProps_179
+  - first:
+      213: -1769478152325127555
+    second: CasaraoProps_180
+  - first:
+      213: 7845613661051462478
+    second: CasaraoProps_181
+  - first:
+      213: 2239558570473652643
+    second: CasaraoProps_182
+  - first:
+      213: -977960368422277671
+    second: CasaraoProps_183
+  - first:
+      213: 6183430364493628119
+    second: CasaraoProps_184
+  - first:
+      213: 7298895610387532644
+    second: CasaraoProps_185
+  - first:
+      213: -7161136134243503912
+    second: CasaraoProps_186
+  - first:
+      213: -291811507523984073
+    second: CasaraoProps_187
+  - first:
+      213: 6246594322259740237
+    second: CasaraoProps_188
+  - first:
+      213: -5021838618828202073
+    second: CasaraoProps_189
+  - first:
+      213: -4162096030672790172
+    second: CasaraoProps_190
+  - first:
+      213: -635594814902929587
+    second: CasaraoProps_191
+  - first:
+      213: -7100708655792517026
+    second: CasaraoProps_192
+  - first:
+      213: 8063038641127792866
+    second: CasaraoProps_193
+  - first:
+      213: -9121426825470080505
+    second: CasaraoProps_194
+  - first:
+      213: 6219679544663563886
+    second: CasaraoProps_195
+  - first:
+      213: 1936045604342398254
+    second: CasaraoProps_196
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 0
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CasaraoProps_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 988
+        width: 103
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a327687c1aeb99280800000000000000
+      internalID: -9035981575295700422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_1
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 989
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32128c94ce4545b20800000000000000
+      internalID: 3122213815501463843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_2
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 989
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a89562f819cd5f50800000000000000
+      internalID: 6871869715420387492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_3
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 989
+        width: 76
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c52be9936400eea50800000000000000
+      internalID: 6552174809485062748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_4
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 857
+        width: 147
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5409c5e43023d11a0800000000000000
+      internalID: -6837253669497565115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_5
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 854
+        width: 154
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16093000181af02e0800000000000000
+      internalID: -2157328121064091551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_6
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 863
+        width: 97
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fa6c5c82d2f042e0800000000000000
+      internalID: -2143446436516435209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_7
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 961
+        width: 36
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d45504b5715753f90800000000000000
+      internalID: -6974539704737704627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_8
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 852
+        width: 67
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce934e2bca34b96d0800000000000000
+      internalID: -2982715919188084244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_9
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 923
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8478881a8544de40800000000000000
+      internalID: 5680241489440437387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_10
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 959
+        width: 74
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3de4a8936e66d40e0800000000000000
+      internalID: -2284056297013096749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_11
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 807
+        width: 94
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fabb1b03f0b7f4db0800000000000000
+      internalID: -4805486972209349713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_12
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 901
+        width: 38
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46454cfd0608d0ef0800000000000000
+      internalID: -140314859819215772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_13
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 847
+        width: 33
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc4d87b0abb52d1c0800000000000000
+      internalID: -4480417824665709361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_14
+      rect:
+        serializedVersion: 2
+        x: 1475
+        y: 846
+        width: 45
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80b63c3d5c7902b0800000000000000
+      internalID: -5617822320283963253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_15
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 835
+        width: 351
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18b7f14885feaff50800000000000000
+      internalID: 6916103341233634177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_16
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 961
+        width: 108
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ccc13f0c5cb48480800000000000000
+      internalID: -8897779860199322423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_17
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 959
+        width: 8
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc10531d9595b6e0800000000000000
+      internalID: -1822385972335076145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_18
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 961
+        width: 48
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17202831772f1b730800000000000000
+      internalID: 4013255336206140017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_19
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 959
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e4c1d27c88e71db0800000000000000
+      internalID: -4821129186157411098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_20
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 857
+        width: 99
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbbbeb7539dddb5f0800000000000000
+      internalID: -739191138916844612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_21
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 903
+        width: 83
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2722ba0e064c7fef0800000000000000
+      internalID: -74374948463107470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_22
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 846
+        width: 26
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af2bc3b03336f9180800000000000000
+      internalID: -9106450850636844294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_23
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 822
+        width: 66
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d79f2aa4bdf40bfe0800000000000000
+      internalID: -1175351699475072643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_24
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 863
+        width: 57
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d57d0767ff05310800000000000000
+      internalID: 1391893169021869351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_25
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 802
+        width: 76
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f0a7bd780f7f01a0800000000000000
+      internalID: -6841109634506841870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_26
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 902
+        width: 48
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 943c235d3ab680f60800000000000000
+      internalID: 8000763089424401225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_27
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 817
+        width: 57
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d40cf469aa13d6020800000000000000
+      internalID: 2336578390411165773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_28
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 832
+        width: 25
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1056a2135e106a70800000000000000
+      internalID: 8818081412535439390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_29
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 783
+        width: 43
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 925745843c52407d0800000000000000
+      internalID: -2953193934985857751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_30
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 774
+        width: 42
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dafce937e3c6ff5b0800000000000000
+      internalID: -5332424418299818067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_31
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 882
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5219335611bd30e50800000000000000
+      internalID: 6774499132254163237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_32
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 806
+        width: 37
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4eb216e936f081f0800000000000000
+      internalID: -1044564385016398257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_33
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 800
+        width: 46
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de052233d2d56ff60800000000000000
+      internalID: 8067738231193620717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_34
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 778
+        width: 141
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf79a950ca4715ab0800000000000000
+      internalID: -5021103827364177924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_35
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 739
+        width: 132
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c27f06893a75a0f90800000000000000
+      internalID: -6986675511764125908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_36
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 717
+        width: 154
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6dc14999e1f22e0800000000000000
+      internalID: -2148464852268689667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_37
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 718
+        width: 117
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 094e89ae16d161310800000000000000
+      internalID: 1375319042593186960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_38
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 720
+        width: 85
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dce04669b7cb09c0800000000000000
+      internalID: -3959851848243811118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_39
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 718
+        width: 48
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbd1212722b41fc80800000000000000
+      internalID: -8290762827697611329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_40
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 755
+        width: 94
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6709c1d8718701ef0800000000000000
+      internalID: -139479545901445002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_41
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 781
+        width: 32
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17adde045f12271b0800000000000000
+      internalID: -5660424444411258255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_42
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 782
+        width: 41
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18352f0ffc95197d0800000000000000
+      internalID: -2913448734296484991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_43
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 736
+        width: 85
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c135d7e9394cb5510800000000000000
+      internalID: 1539039835975406364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_44
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 719
+        width: 64
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51f3efbf8cc38f3e0800000000000000
+      internalID: -2019797598956798187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_45
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 720
+        width: 62
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7c5a9784a51b680800000000000000
+      internalID: -8741106134424369240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_46
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 785
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1877a071246db910800000000000000
+      internalID: 1854748716333234206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_47
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 720
+        width: 55
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bd2a44cdfc6a9ad0800000000000000
+      internalID: -2694721589852099143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_48
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 719
+        width: 48
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ab7b38533d4b8c0800000000000000
+      internalID: -3984327543519462801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_49
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 720
+        width: 34
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01928bcecc0e2e6d0800000000000000
+      internalID: -2962558434106922736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_50
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 717
+        width: 97
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac9e2a8ebcbefea10800000000000000
+      internalID: 1941029225433852362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_51
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 718
+        width: 50
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a443d42d4abba680800000000000000
+      internalID: -8742689411116612443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_52
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 718
+        width: 39
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 928ff6307b296b710800000000000000
+      internalID: 1708714423368022057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_53
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 727
+        width: 31
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3a51eec235bbf280800000000000000
+      internalID: -9008407399800677827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_54
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 753
+        width: 26
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ef9e263f40ee1b30800000000000000
+      internalID: 4260088928355131367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_55
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 722
+        width: 32
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b92fbcdcadc210970800000000000000
+      internalID: 8719299671833178779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_56
+      rect:
+        serializedVersion: 2
+        x: 902
+        y: 718
+        width: 69
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 411c26596084f2560800000000000000
+      internalID: 7291125514849403156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_57
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 718
+        width: 51
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4453fa3392657e740800000000000000
+      internalID: 5181204631273813316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_58
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 718
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ce3a6c9687923bb0800000000000000
+      internalID: -4957733635375874365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_59
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 719
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec78f203bed4dc80800000000000000
+      internalID: -8298763352906629917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_60
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 720
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7aee8f71807d8fe0800000000000000
+      internalID: -1185167425435407750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_61
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 717
+        width: 139
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee3c04556224689f0800000000000000
+      internalID: -466612778979769362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_62
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 720
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97fb66736bfa3a960800000000000000
+      internalID: 7612120992334659449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_63
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 720
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c955f0404a9ab50800000000000000
+      internalID: 6604990665859636293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_64
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 668
+        width: 102
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb60a60ba393fc60800000000000000
+      internalID: 7850780938196773813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_65
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 668
+        width: 32
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6f1b3a6f40d0bc0800000000000000
+      internalID: -3815387851958126855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_66
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 668
+        width: 26
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db8e0185ef87c4140800000000000000
+      internalID: 4705268744489855165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_67
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 668
+        width: 77
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11c51b3719e2e4870800000000000000
+      internalID: 8668917534980922385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_68
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 582
+        width: 111
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57554a1af0e28c5d0800000000000000
+      internalID: -3042130903617481355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_69
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 610
+        width: 109
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6913daf443457b560800000000000000
+      internalID: 7329419502220554646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_70
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 579
+        width: 83
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c356935c4b718b80800000000000000
+      internalID: -8394292662691802169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_71
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 580
+        width: 64
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a073d1dd58d1bc970800000000000000
+      internalID: 8776140759639078666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_72
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 621
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3e81d7c2aca1bfb0800000000000000
+      internalID: -4633732726450450884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_73
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 620
+        width: 50
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d433d3a67e1b43720800000000000000
+      internalID: 2825078473746101069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_74
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 571
+        width: 46
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f4a3475a23a5fdf0800000000000000
+      internalID: -147032010571668235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_75
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 642
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab187513f6d9be060800000000000000
+      internalID: 6983848748062835130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_76
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 560
+        width: 31
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3cf14c8f96aaa3a0800000000000000
+      internalID: -6653322295303340996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_77
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 577
+        width: 89
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d86dd43eb2bd4c0800000000000000
+      internalID: -4261764367112565407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_78
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 571
+        width: 89
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d344379da3d15b180800000000000000
+      internalID: -9100335333438700483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_79
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 654
+        width: 78
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02276ac34b4b7e9e0800000000000000
+      internalID: -1592105257047526880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_80
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 530
+        width: 60
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b08bac6b88f12cf0800000000000000
+      internalID: -278668424212938567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_81
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 641
+        width: 104
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00400c6120f62f330800000000000000
+      internalID: 3743176295060603904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_82
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 639
+        width: 8
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 490fa9bc12fd44d40800000000000000
+      internalID: 5567820375579619476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_83
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 639
+        width: 95
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f077b14e70badbd0800000000000000
+      internalID: -2604575378165501703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_84
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 582
+        width: 62
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4bd5812844f92f40800000000000000
+      internalID: 5704358993678687051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_85
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 508
+        width: 39
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1e7a41498cc7eb0800000000000000
+      internalID: -4720677771063860757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_86
+      rect:
+        serializedVersion: 2
+        x: 1295
+        y: 568
+        width: 165
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d5e702f30d197ac0800000000000000
+      internalID: -3857019703083407915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_87
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 539
+        width: 34
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7be055450985b760800000000000000
+      internalID: 7473029812421979003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_88
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 500
+        width: 165
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e301a863d582fb700800000000000000
+      internalID: 558209259629318206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_89
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 544
+        width: 88
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c22e381c2ab22a640800000000000000
+      internalID: 5089678506913423916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_90
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 514
+        width: 33
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ee191ee6b12da7d0800000000000000
+      internalID: -2905629115021713693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_91
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 520
+        width: 77
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb30fcab021a534f0800000000000000
+      internalID: -849595792744315973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_92
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 430
+        width: 95
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 255c2c566c0e03c90800000000000000
+      internalID: -7192001462195272366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_93
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 368
+        width: 67
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7a7c35d3abab9380800000000000000
+      internalID: -8963381913205310852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_94
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 550
+        width: 33
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc0ae6f29416be90800000000000000
+      internalID: -7010393148515283790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_95
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 512
+        width: 60
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da915558ddc4c9770800000000000000
+      internalID: 8618848301188716973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_96
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 528
+        width: 35
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2c4167c3abb1bb10800000000000000
+      internalID: 1995582422000946219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_97
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 521
+        width: 35
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f10b13f7540d9ff0800000000000000
+      internalID: -27861246907055629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_98
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 557
+        width: 54
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8998fd3071050ce70800000000000000
+      internalID: 9133388104086817176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_99
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 486
+        width: 52
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3a2ba857cbb4760800000000000000
+      internalID: 7443250022184035244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_100
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 555
+        width: 37
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8716344cc1d2b660800000000000000
+      internalID: 7400207812971075470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_101
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 482
+        width: 54
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb06c698815f6e460800000000000000
+      internalID: 7270768134169845950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_102
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 464
+        width: 56
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db96410d9c302970800000000000000
+      internalID: 8728042722872957908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_103
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 364
+        width: 89
+        height: 195
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7df5072a30f2850800000000000000
+      internalID: 6354301595447973814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_104
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 464
+        width: 51
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f27f42255d566be0800000000000000
+      internalID: -1484396406942764295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_105
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 379
+        width: 69
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b29b5cfa74f737c10800000000000000
+      internalID: 2050122201252084011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_106
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 492
+        width: 40
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb1ebae9f2976630800000000000000
+      internalID: 3920263602732145654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_107
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 420
+        width: 51
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0b695fdca6b6a930800000000000000
+      internalID: 4154208559893670668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_108
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 487
+        width: 58
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e01848f939bda50800000000000000
+      internalID: 6546988796645281304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_109
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 480
+        width: 26
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fb83845be786ecd0800000000000000
+      internalID: -2529184695916983304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_110
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 518
+        width: 46
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6f93631b6da1aa20800000000000000
+      internalID: 3071927096241790826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_111
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 434
+        width: 33
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f861740604969690800000000000000
+      internalID: -7595720967948506891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_112
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 483
+        width: 28
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 312aad084e90c71c0800000000000000
+      internalID: -4504714650258333165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_113
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 466
+        width: 43
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a737239a6e629f0800000000000000
+      internalID: -493453494780200375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_114
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 473
+        width: 43
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f9825939b86e16c0800000000000000
+      internalID: -4170781060158551559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_115
+      rect:
+        serializedVersion: 2
+        x: 1476
+        y: 364
+        width: 35
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e71c96d5b8b25f720800000000000000
+      internalID: 2879255414340960638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_116
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 366
+        width: 129
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d707afab0d54f6d0800000000000000
+      internalID: -2957636750502590506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_117
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 443
+        width: 120
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fa17a090a8e5d040800000000000000
+      internalID: 4671895964786039540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_118
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 454
+        width: 100
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99255ce49eb849b70800000000000000
+      internalID: 8904896197383508633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_119
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 424
+        width: 40
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50c0f37c80dced4b0800000000000000
+      internalID: -5413664264466527227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_120
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 419
+        width: 42
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 863dfd7cf0c3c3f90800000000000000
+      internalID: -6972632084600859800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_121
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 481
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c61d712739c474a0800000000000000
+      internalID: -6596426315568703799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_122
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 412
+        width: 50
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb43a140d9986d730800000000000000
+      internalID: 4023554624573813950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_123
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 427
+        width: 35
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f7ffe8e1c67189c0800000000000000
+      internalID: -3926726824881555471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_124
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 367
+        width: 77
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92433cdc6e6aebcf0800000000000000
+      internalID: -234566620351876055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_125
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 366
+        width: 78
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6613365d6cc790560800000000000000
+      internalID: 7280487466046533990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_126
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 367
+        width: 77
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87f1b0b3369397a00800000000000000
+      internalID: 754697510916398968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_127
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 367
+        width: 34
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c87946fc73606dc60800000000000000
+      internalID: 7842462637884741516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_128
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 363
+        width: 32
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f80972fb2cce3fe0800000000000000
+      internalID: -1207303160965035786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_129
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 367
+        width: 18
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 395a0780ec3c57b60800000000000000
+      internalID: 7743310424005715347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_130
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 364
+        width: 108
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec6a412956ce27b90800000000000000
+      internalID: -7245468929499027762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_131
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 366
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81f660b12866e5a50800000000000000
+      internalID: 6511754820209504024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_132
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 364
+        width: 101
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 987bdf722321028e0800000000000000
+      internalID: -1720355051026925687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_133
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 364
+        width: 45
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43cbfd980ea571d20800000000000000
+      internalID: 3249165576603417652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_134
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 364
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c008d570cb43f140800000000000000
+      internalID: 4752225321788899523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_135
+      rect:
+        serializedVersion: 2
+        x: 979
+        y: 367
+        width: 20
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db50b1e86989038c0800000000000000
+      internalID: -4021546694845200963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_136
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 363
+        width: 46
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b14f7cd3c5cf7b0800000000000000
+      internalID: -5189171250220229848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_137
+      rect:
+        serializedVersion: 2
+        x: 1064
+        y: 363
+        width: 43
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c84d321b5246324d0800000000000000
+      internalID: -3160572400435473268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_138
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 365
+        width: 13
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56ac315e69450ea40800000000000000
+      internalID: 5395405360654961253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_139
+      rect:
+        serializedVersion: 2
+        x: 1145
+        y: 364
+        width: 39
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80f6bff6592cf1e20800000000000000
+      internalID: 3323588997107379976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_140
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 364
+        width: 65
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebb3e23d368ac7e70800000000000000
+      internalID: 9114344892589292478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_141
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 363
+        width: 97
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b48b3cb50e614920800000000000000
+      internalID: 2972778199953147059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_142
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 313
+        width: 102
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1db294f9a8b3c310800000000000000
+      internalID: 1424184947271449882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_143
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 313
+        width: 32
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d07caab906216eb0800000000000000
+      internalID: -4728456310533885743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_144
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 313
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d1ea8e4d3f8c3030800000000000000
+      internalID: 3475810505896681943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_145
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 313
+        width: 77
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09ca435dae26655a0800000000000000
+      internalID: -6532925448715457392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_146
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 249
+        width: 72
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 546fc7d5376be5d00800000000000000
+      internalID: 963407976909829701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_147
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 274
+        width: 34
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4933bf55ad72f9a0800000000000000
+      internalID: -6200755587707094710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_148
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 255
+        width: 17
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a3d3fa30c40d4990800000000000000
+      internalID: -7400253389030567008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_149
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 239
+        width: 16
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff43b211895932b50800000000000000
+      internalID: 6567257161991927039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_150
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 201
+        width: 80
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a9a47da307652380800000000000000
+      internalID: -8996671415110030944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_151
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 165
+        width: 232
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea8b6997432c07cf0800000000000000
+      internalID: -256491648126109522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_152
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 254
+        width: 73
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e80366149d2a2b80800000000000000
+      internalID: -8418866439361722143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_153
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 167
+        width: 241
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb1b5d0afe6653e0800000000000000
+      internalID: -2065341358857839644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_154
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 184
+        width: 146
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1627dd5a31af68440800000000000000
+      internalID: 4937909003752403553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_155
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 194
+        width: 51
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecedf8851524f3320800000000000000
+      internalID: 2539821632005856974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_156
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 196
+        width: 85
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0b89250cd4116320800000000000000
+      internalID: 2549341799280380683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_157
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 285
+        width: 149
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f32d75d095ebbbae0800000000000000
+      internalID: -1532421958504295873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_158
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 284
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0666849607dfeb30800000000000000
+      internalID: 4318906990933206543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_159
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 286
+        width: 78
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed175de4a8b3b0c10800000000000000
+      internalID: 2020774323019936222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_160
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 285
+        width: 8
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c0002fbc1ca97830800000000000000
+      internalID: 4069472977771561152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_161
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 175
+        width: 85
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 137b1e2ab841c1da0800000000000000
+      internalID: -5972876415834409167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_162
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 217
+        width: 46
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed5c19298b886060800000000000000
+      internalID: 6946955846435495406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_163
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 161
+        width: 45
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11637b510d66a410800000000000000
+      internalID: 1487996579489210655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_164
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 185
+        width: 64
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09de4c01f59f138a0800000000000000
+      internalID: -6327001814780285552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_165
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 187
+        width: 59
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca3e75341f932cdc0800000000000000
+      internalID: -3620267442072722516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_166
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 196
+        width: 38
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1f8d2879ffc65530800000000000000
+      internalID: 3843488002377355037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_167
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 120
+        width: 99
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b9583a30b52dd080800000000000000
+      internalID: -9161124628180477519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_168
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 139
+        width: 110
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85b9f7204b18e5c0800000000000000
+      internalID: -4186065891278342774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_169
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 233
+        width: 30
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a44f5f874d5a3900800000000000000
+      internalID: 664946456920016037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_170
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 146
+        width: 73
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36721a3afa9c2afd0800000000000000
+      internalID: -2332079900822788253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_171
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 194
+        width: 47
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e085537b89b7180800000000000000
+      internalID: -9116525108040036729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_172
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 16
+        width: 150
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da5a424b8cec84d80800000000000000
+      internalID: -8266129754627463763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_173
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 135
+        width: 56
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b76ebbee0a28ca6a0800000000000000
+      internalID: -6436626139707611525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_174
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 94
+        width: 48
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dfed76a141217a60800000000000000
+      internalID: 7669948206238527443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_175
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 122
+        width: 120
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62c053a5237b402f0800000000000000
+      internalID: -1007478989734474714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_176
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 137
+        width: 25
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ddec7ff43649a2d0800000000000000
+      internalID: -3267002861241963049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_177
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 17
+        width: 285
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a808a77f88d1c09c0800000000000000
+      internalID: -3959757498260750198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_178
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 164
+        width: 54
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54db2ce4b8d2d7830800000000000000
+      internalID: 4070459714557885765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_179
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 146
+        width: 42
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b12b76e32b5904a10800000000000000
+      internalID: 1891676436279308827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_180
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 134
+        width: 100
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72a8dcdefc8177e0800000000000000
+      internalID: -1769478152325127555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_181
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 146
+        width: 58
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e43acef8e0831ec60800000000000000
+      internalID: 7845613661051462478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_182
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 16
+        width: 123
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a183c677a2841f10800000000000000
+      internalID: 2239558570473652643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_183
+      rect:
+        serializedVersion: 2
+        x: 516
+        y: 22
+        width: 137
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dda7c3f9369d62f0800000000000000
+      internalID: -977960368422277671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_184
+      rect:
+        serializedVersion: 2
+        x: 745
+        y: 133
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2c101c725ffc550800000000000000
+      internalID: 6183430364493628119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_185
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 28
+        width: 74
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46b8ecde2e2ea4560800000000000000
+      internalID: 7298895610387532644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_186
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 16
+        width: 66
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d0b33290a88e9c90800000000000000
+      internalID: -7161136134243503912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_187
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 16
+        width: 67
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73569a0eaf643fbf0800000000000000
+      internalID: -291811507523984073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_188
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 23
+        width: 127
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d468342b07c50b650800000000000000
+      internalID: 6246594322259740237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_189
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 19
+        width: 130
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af186d0268de4ab0800000000000000
+      internalID: -5021838618828202073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_190
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 86
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46d5faa36b34d36c0800000000000000
+      internalID: -4162096030672790172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_191
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 16
+        width: 93
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4771a422e9ed27f0800000000000000
+      internalID: -635594814902929587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_192
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 40
+        width: 91
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5012f54917357d90800000000000000
+      internalID: -7100708655792517026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_193
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 16
+        width: 34
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0abae9ceaa5ef60800000000000000
+      internalID: 8063038641127792866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_194
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 16
+        width: 35
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a032f21ae2a6180800000000000000
+      internalID: -9121426825470080505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_195
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 28
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e5f64b79db05650800000000000000
+      internalID: 6219679544663563886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CasaraoProps_196
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 27
+        width: 40
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2df8c338373eda10800000000000000
+      internalID: 1936045604342398254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CasaraoProps_0: -9035981575295700422
+      CasaraoProps_1: 3122213815501463843
+      CasaraoProps_10: -2284056297013096749
+      CasaraoProps_100: 7400207812971075470
+      CasaraoProps_101: 7270768134169845950
+      CasaraoProps_102: 8728042722872957908
+      CasaraoProps_103: 6354301595447973814
+      CasaraoProps_104: -1484396406942764295
+      CasaraoProps_105: 2050122201252084011
+      CasaraoProps_106: 3920263602732145654
+      CasaraoProps_107: 4154208559893670668
+      CasaraoProps_108: 6546988796645281304
+      CasaraoProps_109: -2529184695916983304
+      CasaraoProps_11: -4805486972209349713
+      CasaraoProps_110: 3071927096241790826
+      CasaraoProps_111: -7595720967948506891
+      CasaraoProps_112: -4504714650258333165
+      CasaraoProps_113: -493453494780200375
+      CasaraoProps_114: -4170781060158551559
+      CasaraoProps_115: 2879255414340960638
+      CasaraoProps_116: -2957636750502590506
+      CasaraoProps_117: 4671895964786039540
+      CasaraoProps_118: 8904896197383508633
+      CasaraoProps_119: -5413664264466527227
+      CasaraoProps_12: -140314859819215772
+      CasaraoProps_120: -6972632084600859800
+      CasaraoProps_121: -6596426315568703799
+      CasaraoProps_122: 4023554624573813950
+      CasaraoProps_123: -3926726824881555471
+      CasaraoProps_124: -234566620351876055
+      CasaraoProps_125: 7280487466046533990
+      CasaraoProps_126: 754697510916398968
+      CasaraoProps_127: 7842462637884741516
+      CasaraoProps_128: -1207303160965035786
+      CasaraoProps_129: 7743310424005715347
+      CasaraoProps_13: -4480417824665709361
+      CasaraoProps_130: -7245468929499027762
+      CasaraoProps_131: 6511754820209504024
+      CasaraoProps_132: -1720355051026925687
+      CasaraoProps_133: 3249165576603417652
+      CasaraoProps_134: 4752225321788899523
+      CasaraoProps_135: -4021546694845200963
+      CasaraoProps_136: -5189171250220229848
+      CasaraoProps_137: -3160572400435473268
+      CasaraoProps_138: 5395405360654961253
+      CasaraoProps_139: 3323588997107379976
+      CasaraoProps_14: -5617822320283963253
+      CasaraoProps_140: 9114344892589292478
+      CasaraoProps_141: 2972778199953147059
+      CasaraoProps_142: 1424184947271449882
+      CasaraoProps_143: -4728456310533885743
+      CasaraoProps_144: 3475810505896681943
+      CasaraoProps_145: -6532925448715457392
+      CasaraoProps_146: 963407976909829701
+      CasaraoProps_147: -6200755587707094710
+      CasaraoProps_148: -7400253389030567008
+      CasaraoProps_149: 6567257161991927039
+      CasaraoProps_15: 6916103341233634177
+      CasaraoProps_150: -8996671415110030944
+      CasaraoProps_151: -256491648126109522
+      CasaraoProps_152: -8418866439361722143
+      CasaraoProps_153: -2065341358857839644
+      CasaraoProps_154: 4937909003752403553
+      CasaraoProps_155: 2539821632005856974
+      CasaraoProps_156: 2549341799280380683
+      CasaraoProps_157: -1532421958504295873
+      CasaraoProps_158: 4318906990933206543
+      CasaraoProps_159: 2020774323019936222
+      CasaraoProps_16: -8897779860199322423
+      CasaraoProps_160: 4069472977771561152
+      CasaraoProps_161: -5972876415834409167
+      CasaraoProps_162: 6946955846435495406
+      CasaraoProps_163: 1487996579489210655
+      CasaraoProps_164: -6327001814780285552
+      CasaraoProps_165: -3620267442072722516
+      CasaraoProps_166: 3843488002377355037
+      CasaraoProps_167: -9161124628180477519
+      CasaraoProps_168: -4186065891278342774
+      CasaraoProps_169: 664946456920016037
+      CasaraoProps_17: -1822385972335076145
+      CasaraoProps_170: -2332079900822788253
+      CasaraoProps_171: -9116525108040036729
+      CasaraoProps_172: -8266129754627463763
+      CasaraoProps_173: -6436626139707611525
+      CasaraoProps_174: 7669948206238527443
+      CasaraoProps_175: -1007478989734474714
+      CasaraoProps_176: -3267002861241963049
+      CasaraoProps_177: -3959757498260750198
+      CasaraoProps_178: 4070459714557885765
+      CasaraoProps_179: 1891676436279308827
+      CasaraoProps_18: 4013255336206140017
+      CasaraoProps_180: -1769478152325127555
+      CasaraoProps_181: 7845613661051462478
+      CasaraoProps_182: 2239558570473652643
+      CasaraoProps_183: -977960368422277671
+      CasaraoProps_184: 6183430364493628119
+      CasaraoProps_185: 7298895610387532644
+      CasaraoProps_186: -7161136134243503912
+      CasaraoProps_187: -291811507523984073
+      CasaraoProps_188: 6246594322259740237
+      CasaraoProps_189: -5021838618828202073
+      CasaraoProps_19: -4821129186157411098
+      CasaraoProps_190: -4162096030672790172
+      CasaraoProps_191: -635594814902929587
+      CasaraoProps_192: -7100708655792517026
+      CasaraoProps_193: 8063038641127792866
+      CasaraoProps_194: -9121426825470080505
+      CasaraoProps_195: 6219679544663563886
+      CasaraoProps_196: 1936045604342398254
+      CasaraoProps_2: 6871869715420387492
+      CasaraoProps_20: -739191138916844612
+      CasaraoProps_21: -74374948463107470
+      CasaraoProps_22: -9106450850636844294
+      CasaraoProps_23: -1175351699475072643
+      CasaraoProps_24: 1391893169021869351
+      CasaraoProps_25: -6841109634506841870
+      CasaraoProps_26: 8000763089424401225
+      CasaraoProps_27: 2336578390411165773
+      CasaraoProps_28: 8818081412535439390
+      CasaraoProps_29: -2953193934985857751
+      CasaraoProps_3: 6552174809485062748
+      CasaraoProps_30: -5332424418299818067
+      CasaraoProps_31: 6774499132254163237
+      CasaraoProps_32: -1044564385016398257
+      CasaraoProps_33: 8067738231193620717
+      CasaraoProps_34: -5021103827364177924
+      CasaraoProps_35: -6986675511764125908
+      CasaraoProps_36: -2148464852268689667
+      CasaraoProps_37: 1375319042593186960
+      CasaraoProps_38: -3959851848243811118
+      CasaraoProps_39: -8290762827697611329
+      CasaraoProps_4: -6837253669497565115
+      CasaraoProps_40: -139479545901445002
+      CasaraoProps_41: -5660424444411258255
+      CasaraoProps_42: -2913448734296484991
+      CasaraoProps_43: 1539039835975406364
+      CasaraoProps_44: -2019797598956798187
+      CasaraoProps_45: -8741106134424369240
+      CasaraoProps_46: 1854748716333234206
+      CasaraoProps_47: -2694721589852099143
+      CasaraoProps_48: -3984327543519462801
+      CasaraoProps_49: -2962558434106922736
+      CasaraoProps_5: -2157328121064091551
+      CasaraoProps_50: 1941029225433852362
+      CasaraoProps_51: -8742689411116612443
+      CasaraoProps_52: 1708714423368022057
+      CasaraoProps_53: -9008407399800677827
+      CasaraoProps_54: 4260088928355131367
+      CasaraoProps_55: 8719299671833178779
+      CasaraoProps_56: 7291125514849403156
+      CasaraoProps_57: 5181204631273813316
+      CasaraoProps_58: -4957733635375874365
+      CasaraoProps_59: -8298763352906629917
+      CasaraoProps_6: -2143446436516435209
+      CasaraoProps_60: -1185167425435407750
+      CasaraoProps_61: -466612778979769362
+      CasaraoProps_62: 7612120992334659449
+      CasaraoProps_63: 6604990665859636293
+      CasaraoProps_64: 7850780938196773813
+      CasaraoProps_65: -3815387851958126855
+      CasaraoProps_66: 4705268744489855165
+      CasaraoProps_67: 8668917534980922385
+      CasaraoProps_68: -3042130903617481355
+      CasaraoProps_69: 7329419502220554646
+      CasaraoProps_7: -6974539704737704627
+      CasaraoProps_70: -8394292662691802169
+      CasaraoProps_71: 8776140759639078666
+      CasaraoProps_72: -4633732726450450884
+      CasaraoProps_73: 2825078473746101069
+      CasaraoProps_74: -147032010571668235
+      CasaraoProps_75: 6983848748062835130
+      CasaraoProps_76: -6653322295303340996
+      CasaraoProps_77: -4261764367112565407
+      CasaraoProps_78: -9100335333438700483
+      CasaraoProps_79: -1592105257047526880
+      CasaraoProps_8: -2982715919188084244
+      CasaraoProps_80: -278668424212938567
+      CasaraoProps_81: 3743176295060603904
+      CasaraoProps_82: 5567820375579619476
+      CasaraoProps_83: -2604575378165501703
+      CasaraoProps_84: 5704358993678687051
+      CasaraoProps_85: -4720677771063860757
+      CasaraoProps_86: -3857019703083407915
+      CasaraoProps_87: 7473029812421979003
+      CasaraoProps_88: 558209259629318206
+      CasaraoProps_89: 5089678506913423916
+      CasaraoProps_9: 5680241489440437387
+      CasaraoProps_90: -2905629115021713693
+      CasaraoProps_91: -849595792744315973
+      CasaraoProps_92: -7192001462195272366
+      CasaraoProps_93: -8963381913205310852
+      CasaraoProps_94: -7010393148515283790
+      CasaraoProps_95: 8618848301188716973
+      CasaraoProps_96: 1995582422000946219
+      CasaraoProps_97: -27861246907055629
+      CasaraoProps_98: 9133388104086817176
+      CasaraoProps_99: 7443250022184035244
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

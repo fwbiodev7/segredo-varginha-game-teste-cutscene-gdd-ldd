@@ -8,7 +8,7 @@ namespace Game.Tests.EditMode
 {
     public class CampaignPuzzleDesignTests
     {
-        [Test] public void MapRequiresBothSpatialPlacementAndConnectedDirections()
+        [Test] [Category("HudPuzzles")] public void MapRequiresBothSpatialPlacementAndConnectedDirections()
         {
             var state=new CampaignExpansionState{visited=7,mapOrder=new[]{0,1,2}};
             Assert.That(state.SolveMap(),Is.False);
@@ -16,7 +16,7 @@ namespace Game.Tests.EditMode
             state.mapSolved=false;state.mapOrder=new[]{1,0,2};Assert.That(state.SolveMap(),Is.False);
             state.mapOrder=new[]{0,1,2};state.visited=3;Assert.That(state.SolveMap(),Is.False);
         }
-        [Test] public void AlteredArchiveRejectsTheOldFirstChoiceAndUnchangedDetails()
+        [Test] [Category("HudPuzzles")] public void AlteredArchiveRejectsTheOldFirstChoiceAndUnchangedDetails()
         {
             Assert.That(CampaignPuzzleDesign.Correct(11,0,null),Is.False);
             Assert.That(CampaignPuzzleDesign.Correct(11,1,null),Is.False);
@@ -24,7 +24,7 @@ namespace Game.Tests.EditMode
             Assert.That(CampaignPuzzleDesign.Correct(11,7,null),Is.False);
         }
         [TestCase(13)][TestCase(14)][TestCase(15)][TestCase(18)]
-        public void DeductionNeedsAllRelationsWithoutRepeatedEvidence(int phase)
+        [Category("HudPuzzles")] public void DeductionNeedsAllRelationsWithoutRepeatedEvidence(int phase)
         {
             var correct=CampaignPuzzleDesign.Solution(phase);
             Assert.That(CampaignPuzzleDesign.Correct(phase,0,null),Is.False);
@@ -33,7 +33,7 @@ namespace Game.Tests.EditMode
             Assert.That(CampaignPuzzleDesign.Correct(phase,0,correct),Is.False);
             Array.Fill(correct,0);Assert.That(CampaignPuzzleDesign.Correct(phase,0,correct),Is.False);
         }
-        [Test] public void PartialAnswersSurviveSaveAndOldCompletedChaptersStayComplete()
+        [Test] [Category("HudPuzzles")] public void PartialAnswersSurviveSaveAndOldCompletedChaptersStayComplete()
         {
             var story=new CampaignStory{phase=14};story.puzzles.archiveMarks=1;
             story.puzzles.causes=new[]{2,-1,0,-1};story.puzzles.dates=new[]{-1,2,-1};
@@ -51,7 +51,7 @@ namespace Game.Tests.EditMode
             Assert.That(legacy.puzzles.archiveMarks,Is.EqualTo(3));
             Assert.That(legacy.puzzles.hypotheses,Is.EqualTo(new[]{1,2,0}));
         }
-        [Test] public void CompletedLegacyJsonWithoutNewPuzzleFieldsKeepsAllSolvedInvestigations()
+        [Test] [Category("HudPuzzles")] public void CompletedLegacyJsonWithoutNewPuzzleFieldsKeepsAllSolvedInvestigations()
         {
             const string json="{\"version\":3,\"phase\":18,\"expansion\":{\"visited\":7,\"mapSolved\":true,\"mapOrder\":[0,1,2],\"forestSigns\":3,\"fabioMet\":true},\"continuation\":{\"clues\":[7,7,7,135,15,0,0,7,15,0,0],\"solved\":[true,false,true,true,true,false,false,true,true,false,false]}}";
             var restored=JsonUtility.FromJson<CampaignStory>(json);restored.Repair();
@@ -67,7 +67,7 @@ namespace Game.Tests.EditMode
             Assert.That(restored.puzzles.memory,Is.EqualTo(new[]{0,1,2,3}));
             Assert.That(restored.puzzles.hypotheses,Is.EqualTo(new[]{1,2,0}));
         }
-        [Test] public void UnfinishedLegacyJsonKeepsMapPlacementAndCreatesEditableEmptyAnswers()
+        [Test] [Category("HudPuzzles")] public void UnfinishedLegacyJsonKeepsMapPlacementAndCreatesEditableEmptyAnswers()
         {
             const string json="{\"version\":3,\"phase\":6,\"expansion\":{\"visited\":3,\"mapSolved\":false,\"mapOrder\":[1,2,0]},\"continuation\":{}}";
             var restored=JsonUtility.FromJson<CampaignStory>(json);restored.Repair();
@@ -81,7 +81,7 @@ namespace Game.Tests.EditMode
             Assert.That(restored.puzzles.hypotheses,Is.EqualTo(new[]{-1,-1,-1}));
             Assert.That(restored.continuation.solved,Has.All.EqualTo(false));
         }
-        [Test] public void CorruptSavedAnswersAreRepairableWithoutDiscardingValidEvidenceLinks()
+        [Test] [Category("HudPuzzles")] public void CorruptSavedAnswersAreRepairableWithoutDiscardingValidEvidenceLinks()
         {
             const string json="{\"version\":3,\"phase\":13,\"expansion\":{\"mapDirections\":[-1,5,2]},\"puzzles\":{\"archiveMarks\":65,\"causes\":[0,0,4,-2],\"dates\":[2,2,-7],\"memory\":[0,1,1],\"hypotheses\":[0,1]}}";
             var restored=JsonUtility.FromJson<CampaignStory>(json);restored.Repair();
@@ -96,14 +96,14 @@ namespace Game.Tests.EditMode
             Assert.That(CampaignPuzzleDesign.Correct(13,-1,restored.puzzles.causes),Is.True);
         }
         [TestCase(11)][TestCase(13)][TestCase(14)][TestCase(15)][TestCase(18)]
-        public void CompletedInvestigationsGuideToTheirExitEvenWhenOldClueBitsAreMissing(int phase)
+        [Category("HudPuzzles")] public void CompletedInvestigationsGuideToTheirExitEvenWhenOldClueBitsAreMissing(int phase)
         {
             var story=new CampaignStory{phase=phase};story.continuation.solved[phase-11]=true;
             if(phase==18)story.continuation.solved[8]=true;
             Assert.That(CampaignGuidance.Target(story,phase),Is.EqualTo("exit"));
             Assert.That(CampaignGuidance.Next(story,phase),Does.Contain(phase==11?"recuperada":"concluída"));
         }
-        [Test] public void GuidanceMovesFromEvidenceToPuzzleToNamedExit()
+        [Test] [Category("HudPuzzles")] public void GuidanceMovesFromEvidenceToPuzzleToNamedExit()
         {
             var story=new CampaignStory{phase=6};Assert.That(CampaignGuidance.Target(story,6),Is.EqualTo("archive"));
             story.expansion.visited=7;Assert.That(CampaignGuidance.Target(story,6),Is.EqualTo("map"));
@@ -115,7 +115,7 @@ namespace Game.Tests.EditMode
             story.continuation.serviceKey=true;Assert.That(CampaignGuidance.Target(story,12,1),Is.EqualTo("service"));
         }
         [TestCase(4)][TestCase(5)]
-        public void CompletedSchoolGuidanceUsesRenanToReachTheLibrary(int phase)
+        [Category("HudPuzzles")] public void CompletedSchoolGuidanceUsesRenanToReachTheLibrary(int phase)
         {
             var story=new CampaignStory{phase=phase,renanMet=true,photoOpened=true,buildingSolved=true,
                 timeOpened=true,schoolTimeChoice=1,codeSolved=true,renanConfirmed=true};

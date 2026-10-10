@@ -13,7 +13,7 @@ namespace Game.Varginha.Experiment
         [Serializable]public sealed class Layout
         {
             public int phase,width,height;
-            public string image,background;
+            public string image,background,architecture;
             public float[] bounds,spawn,ambient,laneBorders;
             public bool repeat;
             public Wall[] walls;public Prop[] props;public Point[] points;public Light[] lights;public Patch[] patches;
@@ -29,7 +29,7 @@ namespace Game.Varginha.Experiment
         }
         [Serializable]public sealed class Wall {public float[] rect,art;public bool water,skipBodyGuard,exact;}
         // collision is an authored floor polygon in source pixels, independent of the visual outline.
-        [Serializable]public sealed class Prop {public string name,motif,support;public float[] art, @base,outline,ground,collision;public Piece[] pieces;public bool movable;}
+        [Serializable]public sealed class Prop {public string name,motif,support,texture;public float[] art, @base,outline,ground,collision,source;public Piece[] pieces;public bool movable,floor;}
         [Serializable]public sealed class Piece {public float[] outline;}
         [Serializable]public sealed class Glass {public string name;public float[] outline,color;public float intensity,falloff;}
         [Serializable]public sealed class Point {public string id;public float[] pixel;}
@@ -111,6 +111,8 @@ namespace Game.Varginha.Experiment
             var data=Get(plan.phase);var map=new GameObject("Mapa_Campanha").transform;map.SetParent(owner,false);
             var architecture=new GameObject("01_Planta_Paredes_Divisoes").transform;architecture.SetParent(map,false);
             var image=Texture(data.background);
+            // Architecture variants keep original furniture crops and placements intact.
+            var wallTexture=string.IsNullOrEmpty(data.architecture)?Texture(data.image):Texture(data.architecture);
             float tileHeight=data.height*data.Scale;
             int count=data.repeat?Mathf.CeilToInt(plan.bounds.height/tileHeight):1;
             for(int i=0;i<count;i++)
@@ -148,13 +150,13 @@ namespace Game.Varginha.Experiment
                         for(float row=0;row<rect[3];row+=strip)
                         {
                             var slice=new[]{rect[0],rect[1]+row,rect[2],Mathf.Min(strip,rect[3]-row)};var a=data.Area(slice);
-                            var face=Render(go.transform,"Face_da_parede_"+row,Texture(data.image),SourceRect(data,slice),a.width,a.height);face.transform.position=a.center;
+                            var face=Render(go.transform,"Face_da_parede_"+row,wallTexture,SourceRect(data,slice,wallTexture),a.width,a.height);face.transform.position=a.center;
                             var contact=new GameObject("Contato_da_parede_"+row).transform;contact.SetParent(go.transform,false);contact.position=new Vector2(a.center.x,a.yMin);
                             VarginhaWorldDepth.Ensure(face,supportingObject:contact);
                         }
                         continue;
                     }
-                    var sr=Render(go.transform,"Face_da_parede",Texture(data.image),SourceRect(data,rect),area.width,area.height);
+                    var sr=Render(go.transform,"Face_da_parede",wallTexture,SourceRect(data,rect,wallTexture),area.width,area.height);
                     sr.transform.position=area.center;
                     VarginhaWorldDepth.Ensure(sr,ground:collider);
                 }
@@ -177,7 +179,12 @@ namespace Game.Varginha.Experiment
             foreach(var prop in plan.furniture)
             {
                 var source=Array.Find(data.props,p=>p.name==prop.name);
-                var sr=Render(layer,prop.name,texture,SourceRect(data,source.art),prop.size.x,prop.size.y);
+                // Separate furniture atlases use source pixels independently of their map placement.
+                var propTexture=string.IsNullOrEmpty(source.texture)?texture:Texture(source.texture);
+                var crop=source.source?.Length==4
+                    ?new Rect(source.source[0],propTexture.height-source.source[1]-source.source[3],source.source[2],source.source[3])
+                    :SourceRect(data,source.art);
+                var sr=Render(layer,prop.name,propTexture,crop,prop.size.x,prop.size.y);
                 if(prop.name=="Fusca")
                 {
                     sr.sprite=source.art[2]<source.art[3]?CampaignOriginalFusca.Top(CampaignWorkshopVehicle.Facing.North):CampaignOriginalFusca.Side;
@@ -224,7 +231,8 @@ namespace Game.Varginha.Experiment
                         collider=box;
                     }
                 }
-                if(source.ground?.Length==2||collider!=null)
+                if(source.floor)sr.sortingOrder=-999;
+                else if(source.ground?.Length==2||collider!=null)
                 {
                     // Foreground sorting follows the visible floor contact, independently of the blocking shape.
                     var contact=new GameObject("Contato_"+prop.name).transform;contact.SetParent(layer,false);
@@ -238,9 +246,9 @@ namespace Game.Varginha.Experiment
         }
         private static Texture2D Texture(string id)=>Resources.Load<Texture2D>("Varginha/IllustratedMaps/"+id)
             ??throw new InvalidOperationException("Imagem de cenário ausente: "+id);
-        private static Rect SourceRect(Layout data,float[] rect)
+        private static Rect SourceRect(Layout data,float[] rect,Texture2D texture=null)
         {
-            var t=Texture(data.image);float x=t.width/(float)data.width,y=t.height/(float)data.height;
+            var t=texture??Texture(data.image);float x=t.width/(float)data.width,y=t.height/(float)data.height;
             return new Rect(rect[0]*x,t.height-(rect[1]+rect[3])*y,rect[2]*x,rect[3]*y);
         }
         private static SpriteRenderer Render(Transform parent,string name,Texture2D tex,Rect rect,float width,float height)
