@@ -40,13 +40,13 @@ namespace Game.UI
 
         public static bool Button(Rect rect, string text, string marker = ">", int size = 12)
         {
-            bool hover = GUI.enabled && (rect.Contains(Event.current.mousePosition)||Game.Varginha.VarginhaGamepadUI.Selected(rect));
+            float hover=PixelButtonHover.Amount(rect,PixelButtonHover.Focused(rect));
             Color accent = new(.64f, .84f, .86f);
-            PixelHUDFrame.Draw(rect, Texture2D.whiteTexture, hover ? new Color(.10f, .15f, .17f, .98f) : Background,
-                hover ? accent : Border);
-            Label(new Rect(rect.x + 14, rect.y, 26, rect.height), hover ? ">" : marker, 9, Muted);
-            Label(new Rect(rect.x + 48, rect.y, rect.width - 60, rect.height), text, size, hover ? Color.white : Paper);
-            return Game.Varginha.VarginhaGamepadUI.Button(rect, GUIContent.none, GUIStyle.none);
+            PixelHUDFrame.Draw(rect, Texture2D.whiteTexture,Color.Lerp(Background,PixelButtonHover.FocusBackground,hover),
+                Color.Lerp(Border,accent,hover));
+            Label(new Rect(rect.x+14+Mathf.Round(4*hover),rect.y,26,rect.height),hover>0?"›":marker,9,Color.Lerp(Muted,accent,hover));
+            Label(new Rect(rect.x+48,rect.y,rect.width-60,rect.height),text,size,Color.Lerp(Paper,Color.white,hover*PixelButtonHover.TextStrength));
+            return Game.Varginha.VarginhaGamepadUI.Button(rect, GUIContent.none, GUIStyle.none,false);
         }
     }
 }

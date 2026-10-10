@@ -1,0 +1,34 @@
+{
+  "status": "completed",
+  "duration": 8.31,
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignReturnSealPlayTests.AtlasHasDistinctLoopFramesAndClearRenderedBordersAndCenter",
+      "Status": "Passed",
+      "Duration": 0.095828,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignReturnSealPlayTests.PresentationOpensLoopsClosesAndUsesStableReducedMotion",
+      "Status": "Passed",
+      "Duration": 0.0195096,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.CampaignReturnSealPlayTests.ReturnSequenceKeepsTheSealUntilCrossingAndResumesSavedProgress",
+      "Status": "Passed",
+      "Duration": 8.0812719,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

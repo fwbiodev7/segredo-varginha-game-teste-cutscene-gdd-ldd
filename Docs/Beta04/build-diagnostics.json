@@ -1,0 +1,7 @@
+{
+  "errors": [],
+  "warnings": [
+    "Pipeline: No RuntimePipelineConfig asset found (Project Settings > Pipeline > Runtime). Pipeline will be disabled in Player builds."
+  ],
+  "explanation": "A automacao do Editor nao fica habilitada no executavel distribuido. O aviso nao impede a build nem o jogo."
+}

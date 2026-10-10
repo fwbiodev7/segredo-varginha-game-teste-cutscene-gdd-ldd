@@ -1,0 +1,46 @@
+{
+  "version": "0.4.0-beta",
+  "channel": "beta",
+  "platform": "Windows x64",
+  "base_commit": "6edf6528301f41282ffc5b8b295384707baaa8e3",
+  "source_state": "Correcoes, versao e registro desta build incluidos no mesmo commit de entrega.",
+  "build": {
+    "result": "Succeeded",
+    "output": "C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Builds/jogo_varginha_beta_0.4/jogo_varginha_beta_0.4.exe",
+    "unity": "6000.6.0f1",
+    "bytes": 340408310,
+    "seconds": 147.55214809999998,
+    "errors": 0,
+    "warnings": 1,
+    "scenes": [
+      "Assets/Scenes/Menu_MisterioDeVarginha.unity",
+      "Assets/Scenes/Ato1_Fase1_O_Caso_de_Varginha.unity",
+      "Assets/Scenes/Ato2_Fase2_A_Chave_e_a_Caixa.unity",
+      "Assets/Scenes/Ato2_Fase4_Entre_Aulas_e_Pistas.unity",
+      "Assets/Scenes/Ato3_Fase6_Fragmentos.unity",
+      "Assets/Scenes/Ato3_Fase7_A_Mata.unity",
+      "Assets/Scenes/Ato3_Fase8_A_Ancora.unity",
+      "Assets/Scenes/Ato4_Fase9_Ouzana.unity",
+      "Assets/Scenes/Ato4_Fase11_Arquivos_Alterados.unity",
+      "Assets/Scenes/Ato4_Fase12_Casarao_de_Ze_Gomes.unity",
+      "Assets/Scenes/Ato5_Fase14_O_Que_Fabio_Escondeu.unity",
+      "Assets/Scenes/Ato5_Fase15_A_Noite_Interrompida.unity",
+      "Assets/Scenes/Ato6_Fase18_A_Criatura_Ferida.unity",
+      "Assets/Scenes/Ato6_Fase20_O_Verdadeiro_Segredo.unity",
+      "Assets/Scenes/Ato6_Fase21_O_Retorno.unity",
+      "Assets/Scenes/Ato4_Fase10_O_Fusca_Marcado.unity",
+      "Assets/Scenes/Ato4_Fase13_Registros_de_1898.unity",
+      "Assets/Scenes/Ato4_Fase12_Casarao_de_Ze_Gomes_Area1.unity",
+      "Assets/Scenes/Ato6_Fase21_O_Retorno_Area1.unity"
+    ]
+  },
+  "package": {
+    "path": "Builds/jogo_varginha_beta_0.4_Windows_x64.zip",
+    "bytes": 249515906,
+    "files": 195,
+    "sha256": "09a8c608c5dfc3bbf19f7902376acc1dbee355e0aa496df4a449c708792e5338",
+    "crc_verified": true
+  },
+  "exe_sha256": "a4c71b1bfc3e42d02f2f129fe04adef3ebf2343a662884e4b99598e9dfc90e7d",
+  "game_assembly_sha256": "6b042bd7d70bd08b74d5075df33ab7bd3540c8732456bb69869f4dbbf5e28934"
+}

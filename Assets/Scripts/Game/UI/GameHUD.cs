@@ -160,7 +160,7 @@ namespace Game.UI
             GUI.Label(new Rect(modal.x + pad, contentTop, modal.width - pad * 2f, modal.yMax - contentTop - buttonHeight - pad * 1.6f), $"PARABENS! VOCE ALCANCOU O FINAL DA FASE!\n\nPONTUACAO FINAL: {finalScore}", _subStyle);
 
             float buttonWidth = Mathf.Min(modal.width - pad * 2f, 300f);
-            if (GUI.Button(new Rect(modal.x + (modal.width - buttonWidth) * .5f, modal.yMax - buttonHeight - pad * .55f, buttonWidth, buttonHeight), "JOGAR NOVAMENTE", _buttonStyle))
+            if (Game.Varginha.VarginhaGamepadUI.Button(new Rect(modal.x + (modal.width - buttonWidth) * .5f, modal.yMax - buttonHeight - pad * .55f, buttonWidth, buttonHeight), "JOGAR NOVAMENTE", _buttonStyle))
             {
                 RestartLevel();
             }
@@ -186,7 +186,7 @@ namespace Game.UI
             GUI.Label(new Rect(modal.x + pad, contentTop, modal.width - pad * 2f, modal.yMax - contentTop - buttonHeight - pad * 1.6f), "SUA VIDA CHEGOU A ZERO!", _subStyle);
 
             float buttonWidth = Mathf.Min(modal.width - pad * 2f, 300f);
-            if (GUI.Button(new Rect(modal.x + (modal.width - buttonWidth) * .5f, modal.yMax - buttonHeight - pad * .55f, buttonWidth, buttonHeight), "TENTAR NOVAMENTE", _buttonStyle))
+            if (Game.Varginha.VarginhaGamepadUI.Button(new Rect(modal.x + (modal.width - buttonWidth) * .5f, modal.yMax - buttonHeight - pad * .55f, buttonWidth, buttonHeight), "TENTAR NOVAMENTE", _buttonStyle))
             {
                 RestartLevel();
             }

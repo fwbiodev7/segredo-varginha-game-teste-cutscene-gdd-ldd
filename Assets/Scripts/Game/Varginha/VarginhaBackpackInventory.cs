@@ -482,6 +482,7 @@ namespace Game.Varginha
 
                 var button = _cells[i].gameObject.AddComponent<UnityEngine.UI.Button>();
                 button.targetGraphic = _cells[i];
+                Game.UI.PixelButtonHoverUGUI.Attach(button);
                 button.navigation = new Navigation { mode = Navigation.Mode.None };
                 button.onClick.AddListener(() => { if(ShowingSupport&&index>=3||!ShowingStudents&&!ShowingSupport&&index>=6)return;_inspected = index; Refresh(); });
 
@@ -731,6 +732,7 @@ namespace Game.Varginha
 
             var button = graphic.gameObject.AddComponent<UnityEngine.UI.Button>();
             button.targetGraphic = graphic;
+            Game.UI.PixelButtonHoverUGUI.Attach(button);
             button.navigation = new Navigation { mode = Navigation.Mode.None };
             button.onClick.AddListener(action);
 
@@ -750,6 +752,7 @@ namespace Game.Varginha
 
             var button = graphic.gameObject.AddComponent<UnityEngine.UI.Button>();
             button.targetGraphic = graphic;
+            Game.UI.PixelButtonHoverUGUI.Attach(button);
             button.navigation = new Navigation { mode = Navigation.Mode.None };
             button.onClick.AddListener(action);
 

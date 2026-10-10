@@ -1,0 +1,3239 @@
+fileFormatVersion: 2
+guid: 8cc960b403f920448ae49cb04da3a5ff
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3177912095269927082
+    second: ReturnSealV1_0
+  - first:
+      213: 7103826554758119009
+    second: ReturnSealV1_1
+  - first:
+      213: -2759377207583867870
+    second: ReturnSealV1_2
+  - first:
+      213: -8248020687776186405
+    second: ReturnSealV1_3
+  - first:
+      213: -2641595821192474783
+    second: ReturnSealV1_4
+  - first:
+      213: 1331027362801371218
+    second: ReturnSealV1_5
+  - first:
+      213: 122752348003680585
+    second: ReturnSealV1_6
+  - first:
+      213: -7640366860358030385
+    second: ReturnSealV1_7
+  - first:
+      213: -2413472164639871514
+    second: ReturnSealV1_8
+  - first:
+      213: 7896760080493539925
+    second: ReturnSealV1_9
+  - first:
+      213: 773441423773491360
+    second: ReturnSealV1_10
+  - first:
+      213: 4658007321866202434
+    second: ReturnSealV1_11
+  - first:
+      213: -7347581765232328728
+    second: ReturnSealV1_12
+  - first:
+      213: 4450551315659889171
+    second: ReturnSealV1_13
+  - first:
+      213: 295888863139764510
+    second: ReturnSealV1_14
+  - first:
+      213: -4831214752575696670
+    second: ReturnSealV1_15
+  - first:
+      213: 3313899683840325470
+    second: ReturnSealV1_16
+  - first:
+      213: 5818792489498576242
+    second: ReturnSealV1_17
+  - first:
+      213: 1000204009708426807
+    second: ReturnSealV1_18
+  - first:
+      213: 8469632207598818320
+    second: ReturnSealV1_19
+  - first:
+      213: 4211516229061291902
+    second: ReturnSealV1_20
+  - first:
+      213: 3348449189775510212
+    second: ReturnSealV1_21
+  - first:
+      213: 4031593543253470355
+    second: ReturnSealV1_22
+  - first:
+      213: 7242565083207761145
+    second: ReturnSealV1_23
+  - first:
+      213: 8825335325791200411
+    second: ReturnSealV1_24
+  - first:
+      213: 4145497084875984829
+    second: ReturnSealV1_25
+  - first:
+      213: 5713073418788825114
+    second: ReturnSealV1_26
+  - first:
+      213: 8471276342797352665
+    second: ReturnSealV1_27
+  - first:
+      213: 737100223119812156
+    second: ReturnSealV1_28
+  - first:
+      213: 5537899316265834191
+    second: ReturnSealV1_29
+  - first:
+      213: 1014267976566526988
+    second: ReturnSealV1_30
+  - first:
+      213: -2910053247379400227
+    second: ReturnSealV1_31
+  - first:
+      213: -5728968198266258879
+    second: ReturnSealV1_32
+  - first:
+      213: 2859427757413211760
+    second: ReturnSealV1_33
+  - first:
+      213: -6962795127571669746
+    second: ReturnSealV1_34
+  - first:
+      213: 8668604956444478129
+    second: ReturnSealV1_35
+  - first:
+      213: 2300650188090373979
+    second: ReturnSealV1_36
+  - first:
+      213: 8169708571047260348
+    second: ReturnSealV1_37
+  - first:
+      213: -7431970725211712137
+    second: ReturnSealV1_38
+  - first:
+      213: -5899831337549294802
+    second: ReturnSealV1_39
+  - first:
+      213: 5853409034587068301
+    second: ReturnSealV1_40
+  - first:
+      213: -2408144130238162983
+    second: ReturnSealV1_41
+  - first:
+      213: -3512180088618875834
+    second: ReturnSealV1_42
+  - first:
+      213: -2845693016223344720
+    second: ReturnSealV1_43
+  - first:
+      213: 3935744586585957340
+    second: ReturnSealV1_44
+  - first:
+      213: -8701309173668023733
+    second: ReturnSealV1_45
+  - first:
+      213: 7463970445583599827
+    second: ReturnSealV1_46
+  - first:
+      213: -7657213837259831223
+    second: ReturnSealV1_47
+  - first:
+      213: -1694811832337446286
+    second: ReturnSealV1_48
+  - first:
+      213: 2329357581025529434
+    second: ReturnSealV1_49
+  - first:
+      213: 2873258669680857179
+    second: ReturnSealV1_50
+  - first:
+      213: -4230703179359704142
+    second: ReturnSealV1_51
+  - first:
+      213: -1575080344435814393
+    second: ReturnSealV1_52
+  - first:
+      213: 7822510719837639734
+    second: ReturnSealV1_53
+  - first:
+      213: -3095437209512207685
+    second: ReturnSealV1_54
+  - first:
+      213: 5033628669820299815
+    second: ReturnSealV1_55
+  - first:
+      213: 112469312035385321
+    second: ReturnSealV1_56
+  - first:
+      213: 2708497078763210205
+    second: ReturnSealV1_57
+  - first:
+      213: 4635528864918424887
+    second: ReturnSealV1_58
+  - first:
+      213: 4344537497499693603
+    second: ReturnSealV1_59
+  - first:
+      213: -431242847228793863
+    second: ReturnSealV1_60
+  - first:
+      213: 4332711877720553860
+    second: ReturnSealV1_61
+  - first:
+      213: 7125671835951211302
+    second: ReturnSealV1_62
+  - first:
+      213: 4422686352693491986
+    second: ReturnSealV1_63
+  - first:
+      213: 1897377129090143085
+    second: ReturnSealV1_64
+  - first:
+      213: 1123350094790569358
+    second: ReturnSealV1_65
+  - first:
+      213: 102810531809380951
+    second: ReturnSealV1_66
+  - first:
+      213: 5775997155995123484
+    second: ReturnSealV1_67
+  - first:
+      213: 3020041977965763379
+    second: ReturnSealV1_68
+  - first:
+      213: 4966717649604732965
+    second: ReturnSealV1_69
+  - first:
+      213: 4326475193847717562
+    second: ReturnSealV1_70
+  - first:
+      213: -6666020673952230143
+    second: ReturnSealV1_71
+  - first:
+      213: 2589406856039016193
+    second: ReturnSealV1_72
+  - first:
+      213: -3815108716456269719
+    second: ReturnSealV1_73
+  - first:
+      213: 625529895476492369
+    second: ReturnSealV1_74
+  - first:
+      213: 8709991434054390110
+    second: ReturnSealV1_75
+  - first:
+      213: -7268025324649612391
+    second: ReturnSealV1_76
+  - first:
+      213: 4609609530085289209
+    second: ReturnSealV1_77
+  - first:
+      213: -477308146479369482
+    second: ReturnSealV1_78
+  - first:
+      213: 8788493857432611946
+    second: ReturnSealV1_79
+  - first:
+      213: 3402743840370467858
+    second: ReturnSealV1_80
+  - first:
+      213: 1041680555042662837
+    second: ReturnSealV1_81
+  - first:
+      213: -7502773307860983300
+    second: ReturnSealV1_82
+  - first:
+      213: -7323341350316949255
+    second: ReturnSealV1_83
+  - first:
+      213: 8322857801507816799
+    second: ReturnSealV1_84
+  - first:
+      213: -8407560696077019380
+    second: ReturnSealV1_85
+  - first:
+      213: 6038994576043694802
+    second: ReturnSealV1_86
+  - first:
+      213: -112315009281251763
+    second: ReturnSealV1_87
+  - first:
+      213: -2465531465242722704
+    second: ReturnSealV1_88
+  - first:
+      213: 185670866514555450
+    second: ReturnSealV1_89
+  - first:
+      213: 3632657059924343002
+    second: ReturnSealV1_90
+  - first:
+      213: 1954305343348164844
+    second: ReturnSealV1_91
+  - first:
+      213: -5434650753132426675
+    second: ReturnSealV1_92
+  - first:
+      213: -9081951753826361079
+    second: ReturnSealV1_93
+  - first:
+      213: -5667132492210165109
+    second: ReturnSealV1_94
+  - first:
+      213: -1456823867482919081
+    second: ReturnSealV1_95
+  - first:
+      213: -2378428366693104795
+    second: ReturnSealV1_96
+  - first:
+      213: 6254725850355419984
+    second: ReturnSealV1_97
+  - first:
+      213: -7251132321410826144
+    second: ReturnSealV1_98
+  - first:
+      213: 9185503149737595955
+    second: ReturnSealV1_99
+  - first:
+      213: -6525044853763513950
+    second: ReturnSealV1_100
+  - first:
+      213: -222211955418378304
+    second: ReturnSealV1_101
+  - first:
+      213: -2977082669423008997
+    second: ReturnSealV1_102
+  - first:
+      213: 8619446740574382494
+    second: ReturnSealV1_103
+  - first:
+      213: 6182217161993326232
+    second: ReturnSealV1_104
+  - first:
+      213: 3564557531164544004
+    second: ReturnSealV1_105
+  - first:
+      213: -2814200297230904530
+    second: ReturnSealV1_106
+  - first:
+      213: -5519189636139898824
+    second: ReturnSealV1_107
+  - first:
+      213: -738454318242577141
+    second: ReturnSealV1_108
+  - first:
+      213: 537950605847242021
+    second: ReturnSealV1_109
+  - first:
+      213: -8247713867360807399
+    second: ReturnSealV1_110
+  - first:
+      213: 8999599888329109127
+    second: ReturnSealV1_111
+  - first:
+      213: -4821251771276905229
+    second: ReturnSealV1_112
+  - first:
+      213: -5889282479433137954
+    second: ReturnSealV1_113
+  - first:
+      213: 8982681260977951995
+    second: ReturnSealV1_114
+  - first:
+      213: 4167111286429612004
+    second: ReturnSealV1_115
+  - first:
+      213: -4858461204780244084
+    second: ReturnSealV1_116
+  - first:
+      213: 6910887662067819095
+    second: ReturnSealV1_117
+  - first:
+      213: -7033702307156043698
+    second: ReturnSealV1_118
+  - first:
+      213: 568297193456747018
+    second: ReturnSealV1_119
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 1
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 0
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ReturnSealV1_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 430
+        width: 80
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 657c40269c9c5e3d0800000000000000
+      internalID: -3177912095269927082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 492
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16e38562d9cd59260800000000000000
+      internalID: 7103826554758119009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_2
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 474
+        width: 31
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22c77acac09b4b9d0800000000000000
+      internalID: -2759377207583867870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_3
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 470
+        width: 20
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdff60562e4298d80800000000000000
+      internalID: -8248020687776186405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_4
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 480
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f8aada89a275bd0800000000000000
+      internalID: -2641595821192474783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_5
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 117
+        width: 132
+        height: 386
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 258c91a9552c87210800000000000000
+      internalID: 1331027362801371218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_6
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 487
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 941ca123c9a14b100800000000000000
+      internalID: 122752348003680585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_7
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 490
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcb61b622d6f7f590800000000000000
+      internalID: -7640366860358030385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_8
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 114
+        width: 143
+        height: 389
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ede8577adf918ed0800000000000000
+      internalID: -2413472164639871514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_9
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 125
+        width: 118
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5527d42547de69d60800000000000000
+      internalID: 7896760080493539925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_10
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 448
+        width: 23
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0679680e0dbba00800000000000000
+      internalID: 773441423773491360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_11
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 462
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24de005eaf094a040800000000000000
+      internalID: 4658007321866202434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_12
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 464
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ef703d4055280a90800000000000000
+      internalID: -7347581765232328728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_13
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 472
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31a1e8077d883cd30800000000000000
+      internalID: 4450551315659889171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_14
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 382
+        width: 94
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1990747a553b1400800000000000000
+      internalID: 295888863139764510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_15
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 478
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0591787c314fcb0800000000000000
+      internalID: -4831214752575696670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_16
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 454
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e57f49464365dfd20800000000000000
+      internalID: 3313899683840325470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_17
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 381
+        width: 72
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 275064e90f080c050800000000000000
+      internalID: 5818792489498576242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_18
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 450
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 736979d5f3071ed00800000000000000
+      internalID: 1000204009708426807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_19
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 464
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01492286e9d2a8570800000000000000
+      internalID: 8469632207598818320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_20
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 448
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fadfe52bf427a30800000000000000
+      internalID: 4211516229061291902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_21
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 457
+        width: 22
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ca83091cc4187e20800000000000000
+      internalID: 3348449189775510212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_22
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 455
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39ca160a7f813f730800000000000000
+      internalID: 4031593543253470355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_23
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 461
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fcfe370292c28460800000000000000
+      internalID: 7242565083207761145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_24
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 440
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b94ad7d58b3e97a70800000000000000
+      internalID: 8825335325791200411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_25
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 454
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf437982a3c78930800000000000000
+      internalID: 4145497084875984829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 122
+        width: 131
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1862a6510ae84f40800000000000000
+      internalID: 5713073418788825114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_27
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 418
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de3b9673f4009570800000000000000
+      internalID: 8471276342797352665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_28
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 426
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c36eae26fb4ba3a00800000000000000
+      internalID: 737100223119812156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_29
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 393
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc657eb46129adc40800000000000000
+      internalID: 5537899316265834191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_30
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 400
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c045d42d957631e00800000000000000
+      internalID: 1014267976566526988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_31
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 391
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd99a785df96d97d0800000000000000
+      internalID: -2910053247379400227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_32
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 392
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14a74dce6cd9e70b0800000000000000
+      internalID: -5728968198266258879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_33
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 379
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e918d356abea720800000000000000
+      internalID: 2859427757413211760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_34
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 120
+        width: 124
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0d1541d8be2f5f90800000000000000
+      internalID: -6962795127571669746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_35
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 377
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ba401797421d4870800000000000000
+      internalID: 8668604956444478129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_36
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 122
+        width: 121
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b57ff8d182d8def10800000000000000
+      internalID: 2300650188090373979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_37
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 350
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb07cbf09a2a06170800000000000000
+      internalID: 8169708571047260348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_38
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 328
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77557ae60065cd890800000000000000
+      internalID: -7431970725211712137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_39
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 315
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2318aa38a69f1ea0800000000000000
+      internalID: -5899831337549294802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_40
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 318
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d87df97118c7b3150800000000000000
+      internalID: 5853409034587068301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_41
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 303
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d756352cad849ed0800000000000000
+      internalID: -2408144130238162983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_42
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 299
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6440ca651da324fc0800000000000000
+      internalID: -3512180088618875834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_43
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 295
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b7923467411288d0800000000000000
+      internalID: -2845693016223344720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_44
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 300
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd36f1a59d29e9630800000000000000
+      internalID: 3935744586585957340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_45
+      rect:
+        serializedVersion: 2
+        x: 631
+        y: 292
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b427ba6786dbe3780800000000000000
+      internalID: -8701309173668023733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_46
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 280
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d8460f0399559760800000000000000
+      internalID: 7463970445583599827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_47
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 288
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9480ceca59c1cb590800000000000000
+      internalID: -7657213837259831223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_48
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 261
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27ac5643e91da78e0800000000000000
+      internalID: -1694811832337446286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_49
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 260
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ec3e3e06a835020800000000000000
+      internalID: 2329357581025529434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_50
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 268
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b509322798ddfd720800000000000000
+      internalID: 2873258669680857179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_51
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 259
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bb2624afd58945c0800000000000000
+      internalID: -4230703179359704142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_52
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 242
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 700143995c0342ae0800000000000000
+      internalID: -1575080344435814393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_53
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 242
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6349b93ed042f8c60800000000000000
+      internalID: 7822510719837639734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_54
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 239
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bba9f7e124cca05d0800000000000000
+      internalID: -3095437209512207685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_55
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 226
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72a6cdb1b9a0bd540800000000000000
+      internalID: 5033628669820299815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_56
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 230
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ef60005e329f8100800000000000000
+      internalID: 112469312035385321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_57
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 223
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd54dde2eb3869520800000000000000
+      internalID: 2708497078763210205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_58
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 222
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d488b41f4b45040800000000000000
+      internalID: 4635528864918424887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_59
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 223
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32275dbe5d5ea4c30800000000000000
+      internalID: 4344537497499693603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_60
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 211
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fbeffe4aeae30af0800000000000000
+      internalID: -431242847228793863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_61
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 202
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48936a14f72e02c30800000000000000
+      internalID: 4332711877720553860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_62
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 184
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 623a0e708c873e260800000000000000
+      internalID: 7125671835951211302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_63
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 136
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 219734d2ec9806d30800000000000000
+      internalID: 4422686352693491986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_64
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 104
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d635e583276d45a10800000000000000
+      internalID: 1897377129090143085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_65
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 118
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8da46e95f0f69f00800000000000000
+      internalID: 1123350094790569358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_66
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 6
+        width: 117
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75acaab42a14d6100800000000000000
+      internalID: 102810531809380951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_67
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 110
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1f71c29fc6782050800000000000000
+      internalID: 5775997155995123484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_68
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 119
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33bda679d2859e920800000000000000
+      internalID: 3020041977965763379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_69
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 107
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5286a5433635de440800000000000000
+      internalID: 4966717649604732965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_70
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 112
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe15d2244aba0c30800000000000000
+      internalID: 4326475193847717562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_71
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 116
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 105daafd3898d73a0800000000000000
+      internalID: -6666020673952230143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_72
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 105
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 107aa29f0db6fe320800000000000000
+      internalID: 2589406856039016193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_73
+      rect:
+        serializedVersion: 2
+        x: 458
+        y: 113
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 968a020f5d20e0bc0800000000000000
+      internalID: -3815108716456269719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_74
+      rect:
+        serializedVersion: 2
+        x: 478
+        y: 96
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 158734030245ea800800000000000000
+      internalID: 625529895476492369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_75
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 64
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e51d18fcf0b10e870800000000000000
+      internalID: 8709991434054390110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_76
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 6
+        width: 116
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b77b19979c22b90800000000000000
+      internalID: -7268025324649612391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_77
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 103
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fc2df1e17f98ff30800000000000000
+      internalID: 4609609530085289209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_78
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 97
+        width: 25
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f272b805c24069f0800000000000000
+      internalID: -477308146479369482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_79
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 111
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6c29f2999007f970800000000000000
+      internalID: 8788493857432611946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_80
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 103
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2142eea8e79f83f20800000000000000
+      internalID: 3402743840370467858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_81
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 90
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b9efbc12fac47e00800000000000000
+      internalID: 1041680555042662837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_82
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 86
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf1e9aa8d6bc0e790800000000000000
+      internalID: -7502773307860983300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_83
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 68
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0cd65b7d34e5a90800000000000000
+      internalID: -7323341350316949255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_84
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 88
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5546f6f21bb08370800000000000000
+      internalID: 8322857801507816799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_85
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 88
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c071bc29718525b80800000000000000
+      internalID: -8407560696077019380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_86
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 95
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2da58992291dec350800000000000000
+      internalID: 6038994576043694802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_87
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 8
+        width: 83
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d46a8d8181af07ef0800000000000000
+      internalID: -112315009281251763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_88
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 86
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07eb8aff13ca8cdd0800000000000000
+      internalID: -2465531465242722704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_89
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 74
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a323dbb5ba2a39200800000000000000
+      internalID: 185670866514555450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_90
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 90
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad8fa9f695ac96230800000000000000
+      internalID: 3632657059924343002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_91
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 6
+        width: 60
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce84aecfa561f1b10800000000000000
+      internalID: 1954305343348164844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_92
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 80
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4a8b3d1fed3494b0800000000000000
+      internalID: -5434650753132426675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_93
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 84
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901a1f58ffc66f180800000000000000
+      internalID: -9081951753826361079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_94
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 95
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8a2dba260d4a51b0800000000000000
+      internalID: -5667132492210165109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_95
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 72
+        width: 30
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75fae5e396258cbe0800000000000000
+      internalID: -1456823867482919081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_96
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 95
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5638b8f70002efed0800000000000000
+      internalID: -2378428366693104795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_97
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 79
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05b43ed95004dc650800000000000000
+      internalID: 6254725850355419984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_98
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 80
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06044f2629dce5b90800000000000000
+      internalID: -7251132321410826144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_99
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 58
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3345753a276797f70800000000000000
+      internalID: 9185503149737595955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_100
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 36
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a16fe3d6426275a0800000000000000
+      internalID: -6525044853763513950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_101
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 30
+        width: 23
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cf4174676b8aecf0800000000000000
+      internalID: -222211955418378304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_102
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 39
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b13e11ed5174fa6d0800000000000000
+      internalID: -2977082669423008997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_103
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 29
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99a55c842d6e9770800000000000000
+      internalID: 8619446740574382494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_104
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 30
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89e8fe801c5abc550800000000000000
+      internalID: 6182217161993326232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_105
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 8
+        width: 38
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40c8182503ad77130800000000000000
+      internalID: 3564557531164544004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_106
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 16
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e23d0cc6db3f1f8d0800000000000000
+      internalID: -2814200297230904530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_107
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 12
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8382dd19446e763b0800000000000000
+      internalID: -5519189636139898824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_108
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 25
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b054c46c5bb70c5f0800000000000000
+      internalID: -738454318242577141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_109
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 26
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5252b30d93f277700800000000000000
+      internalID: 537950605847242021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_110
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 31
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91655e69feb3a8d80800000000000000
+      internalID: -8247713867360807399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_111
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 23
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78e6080aa6005ec70800000000000000
+      internalID: 8999599888329109127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_112
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 8
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f43150ee09771db0800000000000000
+      internalID: -4821251771276905229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_113
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 14
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed0c477a9c0154ea0800000000000000
+      internalID: -5889282479433137954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_114
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 16
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4162bb305e8ac70800000000000000
+      internalID: 8982681260977951995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_115
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 8
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7782ff2ad84d930800000000000000
+      internalID: 4167111286429612004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_116
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 16
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c83ae068647439cb0800000000000000
+      internalID: -4858461204780244084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_117
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 23
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752ae2496b768ef50800000000000000
+      internalID: 6910887662067819095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_118
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 9
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e485e1e8405436e90800000000000000
+      internalID: -7033702307156043698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ReturnSealV1_119
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 0
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0247d6594ff2e700800000000000000
+      internalID: 568297193456747018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ReturnSealV1_0: -3177912095269927082
+      ReturnSealV1_1: 7103826554758119009
+      ReturnSealV1_10: 773441423773491360
+      ReturnSealV1_100: -6525044853763513950
+      ReturnSealV1_101: -222211955418378304
+      ReturnSealV1_102: -2977082669423008997
+      ReturnSealV1_103: 8619446740574382494
+      ReturnSealV1_104: 6182217161993326232
+      ReturnSealV1_105: 3564557531164544004
+      ReturnSealV1_106: -2814200297230904530
+      ReturnSealV1_107: -5519189636139898824
+      ReturnSealV1_108: -738454318242577141
+      ReturnSealV1_109: 537950605847242021
+      ReturnSealV1_11: 4658007321866202434
+      ReturnSealV1_110: -8247713867360807399
+      ReturnSealV1_111: 8999599888329109127
+      ReturnSealV1_112: -4821251771276905229
+      ReturnSealV1_113: -5889282479433137954
+      ReturnSealV1_114: 8982681260977951995
+      ReturnSealV1_115: 4167111286429612004
+      ReturnSealV1_116: -4858461204780244084
+      ReturnSealV1_117: 6910887662067819095
+      ReturnSealV1_118: -7033702307156043698
+      ReturnSealV1_119: 568297193456747018
+      ReturnSealV1_12: -7347581765232328728
+      ReturnSealV1_13: 4450551315659889171
+      ReturnSealV1_14: 295888863139764510
+      ReturnSealV1_15: -4831214752575696670
+      ReturnSealV1_16: 3313899683840325470
+      ReturnSealV1_17: 5818792489498576242
+      ReturnSealV1_18: 1000204009708426807
+      ReturnSealV1_19: 8469632207598818320
+      ReturnSealV1_2: -2759377207583867870
+      ReturnSealV1_20: 4211516229061291902
+      ReturnSealV1_21: 3348449189775510212
+      ReturnSealV1_22: 4031593543253470355
+      ReturnSealV1_23: 7242565083207761145
+      ReturnSealV1_24: 8825335325791200411
+      ReturnSealV1_25: 4145497084875984829
+      ReturnSealV1_26: 5713073418788825114
+      ReturnSealV1_27: 8471276342797352665
+      ReturnSealV1_28: 737100223119812156
+      ReturnSealV1_29: 5537899316265834191
+      ReturnSealV1_3: -8248020687776186405
+      ReturnSealV1_30: 1014267976566526988
+      ReturnSealV1_31: -2910053247379400227
+      ReturnSealV1_32: -5728968198266258879
+      ReturnSealV1_33: 2859427757413211760
+      ReturnSealV1_34: -6962795127571669746
+      ReturnSealV1_35: 8668604956444478129
+      ReturnSealV1_36: 2300650188090373979
+      ReturnSealV1_37: 8169708571047260348
+      ReturnSealV1_38: -7431970725211712137
+      ReturnSealV1_39: -5899831337549294802
+      ReturnSealV1_4: -2641595821192474783
+      ReturnSealV1_40: 5853409034587068301
+      ReturnSealV1_41: -2408144130238162983
+      ReturnSealV1_42: -3512180088618875834
+      ReturnSealV1_43: -2845693016223344720
+      ReturnSealV1_44: 3935744586585957340
+      ReturnSealV1_45: -8701309173668023733
+      ReturnSealV1_46: 7463970445583599827
+      ReturnSealV1_47: -7657213837259831223
+      ReturnSealV1_48: -1694811832337446286
+      ReturnSealV1_49: 2329357581025529434
+      ReturnSealV1_5: 1331027362801371218
+      ReturnSealV1_50: 2873258669680857179
+      ReturnSealV1_51: -4230703179359704142
+      ReturnSealV1_52: -1575080344435814393
+      ReturnSealV1_53: 7822510719837639734
+      ReturnSealV1_54: -3095437209512207685
+      ReturnSealV1_55: 5033628669820299815
+      ReturnSealV1_56: 112469312035385321
+      ReturnSealV1_57: 2708497078763210205
+      ReturnSealV1_58: 4635528864918424887
+      ReturnSealV1_59: 4344537497499693603
+      ReturnSealV1_6: 122752348003680585
+      ReturnSealV1_60: -431242847228793863
+      ReturnSealV1_61: 4332711877720553860
+      ReturnSealV1_62: 7125671835951211302
+      ReturnSealV1_63: 4422686352693491986
+      ReturnSealV1_64: 1897377129090143085
+      ReturnSealV1_65: 1123350094790569358
+      ReturnSealV1_66: 102810531809380951
+      ReturnSealV1_67: 5775997155995123484
+      ReturnSealV1_68: 3020041977965763379
+      ReturnSealV1_69: 4966717649604732965
+      ReturnSealV1_7: -7640366860358030385
+      ReturnSealV1_70: 4326475193847717562
+      ReturnSealV1_71: -6666020673952230143
+      ReturnSealV1_72: 2589406856039016193
+      ReturnSealV1_73: -3815108716456269719
+      ReturnSealV1_74: 625529895476492369
+      ReturnSealV1_75: 8709991434054390110
+      ReturnSealV1_76: -7268025324649612391
+      ReturnSealV1_77: 4609609530085289209
+      ReturnSealV1_78: -477308146479369482
+      ReturnSealV1_79: 8788493857432611946
+      ReturnSealV1_8: -2413472164639871514
+      ReturnSealV1_80: 3402743840370467858
+      ReturnSealV1_81: 1041680555042662837
+      ReturnSealV1_82: -7502773307860983300
+      ReturnSealV1_83: -7323341350316949255
+      ReturnSealV1_84: 8322857801507816799
+      ReturnSealV1_85: -8407560696077019380
+      ReturnSealV1_86: 6038994576043694802
+      ReturnSealV1_87: -112315009281251763
+      ReturnSealV1_88: -2465531465242722704
+      ReturnSealV1_89: 185670866514555450
+      ReturnSealV1_9: 7896760080493539925
+      ReturnSealV1_90: 3632657059924343002
+      ReturnSealV1_91: 1954305343348164844
+      ReturnSealV1_92: -5434650753132426675
+      ReturnSealV1_93: -9081951753826361079
+      ReturnSealV1_94: -5667132492210165109
+      ReturnSealV1_95: -1456823867482919081
+      ReturnSealV1_96: -2378428366693104795
+      ReturnSealV1_97: 6254725850355419984
+      ReturnSealV1_98: -7251132321410826144
+      ReturnSealV1_99: 9185503149737595955
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

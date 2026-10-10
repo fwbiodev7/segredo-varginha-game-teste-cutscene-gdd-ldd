@@ -14,15 +14,22 @@ namespace Game.Varginha
         [SerializeField] private string phase3SceneName = "Fase3_Igreja_Guardiao";
 
         public static bool IsOpen { get; private set; }
+        public static VarginhaMainMenu Active { get; private set; }
+        private MenuCinematicAtmosphere _atmosphere;
+        private readonly MenuButtonMotion[] _buttonMotion={new(),new(),new()};
+        private bool _departing;
+        public MenuCinematicAtmosphere Atmosphere => _atmosphere;
+        public void BeginDeparture(){_departing=true;_atmosphere.BeginDeparture();}
         private void OnEnable()
         {
             IsOpen = true;
+            Active = this;
             Time.timeScale = 1f;
             Game.Managers.GameManager.Instance?.ReturnToMenu();
             _resumeAvailable = Experiment.CampaignStorySave.Exists;
             _resumePhase = _resumeAvailable ? Experiment.CampaignStorySave.Load().phase : 1;
         }
-        private void OnDisable() => IsOpen = false;
+        private void OnDisable() { IsOpen = false; if(Active==this)Active=null; }
         private void OnDestroy() { if (pixel != null) Destroy(pixel); }
 
         private enum Panel { None, Play, Settings, Controls, Credits, Difficulty, Keybinds }
@@ -34,7 +41,6 @@ namespace Game.Varginha
         private Key _padBinding=Key.E;
         private int _rebindArmedFrame = -1;
         private Texture2D pixel;
-        private Texture2D backgroundTexture;
         private GUIStyle titleStyle;
         private GUIStyle subtitleStyle;
         private GUIStyle buttonStyle;
@@ -61,10 +67,12 @@ namespace Game.Varginha
             pixel = new Texture2D(1, 1);
             pixel.SetPixel(0, 0, Color.white);
             pixel.Apply();
-            backgroundTexture = Resources.Load<Texture2D>("Varginha/MenuBackgroundV1");
+            _atmosphere=GetComponent<MenuCinematicAtmosphere>()??gameObject.AddComponent<MenuCinematicAtmosphere>();
         }
         private void Update()
         {
+            _atmosphere.AllowSuspense=panel==Panel.None;
+            if(_departing)return;
             if(!VarginhaInputActions.CancelPressed)return;
             if(_rebindingAction.HasValue){_rebindingAction=null;return;}
             if(panel==Panel.Keybinds)panel=Panel.Settings;
@@ -73,8 +81,12 @@ namespace Game.Varginha
 
         private void OnGUI()
         {
-            VarginhaGamepadUI.Begin("menu:"+GetEntityId()+":"+panel,true,70);
-            if (Game.Varginha.VarginhaTravelCinematic.IsTravelling || Experiment.CampaignCinematics.IsTransitioning) return;
+            var initialColor=GUI.color;var initialMatrix=GUI.matrix;bool initialEnabled=GUI.enabled;
+            try
+            {
+            VarginhaGamepadUI.Begin("menu:"+GetEntityId()+":"+panel,!_departing,70);
+            if (Game.Varginha.VarginhaTravelCinematic.IsTravelling || Experiment.CampaignCinematics.IsTransitioning&&!_departing) return;
+            if(_departing)GUI.enabled=false;
             BuildStyles();
             DrawBackground();
             if(_rebindingAction.HasValue && VarginhaInputActions.UsingGamepad){DrawPadBindingPicker();return;}
@@ -95,27 +107,35 @@ namespace Game.Varginha
             var previous = Experiment.ExperimentGUI.BeginCanvas();
             PixelMenuTheme.Label(new Rect(72, 94, 490, 24), "96.4 MHz • VARGINHA / MG", 10, PixelMenuTheme.Muted);
             PixelMenuTheme.Separator(new Rect(72, 133, 96, 3));
-            PixelMenuTheme.Label(new Rect(72, 164, 530, 49), "O SEGREDO", 38, PixelMenuTheme.Paper);
-            PixelMenuTheme.Label(new Rect(72, 220, 530, 49), "DE VARGINHA", 38, PixelMenuTheme.Paper);
+            float titleShift=_atmosphere.TitleGlitch?1:0;
+            PixelMenuTheme.Label(new Rect(72+titleShift, 164, 530, 49), "O SEGREDO", 38, PixelMenuTheme.Paper);
+            PixelMenuTheme.Label(new Rect(72-titleShift, 220, 530, 49), "DE VARGINHA", 38, PixelMenuTheme.Paper);
             PixelMenuTheme.Label(new Rect(72, 285, 500, 23), "1996 / 2026 • UMA LEMBRANÇA INCOMPLETA", 9, PixelMenuTheme.Muted);
-            bool enabled = GUI.enabled; GUI.enabled = _resumeAvailable;
-            if (PixelMenuTheme.Button(new Rect(72, 340, 470, 88), "")) Experiment.VarginhaCampaignPhase1.StartCampaign(true);
-            PixelMenuTheme.Label(new Rect(120, 355, 400, 25), "CONTINUAR", 14, PixelMenuTheme.Paper);
+            bool reduced=Experiment.VarginhaGameSettings.Current.reducedMotion;
+            bool enabled = GUI.enabled; GUI.enabled = enabled&&_resumeAvailable;
+            if (_buttonMotion[0].Draw(new Rect(72, 340, 470, 88), "",_atmosphere,reduced)) Experiment.VarginhaCampaignPhase1.StartCampaign(true);
+            PixelMenuTheme.Label(new Rect(120, 355, 400, 25), "CONTINUAR", 14,
+                Color.Lerp(PixelMenuTheme.Paper,Color.white,_buttonMotion[0].Amount*.35f));
             string chapter = _resumeAvailable ? (_resumePhase == 1 ? "A lembrança • 1996"
                 : "Fase " + Experiment.CampaignSequence.Chapter(_resumePhase) + " • " + Experiment.CampaignSequence.Title(_resumePhase)) : "Sua história começa aqui";
-            PixelMenuTheme.Label(new Rect(120, 393, 400, 20), chapter, 8, PixelMenuTheme.Muted);
+            var chapterColor=PixelMenuTheme.Muted;chapterColor.a=_resumeAvailable?_buttonMotion[0].Subtitle:.65f;
+            PixelMenuTheme.Label(new Rect(120, 393, 400, 20), chapter, 8, chapterColor);
             GUI.enabled = enabled;
-            if (PixelMenuTheme.Button(new Rect(72, 449, 470, 56), "NOVA HISTÓRIA")) panel = Panel.Play;
-            if (PixelMenuTheme.Button(new Rect(72, 525, 470, 56), "CONFIGURAÇÕES")) panel = Panel.Settings;
+            if (_buttonMotion[1].Draw(new Rect(72, 449, 470, 56), "NOVA HISTÓRIA",_atmosphere,reduced)) panel = Panel.Play;
+            if (_buttonMotion[2].Draw(new Rect(72, 525, 470, 56), "CONFIGURAÇÕES",_atmosphere,reduced)) panel = Panel.Settings;
             PixelMenuTheme.Label(new Rect(72, 654, 900, 24), "INVESTIGAÇÃO • MEMÓRIA • MISTÉRIO", 9, PixelMenuTheme.Muted);
             GUI.matrix = previous;
+            _atmosphere.DrawInterference();
+            }
+            finally{GUI.color=initialColor;GUI.matrix=initialMatrix;GUI.enabled=initialEnabled;}
         }
 
         private void DrawBackground()
         {
-            if (backgroundTexture != null)
+            var animated=_atmosphere.Background;
+            if (animated != null)
             {
-                GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), backgroundTexture, ScaleMode.ScaleAndCrop);
+                GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), animated, ScaleMode.ScaleAndCrop);
                 // Vinheta que garante contraste sem ocultar a arte do ET e da luz no lado direito.
                 GUI.color = new Color(.005f, .015f, .04f, .23f);
                 GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), pixel);
@@ -352,7 +372,7 @@ namespace Game.Varginha
                         VarginhaDifficulty.Select((InvestigationDifficulty)i);
                         Time.timeScale = 1f;
                         Game.Managers.GameManager.Instance?.StartGame();
-                        SceneManager.LoadScene(_pendingScene);
+                        Experiment.CampaignCinematics.Load(_pendingScene);
                     }
                 }
             }

@@ -16,6 +16,9 @@ namespace Game.Varginha.Experiment
         private Rect _transitionRect;
         private CampaignTransitionProfile _profile;
         private float _transitionProgress, _bars;
+        private bool _menuDeparture, _signalMessage;
+        private float _signalSweep;
+        public static bool MenuSignalMessageVisible => _instance!=null&&_instance._signalMessage;
         private void Awake() => SceneManager.sceneLoaded += SceneLoaded;
         private void SceneLoaded(Scene scene, LoadSceneMode mode) => ReleasePause();
         public static bool IsTransitioning => _instance != null && _instance._loading;
@@ -43,13 +46,28 @@ namespace Game.Varginha.Experiment
         private IEnumerator ChangeScene(string scene, CampaignTransitionProfile profile)
         {
             _loading = true; _profile = profile;
+            var menu=Game.Varginha.VarginhaMainMenu.Active;
+            _menuDeparture=menu!=null && SceneManager.GetActiveScene().name=="Menu_MisterioDeVarginha";
             bool reduced = VarginhaGameSettings.Current.reducedMotion;
+            if(_menuDeparture){_profile.style=CampaignTransitionStyle.Fade;_profile.letterbox=false;menu.BeginDeparture();}
             if (reduced) { _profile.style = CampaignTransitionStyle.Fade; _profile.letterbox = false; }
-            float duration = reduced ? .15f : Mathf.Clamp(profile.duration, .1f, 1.5f);
+            float duration = _menuDeparture?(reduced?.22f:.65f):reduced ? .15f : Mathf.Clamp(profile.duration, .1f, 1.5f);
             try
             {
                 var ambient = CampaignAmbientBridge.Instance;
                 ambient.Suspend(false); ambient.Duck(0);
+                if(_menuDeparture)
+                {
+                    float intro=reduced?.35f:.8f;bool radio=false;
+                    for(float t=0;t<intro;t+=Time.unscaledDeltaTime)
+                    {
+                        float p=Mathf.Clamp01(t/intro);menu.Atmosphere.Departure(p);
+                        _signalSweep=reduced?0:Mathf.Clamp01((p-.25f)/.75f);
+                        if(!radio&&p>.2f){menu.Atmosphere.Radio(reduced?.18f:.35f);radio=true;}
+                        yield return null;
+                    }
+                    menu.Atmosphere.Departure(1);_signalSweep=0;
+                }
                 // The arriving controller selects the chapter's bed. Keep the outgoing
                 // channels alive until then instead of inserting a generic third ambience.
                 if (string.IsNullOrEmpty(profile.ambience)) ambient.Transition(null);
@@ -65,6 +83,12 @@ namespace Game.Varginha.Experiment
                 if (_transitionFrame == null)
                     for (float t=0;t<duration;t+=Time.unscaledDeltaTime) { _fade=Mathf.SmoothStep(0,1,t/duration); yield return null; }
                 _fade = _transitionFrame == null ? 1 : 0; _transitionProgress = 0;
+                if(_menuDeparture)
+                {
+                    _signalMessage=true;
+                    yield return new WaitForSecondsRealtime(reduced?.35f:.65f);
+                    _signalMessage=false;
+                }
                 var operation=SceneManager.LoadSceneAsync(scene);
                 while (!operation.isDone) yield return null;
                 Time.timeScale=1;
@@ -80,7 +104,8 @@ namespace Game.Varginha.Experiment
             }
             finally
             {
-                _fade = _bars = 0; _loading = false; Time.timeScale = 1; ReleaseTransition();
+                _fade = _bars = _signalSweep = 0; _signalMessage=_menuDeparture=false;
+                _loading = false; Time.timeScale = 1; ReleaseTransition();
             }
         }
         private void CaptureTransition()
@@ -130,6 +155,13 @@ namespace Game.Varginha.Experiment
             if (!_loading && _fade<=0) return;
             var matrix=GUI.matrix; var color=GUI.color; int depth=GUI.depth;
             GUI.matrix=Matrix4x4.identity; GUI.depth=-20000;
+            if(_menuDeparture&&_signalSweep>0&&_signalSweep<1)
+            {
+                float y=Mathf.Round(Screen.height*_signalSweep);
+                GUI.color=new Color(.46f,.67f,.67f,.065f);
+                GUI.DrawTexture(new Rect(0,y,Screen.width,3),Texture2D.whiteTexture);
+                GUI.DrawTexture(new Rect(Screen.width*.2f,y+5,Screen.width*.56f,1),Texture2D.whiteTexture);
+            }
             if (_transitionFrame != null)
             {
                 GUI.color = new Color(1,1,1,1 - _transitionProgress);
@@ -151,6 +183,13 @@ namespace Game.Varginha.Experiment
                 GUI.color = new Color(0,0,0,_bars); float height = Screen.height * .028f;
                 GUI.DrawTexture(new Rect(0,0,Screen.width,height),Texture2D.whiteTexture);
                 GUI.DrawTexture(new Rect(0,Screen.height-height,Screen.width,height),Texture2D.whiteTexture);
+            }
+            if(_signalMessage)
+            {
+                GUI.color=Color.white;
+                ExperimentGUI.BeginCanvas();
+                Game.UI.PixelMenuTheme.Label(new Rect(250,338,780,44),"96.4 MHz — SINAL PERDIDO",12,
+                    Game.UI.PixelMenuTheme.Muted,TextAnchor.MiddleCenter);
             }
             GUI.color=color; GUI.matrix=matrix; GUI.depth=depth;
         }

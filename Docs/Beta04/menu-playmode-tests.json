@@ -1,0 +1,90 @@
+{
+  "status": "completed",
+  "duration": 16.02,
+  "summary": {
+    "total": 11,
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.PlayMode.MenuCinematicPlayTests.BackpackHoverPreservesSpritesClicksAndDisabledButtonsWhilePaused",
+      "Status": "Passed",
+      "Duration": 1.5330955,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.MenuCinematicPlayTests.BlueFuscaReplacementPreservesEveryPixelOutsideTheCarRectangle",
+      "Status": "Passed",
+      "Duration": 0.2146782,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.MenuCinematicPlayTests.ContinueShowsSignalLossAndPreservesTheSavedChapter",
+      "Status": "Passed",
+      "Duration": 5.0113559,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.MenuCinematicPlayTests.DisabledShaderPreservesEveryOriginalPixelAndGazeOnlyUsesExistingArt",
+      "Status": "Passed",
+      "Duration": 0.192921,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.MenuCinematicPlayTests.ExistingHudAndPauseRegressionStillPassesWithTheAnimatedMenu",
+      "Status": "Passed",
+      "Duration": 0.6285809,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.MenuCinematicPlayTests.KeyboardAndControllerUseTheSameAnimatedButtonsAndPanels",
+      "Status": "Passed",
+      "Duration": 1.4375537,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.MenuCinematicPlayTests.LayeredUfoActuallyLeavesTheSkyAndFogMovesVisibly",
+      "Status": "Passed",
+      "Duration": 0.1598957,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.MenuCinematicPlayTests.MenuReusesItsRenderTargetAndRespectsReducedMotionAndAudioSettings",
+      "Status": "Passed",
+      "Duration": 1.8298741,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.MenuCinematicPlayTests.NewStoryRetainsConfirmationAndStartsTheOriginalFirstChapter",
+      "Status": "Passed",
+      "Duration": 4.0209861,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.MenuCinematicPlayTests.SharedHoverRetainsTheCarInteractionBinding",
+      "Status": "Passed",
+      "Duration": 0.6580452,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.PlayMode.MenuCinematicPlayTests.TransparentUfoHasRealAlphaAndClearBorders",
+      "Status": "Passed",
+      "Duration": 0.2511366,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

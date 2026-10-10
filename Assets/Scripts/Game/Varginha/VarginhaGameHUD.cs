@@ -766,17 +766,16 @@ namespace Game.Varginha
 
         private bool PauseButton(Rect rect, string label, string marker, float scale)
         {
-            bool hover = rect.Contains(Event.current.mousePosition);
+            float hover=PixelButtonHover.Amount(rect,PixelButtonHover.Focused(rect));
             Color accent = new Color(.64f, .84f, .86f);
             PixelHUDFrame.Draw(rect, _whiteTex,
-                hover ? new Color(.10f, .15f, .17f, .98f) : PanelColor,
-                hover ? accent : PanelBorder);
-            if (hover) DrawHudBlock(new Rect(rect.x + 3f, rect.y + 5f, 2f, rect.height - 10f), accent);
-            PauseLabel(new Rect(rect.x + 14f, rect.y, 26f, rect.height), hover ? ">" : marker,
-                Mathf.RoundToInt(9f * scale), hover ? accent : new Color(.48f, .59f, .61f));
+                Color.Lerp(PanelColor,PixelButtonHover.FocusBackground,hover),Color.Lerp(PanelBorder,accent,hover));
+            if(hover>0){var line=accent;line.a*=hover;DrawHudBlock(new Rect(rect.x+3f,rect.y+5f,2f,rect.height-10f),line);}
+            PauseLabel(new Rect(rect.x+14f+Mathf.Round(4*scale*hover),rect.y,26f,rect.height),hover>0?"›":marker,
+                Mathf.RoundToInt(9f*scale),Color.Lerp(new Color(.48f,.59f,.61f),accent,hover));
             PauseLabel(new Rect(rect.x + 48f, rect.y, rect.width - 60f, rect.height), label,
-                Mathf.RoundToInt(12f * scale), hover ? Color.white : PaperColor);
-            return VarginhaGamepadUI.Button(rect, GUIContent.none, GUIStyle.none);
+                Mathf.RoundToInt(12f*scale),Color.Lerp(PaperColor,Color.white,hover*PixelButtonHover.TextStrength));
+            return VarginhaGamepadUI.Button(rect, GUIContent.none, GUIStyle.none,false);
         }
 
         private void DrawPauseScreen()

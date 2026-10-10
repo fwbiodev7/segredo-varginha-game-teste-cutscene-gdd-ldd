@@ -27,6 +27,7 @@ namespace Game.Varginha.Experiment
         private CampaignFinalAllies _allies;
         private SpriteRenderer _entity;
         private SpriteRenderer _portal;
+        private CampaignReturnSeal _returnSeal;
         private float _endingFade;
         private bool _sequence,_resumeBattlePending;
         private Camera _shotCamera;
@@ -58,26 +59,28 @@ namespace Game.Varginha.Experiment
             if(VarginhaGameHUD.Instance==null)new GameObject("Campaign_HUD").AddComponent<VarginhaGameHUD>();
             VarginhaGameHUD.Instance.CampaignInventoryOnly=true;VarginhaGameHUD.Instance.enabled=true;
             var attack=Actor.GetComponent<VarginhaPlayerAttack>();if(attack!=null)attack.enabled=false;
-            _sound=gameObject.AddComponent<CampaignSoundscape>();_sound.Configure(phase==11||phase==21&&area==1?"School":phase==14?"Church":Childhood||phase==12||phase==13?"House":"Workshop",Actor);
+            _sound=gameObject.AddComponent<CampaignSoundscape>();_sound.Configure(phase==18?"Lab":phase==11||phase==21&&area==1?"School":phase==14?"Church":Childhood||phase==12||phase==13?"House":"Workshop",Actor);
             _order=new int[_definition.cards.Length];for(int i=0;i<_order.Length;i++)_order[i]=(i+1)%_order.Length;
             if(phase==11)School();
             if(phase==12&&State.serviceRevealed)MarkService();
             if(Childhood){LoadChild();CreateChildhoodPresence();}
             if(phase==14)NPC("Padre Fábio",VarginhaReferenceSprites.PadreFabio(),Plan.points.Find(p=>p.id=="fabio").position);
             if(phase==16){NPC("Padre Fábio",CampaignFinalAllies.PortraitForFinalScene(2),Plan.spawn+Vector2.left*.8f);NPC("Ouzana",CampaignFinalAllies.Portrait(1),Plan.spawn+Vector2.right*.8f);}
-            if(phase==18||phase==21&&area==0)
+            if(phase==18)
             {
-                var entityPoint=Plan.points.Find(p=>p.id==(phase==18?"wounds":"entity"));
+                // The approved map already contains the frozen ET inside its glass capsule.
+                NPC("Ouzana",CampaignStorySprites.Frame("OuzanaBiologist",2,2),
+                    Plan.points.Find(p=>p.id=="reading").position+new Vector2(-.45f,.1125f));
+            }
+            if(phase==21&&area==0)
+            {
+                var entityPoint=Plan.points.Find(p=>p.id=="entity");
                 _entity=NPC("Entidade ferida",CampaignManifestationCombat.Frame(0,6),entityPoint.position+Vector2.up*.8f).GetComponent<SpriteRenderer>();
                 var collider=_entity.GetComponent<Collider2D>();collider.enabled=false;
-                if(phase==18)NPC("Ouzana",CampaignFinalAllies.Portrait(1),Plan.points.Find(p=>p.id=="reading").position+Vector2.left*2.1f+Vector2.down*.45f);
-                else
-                {
-                    var friends=Plan.points.Find(p=>p.id=="friends").position;
-                    for(int i=0;i<3;i++)NPC(CampaignFinalAllies.Names[i],CampaignFinalAllies.PortraitForFinalScene(i),friends+new Vector2((i-1)*1.25f,.6f));
-                    if(State.finalStep>=2)_entity.enabled=false;
-                    CreatePortal();
-                }
+                var friends=Plan.points.Find(p=>p.id=="friends").position;
+                for(int i=0;i<3;i++)NPC(CampaignFinalAllies.Names[i],CampaignFinalAllies.PortraitForFinalScene(i),friends+new Vector2((i-1)*1.25f,.6f));
+                if(State.finalStep>=2)_entity.enabled=false;
+                CreatePortal();
             }
             if(phase==20){_allies=gameObject.AddComponent<CampaignFinalAllies>();_allies.Configure(Actor);foreach(int i in State.battleStudents)if(i>=0)_allies.Squad.SelectStudent(i);if(State.battleSupport>=0)_allies.SelectSupport(State.battleSupport);_resumeBattlePending=State.chambersPrepared==7&&!State.manifestationDispelled;}
             if(phase==21&&area==1)School();
@@ -147,7 +150,7 @@ namespace Game.Varginha.Experiment
                 if(_message!=null)CloseMessage();else if(_panel!=null)_panel=null;else TogglePause();
             }
             if(_paused)return;_title+=Time.deltaTime;
-            if(_portal!=null){_portal.enabled=State.finalStep>0&&State.finalStep<4;_portal.transform.localScale=new Vector3(2.8f+Mathf.Sin(Time.time*2)*.06f,3.4f,1);}
+            if(_returnSeal!=null)_returnSeal.Present(State.finalStep,Time.deltaTime,_sequence&&State.finalStep==1,VarginhaGameSettings.Current.reducedMotion);
             if(_message!=null&&VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)){CloseMessage();Actor.SetInputLocked(Modal);return;}
             if(!Modal)
             {
@@ -385,8 +388,9 @@ namespace Game.Varginha.Experiment
         {
             var go=new GameObject("Passagem_de_retorno");go.transform.SetParent(transform);
             go.transform.position=Plan.points.Find(p=>p.id=="procedure").position+Vector2.up*1.3f;
-            _portal=go.AddComponent<SpriteRenderer>();_portal.sprite=CampaignFlashArt.Explosion[0];
-            _portal.color=new Color(.42f,.9f,1,.78f);_portal.sortingOrder=22000;_portal.enabled=State.finalStep>0&&State.finalStep<4;
+            _portal=go.AddComponent<SpriteRenderer>();
+            _returnSeal=go.AddComponent<CampaignReturnSeal>();_returnSeal.Configure(_entity);
+            _returnSeal.Present(State.finalStep,0,false,VarginhaGameSettings.Current.reducedMotion);
         }
         private void CreateChildhoodPresence()
         {

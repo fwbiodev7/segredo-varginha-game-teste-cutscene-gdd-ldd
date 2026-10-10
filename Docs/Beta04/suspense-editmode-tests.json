@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "duration": 0.02,
+  "summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "Game.Tests.EditMode.MenuSuspenseTests.IdleLookWaitsForItsWindowAndActivityCancelsIt",
+      "Status": "Passed",
+      "Duration": 0.0012189,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "Game.Tests.EditMode.MenuSuspenseTests.ReducedEffectsSuppressStaresAndInterference",
+      "Status": "Passed",
+      "Duration": 0.0002442,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

@@ -193,6 +193,51 @@ namespace Game.Tests.PlayMode
             }
             Object.Destroy(root);
         }
+        [UnityTest,Timeout(90000)] [Category("ModernLaboratory")]
+        public IEnumerator ApprovedLaboratoryPhysicsPreservesStudyPuzzleAndReload()
+        {
+            CampaignStorySave.Write(new CampaignStory{phase=18});
+            yield return Load(18);
+            var c=CampaignContinuationController.Active;
+            var map=c.transform.Find("Mapa_Campanha");
+            Assert.That(CampaignSequence.Chapter(c.phase),Is.EqualTo(12));
+            Assert.That(CampaignIllustratedMaps.Get(18).height,Is.EqualTo(640),"The guide and legend must not appear in the game.");
+            Assert.That(map.GetComponentsInChildren<PolygonCollider2D>().Length,Is.EqualTo(21));
+            Assert.That(GameObject.Find("Entidade ferida"),Is.Null,"The specimen already appears inside the capsule.");
+            var scientist=c.transform.Find("Ouzana");
+            Assert.That(scientist,Is.Not.Null);
+            Assert.That(scientist.GetComponent<SpriteRenderer>().sprite.name,Does.Contain("OuzanaBiologist_2_2"));
+            Assert.That(c.Plan.IsClear((Vector2)scientist.position-Vector2.up*.58f,.3f),Is.True);
+            Physics2D.SyncTransforms();
+            var route=new System.Collections.Generic.List<Vector2>();
+            float radius=c.Actor.GetComponent<CircleCollider2D>().radius;
+            foreach(var point in c.Plan.points)
+            {
+                Assert.That(c.Plan.Route(c.Plan.spawn,point.position,route),Is.True,point.id);
+                Vector2 previous=c.Plan.spawn;
+                foreach(var step in route)
+                {
+                    Vector2 delta=step-previous;
+                    foreach(var hit in Physics2D.CircleCastAll(previous,radius,delta.normalized,delta.magnitude))
+                        Assert.That(hit.collider.transform.IsChildOf(map),Is.False,"Actual physics blocks "+point.id+" at "+step);
+                    previous=step;
+                }
+            }
+            foreach(var prop in c.Plan.furniture)
+                Assert.That(c.Plan.IsClear(prop.footprint.center),Is.False,"The red guide blocks "+prop.name);
+            foreach(var id in new[]{"human","wounds","reading"}){c.Interact(id);c.CloseMessage();}
+            Assert.That(c.Submit(0,new[]{0,1,2}),Is.False);c.CloseMessage();
+            Assert.That(c.State.AgreementComplete,Is.False);
+            Assert.That(c.Submit(0,CampaignPuzzleDesign.Solution(18)),Is.True);
+            yield return new WaitForSeconds(3.1f);c.CloseMessage();
+            Assert.That(CampaignStorySave.Load().continuation.AgreementComplete,Is.True);
+            yield return Load(18);c=CampaignContinuationController.Active;
+            Assert.That(c.State.AgreementComplete,Is.True);
+            c.Interact("exit");
+            var panel=typeof(CampaignContinuationController).GetField("_panel",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance);
+            Assert.That(panel.GetValue(c),Is.EqualTo("complete"));
+        }
+
         [UnityTest,Timeout(180000)] public IEnumerator InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions()
         {
             var route=new System.Collections.Generic.List<Vector2>();
