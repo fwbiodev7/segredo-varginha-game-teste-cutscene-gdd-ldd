@@ -20,8 +20,9 @@ namespace Game.Varginha.Experiment
         public CampaignExpansionState expansion = new();
         public CampaignContinuationState continuation = new();
         public CampaignPuzzleProgress puzzles = new();
+        public CampaignHouseInvestigation house = new();
         public int MapFragments => (pagesSolved ? 1 : 0) + (codeSolved ? 1 : 0) + ((expansion.visited & 1) != 0 ? 1 : 0);
-        public bool CanLeaveHouse => pagesSolved;
+        public bool CanLeaveHouse => pagesSolved && house.Complete;
         public string RemainingHouseTasks
         {
             get
@@ -41,8 +42,9 @@ namespace Game.Varginha.Experiment
         public bool CanDecode => buildingSolved && timeOpened;
         public bool SubmitPages()
         {
-            if (!boxFound || !Sequence(pages, new[] { 0, 1, 2 })) return false;
-            pagesSolved = true; return true;
+            house.Repair(boxFound, pagesSolved && boxFound);
+            if (!boxFound || !house.CanOpenBox || !Sequence(pages, new[] { 0, 1, 2 })) return false;
+            pagesSolved = true; house.step = 5; return true;
         }
         public bool SubmitPhotoClue(int choice)
         {
@@ -65,6 +67,8 @@ namespace Game.Varginha.Experiment
             phase = Mathf.Clamp(phase, 1, 21); routine &= 15; inspection &= 7;
             continuation ??= new CampaignContinuationState(); continuation.Repair();
             CampaignSequence.Migrate(this);
+            house ??= new CampaignHouseInvestigation();
+            house.Repair(boxFound, pagesSolved && boxFound);
             int maxArea=phase==17?2:phase==12||phase==21?1:0;
             if(continuation.area>maxArea){continuation.area=maxArea;positionPhase=0;}
             expansion ??= new CampaignExpansionState(); expansion.Repair();

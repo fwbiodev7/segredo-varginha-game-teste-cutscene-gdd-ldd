@@ -1,0 +1,15 @@
+{
+  "frames": 8,
+  "canvas": [
+    512,
+    256
+  ],
+  "binaryAlpha": true,
+  "allNonEmpty": true,
+  "sourceSha256": "d97dbfaefc5f0d5581981fa0ca1fbfce60ced57ed6dafcfbd7b65aa383f747f9",
+  "atlasSha256": "bb9202bcafdaf81ba42cca050f5cffa7afe98b8bc3b7ec03c735acc3b1cb8a8d",
+  "references": {
+    "Assets\\Resources\\Varginha\\IllustratedMaps\\Adult2026.png": "70465b8c55e386ac6d9c8b069a6c980655182515683e6581b987eb5c398ba92a",
+    "Assets\\Resources\\Varginha\\StoryEffects\\FuscaOriginal.png": "048dfd8c37a00d2fc84407871ea931f81927efd71bc69d50c733a549292f7344"
+  }
+}

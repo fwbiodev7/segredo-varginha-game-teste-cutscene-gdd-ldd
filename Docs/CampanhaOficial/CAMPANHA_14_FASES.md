@@ -21,7 +21,7 @@ Atualização de 7 de outubro de 2026. Esta é a sequência vigente; os planos e
 
 ## Alterações no percurso
 
-Pia, café, preparação do notebook e coleta isolada da mochila são opcionais. Investigar a caixa entrega os equipamentos necessários; organizar as páginas continua sendo a primeira investigação. A viagem dura poucos segundos, conserva Fusca, pane e voz no rádio e leva à Industrial sem três inspeções obrigatórias. Fotografia, vulto, código e confirmação de Renan acontecem no mesmo mapa.
+Atualização aprovada em 20/10: a abertura adulta passou a ensinar as mecânicas durante pia, café, preparação do notebook e busca da mochila. A chave é deixada no balcão, desaparece e exige investigação ambiental antes de abrir a caixa; as páginas continuam a investigação de 1996. Saves que já adquiriram essas evidências não repetem a preparação. A viagem conserva Fusca, pane e fala legendada no rádio, com tomadas cinematográficas e sem três inspeções obrigatórias. Fotografia, vulto, código e confirmação de Renan continuam no mesmo mapa. Detalhes: [A chave desaparecida](CHAVE_DESAPARECIDA.md).
 
 Ouzana apresenta a comparação do controle e resíduo num diálogo curto. O reagente revela as três marcas com uma carga; a ordenação de amostras, segunda ordenação das marcas e pista de teste deixam de bloquear a saída. O estacionamento e a partida cinematográfica do Fusca continuam. Na fase do casarão, a passagem revelada e a chave permitem descer diretamente do térreo ao porão; a escada permite voltar. A biblioteca, mapa, perseguição e checkpoint da mata foram conservados.
 

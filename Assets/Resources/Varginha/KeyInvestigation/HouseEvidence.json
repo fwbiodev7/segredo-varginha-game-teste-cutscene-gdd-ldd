@@ -1,0 +1,147 @@
+{
+  "image": "HouseEvidence.png",
+  "size": [
+    512,
+    256
+  ],
+  "cell": [
+    128,
+    128
+  ],
+  "ppu": 128,
+  "origin": "top-left",
+  "alpha": "binary",
+  "filter": "Point",
+  "frames": [
+    {
+      "id": "key_rest",
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "durationMs": 1000
+    },
+    {
+      "id": "key_place",
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "durationMs": 150
+    },
+    {
+      "id": "paper_trace",
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "durationMs": 1000
+    },
+    {
+      "id": "box_closed",
+      "rect": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "durationMs": 1000
+    },
+    {
+      "id": "box_open",
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "durationMs": 1000
+    },
+    {
+      "id": "page_house",
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "durationMs": 1000
+    },
+    {
+      "id": "page_tree",
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "durationMs": 1000
+    },
+    {
+      "id": "page_figure",
+      "rect": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "pivot": [
+        64,
+        64
+      ],
+      "durationMs": 1000
+    }
+  ],
+  "clips": {
+    "key_place": {
+      "frames": [
+        "key_place",
+        "key_rest"
+      ],
+      "loop": false
+    },
+    "box_open": {
+      "frames": [
+        "box_closed",
+        "box_open"
+      ],
+      "loop": false
+    }
+  },
+  "sourceSha256": "d97dbfaefc5f0d5581981fa0ca1fbfce60ced57ed6dafcfbd7b65aa383f747f9",
+  "approved": false
+}

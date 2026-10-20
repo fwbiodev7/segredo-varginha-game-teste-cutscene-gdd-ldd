@@ -117,9 +117,9 @@ Documentos de 1898 revelam que Zé Gomes abriu uma ruptura subterrânea. Uma lin
 
 #### Ato II — O Chamado
 
-**Parcial — casa e viagem representadas no protótipo.** Trinta anos depois, o professor segue uma rotina de banho, comida, mochila, notebook e preparação para sair. A chave desaparece; arranhões sob a cama o levam à caixa de brinquedos. Dentro estão a chave e o caderno de 1996, com a anotação infantil “Eu sei que vi alguma coisa.” e outra, recente, que ele não lembra de escrever: “ELA AINDA ESTÁ AQUI.”
+**Abertura adulta integrada em 20/10/2026.** Trinta anos depois, a preparação para a aula ensina movimento e interação por meio da higiene, café, notebook e mochila. Edelzio coloca a chave do Fusca no balcão; ela desaparece enquanto ele busca a mochila. A investigação relaciona balcão vazio, saída fechada e papel junto ao quarto antes de conduzir à caixa. Dentro estão a chave e o caderno de 1996, com a anotação infantil “Eu sei que vi alguma coisa.” As páginas rasgadas revelam a escrita recente “ELA AINDA ESTÁ AQUI.”
 
-No roteiro original, o caminho para a escola inclui o surto do Fusca: rádio, faróis e painel falham, a voz infantil diz “Não deixa ela sair.”, o motor para e volta a funcionar sozinho. A versão jogável já inclui caixa/caderno, manifestação, coleta, quiz e saída cinematográfica. A encenação completa da rotina, do desaparecimento da chave e das falhas do carro permanece a integrar.
+O trecho até a escola possui embarque e partida do Fusca original, tomadas de rua, rádio e painel, pane, silêncio e reinício do motor. A fala infantil “Não deixa ela sair.” é legendada e acompanhada por interferência; a gravação real permanece pendente. A chegada conecta à investigação existente com Renan. Estado, pistas, dicas progressivas, arte e testes estão descritos em [A chave desaparecida](CampanhaOficial/CHAVE_DESAPARECIDA.md).
 
 #### Ato III — O Guardião
 

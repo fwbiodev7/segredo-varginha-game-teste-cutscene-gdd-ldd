@@ -1,0 +1,62 @@
+/* Interferência, obturador em pixels e abertura do selo. */
+#stage{isolation:isolate;overflow:hidden;background:var(--ink)}
+.slide.on{z-index:2}
+.slide:not(.on):not(.leaving){display:none!important}
+.slide.leaving{display:block!important;z-index:1;pointer-events:none}
+.slide[aria-hidden="true"]{pointer-events:none}
+.slide h1,.slide>h2{position:relative}
+.motion-enabled .slide.on h1::after,.motion-enabled .slide.on>h2::after{
+ content:attr(data-echo);position:absolute;inset:0;white-space:pre-line;
+ color:var(--cyan);opacity:0;pointer-events:none;mix-blend-mode:screen;
+ animation:title-signal 660ms steps(1,end) 160ms both;
+}
+@keyframes title-signal{
+ 0%,24%,48%,100%{opacity:0;transform:translateX(0);clip-path:inset(0 0 100%)}
+ 10%,20%{opacity:.48;transform:translateX(5px);clip-path:inset(28% 0 54%)}
+ 34%,42%{opacity:.32;transform:translateX(-4px);clip-path:inset(64% 0 17%)}
+}
+.motion-enabled .slide.on .coverimg{animation:night-camera 24s ease-in-out infinite alternate;will-change:transform}
+@keyframes night-camera{from{transform:scale(1.015) translateX(-3px)}to{transform:scale(1.065) translateX(7px)}}
+.motion-enabled .slide.on figure img{animation:evidence-breathe 8s ease-in-out 1.2s infinite alternate}
+@keyframes evidence-breathe{from{transform:translateY(0)}to{transform:translateY(-3px)}}
+.motion-enabled .slide.on .footer::before{transform-origin:left;animation:footer-trace 700ms cubic-bezier(.2,.8,.2,1) 200ms both}
+@keyframes footer-trace{from{transform:scaleX(0);opacity:0}to{transform:scaleX(1);opacity:1}}
+#crt{position:absolute;inset:0;z-index:8;pointer-events:none;opacity:.11;background:repeating-linear-gradient(0deg,transparent 0 3px,#0008 3px 4px);mix-blend-mode:multiply}
+#transition-fx{position:absolute;inset:0;pointer-events:none;z-index:7;overflow:hidden;opacity:0}
+#transition-fx.active{opacity:1}
+#transition-fx .shutter{position:absolute;inset:0;display:grid;grid-template-columns:repeat(16,1fr);grid-template-rows:repeat(9,1fr)}
+#transition-fx .shutter i{display:block;background:#07151d;opacity:0;box-shadow:inset 1px 1px #73d6da16}
+#transition-fx .signal-band{position:absolute;left:0;right:0;height:7%;background:linear-gradient(90deg,transparent,#73d6da21 25%,#73d6da08 75%,transparent);opacity:0;transform:translateX(-100%)}
+#transition-fx .signal-band:nth-of-type(2){top:19%}
+#transition-fx .signal-band:nth-of-type(3){top:55%;height:12%;background:linear-gradient(90deg,transparent,#ffb96c18,transparent)}
+#transition-fx .signal-band:nth-of-type(4){top:82%;height:3%}
+#transition-fx .sweep{position:absolute;left:0;right:0;top:0;height:2px;background:var(--cyan);box-shadow:0 0 20px #73d6da88;opacity:0}
+#transition-fx .aura{position:absolute;inset:-20%;opacity:0;background:radial-gradient(ellipse at 62% 48%,transparent 25%,#73d6da1e 40%,#07101899 55%,transparent 70%)}
+#transition-fx .door{position:absolute;top:0;bottom:0;width:50%;background:#07151d;opacity:0;backface-visibility:hidden;box-shadow:inset 0 0 45px #73d6da0f}
+#transition-fx .door.left{left:0;transform-origin:left;border-right:1px solid #73d6da45}
+#transition-fx .door.right{right:0;transform-origin:right;border-left:1px solid #73d6da45}
+#transition-fx .crt-line{position:absolute;left:6%;right:6%;top:50%;height:2px;background:#73d6da;box-shadow:0 0 12px #73d6da66;opacity:0}
+#transition-fx .film-edge{position:absolute;top:0;bottom:0;width:20px;opacity:0;background:repeating-linear-gradient(0deg,#020608 0 10px,#73d6da38 10px 22px,#020608 22px 32px);border-inline:4px solid #020608}
+#transition-fx .film-edge.left{left:0}
+#transition-fx .film-edge.right{right:0}
+#progress{position:absolute;left:0;top:0;height:3px;width:100%;z-index:9;pointer-events:none;transform-origin:left;background:linear-gradient(90deg,var(--cyan),#d7f9e7);opacity:.7;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+#particles{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden}
+#particles i{position:absolute;width:3px;height:3px;background:#9ce3da;opacity:0;left:var(--x);top:var(--y)}
+.motion-enabled .cover.on #particles i{animation:night-motes var(--duration) linear var(--delay) infinite}
+@keyframes night-motes{0%{opacity:0;transform:translate(0,18px)}25%{opacity:.4}70%{opacity:.24}100%{opacity:0;transform:translate(25px,-70px)}}
+.motion-enabled #count{transition:color .2s;color:var(--cyan)}
+#nav{gap:7px;white-space:nowrap}
+#nav button{transition:border-color .2s,color .2s,background .2s,transform .15s}
+#nav button:hover{background:#73d6da12;transform:translateY(-2px)}
+#nav button:active{transform:translateY(0)}
+#nav button:disabled{opacity:.25;cursor:default;transform:none}
+#help{font-size:11px}
+body:not(.motion-enabled) #crt{opacity:.06}
+body:not(.motion-enabled) #progress{transition:none}
+body:not(.motion-enabled) #transition-fx{display:none}
+@media(prefers-reduced-motion:reduce){#nav button{transition:none}}
+@media print{
+ .slide:not(.on):not(.leaving),.slide.on,.slide.leaving{display:block!important;position:relative!important;z-index:auto!important;transform:none!important;clip-path:none!important;opacity:1!important}
+ #transition-fx,#crt,#particles,#progress{display:none!important}
+ *{animation:none!important;transition:none!important}
+}

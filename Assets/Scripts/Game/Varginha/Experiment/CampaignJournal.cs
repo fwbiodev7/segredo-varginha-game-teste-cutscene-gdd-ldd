@@ -8,6 +8,13 @@ namespace Game.Varginha.Experiment
         public static List<string> Entries(CampaignStory story)
         {
             var entries = new List<string>();
+            if(story.phase==2)entries.Add("PRÓXIMO PASSO • "+story.house.Objective(story.routine));
+            if(story.house.step>=1)entries.Add("ANTES DE SAIR • Deixei a chave do Fusca no balcão e voltei ao quarto para buscar a mochila.");
+            if(story.house.Missing)entries.Add("CHAVE DESAPARECIDA • Ouvi metal na cozinha e papel raspando. A chave deixou de estar no balcão.");
+            if((story.house.clues&1)!=0)entries.Add("BALCÃO • Vazio. O copo não mudou de lugar e não há chave no chão.");
+            if((story.house.clues&2)!=0)entries.Add("SAÍDA • Trinco fechado por dentro. Não abri a porta desde que acordei.");
+            if((story.house.clues&4)!=0)entries.Add("QUARTO • Papel envelhecido com traço azul preso junto à passagem.");
+            if(story.house.deduced)entries.Add("HIPÓTESE • A saída fechada e o papel indicam investigar os objetos antigos dentro da casa.");
             if(story.boxFound)entries.Add("CAIXA ESQUECIDA • Fotografia e páginas do caderno de 1996 encontradas sob a cama.");
             if(story.pagesSolved)entries.Add("PRIMEIRO FRAGMENTO • Casa à esquerda, árvore ao centro, figura à direita. ELA AINDA ESTÁ AQUI.");
             if(story.arrival)entries.Add("CAMINHO À INDUSTRIAL • O Fusca perdeu força perto da escola. Pelo rádio: NÃO DEIXA ELA SAIR.");

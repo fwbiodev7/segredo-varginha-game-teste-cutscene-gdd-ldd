@@ -161,6 +161,58 @@ namespace Game.Tests.PlayMode
             }
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
+        private static IEnumerator PrepareAdultHouse(VarginhaCampaignStage stage)
+        {
+            var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
+            var plan=CampaignMapPlan.Create(2);
+            void At(string id)
+            {
+                actor.transform.position=plan.points.Find(p=>p.id==id).position+Vector2.up*.58f;
+                actor.GetComponent<Rigidbody2D>().linearVelocity=Vector2.zero;Physics2D.SyncTransforms();
+            }
+            stage.Interact("box");stage.CloseDialogue();
+            Assert.That(stage.Progress.boxFound,Is.False,"The childhood box cannot skip the adult opening.");
+            foreach(var id in new[]{"wash","food","work"})
+            {
+                At(id);stage.Interact(id);
+                float end=Time.realtimeSinceStartup+9;
+                while(stage.IsActing&&Time.realtimeSinceStartup<end)yield return null;
+                stage.CloseDialogue();yield return null;
+            }
+            Assert.That(stage.Progress.routine&7,Is.EqualTo(7),"All three authored preparation animations complete.");
+            var layout=CampaignIllustratedMaps.Get(2);
+            actor.transform.position=layout.Position(620,620)+Vector2.up*.58f;Physics2D.SyncTransforms();
+            stage.Interact("counter");
+            yield return new WaitForSeconds(.8f);
+            stage.TogglePause();float px=actor.transform.position.x;
+            yield return new WaitForSecondsRealtime(.15f);
+            Assert.That(actor.transform.position.x,Is.EqualTo(px));Assert.That(stage.IsActing,Is.True);
+            stage.TogglePause();
+            float deadline=Time.realtimeSinceStartup+6;
+            while(stage.IsActing&&Time.realtimeSinceStartup<deadline)yield return null;
+            Assert.That(stage.Progress.house.KeyOnCounter,Is.True);
+            Assert.That(GameObject.Find("Chave_Fusca_Balcao").GetComponent<SpriteRenderer>().enabled,Is.True);
+            var counterGroup=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/Kitchen_Cabinet").GetComponent<UnityEngine.Rendering.SortingGroup>();
+            Assert.That(GameObject.Find("Chave_Fusca_Balcao").GetComponent<UnityEngine.Rendering.SortingGroup>().sortingOrder,Is.GreaterThan(counterGroup.sortingOrder),"The key must render on top of the counter, not behind the furniture.");
+            stage.Save();
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.3f);
+            stage=VarginhaCampaignStage.Active;actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
+            Assert.That(stage.Progress.house.KeyOnCounter,Is.True,"Reload restores the key on the counter.");
+            At("bag");stage.Interact("bag");deadline=Time.realtimeSinceStartup+9;
+            while(stage.IsActing&&Time.realtimeSinceStartup<deadline)yield return null;
+            stage.CloseDialogue();
+            Assert.That(stage.Progress.house.Missing,Is.True);
+            Assert.That(GameObject.Find("Chave_Fusca_Balcao").GetComponent<SpriteRenderer>().enabled,Is.False);
+            Assert.That(CampaignStorySave.Load().house.Missing,Is.True);
+            stage.Interact("box");stage.CloseDialogue();Assert.That(stage.Progress.boxFound,Is.False);
+            foreach(string clue in new[]{"counter","exitclue","paperclue"}){stage.Interact(clue);stage.CloseDialogue();}
+            Assert.That(stage.Progress.house.clues,Is.EqualTo(7));
+            Assert.That(stage.SubmitKeyConclusion(0),Is.False);
+            Assert.That(stage.SubmitKeyConclusion(1),Is.True);stage.CloseDialogue();
+            At("box");stage.Interact("box");deadline=Time.realtimeSinceStartup+5;
+            while(stage.IsActing&&Time.realtimeSinceStartup<deadline)yield return null;
+            Assert.That(stage.Progress.boxFound,Is.True);
+        }
         [UnityTest] [Category("HudPuzzles")] public IEnumerator HouseDriveSchoolAndCodeFormAPlayableSavedCampaign()
         {
             // Include the childhood wall/door check in the full campaign run as well.
@@ -168,13 +220,14 @@ namespace Game.Tests.PlayMode
             CampaignStorySave.Write(new CampaignStory { phase = 2 });
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2)); yield return new WaitForSeconds(3.2f);
             var stage = VarginhaCampaignStage.Active;
-            stage.Interact("box"); stage.CloseDialogue();
-            Assert.That(stage.Progress.boxFound, Is.True, "The box is available without the optional routine.");
+            yield return PrepareAdultHouse(stage);
+            stage=VarginhaCampaignStage.Active;
+            Assert.That(stage.Progress.boxFound, Is.True, "The key investigation opens the box after the evidence has been interpreted.");
             stage.FinishCutscene();
             Assert.That(stage.SubmitPages(), Is.False);
             stage.Progress.pages = new[] { 0, 1, 2 }; Assert.That(stage.SubmitPages(), Is.True); stage.FinishCutscene();
             var backpackActor = Object.FindAnyObjectByType<EdelzioTopDownController>();
-            Assert.That(stage.Progress.routine, Is.Zero, "The shortened house chapter does not require routine actions.");
+            Assert.That(stage.Progress.routine, Is.EqualTo(15), "Preparing for school teaches the existing actions.");
             Assert.That(stage.OpenBackpack(), Is.True, "Backpack open: has=" + backpackActor.HasBackpack + ", locked=" + backpackActor.IsInputLocked + ", dialogue=" + VarginhaGameHUD.Instance.IsDialogueOpen + ", scale=" + Time.timeScale);
             yield return null;
             Assert.That(VarginhaGameHUD.Instance.IsInventoryOpen, Is.True);
@@ -185,7 +238,7 @@ namespace Game.Tests.PlayMode
             Assert.That(stage.Progress.MapFragments, Is.EqualTo(1));
             Assert.That(Object.FindAnyObjectByType<EdelzioTopDownController>().HasFuscaKey, Is.True);
             stage.Interact("car");
-            float deadline=Time.realtimeSinceStartup+15;
+            float deadline=Time.realtimeSinceStartup+40;
             while((VarginhaCampaignStage.Active==null||VarginhaCampaignStage.Active.phase!=4||CampaignCinematics.IsTransitioning)&&Time.realtimeSinceStartup<deadline)yield return null;
             yield return new WaitForSeconds(3.3f);
             stage = VarginhaCampaignStage.Active;

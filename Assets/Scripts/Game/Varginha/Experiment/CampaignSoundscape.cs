@@ -37,6 +37,13 @@ namespace Game.Varginha.Experiment
             _engine.pitch = Mathf.Lerp(.85f, 1.35f, Mathf.Clamp01(throttle));
             if (running && !_engine.isPlaying) _engine.Play(); else if (!running && _engine.isPlaying) _engine.Stop();
         }
+        public void BeginRoad()
+        {
+            _ambient?.Transition(Clip("RoadAmbience"));
+            if(_engine==null){_engine=gameObject.AddComponent<AudioSource>();_engine.playOnAwake=false;_engine.loop=true;_engine.volume=.22f;_engine.clip=Clip("Engine");}
+            Engine(true,.4f);
+        }
+        public void Voice(AudioClip clip) { if(clip!=null&&_effects!=null)_effects.PlayOneShot(clip,.85f); }
         public void Play(string sound)
         {
             if (_effects != null) _effects.PlayOneShot(Clip(sound), sound.StartsWith("Foot") ? .16f : 1f);
@@ -84,6 +91,7 @@ namespace Game.Varginha.Experiment
             if(id=="ManifestationCollapse")duration=4.7f;
             if(id=="ManifestationTear"||id=="SealClose")duration=.85f;
             if(id=="RadioInterference")duration=.65f;
+            if(id=="Scratching")duration=.85f;
             var data = new float[Mathf.RoundToInt(rate * duration)];
             var random = new System.Random(1996 + id.Length * 71); float filtered = 0;
             for (int i = 0; i < data.Length; i++)
@@ -108,6 +116,7 @@ namespace Game.Varginha.Experiment
                     int note = Mathf.Clamp((int)(t * 4), 0, 3);
                     value = Mathf.Sin(t * Mathf.PI * 2 * SuccessNotes[note]) * .16f * Mathf.Exp(-(t % .25f) * 9);
                 }
+                else if (id == "Scratching") value = filtered*.35f*Mathf.Pow(Mathf.Max(0,Mathf.Sin(t*29)),5)*Mathf.Exp(-t*1.5f);
                 else if (id == "RadioInterference") value = (filtered * .22f + noise * .025f) * Mathf.Sin(Mathf.Clamp01(t / duration) * Mathf.PI);
                 else if (id == "Starter") value = filtered * .4f * (.5f + .5f * Mathf.Sin(t * 95)) + Mathf.Sin(t * Mathf.PI * 2 * (28 + t * 20)) * .25f;
                 else if(id=="AlienBurst")value=(filtered*.32f+Mathf.Sin(t*Mathf.PI*2*(70-t*35))*.24f+Mathf.Sin(t*Mathf.PI*2*190)*.06f)*Mathf.Exp(-t*4);

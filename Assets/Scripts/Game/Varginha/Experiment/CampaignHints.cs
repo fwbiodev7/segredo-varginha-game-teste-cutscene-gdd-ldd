@@ -10,7 +10,7 @@ namespace Game.Varginha.Experiment
             switch(id)
             {
                 case 1:tips=new[]{"Observe a luz e a televisão.","Quando a energia falhar, siga a luz pela porta à direita.","Examine a TV e alcance o quintal para concluir a lembrança."};break;
-                case 2:tips=s.pagesSolved?new[]{"As pistas estão guardadas.","O Fusca espera no quintal à direita.","Vá ao Fusca para levar a fotografia à Industrial."}:new[]{"A fotografia pode organizar a lembrança.","Abra a caixa sob a cama e compare as páginas com a foto.","Organize CASA → ÁRVORE → FIGURA. A rotina da casa é opcional."};break;
+                case 2:return s.house.Hint(s.routine,Mathf.Clamp(level,0,2));
                 case 3:case 4:case 5:
                     tips=!s.renanMet?new[]{"Renan preservou uma pista.","Procure Renan junto ao quadro branco.","Converse com Renan e abra o notebook do professor."}
                         :!s.buildingSolved?new[]{"Algo na fotografia não pertence ao portão.","Observe a figura junto ao portão no notebook de Renan.","Escolha a resposta sobre o VULTO NO PORTÃO, a segunda alternativa."}

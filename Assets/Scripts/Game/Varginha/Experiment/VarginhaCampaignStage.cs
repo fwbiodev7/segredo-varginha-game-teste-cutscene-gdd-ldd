@@ -8,13 +8,13 @@ using UnityEngine.SceneManagement;
 namespace Game.Varginha.Experiment
 {
     /// <summary>Investigation chapters on the shipped house and Industrial maps.</summary>
-    public sealed class VarginhaCampaignStage : MonoBehaviour
+    public sealed partial class VarginhaCampaignStage : MonoBehaviour
     {
         public int phase = 2;
         public static VarginhaCampaignStage Active { get; private set; }
         public static bool IsModalOpen => Active != null && Active.IsBlocked;
         private bool IsBlocked => !_ready || _titleTime < 3 || _paused || _busy || _dialogue != null || _view != View.World || VarginhaGameHUD.Instance?.IsInventoryOpen == true;
-        private enum View { World, Pages, Photo, Code, Notebook, Hint, Cutscene, Complete }
+        private enum View { World, Pages, Photo, Code, Notebook, Hint, Cutscene, Complete, Deduction }
         private View _view;
         private Vector2 _journalScroll;
         private CampaignStory _progress;
@@ -76,6 +76,7 @@ namespace Game.Varginha.Experiment
             RestoreInventory();
             _sound = gameObject.AddComponent<CampaignSoundscape>(); _sound.Configure(phase == 2 ? "House" : "School", _player);
             _guidancePlan=CampaignMapPlan.Create(phase);
+            if (phase == 2) BuildKeyInvestigation();
             GameManager.Instance?.StartGame(); _ready = true; Lock(); Save();
         }
         private void RestoreInventory()
@@ -175,12 +176,13 @@ namespace Game.Varginha.Experiment
         {
             int best = -1; float distance = 1.5f;
             for (int i = 0; i < _points.Count; i++)
-            { float d = Vector2.Distance(_player.transform.position, _points[i].Position); if (d < distance) { distance = d; best = i; } }
+            { if (!PointAvailable(_points[i].id)) continue; float d = Vector2.Distance(_player.transform.position, _points[i].Position); if (d < distance) { distance = d; best = i; } }
             return best;
         }
         public void Interact(string id)
         {
             if (!_ready || _busy) return;
+            if (phase == 2 && HandleKeyInteraction(id)) return;
             _carContext=id=="car";
             if (id == "car" && phase == 2 && _progress.CanLeaveHouse) { DepartForSchool(); return; }
             _sound?.Play(id == "box" || id == "notebook" ? "Paper" : "UI");
@@ -193,18 +195,7 @@ namespace Game.Varginha.Experiment
         private void DepartForSchool() { Save(); StartCoroutine(SchoolTransition()); }
         private IEnumerator SchoolTransition()
         {
-            _schoolTransition = _busy = true; Lock(); _sound?.Play("Starter");
-            _speaker = "A CAMINHO DA INDUSTRIAL";
-            _dialogue = "O Fusca atravessa Varginha. Uma pane breve, o rádio sem energia e uma voz:";
-            _radioReducedMotion = VarginhaGameSettings.Current.reducedMotion;
-            yield return new WaitForSeconds(.9f);
-            _dialogue = "O Fusca atravessa Varginha. Uma pane breve, o rádio sem energia e uma voz: Não deixa ela sair. O motor volta a responder. A Industrial está próxima."; _speaker = "A CAMINHO DA INDUSTRIAL";
-            _radioCueTime = Time.time;
-            _sound?.PlayRadioInterference(_radioReducedMotion);
-            _sound?.CinematicDucking(.3f);
-            yield return new WaitForSeconds(.65f);
-            _radioCueTime = -1; _sound?.CinematicDucking(0);
-            yield return new WaitForSeconds(_radioReducedMotion ? .45f : 1.95f);
+            yield return FuscaSequence();
             _progress.arrival = true; _progress.inspection = 7; _progress.driveDistance = 120; Save();
             CampaignStorySave.GoTo(4);
         }
@@ -223,6 +214,7 @@ namespace Game.Varginha.Experiment
                     if (!_progress.boxFound)
                     {
                         _progress.boxFound = true;
+                        _progress.house.step = 4;
                         Cutscene("TRINTA ANOS NA MESMA CAIXA", "Entre os carrinhos estão a chave, uma fotografia e páginas do caderno.\nA letra infantil para no meio. A anotação seguinte parece ter sido feita ontem.", View.Pages);
                     }
                     else Show(View.Pages);
@@ -258,6 +250,8 @@ namespace Game.Varginha.Experiment
         }
         private IEnumerator RoutineAction(string id)
         {
+            int routineBit = id == "wash" ? 1 : id == "food" ? 2 : id == "work" ? 4 : 8;
+            if ((_progress.routine & routineBit) != 0 && !(id == "bag" && _progress.house.KeyOnCounter)) { Say("Edelzio", "Já está pronto. " + _progress.house.Objective(_progress.routine)); yield break; }
             _busy = true; Lock();
             var action = _player.GetComponent<VarginhaPlayerActionAnimation>();
             var visual = _player.GetComponent<VarginhaPlayerSpriteAnimation>();
@@ -287,8 +281,9 @@ namespace Game.Varginha.Experiment
                 else { _busy = false; VarginhaGameHUD.Instance?.CloseDialogue(); Say("Edelzio", "Vou chegar pelo lado livre da cadeira para preparar o notebook."); yield break; }
             }
             else { if (action != null) yield return action.WashFaceRoutine(); _progress.routine |= 1; }
+            if (id == "bag" && _progress.house.KeyOnCounter) yield return DisappearKey();
             _busy = false; VarginhaGameHUD.Instance?.CloseDialogue(); RestoreInventory(); Save();
-            Say("Edelzio", id == "bag" ? "Mochila pronta. A chave sumiu. Escuto papel raspando debaixo da cama."
+            Say("Edelzio", id == "bag" ? "Mochila pronta. Ouvi um ruído na cozinha... deixei a chave no balcão."
                 : id == "work" ? "Notebook carregado e material de aula pronto. Por um instante, a tela mostrou o desenho de uma árvore."
                 : id == "food" ? "Café e pão. São 07:10; preciso levar o notebook para a Industrial."
                 : "Rosto lavado. Só mais um dia de trabalho... mas aquela lembrança de 1996 voltou no sonho.");
@@ -347,7 +342,7 @@ namespace Game.Varginha.Experiment
         }
         private string Objective()
         {
-            if (phase == 2) return !_progress.pagesSolved ? "A chave sumiu. Investigue a caixa sob a cama e organize as páginas." : "Leve as pistas ao trabalho. Vá ao Fusca no quintal à direita.";
+            if (phase == 2) return _progress.house.Objective(_progress.routine);
             if (!_progress.renanMet) return "Entre na sala e converse com Renan junto ao quadro branco.";
             if (!_progress.buildingSolved) return "Abra a fotografia no notebook do professor e observe o portão.";
             return !_progress.codeSolved ? "Reabra a fotografia no notebook e descubra o horário na margem." : "Mostre a descoberta das 23:23 a Renan junto ao quadro branco.";
@@ -360,14 +355,16 @@ namespace Game.Varginha.Experiment
             ExperimentGUI.Init(); GUI.depth = -3100;
             if(_titleTime<3){CampaignChapterPreview.Draw(phase,_titleTime);return;}
             if(_view==View.Complete)CampaignChapterPreview.Background(phase==4?5:6);
-            else if(_view==View.Cutscene)CampaignChapterPreview.Background(phase,_cutTime);
+            else if(_view==View.Cutscene && phase!=2)CampaignChapterPreview.Background(phase,_cutTime);
             var matrix = ExperimentGUI.BeginCanvas();
+            if (_cinematicShot != null) { DrawMissionCinema(); DrawMissionPause(matrix); GUI.matrix = matrix; return; }
             if (_view == View.Cutscene) DrawCutscene();
             else if (_view == View.Complete) DrawComplete();
             else
             {
                 if(!IsBlocked)ExperimentGUI.Objective(CampaignSequence.Heading(phase) + " • 2026", PhaseTitle, CampaignGuidance.Next(_progress,phase),CampaignHud.For(phase));
                 if(!IsBlocked)CampaignGuidance.DrawMarker(_guidancePlan,_progress,phase);
+                if (!IsBlocked && phase == 2) DrawHouseTutorial();
                 bool hudEnabled=GUI.enabled; GUI.enabled=hudEnabled&&!_paused&&_view==View.World&&_dialogue==null;
                 if (CampaignHudIcons.Button(1010, CampaignHudIcons.Icon.Notebook, "TAB", "Caderno")) Show(View.Notebook);
                 bool enabled = GUI.enabled; GUI.enabled = enabled&&_player.HasBackpack;
@@ -451,17 +448,19 @@ namespace Game.Varginha.Experiment
         {
             ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(0, 0, 0, .83f));
             ExperimentGUI.Panel(new Rect(105, 120, 1070, 525));
-            if (_view == View.Pages)
+            if (_view == View.Deduction) DrawKeyDeduction();
+            else if (_view == View.Pages)
             {
                 ExperimentGUI.Label(new Rect(140, 143, 995, 55), "CADERNO • PÁGINAS DE 1996", true);
-                ExperimentGUI.Label(new Rect(140, 204, 995, 78), "Fotografia: a CASA está à esquerda, a ÁRVORE ocupa o centro e a FIGURA ficou à direita.\nSelecione duas páginas para trocá-las. Alinhe o desenho à foto.");
-                string[] cards = { "CASA\n\nTelhado vermelho\nEscrita: ELA", "ÁRVORE\n\nGalhos sobre o muro\nEscrita: AINDA", "FIGURA\n\nSem rosto\nEscrita: ESTÁ AQUI" };
+                ExperimentGUI.Label(new Rect(140, 204, 995, 78), "A tinta atravessa os rasgos. Una o muro e os galhos entre as páginas.\nSelecione duas páginas para trocá-las; compare o desenho, não apenas as palavras.");
+                string[] cards = { "PÁGINA DA CASA", "PÁGINA DA ÁRVORE", "PÁGINA DA FIGURA" };
                 for (int i = 0; i < 3; i++)
-                    if (ExperimentGUI.Button(new Rect(145 + i * 335, 305, 315, 180), (_selected == i ? "[SELECIONADA]\n" : "") + cards[_progress.pages[i]]))
+                    if (ExperimentGUI.Button(new Rect(145 + i * 335, 425, 315, 65), (_selected == i ? "[SELECIONADA]\n" : "") + cards[_progress.pages[i]]))
                     {
                         if (_selected < 0) _selected = i;
                         else { int old = _progress.pages[i]; _progress.pages[i] = _progress.pages[_selected]; _progress.pages[_selected] = old; _selected = -1; Save(); }
                     }
+                DrawTornPages();
                 if (ExperimentGUI.Button(new Rect(800, 550, 325, 45), "CONFERIR PÁGINAS")) SubmitPages();
             }
             else if (_view == View.Photo || _view == View.Code)
@@ -489,6 +488,16 @@ namespace Game.Varginha.Experiment
         }
         private void DrawCutscene()
         {
+            if(phase==2)
+            {
+                ExperimentGUI.Box(new Rect(0,0,1280,720),new Color(0,0,0,.65f));
+                ExperimentGUI.Panel(new Rect(160,130,960,460));
+                ExperimentGUI.Label(new Rect(190,155,900,65),_cutTitle,true);
+                CampaignHouseArt.Draw(new Rect(190,245,255,255),4);
+                ExperimentGUI.Caption(new Rect(475,240,605,300),_cutText,VarginhaGameSettings.Current.subtitleSize);
+                if(ExperimentGUI.Button(new Rect(820,610,300,48),"CONTINUAR"))FinishCutscene();
+                return;
+            }
             var image = phase == 2 ? VarginhaExperimentArt.Load("OpeningStoryboard") : Resources.Load<Texture2D>(VarginhaIndustrialSchoolFacade.ResourcePath);
             if (image != null)
             {
@@ -522,6 +531,6 @@ namespace Game.Varginha.Experiment
         }
         private void Menu() { Save(); Time.timeScale = 1; CampaignCinematics.Load("Menu_MisterioDeVarginha"); }
         private void OnApplicationPause(bool value) { if (value) Save(); }
-        private void OnDestroy() { _radioCueTime = -1; _sound?.CinematicDucking(0); if (Active == this) Active = null; Time.timeScale = 1; }
+        private void OnDestroy() { _missionComposer?.Dispose(); _radioCueTime = -1; _sound?.CinematicDucking(0); if (Active == this) Active = null; Time.timeScale = 1; }
     }
 }
