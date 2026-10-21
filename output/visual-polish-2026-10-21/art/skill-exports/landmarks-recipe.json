@@ -1,0 +1,145 @@
+{
+  "cell": [
+    512,
+    512
+  ],
+  "columns": 3,
+  "padding": 0,
+  "pixelsPerUnit": 100,
+  "frames": [
+    {
+      "id": "tree",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\TrailPuzzle\\Landmarks.png",
+      "sourceSha256": "0f92a79d2d63efc1c0cbe99eeb0c7c6cfc0b330cf2e6646fe5c820a95764283d",
+      "crop": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "pivot": [
+        256.0,
+        512
+      ],
+      "durationMs": 1000
+    },
+    {
+      "id": "fallen_log",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\TrailPuzzle\\Landmarks.png",
+      "sourceSha256": "0f92a79d2d63efc1c0cbe99eeb0c7c6cfc0b330cf2e6646fe5c820a95764283d",
+      "crop": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "pivot": [
+        256.0,
+        512
+      ],
+      "durationMs": 1000
+    },
+    {
+      "id": "bridge",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\TrailPuzzle\\Landmarks.png",
+      "sourceSha256": "0f92a79d2d63efc1c0cbe99eeb0c7c6cfc0b330cf2e6646fe5c820a95764283d",
+      "crop": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "pivot": [
+        256.0,
+        512
+      ],
+      "durationMs": 1000
+    },
+    {
+      "id": "wall",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\TrailPuzzle\\Landmarks.png",
+      "sourceSha256": "0f92a79d2d63efc1c0cbe99eeb0c7c6cfc0b330cf2e6646fe5c820a95764283d",
+      "crop": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "pivot": [
+        256.0,
+        512
+      ],
+      "durationMs": 1000
+    },
+    {
+      "id": "chapel",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\TrailPuzzle\\Landmarks.png",
+      "sourceSha256": "0f92a79d2d63efc1c0cbe99eeb0c7c6cfc0b330cf2e6646fe5c820a95764283d",
+      "crop": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "pivot": [
+        256.0,
+        512
+      ],
+      "durationMs": 1000
+    },
+    {
+      "id": "open_gate",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\TrailPuzzle\\Landmarks.png",
+      "sourceSha256": "0f92a79d2d63efc1c0cbe99eeb0c7c6cfc0b330cf2e6646fe5c820a95764283d",
+      "crop": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "pivot": [
+        256.0,
+        512
+      ],
+      "durationMs": 1000
+    }
+  ],
+  "clips": {
+    "tree": {
+      "frames": [
+        "tree"
+      ],
+      "loop": false
+    },
+    "fallen_log": {
+      "frames": [
+        "fallen_log"
+      ],
+      "loop": false
+    },
+    "bridge": {
+      "frames": [
+        "bridge"
+      ],
+      "loop": false
+    },
+    "wall": {
+      "frames": [
+        "wall"
+      ],
+      "loop": false
+    },
+    "chapel": {
+      "frames": [
+        "chapel"
+      ],
+      "loop": false
+    },
+    "open_gate": {
+      "frames": [
+        "open_gate"
+      ],
+      "loop": false
+    }
+  }
+}

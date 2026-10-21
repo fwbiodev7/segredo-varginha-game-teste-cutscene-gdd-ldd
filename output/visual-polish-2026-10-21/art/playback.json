@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "distinctFramesObserved": 8,
+  "statuses": [
+    "watch_tv | 2/8 | watch_1 | 125 ms | loop | pivot_aligned",
+    "watch_tv | 3/8 | watch_2 | 125 ms | loop | pivot_aligned",
+    "watch_tv | 4/8 | watch_3 | 125 ms | loop | pivot_aligned",
+    "watch_tv | 5/8 | watch_4 | 125 ms | loop | pivot_aligned",
+    "watch_tv | 6/8 | watch_5 | 125 ms | loop | pivot_aligned",
+    "watch_tv | 7/8 | watch_6 | 125 ms | loop | pivot_aligned",
+    "watch_tv | 8/8 | watch_7 | 125 ms | loop | pivot_aligned",
+    "watch_tv | 1/8 | watch_0 | 125 ms | loop | pivot_aligned"
+  ],
+  "errors": [],
+  "scope": "8-frame source preview playback, not a measured game FPS benchmark; runtime captures are separate."
+}

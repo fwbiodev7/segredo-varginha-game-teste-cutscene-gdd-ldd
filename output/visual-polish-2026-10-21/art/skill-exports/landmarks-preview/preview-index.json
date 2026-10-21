@@ -1,0 +1,71 @@
+{
+  "clips": [
+    {
+      "clip": "tree",
+      "file": "clip_000.png",
+      "loop": false,
+      "sequence": [
+        "tree"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": []
+    },
+    {
+      "clip": "fallen_log",
+      "file": "clip_001.png",
+      "loop": false,
+      "sequence": [
+        "fallen_log"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": []
+    },
+    {
+      "clip": "bridge",
+      "file": "clip_002.png",
+      "loop": false,
+      "sequence": [
+        "bridge"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": []
+    },
+    {
+      "clip": "wall",
+      "file": "clip_003.png",
+      "loop": false,
+      "sequence": [
+        "wall"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": []
+    },
+    {
+      "clip": "chapel",
+      "file": "clip_004.png",
+      "loop": false,
+      "sequence": [
+        "chapel"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": []
+    },
+    {
+      "clip": "open_gate",
+      "file": "clip_005.png",
+      "loop": false,
+      "sequence": [
+        "open_gate"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": []
+    }
+  ],
+  "visualReviewCompleted": false
+}

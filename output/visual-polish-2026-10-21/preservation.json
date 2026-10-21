@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "files": [
+    {
+      "file": "CampaignMemory1996.json",
+      "restored": true,
+      "sha256": "b24c45a7c17c708ffc5e50df6c5b6d88d0becf56236bf9680cd0d714507ad153"
+    },
+    {
+      "file": "CampaignStory2026.json",
+      "restored": true,
+      "sha256": "82fbee9f01f0067f26d6940154a236dce9c87ea89692eff9505844d52bb6c73e"
+    },
+    {
+      "file": "ExperimentGDDLDDSave.json",
+      "restored": true,
+      "sha256": "2ca4e23982e98f55837dc76184f0c65cf789e1f24400f9abf01780f3d2ff21cb"
+    },
+    {
+      "file": "Assets\\UniversalRenderPipelineGlobalSettings.asset",
+      "restored": true
+    },
+    {
+      "file": "ProjectSettings\\ProjectSettings.asset",
+      "restored": true
+    }
+  ],
+  "note": "Original user URP bytes and saves restored; Recovery files were not modified."
+}

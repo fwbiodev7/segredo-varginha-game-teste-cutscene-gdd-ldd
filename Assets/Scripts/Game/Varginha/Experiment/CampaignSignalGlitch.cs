@@ -102,9 +102,33 @@ namespace Game.Varginha.Experiment
                 for(int i=0;i<5;i++)ExperimentGUI.Box(new Rect(x+i*8,y+i*6,170-i*16,104-i*12),new Color(.18f,.92f,.42f,.028f*pulse));
             }
         }
-        public static void DrawCabin(Rect viewport,Texture scene,float time,bool reduced)
+        public static void SamplePeak(float time,int width,int height,bool reduced,List<Band> bands)
         {
-            const int w=384,h=216;Sample(time,w,h,reduced,Scratch);
+            Sample(time,width,height,reduced,bands);
+            if(reduced||BurstStrength(time)<=0||width<8||height<8)return;
+            uint tick=(uint)Mathf.FloorToInt(Mathf.Max(0,time)*18);
+            // Dense corruption grows on both sides and leaves irregular dark gaps,
+            // rather than replacing the picture with a bright full-frame flash.
+            for(int i=0;i<140;i++)
+            {
+                uint h=Hash(tick*97u+(uint)i*731u);
+                bool vertical=i%13==0;
+                int length=vertical?1+(int)(h%3):8+(int)(h%(uint)Mathf.Max(9,width/4));
+                int thickness=vertical?14+(int)((h>>10)%(uint)Mathf.Max(15,height/3)):1+(int)((h>>20)%4);
+                if(!vertical&&i%9==0)thickness=6+(int)((h>>20)%7);
+                length=Mathf.Min(length,width);thickness=Mathf.Min(thickness,height);
+                int centre=i%3==0?width/2:i%2==0?width/7:width*6/7;
+                int x=Mathf.Clamp(centre+(int)((h>>5)%(uint)Mathf.Max(1,width/3))-width/6-length/2,0,width-length);
+                int y=(int)((h>>12)%(uint)(height-thickness+1));
+                var color=Palette[(int)((h>>24)%(uint)Palette.Length)];color.a=(byte)(145+h%100);
+                if(i%11==0)color=new Color32(8,15,19,200);
+                bands.Add(new Band(new RectInt(x,y,length,thickness),color,!vertical&&i%6==0?(int)(h%75)-37:0));
+            }
+        }
+        public static void DrawCabin(Rect viewport,Texture scene,float time,bool reduced,bool peak=false)
+        {
+            const int w=384,h=216;
+            if(peak)SamplePeak(time,w,h,reduced,Scratch);else Sample(time,w,h,reduced,Scratch);
             GUI.BeginGroup(viewport);
             try
             {

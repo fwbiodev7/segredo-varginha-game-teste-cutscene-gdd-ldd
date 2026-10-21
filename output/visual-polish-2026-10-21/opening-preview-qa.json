@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "frames": 72,
+  "before": "1 / 72",
+  "after": "4 / 72",
+  "reset": "1 / 72",
+  "errors": [],
+  "scope": "Silent sampled frames from the native game; interactive controls and sound require the executable."
+}

@@ -66,7 +66,7 @@ namespace Game.Varginha.Experiment
         private CampaignPreFlashGlow _preFlashGlow;
         private Sprite[,] _childFrames;
         private int _lastShot = -1, _frameTick = -1;
-        private float _stageTime, _exploreTime, _saveTime;
+        private float _stageTime, _exploreTime, _saveTime,_powerSignal=-10;
         private bool _paused, _settings, _ready;
         private CampaignSoundscape _sound;
         private CampaignFlashEncounter _flash;
@@ -166,12 +166,17 @@ namespace Game.Varginha.Experiment
         public void PlayOpening()
         {
             // Stop at the child's television: 2026 and the school belong to subsequent acts.
-            _timeline = new ExperimentTimeline(ExperimentDefinition.Load().shots.Take(6).ToArray());
+            _timeline = new ExperimentTimeline(CampaignOpeningCinema.Shots);
             _lastShot = _frameTick = -1; SetStage(Stage.Opening); _ambience.Play();
         }
         public void FinishOpening()
         {
             _timeline.Seek(_timeline.Duration); _memory.openingSeen = true; Save(); SetStage(Stage.ActTitle);
+        }
+        public bool TrySkipOpening()
+        {
+            if(!_memory.openingSeen||_stage!=Stage.Opening||_paused)return false;
+            FinishOpening();return true;
         }
         public void DeliverControl() => SetStage(Stage.Explore);
         private void SetStage(Stage value)
@@ -199,6 +204,7 @@ namespace Game.Varginha.Experiment
             }
             if (_paused || _dialogue != null) return;
             _stageTime += Time.unscaledDeltaTime;
+            if(_powerSignal>=0)_powerSignal+=Time.deltaTime;
             if (_stage == Stage.Opening)
             {
                 _timeline.Tick(Time.unscaledDeltaTime);
@@ -242,6 +248,7 @@ namespace Game.Varginha.Experiment
             if(_stage==Stage.Explore && _preFlashGlow!=null)_preFlashGlow.gameObject.SetActive(true);
             if (first)
             {
+                _powerSignal=0;
                 CampaignAtmosphereLayer.Interference(transform);
                 CampaignCameraDirector.Reveal(new Vector3(3.4f,5.55f), 3.5f);
                 _sound?.CinematicDucking(.65f);
@@ -293,10 +300,10 @@ namespace Game.Varginha.Experiment
                 var shot = _timeline.Shots[_timeline.ShotIndex]; int tick = Mathf.FloorToInt(_timeline.Time * 12);
                 if (_frameTick != tick) { _composer.Compose(shot, _timeline.ShotTime, settings.reducedMotion); _frameTick = tick; }
                 ExperimentGUI.Box(new Rect(0, 0, 1280, 720), Color.black);
-                GUI.DrawTexture(new Rect(64, 36, 1152, 648), _composer.Frame);
-                ExperimentGUI.Panel(new Rect(80, 48, 730, 55)); ExperimentGUI.Label(new Rect(96, 59, 695, 34), shot.title, true);
+                CampaignOpeningCinema.Draw(shot,_timeline.ShotTime,settings.reducedMotion,_composer.Frame);
+                ExperimentGUI.Label(new Rect(52, 22, 1100, 44), shot.title, true);
                 if (settings.subtitles) { ExperimentGUI.Panel(new Rect(100, 552, 1080, 75)); ExperimentGUI.Caption(new Rect(125, 565, 1030, 50), shot.subtitle, settings.subtitleSize); }
-                if (!_paused && ExperimentGUI.Button(new Rect(916, 645, 270, 44), "PULAR ABERTURA")) FinishOpening();
+                if (!_paused && _memory.openingSeen && ExperimentGUI.Button(new Rect(916, 645, 270, 44), "PULAR ABERTURA")) TrySkipOpening();
             }
             else if (_stage == Stage.ActTitle)
             {
@@ -308,6 +315,8 @@ namespace Game.Varginha.Experiment
                 float shade = _memory.powerFailed ? .22f : .10f;
                 if (_memory.powerFailed && !settings.reducedMotion) shade += .035f * Mathf.Sin(Time.unscaledTime * .8f);
                 ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(.035f, .075f, .17f, shade));
+                if(_powerSignal>=0&&_powerSignal<.85f)
+                    CampaignSignalGlitch.DrawCabin(new Rect(0,86,1280,464),null,_powerSignal,settings.reducedMotion,true);
                 if(!_paused&&_dialogue==null)ExperimentGUI.Objective("ATO I • FASE 1 • 1996", "A LEMBRANÇA", _memory.powerFailed ? "Uma luz vem do quintal. Siga pela porta à direita." : "Explore a casa e observe a televisão.",CampaignHud.For(1));
                 if (!_paused && CampaignHudIcons.Button(1174, CampaignHudIcons.Icon.Pause, "ESC", "Pausa")) TogglePause();
                 if (settings.interactionHints && !_paused && _dialogue == null)

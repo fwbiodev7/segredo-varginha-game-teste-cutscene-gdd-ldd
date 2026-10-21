@@ -16,7 +16,7 @@ namespace Game.Tests.PlayMode
     public sealed class CampaignCinematicOpeningPlayTests:InputTestFixture
     {
         private string _story,_memory;private bool _reduced;
-        private const string Output="output/cinematic-opening-2026-10-21";
+        private static string Output=>CinemaQaEvidence.Folder;
         private const BindingFlags Hidden=BindingFlags.Instance|BindingFlags.NonPublic;
         private static string Title(VarginhaCampaignStage s)=>(string)typeof(VarginhaCampaignStage).GetField("_cinemaTitle",Hidden).GetValue(s);
         private static float Clock(VarginhaCampaignStage s)=>Time.time-(float)typeof(VarginhaCampaignStage).GetField("_cinemaClock",Hidden).GetValue(s);
@@ -56,9 +56,15 @@ namespace Game.Tests.PlayMode
             var recorder=new GameObject("QA_Cinema_Recorder").AddComponent<CinemaFrameRecorder>();
             Assert.That(stage.TrySkipMissionCinema(),Is.False,"A first viewing cannot be skipped.");
             var visited=new List<string>();float deadline=Time.realtimeSinceStartup+65;bool paused=false,released=false,withdrawn=false,exit=false,gate=false,signal=false;
+            var driverCaptured=new bool[4];
             while(VarginhaCampaignStage.Active==stage&&Time.realtimeSinceStartup<deadline)
             {
                 string title=Title(stage);
+                if(title=="VARGINHA • 2026")
+                {
+                    int frame=CampaignFuscaCinema.DriverFrame(Clock(stage),true,false);
+                    if(!driverCaptured[frame]){driverCaptured[frame]=true;yield return Capture("driving-pose-"+frame);}
+                }
                 if(title=="O RÁDIO"&&Clock(stage)>.59f&&!signal){signal=true;yield return Capture("signal-variation");}
                 if(title=="INDUSTRIAL"&&Clock(stage)>.7f&&!exit){exit=true;yield return Capture("school-exit-car");}
                 if(title=="INDUSTRIAL"&&Clock(stage)>5.55f&&!gate){gate=true;yield return Capture("school-arrival-gate");}
@@ -106,19 +112,67 @@ namespace Game.Tests.PlayMode
         [UnityTest] public IEnumerator PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu()
         {
             Directory.CreateDirectory(Output+"/runtime-layers");
-            foreach(string name in new[]{"FuscaCabinMorning","FuscaCabinPhotoShell","FuscaDashboardPhoto"})
+            foreach(string path in new[]{"Varginha/CinemaOpening/MorningTown","Varginha/CinemaOpening/ChildRoom1996","Varginha/CinemaOpening/Newspaper1996","Varginha/CinemaOpening/ChildWatchingTV","Varginha/CinemaOpening/FuscaCabinCartoon","Varginha/CinemaOpening/FuscaDashboardCartoon",CampaignTrailMapArt.TerrainPath,CampaignTrailMapArt.LandmarksPath})
             {
-                var source=Resources.Load<Texture2D>("Varginha/CinemaOpening/"+name);Assert.That(source.isReadable,Is.False);
-                var rt=CampaignCinemaTextures.Resolve(name) as RenderTexture;Assert.That(rt,Is.Not.Null,"The pixel shader must run on the actual GPU.");
+                string name=path.Substring(path.LastIndexOf('/')+1);
+                var source=Resources.Load<Texture2D>(path);Assert.That(source,Is.Not.Null);Assert.That(source.isReadable,Is.False);
+                var rt=CampaignCinemaTextures.ResolveResource(path) as RenderTexture;Assert.That(rt,Is.Not.Null,"The pixel shader must run on the actual GPU.");
                 var image=new Texture2D(rt.width,rt.height,TextureFormat.RGBA32,false);var previous=RenderTexture.active;
                 try{RenderTexture.active=rt;image.ReadPixels(new Rect(0,0,rt.width,rt.height),0,0);image.Apply();}
                 finally{RenderTexture.active=previous;}
                 var pixels=image.GetPixels32();Assert.That(pixels.All(p=>p.a==0||p.a==255),Is.True,"New cinematic cutouts use hard pixel alpha.");
-                Assert.That(pixels.Any(p=>p.a==255),Is.True);if(name!="FuscaCabinMorning")Assert.That(pixels.Any(p=>p.a==0),Is.True);
+                Assert.That(pixels.Any(p=>p.a==255),Is.True);if(name=="FuscaCabinCartoon"||name=="FuscaDashboardCartoon"||name=="ChildWatchingTV"||name=="Landmarks")Assert.That(pixels.Any(p=>p.a==0),Is.True);
                 Assert.That(pixels.Where(p=>p.a!=0).Distinct().Count(),Is.GreaterThan(8),"Material colour variation must survive pixel resolution.");
                 File.WriteAllBytes(Output+"/runtime-layers/"+name+".png",image.EncodeToPNG());Object.Destroy(image);
             }
             yield return null;
+        }
+        [UnityTest,Timeout(90000)] public IEnumerator NewspaperAndTvRevealDeliverControlBeforeThePowerFailure()
+        {
+            CampaignMemorySave.Write(new CampaignMemory());CampaignStorySave.Write(new CampaignStory{phase=1});
+            yield return SceneManager.LoadSceneAsync(VarginhaCampaignPhase1.SceneName);yield return null;yield return null;
+            var phase=VarginhaCampaignPhase1.Active;var seen=new HashSet<string>();var child=new bool[8];bool paused=false,room=false;
+            var recorder=new GameObject("QA_Prologue_Recorder").AddComponent<CinemaFrameRecorder>();recorder.folderName="opening-film";
+            float deadline=Time.realtimeSinceStartup+45;
+            while(!phase.IsExploring&&Time.realtimeSinceStartup<deadline)
+            {
+                Assert.That(phase.Memory.powerFailed,Is.False,"The anomaly must wait for gameplay.");Assert.That(phase.TrySkipOpening(),Is.False);
+                var timeline=(ExperimentTimeline)typeof(VarginhaCampaignPhase1).GetField("_timeline",Hidden).GetValue(phase);
+                if(!timeline.Finished)
+                {
+                    var shot=timeline.Shots[timeline.ShotIndex];
+                    if(timeline.ShotTime>.3f&&seen.Add(shot.id))yield return Capture("opening-"+shot.id);
+                    if(shot.id=="tv_reveal"&&timeline.ShotTime>3.55f&&!room){room=true;yield return Capture("opening-room-revealed");}
+                    if(shot.id=="child_1996")
+                    {int frame=CampaignOpeningCinema.ChildFrame(timeline.ShotTime,false);if(!child[frame]){child[frame]=true;yield return Capture("child-pose-"+frame);}}
+                    if(shot.id=="news_1996"&&!paused)
+                    {float before=timeline.Time;phase.TogglePause();yield return new WaitForSecondsRealtime(.2f);Assert.That(timeline.Time,Is.EqualTo(before));phase.TogglePause();paused=true;}
+                }
+                yield return null;
+            }
+            Assert.That(phase.IsExploring,Is.True);Assert.That(seen.Count,Is.EqualTo(4));Assert.That(child.All(x=>x),Is.True);
+            var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();Assert.That(actor.IsInputLocked,Is.False);
+            Assert.That(phase.Memory.openingSeen,Is.True);Assert.That(phase.Memory.powerFailed,Is.False);
+            yield return Capture("opening-control");Object.Destroy(recorder.gameObject);phase.TriggerPowerFailure();yield return null;yield return Capture("opening-power-peak");
+            Assert.That(phase.Memory.powerFailed,Is.True);
+            yield return SceneManager.LoadSceneAsync(VarginhaCampaignPhase1.SceneName);yield return null;yield return null;
+            Assert.That(VarginhaCampaignPhase1.Active.IsExploring,Is.True,"Continue must not replay the montage.");
+            VarginhaCampaignPhase1.Active.PlayOpening();Assert.That(VarginhaCampaignPhase1.Active.TrySkipOpening(),Is.True);
+        }
+        [UnityTest]public IEnumerator AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress()
+        {
+            CampaignStorySave.Write(new CampaignStory{phase=2});yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.4f);
+            var root=GameObject.Find("Mapa_Campanha").transform.Find("Manha_07h");Assert.That(root,Is.Not.Null);
+            Assert.That(root.childCount,Is.EqualTo(CampaignAdultMorning.GlassPixels.Length));Assert.That(root.GetComponentsInChildren<Collider2D>(),Is.Empty);
+            foreach(var sprite in root.GetComponentsInChildren<SpriteRenderer>())
+            {Assert.That(sprite.sprite.texture.name,Is.EqualTo("MorningTown"));Assert.That(sprite.sortingOrder,Is.GreaterThan(22000),"Daylight glass must stay above lower wall sorting groups.");}
+            Assert.That(GameObject.Find("Mapa_Campanha").transform.Find("01_Planta_Paredes_Divisoes/Arte_Integrada_0").GetComponent<SpriteRenderer>().sharedMaterial.shader.name,Is.EqualTo("Varginha/IllustratedMorning"));
+            Assert.That(VarginhaCampaignStage.Active.Progress.routine,Is.Zero);Assert.That(VarginhaCampaignStage.Active.Progress.house.step,Is.Zero);
+            yield return Capture("adult-morning-07h");
+            var data=CampaignIllustratedMaps.Get(2);var camera=Camera.main;var previous=camera.transform.position;float size=camera.orthographicSize;
+            var follow=camera.GetComponent<Game.Level.CameraFollow2D>();bool followEnabled=follow!=null&&follow.enabled;if(follow!=null)follow.enabled=false;
+            camera.transform.position=new Vector3(data.Bounds.center.x,data.Bounds.center.y,-10);camera.orthographicSize=data.Bounds.height*.6f;yield return null;yield return Capture("adult-morning-overview");
+            camera.transform.position=previous;camera.orthographicSize=size;if(follow!=null)follow.enabled=followEnabled;
         }
     }
 }

@@ -47,7 +47,8 @@ namespace Game.Varginha.Experiment
                 if(source==null)return null;
                 _manifest=JsonUtility.FromJson<Manifest>(source.text);
             }
-            return Array.Find(_manifest.layouts,l=>l.phase==phase);
+            var layout=Array.Find(_manifest.layouts,l=>l.phase==phase);
+            CampaignAdultMorning.Lighting(layout);return layout;
         }
         public static bool Apply(CampaignMapPlan plan)
         {
@@ -162,6 +163,7 @@ namespace Game.Varginha.Experiment
                 }
             }
             if(furnished)Furnish(map,plan);
+            CampaignAdultMorning.Build(map,data);
             CampaignStainedGlassLighting.Build(map,data);
             var lighting=map.gameObject.AddComponent<CampaignIllustratedLighting>();lighting.Configure(data);
             if(Application.isPlaying)

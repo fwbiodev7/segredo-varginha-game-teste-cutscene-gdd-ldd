@@ -18,6 +18,6 @@ Produção: novo `CampaignTrailPuzzle.cs`; integração em `CampaignPuzzleDesign
 
 Testes: novos contratos em `CampaignTrailPuzzleTests.cs`; atualização dos testes que exigiam ordenar/girar; teste de interface cobre prévia, desfazer, retomada parcial e confirmação por gamepad. Cenário afetado: Fragmentos/biblioteca (fase 6), com preservação do acesso à Mata (fase 7). Nenhuma cena `.unity` de produção foi regravada.
 
-A nova tela é um mapa esquemático desenhado pela UI do jogo, com sua fonte, paleta e controles existentes. Não é uma nova ilustração raster nem substitui os sprites aprovados dos cenários.
+A primeira versão usava símbolos esquemáticos na UI. Na revisão posterior aprovada em 21/10, o desenho foi substituído por terreno e marcos em pixel art (árvore, tronco, ponte, muro, capela e portão), conservando as bifurcações, fonte, controles, solução e saves. Ver `POLIMENTO_VISUAL_E_ABERTURA_2026-10-21.md`.
 
 Resultados finais: `output/cinematic-opening-2026-10-21/RELATORIO.md`. Roteiro externo: observar se o jogador entende prévia versus confirmação, reconhece o obstáculo de cada trecho e usa as dicas sem ajuda verbal.

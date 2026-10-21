@@ -4,7 +4,9 @@
 
 Trinta anos depois de uma noite esquecida, Edelzio encontra uma caixa que devolve perguntas sobre seu passado. Explore casas, a Escola Industrial, trilhas e laboratórios; converse com Renan, Padre Fábio e Ouzana; reúna pistas e conte com seus aliados quando a investigação se transformar em combate.
 
-**Em desenvolvimento · 14 capítulos · candidata Windows 0.4.2-beta · atualização: 21/10/2026.**
+**Em desenvolvimento · 14 capítulos · candidata Windows 0.4.3-beta · atualização: 21/10/2026.**
+
+Revisão visual mais recente: [abertura de 1996 animada e fase adulta às 7h](Docs/CampanhaOficial/POLIMENTO_VISUAL_E_ABERTURA_2026-10-21.md), cabine cartunesca, paisagem baseada na fotografia de Varginha, mapa de Fragmentos ilustrado e picos de interferência mais densos. [Relatório e testes desta revisão](output/visual-polish-2026-10-21/RELATORIO.md); prévias silenciosas do [prólogo](output/visual-polish-2026-10-21/opening-preview.html) e da [viagem do Fusca](output/visual-polish-2026-10-21/preview.html). O novo pacote local é `Builds/Varginha_0.4.3-beta_2026-10-21_Windows_x64.zip`. A entrega 0.4.2 abaixo fica preservada como histórico.
 
 Revisão de hoje: cabine do Fusca redesenhada a partir da foto de referência, glitch distribuído e desembarque no mapa da escola. O puzzle de Fragmentos agora usa [três bifurcações com pistas visíveis](Docs/CampanhaOficial/PUZZLE_FRAGMENTOS_BIFURCACOES_2026-10-21.md), prévia, desfazer e dicas graduais.
 

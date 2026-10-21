@@ -1,0 +1,56 @@
+{
+  "clips": [
+    {
+      "clip": "watch_tv",
+      "file": "clip_000.png",
+      "loop": true,
+      "sequence": [
+        "watch_0",
+        "watch_1",
+        "watch_2",
+        "watch_3",
+        "watch_4",
+        "watch_5",
+        "watch_6",
+        "watch_7"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": [
+        [
+          "watch_0",
+          "watch_1"
+        ],
+        [
+          "watch_1",
+          "watch_2"
+        ],
+        [
+          "watch_2",
+          "watch_3"
+        ],
+        [
+          "watch_3",
+          "watch_4"
+        ],
+        [
+          "watch_4",
+          "watch_5"
+        ],
+        [
+          "watch_5",
+          "watch_6"
+        ],
+        [
+          "watch_6",
+          "watch_7"
+        ],
+        [
+          "watch_7",
+          "watch_0"
+        ]
+      ]
+    }
+  ],
+  "visualReviewCompleted": false
+}

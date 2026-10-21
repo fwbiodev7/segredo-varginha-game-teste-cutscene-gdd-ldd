@@ -1,5 +1,7 @@
 # Verificações da entrega
 
+Revisão visual mais recente: `output/visual-polish-2026-10-21/RELATORIO.md`. Defina `VARGINHA_CINEMA_QA=output/visual-polish-2026-10-21` nos comandos Unity para conservar separadas as evidências históricas. Os testes seguem o mesmo wrapper e sumarizador abaixo. `audit_visual_polish.py` exporta os atlas da criança/marcos com a skill; `visual_polish_preview.mjs` observa as oito poses. `cinema_preview.mjs output/visual-polish-2026-10-21 opening-film` verifica a prévia do prólogo; use `film` para a viagem. A build atual do método `VarginhaDailyBuild.Build` é 0.4.3-beta e o empacotador deve receber `--qa output/visual-polish-2026-10-21`.
+
 Use o Node e Python disponíveis no ambiente e o wrapper `Tools/AgentOutput/compact.mjs` para execuções extensas.
 
 ## Unity

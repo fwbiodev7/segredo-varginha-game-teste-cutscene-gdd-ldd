@@ -2,7 +2,7 @@
 
 Data: 21/10/2026. **Documento de planejamento; não adiciona fases nem muda o jogo por si só.** Contém spoilers de toda a história e dos finais previstos.
 
-**Status atualizado em 21/10:** o usuário autorizou a produção animada da abertura. CS03–06 e a chegada à Industrial estão em implementação/validação nesta etapa, conforme [registro específico](ABERTURA_CINEMATOGRAFICA_2026-10-21.md). As demais sequências e as decisões editoriais abaixo continuam planejamento para etapas posteriores.
+**Status atualizado em 21/10:** CS03–06 e a chegada à Industrial foram integradas e testadas, conforme [registro específico](ABERTURA_CINEMATOGRAFICA_2026-10-21.md). Na revisão seguinte aprovada, CS01 recebeu jornal, noticiário, TV/sala e oito poses da criança; a primeira interferência permanece no gatilho jogável de CS02. A fase adulta passou para 7h e a cidade segue a nova referência visual. Ver [revisão visual e abertura](POLIMENTO_VISUAL_E_ABERTURA_2026-10-21.md). As demais sequências e decisões editoriais abaixo continuam planejamento.
 
 ## Fontes e regra de adaptação
 

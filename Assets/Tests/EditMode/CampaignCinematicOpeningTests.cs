@@ -96,9 +96,51 @@ namespace Game.Tests.EditMode
             Assert.That(CampaignSignalGlitch.BurstStrength(1.4f),Is.Zero);
         }
         [TestCase("FuscaCabinMorning")] [TestCase("FuscaCabinPhotoShell")] [TestCase("FuscaDashboardPhoto")] [TestCase("IgnitionCloseup")]
+        [TestCase("FuscaCabinCartoon")] [TestCase("FuscaDashboardCartoon")]
+        [TestCase("ChildRoom1996")] [TestCase("ChildWatchingTV")] [TestCase("MorningTown")] [TestCase("Newspaper1996")]
         public void NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(string name)
         {
-            string path="Assets/Resources/Varginha/CinemaOpening/"+name+".png";
+            CheckPointImport("Assets/Resources/Varginha/CinemaOpening/"+name+".png");
+        }
+        [TestCase("Terrain")] [TestCase("Landmarks")]
+        public void IllustratedTrailAssetsRetainNativeSizeAndPointImports(string name)
+        {
+            CheckPointImport("Assets/Resources/Varginha/TrailPuzzle/"+name+".png");
+        }
+        [Test]public void CampaignOpeningKeepsTheFirstMemoryIncompleteAndHasEightChildPoses()
+        {
+            CollectionAssert.AreEqual(new[]{"paper_1996","news_1996","tv_reveal","child_1996"},CampaignOpeningCinema.Shots.Select(s=>s.id));
+            Assert.That(CampaignOpeningCinema.Shots.Sum(s=>s.duration),Is.InRange(10,18));
+            foreach(var shot in CampaignOpeningCinema.Shots)
+            {
+                Assert.That(shot.voice,Is.Empty);
+                foreach(string later in new[]{"Não deixa","Não deixe","selo","âncora","1898","brilho"})Assert.That(shot.subtitle,Does.Not.Contain(later));
+            }
+            CollectionAssert.AreEquivalent(Enumerable.Range(0,8),Enumerable.Range(0,8).Select(i=>CampaignOpeningCinema.ChildFrame(i*.125f,false)));
+            Assert.That(CampaignOpeningCinema.ChildFrame(7,true),Is.Zero);
+            Assert.That(CampaignOpeningCinema.Reveal(0,false),Is.Zero);Assert.That(CampaignOpeningCinema.Reveal(4,false),Is.EqualTo(1));
+            Assert.That(CampaignOpeningCinema.Reveal(0,true),Is.EqualTo(1));
+        }
+        [Test]public void PeakSignalAddsDenseVerticalDamageButRetainsCalmAndReducedHolds()
+        {
+            var regular=new List<CampaignSignalGlitch.Band>();var peak=new List<CampaignSignalGlitch.Band>();
+            CampaignSignalGlitch.Sample(.15f,384,216,false,regular);CampaignSignalGlitch.SamplePeak(.15f,384,216,false,peak);
+            Assert.That(peak.Count,Is.GreaterThan(regular.Count*3));Assert.That(peak.Any(b=>b.rect.height>b.rect.width*4),Is.True);
+            Assert.That(peak.Sum(b=>b.rect.width*b.rect.height),Is.LessThan(384*216*.65f));
+            Assert.That(peak.All(b=>b.rect.xMin>=0&&b.rect.yMin>=0&&b.rect.xMax<=384&&b.rect.yMax<=216),Is.True);
+            CampaignSignalGlitch.SamplePeak(1.4f,384,216,false,peak);Assert.That(peak,Is.Empty);
+            CampaignSignalGlitch.SamplePeak(.15f,384,216,true,peak);Assert.That(peak.Count,Is.EqualTo(3));
+        }
+        [Test]public void AdultMorningRetainsTheAuthoredLayoutAndOnlyAddsGlassOverlays()
+        {
+            var data=CampaignIllustratedMaps.Get(2);
+            Assert.That(data.background,Is.EqualTo("AdultEmptyDivisoes"));Assert.That(data.ambient.Min(),Is.GreaterThanOrEqualTo(.9f));
+            foreach(var glass in CampaignAdultMorning.GlassPixels)
+            {Assert.That(glass.xMin,Is.GreaterThanOrEqualTo(0));Assert.That(glass.xMax,Is.LessThan(data.width));Assert.That(glass.yMax,Is.LessThan(data.height));}
+            Assert.That(CampaignFuscaCinema.MorningPath,Does.EndWith("MorningTown"));
+        }
+        private static void CheckPointImport(string path)
+        {
             var t=AssetDatabase.LoadAssetAtPath<Texture2D>(path);Assert.That(t,Is.Not.Null);
             var importer=(TextureImporter)AssetImporter.GetAtPath(path);
             Assert.That(importer.filterMode,Is.EqualTo(FilterMode.Point));Assert.That(importer.mipmapEnabled,Is.False);

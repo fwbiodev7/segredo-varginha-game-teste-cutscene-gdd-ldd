@@ -1,0 +1,12 @@
+{
+  "source": "output\\visual-polish-2026-10-21\\player-morning-final.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

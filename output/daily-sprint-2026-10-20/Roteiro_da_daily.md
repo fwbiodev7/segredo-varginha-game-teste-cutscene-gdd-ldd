@@ -12,7 +12,7 @@ C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-2
 
 ## 3. Uma manhã que vira mistério
 
-1 minuto. Explicar a ordem: preparação mínima, depósito da chave, busca da mochila, desaparecimento fora do campo de observação. A imagem documenta a missão integrada ontem; não é uma captura nova da animação de hoje. O responsável pelo deslocamento não é mostrado.
+1 minuto. Explicar a ordem: preparação mínima, depósito da chave, busca da mochila, desaparecimento fora do campo de observação. A captura nova mostra as janelas diurnas e a luz da manhã; móveis, colisões e pistas foram preservados. O responsável pelo deslocamento não é mostrado.
 C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\CampanhaOficial\Referencias\GDD_Usuario.md
 
 ## 4. Aprender antes de complicar
@@ -23,7 +23,7 @@ C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-2
 
 ## 5. O Fusca ganhou movimento
 
-1 minuto. Mostrar a demonstração animada em output/cinematic-opening-2026-10-21/preview.html ou executar o jogo. A composição usa o mesmo sprite original de Edelzio, ampliado sem repintar a identidade. O desembarque reutiliza School.png e as coordenadas/colisões da fase 4, caminhando até o spawn do gameplay. Não é um vídeo pré-renderizado nem uma alegação de animação completa de toda a campanha.
+1 minuto. Mostrar a demonstração animada em output/visual-polish-2026-10-21/preview.html ou executar o jogo. A composição usa o mesmo sprite original de Edelzio, ampliado sem repintar a identidade. O desembarque reutiliza School.png e as coordenadas/colisões da fase 4, caminhando até o spawn do gameplay. Não é um vídeo pré-renderizado nem uma alegação de animação completa de toda a campanha.
 C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Scripts\Game\Varginha\Experiment\CampaignFuscaCinema.cs
 C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\cinematic-opening-2026-10-21\technical-report.md
 
@@ -32,17 +32,16 @@ C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-2
 45 segundos. O efeito varia posição, tamanho, opacidade e intervalo dos focos; fragmentos da própria cabine se deslocam e partículas verdes sugerem a interferência do ET. A distribuição tem respiro e mantém as legendas legíveis. A mesma lógica atende o rádio e o sinal do prólogo. Movimento reduzido usa uma assinatura estável e discreta.
 C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Scripts\Game\Varginha\Experiment\CampaignSignalGlitch.cs
 
-## 7. O mistério continua no tempo certo
+## 7. Notícia, TV e infância
 
-1 minuto. A sequência do GDD é preservada: normalidade, falhas elétricas, frase infantil, ignição quente/silêncio, partida espontânea e escola. A voz fica legendada e com efeitos; dublagem foi adiada. A adaptação mantém a viagem cinematográfica aprovada, sem recolocar o minijogo de diagnóstico do LDD como obrigação. Datas, ordem de outros personagens e finais continuam decisões da expansão futura.
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\CampanhaOficial\ROTEIRO_CUTSCENES_GDD_LDD_2026-10-21.md
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\CampanhaOficial\Referencias\O_Segredo_de_Varginha_LDD.md
+1 minuto. Montagem de 16 segundos: jornal, noticiário, recuo da imagem para a TV e Edelzio criança, depois controle livre. A frase do rádio não é antecipada. Novas poses mantêm camiseta amarela e bermuda azul; o apresentador e sua boca animada foram reutilizados. Pausa, retomada e abertura já vista foram testados. Dublagem permanece adiada. A animação usa sprites e composição em tempo real; o desempenho em outro PC ainda depende de teste.
+C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\CampanhaOficial\POLIMENTO_VISUAL_E_ABERTURA_2026-10-21.md
 
 ## 8. O que já foi conferido
 
-1 minuto. Regras: rodada EditMode final. Windows: cinco casos do Player: viagem, retorno de controle, modo reduzido/pulo, imagem na GPU, percurso da biblioteca e mapa por gamepad (o caso de viagem reúne mais de uma verificação). A rota casa-escola passou na regressão direcionada do Editor. O relatório conserva falhas e retestes sem tratá-los como uma rodada única totalmente verde. Não houve playtest externo nem medição de desempenho em outro PC.
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\cinematic-opening-2026-10-21\summary.json
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\cinematic-opening-2026-10-21\RELATORIO.md
+1 minuto. Regras: rodada EditMode final. Windows: oito casos direcionados do Player, incluindo abertura de 1996 e casa de manhã: viagem, retorno de controle, modo reduzido/pulo, imagem na GPU, percurso da biblioteca e mapa por gamepad (o caso de viagem reúne mais de uma verificação). A rota casa-escola passou na regressão direcionada do Editor. O relatório conserva falhas e retestes sem tratá-los como uma rodada única totalmente verde. Não houve playtest externo nem medição de desempenho em outro PC.
+C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\visual-polish-2026-10-21\summary.json
+C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\visual-polish-2026-10-21\RELATORIO.md
 
 ## 9. O que precisamos observar hoje
 

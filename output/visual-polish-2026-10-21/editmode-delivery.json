@@ -1,0 +1,12 @@
+{
+  "source": "output\\visual-polish-2026-10-21\\editmode-delivery.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 378,
+    "passed": 378,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

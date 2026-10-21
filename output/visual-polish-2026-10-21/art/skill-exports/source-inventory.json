@@ -1,0 +1,114 @@
+[
+  {
+    "file": "Assets/Resources/Varginha/CinemaOpening/FuscaCabinCartoon.png",
+    "size": [
+      1672,
+      941
+    ],
+    "sha256": "047a80e1670b333a450dfccbb6079bc72e4a1007db3d60ceadd7bada711ebce5",
+    "rgbaSha256": "2d5c6f8f962d04da40e36821eac93131e21df2c3abf312143b6eb6ffb5f11411",
+    "colors": 91728,
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "Assets/Resources/Varginha/CinemaOpening/FuscaDashboardCartoon.png",
+    "size": [
+      2172,
+      724
+    ],
+    "sha256": "b5c27e22d888ee9cd5d9b1f3e0a91e47433bb4817ccb5601475a9e9e065e13ad",
+    "rgbaSha256": "ae1df184acafb092b538fbb9b16efa66fed460879610f64ce7f34db31b2d98e1",
+    "colors": 71931,
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "Assets/Resources/Varginha/CinemaOpening/ChildRoom1996.png",
+    "size": [
+      1672,
+      940
+    ],
+    "sha256": "a95d2ef9387de12db509c8bfecbc622974a39135d92d2de639afd86095a6f748",
+    "rgbaSha256": "9d04c0d27991a023c22443a46e0d9607e43ef3f656e0e4ade3afe2d3a83cb036",
+    "colors": 191567,
+    "alpha": [
+      255,
+      255
+    ]
+  },
+  {
+    "file": "Assets/Resources/Varginha/CinemaOpening/ChildWatchingTV.png",
+    "size": [
+      1774,
+      887
+    ],
+    "sha256": "e4845b2bdf2abe77e19d5b49130175830e7cf968a83c05c4a08ef6f771b114c5",
+    "rgbaSha256": "4767e8a326e4ea523bfb4c773dfd102859945fa28ea7f957a55f3dc9e743c15d",
+    "colors": 70743,
+    "alpha": [
+      0,
+      255
+    ]
+  },
+  {
+    "file": "Assets/Resources/Varginha/CinemaOpening/Newspaper1996.png",
+    "size": [
+      1672,
+      940
+    ],
+    "sha256": "38c5182c5c084abaf48059f858c83c8c97a456b05df4bf6ab5189a4dacd027e5",
+    "rgbaSha256": "2e5c524c86f79882f58e31bd6351c761d2953ec3c52428f92e8efa67b0d5e7b5",
+    "colors": 103469,
+    "alpha": [
+      255,
+      255
+    ]
+  },
+  {
+    "file": "Assets/Resources/Varginha/CinemaOpening/MorningTown.png",
+    "size": [
+      1672,
+      940
+    ],
+    "sha256": "7d9cd63620ab33e574ae5ee46a801ca68a94f2bc5e363bc0c9183c78313626ce",
+    "rgbaSha256": "96160239aafc2f4bd100785b0f34dd134c746297ba71dfd46b054c1cd641ca32",
+    "colors": 715648,
+    "alpha": [
+      255,
+      255
+    ]
+  },
+  {
+    "file": "Assets/Resources/Varginha/TrailPuzzle/Terrain.png",
+    "size": [
+      2172,
+      724
+    ],
+    "sha256": "34ab400b6ea09b5e03d73929f562385106bbecbf9136537b08ab47ed08a16082",
+    "rgbaSha256": "d11e93f88d6557cdeec0cdc69bbc37648bafb474c0efabf3e900c433c1e9e786",
+    "colors": 259978,
+    "alpha": [
+      255,
+      255
+    ]
+  },
+  {
+    "file": "Assets/Resources/Varginha/TrailPuzzle/Landmarks.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "sha256": "0f92a79d2d63efc1c0cbe99eeb0c7c6cfc0b330cf2e6646fe5c820a95764283d",
+    "rgbaSha256": "b9cc8f29a6fca740e56d3f2cd1d66358d4b0ad0d040b40997b85b1b2ab359f61",
+    "colors": 336497,
+    "alpha": [
+      0,
+      254
+    ]
+  }
+]

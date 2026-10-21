@@ -1,0 +1,338 @@
+{
+  "schema": "pixel-art-sprite-sheet/v1",
+  "image": "sheet.png",
+  "imageSize": [
+    1776,
+    888
+  ],
+  "pixelsPerUnit": 100,
+  "frames": [
+    {
+      "id": "watch_0",
+      "rect": [
+        0,
+        0,
+        444,
+        444
+      ],
+      "sourceSize": [
+        444,
+        444
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        222.0,
+        444
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\ChildWatchingTV.png",
+        "fileSha256": "e4845b2bdf2abe77e19d5b49130175830e7cf968a83c05c4a08ef6f771b114c5",
+        "crop": [
+          0,
+          0,
+          443,
+          443
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "watch_1",
+      "rect": [
+        444,
+        0,
+        444,
+        444
+      ],
+      "sourceSize": [
+        444,
+        444
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        222.0,
+        444
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\ChildWatchingTV.png",
+        "fileSha256": "e4845b2bdf2abe77e19d5b49130175830e7cf968a83c05c4a08ef6f771b114c5",
+        "crop": [
+          443,
+          0,
+          444,
+          443
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "watch_2",
+      "rect": [
+        888,
+        0,
+        444,
+        444
+      ],
+      "sourceSize": [
+        444,
+        444
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        222.0,
+        444
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\ChildWatchingTV.png",
+        "fileSha256": "e4845b2bdf2abe77e19d5b49130175830e7cf968a83c05c4a08ef6f771b114c5",
+        "crop": [
+          887,
+          0,
+          443,
+          443
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "watch_3",
+      "rect": [
+        1332,
+        0,
+        444,
+        444
+      ],
+      "sourceSize": [
+        444,
+        444
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        222.0,
+        444
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\ChildWatchingTV.png",
+        "fileSha256": "e4845b2bdf2abe77e19d5b49130175830e7cf968a83c05c4a08ef6f771b114c5",
+        "crop": [
+          1330,
+          0,
+          444,
+          443
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "watch_4",
+      "rect": [
+        0,
+        444,
+        444,
+        444
+      ],
+      "sourceSize": [
+        444,
+        444
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        222.0,
+        444
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\ChildWatchingTV.png",
+        "fileSha256": "e4845b2bdf2abe77e19d5b49130175830e7cf968a83c05c4a08ef6f771b114c5",
+        "crop": [
+          0,
+          443,
+          443,
+          444
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "watch_5",
+      "rect": [
+        444,
+        444,
+        444,
+        444
+      ],
+      "sourceSize": [
+        444,
+        444
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        222.0,
+        444
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\ChildWatchingTV.png",
+        "fileSha256": "e4845b2bdf2abe77e19d5b49130175830e7cf968a83c05c4a08ef6f771b114c5",
+        "crop": [
+          443,
+          443,
+          444,
+          444
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "watch_6",
+      "rect": [
+        888,
+        444,
+        444,
+        444
+      ],
+      "sourceSize": [
+        444,
+        444
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        222.0,
+        444
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\ChildWatchingTV.png",
+        "fileSha256": "e4845b2bdf2abe77e19d5b49130175830e7cf968a83c05c4a08ef6f771b114c5",
+        "crop": [
+          887,
+          443,
+          443,
+          444
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "watch_7",
+      "rect": [
+        1332,
+        444,
+        444,
+        444
+      ],
+      "sourceSize": [
+        444,
+        444
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        222.0,
+        444
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\ChildWatchingTV.png",
+        "fileSha256": "e4845b2bdf2abe77e19d5b49130175830e7cf968a83c05c4a08ef6f771b114c5",
+        "crop": [
+          1330,
+          443,
+          444,
+          444
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    }
+  ],
+  "clips": {
+    "watch_tv": {
+      "frames": [
+        "watch_0",
+        "watch_1",
+        "watch_2",
+        "watch_3",
+        "watch_4",
+        "watch_5",
+        "watch_6",
+        "watch_7"
+      ],
+      "loop": true
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "source": "output\\visual-polish-2026-10-21\\player.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

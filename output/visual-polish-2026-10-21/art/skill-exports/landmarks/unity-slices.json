@@ -1,0 +1,145 @@
+{
+  "schema": "unity-slice-plan/v1",
+  "origin": "bottom-left",
+  "image": "sheet.png",
+  "pixelsPerUnit": 100,
+  "sprites": [
+    {
+      "name": "tree",
+      "rect": [
+        0,
+        512,
+        512,
+        512
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    },
+    {
+      "name": "fallen_log",
+      "rect": [
+        512,
+        512,
+        512,
+        512
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    },
+    {
+      "name": "bridge",
+      "rect": [
+        1024,
+        512,
+        512,
+        512
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    },
+    {
+      "name": "wall",
+      "rect": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    },
+    {
+      "name": "chapel",
+      "rect": [
+        512,
+        0,
+        512,
+        512
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    },
+    {
+      "name": "open_gate",
+      "rect": [
+        1024,
+        0,
+        512,
+        512
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    }
+  ],
+  "clips": {
+    "tree": {
+      "frames": [
+        "tree"
+      ],
+      "loop": false
+    },
+    "fallen_log": {
+      "frames": [
+        "fallen_log"
+      ],
+      "loop": false
+    },
+    "bridge": {
+      "frames": [
+        "bridge"
+      ],
+      "loop": false
+    },
+    "wall": {
+      "frames": [
+        "wall"
+      ],
+      "loop": false
+    },
+    "chapel": {
+      "frames": [
+        "chapel"
+      ],
+      "loop": false
+    },
+    "open_gate": {
+      "frames": [
+        "open_gate"
+      ],
+      "loop": false
+    }
+  },
+  "importSettings": {
+    "textureType": "Sprite",
+    "spriteMode": "Multiple",
+    "filterMode": "Point",
+    "mipmaps": false,
+    "compression": "Uncompressed",
+    "wrapMode": "Clamp"
+  },
+  "note": "Import plan only; Unity does not import this JSON automatically. Preserve existing sprite IDs."
+}

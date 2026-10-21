@@ -76,7 +76,7 @@ namespace Game.Tests.PlayMode
         static IEnumerator Capture(string name)
         {
             if(Application.isEditor)yield break;
-            const string folder="output/cinematic-opening-2026-10-21/captures";
+            string folder=CinemaQaEvidence.Folder+"/captures";
             Directory.CreateDirectory(folder);yield return new WaitForEndOfFrame();
             var image=ScreenCapture.CaptureScreenshotAsTexture();
             File.WriteAllBytes(folder+"/"+name+".png",image.EncodeToPNG());Object.Destroy(image);

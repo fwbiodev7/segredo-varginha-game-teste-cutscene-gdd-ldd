@@ -1,0 +1,152 @@
+{
+  "schema": "unity-slice-plan/v1",
+  "origin": "bottom-left",
+  "image": "sheet.png",
+  "pixelsPerUnit": 100,
+  "sprites": [
+    {
+      "name": "watch_0",
+      "rect": [
+        0,
+        444,
+        444,
+        444
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "watch_1",
+      "rect": [
+        444,
+        444,
+        444,
+        444
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "watch_2",
+      "rect": [
+        888,
+        444,
+        444,
+        444
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "watch_3",
+      "rect": [
+        1332,
+        444,
+        444,
+        444
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "watch_4",
+      "rect": [
+        0,
+        0,
+        444,
+        444
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "watch_5",
+      "rect": [
+        444,
+        0,
+        444,
+        444
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "watch_6",
+      "rect": [
+        888,
+        0,
+        444,
+        444
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "watch_7",
+      "rect": [
+        1332,
+        0,
+        444,
+        444
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    }
+  ],
+  "clips": {
+    "watch_tv": {
+      "frames": [
+        "watch_0",
+        "watch_1",
+        "watch_2",
+        "watch_3",
+        "watch_4",
+        "watch_5",
+        "watch_6",
+        "watch_7"
+      ],
+      "loop": true
+    }
+  },
+  "importSettings": {
+    "textureType": "Sprite",
+    "spriteMode": "Multiple",
+    "filterMode": "Point",
+    "mipmaps": false,
+    "compression": "Uncompressed",
+    "wrapMode": "Clamp"
+  },
+  "note": "Import plan only; Unity does not import this JSON automatically. Preserve existing sprite IDs."
+}

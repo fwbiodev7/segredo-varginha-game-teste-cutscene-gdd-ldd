@@ -10,20 +10,23 @@ namespace Game.Varginha.Experiment
         private static readonly Dictionary<string,RenderTexture> Cache=new();
         private static Material _material;
         public static Texture Resolve(string name)
+            =>ResolveResource("Varginha/CinemaOpening/"+name);
+        // Map illustrations share the same hard-alpha/point treatment as new scenery.
+        public static Texture ResolveResource(string resourcePath)
         {
-            if(Cache.TryGetValue(name,out var cached)&&cached!=null)return cached;
-            var source=Resources.Load<Texture2D>("Varginha/CinemaOpening/"+name);if(source==null)return null;
+            if(Cache.TryGetValue(resourcePath,out var cached)&&cached!=null)return cached;
+            var source=Resources.Load<Texture2D>(resourcePath);if(source==null)return null;
             var shader=Resources.Load<Shader>("Varginha/CinemaOpening/CinematicPixelResolve");
             if(shader==null||!shader.isSupported)return source;
             _material??=new Material(shader);
             int height=Mathf.RoundToInt(source.height/4f);
             int width=Mathf.RoundToInt(source.width/4f);
             var rt=new RenderTexture(width,height,0,RenderTextureFormat.ARGB32)
-            {name="Cinema_Pixel_"+name,filterMode=FilterMode.Point,wrapMode=TextureWrapMode.Clamp,useMipMap=false};
+            {name="Cinema_Pixel_"+source.name,filterMode=FilterMode.Point,wrapMode=TextureWrapMode.Clamp,useMipMap=false};
             rt.Create();var previous=RenderTexture.active;
             try{Graphics.Blit(source,rt,_material);}
             finally{RenderTexture.active=previous;}
-            Cache[name]=rt;return rt;
+            Cache[resourcePath]=rt;return rt;
         }
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         public static void Clear()

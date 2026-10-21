@@ -1,0 +1,126 @@
+{
+  "success": true,
+  "status": "needs_review",
+  "errors": [],
+  "warnings": [
+    "Visible content touches original canvas edge; inspect clipping: watch_0",
+    "Visible content touches original canvas edge; inspect clipping: watch_1",
+    "Visible content touches original canvas edge; inspect clipping: watch_2",
+    "Visible content touches original canvas edge; inspect clipping: watch_3",
+    "Visible content touches original canvas edge; inspect clipping: watch_4",
+    "Visible content touches original canvas edge; inspect clipping: watch_5",
+    "Visible content touches original canvas edge; inspect clipping: watch_6",
+    "Visible content touches original canvas edge; inspect clipping: watch_7"
+  ],
+  "frames": [
+    {
+      "id": "watch_0",
+      "bbox": [
+        0,
+        7,
+        443,
+        440
+      ],
+      "visiblePixels": 66547,
+      "colors": 12364,
+      "semiTransparentPixels": 66359,
+      "pixelsSha256": "57f27c55ebf1be71ae35a2bc4272f6a869dd1330bb3e5ab280bbc3190a30922a"
+    },
+    {
+      "id": "watch_1",
+      "bbox": [
+        0,
+        0,
+        444,
+        443
+      ],
+      "visiblePixels": 68593,
+      "colors": 12526,
+      "semiTransparentPixels": 68404,
+      "pixelsSha256": "4cd6f3febbc05c8afe88a234a410ca76504de4e56a571dcc6cad1fdb2921b9ba"
+    },
+    {
+      "id": "watch_2",
+      "bbox": [
+        0,
+        0,
+        443,
+        443
+      ],
+      "visiblePixels": 67116,
+      "colors": 12422,
+      "semiTransparentPixels": 66950,
+      "pixelsSha256": "b469dc9b397084f604d96807a7fbc746e76017e9757f9de771577d71a6a7cf36"
+    },
+    {
+      "id": "watch_3",
+      "bbox": [
+        0,
+        7,
+        432,
+        443
+      ],
+      "visiblePixels": 64622,
+      "colors": 12134,
+      "semiTransparentPixels": 64435,
+      "pixelsSha256": "705312fe2d6d5ce0f5c82741ad8f804584d9b9080ea8a6cdb87f9e03e6334945"
+    },
+    {
+      "id": "watch_4",
+      "bbox": [
+        0,
+        1,
+        443,
+        444
+      ],
+      "visiblePixels": 65717,
+      "colors": 12631,
+      "semiTransparentPixels": 65531,
+      "pixelsSha256": "74aabb2455084336d1f7059ad7684afbfda2d535f5f73aa2c0319cd0d7cd83b9"
+    },
+    {
+      "id": "watch_5",
+      "bbox": [
+        0,
+        0,
+        444,
+        444
+      ],
+      "visiblePixels": 66397,
+      "colors": 12574,
+      "semiTransparentPixels": 66138,
+      "pixelsSha256": "f9e1d5e0f34595142f851436226e01fa7af2a2dc712d5f564baddd26a2877ad3"
+    },
+    {
+      "id": "watch_6",
+      "bbox": [
+        0,
+        0,
+        443,
+        444
+      ],
+      "visiblePixels": 66903,
+      "colors": 12483,
+      "semiTransparentPixels": 66705,
+      "pixelsSha256": "63a375e380431e78515cb925c095e9319a464e3e81da1bf48c8f1a22541f94cc"
+    },
+    {
+      "id": "watch_7",
+      "bbox": [
+        0,
+        0,
+        428,
+        444
+      ],
+      "visiblePixels": 65328,
+      "colors": 12572,
+      "semiTransparentPixels": 65109,
+      "pixelsSha256": "322bad07835679ca1331d3e3545a9c9f1df5d97e5427a82eb93149678274bd9d"
+    }
+  ],
+  "paletteColors": 47427,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\visual-polish-2026-10-21\\art\\skill-exports\\child\\atlas.json",
+  "metadataSha256": "b457b526f21eaa28c1e7c4cede3b012710d0fe55bec4a6ad910495f09fb6cc57"
+}

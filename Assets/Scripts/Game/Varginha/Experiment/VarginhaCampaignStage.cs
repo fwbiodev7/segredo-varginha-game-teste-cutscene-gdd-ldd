@@ -368,7 +368,7 @@ namespace Game.Varginha.Experiment
             else if (_view == View.Complete) DrawComplete();
             else
             {
-                if(!IsBlocked)ExperimentGUI.Objective(CampaignSequence.Heading(phase) + " • 2026", PhaseTitle, CampaignGuidance.Next(_progress,phase),CampaignHud.For(phase));
+                if(!IsBlocked)ExperimentGUI.Objective(CampaignSequence.Heading(phase) + (phase==2?" • 2026 • 07:00":" • 2026"), PhaseTitle, CampaignGuidance.Next(_progress,phase),CampaignHud.For(phase));
                 if(!IsBlocked)CampaignGuidance.DrawMarker(_guidancePlan,_progress,phase);
                 if (!IsBlocked && phase == 2) DrawHouseTutorial();
                 bool hudEnabled=GUI.enabled; GUI.enabled=hudEnabled&&!_paused&&_view==View.World&&_dialogue==null;

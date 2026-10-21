@@ -1,5 +1,7 @@
 # Pendências e decisões — 21/10/2026
 
+Revisão posterior 0.4.3: [abertura de 1996, manhã, cabine cartunesca e mapa ilustrado](POLIMENTO_VISUAL_E_ABERTURA_2026-10-21.md). Implementação e testes: [relatório mais recente](../../output/visual-polish-2026-10-21/RELATORIO.md). Avaliação externa continua pendente.
+
 Continuação do [registro de 20/10](PENDENCIAS_2026-10-20.md). Fechamento jogável: [relatório anterior](../../output/qa-2026-10-21/RELATORIO.md). Abertura animada, ajustes visuais e daily: [relatório atual](../../output/cinematic-opening-2026-10-21/RELATORIO.md).
 
 ## Aguardam sessões externas

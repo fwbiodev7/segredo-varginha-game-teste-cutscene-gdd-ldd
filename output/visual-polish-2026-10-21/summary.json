@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-21",
+  "version": "0.4.3-beta",
+  "baseCommit": "6dfd878a6fb8e428a5a58295370b8ceefa721553",
+  "technicalSuccess": true,
+  "deliveryComplete": true,
+  "tests": {
+    "editMode": {
+      "total": 378,
+      "passed": 378,
+      "failed": 0,
+      "skipped": 0
+    },
+    "player": {
+      "total": 8,
+      "passed": 8,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "sources": {
+    "editMode": "editmode-delivery.xml",
+    "player": "player-delivery.xml"
+  },
+  "previewFrames": {
+    "fusca": 114,
+    "opening": 72
+  },
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 1
+  },
+  "humanPlaytest": false,
+  "anotherPc": false,
+  "voice": "Deferred by user; captions and SFX only.",
+  "scenesReserialized": false,
+  "scenesAffected": [
+    "Ato1_Fase1_O_Caso_de_Varginha",
+    "Ato2_Fase2_A_Chave_e_a_Caixa",
+    "Ato2_Fase4_Entre_Aulas_e_Pistas",
+    "Ato3_Fase6_Fragmentos"
+  ],
+  "preservation": "preservation.json",
+  "package": "windows-package.json",
+  "slides": "slides-qa.json",
+  "status": "Visual implementation, native QA, build, package, slides and preservation complete. Received audio is planned separately, not integrated."
+}

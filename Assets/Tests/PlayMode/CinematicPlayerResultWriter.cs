@@ -16,7 +16,7 @@ namespace Game.Tests.PlayMode
         public void RunFinished(ITestResult result)
         {
             if(Application.isEditor||result.Test.Parent!=null)return;
-            string folder=Path.GetFullPath("output/cinematic-opening-2026-10-21");Directory.CreateDirectory(folder);
+            string folder=Path.GetFullPath(CinemaQaEvidence.Folder);Directory.CreateDirectory(folder);
             File.WriteAllText(Path.Combine(folder,"player-native.xml"),result.ToXml(true).OuterXml);
             Debug.Log("NATIVE_RUN_COMPLETE "+result.ResultState+" cases="+result.Test.TestCaseCount);
         }

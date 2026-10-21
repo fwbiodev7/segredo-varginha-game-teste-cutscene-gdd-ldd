@@ -7,8 +7,8 @@ namespace Game.Varginha.Experiment
     // their registration and one uniform pixel scale throughout the steering cycle.
     public static class CampaignFuscaCinema
     {
-        public const string MorningPath="Varginha/CinemaOpening/FuscaCabinMorning";
-        public const string FramePath="Varginha/CinemaOpening/FuscaCabinPhotoShell";
+        public const string MorningPath="Varginha/CinemaOpening/MorningTown";
+        public const string FramePath="Varginha/CinemaOpening/FuscaCabinCartoon";
         private static Texture _morning,_frame,_dashboard,_ignition;
         private static readonly List<Vector2> ArrivalRoute=new();
         private static CampaignIllustratedMaps.Layout _schoolLayout;
@@ -36,20 +36,20 @@ namespace Game.Varginha.Experiment
 
         public static void DrawCabin(float time,string title,int panel,bool reduced)
         {
-            _morning=CampaignCinemaTextures.Resolve("FuscaCabinMorning");_frame=CampaignCinemaTextures.Resolve("FuscaCabinPhotoShell");
-            _dashboard=CampaignCinemaTextures.Resolve("FuscaDashboardPhoto");
+            _morning=CampaignCinemaTextures.Resolve("MorningTown");_frame=CampaignCinemaTextures.Resolve("FuscaCabinCartoon");
+            _dashboard=CampaignCinemaTextures.Resolve("FuscaDashboardCartoon");
             bool silence=title=="SILÊNCIO",voice=title=="UMA VOZ CONHECIDA",fault=panel==1;
             bool moving=!silence&&!voice&&(!fault||time<1.2f);
             float shift=moving&&!reduced?Mathf.Floor(time*18)%1280:0;
             if(_morning!=null)
             {
                 // A clean outdoor-only window region: cabin borders never slide through the glass.
-                var uv=new Rect(1170f/1672,1-365f/940,500f/1672,300f/940);
+                var uv=new Rect(.1f,0,.8f,.75f);
                 GUI.DrawTextureWithTexCoords(new Rect(-shift,0,1280,720),_morning,uv);
                 GUI.DrawTextureWithTexCoords(new Rect(1280-shift,0,1280,720),_morning,uv);
             }
             if(_frame!=null)GUI.DrawTexture(new Rect(0,0,1280,720),_frame);
-            // Separate photo-based dashboard registers directly behind the
+            // Matte cartoon dashboard retains the photo-based registration behind the
             // approved wheel; no added pole or replacement hand/face is needed.
             if(_dashboard!=null)GUI.DrawTexture(new Rect(552,325,780,260),_dashboard);
             if(panel==2)CampaignSignalGlitch.DrawEcho(_frame,new Rect(0,0,1280,720),time,reduced);
@@ -65,9 +65,9 @@ namespace Game.Varginha.Experiment
                 ExperimentGUI.Box(new Rect(0,0,1280,720),new Color(.015f,.025f,.035f,darkness));
                 DrawIgnition(time,reduced);
             }
-            if(panel==2)
+            if(panel==2||fault)
             {
-                CampaignSignalGlitch.DrawCabin(new Rect(0,86,1280,464),_frame,time,reduced);
+                CampaignSignalGlitch.DrawCabin(new Rect(0,86,1280,464),_frame,time,reduced,voice||fault);
             }
         }
         private static void DrawIgnition(float time,bool reduced)

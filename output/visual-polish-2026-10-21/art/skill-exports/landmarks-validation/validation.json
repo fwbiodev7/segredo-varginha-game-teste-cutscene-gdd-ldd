@@ -1,0 +1,98 @@
+{
+  "success": true,
+  "status": "needs_review",
+  "errors": [],
+  "warnings": [
+    "Visible content touches original canvas edge; inspect clipping: tree",
+    "Visible content touches original canvas edge; inspect clipping: fallen_log",
+    "Visible content touches original canvas edge; inspect clipping: bridge",
+    "Visible content touches original canvas edge; inspect clipping: wall",
+    "Visible content touches original canvas edge; inspect clipping: chapel",
+    "Visible content touches original canvas edge; inspect clipping: open_gate"
+  ],
+  "frames": [
+    {
+      "id": "tree",
+      "bbox": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "visiblePixels": 156918,
+      "colors": 73628,
+      "semiTransparentPixels": 156918,
+      "pixelsSha256": "15eb477202e6815aa823ad10ad086aaed3ba3f6356c6bb79b44e0bfe99608c77"
+    },
+    {
+      "id": "fallen_log",
+      "bbox": [
+        0,
+        23,
+        512,
+        512
+      ],
+      "visiblePixels": 98107,
+      "colors": 45496,
+      "semiTransparentPixels": 98107,
+      "pixelsSha256": "c932f81f86a5951f5fcc0c888e7cbaaeaa6d073833a9c3539216bdf35f705fc3"
+    },
+    {
+      "id": "bridge",
+      "bbox": [
+        0,
+        7,
+        502,
+        512
+      ],
+      "visiblePixels": 101876,
+      "colors": 35131,
+      "semiTransparentPixels": 101876,
+      "pixelsSha256": "a78e72168dc6a28ad1bc545299630a62befaba4ab6cc31a2b87f77721e0bc47d"
+    },
+    {
+      "id": "wall",
+      "bbox": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "visiblePixels": 104198,
+      "colors": 43403,
+      "semiTransparentPixels": 104198,
+      "pixelsSha256": "34f115b8f0b8fa03ad2f9b81a86dc060b83fe152799d9c38c5eb1d57f9667002"
+    },
+    {
+      "id": "chapel",
+      "bbox": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "visiblePixels": 102867,
+      "colors": 50257,
+      "semiTransparentPixels": 102867,
+      "pixelsSha256": "9adccf491771f16729569426320a5ed12940f6b0a1e13ae26497ac9bc824f73d"
+    },
+    {
+      "id": "open_gate",
+      "bbox": [
+        0,
+        0,
+        502,
+        512
+      ],
+      "visiblePixels": 96075,
+      "colors": 48172,
+      "semiTransparentPixels": 96075,
+      "pixelsSha256": "ef4198296e97362ab780d037f9387ccfa4c3faf618fdd32e864fbee003e0b3ef"
+    }
+  ],
+  "paletteColors": 230703,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\visual-polish-2026-10-21\\art\\skill-exports\\landmarks\\atlas.json",
+  "metadataSha256": "682375a85d7923c8e55b577e146abac2d0f8155a5756648a76e32392e8afb98d"
+}
