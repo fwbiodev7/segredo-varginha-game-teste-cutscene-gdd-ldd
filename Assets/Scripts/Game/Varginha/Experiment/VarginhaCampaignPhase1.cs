@@ -123,7 +123,7 @@ namespace Game.Varginha.Experiment
             }
             _voice = gameObject.AddComponent<AudioSource>(); _voice.volume = .7f;
             _ambience = gameObject.AddComponent<AudioSource>(); _ambience.volume = .025f; _ambience.loop = true;
-            _staticClip = VarginhaExperimentLab.CreateStatic(); _ambience.clip = _staticClip;
+            _staticClip = VarginhaExperimentLab.CreateStatic(); _ambience.clip = CampaignRecordedAudio.Clip("TelevisionAmbience")??_staticClip;
             _sound = gameObject.AddComponent<CampaignSoundscape>(); _sound.Configure("House", _player);
             GameManager.Instance?.StartGame();
             yield return null; QuietHouse();
@@ -249,7 +249,7 @@ namespace Game.Varginha.Experiment
             if (first)
             {
                 _powerSignal=0;
-                CampaignAtmosphereLayer.Interference(transform);
+                _sound?.Play("RadioInterference");CampaignAtmosphereLayer.Interference(transform);
                 CampaignCameraDirector.Reveal(new Vector3(3.4f,5.55f), 3.5f);
                 _sound?.CinematicDucking(.65f);
                 StartCoroutine(RestorePowerFailureAmbience());

@@ -1,0 +1,995 @@
+{
+  "schema": "pixel-art-sprite-sheet/v1",
+  "image": "sheet.png",
+  "imageSize": [
+    1285,
+    1927
+  ],
+  "pixelsPerUnit": 96,
+  "frames": [
+    {
+      "id": "renan_0",
+      "rect": [
+        1,
+        1,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          0,
+          24,
+          256,
+          266
+        ],
+        "offset": [
+          32,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "renan_1",
+      "rect": [
+        322,
+        1,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          256,
+          24,
+          256,
+          266
+        ],
+        "offset": [
+          32,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "renan_2",
+      "rect": [
+        643,
+        1,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          512,
+          24,
+          256,
+          266
+        ],
+        "offset": [
+          32,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "renan_3",
+      "rect": [
+        964,
+        1,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          768,
+          24,
+          256,
+          266
+        ],
+        "offset": [
+          32,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "renan_4",
+      "rect": [
+        1,
+        322,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          0,
+          300,
+          256,
+          266
+        ],
+        "offset": [
+          32,
+          16
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "renan_5",
+      "rect": [
+        322,
+        322,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          256,
+          300,
+          256,
+          266
+        ],
+        "offset": [
+          32,
+          16
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "renan_6",
+      "rect": [
+        643,
+        322,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          512,
+          300,
+          256,
+          266
+        ],
+        "offset": [
+          32,
+          16
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "renan_7",
+      "rect": [
+        964,
+        322,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 125,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          768,
+          300,
+          256,
+          266
+        ],
+        "offset": [
+          32,
+          16
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "ouzana_0",
+      "rect": [
+        1,
+        643,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 300,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          0,
+          590,
+          256,
+          234
+        ],
+        "offset": [
+          32,
+          32
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "ouzana_1",
+      "rect": [
+        322,
+        643,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 300,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          256,
+          590,
+          256,
+          234
+        ],
+        "offset": [
+          32,
+          32
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "ouzana_2",
+      "rect": [
+        643,
+        643,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 433,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          512,
+          590,
+          256,
+          234
+        ],
+        "offset": [
+          32,
+          32
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "ouzana_3",
+      "rect": [
+        964,
+        643,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 433,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          768,
+          590,
+          256,
+          234
+        ],
+        "offset": [
+          32,
+          32
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "ouzana_4",
+      "rect": [
+        1,
+        964,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 433,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          0,
+          850,
+          256,
+          240
+        ],
+        "offset": [
+          32,
+          10
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "ouzana_5",
+      "rect": [
+        322,
+        964,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 433,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          256,
+          850,
+          256,
+          240
+        ],
+        "offset": [
+          32,
+          10
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "ouzana_6",
+      "rect": [
+        643,
+        964,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 433,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          512,
+          850,
+          256,
+          240
+        ],
+        "offset": [
+          32,
+          10
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "ouzana_7",
+      "rect": [
+        964,
+        964,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 433,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          768,
+          850,
+          256,
+          240
+        ],
+        "offset": [
+          32,
+          10
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "fabio_0",
+      "rect": [
+        1,
+        1285,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 300,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          0,
+          1110,
+          256,
+          218
+        ],
+        "offset": [
+          32,
+          50
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "fabio_1",
+      "rect": [
+        322,
+        1285,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 300,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          256,
+          1110,
+          256,
+          218
+        ],
+        "offset": [
+          32,
+          50
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "fabio_2",
+      "rect": [
+        643,
+        1285,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 167,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          512,
+          1110,
+          256,
+          218
+        ],
+        "offset": [
+          32,
+          50
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "fabio_3",
+      "rect": [
+        964,
+        1285,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 500,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          768,
+          1110,
+          256,
+          218
+        ],
+        "offset": [
+          32,
+          50
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "fabio_4",
+      "rect": [
+        1,
+        1606,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 500,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          0,
+          1336,
+          256,
+          200
+        ],
+        "offset": [
+          32,
+          86
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "fabio_5",
+      "rect": [
+        322,
+        1606,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 167,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          256,
+          1336,
+          256,
+          200
+        ],
+        "offset": [
+          32,
+          86
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "fabio_6",
+      "rect": [
+        643,
+        1606,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 167,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          512,
+          1336,
+          256,
+          200
+        ],
+        "offset": [
+          32,
+          86
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "fabio_7",
+      "rect": [
+        964,
+        1606,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        160,
+        160
+      ],
+      "durationMs": 167,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\source\\generated-source.png",
+        "fileSha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154",
+        "crop": [
+          768,
+          1336,
+          256,
+          200
+        ],
+        "offset": [
+          32,
+          86
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    }
+  ],
+  "clips": {
+    "renan": {
+      "frames": [
+        "renan_0",
+        "renan_1",
+        "renan_2",
+        "renan_3",
+        "renan_4",
+        "renan_5",
+        "renan_6",
+        "renan_7"
+      ],
+      "loop": false
+    },
+    "ouzana": {
+      "frames": [
+        "ouzana_0",
+        "ouzana_1",
+        "ouzana_2",
+        "ouzana_3",
+        "ouzana_4",
+        "ouzana_5",
+        "ouzana_6",
+        "ouzana_7"
+      ],
+      "loop": false
+    },
+    "fabio": {
+      "frames": [
+        "fabio_0",
+        "fabio_1",
+        "fabio_2",
+        "fabio_3",
+        "fabio_4",
+        "fabio_5",
+        "fabio_6",
+        "fabio_7"
+      ],
+      "loop": false
+    },
+    "fabio_hold": {
+      "frames": [
+        "fabio_3",
+        "fabio_4"
+      ],
+      "loop": true
+    }
+  }
+}

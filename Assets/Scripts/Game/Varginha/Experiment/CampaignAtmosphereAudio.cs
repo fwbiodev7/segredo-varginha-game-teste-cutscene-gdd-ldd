@@ -9,6 +9,7 @@ namespace Game.Varginha.Experiment
         public static AudioClip Bed(string environment, int band)
         {
             band = Mathf.Clamp(band, 0, 2);
+            var recorded=CampaignRecordedAudio.Ambient(environment,band);if(recorded!=null)return recorded;
             string key = environment + "_Atmosfera_" + band;
             if (Cache.TryGetValue(key, out var clip) && clip != null) return clip;
             const int rate = 11025, seconds = 24;

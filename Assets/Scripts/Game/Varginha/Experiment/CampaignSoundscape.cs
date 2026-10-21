@@ -16,9 +16,14 @@ namespace Game.Varginha.Experiment
         private Vector3 _previous;
         private float _stride;
         private bool _school;
+        private string _surface;
+        private AudioSource _shield;private float _shieldRemaining;private bool _shieldPaused,_suspended;
+        public string LastEvent{get;private set;}public int EventSerial{get;private set;}
+        public bool OwnsDynamicSource(AudioSource source)=>source==_engine||source==_shield;
         public void Configure(string environment, EdelzioTopDownController actor = null)
         {
             _actor = actor; _school = environment == "School" || environment == "Lab" || environment == "Church" || environment == "Workshop";
+            _surface=environment=="Forest"?"FootNature":_school?"FootTile":"FootWood";
             _effects = gameObject.AddComponent<AudioSource>(); _effects.playOnAwake = false; _effects.volume = .48f;
             _ambient = CampaignAmbientBridge.Instance;
             _ambient.Suspend(false); _ambient.Duck(0); _ambient.Transition(Clip(environment + "Ambience"));
@@ -30,6 +35,7 @@ namespace Game.Varginha.Experiment
             }
             var atmosphere = GetComponent<CampaignAtmosphereDirector>() ?? gameObject.AddComponent<CampaignAtmosphereDirector>();
             atmosphere.Configure(environment, actor);
+            if(environment=="Church")Play("ChurchBell");
         }
         public void Engine(bool running, float throttle = 0)
         {
@@ -46,13 +52,15 @@ namespace Game.Varginha.Experiment
         public void Voice(AudioClip clip) { if(clip!=null&&_effects!=null)_effects.PlayOneShot(clip,.85f); }
         public void Play(string sound)
         {
-            if (_effects != null) _effects.PlayOneShot(Clip(sound), sound.StartsWith("Foot") ? .16f : 1f);
+            sound=CampaignRecordedAudio.NextFoot(sound);LastEvent=sound;EventSerial++;
+            if (_effects != null) _effects.PlayOneShot(Clip(sound), (sound.StartsWith("Foot") ? .16f : 1f)*CampaignRecordedAudio.Gain(sound));
             if (sound == "ManifestationRise" || sound == "ManifestationTear" || sound == "AlienBurst") CampaignAtmosphereDirector.Interference(.65f);
         }
         public void PlayRadioInterference(bool reducedMotion)
-        { if (_effects != null) _effects.PlayOneShot(Clip("RadioInterference"), reducedMotion ? .3f : .55f); CampaignAtmosphereDirector.Interference(.2f); }
+        { LastEvent="RadioInterference";EventSerial++;if (_effects != null) _effects.PlayOneShot(Clip("RadioInterference"), (reducedMotion ? .3f : .55f)*CampaignRecordedAudio.Gain("RadioInterference")); CampaignAtmosphereDirector.Interference(.2f); }
         public void PlayAt(string sound, Vector3 position)
         {
+            sound=CampaignRecordedAudio.NextFoot(sound);LastEvent=sound;EventSerial++;
             if (_positional == null)
             {
                 var emitter = new GameObject("Som_posicional"); emitter.transform.SetParent(transform);
@@ -62,27 +70,48 @@ namespace Game.Varginha.Experiment
                 _positional.dopplerLevel = 0;
             }
             _positional.transform.position = position;
-            _positional.PlayOneShot(Clip(sound), sound.StartsWith("Foot") ? .16f : 1);
+            _positional.PlayOneShot(Clip(sound), (sound.StartsWith("Foot") ? .16f : 1)*CampaignRecordedAudio.Gain(sound));
         }
+        public void BeginShield(float duration)
+        {
+            if(_shield==null){_shield=gameObject.AddComponent<AudioSource>();_shield.playOnAwake=false;_shield.loop=true;}
+            _shield.clip=Clip("FabioShield");_shield.volume=.24f*CampaignRecordedAudio.Gain("FabioShield");
+            _shieldRemaining=duration;_shieldPaused=false;LastEvent="FabioShield";EventSerial++;_shield.Play();
+        }
+        public void EndShield(){if(_shield!=null)_shield.Stop();_shieldRemaining=0;_shieldPaused=false;}
         public void CinematicDucking(float weight) { _cinematicDuck = Mathf.Clamp01(weight); _ambient?.Duck(_cinematicDuck); }
         public void Suspend(bool value)
         {
+            _suspended=value;
             _ambient?.Suspend(value);
             if (value) { _engine?.Pause(); _effects?.Pause(); _positional?.Pause(); }
             else { _engine?.UnPause(); _effects?.UnPause(); _positional?.UnPause(); }
+            // A different modal/global pause may still be active when this suspension ends.
+            // Update resumes only after all pause reasons have cleared.
+            if(value){_shield?.Pause();_shieldPaused=true;}
         }
         private void Update()
         {
+            if(_engine!=null)_engine.volume=.22f*CampaignRecordedAudio.Gain("Engine")*VarginhaGameSettings.Current.effects;
+            if(_shield!=null&&_shieldRemaining>0)
+            {
+                bool pause=_suspended||Time.timeScale<=0||CampaignContinuationController.Active?.Modal==true||_actor?.IsInputLocked==true;
+                if(pause!=_shieldPaused){_shieldPaused=pause;if(pause)_shield.Pause();else _shield.UnPause();}
+                if(!pause)_shieldRemaining-=Time.deltaTime;
+                if(_shieldRemaining<=0)EndShield();
+                else _shield.volume=.24f*CampaignRecordedAudio.Gain("FabioShield")*VarginhaGameSettings.Current.effects*Mathf.Clamp01(_shieldRemaining/.35f);
+            }
             if (_ambient != null && Time.timeScale > 0)
                 _ambient.Duck(Mathf.Max(_cinematicDuck, _actor != null && _actor.IsInputLocked ? .55f : 0));
             if (_actor == null) return;
             float distance = Vector2.Distance(_previous, _actor.transform.position); _previous = _actor.transform.position;
             if (Time.timeScale <= 0 || _actor.IsInputLocked || distance > .5f) return;
             _stride += distance;
-            if (_stride > (_actor.IsRunning ? .85f : .65f)) { _stride = 0; PlayAt(_school ? "FootTile" : "FootWood", _actor.transform.position); }
+            if (_stride > (_actor.IsRunning ? .85f : .65f)) { _stride = 0; PlayAt(_surface, _actor.transform.position); }
         }
         public static AudioClip Clip(string id)
         {
+            var recorded=CampaignRecordedAudio.Clip(id);if(recorded!=null)return recorded;
             if (Clips.TryGetValue(id, out var clip) && clip != null) return clip;
             const int rate = 22050;
             bool ambient = id.Contains("Ambience"), engine = id == "Engine";

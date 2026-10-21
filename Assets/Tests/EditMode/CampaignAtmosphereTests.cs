@@ -43,13 +43,13 @@ namespace Game.Tests.EditMode
             Assert.That(CampaignAtmosphereProfile.Environment(6), Is.EqualTo("House"));
             Assert.That(CampaignAtmosphereProfile.Environment(21, 1), Is.EqualTo("School"));
         }
-        [Test] public void CachedStereoBedsHaveHeadroomAndSeamlessEndpoints()
+        [Test] public void ProceduralStereoBedsHaveHeadroomAndSeamlessEndpoints()
         {
             AudioClip previous = null;
             for (int band = 0; band < 3; band++)
             {
-                var clip = CampaignAtmosphereAudio.Bed("Forest", band);
-                Assert.That(clip, Is.SameAs(CampaignAtmosphereAudio.Bed("Forest", band)));
+                var clip = CampaignAtmosphereAudio.Bed("Road", band);
+                Assert.That(clip, Is.SameAs(CampaignAtmosphereAudio.Bed("Road", band)));
                 Assert.That(clip, Is.Not.SameAs(previous)); previous = clip;
                 Assert.That(clip.channels, Is.EqualTo(2)); Assert.That(clip.length, Is.EqualTo(24).Within(.001f));
                 var samples = new float[clip.samples * clip.channels]; Assert.That(clip.GetData(samples, 0), Is.True);

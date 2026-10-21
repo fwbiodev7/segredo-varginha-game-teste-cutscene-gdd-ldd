@@ -1,0 +1,12 @@
+{
+  "source": "output\\audio-integration-2026-10-21\\player-native.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

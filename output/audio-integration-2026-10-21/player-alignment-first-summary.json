@@ -1,0 +1,18 @@
+{
+  "source": "output\\audio-integration-2026-10-21\\player-native.xml",
+  "runResult": "Failed",
+  "tests": {
+    "total": 4,
+    "passed": 3,
+    "failed": 1,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals",
+      "message": "  Effects are destroyed at cast end.\n  Expected: False\n  But was:  True\n",
+      "stack": "at Game.Tests.PlayMode.CampaignRecordedAudioPlayTests+<ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals>d__11.MoveNext () [0x0069d] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\CampaignRecordedAudioPlayTests.cs:94\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    }
+  ],
+  "success": false
+}

@@ -1,0 +1,330 @@
+{
+  "success": true,
+  "status": "needs_review",
+  "errors": [],
+  "warnings": [
+    "Visible content touches original canvas edge; inspect clipping: renan_1",
+    "Visible content touches original canvas edge; inspect clipping: renan_2",
+    "Visible content touches original canvas edge; inspect clipping: renan_3",
+    "Visible area jump in ouzana: ouzana_0 -> ouzana_1; review pose/effects"
+  ],
+  "frames": [
+    {
+      "id": "renan_0",
+      "bbox": [
+        32,
+        1,
+        288,
+        266
+      ],
+      "visiblePixels": 13697,
+      "colors": 9076,
+      "semiTransparentPixels": 13697,
+      "pixelsSha256": "7d5aa984b23a273636840837647db8890869d1a57b96aac9382406cd54c119b9"
+    },
+    {
+      "id": "renan_1",
+      "bbox": [
+        32,
+        0,
+        288,
+        266
+      ],
+      "visiblePixels": 22691,
+      "colors": 13598,
+      "semiTransparentPixels": 22691,
+      "pixelsSha256": "d85f346384677b1999a6b97cd4292389c072cffeb9f333e879c5bf0e73793c51"
+    },
+    {
+      "id": "renan_2",
+      "bbox": [
+        32,
+        0,
+        288,
+        266
+      ],
+      "visiblePixels": 29386,
+      "colors": 17131,
+      "semiTransparentPixels": 29386,
+      "pixelsSha256": "5bc7989fa8b1fa4173b6e4200cf405a6361a2d46cd69c30ce012954ecf6f7ea7"
+    },
+    {
+      "id": "renan_3",
+      "bbox": [
+        32,
+        0,
+        288,
+        266
+      ],
+      "visiblePixels": 42078,
+      "colors": 24936,
+      "semiTransparentPixels": 42078,
+      "pixelsSha256": "3b34c1cb19b5fbf0a8afff29cd4abc04a6b237efef2a4a1c7b9e6a64235713ea"
+    },
+    {
+      "id": "renan_4",
+      "bbox": [
+        32,
+        16,
+        288,
+        282
+      ],
+      "visiblePixels": 40511,
+      "colors": 26585,
+      "semiTransparentPixels": 40511,
+      "pixelsSha256": "a53b3f356977b955ecae2d4c7995ff6dd2aefaa99d38ea9f71942d43d41076c2"
+    },
+    {
+      "id": "renan_5",
+      "bbox": [
+        32,
+        16,
+        288,
+        282
+      ],
+      "visiblePixels": 38305,
+      "colors": 21101,
+      "semiTransparentPixels": 38305,
+      "pixelsSha256": "e5df4c217b889932f08fa29c8a51af4b5acbe3de00c0a29613dc82edfae0e7bf"
+    },
+    {
+      "id": "renan_6",
+      "bbox": [
+        32,
+        16,
+        288,
+        282
+      ],
+      "visiblePixels": 36113,
+      "colors": 18317,
+      "semiTransparentPixels": 36113,
+      "pixelsSha256": "d39134e9ae9c366d300542a9c2c8520ec469bc98ac54159e85652925af449ffb"
+    },
+    {
+      "id": "renan_7",
+      "bbox": [
+        32,
+        16,
+        287,
+        282
+      ],
+      "visiblePixels": 25219,
+      "colors": 10252,
+      "semiTransparentPixels": 25219,
+      "pixelsSha256": "79bc7c6101833542d2ff15a401553d8610ad2936795775bbfa4f066043488e67"
+    },
+    {
+      "id": "ouzana_0",
+      "bbox": [
+        32,
+        32,
+        288,
+        266
+      ],
+      "visiblePixels": 13829,
+      "colors": 8978,
+      "semiTransparentPixels": 13829,
+      "pixelsSha256": "df5007ad0e07220ff9b6a0e6a060bc3db907129b3ce8bd8efbfe750f43b922a3"
+    },
+    {
+      "id": "ouzana_1",
+      "bbox": [
+        32,
+        32,
+        288,
+        266
+      ],
+      "visiblePixels": 26878,
+      "colors": 16946,
+      "semiTransparentPixels": 26878,
+      "pixelsSha256": "00bb461a797a2498633febbfab248420d1babc192063c73da3f67a26c153cbbd"
+    },
+    {
+      "id": "ouzana_2",
+      "bbox": [
+        33,
+        32,
+        288,
+        266
+      ],
+      "visiblePixels": 38214,
+      "colors": 22053,
+      "semiTransparentPixels": 38214,
+      "pixelsSha256": "6114c728da6d4cc6b2bc9cbf9078b4c474f0d37ec90166afb249f5c722c2a51a"
+    },
+    {
+      "id": "ouzana_3",
+      "bbox": [
+        32,
+        32,
+        288,
+        266
+      ],
+      "visiblePixels": 37785,
+      "colors": 17973,
+      "semiTransparentPixels": 37785,
+      "pixelsSha256": "db3e5b1773e1f11e1834bd14272e524b9ad65a155c26e4f6148594313ff29e17"
+    },
+    {
+      "id": "ouzana_4",
+      "bbox": [
+        32,
+        11,
+        288,
+        250
+      ],
+      "visiblePixels": 42483,
+      "colors": 19939,
+      "semiTransparentPixels": 42483,
+      "pixelsSha256": "c70ce1fcc85de901db7b63aa9446a8b020ceed7072ceae3df16fb6d850688a39"
+    },
+    {
+      "id": "ouzana_5",
+      "bbox": [
+        32,
+        10,
+        288,
+        250
+      ],
+      "visiblePixels": 48250,
+      "colors": 23851,
+      "semiTransparentPixels": 48250,
+      "pixelsSha256": "58e0e60050e8f7bd7791b319c9acf1764e7d65071911739aee6770dc9ffd883b"
+    },
+    {
+      "id": "ouzana_6",
+      "bbox": [
+        32,
+        10,
+        288,
+        250
+      ],
+      "visiblePixels": 41123,
+      "colors": 19565,
+      "semiTransparentPixels": 41123,
+      "pixelsSha256": "1707ca713f73945a3c1243eb0031371ba4cfa5741625eb066a1d087bba7e28e2"
+    },
+    {
+      "id": "ouzana_7",
+      "bbox": [
+        32,
+        10,
+        288,
+        250
+      ],
+      "visiblePixels": 31880,
+      "colors": 13253,
+      "semiTransparentPixels": 31880,
+      "pixelsSha256": "b8b8346e86ad74be4d6000e9a2fe91f32dcd3870c12ead28d5ebee9bf0664f8b"
+    },
+    {
+      "id": "fabio_0",
+      "bbox": [
+        32,
+        50,
+        288,
+        268
+      ],
+      "visiblePixels": 28203,
+      "colors": 9484,
+      "semiTransparentPixels": 28203,
+      "pixelsSha256": "7f4e1872313a53b3b6b86a44d1cd557631d4d3543ba4f0ad97fb7ecc5da79023"
+    },
+    {
+      "id": "fabio_1",
+      "bbox": [
+        32,
+        50,
+        288,
+        268
+      ],
+      "visiblePixels": 39383,
+      "colors": 13341,
+      "semiTransparentPixels": 39383,
+      "pixelsSha256": "e82e2af36a7098be62456fc1dc52371c085ce2ca274e4cf811156fc7980b5b9d"
+    },
+    {
+      "id": "fabio_2",
+      "bbox": [
+        32,
+        50,
+        288,
+        268
+      ],
+      "visiblePixels": 46099,
+      "colors": 14514,
+      "semiTransparentPixels": 46099,
+      "pixelsSha256": "f94a3f7a7f4544e800e4619be4e3e984caabfa8876f5898c36b291ff5a2eb5d3"
+    },
+    {
+      "id": "fabio_3",
+      "bbox": [
+        32,
+        50,
+        288,
+        268
+      ],
+      "visiblePixels": 45499,
+      "colors": 15140,
+      "semiTransparentPixels": 45499,
+      "pixelsSha256": "eb8dfe7ecbd518f3980ee493e535270494a3464f5bedac36012be5384df3a34a"
+    },
+    {
+      "id": "fabio_4",
+      "bbox": [
+        32,
+        86,
+        288,
+        286
+      ],
+      "visiblePixels": 47036,
+      "colors": 10942,
+      "semiTransparentPixels": 47036,
+      "pixelsSha256": "ebe381dd9bb522b98b44d8755147e9826a274f84da4560ba38539430e13e5e7a"
+    },
+    {
+      "id": "fabio_5",
+      "bbox": [
+        32,
+        86,
+        288,
+        286
+      ],
+      "visiblePixels": 48085,
+      "colors": 9744,
+      "semiTransparentPixels": 48085,
+      "pixelsSha256": "c654478ab7c2f240fc02a7e0d879f5d9cd25ed6d13b7af38cd8e71ed72e17a73"
+    },
+    {
+      "id": "fabio_6",
+      "bbox": [
+        32,
+        86,
+        288,
+        286
+      ],
+      "visiblePixels": 46618,
+      "colors": 7500,
+      "semiTransparentPixels": 46618,
+      "pixelsSha256": "e3648dfae5b174ac10a8ffbf1427fc23b79c3e1f0dd3aae071f11138cfc6da77"
+    },
+    {
+      "id": "fabio_7",
+      "bbox": [
+        32,
+        86,
+        288,
+        286
+      ],
+      "visiblePixels": 39270,
+      "colors": 6190,
+      "semiTransparentPixels": 39270,
+      "pixelsSha256": "77c960b65defa449408e28cf88b06ead903b9fe27d72db95e9a779b47e179089"
+    }
+  ],
+  "paletteColors": 246718,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\audio-integration-2026-10-21\\art\\export\\atlas.json",
+  "metadataSha256": "a87616f36bd638d70c039e68b31cd3deb3162ede6d05c8424dacff3d037c82cc"
+}

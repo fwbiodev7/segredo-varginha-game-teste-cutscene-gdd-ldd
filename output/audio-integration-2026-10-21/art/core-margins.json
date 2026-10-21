@@ -1,0 +1,247 @@
+{
+  "success": true,
+  "minimumCoreMargin": 32,
+  "frames": [
+    {
+      "frame": "renan_0",
+      "bboxAtRuntimeCutoff": [
+        95,
+        107,
+        210,
+        202
+      ],
+      "margin": 95
+    },
+    {
+      "frame": "renan_1",
+      "bboxAtRuntimeCutoff": [
+        44,
+        111,
+        252,
+        202
+      ],
+      "margin": 44
+    },
+    {
+      "frame": "renan_2",
+      "bboxAtRuntimeCutoff": [
+        47,
+        94,
+        267,
+        211
+      ],
+      "margin": 47
+    },
+    {
+      "frame": "renan_3",
+      "bboxAtRuntimeCutoff": [
+        40,
+        32,
+        272,
+        240
+      ],
+      "margin": 32
+    },
+    {
+      "frame": "renan_4",
+      "bboxAtRuntimeCutoff": [
+        52,
+        78,
+        272,
+        248
+      ],
+      "margin": 48
+    },
+    {
+      "frame": "renan_5",
+      "bboxAtRuntimeCutoff": [
+        56,
+        87,
+        264,
+        232
+      ],
+      "margin": 56
+    },
+    {
+      "frame": "renan_6",
+      "bboxAtRuntimeCutoff": [
+        60,
+        98,
+        267,
+        240
+      ],
+      "margin": 53
+    },
+    {
+      "frame": "renan_7",
+      "bboxAtRuntimeCutoff": [
+        65,
+        102,
+        253,
+        229
+      ],
+      "margin": 65
+    },
+    {
+      "frame": "ouzana_0",
+      "bboxAtRuntimeCutoff": [
+        118,
+        103,
+        203,
+        219
+      ],
+      "margin": 101
+    },
+    {
+      "frame": "ouzana_1",
+      "bboxAtRuntimeCutoff": [
+        65,
+        81,
+        263,
+        237
+      ],
+      "margin": 57
+    },
+    {
+      "frame": "ouzana_2",
+      "bboxAtRuntimeCutoff": [
+        51,
+        54,
+        262,
+        254
+      ],
+      "margin": 51
+    },
+    {
+      "frame": "ouzana_3",
+      "bboxAtRuntimeCutoff": [
+        40,
+        78,
+        273,
+        257
+      ],
+      "margin": 40
+    },
+    {
+      "frame": "ouzana_4",
+      "bboxAtRuntimeCutoff": [
+        48,
+        68,
+        272,
+        238
+      ],
+      "margin": 48
+    },
+    {
+      "frame": "ouzana_5",
+      "bboxAtRuntimeCutoff": [
+        44,
+        40,
+        280,
+        241
+      ],
+      "margin": 40
+    },
+    {
+      "frame": "ouzana_6",
+      "bboxAtRuntimeCutoff": [
+        49,
+        80,
+        280,
+        241
+      ],
+      "margin": 40
+    },
+    {
+      "frame": "ouzana_7",
+      "bboxAtRuntimeCutoff": [
+        61,
+        85,
+        267,
+        241
+      ],
+      "margin": 53
+    },
+    {
+      "frame": "fabio_0",
+      "bboxAtRuntimeCutoff": [
+        80,
+        147,
+        240,
+        243
+      ],
+      "margin": 77
+    },
+    {
+      "frame": "fabio_1",
+      "bboxAtRuntimeCutoff": [
+        50,
+        83,
+        275,
+        246
+      ],
+      "margin": 45
+    },
+    {
+      "frame": "fabio_2",
+      "bboxAtRuntimeCutoff": [
+        41,
+        75,
+        276,
+        253
+      ],
+      "margin": 41
+    },
+    {
+      "frame": "fabio_3",
+      "bboxAtRuntimeCutoff": [
+        44,
+        75,
+        273,
+        258
+      ],
+      "margin": 44
+    },
+    {
+      "frame": "fabio_4",
+      "bboxAtRuntimeCutoff": [
+        48,
+        95,
+        271,
+        260
+      ],
+      "margin": 48
+    },
+    {
+      "frame": "fabio_5",
+      "bboxAtRuntimeCutoff": [
+        42,
+        103,
+        277,
+        260
+      ],
+      "margin": 42
+    },
+    {
+      "frame": "fabio_6",
+      "bboxAtRuntimeCutoff": [
+        52,
+        116,
+        269,
+        257
+      ],
+      "margin": 51
+    },
+    {
+      "frame": "fabio_7",
+      "bboxAtRuntimeCutoff": [
+        58,
+        151,
+        256,
+        257
+      ],
+      "margin": 58
+    }
+  ],
+  "note": "Low-alpha source haze explains raw bbox warnings. Cyber/flask use runtime alpha cutoff 0.5; the transparent shield keeps alpha for readability."
+}

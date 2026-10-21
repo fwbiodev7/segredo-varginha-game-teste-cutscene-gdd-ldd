@@ -1,0 +1,12 @@
+{
+  "source": "output\\audio-integration-2026-10-21\\editmode-accepted.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 389,
+    "passed": 389,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

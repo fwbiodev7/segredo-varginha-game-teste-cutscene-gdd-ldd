@@ -1,0 +1,18 @@
+{
+  "source": "output\\audio-integration-2026-10-21\\player-native.xml",
+  "runResult": "Failed",
+  "tests": {
+    "total": 9,
+    "passed": 8,
+    "failed": 1,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals",
+      "message": "Unhandled log message: '[Exception] NullReferenceException: Object reference not set to an instance of an object'. Use UnityEngine.TestTools.LogAssert.Expect",
+      "stack": "Game.Varginha.Experiment.CampaignCyberPulse.Awake () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignCyberPulse.cs:15)\nUnityEngine.GameObject:AddComponent()\nGame.Varginha.Experiment.<Present>d__57:MoveNext() (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignFinalAllies.cs:132)\nUnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:/build/output/unity/unity/Runtime/Export/Scripting/Coroutines.cs:17)\n\n"
+    }
+  ],
+  "success": false
+}

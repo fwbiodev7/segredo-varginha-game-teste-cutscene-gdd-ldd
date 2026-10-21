@@ -171,7 +171,7 @@ namespace Game.Varginha.Experiment
                     CampaignCameraDirector.Reveal(car.transform.position,4);
                     door=car.GetComponent<FuscaDoorMotion>()??car.AddComponent<FuscaDoorMotion>();
                     if(body!=null){body.linearVelocity=Vector2.zero;body.simulated=false;}
-                    Vector3 start=_player.transform.position;
+                    Vector3 start=_player.transform.position;_sound.Play("DoorOpen");
                     for(float t=0;t<.7f&&!_cinemaSkipRequested;t+=Time.deltaTime)
                     {door.SetOpenAmount(t/.7f);_player.transform.position=Vector3.Lerp(start,door.EntryPosition,Mathf.SmoothStep(0,1,t/.7f));yield return null;}
                     _player.SetCarriedItemsVisible(false);
@@ -190,13 +190,13 @@ namespace Game.Varginha.Experiment
                     {
                         case 0:_sound.BeginRoad();_sound.Engine(true,.4f);break;
                         case 1:_sound.PlayRadioInterference(VarginhaGameSettings.Current.reducedMotion);break;
-                        case 2:_sound.Engine(false);break;
+                        case 2:_sound.Engine(false);_sound.Play("CarFail");break;
                         case 3:
                             _sound.PlayRadioInterference(VarginhaGameSettings.Current.reducedMotion);
                             _sound.Voice(Resources.Load<AudioClip>("Varginha/Audio/EdelzioCrianca_NaoDeixaElaSair"));break;
                         case 4:_sound.CinematicDucking(1);break;
                         case 5:_sound.CinematicDucking(0);_sound.Play("Starter");_sound.Engine(true,.4f);break;
-                        case 6:_sound.Engine(false);break;
+                        case 6:_sound.Engine(false);_sound.Play("DoorOpen");break;
                     }
                     yield return MissionWait(shot.duration);
                 }

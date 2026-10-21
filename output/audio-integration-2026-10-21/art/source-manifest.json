@@ -1,0 +1,18 @@
+[
+  {
+    "path": "Assets/Resources/Varginha/StoryCharacters/SupportEffects.png",
+    "sha256": "8f7fe4bb1f893f303c41e1b5f731d4f8f1734349ad9dbae1eeb741a8571bae88"
+  },
+  {
+    "path": "Assets/Resources/Varginha/StoryCharacters/SupportAttacks.png",
+    "sha256": "f2570cb715121ecaec71aff7b8525d11a3e3befabbd06e679914918c9f70071c"
+  },
+  {
+    "path": "Assets/Resources/Varginha/StoryCharacters/SupportEffectsV2.png",
+    "sha256": "925c15b5ed93d23eccb989cb64b0a6a0189ebe1c2702eb9cf5f27db1ef2eb29f"
+  },
+  {
+    "path": "output/audio-integration-2026-10-21/art/source/generated-source.png",
+    "sha256": "b5dc030bd27aead8e50d5c06d3a4bc435f14e011dbbb8177f244359bd50dd154"
+  }
+]

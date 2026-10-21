@@ -1,0 +1,167 @@
+{
+  "clips": [
+    {
+      "clip": "renan",
+      "file": "clip_000.png",
+      "loop": false,
+      "sequence": [
+        "renan_0",
+        "renan_1",
+        "renan_2",
+        "renan_3",
+        "renan_4",
+        "renan_5",
+        "renan_6",
+        "renan_7"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": [
+        [
+          "renan_0",
+          "renan_1"
+        ],
+        [
+          "renan_1",
+          "renan_2"
+        ],
+        [
+          "renan_2",
+          "renan_3"
+        ],
+        [
+          "renan_3",
+          "renan_4"
+        ],
+        [
+          "renan_4",
+          "renan_5"
+        ],
+        [
+          "renan_5",
+          "renan_6"
+        ],
+        [
+          "renan_6",
+          "renan_7"
+        ]
+      ]
+    },
+    {
+      "clip": "ouzana",
+      "file": "clip_001.png",
+      "loop": false,
+      "sequence": [
+        "ouzana_0",
+        "ouzana_1",
+        "ouzana_2",
+        "ouzana_3",
+        "ouzana_4",
+        "ouzana_5",
+        "ouzana_6",
+        "ouzana_7"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 3198,
+      "overlayPairs": [
+        [
+          "ouzana_0",
+          "ouzana_1"
+        ],
+        [
+          "ouzana_1",
+          "ouzana_2"
+        ],
+        [
+          "ouzana_2",
+          "ouzana_3"
+        ],
+        [
+          "ouzana_3",
+          "ouzana_4"
+        ],
+        [
+          "ouzana_4",
+          "ouzana_5"
+        ],
+        [
+          "ouzana_5",
+          "ouzana_6"
+        ],
+        [
+          "ouzana_6",
+          "ouzana_7"
+        ]
+      ]
+    },
+    {
+      "clip": "fabio",
+      "file": "clip_002.png",
+      "loop": false,
+      "sequence": [
+        "fabio_0",
+        "fabio_1",
+        "fabio_2",
+        "fabio_3",
+        "fabio_4",
+        "fabio_5",
+        "fabio_6",
+        "fabio_7"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 2268,
+      "overlayPairs": [
+        [
+          "fabio_0",
+          "fabio_1"
+        ],
+        [
+          "fabio_1",
+          "fabio_2"
+        ],
+        [
+          "fabio_2",
+          "fabio_3"
+        ],
+        [
+          "fabio_3",
+          "fabio_4"
+        ],
+        [
+          "fabio_4",
+          "fabio_5"
+        ],
+        [
+          "fabio_5",
+          "fabio_6"
+        ],
+        [
+          "fabio_6",
+          "fabio_7"
+        ]
+      ]
+    },
+    {
+      "clip": "fabio_hold",
+      "file": "clip_003.png",
+      "loop": true,
+      "sequence": [
+        "fabio_3",
+        "fabio_4"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": [
+        [
+          "fabio_3",
+          "fabio_4"
+        ],
+        [
+          "fabio_4",
+          "fabio_3"
+        ]
+      ]
+    }
+  ],
+  "visualReviewCompleted": false
+}

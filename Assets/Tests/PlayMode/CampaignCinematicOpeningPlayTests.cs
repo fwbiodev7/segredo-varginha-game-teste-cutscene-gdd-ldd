@@ -55,10 +55,11 @@ namespace Game.Tests.PlayMode
             yield return House(0,false);var stage=VarginhaCampaignStage.Active;stage.Interact("car");
             var recorder=new GameObject("QA_Cinema_Recorder").AddComponent<CinemaFrameRecorder>();
             Assert.That(stage.TrySkipMissionCinema(),Is.False,"A first viewing cannot be skipped.");
-            var visited=new List<string>();float deadline=Time.realtimeSinceStartup+65;bool paused=false,released=false,withdrawn=false,exit=false,gate=false,signal=false;
+            var visited=new List<string>();var sounds=new HashSet<string>();int soundSerial=-1;float deadline=Time.realtimeSinceStartup+65;bool paused=false,released=false,withdrawn=false,exit=false,gate=false,signal=false;
             var driverCaptured=new bool[4];
             while(VarginhaCampaignStage.Active==stage&&Time.realtimeSinceStartup<deadline)
             {
+                var sound=stage.GetComponent<CampaignSoundscape>();if(sound.EventSerial!=soundSerial){sounds.Add(sound.LastEvent??"");soundSerial=sound.EventSerial;}
                 string title=Title(stage);
                 if(title=="VARGINHA • 2026")
                 {
@@ -84,6 +85,7 @@ namespace Game.Tests.PlayMode
                 yield return null;
             }
             CollectionAssert.AreEqual(CampaignFuscaCinema.Shots.Select(s=>s.title).ToArray(),visited);
+            foreach(string cue in new[]{"DoorOpen","Starter","CarFail","RadioInterference"})Assert.That(sounds.Contains(cue),Is.True,cue);
             if(recorder!=null)Object.Destroy(recorder.gameObject); // scene changes may have already removed the QA recorder
             Assert.That(paused,Is.True);Assert.That(CampaignStorySave.Load().cinematicsSeen&8,Is.EqualTo(8));
             Assert.That(released&&withdrawn,Is.True,"All ignition poses must be reached before spontaneous restart.");
@@ -132,6 +134,7 @@ namespace Game.Tests.PlayMode
             CampaignMemorySave.Write(new CampaignMemory());CampaignStorySave.Write(new CampaignStory{phase=1});
             yield return SceneManager.LoadSceneAsync(VarginhaCampaignPhase1.SceneName);yield return null;yield return null;
             var phase=VarginhaCampaignPhase1.Active;var seen=new HashSet<string>();var child=new bool[8];bool paused=false,room=false;
+            Assert.That(phase.GetComponents<AudioSource>().Any(s=>s.clip==CampaignRecordedAudio.Clip("TelevisionAmbience")),Is.True);
             var recorder=new GameObject("QA_Prologue_Recorder").AddComponent<CinemaFrameRecorder>();recorder.folderName="opening-film";
             float deadline=Time.realtimeSinceStartup+45;
             while(!phase.IsExploring&&Time.realtimeSinceStartup<deadline)

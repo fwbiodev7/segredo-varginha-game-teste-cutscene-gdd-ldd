@@ -26,6 +26,8 @@ def main():
     archive=folder.parent/(folder.name+'_Windows_x64.zip')
     if archive.exists():raise FileExistsError(archive)
     shutil.copyfile(ROOT/'Docs/CampanhaOficial/PLAYTEST_2026-10-21.md',folder/'LEIA-ME_PLAYTEST.md')
+    if report['version']=='0.4.4-beta':
+        shutil.copyfile(ROOT/'Docs/CampanhaOficial/CREDITOS_AUDIO_RECEBIDO_2026-10-21.md',folder/'CREDITOS_AUDIO.md')
     def ship(p):
         return not any(part.endswith(('_BackUpThisFolder_ButDontShipItWithYourGame','_BurstDebugInformation_DoNotShip')) for part in p.relative_to(folder).parts)
     files=[p for p in sorted(folder.rglob('*')) if p.is_file() and p.name!='MANIFEST_SHA256.json' and ship(p)]

@@ -4,7 +4,11 @@
 
 Trinta anos depois de uma noite esquecida, Edelzio encontra uma caixa que devolve perguntas sobre seu passado. Explore casas, a Escola Industrial, trilhas e laboratórios; converse com Renan, Padre Fábio e Ouzana; reúna pistas e conte com seus aliados quando a investigação se transformar em combate.
 
-**Em desenvolvimento · 14 capítulos · candidata Windows 0.4.3-beta · atualização: 21/10/2026.**
+**Em desenvolvimento · 14 capítulos · candidata Windows 0.4.4-beta · atualização: 21/10/2026.**
+
+Revisão atual: [integração dos sons recebidos](Docs/CampanhaOficial/INTEGRACAO_AUDIO_2026-10-21.md), [artes e correções dos apoios](Docs/CampanhaOficial/AUDITORIA_APOIOS_2026-10-21.md), com pulso cyber do Renan, frasco da Ouzana e escudo transparente do Padre. [Relatório, testes e prints](output/audio-integration-2026-10-21/RELATORIO.md); [daily atualizada](output/daily-sprint-2026-10-20/A_Sprint_Final_Varginha.html). Pacote local: `Builds/Varginha_0.4.4-beta_2026-10-21_Windows_x64.zip`. As entregas abaixo permanecem históricas.
+
+[**Baixar beta 0.4.4 no GitHub**](https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/releases/tag/v0.4.4-beta) — build Windows, HTML da daily e relatório. É uma pré-release; a mixagem, o balanceamento com pessoas e o teste em outro PC continuam na [lista de pendências](Docs/CampanhaOficial/PENDENCIAS_2026-10-21.md).
 
 Revisão visual mais recente: [abertura de 1996 animada e fase adulta às 7h](Docs/CampanhaOficial/POLIMENTO_VISUAL_E_ABERTURA_2026-10-21.md), cabine cartunesca, paisagem baseada na fotografia de Varginha, mapa de Fragmentos ilustrado e picos de interferência mais densos. [Relatório e testes desta revisão](output/visual-polish-2026-10-21/RELATORIO.md); prévias silenciosas do [prólogo](output/visual-polish-2026-10-21/opening-preview.html) e da [viagem do Fusca](output/visual-polish-2026-10-21/preview.html). O novo pacote local é `Builds/Varginha_0.4.3-beta_2026-10-21_Windows_x64.zip`. A entrega 0.4.2 abaixo fica preservada como histórico.
 

@@ -1,0 +1,91 @@
+{
+  "slides": 10,
+  "referenceSlides": 33,
+  "font": true,
+  "images": true,
+  "errors": [],
+  "overflow": [],
+  "keyboard": true,
+  "notes": true,
+  "escape": true,
+  "transitions": [
+    {
+      "effect": "pixels",
+      "active": true,
+      "animations": 156,
+      "index": 1,
+      "settled": true
+    },
+    {
+      "effect": "portal",
+      "active": true,
+      "animations": 16,
+      "index": 2,
+      "settled": true
+    },
+    {
+      "effect": "blinds",
+      "active": true,
+      "animations": 159,
+      "index": 3,
+      "settled": true
+    },
+    {
+      "effect": "diagonal",
+      "active": true,
+      "animations": 16,
+      "index": 4,
+      "settled": true
+    },
+    {
+      "effect": "diamond",
+      "active": true,
+      "animations": 16,
+      "index": 5,
+      "settled": true
+    },
+    {
+      "effect": "doors",
+      "active": true,
+      "animations": 17,
+      "index": 6,
+      "settled": true
+    },
+    {
+      "effect": "crt",
+      "active": true,
+      "animations": 14,
+      "index": 7,
+      "settled": true
+    },
+    {
+      "effect": "film",
+      "active": true,
+      "animations": 18,
+      "index": 8,
+      "settled": true
+    },
+    {
+      "effect": "signal",
+      "active": true,
+      "animations": 16,
+      "index": 9,
+      "settled": true
+    }
+  ],
+  "allTransitions": true,
+  "rapidNavigation": {
+    "index": 4,
+    "active": 1,
+    "leaving": 0,
+    "hidden": 9
+  },
+  "lastSlide": "Dúvidas, opiniões\ne feedbacks",
+  "endBoundary": true,
+  "effectsOff": true,
+  "homeBoundary": true,
+  "printSlides": 10,
+  "reducedMotion": true,
+  "failures": [],
+  "success": true
+}

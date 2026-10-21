@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="10" result="Passed" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="0001-01-01 00:00:00Z" end-time="0001-01-01 00:00:00Z" duration="179,10181">
+  <test-suite type="TestSuite" id="1000" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="278" result="Passed" start-time="2026-10-21 18:14:50Z" end-time="2026-10-21 18:17:49Z" duration="179.101810" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties><property name="platform" value="PlayMode"></property></properties><test-suite type="Assembly" id="1323" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Temp/UnityTempFile-9ebfe16c9fb3e7c4eaa8f3af78c39cdf/PlayerWithTests/PlayerWithTests_Data/Managed/GamePlayModeTests.dll" runstate="Runnable" testcasecount="278" result="Passed" start-time="2026-10-21 18:14:50Z" end-time="2026-10-21 18:17:49Z" duration="179.063809" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties><property name="_PID" value="7764"></property><property name="_APPDOMAIN" value="Unity Root Domain"></property><property name="platform" value="PlayMode"></property><property name="EditorOnly" value="False"></property></properties><test-suite type="TestSuite" id="1324" name="Game" fullname="Game" runstate="Runnable" testcasecount="278" result="Passed" start-time="2026-10-21 18:14:50Z" end-time="2026-10-21 18:17:49Z" duration="179.037531" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties></properties><test-suite type="TestSuite" id="1325" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="278" result="Passed" start-time="2026-10-21 18:14:50Z" end-time="2026-10-21 18:17:49Z" duration="179.004863" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties></properties><test-suite type="TestSuite" id="1326" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="278" result="Passed" start-time="2026-10-21 18:14:50Z" end-time="2026-10-21 18:17:49Z" duration="178.981567" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties></properties><test-suite type="TestFixture" id="1013" name="CampaignCinematicOpeningPlayTests" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-21 18:14:50Z" end-time="2026-10-21 18:16:06Z" duration="75.224696" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+<properties></properties><test-case id="1018" name="AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress" methodname="AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" seed="2102224016" result="Passed" start-time="2026-10-21 18:14:50Z" end-time="2026-10-21 18:14:57Z" duration="6.181248" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+</output></test-case><test-case id="1014" name="AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" methodname="AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" seed="1966203876" result="Passed" start-time="2026-10-21 18:14:57Z" end-time="2026-10-21 18:15:36Z" duration="39.009710" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+</output></test-case><test-case id="1017" name="NewspaperAndTvRevealDeliverControlBeforeThePowerFailure" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure" methodname="NewspaperAndTvRevealDeliverControlBeforeThePowerFailure" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" seed="1928070415" result="Passed" start-time="2026-10-21 18:15:36Z" end-time="2026-10-21 18:15:56Z" duration="20.410710" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+</output></test-case><test-case id="1016" name="PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu" methodname="PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" seed="209528580" result="Passed" start-time="2026-10-21 18:15:56Z" end-time="2026-10-21 18:15:57Z" duration="0.573589" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+</output></test-case><test-case id="1015" name="SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems" methodname="SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" seed="1862642839" result="Passed" start-time="2026-10-21 18:15:57Z" end-time="2026-10-21 18:16:06Z" duration="9.029375" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="30000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+</output></test-case></test-suite><test-suite type="TestFixture" id="1019" name="CampaignContinuationPlayTests" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-21 18:16:06Z" end-time="2026-10-21 18:17:15Z" duration="69.042293" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+<properties></properties><test-case id="1027" name="AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork" methodname="AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="453074886" result="Passed" start-time="2026-10-21 18:16:06Z" end-time="2026-10-21 18:17:15Z" duration="69.010407" asserts="0">QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+</output></test-case></test-suite><test-suite type="TestFixture" id="1071" name="CampaignRecordedAudioPlayTests" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-21 18:17:15Z" end-time="2026-10-21 18:17:49Z" duration="34.686709" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties></properties><test-case id="1075" name="ChildExplosionIsEmittedOnceAtTheAuthoredLaunch" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch" methodname="ChildExplosionIsEmittedOnceAtTheAuthoredLaunch" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" seed="1908045357" result="Passed" start-time="2026-10-21 18:17:15Z" end-time="2026-10-21 18:17:16Z" duration="1.777450" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+</output></test-case><test-case id="1072" name="CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets" methodname="CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" seed="1963190169" result="Passed" start-time="2026-10-21 18:17:16Z" end-time="2026-10-21 18:17:17Z" duration="0.330033" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+</output></test-case><test-case id="1073" name="ShieldSoundFollowsPauseEffectsSliderAndLifetime" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime" methodname="ShieldSoundFollowsPauseEffectsSliderAndLifetime" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" seed="1373686605" result="Passed" start-time="2026-10-21 18:17:17Z" end-time="2026-10-21 18:17:19Z" duration="1.756030" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+</output></test-case><test-case id="1074" name="ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals" methodname="ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" seed="1579669276" result="Passed" start-time="2026-10-21 18:17:19Z" end-time="2026-10-21 18:17:49Z" duration="30.811995" asserts="0">SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+</output></test-case></test-suite></test-suite></test-suite></test-suite></test-suite></test-suite>
+</test-run>

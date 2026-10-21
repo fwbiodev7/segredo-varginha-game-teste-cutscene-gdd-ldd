@@ -1,0 +1,257 @@
+{
+  "success": true,
+  "files": 25,
+  "clips": [
+    {
+      "id": "PlayerPunch",
+      "channels": 1,
+      "seconds": 0.5,
+      "peak": 0.8499755859375,
+      "rms": 0.2222525303820789,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "EnemyAttack",
+      "channels": 1,
+      "seconds": 1.1,
+      "peak": 0.8499755859375,
+      "rms": 0.21834081975932018,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "BossRoar",
+      "channels": 1,
+      "seconds": 2.5,
+      "peak": 0.8499755859375,
+      "rms": 0.17748396019382953,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "FootWood",
+      "channels": 1,
+      "seconds": 0.34,
+      "peak": 0.8499755859375,
+      "rms": 0.11461675434903149,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "FootWood2",
+      "channels": 1,
+      "seconds": 0.34,
+      "peak": 0.8499755859375,
+      "rms": 0.10933673381442423,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "FootWood3",
+      "channels": 1,
+      "seconds": 0.34,
+      "peak": 0.8499755859375,
+      "rms": 0.1187794508397447,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "FootNature",
+      "channels": 1,
+      "seconds": 0.42,
+      "peak": 0.8499755859375,
+      "rms": 0.08836289903667592,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "FootNature2",
+      "channels": 1,
+      "seconds": 0.42,
+      "peak": 0.8499755859375,
+      "rms": 0.08692869318751334,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "FootNature3",
+      "channels": 1,
+      "seconds": 0.42,
+      "peak": 0.8499755859375,
+      "rms": 0.13332159670106286,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "SchoolAmbience",
+      "channels": 2,
+      "seconds": 29.82,
+      "peak": 0.649993896484375,
+      "rms": 0.06581779981885974,
+      "loop": true,
+      "seamJump": 0.002044677734375,
+      "success": true
+    },
+    {
+      "id": "ForestAmbience",
+      "channels": 1,
+      "seconds": 31.82,
+      "peak": 0.13665771484375,
+      "rms": 0.021235853731793725,
+      "loop": true,
+      "seamJump": 9.1552734375e-05,
+      "success": true
+    },
+    {
+      "id": "TelevisionAmbience",
+      "channels": 2,
+      "seconds": 15.82,
+      "peak": 0.148590087890625,
+      "rms": 0.011854642507307396,
+      "loop": true,
+      "seamJump": 0.00103759765625,
+      "success": true
+    },
+    {
+      "id": "RadioInterference",
+      "channels": 1,
+      "seconds": 1.2,
+      "peak": 0.8499755859375,
+      "rms": 0.525439109097437,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "RenanPulse",
+      "channels": 1,
+      "seconds": 1.3,
+      "peak": 0.8499755859375,
+      "rms": 0.23265677283271827,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "FabioShield",
+      "channels": 2,
+      "seconds": 2.15281179138322,
+      "peak": 0.649993896484375,
+      "rms": 0.12331756380229483,
+      "loop": true,
+      "seamJump": 0.035308837890625,
+      "success": true
+    },
+    {
+      "id": "CarFail",
+      "channels": 1,
+      "seconds": 3.0,
+      "peak": 0.8499755859375,
+      "rms": 0.0542586014734612,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "Engine",
+      "channels": 1,
+      "seconds": 3.82,
+      "peak": 0.649993896484375,
+      "rms": 0.1614453304650657,
+      "loop": true,
+      "seamJump": 0.0113525390625,
+      "success": true
+    },
+    {
+      "id": "Starter",
+      "channels": 1,
+      "seconds": 1.5,
+      "peak": 0.763641357421875,
+      "rms": 0.1894400125741725,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "DoorOpen",
+      "channels": 1,
+      "seconds": 0.9360544217687075,
+      "peak": 0.8499755859375,
+      "rms": 0.12566496532311539,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "ChurchBell",
+      "channels": 1,
+      "seconds": 4.0,
+      "peak": 0.3277587890625,
+      "rms": 0.053896325680752706,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "SiegeAlarm",
+      "channels": 1,
+      "seconds": 4.0,
+      "peak": 0.8499755859375,
+      "rms": 0.21717156282596092,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "OuzanaGlass",
+      "channels": 1,
+      "seconds": 1.2,
+      "peak": 0.8499755859375,
+      "rms": 0.12485928126827256,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "ManifestationTear",
+      "channels": 1,
+      "seconds": 1.0,
+      "peak": 0.8499755859375,
+      "rms": 0.10441854446784712,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "ManifestationCollapse",
+      "channels": 1,
+      "seconds": 1.8,
+      "peak": 0.8499755859375,
+      "rms": 0.22208139795376824,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    },
+    {
+      "id": "ChildExplosion",
+      "channels": 1,
+      "seconds": 2.2,
+      "peak": 0.8499755859375,
+      "rms": 0.2607054409043901,
+      "loop": false,
+      "seamJump": 0.0,
+      "success": true
+    }
+  ],
+  "scope": "PCM integrity, non-silence, peak headroom and quiet effect endpoints. Loops use an overlap crossfade; seamJump is measured, not a perceptual judgement."
+}

@@ -1,8 +1,10 @@
 # Plano de integração dos sons recebidos — 21/10/2026
 
-Estado: plano aprovado pelo usuário após as correções autorais; integração autorizada e iniciada. Os arquivos foram extraídos para inventário; o áudio não integra a build visual 0.4.3. O ZIP possui **20 MP3 e um M4A** (`abrindo_portawav.m4a`). Os dois `tutmozis-metal-crack-606770` têm bytes idênticos: uma fonte pode atender os dois registros sem duplicar carga em memória. Nomes e hashes ficam em `output/audio-integration-2026-10-21/archive-inventory.json`.
+Fechamento: execução e atribuições em [INTEGRACAO_AUDIO_2026-10-21.md](INTEGRACAO_AUDIO_2026-10-21.md); fontes e cortes em [CREDITOS_AUDIO_RECEBIDO_2026-10-21.md](CREDITOS_AUDIO_RECEBIDO_2026-10-21.md). O texto abaixo conserva o plano aprovado; os resultados efetivos ficam no [relatório da candidata 0.4.4](../../output/audio-integration-2026-10-21/RELATORIO.md).
 
-Este mapeamento parte dos nomes dos arquivos e dos eventos existentes. Duração, nível, início audível e trechos de loop serão medidos antes de preparar os clips; a avaliação auditiva da mixagem continua parte do playtest.
+Estado: integração concluída para a candidata **0.4.4-beta**, após aprovação do usuário e correções autorais. A build visual anterior 0.4.3 permanece histórica e não contém esse pacote de áudio. O ZIP possui **20 MP3 e um M4A** (`abrindo_portawav.m4a`). Os dois `tutmozis-metal-crack-606770` têm bytes idênticos e compartilham uma fonte. Nomes e hashes ficam em `output/audio-integration-2026-10-21/archive-inventory.json`.
+
+O mapeamento abaixo conserva o plano aprovado. Duração, nível, início audível e trechos de loop foram medidos e registrados no manifesto dos derivados; a avaliação auditiva da mixagem continua parte do playtest.
 
 Correções autorais do usuário incorporadas: glitch variation é ataque do Renan; vidro é o frasco da Ouzana no boss; explosão pertence à sequência inicial da criança; som angelical sem sinos é o escudo do Padre Fábio na luta final. Essas atribuições prevalecem sobre a sugestão preliminar de classificação pelo nome.
 

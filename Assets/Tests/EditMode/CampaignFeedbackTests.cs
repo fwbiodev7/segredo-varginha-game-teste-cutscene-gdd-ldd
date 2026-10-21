@@ -37,8 +37,8 @@ namespace Game.Tests.EditMode
         [Test] public void RadioStaticIsShortBoundedAndHasQuietEndpoints()
         {
             var clip=CampaignSoundscape.Clip("RadioInterference");var samples=new float[clip.samples];clip.GetData(samples,0);
-            Assert.That(clip.length,Is.EqualTo(.65f).Within(.001f));
-            Assert.That(samples.Max(v=>Mathf.Abs(v)),Is.InRange(.01f,.25f));
+            Assert.That(clip.length,Is.InRange(.3f,1.3f));
+            Assert.That(samples.Max(v=>Mathf.Abs(v)),Is.InRange(.01f,.86f));
             Assert.That(Mathf.Abs(samples[0]),Is.LessThan(.001f));Assert.That(Mathf.Abs(samples[^1]),Is.LessThan(.001f));
         }
     }

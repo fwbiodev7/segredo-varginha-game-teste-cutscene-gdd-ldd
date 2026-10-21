@@ -61,7 +61,7 @@ namespace Game.Varginha.Experiment
             var attack=Actor.GetComponent<VarginhaPlayerAttack>();if(attack!=null)attack.enabled=false;
             _sound=gameObject.AddComponent<CampaignSoundscape>();_sound.Configure(phase==18?"Lab":phase==11||phase==21&&area==1?"School":phase==14?"Church":Childhood||phase==12||phase==13?"House":"Workshop",Actor);
             _order=new int[_definition.cards.Length];for(int i=0;i<_order.Length;i++)_order[i]=(i+1)%_order.Length;
-            if(phase==11)School();
+            if(phase==11){School();_sound.Play("SiegeAlarm");}
             if(phase==12&&State.serviceRevealed)MarkService();
             if(Childhood){LoadChild();CreateChildhoodPresence();}
             if(phase==14)NPC("Padre Fábio",VarginhaReferenceSprites.PadreFabio(),Plan.points.Find(p=>p.id=="fabio").position);

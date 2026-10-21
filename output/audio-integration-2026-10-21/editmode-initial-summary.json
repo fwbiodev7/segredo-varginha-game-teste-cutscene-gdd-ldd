@@ -1,0 +1,23 @@
+{
+  "source": "output\\audio-integration-2026-10-21\\editmode.xml",
+  "runResult": "Failed(Child)",
+  "tests": {
+    "total": 388,
+    "passed": 386,
+    "failed": 2,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.EditMode.CampaignAtmosphereTests.CachedStereoBedsHaveHeadroomAndSeamlessEndpoints",
+      "message": "  Expected: 2\n  But was:  1\n",
+      "stack": "at Game.Tests.EditMode.CampaignAtmosphereTests.CachedStereoBedsHaveHeadroomAndSeamlessEndpoints () [0x0003e] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\EditMode\\CampaignAtmosphereTests.cs:54\n"
+    },
+    {
+      "name": "Game.Tests.EditMode.CampaignFeedbackTests.RadioStaticIsShortBoundedAndHasQuietEndpoints",
+      "message": "  Expected: 0.649999976f +/- 0.00100000005f\n  But was:  1.20000005f\n",
+      "stack": "at Game.Tests.EditMode.CampaignFeedbackTests.RadioStaticIsShortBoundedAndHasQuietEndpoints () [0x0001f] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\EditMode\\CampaignFeedbackTests.cs:40\n"
+    }
+  ],
+  "success": false
+}

@@ -232,10 +232,12 @@ namespace Game.Varginha
                 Object.DontDestroyOnLoad(go);
                 _combatAudio = go.AddComponent<AudioSource>();
                 _combatAudio.playOnAwake = false;
+                go.AddComponent<Game.Varginha.Experiment.CampaignTransientAudioGuard>();
             }
 
             if (isImpact)
             {
+                _impactClip=Game.Varginha.Experiment.CampaignRecordedAudio.Clip("PlayerPunch")??_impactClip;
                 if (_impactClip == null)
                 {
                     int sampleRate = 22050;

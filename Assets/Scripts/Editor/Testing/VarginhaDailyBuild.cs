@@ -9,8 +9,8 @@ namespace Game.Editor.Testing
     // A separate candidate preserves previous deliveries and restores the project's version.
     public static class VarginhaDailyBuild
     {
-        public const string Version = "0.4.3-beta";
-        public const string Folder = "Builds/Varginha_0.4.3-beta_2026-10-21";
+        public const string Version = "0.4.4-beta";
+        public const string Folder = "Builds/Varginha_0.4.4-beta_2026-10-21";
 
         [MenuItem("Varginha/Build/Daily 21-10 Windows x64")]
         public static void Build()
@@ -35,7 +35,7 @@ namespace Game.Editor.Testing
                     bytes = s.totalSize, seconds = s.totalTime.TotalSeconds, errors = s.totalErrors,
                     warnings = s.totalWarnings, scenes = VarginhaAlphaBuild.Scenes,
                     unity = Application.unityVersion, version = Version };
-                string evidence=Environment.GetEnvironmentVariable("VARGINHA_CINEMA_QA")??"output/visual-polish-2026-10-21";
+                string evidence=Environment.GetEnvironmentVariable("VARGINHA_CINEMA_QA")??"output/audio-integration-2026-10-21";
                 Directory.CreateDirectory(evidence);
                 File.WriteAllText(Path.Combine(evidence,"windows-build.json"), JsonUtility.ToJson(result, true));
                 if (s.result != BuildResult.Succeeded) throw new InvalidOperationException("Build falhou: " + s.result);

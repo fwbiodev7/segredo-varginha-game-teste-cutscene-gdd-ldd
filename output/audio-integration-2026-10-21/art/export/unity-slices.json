@@ -1,0 +1,425 @@
+{
+  "schema": "unity-slice-plan/v1",
+  "origin": "bottom-left",
+  "image": "sheet.png",
+  "pixelsPerUnit": 96,
+  "sprites": [
+    {
+      "name": "renan_0",
+      "rect": [
+        1,
+        1606,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "renan_1",
+      "rect": [
+        322,
+        1606,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "renan_2",
+      "rect": [
+        643,
+        1606,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "renan_3",
+      "rect": [
+        964,
+        1606,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "renan_4",
+      "rect": [
+        1,
+        1285,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "renan_5",
+      "rect": [
+        322,
+        1285,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "renan_6",
+      "rect": [
+        643,
+        1285,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "renan_7",
+      "rect": [
+        964,
+        1285,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 125
+    },
+    {
+      "name": "ouzana_0",
+      "rect": [
+        1,
+        964,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 300
+    },
+    {
+      "name": "ouzana_1",
+      "rect": [
+        322,
+        964,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 300
+    },
+    {
+      "name": "ouzana_2",
+      "rect": [
+        643,
+        964,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 433
+    },
+    {
+      "name": "ouzana_3",
+      "rect": [
+        964,
+        964,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 433
+    },
+    {
+      "name": "ouzana_4",
+      "rect": [
+        1,
+        643,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 433
+    },
+    {
+      "name": "ouzana_5",
+      "rect": [
+        322,
+        643,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 433
+    },
+    {
+      "name": "ouzana_6",
+      "rect": [
+        643,
+        643,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 433
+    },
+    {
+      "name": "ouzana_7",
+      "rect": [
+        964,
+        643,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 433
+    },
+    {
+      "name": "fabio_0",
+      "rect": [
+        1,
+        322,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 300
+    },
+    {
+      "name": "fabio_1",
+      "rect": [
+        322,
+        322,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 300
+    },
+    {
+      "name": "fabio_2",
+      "rect": [
+        643,
+        322,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 167
+    },
+    {
+      "name": "fabio_3",
+      "rect": [
+        964,
+        322,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 500
+    },
+    {
+      "name": "fabio_4",
+      "rect": [
+        1,
+        1,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 500
+    },
+    {
+      "name": "fabio_5",
+      "rect": [
+        322,
+        1,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 167
+    },
+    {
+      "name": "fabio_6",
+      "rect": [
+        643,
+        1,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 167
+    },
+    {
+      "name": "fabio_7",
+      "rect": [
+        964,
+        1,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 167
+    }
+  ],
+  "clips": {
+    "renan": {
+      "frames": [
+        "renan_0",
+        "renan_1",
+        "renan_2",
+        "renan_3",
+        "renan_4",
+        "renan_5",
+        "renan_6",
+        "renan_7"
+      ],
+      "loop": false
+    },
+    "ouzana": {
+      "frames": [
+        "ouzana_0",
+        "ouzana_1",
+        "ouzana_2",
+        "ouzana_3",
+        "ouzana_4",
+        "ouzana_5",
+        "ouzana_6",
+        "ouzana_7"
+      ],
+      "loop": false
+    },
+    "fabio": {
+      "frames": [
+        "fabio_0",
+        "fabio_1",
+        "fabio_2",
+        "fabio_3",
+        "fabio_4",
+        "fabio_5",
+        "fabio_6",
+        "fabio_7"
+      ],
+      "loop": false
+    },
+    "fabio_hold": {
+      "frames": [
+        "fabio_3",
+        "fabio_4"
+      ],
+      "loop": true
+    }
+  },
+  "importSettings": {
+    "textureType": "Sprite",
+    "spriteMode": "Multiple",
+    "filterMode": "Point",
+    "mipmaps": false,
+    "compression": "Uncompressed",
+    "wrapMode": "Clamp"
+  },
+  "note": "Import plan only; Unity does not import this JSON automatically. Preserve existing sprite IDs."
+}

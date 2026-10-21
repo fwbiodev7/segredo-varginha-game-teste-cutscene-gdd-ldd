@@ -1,0 +1,5 @@
+Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.

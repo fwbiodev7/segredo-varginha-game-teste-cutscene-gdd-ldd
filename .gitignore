@@ -43,3 +43,12 @@ Desktop.ini
 /output/agent-logs/
 /output/key-investigation-2026-10-20/saves-before-tests/
 /output/daily-sprint-2026-10-20/.build/
+/output/audio-integration-2026-10-21/source/
+/output/audio-integration-2026-10-21/film/
+/output/audio-integration-2026-10-21/opening-film/
+/output/audio-integration-2026-10-21/runtime-layers/
+/output/audio-integration-2026-10-21/captures/*
+!/output/audio-integration-2026-10-21/captures/support-*.png
+/output/audio-integration-2026-10-21/art/grid/
+/output/audio-integration-2026-10-21/art/preview/
+/output/audio-integration-2026-10-21/art/validation/

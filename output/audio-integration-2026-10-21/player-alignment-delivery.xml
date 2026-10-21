@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="0001-01-01 00:00:00Z" end-time="0001-01-01 00:00:00Z" duration="37,9314245">
+  <test-suite type="TestSuite" id="1000" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="278" result="Passed" start-time="2026-10-21 18:25:07Z" end-time="2026-10-21 18:25:45Z" duration="37.931425" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties><property name="platform" value="PlayMode"></property></properties><test-suite type="Assembly" id="1323" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Temp/UnityTempFile-07e4fafdd0a2714418506d73b6047c84/PlayerWithTests/PlayerWithTests_Data/Managed/GamePlayModeTests.dll" runstate="Runnable" testcasecount="278" result="Passed" start-time="2026-10-21 18:25:07Z" end-time="2026-10-21 18:25:45Z" duration="37.893036" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties><property name="_PID" value="18340"></property><property name="_APPDOMAIN" value="Unity Root Domain"></property><property name="platform" value="PlayMode"></property><property name="EditorOnly" value="False"></property></properties><test-suite type="TestSuite" id="1324" name="Game" fullname="Game" runstate="Runnable" testcasecount="278" result="Passed" start-time="2026-10-21 18:25:07Z" end-time="2026-10-21 18:25:45Z" duration="37.859551" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties></properties><test-suite type="TestSuite" id="1325" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="278" result="Passed" start-time="2026-10-21 18:25:07Z" end-time="2026-10-21 18:25:45Z" duration="37.834384" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties></properties><test-suite type="TestSuite" id="1326" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="278" result="Passed" start-time="2026-10-21 18:25:07Z" end-time="2026-10-21 18:25:45Z" duration="37.784375" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties></properties><test-suite type="TestFixture" id="1071" name="CampaignRecordedAudioPlayTests" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-21 18:25:07Z" end-time="2026-10-21 18:25:45Z" duration="37.772391" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties></properties><test-case id="1075" name="ChildExplosionIsEmittedOnceAtTheAuthoredLaunch" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch" methodname="ChildExplosionIsEmittedOnceAtTheAuthoredLaunch" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" seed="1482431916" result="Passed" start-time="2026-10-21 18:25:07Z" end-time="2026-10-21 18:25:10Z" duration="3.086094" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+</output></test-case><test-case id="1072" name="CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets" methodname="CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" seed="989097034" result="Passed" start-time="2026-10-21 18:25:10Z" end-time="2026-10-21 18:25:11Z" duration="0.619914" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+</output></test-case><test-case id="1073" name="ShieldSoundFollowsPauseEffectsSliderAndLifetime" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime" methodname="ShieldSoundFollowsPauseEffectsSliderAndLifetime" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" seed="1264400757" result="Passed" start-time="2026-10-21 18:25:11Z" end-time="2026-10-21 18:25:13Z" duration="2.146185" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+</output></test-case><test-case id="1074" name="ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals" methodname="ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" seed="95458989" result="Passed" start-time="2026-10-21 18:25:13Z" end-time="2026-10-21 18:25:45Z" duration="31.878341" asserts="0">SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+</output></test-case></test-suite></test-suite></test-suite></test-suite></test-suite></test-suite>
+</test-run>

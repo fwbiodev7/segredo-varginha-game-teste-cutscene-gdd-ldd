@@ -10,16 +10,19 @@ namespace Game.Varginha.Experiment
  {
   public static CampaignFinalAllies Active {get;private set;}
   public static readonly string[] Names={"Renan","Ouzana","Padre Fábio"};
-  public static readonly string[] Descriptions={"PULSO DE INTERFERÊNCIA • Arcos laranja do notebook interrompem e atordoam os inimigos.","FRASCO REATIVO • Arremessa um frasco verde que cria uma nuvem de dano gradual e desaceleração.","AURA DE PROTEÇÃO • Cúpula dourada com cruzes reduz o dano em 55% e afasta os filhotes por seis segundos."};
+  public static readonly string[] Descriptions={"PULSO DE INTERFERÊNCIA • Pacotes cyber do notebook causam glitches e atordoam os inimigos.","FRASCO REATIVO • Arremessa um frasco verde que cria uma nuvem de dano gradual e desaceleração.","AURA DE PROTEÇÃO • Cúpula dourada com cruzes reduz o dano em 55% e afasta os filhotes por seis segundos."};
   readonly float[] ready=new float[3]; readonly SpriteRenderer[] actors=new SpriteRenderer[3];
   readonly bool[] casting=new bool[3];readonly List<Vector2> followPath=new();float nextPath;
   readonly float[] captionUntil=new float[3];readonly Vector3[] captionPositions=new Vector3[3];
-  static readonly Sprite[,] effects=new Sprite[3,6]; EdelzioTopDownController player; Vector2 shieldCentre; float shieldUntil,commandBusyUntil;
+  public const float PulseRadius=5.5f,FlaskRadius=2,ShieldRadius=2.7f;
+  static readonly Sprite[,] effects=new Sprite[3,8]; EdelzioTopDownController player; Vector2 shieldCentre; float shieldRemaining,commandBusyUntil;
+  static Material cleanShield,pixelEffects;
   static readonly Dictionary<Sprite,Sprite> arenaPriestSprites=new();
   public VarginhaStudentAllySquad Squad {get;private set;}
   public int SelectedSupport {get;private set;}=-1;
   public bool CombatActive {get;set;}
-  public float DamageMultiplier=>Time.time<shieldUntil&&Vector2.Distance(shieldCentre,player.transform.position)<2.7f?.45f:1;
+  public float DamageMultiplier=>CombatActive&&shieldRemaining>0&&Vector2.Distance(shieldCentre,player.transform.position)<ShieldRadius?.45f:1;
+  public float ShieldRemaining=>shieldRemaining;
   public float Cooldown(int i)=>Mathf.Max(0,ready[i]-Time.time);
   public static Sprite Portrait(int i)=>i==0?CampaignStorySprites.Frame("RenanTeaching",0,0):i==1?CampaignStorySprites.Frame("OuzanaBiologist",0,0):VarginhaReferenceSprites.PadreFabio();
   public static Sprite PortraitForFinalScene(int i)=>ArenaPose(i,Portrait(i));
@@ -66,10 +69,10 @@ namespace Game.Varginha.Experiment
     else if(VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.AllyCommand))Squad.TryInvokeAttack(null);
    }
    if(SelectedSupport>=0&&VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.SupportCommand))InvokeSupport(SelectedSupport);
-   if(Time.time<shieldUntil)foreach(var e in Object.FindObjectsByType<CampaignManifestationCombat>())if(e.IsMinor&&Vector2.Distance(e.transform.position,shieldCentre)<2.6f)e.Repel(shieldCentre,Time.deltaTime*3);
+   if(shieldRemaining>0){shieldRemaining=Mathf.Max(0,shieldRemaining-Time.deltaTime);foreach(var e in Object.FindObjectsByType<CampaignManifestationCombat>())if(e.IsMinor&&Vector2.Distance(e.transform.position,shieldCentre)<2.6f)e.Repel(shieldCentre,Time.deltaTime*3);}
   }
   public bool InvokeSupport(int i){if(!Running||i<0||i>2||Cooldown(i)>0||Squad.CommandInProgress||Time.time<commandBusyUntil)return false;commandBusyUntil=Time.time+1;ready[i]=Time.time+(i==2?12:8);captionUntil[i]=Time.time+1.6f;captionPositions[i]=player.transform.position+Vector3.up*2.3f;StartCoroutine(Present(i));return true;}
-  void OnGUI(){if(VarginhaGameHUD.Instance?.IsInventoryOpen==true)return;for(int i=0;i<3;i++)if(Time.time<captionUntil[i])CampaignAttackCaption.Draw(captionPositions[i],Names[i],new[]{"PULSO DE INTERFERÊNCIA","FRASCO REATIVO","AURA DE PROTEÇÃO"}[i],i==0?new Color(1,.57f,.22f):i==1?new Color(.2f,1,.58f):new Color(1,.83f,.3f),3);}
+  void OnGUI(){if(VarginhaGameHUD.Instance?.IsInventoryOpen==true)return;for(int i=0;i<3;i++)if(Time.time<captionUntil[i]&&i==SelectedSupport)CampaignAttackCaption.Draw(captionPositions[i],Names[i],new[]{"PULSO DE INTERFERÊNCIA","FRASCO REATIVO","AURA DE PROTEÇÃO"}[i],i==0?new Color(.15f,.95f,1):i==1?new Color(.2f,1,.58f):new Color(1,.83f,.3f),0,true);}
   public void DrawCommands(float x,float y)
   {
    for(int slot=0;slot<4;slot++)
@@ -102,19 +105,20 @@ namespace Game.Varginha.Experiment
    var map=CampaignContinuationController.Active?.transform.Find("Mapa_Campanha");if(map==null)return false;
    foreach(var h in Physics2D.LinecastAll(a,b))if(!h.collider.isTrigger&&h.collider.transform.IsChildOf(map))return false;return true;
   }
-  void Hit(int i,Vector2 centre,float radius,float damage)
+  void Hit(int i,Vector2 centre,float radius,float damage,List<SpriteRenderer> struck=null)
   {
    foreach(var e in Object.FindObjectsByType<CampaignManifestationCombat>())
    {
     if(e.Defeated||Vector2.Distance(e.transform.position,centre)>radius||!Clear(centre,e.transform.position))continue;
     if(i==0)e.Stagger(2.2f);else{e.Slow(3);e.Stagger(.55f);}
-    e.GetComponent<VarginhaCombatTarget>().ReceiveHit(damage,((Vector2)e.transform.position-centre).normalized,.05f);
+    if(e.GetComponent<VarginhaCombatTarget>().ReceiveHit(damage,((Vector2)e.transform.position-centre).normalized,.05f)&&struck!=null&&struck.Count<CampaignCyberPulse.MaxTargets)struck.Add(e.GetComponent<SpriteRenderer>());
    }
   }
   static Sprite Effect(int row,int col)
   {
-   if(effects[row,col]!=null)return effects[row,col];var t=Resources.Load<Texture2D>("Varginha/StoryCharacters/SupportEffects");
-   return effects[row,col]=VarginhaCharacterFrameGeometry.Create(t,new Rect(col*128,(2-row)*128,128,128),Vector2.one*.5f,48,0,SpriteMeshType.FullRect);
+   if(effects[row,col]!=null)return effects[row,col];var t=Resources.Load<Texture2D>("Varginha/StoryCharacters/SupportEffectsV2");
+   int index=row*8+col;
+   return effects[row,col]=VarginhaCharacterFrameGeometry.Create(t,new Rect(1+(index%4)*321,t.height-1-(index/4)*321-320,320,320),Vector2.one*.5f,96,0,SpriteMeshType.FullRect);
   }
   IEnumerator Present(int i)
   {
@@ -124,24 +128,33 @@ namespace Game.Varginha.Experiment
    if(!CombatActive){casting[i]=false;actor.sprite=ArenaPose(i,Portrait(i));yield break;}
    actor.sprite=ArenaPose(i,CampaignStorySprites.Frame("SupportAttacks",i,side+1));
    var go=new GameObject("Habilidade_"+Names[i]);go.transform.SetParent(transform);var fx=go.AddComponent<SpriteRenderer>();fx.sortingOrder=30000;fx.flipX=end.x<start.x;go.transform.position=start;
+   CampaignCyberPulse cyber=null;var struck=new List<SpriteRenderer>(CampaignCyberPulse.MaxTargets);
+   if(i==0)cyber=go.AddComponent<CampaignCyberPulse>();
+   if(i<2){if(pixelEffects==null){pixelEffects=new Material(Resources.Load<Shader>("Varginha/Flash1996/CrispPixelSprite"));pixelEffects.SetFloat("_Cutoff",.5f);}fx.sharedMaterial=pixelEffects;}
+   if(i==2){if(cleanShield==null)cleanShield=new Material(Resources.Load<Shader>("Varginha/StoryCharacters/SupportShieldClean"));fx.sharedMaterial=cleanShield;}
    t=0;float duration=i==2?6:i==1?.6f:.55f;
-   if(i==2){shieldCentre=start;shieldUntil=Time.time+duration;player.GetComponent<HealthSystem>().Heal(20);}
+   var sound=GetComponent<CampaignSoundscape>();
+   if(i==0)sound?.PlayAt("RenanPulse",start);
+   if(i==2){shieldCentre=start;shieldRemaining=duration;player.GetComponent<HealthSystem>().Heal(20);sound?.BeginShield(duration);}
    while(t<duration)
    {
     if(!CombatActive)break;if(!Running){yield return null;continue;}t+=Time.deltaTime;float u=Mathf.Clamp01(t/duration);
-    fx.sprite=Effect(i==0?1:i==1?0:2,i==2?Mathf.Min(4,1+(int)(t*6)):i==1?Mathf.Min(1,(int)(u*2)):Mathf.Min(2,(int)(u*3)));
+    int frame=i==0?Mathf.Min(3,(int)(u*4)):i==1?Mathf.Min(1,(int)(u*2)):t<.5f?Mathf.Min(2,(int)(t*6)):3+(VarginhaGameSettings.Current.reducedMotion?0:(int)(t*2)%2);
+    fx.sprite=Effect(i,frame);
     if(i==1)go.transform.position=Vector2.Lerp(start,end,u)+Vector2.up*Mathf.Sin(u*Mathf.PI)*1.2f;
-    else if(i==0){go.transform.position=Vector2.Lerp(start,end,u*.55f);go.transform.localScale=Vector3.one*(.5f+u*1.6f);}
-    else{go.transform.position=start-Vector2.up*.15f;go.transform.localScale=Vector3.one*2.3f;fx.color=new Color(1,1,1,.85f);}
+    else if(i==0){go.transform.position=Vector2.Lerp(start,end,u);cyber.Draw(start,end,u,t,false,null);}
+    else{go.transform.position=start+Vector2.up*1.35f;go.transform.localScale=Vector3.one*2.3f;fx.color=new Color(1,1,1,.85f);}
     yield return null;
    }
-   if(i<2){Hit(i,i==0?start:end,i==0?5.5f:2,i==0?42:24);go.transform.position=end;fx.flipX=false;}
+   if(i<2&&CombatActive){Hit(i,i==0?start:end,i==0?PulseRadius:FlaskRadius,i==0?42:24,struck);fx.flipX=false;if(i==0){go.transform.position=struck.Count>0&&struck[0]!=null?struck[0].bounds.center:(Vector3)end;go.transform.localScale=Vector3.one*1.4f;}if(i==1){go.transform.position=end;go.transform.localScale=Vector3.one*1.5f;sound?.PlayAt("OuzanaGlass",end);}}
+   if(i==2){shieldRemaining=0;sound?.EndShield();}
    actor.sprite=ArenaPose(i,CampaignStorySprites.Frame("SupportAttacks",i,side+2));t=0;float tail=i==1?2.6f:.45f,tick=.65f;
    while(t<tail)
    {
     if(!CombatActive)break;if(!Running){yield return null;continue;}t+=Time.deltaTime;
-    fx.sprite=Effect(i==0?1:i==1?0:2,i==1?Mathf.Min(5,2+(int)(t*1.3f)):i==0?3:5);fx.color=new Color(1,1,1,1-t/tail);
-    if(i==1&&t>=tick){tick+=.65f;Hit(1,end,2,6);}yield return null;
+    fx.sprite=Effect(i,i==0?Mathf.Min(7,4+(int)(t/tail*4)):i==1?Mathf.Min(7,2+(int)(t/tail*6)):Mathf.Min(7,5+(int)(t/tail*3)));fx.color=new Color(1,1,1,1-t/tail);
+    if(i==0)cyber.Draw(start,end,t/tail,t,true,struck);
+    if(i==1&&t>=tick){tick+=.65f;Hit(1,end,FlaskRadius,6);}yield return null;
    }
    casting[i]=false;actor.sprite=ArenaPose(i,Portrait(i));followPath.Clear();nextPath=0;Destroy(go);
   }

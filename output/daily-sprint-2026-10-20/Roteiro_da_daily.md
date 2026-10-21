@@ -2,13 +2,11 @@
 
 ## 1. O SEGREDO DE VARGINHA
 
-30 segundos. Apresentar o estado real de 21/10. O histórico de 09–19/10 e o fechamento anterior foram preservados em Historico_sprint_09-19_e_entrega_21.html. Esta versão curta se concentra no que demonstrar e discutir hoje. A arte de fundo é do próprio jogo.
+Abrir em 30 segundos. A candidata 0.4.4 integra o pacote de áudio e as artes dos três apoios. Abertura de 1996, manhã às 7h e novo mapa continuam na entrega. Não houve playtest externo.
 
 ## 2. O que mudou para quem joga
 
-1 minuto. A rotina, as pistas e o puzzle das páginas vieram da entrega de 20/10. Hoje foram concluídas dicas e correções, e a nova rodada transforma a viagem em composição animada. Não apresentar todos os puzzles da campanha como redesenhados hoje.
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\CampanhaOficial\CHAVE_DESAPARECIDA.md
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\cinematic-opening-2026-10-21\RELATORIO.md
+1 minuto. O ZIP contém 20 MP3 e um M4A, com uma duplicata exata. Foram preparados 25 WAV a partir de 20 fontes únicas. As atribuições autorais foram respeitadas. As mudanças dos apoios foram aprovadas antes de implementar.
 
 ## 3. Uma manhã que vira mistério
 
@@ -25,29 +23,23 @@ C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-2
 
 1 minuto. Mostrar a demonstração animada em output/visual-polish-2026-10-21/preview.html ou executar o jogo. A composição usa o mesmo sprite original de Edelzio, ampliado sem repintar a identidade. O desembarque reutiliza School.png e as coordenadas/colisões da fase 4, caminhando até o spawn do gameplay. Não é um vídeo pré-renderizado nem uma alegação de animação completa de toda a campanha.
 C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Scripts\Game\Varginha\Experiment\CampaignFuscaCinema.cs
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\cinematic-opening-2026-10-21\technical-report.md
+C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\cinematic-opening-2026-10-21\technical-report.md O motor, a falha de partida, a porta e a interferência agora usam os sons recebidos nos eventos correspondentes. Sem dublagem sintética.
 
-## 6. Interferência com identidade
+## 6. Cada som no seu evento
 
-45 segundos. O efeito varia posição, tamanho, opacidade e intervalo dos focos; fragmentos da própria cabine se deslocam e partículas verdes sugerem a interferência do ET. A distribuição tem respiro e mantém as legendas legíveis. A mesma lógica atende o rádio e o sinal do prólogo. Movimento reduzido usa uma assinatura estável e discreta.
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Scripts\Game\Varginha\Experiment\CampaignSignalGlitch.cs
+1 minuto. A explosão recebida pertence à infância. Sinos ficam na igreja; não substituem o escudo. Sons de TV tratam a interferência visual. Há passos com variações, ambientes em loop e motor separado. A avaliação auditiva em caixas/fones e em outro PC continua pendente. Fonte: Docs/CampanhaOficial/INTEGRACAO_AUDIO_2026-10-21.md
 
-## 7. Notícia, TV e infância
+## 7. Ataques mais claros
 
-1 minuto. Montagem de 16 segundos: jornal, noticiário, recuo da imagem para a TV e Edelzio criança, depois controle livre. A frase do rádio não é antecipada. Novas poses mantêm camiseta amarela e bermuda azul; o apresentador e sua boca animada foram reutilizados. Pausa, retomada e abertura já vista foram testados. Dublagem permanece adiada. A animação usa sprites e composição em tempo real; o desempenho em outro PC ainda depende de teste.
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\CampanhaOficial\POLIMENTO_VISUAL_E_ABERTURA_2026-10-21.md
+1 minuto. Prints em arena controlada, com chefe imobilizado para inspecionar. Dano e recarga foram mantidos. O pulso mostra o alcance radial; o escudo pausa junto da ação. O aviso saiu do centro dos personagens. O mesh tem limite de 256 quads; os apoios não usam ParticleSystem. Fonte: Docs/CampanhaOficial/AUDITORIA_APOIOS_2026-10-21.md
 
 ## 8. O que já foi conferido
 
-1 minuto. Regras: rodada EditMode final. Windows: oito casos direcionados do Player, incluindo abertura de 1996 e casa de manhã: viagem, retorno de controle, modo reduzido/pulo, imagem na GPU, percurso da biblioteca e mapa por gamepad (o caso de viagem reúne mais de uma verificação). A rota casa-escola passou na regressão direcionada do Editor. O relatório conserva falhas e retestes sem tratá-los como uma rodada única totalmente verde. Não houve playtest externo nem medição de desempenho em outro PC.
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\visual-polish-2026-10-21\summary.json
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\visual-polish-2026-10-21\RELATORIO.md
+1 minuto. Rodada ampla de dez casos no Player Windows: abertura, Fusca, combate de alunos e apoios, áudio, pausa e limpeza. Após subir a cúpula, os quatro casos de áudio/apoios foram repetidos e passaram. A linha de apoios mostra esse último reteste. Os 389 casos EditMode incluem catálogo e slicing. Nenhuma dessas contagens substitui benchmark ou playtest humano. Fonte: output/audio-integration-2026-10-21/RELATORIO.md
 
-## 9. O que precisamos observar hoje
+## 9. O que falta validar
 
-1 minuto. Estes pontos são perguntas para a sessão real, não possíveis feedbacks inventados. Registrar build, máquina, dúvidas, dicas usadas e reprodução de bugs. Outras cutscenes e finais continuam fora desta produção da abertura. A dublagem permanece adiada.
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\CampanhaOficial\PLAYTEST_2026-10-21.md
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\CampanhaOficial\PENDENCIAS_2026-10-21.md
+45 segundos. Não inventar feedback da equipe. Dublagem continua adiada. A pessoa que não conhece as soluções ainda precisa testar os puzzles e a progressão. Novas cutscenes e finais fora do escopo atual continuam no roteiro documentado.
 
 ## 10. Dúvidas, opiniões e feedbacks
 

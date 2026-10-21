@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "checks": [
+    {
+      "clip": "renan",
+      "distinctFrames": 8,
+      "expected": 8,
+      "success": true
+    },
+    {
+      "clip": "ouzana",
+      "distinctFrames": 8,
+      "expected": 8,
+      "success": true
+    },
+    {
+      "clip": "fabio",
+      "distinctFrames": 8,
+      "expected": 8,
+      "success": true
+    },
+    {
+      "clip": "fabio_hold",
+      "distinctFrames": 2,
+      "expected": 2,
+      "success": true
+    }
+  ],
+  "errors": [],
+  "scope": "Source-frame preview clock and registration; runtime effects and audio are verified separately in Unity Player."
+}

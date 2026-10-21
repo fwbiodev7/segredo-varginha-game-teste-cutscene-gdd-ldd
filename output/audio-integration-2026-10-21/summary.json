@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-21",
+  "version": "0.4.4-beta",
+  "baseCommit": "572a2969bfc8f32ee822bf8832a855e9fe891ada",
+  "technicalSuccess": true,
+  "deliveryComplete": true,
+  "tests": {
+    "editMode": {
+      "total": 389,
+      "passed": 389,
+      "failed": 0,
+      "skipped": 0
+    },
+    "player": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    },
+    "playerRegression": {
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "sources": {
+    "editMode": "output\\audio-integration-2026-10-21\\editmode-accepted.xml",
+    "player": "output\\audio-integration-2026-10-21\\player-native.xml",
+    "playerRegression": "output/audio-integration-2026-10-21/player-full-before-shield-position.xml"
+  },
+  "testScope": "10-case Windows regression, followed by four passing audio/support cases after final shield positioning and combined-pause guard. Separate runs, not fourteen unique tests.",
+  "audio": {
+    "receivedFiles": 21,
+    "uniqueSources": 20,
+    "preparedFiles": 25,
+    "aliases": 4,
+    "waveformChecks": 25
+  },
+  "art": {
+    "newFrames": 24,
+    "framesPerSupport": 8,
+    "previewClips": 4,
+    "validationErrors": 0,
+    "reviewedWarnings": 4,
+    "warningDisposition": "art/technical-report.md"
+  },
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 1
+  },
+  "package": "windows-package.json",
+  "preservation": "preservation.json",
+  "humanPlaytest": false,
+  "anotherPc": false,
+  "scenesReserialized": false,
+  "publication": "GitHub beta publication authorized by user; tag v0.4.4-beta.",
+  "status": "Technical delivery complete: audio, support art, corrections, native QA, production build, package and verified daily.",
+  "slides": "slides-qa.json",
+  "releaseURL": "https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/releases/tag/v0.4.4-beta"
+}

@@ -1,0 +1,4 @@
+Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumSpriteWidth=5.600
+Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumSpriteWidth=2.667
+Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumSpriteWidth=6.133
+BUG_REPRODUCED: shield gameplay clock advances in modal interface while effect animation and sound pause.

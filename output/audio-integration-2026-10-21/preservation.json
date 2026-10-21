@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "files": [
+    {
+      "file": "CampaignMemory1996.json",
+      "restored": true,
+      "sha256": "b24c45a7c17c708ffc5e50df6c5b6d88d0becf56236bf9680cd0d714507ad153"
+    },
+    {
+      "file": "CampaignStory2026.json",
+      "restored": true,
+      "sha256": "82fbee9f01f0067f26d6940154a236dce9c87ea89692eff9505844d52bb6c73e"
+    },
+    {
+      "file": "ExperimentGDDLDDSave.json",
+      "restored": true,
+      "sha256": "2ca4e23982e98f55837dc76184f0c65cf789e1f24400f9abf01780f3d2ff21cb"
+    },
+    {
+      "file": "ProjectSettings.asset",
+      "restored": true,
+      "sha256": "d27fea3b1663b261a5448d5dbda7ec59766b513ae1ac0789335dede56aac13c2"
+    },
+    {
+      "file": "UniversalRenderPipelineGlobalSettings.asset",
+      "restored": true,
+      "sha256": "bc1af41714d20fee50b831fcb59856376b3458a46f1a08cd88202606469ff147"
+    }
+  ],
+  "note": "Original saves and configurations restored; Recovery untouched."
+}
