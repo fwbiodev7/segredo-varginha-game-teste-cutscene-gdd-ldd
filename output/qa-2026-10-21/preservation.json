@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "saves": [
+    {
+      "file": "CampaignMemory1996.json",
+      "sha256": "b24c45a7c17c708ffc5e50df6c5b6d88d0becf56236bf9680cd0d714507ad153",
+      "restoredExactly": true
+    },
+    {
+      "file": "CampaignStory2026.json",
+      "sha256": "82fbee9f01f0067f26d6940154a236dce9c87ea89692eff9505844d52bb6c73e",
+      "restoredExactly": true
+    },
+    {
+      "file": "ExperimentGDDLDDSave.json",
+      "sha256": "2ca4e23982e98f55837dc76184f0c65cf789e1f24400f9abf01780f3d2ff21cb",
+      "restoredExactly": true
+    }
+  ],
+  "userUrpPreserved": true,
+  "userUrpRestoredAfterUnityRegeneratedRuntimeList": true,
+  "userUrpSha256": "bc1af41714d20fee50b831fcb59856376b3458a46f1a08cd88202606469ff147",
+  "userRecoveryExcluded": [
+    "Assets/_Recovery/0 (5).unity",
+    "Assets/_Recovery/0 (5).unity.meta"
+  ],
+  "restoredTrackedGeneratedFiles": 56,
+  "archivedUntrackedGeneratedFiles": 47,
+  "archive": "output/agent-logs/2026-10-21-regression-captures",
+  "note": "User confirmed the new candidate was closed. QA processes ended before save restoration. The already-open historical Alpha process was left untouched."
+}

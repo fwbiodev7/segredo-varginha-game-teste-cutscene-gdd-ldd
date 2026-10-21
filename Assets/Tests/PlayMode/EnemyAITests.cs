@@ -22,6 +22,7 @@ namespace Game.Tests.PlayMode
         [UnitySetUp]
         public IEnumerator SetUp()
         {
+            IsolatedPlayModeTests.ResetScene();
             // Player
             _playerGo = new GameObject("Player");
             _playerGo.tag = "Player";
@@ -92,6 +93,7 @@ namespace Game.Tests.PlayMode
         [UnityTest]
         public IEnumerator Enemy_GoesToChase_WhenPlayerDetected()
         {
+            _playerGo.transform.position=new Vector3(3f,0f,0f);
             _enemy.ForceChase(_playerGo.transform);
             yield return null;
             Assert.AreEqual(EnemyAI.EnemyState.Chase, _enemy.CurrentState,

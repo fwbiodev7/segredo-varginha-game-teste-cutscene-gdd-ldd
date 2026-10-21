@@ -7,7 +7,7 @@ using Game.Player;
 
 namespace Game.Tests.PlayMode
 {
-    public class VarginhaStudentAllyTests
+    public class VarginhaStudentAllyTests : IsolatedPlayModeTests
     {
         private GameObject _root;
         private EdelzioTopDownController _leader;
@@ -200,19 +200,20 @@ namespace Game.Tests.PlayMode
         [Test]
         public void SignatureStudentsKeepTheirRequestedAttacks()
         {
-            StringAssert.Contains("jiujitsu", VarginhaStudentAlly.DescribeAttack("Matias"));
-            StringAssert.Contains("ping-pong", VarginhaStudentAlly.DescribeAttack("Anna Sabia"));
-            StringAssert.Contains("guitarra", VarginhaStudentAlly.DescribeAttack("Pedro"));
-            StringAssert.Contains("microfone", VarginhaStudentAlly.DescribeAttack("Luis Miguel Messias"));
-            StringAssert.Contains("katana", VarginhaStudentAlly.DescribeAttack("Fabio"));
-            StringAssert.Contains("piano", VarginhaStudentAlly.DescribeAttack("Yasmin"));
-            StringAssert.Contains("bolada de vôlei", VarginhaStudentAlly.DescribeAttack("Marcos"));
+            CreateSquad();
+            Assert.That(Student("Matias").AttackStyle,Is.EqualTo(VarginhaStudentAllyStyle.JiuJitsu));
+            Assert.That(Student("Anna Sabia").AttackStyle,Is.EqualTo(VarginhaStudentAllyStyle.PingPong));
+            Assert.That(Student("Pedro").AttackStyle,Is.EqualTo(VarginhaStudentAllyStyle.Guitar));
+            Assert.That(Student("Luis Miguel Messias").AttackStyle,Is.EqualTo(VarginhaStudentAllyStyle.Microphone));
+            Assert.That(Student("Fabio").AttackStyle,Is.EqualTo(VarginhaStudentAllyStyle.Katana));
+            Assert.That(Student("Yasmin").AttackStyle,Is.EqualTo(VarginhaStudentAllyStyle.FallingPiano));
+            Assert.That(Student("Marcos").AttackStyle,Is.EqualTo(VarginhaStudentAllyStyle.Volleyball));
             Assert.AreEqual(7, (int)VarginhaStudentAllyStyle.Support, "Cenas antigas preservam o enum serializado.");
             Assert.AreEqual(8, (int)VarginhaStudentAllyStyle.Volleyball);
         }
 
         [UnityTest]
-        public IEnumerator MarcosSpikesOnceAndSplashRespectsRange()
+        public IEnumerator MarcosFirstServeHitsOnceWithoutSplash()
         {
             CreateSquad();
             var target = Enemy(new Vector2(3f, 0f));
@@ -232,10 +233,10 @@ namespace Game.Tests.PlayMode
             Assert.AreEqual(30002, attackGlow.sortingOrder, "O brilho precisa ficar acima da escuridão da igreja.");
             StringAssert.Contains("AttackGlow", attackGlow.sprite.name);
             Assert.Greater(attackGlow.color.a, .5f);
-            Assert.Greater(attackGlow.color.r, attackGlow.color.b, "A cortada deve iluminar em dourado.");
+            Assert.Greater(attackGlow.color.b, attackGlow.color.r+.2f, "The authored Marcos effects retain the approved blue/violet palette.");
             yield return new WaitForSeconds(.55f);
             Assert.AreEqual(66f, target.GetComponent<HealthSystem>().CurrentHealth, .01f);
-            Assert.AreEqual(79.6f, nearby.GetComponent<HealthSystem>().CurrentHealth, .01f);
+            Assert.AreEqual(100f, nearby.GetComponent<HealthSystem>().CurrentHealth, .01f);
             Assert.AreEqual(100f, distant.GetComponent<HealthSystem>().CurrentHealth, .01f);
             yield return new WaitForSeconds(.6f);
             Assert.AreEqual(66f, target.GetComponent<HealthSystem>().CurrentHealth, .01f, "Um comando não repete o dano.");
@@ -261,7 +262,7 @@ namespace Game.Tests.PlayMode
         }
 
         [UnityTest]
-        public IEnumerator AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage()
+        public IEnumerator AnnaFirstRacketShotHitsOnlyItsAim()
         {
             CreateSquad();
             var first = Enemy(Vector2.right * 2f);
@@ -271,12 +272,12 @@ namespace Game.Tests.PlayMode
             Assert.IsTrue(Student("Anna Sabia").TryManualAttack(first));
             yield return new WaitForSeconds(1.4f);
             Assert.AreEqual(77f, first.GetComponent<HealthSystem>().CurrentHealth, .01f);
-            Assert.AreEqual(82.75f, second.GetComponent<HealthSystem>().CurrentHealth, .01f);
-            Assert.AreEqual(87.0625f, third.GetComponent<HealthSystem>().CurrentHealth, .01f);
+            Assert.AreEqual(100f, second.GetComponent<HealthSystem>().CurrentHealth, .01f);
+            Assert.AreEqual(100f, third.GetComponent<HealthSystem>().CurrentHealth, .01f);
         }
 
         [UnityTest]
-        public IEnumerator KatanaPiercesOnlyTargetsBehindItsAim()
+        public IEnumerator FirstKatanaCutHitsOnlyItsAim()
         {
             CreateSquad();
             var target = Enemy(Vector2.right * 2f);
@@ -286,7 +287,7 @@ namespace Game.Tests.PlayMode
             Assert.IsTrue(Student("Fabio").TryManualAttack(target));
             yield return new WaitForSeconds(1.4f);
             Assert.AreEqual(62f, target.GetComponent<HealthSystem>().CurrentHealth, .01f);
-            Assert.AreEqual(71.5f, behind.GetComponent<HealthSystem>().CurrentHealth, .01f);
+            Assert.AreEqual(100f, behind.GetComponent<HealthSystem>().CurrentHealth, .01f);
             Assert.AreEqual(100f, beside.GetComponent<HealthSystem>().CurrentHealth, .01f);
         }
 

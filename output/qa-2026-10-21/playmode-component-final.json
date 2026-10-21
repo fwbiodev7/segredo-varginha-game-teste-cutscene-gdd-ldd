@@ -1,0 +1,18 @@
+{
+  "source": "output\\qa-2026-10-21\\playmode-component-final.xml",
+  "runResult": "Failed(Child)",
+  "tests": {
+    "total": 40,
+    "passed": 39,
+    "failed": 1,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.VarginhaRequestedGameplayTests.ChurchHasDarknessAltarPriestAndClearFlashlightCone",
+      "message": "  The unlit room must be nearly black.\n  Expected: less than 0.0549999997f\n  But was:  0.0572025813f\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaRequestedGameplayTests+<ChurchHasDarknessAltarPriestAndClearFlashlightCone>d__7.MoveNext () [0x0032c] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaRequestedGameplayTests.cs:139\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    }
+  ],
+  "success": false
+}

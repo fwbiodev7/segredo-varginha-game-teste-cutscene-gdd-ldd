@@ -1,0 +1,11 @@
+{
+  "source": "output\\qa-2026-10-21\\playmode-opening.xml",
+  "tests": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

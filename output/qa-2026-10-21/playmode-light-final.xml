@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-21 10:50:42Z" end-time="2026-10-21 10:50:46Z" duration="3,6741771">
+  <test-suite type="TestSuite" id="1320" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="270" result="Passed" start-time="2026-10-21 10:50:42Z" end-time="2026-10-21 10:50:46Z" duration="3.674177" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1633" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="270" result="Passed" start-time="2026-10-21 10:50:42Z" end-time="2026-10-21 10:50:46Z" duration="3.647804" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="17088" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1634" name="Game" fullname="Game" runstate="Runnable" testcasecount="270" result="Passed" start-time="2026-10-21 10:50:42Z" end-time="2026-10-21 10:50:46Z" duration="3.635993" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1635" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="270" result="Passed" start-time="2026-10-21 10:50:42Z" end-time="2026-10-21 10:50:46Z" duration="3.619268" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1636" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="270" result="Passed" start-time="2026-10-21 10:50:42Z" end-time="2026-10-21 10:50:46Z" duration="3.602627" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1607" name="VarginhaRequestedGameplayTests" fullname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" classname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-21 10:50:42Z" end-time="2026-10-21 10:50:46Z" duration="3.580235" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1610" name="ChurchHasDarknessAltarPriestAndClearFlashlightCone" fullname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests.ChurchHasDarknessAltarPriestAndClearFlashlightCone" methodname="ChurchHasDarknessAltarPriestAndClearFlashlightCone" classname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" runstate="Runnable" seed="1243085599" result="Passed" start-time="2026-10-21 10:50:42Z" end-time="2026-10-21 10:50:46Z" duration="3.555405" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaRequestedGameplayTests.ChurchHasDarknessAltarPriestAndClearFlashlightCone
+QA test: Game.Tests.PlayMode.VarginhaRequestedGameplayTests.ChurchHasDarknessAltarPriestAndClearFlashlightCone
+Shader 'Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling' is not supported or has been stripped from the build (in 'Blit FSR Upscaling'). PostProcessing render passes will not execute.
+Shader 'Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling' is not supported or has been stripped from the build (in 'Blit FSR Upscaling'). PostProcessing render passes will not execute.
+QA result: Passed Game.Tests.PlayMode.VarginhaRequestedGameplayTests.ChurchHasDarknessAltarPriestAndClearFlashlightCone
+QA result: Passed Game.Tests.PlayMode.VarginhaRequestedGameplayTests.ChurchHasDarknessAltarPriestAndClearFlashlightCone
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

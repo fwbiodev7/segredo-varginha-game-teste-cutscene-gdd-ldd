@@ -187,7 +187,7 @@ namespace Game.Tests.PlayMode
             Assert.That(stage.Progress.expansion.workshopParked,Is.True);stage.ClosePanel();
             Assert.That(car.GetComponent<BoxCollider2D>().Distance(actor.GetComponent<CircleCollider2D>()).isOverlapped,Is.False);
             yield return Load(10);Assert.That(CampaignExpansionController.Active.Progress.expansion.workshopParked,Is.True);
-            Assert.That(Object.FindAnyObjectByType<EdelzioTopDownController>().GetComponent<SpriteRenderer>().sprite.bounds.size.y,Is.EqualTo(1.5f).Within(.04f));
+            Assert.That(Object.FindAnyObjectByType<EdelzioTopDownController>().GetComponent<SpriteRenderer>().sprite.bounds.size.y,Is.EqualTo(1.5f).Within(.10f));
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
     }

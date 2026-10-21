@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "shippedSha256": "bb9202bcafdaf81ba42cca050f5cffa7afe98b8bc3b7ec03c735acc3b1cb8a8d",
+  "packedSha256": "bb9202bcafdaf81ba42cca050f5cffa7afe98b8bc3b7ec03c735acc3b1cb8a8d",
+  "rgbaPixelsUnchanged": true,
+  "frames": 8,
+  "helperSha256": "676fddf39b13ba8bfee5afb2aa90a226f66496d8f89d492fd205cabf1bcb747f",
+  "timing": "Preview holds; runtime cinematic motion remains in CampaignHouseSequence.cs"
+}

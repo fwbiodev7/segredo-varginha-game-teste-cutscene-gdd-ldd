@@ -59,10 +59,34 @@ namespace Game.Varginha.Experiment
             : step == 1 ? "bag" : deduced ? "box" : null;
         public string Hint(int routine, int level)
         {
-            if (step < 2 || Complete) return Objective(routine);
+            level = Mathf.Clamp(level, 0, 2);
+            if (Complete) return level == 0 ? "O material da aula e os vestígios estão guardados."
+                : level == 1 ? "A próxima etapa começa no quintal, junto ao carro."
+                : "Vá ao Fusca e interaja para seguir à Industrial.";
+            if (step == 0)
+            {
+                if ((routine & 1) == 0) return level == 0 ? "Antes da aula, termine a rotina da manhã."
+                    : level == 1 ? "Procure a pia na cozinha, ao lado do fogão."
+                    : "Aproxime-se da pia e use a ação de interação indicada na tela para lavar o rosto.";
+                if ((routine & 2) == 0) return level == 0 ? "Ainda falta tomar o café antes de sair."
+                    : level == 1 ? "O café está na cozinha, junto à mesa."
+                    : "Aproxime-se do café e interaja; aguarde Edelzio terminar de beber.";
+                if ((routine & 4) == 0) return level == 0 ? "Confira se o material da aula está preparado."
+                    : level == 1 ? "O notebook ficou no escritório."
+                    : "Interaja com o notebook no escritório para conferir o material da aula.";
+                return level == 0 ? "Organize o que vai levar antes de buscar a mochila."
+                    : level == 1 ? "O balcão da cozinha deixa a chave à vista."
+                    : "Aproxime-se do balcão e interaja para deixar a chave do Fusca.";
+            }
+            if (step == 1) return level == 0 ? "A chave está segura no balcão; falta um item da preparação."
+                : level == 1 ? "A mochila ficou no quarto."
+                : "Vá ao quarto e interaja com a mochila; depois volte ao balcão.";
             if (!deduced) return level == 0 ? "Compare o que mudou e o que permaneceu igual."
                 : level == 1 ? "O balcão, a fechadura e o papel junto ao quarto permitem descartar algumas hipóteses."
                 : "Observe os três pontos. Relacione a saída fechada com o papel da caixa: investigue dentro da casa.";
+            if (step < 4) return level == 0 ? "As pistas apontam para algo que ficou dentro da casa."
+                : level == 1 ? "Escute o ruído perto da cama e observe a origem do papel."
+                : "Reexamine a caixa de brinquedos debaixo da cama.";
             return level == 0 ? "A fotografia e o desenho retratam a mesma noite; a tinta atravessa os rasgos."
                 : level == 1 ? "Uma borda termina no muro. Outra continua o galho. Faça os traços se encontrarem."
                 : "Organize CASA → ÁRVORE → FIGURA. A escrita recente se revela sobre o desenho antigo.";

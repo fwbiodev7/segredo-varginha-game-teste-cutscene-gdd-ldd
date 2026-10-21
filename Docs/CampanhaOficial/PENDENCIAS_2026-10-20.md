@@ -1,5 +1,7 @@
 # Pendências — 20/10/2026
 
+Registro histórico da entrega de 20/10. A continuação, os testes e as decisões de 21/10 estão em [PENDENCIAS_2026-10-21.md](PENDENCIAS_2026-10-21.md). A dublagem foi adiada pelo usuário para uma eventual etapa futura.
+
 Escopo entregue: abertura adulta, preparação para a escola, chave no balcão, desaparecimento, investigação, páginas rasgadas, viagem cinematográfica do Fusca e ligação com a escola. A lista abaixo acompanha a entrega; não representa falhas de progressão confirmadas.
 
 | Prioridade | Pendência | Critério de conclusão |

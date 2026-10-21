@@ -1,0 +1,103 @@
+{
+  "source": "output\\qa-2026-10-21\\playmode-regression-fixed.xml",
+  "runResult": "Failed(Child)",
+  "tests": {
+    "total": 107,
+    "passed": 89,
+    "failed": 18,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_DetectsPlayer_WhenInRange",
+      "message": "UnityEngine.MissingReferenceException : The object of type 'UnityEngine.GameObject' has been destroyed but you are still trying to access it.\nYour script should either check if it is null or you should not destroy the object.",
+      "stack": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x00065] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.GameObject.get_transform () [0x00006] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at Game.Tests.PlayMode.EnemyAITests+<Enemy_DetectsPlayer_WhenInRange>d__9.MoveNext () [0x0001e] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\EnemyAITests.cs:85 \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+    },
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_Dies_WhenHPZero",
+      "message": "UnityEngine.MissingReferenceException : The object of type 'UnityEngine.Rigidbody2D' has been destroyed but you are still trying to access it.\nYour script should either check if it is null or you should not destroy the object.",
+      "stack": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x00065] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Rigidbody2D.set_linearVelocity (UnityEngine.Vector2 value) [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \n  at Game.Enemies.EnemyAI.HandleDeath () [0x00007] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Scripts\\Game\\Enemies\\EnemyAI.cs:158 \n  at Game.Player.HealthSystem.Die () [0x00000] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Scripts\\Game\\Player\\HealthSystem.cs:115 \n  at Game.Player.HealthSystem.InstantKill () [0x00030] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Scripts\\Game\\Player\\HealthSystem.cs:108 \n  at Game.Tests.PlayMode.EnemyAITests+<Enemy_Dies_WhenHPZero>d__12.MoveNext () [0x0001e] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\EnemyAITests.cs:120 \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+    },
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_GoesToChase_WhenPlayerDetected",
+      "message": "UnityEngine.MissingReferenceException : The object of type 'UnityEngine.GameObject' has been destroyed but you are still trying to access it.\nYour script should either check if it is null or you should not destroy the object.",
+      "stack": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x00065] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.GameObject.get_transform () [0x00006] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at Game.Tests.PlayMode.EnemyAITests+<Enemy_GoesToChase_WhenPlayerDetected>d__10.MoveNext () [0x0001e] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\EnemyAITests.cs:95 \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+    },
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_IsDestroyed_AfterDeath",
+      "message": "UnityEngine.MissingReferenceException : The object of type 'UnityEngine.Rigidbody2D' has been destroyed but you are still trying to access it.\nYour script should either check if it is null or you should not destroy the object.",
+      "stack": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x00065] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Rigidbody2D.set_linearVelocity (UnityEngine.Vector2 value) [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \n  at Game.Enemies.EnemyAI.HandleDeath () [0x00007] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Scripts\\Game\\Enemies\\EnemyAI.cs:158 \n  at Game.Player.HealthSystem.Die () [0x00000] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Scripts\\Game\\Player\\HealthSystem.cs:115 \n  at Game.Player.HealthSystem.InstantKill () [0x00030] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Scripts\\Game\\Player\\HealthSystem.cs:108 \n  at Game.Tests.PlayMode.EnemyAITests+<Enemy_IsDestroyed_AfterDeath>d__13.MoveNext () [0x0001e] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\EnemyAITests.cs:129 \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+    },
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_ReturnsToPatrol_WhenForced",
+      "message": "UnityEngine.MissingReferenceException : The object of type 'UnityEngine.GameObject' has been destroyed but you are still trying to access it.\nYour script should either check if it is null or you should not destroy the object.",
+      "stack": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x00065] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.GameObject.get_transform () [0x00006] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at Game.Tests.PlayMode.EnemyAITests+<Enemy_ReturnsToPatrol_WhenForced>d__11.MoveNext () [0x00029] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\EnemyAITests.cs:107 \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.AddForce_ChangesVelocity",
+      "message": "UnityEngine.MissingReferenceException : The object of type 'UnityEngine.Rigidbody2D' has been destroyed but you are still trying to access it.\nYour script should either check if it is null or you should not destroy the object.",
+      "stack": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x00065] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Rigidbody2D.set_gravityScale (System.Single value) [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \n  at Game.Tests.PlayMode.PhysicsTests+<AddForce_ChangesVelocity>d__7.MoveNext () [0x0001e] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\PhysicsTests.cs:75 \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.FreezePosition_PreventsMovement",
+      "message": "UnityEngine.MissingReferenceException : The object of type 'UnityEngine.Rigidbody2D' has been destroyed but you are still trying to access it.\nYour script should either check if it is null or you should not destroy the object.",
+      "stack": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x00065] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Rigidbody2D.set_constraints (UnityEngine.RigidbodyConstraints2D value) [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \n  at Game.Tests.PlayMode.PhysicsTests+<FreezePosition_PreventsMovement>d__15.MoveNext () [0x0001e] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\PhysicsTests.cs:168 \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.FreezeRotation_PreventsRotation",
+      "message": "UnityEngine.MissingReferenceException : The object of type 'UnityEngine.Rigidbody2D' has been destroyed but you are still trying to access it.\nYour script should either check if it is null or you should not destroy the object.",
+      "stack": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x00065] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Rigidbody2D.set_constraints (UnityEngine.RigidbodyConstraints2D value) [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \n  at Game.Tests.PlayMode.PhysicsTests+<FreezeRotation_PreventsRotation>d__14.MoveNext () [0x0001e] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\PhysicsTests.cs:158 \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.OverlapCircle_DetectsNearbyCollider",
+      "message": "  OverlapCircle deve detectar o colisor do chão.\n  Expected: not null\n  But was:  null\n",
+      "stack": "at Game.Tests.PlayMode.PhysicsTests+<OverlapCircle_DetectsNearbyCollider>d__11.MoveNext () [0x00050] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\PhysicsTests.cs:121\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.Raycast2D_HitsGround_FromAbove",
+      "message": "  Raycast de cima para baixo deve detectar o chão.\n  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.PhysicsTests+<Raycast2D_HitsGround_FromAbove>d__9.MoveNext () [0x00056] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\PhysicsTests.cs:100\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.Rigidbody2D_CollidesWith_StaticGround",
+      "message": "UnityEngine.MissingReferenceException : The object of type 'UnityEngine.Rigidbody2D' has been destroyed but you are still trying to access it.\nYour script should either check if it is null or you should not destroy the object.",
+      "stack": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x00065] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Rigidbody2D.get_linearVelocity () [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \n  at Game.Tests.PlayMode.PhysicsTests+<Rigidbody2D_CollidesWith_StaticGround>d__6.MoveNext () [0x0003e] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\PhysicsTests.cs:66 \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.Rigidbody2D_FallsWithGravity",
+      "message": "UnityEngine.MissingReferenceException : The object of type 'UnityEngine.Rigidbody2D' has been destroyed but you are still trying to access it.\nYour script should either check if it is null or you should not destroy the object.",
+      "stack": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x00065] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Rigidbody2D.set_position (UnityEngine.Vector2 value) [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \n  at Game.Tests.PlayMode.PhysicsTests+<Rigidbody2D_FallsWithGravity>d__5.MoveNext () [0x00029] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\PhysicsTests.cs:53 \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.SetVelocity_DirectlyMovesBody",
+      "message": "UnityEngine.MissingReferenceException : The object of type 'UnityEngine.Rigidbody2D' has been destroyed but you are still trying to access it.\nYour script should either check if it is null or you should not destroy the object.",
+      "stack": "  at UnityEngine.Object+MarshalledUnityObject.TryThrowEditorNullExceptionObject (UnityEngine.Object unityObj, System.String parameterName) [0x00065] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Bindings.ThrowHelper.ThrowNullReferenceException (System.Object obj) [0x0000a] in <d5ea965f39d74501b56f4006ef80da34>:0 \n  at UnityEngine.Rigidbody2D.set_gravityScale (System.Single value) [0x00006] in <868e9c9a483244e3805f8f00fb1d55d7>:0 \n  at Game.Tests.PlayMode.PhysicsTests+<SetVelocity_DirectlyMovesBody>d__8.MoveNext () [0x0001e] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\PhysicsTests.cs:86 \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaRequestedGameplayTests.ChurchHasDarknessAltarPriestAndClearFlashlightCone",
+      "message": "  Expected: greater than 0.0f\n  But was:  0.0f\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaRequestedGameplayTests+<ChurchHasDarknessAltarPriestAndClearFlashlightCone>d__7.MoveNext () [0x00096] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaRequestedGameplayTests.cs:112\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage",
+      "message": "  Expected: 82.75d +/- 0.0099999997764825821d\n  But was:  100.0d\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaStudentAllyTests+<AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage>d__19.MoveNext () [0x000e0] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:275\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.DeathCancelsPendingAllyAndPlayerAttacksWhileTimeIsPaused",
+      "message": "  Expected: null\n  But was:  <TestEnemy (Game.Varginha.VarginhaCombatTarget)>\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaStudentAllyTests+<DeathCancelsPendingAllyAndPlayerAttacksWhileTimeIsPaused>d__8.MoveNext () [0x0011d] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:76\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.KatanaPiercesOnlyTargetsBehindItsAim",
+      "message": "  Expected: 71.5d +/- 0.0099999997764825821d\n  But was:  100.0d\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaStudentAllyTests+<KatanaPiercesOnlyTargetsBehindItsAim>d__20.MoveNext () [0x000e0] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:290\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.MarcosSpikesOnceAndSplashRespectsRange",
+      "message": "  A cortada deve iluminar em dourado.\n  Expected: greater than 1.0f\n  But was:  0.542400002f\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaStudentAllyTests+<MarcosSpikesOnceAndSplashRespectsRange>d__17.MoveNext () [0x001cb] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:236\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    }
+  ],
+  "success": false
+}

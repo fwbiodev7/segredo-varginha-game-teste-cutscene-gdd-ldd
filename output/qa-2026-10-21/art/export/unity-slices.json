@@ -1,0 +1,177 @@
+{
+  "schema": "unity-slice-plan/v1",
+  "origin": "bottom-left",
+  "image": "sheet.png",
+  "pixelsPerUnit": 128,
+  "sprites": [
+    {
+      "name": "key_rest",
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    },
+    {
+      "name": "key_place",
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 450
+    },
+    {
+      "name": "paper_trace",
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    },
+    {
+      "name": "box_closed",
+      "rect": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 600
+    },
+    {
+      "name": "box_open",
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    },
+    {
+      "name": "page_house",
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    },
+    {
+      "name": "page_tree",
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    },
+    {
+      "name": "page_figure",
+      "rect": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.5
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    }
+  ],
+  "clips": {
+    "key_deposit": {
+      "frames": [
+        "key_place",
+        "key_rest"
+      ],
+      "loop": false
+    },
+    "box_open": {
+      "frames": [
+        "box_closed",
+        "box_open"
+      ],
+      "loop": false
+    },
+    "paper_trace": {
+      "frames": [
+        "paper_trace"
+      ],
+      "loop": false
+    },
+    "page_house": {
+      "frames": [
+        "page_house"
+      ],
+      "loop": false
+    },
+    "page_tree": {
+      "frames": [
+        "page_tree"
+      ],
+      "loop": false
+    },
+    "page_figure": {
+      "frames": [
+        "page_figure"
+      ],
+      "loop": false
+    }
+  },
+  "importSettings": {
+    "textureType": "Sprite",
+    "spriteMode": "Multiple",
+    "filterMode": "Point",
+    "mipmaps": false,
+    "compression": "Uncompressed",
+    "wrapMode": "Clamp"
+  },
+  "note": "Import plan only; Unity does not import this JSON automatically. Preserve existing sprite IDs."
+}

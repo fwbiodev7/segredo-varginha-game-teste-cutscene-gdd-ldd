@@ -7,7 +7,7 @@ using UnityEngine.TestTools;
 
 namespace Game.Tests.PlayMode
 {
-    public class VarginhaMenuAndDeathTests
+    public class VarginhaMenuAndDeathTests : IsolatedPlayModeTests
     {
         private GameObject _root;
 

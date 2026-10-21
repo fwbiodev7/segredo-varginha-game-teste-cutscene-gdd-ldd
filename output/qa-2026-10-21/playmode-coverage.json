@@ -1,0 +1,1399 @@
+{
+  "success": true,
+  "mode": "Latest result per case, from full suite plus affected-fixture reruns; not a single green full-suite execution.",
+  "tests": {
+    "total": 270,
+    "passed": 270,
+    "failed": 0,
+    "skipped": 0
+  },
+  "runs": [
+    {
+      "source": "playmode-all.xml",
+      "result": "Failed(Child)",
+      "total": 270,
+      "passed": 241,
+      "failed": 29
+    },
+    {
+      "source": "playmode-regression-fixed.xml",
+      "result": "Failed(Child)",
+      "total": 107,
+      "passed": 89,
+      "failed": 18
+    },
+    {
+      "source": "playmode-component-final.xml",
+      "result": "Failed(Child)",
+      "total": 40,
+      "passed": 39,
+      "failed": 1
+    },
+    {
+      "source": "playmode-light-final.xml",
+      "result": "Passed",
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    }
+  ],
+  "renamedContracts": {
+    "AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox": "AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate",
+    "CoveredOfficeSofaBlocksRealMovementFromEveryAccessibleSide": "CoveredLivingRoomSofaBlocksRealMovementFromEveryAccessibleSide",
+    "AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage": "AnnaFirstRacketShotHitsOnlyItsAim",
+    "KatanaPiercesOnlyTargetsBehindItsAim": "FirstKatanaCutHitsOnlyItsAim",
+    "MarcosSpikesOnceAndSplashRespectsRange": "MarcosFirstServeHitsOnceWithoutSplash"
+  },
+  "cases": [
+    {
+      "name": "Game.Tests.PlayMode.CampaignAtmospherePlayTests.EveryChapterAndSubareaHasReadablePostProcessingAndBoundedResources",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignAtmospherePlayTests.PauseReducedMotionNarrativeTriggersAndTransitionsRemainConsistent",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignAtmospherePlayTests.RepresentativeChaptersRecordBeforeAfterPerformance",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignAtmospherePlayTests.ReturningToMenuDoesNotCarryFinalHorrorIntoANewCampaign",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignChaptersTests.AdultHouseFeetBlockFurnitureAndWallsWithCorrectDepthAndLocalLight",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignChaptersTests.ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignChaptersTests.MovingCharactersHaveShadowsAndPauseReleasesItsSmallFrozenFrame",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignChaptersTests.OptionalHintsPreserveProgressAndReleaseControlsAcrossChapters",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignChaptersTests.PartitionEndsProtectTheWholeBodyAndChildFridgeWallHasNoInvisibleOpening",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ApprovedLaboratoryPhysicsPreservesStudyPuzzleAndReload",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ArenaNavigationSpawnPoolAndDefeatAllowRetry",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.BackpackSelectsStudentsAndSupportWhilePausedWithMouseAndKeyboard",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.BossAndChildrenHurtboxesFollowCrouchesWithoutIncludingClawTrails",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InterpolatedMovementAndShieldRepulsionUseThePhysicsPosition",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ManifestationCinematicsFreezeOnPauseRestoreCameraAndRequireCalibration",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnCannotOpenBeforeVictoryAndCalibrationOrSkipRelease",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.ReturnWaitsForCrossingAndSurvivesReloadBeforeSchoolEpilogue",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignControllerRemapTests.CancelAndDisconnectRestoreInputsWithoutChangingBindings",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignControllerRemapTests.CaptureWaitsForOpeningButtonReleaseAndResumesAfterNewButtonRelease",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignControllerRemapTests.ControllerDiagramAppearsInSettingsAndCanBeNavigatedWithoutMouse",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignControllerRemapTests.HudLabelsFollowDeviceAndRemapping",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignControllerRemapTests.RemappingSwapsConflictsAndSurvivesActionRebuild",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.ActualCharacterReceivesMovingLightAndItsShadowUsesTheSameDirection",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.CharactersCreatedAfterSixSecondsStillReceiveMapLighting",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.EquippedFlashlightLightsACharacterButStopsAtScenery",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignDynamicLightingPlayTests.FuscaHeadlightsFollowTheCarAndRegisterOnlyWhileSwitchedOn",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.AllFiveScenesLoadAndRetainEvidenceAndFurnitureCollisions",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.FuscaDepartsAfterMarksWithoutRequiringTrack",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.AudioRowsRespondToDpadAnalogKeyboardAndSaveAllFourVolumes",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.AuthoredGroundShapesBlockMovementFromEveryAccessibleSide",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.MouseDragUpdatesEveryAudioRowAndSavesTheSelectedValue",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.RadioCueSharesThePhraseClockPausesAndContinuesToSchool",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignHudPlayTests.KeyboardCanNavigateAndSubmitTheSamePuzzleControlsAsGamepad",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignHudPlayTests.RealChapterControllersFreezeHudInMenusAndResumeWithoutReappearing",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.BasementStairsKeepTheNextChapterSeparateFromReturningUpstairs",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.CoveredLivingRoomSofaBlocksRealMovementFromEveryAccessibleSide",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.FiveDifferentPuzzleInterfacesAcceptControllerAnswersAndPreservePartialProgress",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.MansionDoorsConnectTheHallLivingRoomOfficeAndServicePassageWithRealMovement",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.MemoryCanUndoAndSubmitWithKeyboardNavigation",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.SpatialMapCanBePlacedRotatedAndConfirmedUsingTheController",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignRemasterPlayTests.AmbientCrossfadeAnticipatesNextBedAndPauseFreezesBlend",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignRemasterPlayTests.ClueFramingFreezesDuringPauseReturnsSafelyAndHonorsReducedMotion",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignRemasterPlayTests.ContextTransitionsReachSchoolAndFuscaWithScreenshots",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignRemasterPlayTests.CrossfadeKeepsAmbientChannelsAliveReleasesFrameAndRestoresControls",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignRequestedChangesTests.DeadzoneCarIsolationAndLastDevicePrompts",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignRequestedChangesTests.OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignRequestedChangesTests.RealMenuSettingsAndCancelWorkWithoutMouse",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignRequestedChangesTests.RumbleExpiresAndUnsupportedDevicesNeverThrow",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignRequestedChangesTests.SchoolSeatingAndFaceWashKeepSourceArtAndStopCleanly",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignReturnSealPlayTests.AtlasHasDistinctLoopFramesAndClearRenderedBordersAndCenter",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignReturnSealPlayTests.PresentationOpensLoopsClosesAndUsesStableReducedMotion",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignReturnSealPlayTests.ReturnSequenceKeepsTheSealUntilCrossingAndResumesSavedProgress",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignVisualPolishMovementTests.FragmentosAllowsRealMovementBelowColumnAndBlocksTheSolidLadder",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignVisualPolishPlayTests.EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignVisualPolishPlayTests.VitraisColourSpritesOnGpuAndFadeAtTheEdge",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CharacterFrameRenderingTests.AllStoryDirectionsActionsPortraitsAndEquipmentHaveValidMeshes",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CharacterFrameRenderingTests.ChildFramesExcludeNeighbourHeadsAndKeepFeetAnchored",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CharacterFrameRenderingTests.StudentAndLegacyPlayerCyclesKeepGeometryAndShareAtlases",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CollectibleTests.Collectible_AddsCorrectScoreValue",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CollectibleTests.Collectible_CannotBeCollectedTwice",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CollectibleTests.Collectible_Collect_AddsScore",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CollectibleTests.Collectible_Collect_DestroysObject",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CollectibleTests.Collectible_Collect_SetsIsCollected",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CollectibleTests.Collectible_IsActive_Initially",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CollectibleTests.Collectible_NotCollected_Initially",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EdelzioPresentationTests.ActionsKeepNewAppearanceAndColliderSize",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EdelzioPresentationTests.BackpackStateControlsIntegratedAppearanceInEveryDirection",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EdelzioPresentationTests.CombatPosesKeepEquipmentWithoutChangingGeometry",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EdelzioPresentationTests.HotbarReflectsActualCollectedItems",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EdelzioPresentationTests.LockStopsResidualMotion",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EdelzioPresentationTests.ReferenceArtCoversDirectionsWeaponsAndPortrait",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_AttackRange_LessThanDetectionRange",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_DetectionRange_IsPositive",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_DetectsPlayer_WhenInRange",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_Dies_WhenHPZero",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_GoesToChase_WhenPlayerDetected",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_HasNoPlayer_Initially",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_IsDestroyed_AfterDeath",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_ReturnsToPatrol_WhenForced",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_StartsInPatrolState",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.FuscaDepartureTests.DepartureKeepsLaneAndEndsAtExactDistance",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.FuscaDepartureTests.SchoolBoardingStopsPhysicsBeforeMovingIntoTheSeat",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.InitialState_IsMenu",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.IsPlaying_FalseInitially",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.OnGameOver_EventFired",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.OnGameStart_EventFired",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.OnLevelComplete_EventFired",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.PauseGame_OnlyFromPlayingState",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.PauseGame_SetsPausedState",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.PauseGame_SetsTimeScaleZero",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.ResumeGame_RestoresTimeScale",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.ResumeGame_SetsPlayingState",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.ReturnToMenu_RestoresTimeScale",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.ReturnToMenu_SetsMenuState",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.Singleton_IsSet_AfterAwake",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.Singleton_OnlyOneInstance",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.StartGame_IsPlayingTrue",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.StartGame_SetsPlayingState",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.TriggerGameOver_SetsGameOverState",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.TriggerGameOver_Twice_OnlyFiresOnce",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.GameManagerTests.TriggerWin_SetsWinState",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.FullHeal_RestoresToMax",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.Heal_CannotExceedMaxHealth",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.Heal_RestoresHP",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.Heal_WhenDead_IsIgnored",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.HealthPercent_IsHalf_WhenHalfHP",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.HealthPercent_IsOne_WhenFull",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.Health_IsNotDead_Initially",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.Health_StartsAtMaxHealth",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.InstantKill_SetsHPToZero",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.OnDeath_EventFired_WhenDead",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.OnHealthChanged_FiredOnDamage",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.OnHealthChanged_FiredOnHeal",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.SetMaxHealth_KeepsPercent",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.SetMaxHealth_UpdatesMax",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.TakeDamage_CannotGoBelowZero",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.TakeDamage_CorrectAmount",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.TakeDamage_FatalDamage_SetsDead",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.TakeDamage_NegativeAmount_IsIgnored",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.TakeDamage_ReducesHP",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.HealthSystemTests.TakeDamage_WhenDead_IsIgnored",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.LevelLoadTests.ActiveScene_HasValidName",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.LevelLoadTests.ActiveScene_IsLoaded",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.LevelLoadTests.BuildSettings_HasScenesConfigured",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.LevelLoadTests.DontDestroyOnLoad_ObjectPersistsBetweenScenes",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.LevelLoadTests.LevelManager_CurrentScene_MatchesActiveScene",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.LevelLoadTests.LevelManager_IsNotLoading_Initially",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.LevelLoadTests.LoadScene_Additive_CanBeUnloaded",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.LevelLoadTests.LoadScene_Additive_IncreasesSceneCount",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.LevelLoadTests.SceneManager_HasAtLeastOneScene",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.MenuCinematicPlayTests.BackpackHoverPreservesSpritesClicksAndDisabledButtonsWhilePaused",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.MenuCinematicPlayTests.BlueFuscaReplacementPreservesEveryPixelOutsideTheCarRectangle",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.MenuCinematicPlayTests.ContinueShowsSignalLossAndPreservesTheSavedChapter",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.MenuCinematicPlayTests.DisabledShaderPreservesEveryOriginalPixelAndGazeOnlyUsesExistingArt",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.MenuCinematicPlayTests.ExistingHudAndPauseRegressionStillPassesWithTheAnimatedMenu",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.MenuCinematicPlayTests.KeyboardAndControllerUseTheSameAnimatedButtonsAndPanels",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.MenuCinematicPlayTests.LayeredUfoActuallyLeavesTheSkyAndFogMovesVisibly",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.MenuCinematicPlayTests.MenuReusesItsRenderTargetAndRespectsReducedMotionAndAudioSettings",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.MenuCinematicPlayTests.NewStoryRetainsConfirmationAndStartsTheOriginalFirstChapter",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.MenuCinematicPlayTests.SharedHoverRetainsTheCarInteractionBinding",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.MenuCinematicPlayTests.TransparentUfoHasRealAlphaAndClearBorders",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PerformanceTests.Performance_50DynamicObjects_FrameTime",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PerformanceTests.Performance_Destroy100Objects",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PerformanceTests.Performance_EmptyScene_FrameTime",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PerformanceTests.Performance_FindObjectsByType_100Times",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PerformanceTests.Performance_Instantiate100Objects",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PerformanceTests.Performance_Physics2D_OverlapCircle_1000Times",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PerformanceTests.Performance_StringConcat_VsStringBuilder",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PerformanceTests.Performance_VectorOperations_ExecutionSpeed",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.AddForce_ChangesVelocity",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.FreezePosition_PreventsMovement",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.FreezeRotation_PreventsRotation",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.OverlapCircle_DetectsNearbyCollider",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.OverlapCircle_ReturnsNull_WhenEmpty",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.Raycast2D_HitsGround_FromAbove",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.Raycast2D_MissesGround_FromSide",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.Rigidbody2D_CollidesWith_StaticGround",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.Rigidbody2D_FallsWithGravity",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.SetVelocity_DirectlyMovesBody",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.Trigger_IsDetectedByOverlapArea",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PlayerMovementTests.Player_Dies_WhenHPZero",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PlayerMovementTests.Player_FacesLeft_WhenMovingLeft",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PlayerMovementTests.Player_FacesRight_WhenMovingRight",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PlayerMovementTests.Player_Falls_WithGravity",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PlayerMovementTests.Player_JumpsLeft_DecreasesJumpsLeft",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PlayerMovementTests.Player_Jumps_GainsPositiveVelocityY",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PlayerMovementTests.Player_MovesLeft_WhenInputNegative",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PlayerMovementTests.Player_MovesRight_WhenInputPositive",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PlayerMovementTests.Player_StopsMoving_WhenInputZero",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PlayerMovementTests.Player_TakesDamage_HealthDecreases",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaCampaignTests.AlienBurstKnocksTheChildBackAndLeavesHimLyingWithNoMemory",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaCampaignTests.OpeningHandsControlToChildWithoutCombatAndPauseRestoresInput",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaCombatTests.AllThreeComboContactsDealDamage",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaCombatTests.AncestralEntityRemainsInvulnerable",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaCombatTests.CombatCursorInstantiatesWithAttackAndDetectsTarget",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaCombatTests.EarlyQueuedClickChainsExactlyOnePunch",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaCombatTests.EdelzioCanMoveDuringAttackAndAttackAgainWithoutCooldown",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaCombatTests.LockCancelsQueuedPunchWithoutErasingInteractionPose",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaCombatTests.MinorManifestationTakesDamageOnlyThroughCombatTarget",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaCombatTests.MovementReversesAndStopsInAllEightDirections",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaCombatTests.PunchAtlasHasFourDirectionsAndThreeSixFrameCombos",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaCombatTests.PunchDamagesOnlyAtContactAndOnlyOnceForMultipleColliders",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaCombatTests.WallBlocksPunchAndDisableRestoresHitstop",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaDifficultyAndPresentationTests.DifficultyScalesEachEnemyOnce",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaDifficultyAndPresentationTests.EveryStudentHasVisibleAnticipationAndExactlyOneImpact",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaDifficultyAndPresentationTests.RouteDestinationsAreDistinctAndIncludedInBuild",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaExperimentIntegrationTests.ExistingSchoolSupportsOpeningInvestigationAndReturn",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.ClassroomETAttacksCaptiveCageAndRescueStopsThePressure",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.CoffeeSeatingAndWebcamHaveTheirOwnFrames",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.DisabledBackpackAnimationStillAllowsPickup",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.DisabledSeatAnimationDoesNotLockPlayerOrConsumeSeat",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.DisablingSeatedPlayerClosesNotebookAndRestoresTime",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.ExternallyStartedCrouchStaysRestoredAfterDisable",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.InteractionRowsDoNotCutThroughVisiblePixels",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.InterruptedCoffeeCanBeRetriedAndCompletesOnlyOnce",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.InterruptedCoffeeRestoresCupAndMovement",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.InterruptedCrouchRestoresOriginalScale",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.MissingNotebookChairIsCreatedOnlyOnce",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.NotebookExitRestoresTimePositionCollisionAndAllowsRetry",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.PortraitUsesTheSpeakersCurrentAtlas(\"Ana Tavares\",\"AnaTavares\")",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.PortraitUsesTheSpeakersCurrentAtlas(\"Edelzio\",\"Edelzio\")",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.PortraitUsesTheSpeakersCurrentAtlas(\"Fábio\",\"Fabio\")",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.PortraitUsesTheSpeakersCurrentAtlas(\"Luis Miguel Messias\",\"LuisMiguelMessias\")",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.PortraitUsesTheSpeakersCurrentAtlas(\"Padre Fábio\",\"PadreFabio\")",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.RejectedNotebookOpenDoesNotLeavePlayerSeated",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.SeatedFramesPreserveFeetAndHaveBentKnees(0)",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.SeatedFramesPreserveFeetAndHaveBentKnees(1)",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.SeatedFramesPreserveFeetAndHaveBentKnees(2)",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.SeatedFramesPreserveFeetAndHaveBentKnees(3)",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.SeatedPoseUsesTheSelectedDirection",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.SittingPoseUsesBentKneesInsteadOfStandingFrame",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInventoryTests.BackpackOwnsPauseAndDoesNotOpenWithoutBackpackOrDuringDialogue",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInventoryTests.ConsumedItemsDisappearButKnowledgeAndBackpackRemain",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInventoryTests.DoorHingeStaysFixedAndProjectionIsContinuous(False)",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInventoryTests.DoorHingeStaysFixedAndProjectionIsContinuous(True)",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInventoryTests.EquippedStudentDoesNotRotateAndChangingDoesNotResetCooldowns",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInventoryTests.FailedEscapeKeepsKeyAndSuccessfulEscapeConsumesItOnce",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInventoryTests.NewPhaseDoesNotRepopulateUsedItems",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInventoryTests.NoStudentAppearsOrAttacksUntilEquipped",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaMenuAndDeathTests.ContactShadowFollowsVisibilityWithoutChangingPhysics",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaMenuAndDeathTests.DeathClosesPauseAndWaitsForAnExplicitChoice",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaMenuAndDeathTests.NewInvestigationAlwaysSelectsPhaseOne",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaMenuAndDeathTests.PersistentHudCannotDrawOrPauseOverMenu",
+      "result": "Passed",
+      "source": "playmode-regression-fixed.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaPhase3Tests.ManualAllyInvocationsUseFiveSecondCooldown",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaPhase3Tests.Phase3ControllerStartsIncomplete",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaPlayerPolishTests.ComboCyclesThreeStepsThenExpires",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaPlayerPolishTests.DialogueCancelsWindupWithoutDamage",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaPlayerPolishTests.DirectionAndMultipleCollidersProduceOnlyOneHit",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaPlayerPolishTests.DodgeHasBoundedDurationCooldownAndBlocksAttack",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaPlayerPolishTests.MeleeCannotDamageThroughSolidWall",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaPlayerPolishTests.PauseAndDialogueBlockDodgeAndAttack",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaPlayerPolishTests.PausingDuringHitstopDoesNotResumeGame",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaRequestedGameplayTests.ChurchHasDarknessAltarPriestAndClearFlashlightCone",
+      "result": "Passed",
+      "source": "playmode-light-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaRequestedGameplayTests.FuscaBoardsImmediatelyWithoutDoorAndKeepsRequirements",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaRequestedGameplayTests.HouseFurnitureResizesOnceAndSurgesIncludeRecovery",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaRequestedGameplayTests.PewStopsWalkingAndSeatRestoresCollisionWhenInterrupted",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaSchoolRescueTests.BoardingFinishesWithBlockedSlotAndLeaderLeavingTheRadius",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaSchoolRescueTests.ConfirmedEncounterRescuesStudentsWhenDefeatedEnemiesWereRemoved",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaSchoolRescueTests.NineReleasedStudentsWalkOutTheDoorAndReachExternalFusca",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaSchoolRescueTests.ReleasedStudentGoesToTheCarAndWaitsWhileLeaderIsAway",
+      "result": "Passed",
+      "source": "playmode-all.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.AlliedSummonsAreGatedUntilHardPhasesButFinalPhaseAlwaysAllowsAll",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.AlliesRouteThroughADoorInsteadOfStoppingAtThePartition",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.AnnaFirstRacketShotHitsOnlyItsAim",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.AreaImpactCannotCrossAWallBetweenTwoVisibleTargets",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.DeathCancelsPendingAllyAndPlayerAttacksWhileTimeIsPaused",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.DisabledAllyCancelsPresentationWithoutLeavingLateDamage",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.EveryRescuedStudentHasAnAllyProfile",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.FirstKatanaCutHitsOnlyItsAim",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.IndividualCooldownBlocksRepeatButLeavesOtherStudentsReady",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.InputLockFreezesPendingPowerAndItsManualCooldown",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.MarcosFirstServeHitsOnceWithoutSplash",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.MicrophoneRestoresSanityOnlyOnSuccessfulImpact",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.MouseAimOverridesNearThreatAndWallsBlockCommands",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.NoTargetOrLockedPlayerDoesNotSpendCooldown",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.SignatureStudentsKeepTheirRequestedAttacks",
+      "result": "Passed",
+      "source": "playmode-component-final.xml"
+    }
+  ]
+}

@@ -225,12 +225,12 @@ namespace Game.Varginha
         private void Update()
         {
             if (!_active) return;
-            if(Time.timeScale<=0||VarginhaGameHUD.Instance?.IsInventoryOpen==true||Experiment.CampaignContinuationController.Active?.Modal==true)return;
             if (LeaderDefeated)
             {
                 CancelAttack();
                 return;
             }
+            if(Time.timeScale<=0||VarginhaGameHUD.Instance?.IsInventoryOpen==true||Experiment.CampaignContinuationController.Active?.Modal==true)return;
             if (_leader != null && (!_manualMode || _equippedPresentation))
             {
                 // A formação é uma preferência, não um trilho. O pequeno movimento
@@ -309,6 +309,7 @@ namespace Game.Varginha
             if (manual) EnsureHeadRenderer();
             if (_renderer != null) _renderer.enabled = _active && (!manual || (_equippedPresentation && !_attacking));
             if (_headRenderer != null) _headRenderer.enabled = false;
+            GetComponent<VarginhaContactShadow>()?.RefreshPresentation();
         }
 
         private void OnGUI()

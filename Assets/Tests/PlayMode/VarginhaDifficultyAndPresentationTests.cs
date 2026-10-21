@@ -7,7 +7,7 @@ using UnityEngine.TestTools;
 
 namespace Game.Tests.PlayMode
 {
-    public class VarginhaDifficultyAndPresentationTests
+    public class VarginhaDifficultyAndPresentationTests : IsolatedPlayModeTests
     {
         private GameObject _root;
         [TearDown]
@@ -64,9 +64,11 @@ namespace Game.Tests.PlayMode
         [Test]
         public void RouteDestinationsAreDistinctAndIncludedInBuild()
         {
-            Assert.AreNotEqual(VarginhaTravelCinematic.SchoolScene,VarginhaTravelCinematic.ChurchScene);
-            Assert.IsTrue(Application.CanStreamedLevelBeLoaded(VarginhaTravelCinematic.SchoolScene));
-            Assert.IsTrue(Application.CanStreamedLevelBeLoaded(VarginhaTravelCinematic.ChurchScene));
+            var school=Game.Varginha.Experiment.CampaignStorySave.Scene(4);
+            var church=Game.Varginha.Experiment.CampaignStorySave.Scene(8);
+            Assert.AreNotEqual(school,church);
+            Assert.IsTrue(Application.CanStreamedLevelBeLoaded(school));
+            Assert.IsTrue(Application.CanStreamedLevelBeLoaded(church));
         }
     }
 }

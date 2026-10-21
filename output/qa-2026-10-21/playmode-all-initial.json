@@ -1,0 +1,158 @@
+{
+  "source": "output\\qa-2026-10-21\\playmode-all.xml",
+  "runResult": "Failed(Child)",
+  "tests": {
+    "total": 270,
+    "passed": 241,
+    "failed": 29,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox",
+      "message": "  Expected string length 10 but was 18. Strings differ at index 10.\n  Expected: \"AdultEmpty\"\n  But was:  \"AdultEmptyDivisoes\"\n  ---------------------^\n",
+      "stack": "at Game.Tests.PlayMode.CampaignExpansionPlayTests+<AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox>d__7.MoveNext () [0x00150] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\CampaignExpansionPlayTests.cs:110\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags",
+      "message": "  Leaving the church restores Edelzio's normal size.\n  Expected: 1.5f +/- 0.0399999991f\n  But was:  1.56104648f\n",
+      "stack": "at Game.Tests.PlayMode.CampaignExpansionPlayTests+<CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags>d__6.MoveNext () [0x002b2] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\CampaignExpansionPlayTests.cs:97\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.MouseDragUpdatesEveryAudioRowAndSavesTheSelectedValue",
+      "message": "  Mouse drag changes audio row 0 events=mouseDown@(514.60, 193.36);mouseDrag@(587.67, 193.36);mouseUp@(587.67, 193.36);\n  Expected: greater than 0.649999976f\n  But was:  0.5f\n",
+      "stack": "at Game.Tests.PlayMode.CampaignFeedbackPlayTests+<MouseDragUpdatesEveryAudioRowAndSavesTheSelectedValue>d__12.MoveNext () [0x002a3] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\CampaignFeedbackPlayTests.cs:103\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignFeedbackPlayTests.RadioCueSharesThePhraseClockPausesAndContinuesToSchool",
+      "message": "System.ArgumentException : The actual value must be an IEnumerable\nParameter name: actual",
+      "stack": "  at NUnit.Framework.Constraints.CollectionConstraint.ApplyTo (System.Object actual) [0x00010] in <8b63e8ac0a4746599ed207982825ae6c>:0 \n  at NUnit.Framework.Constraints.ContainsConstraint.ApplyTo (System.Object actual) [0x0004c] in <8b63e8ac0a4746599ed207982825ae6c>:0 \n  at NUnit.Framework.Constraints.NotConstraint.ApplyTo (System.Object actual) [0x00007] in <8b63e8ac0a4746599ed207982825ae6c>:0 \n  at NUnit.Framework.Assert.That[TActual] (TActual actual, NUnit.Framework.Constraints.IResolveConstraint expression, System.String message, System.Object[] args) [0x0000e] in <8b63e8ac0a4746599ed207982825ae6c>:0 \n  at NUnit.Framework.Assert.That[TActual] (TActual actual, NUnit.Framework.Constraints.IResolveConstraint expression) [0x00001] in <8b63e8ac0a4746599ed207982825ae6c>:0 \n  at Game.Tests.PlayMode.CampaignFeedbackPlayTests+<RadioCueSharesThePhraseClockPausesAndContinuesToSchool>d__17.MoveNext () [0x00141] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\CampaignFeedbackPlayTests.cs:148 \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload",
+      "message": "  Expected: 1.5f +/- 0.0399999991f\n  But was:  1.56104648f\n",
+      "stack": "at Game.Tests.PlayMode.CampaignLabWorkshopAuditTests+<PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload>d__18.MoveNext () [0x006f1] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\CampaignLabWorkshopAuditTests.cs:190\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.CoveredOfficeSofaBlocksRealMovementFromEveryAccessibleSide",
+      "message": "System.NullReferenceException : Object reference not set to an instance of an object",
+      "stack": "  at Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests+<CoveredOfficeSofaBlocksRealMovementFromEveryAccessibleSide>d__20.MoveNext () [0x000eb] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\CampaignPuzzleDesignPlayTests.cs:225 \n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52 "
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.MansionDoorsConnectTheHallLivingRoomOfficeAndServicePassageWithRealMovement",
+      "message": "  Authored route to (-4.33, 3.98)\n  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests+<Walk>d__21.MoveNext () [0x00038] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\CampaignPuzzleDesignPlayTests.cs:253\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.EnemyAITests.Enemy_GoesToChase_WhenPlayerDetected",
+      "message": "  ForceChase deve colocar inimigo em Chase.\n  Expected: Chase\n  But was:  Patrol\n",
+      "stack": "at Game.Tests.PlayMode.EnemyAITests+<Enemy_GoesToChase_WhenPlayerDetected>d__10.MoveNext () [0x0004b] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\EnemyAITests.cs:97\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.PhysicsTests.Rigidbody2D_FallsWithGravity",
+      "message": "  Rigidbody2D deve cair com gravidade.\n  Expected: less than -4.1049037f\n  But was:  -4.09522295f\n",
+      "stack": "at Game.Tests.PlayMode.PhysicsTests+<Rigidbody2D_FallsWithGravity>d__5.MoveNext () [0x00059] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\PhysicsTests.cs:54\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaDifficultyAndPresentationTests.RouteDestinationsAreDistinctAndIncludedInBuild",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaDifficultyAndPresentationTests.RouteDestinationsAreDistinctAndIncludedInBuild () [0x0000f] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaDifficultyAndPresentationTests.cs:68\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaExperimentIntegrationTests.ExistingSchoolSupportsOpeningInvestigationAndReturn",
+      "message": "Unhandled log message: '[Error] Scene 'Laboratorio_GDD_Cutscene' couldn't be loaded because it has not been added to the active build profile or shared scene list or the AssetBundle has not been loaded.\nTo add a scene to the active build profile or shared scene list use the menu File->Build Profiles'. Use UnityEngine.TestTools.LogAssert.Expect",
+      "stack": "UnityEngine.SceneManagement.SceneManager:LoadSceneAsync (string)\nGame.Tests.PlayMode.VarginhaExperimentIntegrationTests/<ExistingSchoolSupportsOpeningInvestigationAndReturn>d__0:MoveNext () (at Assets/Tests/PlayMode/VarginhaExperimentIntegrationTests.cs:16)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.ClassroomETAttacksCaptiveCageAndRescueStopsThePressure",
+      "message": "  ET deve disparar contra a jaula enquanto Edelzio está longe.\n  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaInteractionTests+<ClassroomETAttacksCaptiveCageAndRescueStopsThePressure>d__18.MoveNext () [0x00143] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaInteractionTests.cs:272\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.PortraitUsesTheSpeakersCurrentAtlas(\"Edelzio\",\"Edelzio\")",
+      "message": "  Expected: same as <Edelzio (UnityEngine.Texture2D)>\n  But was:  <GameCast (UnityEngine.Texture2D)>\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaInteractionTests.PortraitUsesTheSpeakersCurrentAtlas (System.String speaker, System.String asset) [0x0004f] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaInteractionTests.cs:294\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInteractionTests.PortraitUsesTheSpeakersCurrentAtlas(\"Padre Fábio\",\"PadreFabio\")",
+      "message": "  Expected: same as <PadreFabioV1 (UnityEngine.Texture2D)>\n  But was:  <GameCast (UnityEngine.Texture2D)>\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaInteractionTests.PortraitUsesTheSpeakersCurrentAtlas (System.String speaker, System.String asset) [0x0001c] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaInteractionTests.cs:291\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInventoryTests.BackpackOwnsPauseAndDoesNotOpenWithoutBackpackOrDuringDialogue",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaInventoryTests.BackpackOwnsPauseAndDoesNotOpenWithoutBackpackOrDuringDialogue () [0x00070] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaInventoryTests.cs:114\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaInventoryTests.NoStudentAppearsOrAttacksUntilEquipped",
+      "message": "  Expected: False\n  But was:  True\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaInventoryTests.NoStudentAppearsOrAttacksUntilEquipped () [0x00080] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaInventoryTests.cs:76\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaMenuAndDeathTests.DeathClosesPauseAndWaitsForAnExplicitChoice",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaMenuAndDeathTests+<DeathClosesPauseAndWaitsForAnExplicitChoice>d__5.MoveNext () [0x0005d] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaMenuAndDeathTests.cs:71\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaRequestedGameplayTests.ChurchHasDarknessAltarPriestAndClearFlashlightCone",
+      "message": "  The unlit room must be nearly black.\n  Expected: less than 0.0549999997f\n  But was:  0.0572032221f\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaRequestedGameplayTests+<ChurchHasDarknessAltarPriestAndClearFlashlightCone>d__7.MoveNext () [0x00320] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaRequestedGameplayTests.cs:138\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaStudentAllyTests+<AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage>d__19.MoveNext () [0x0007d] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:271\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.AreaImpactCannotCrossAWallBetweenTwoVisibleTargets",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaStudentAllyTests+<AreaImpactCannotCrossAWallBetweenTwoVisibleTargets>d__18.MoveNext () [0x00091] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:254\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.DeathCancelsPendingAllyAndPlayerAttacksWhileTimeIsPaused",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaStudentAllyTests+<DeathCancelsPendingAllyAndPlayerAttacksWhileTimeIsPaused>d__8.MoveNext () [0x0008a] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:68\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.DisabledAllyCancelsPresentationWithoutLeavingLateDamage",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaStudentAllyTests+<DisabledAllyCancelsPresentationWithoutLeavingLateDamage>d__9.MoveNext () [0x00055] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:92\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.IndividualCooldownBlocksRepeatButLeavesOtherStudentsReady",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaStudentAllyTests+<IndividualCooldownBlocksRepeatButLeavesOtherStudentsReady>d__10.MoveNext () [0x00061] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:107\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.InputLockFreezesPendingPowerAndItsManualCooldown",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaStudentAllyTests+<InputLockFreezesPendingPowerAndItsManualCooldown>d__22.MoveNext () [0x00064] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:314\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.KatanaPiercesOnlyTargetsBehindItsAim",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaStudentAllyTests+<KatanaPiercesOnlyTargetsBehindItsAim>d__20.MoveNext () [0x0007d] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:286\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.MarcosSpikesOnceAndSplashRespectsRange",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaStudentAllyTests+<MarcosSpikesOnceAndSplashRespectsRange>d__17.MoveNext () [0x000b9] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:224\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.MicrophoneRestoresSanityOnlyOnSuccessfulImpact",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaStudentAllyTests+<MicrophoneRestoresSanityOnlyOnSuccessfulImpact>d__21.MoveNext () [0x00057] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:300\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.MouseAimOverridesNearThreatAndWallsBlockCommands",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaStudentAllyTests.MouseAimOverridesNearThreatAndWallsBlockCommands () [0x00048] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:125\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaStudentAllyTests.SignatureStudentsKeepTheirRequestedAttacks",
+      "message": "  Expected: String containing \"jiujitsu\"\n  But was:  \"Combo de quedas / projeção atordoante • Os dois golpes alternam a cada invocação.\"\n",
+      "stack": "at NUnit.Framework.StringAssert.Contains (System.String expected, System.String actual, System.String message, System.Object[] args) [0x00008] in <8b63e8ac0a4746599ed207982825ae6c>:0\nat NUnit.Framework.StringAssert.Contains (System.String expected, System.String actual) [0x00001] in <8b63e8ac0a4746599ed207982825ae6c>:0\nat Game.Tests.PlayMode.VarginhaStudentAllyTests.SignatureStudentsKeepTheirRequestedAttacks () [0x00000] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\VarginhaStudentAllyTests.cs:203\n"
+    }
+  ],
+  "success": false
+}

@@ -248,7 +248,7 @@ namespace Game.Tests.EditMode
                     else
                     {
                         Assert.That(map.Find("02_Mobilia_Colisoes/Espécime luminoso").GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("Ouzana"));
-                        Assert.That(map.Find("01_Planta_Paredes_Divisoes/Arte_Integrada_0").GetComponent<SpriteRenderer>().sprite.texture,Is.SameAs(Resources.Load<Texture2D>("Varginha/IllustratedMaps/Ouzana")));
+                        Assert.That(map.Find("01_Planta_Paredes_Divisoes/Arte_Integrada_0").GetComponent<SpriteRenderer>().sprite.texture,Is.SameAs(Resources.Load<Texture2D>("Varginha/IllustratedMaps/OuzanaDivisoes")));
                     }
                 }
                 finally{Object.DestroyImmediate(root);}

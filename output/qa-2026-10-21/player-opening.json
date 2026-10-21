@@ -1,0 +1,18 @@
+{
+  "source": "output\\qa-2026-10-21\\player-opening.xml",
+  "runResult": "Failed(Child)",
+  "tests": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign",
+      "message": "Unhandled log message: '[Error] Sprite outline generation failed - could not read texture pixel data. Did you forget to make the texture readable?'. Use UnityEngine.TestTools.LogAssert.Expect",
+      "stack": "UnityEngine.GameObject:AddComponent<UnityEngine.PolygonCollider2D> ()\nGame.Varginha.Experiment.CampaignIllustratedMaps:Furnish (UnityEngine.Transform,Game.Varginha.Experiment.CampaignMapPlan) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignIllustratedMaps.cs:221)\nGame.Varginha.Experiment.CampaignIllustratedMaps:Build (UnityEngine.Transform,Game.Varginha.Experiment.CampaignMapPlan,bool) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignIllustratedMaps.cs:164)\nGame.Varginha.Experiment.CampaignMapConstruction:Build (UnityEngine.Transform,Game.Varginha.Experiment.CampaignMapPlan,bool) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignMapConstruction.cs:17)\nGame.Varginha.Experiment.VarginhaCampaignPhase1:Awake () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignPhase1.cs:95)\n\n"
+    }
+  ],
+  "success": false
+}

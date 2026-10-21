@@ -20,6 +20,8 @@ A solicitação aprovada de 20/10 restabelece uma preparação curta e jogável 
 
 As instruções usam os rótulos das configurações atuais de teclado/controle. A preparação ensina interação; caderno e mochila são apresentados no contexto. F1 e a página de dicas fornecem orientação, pista mais específica e solução identificada como spoiler. Na investigação, o HUD aponta as áreas a observar, mas não escolhe a hipótese pelo jogador. Pausa congela as animações e o áudio; movimento reduzido remove a movimentação da câmera e a rolagem da rua.
 
+Revisão de 21/10: cada etapa da preparação, depósito da chave, busca da mochila, dedução, caixa, páginas e saída possui três dicas distintas. Consultá-las não modifica o estado da missão. A dublagem infantil foi adiada pelo usuário; a cutscene continua com legenda e efeitos.
+
 ## Estado e arte
 
 `CampaignHouseInvestigation` serializa etapa, pistas, interpretação e tutorial dentro de `CampaignStory2026.json`. A chave não pode duplicar ao recarregar; dados antigos com evidências adquiridas são normalizados. Os IDs das cenas e os 14 capítulos continuam estáveis.
@@ -35,3 +37,5 @@ Há efeitos de chave, papel, arranhões, interferência, motor e partida. A fala
 ## Verificação
 
 Testes de estado: `CampaignHouseInvestigationTests`. Percurso completo: `CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign`, incluindo infância, preparação, save/reload da chave, investigação, páginas, mochila, Fusca e pistas da escola. `CampaignOpeningAudit` executa o mesmo percurso fora do executor PlayMode caso a infraestrutura do editor falhe durante a recarga de domínio. Resultados finais e limitações estão em `output/key-investigation-2026-10-20/RELATORIO.md`.
+
+A continuação e a verificação em sessão limpa de 21/10 estão em `output/qa-2026-10-21/RELATORIO.md`. A skill de pixel art está completa nesta sessão: 30 testes dos auxiliares e validação dos oito frames concluídos, sem alterar seus pixels. Ver `output/qa-2026-10-21/ARTE.md`. O roteiro para pessoas da equipe está em `Docs/CampanhaOficial/PLAYTEST_2026-10-21.md`.

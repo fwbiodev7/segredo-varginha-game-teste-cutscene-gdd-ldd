@@ -1,0 +1,12 @@
+{
+  "source": "output\\qa-2026-10-21\\editmode-post-player.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 348,
+    "passed": 348,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

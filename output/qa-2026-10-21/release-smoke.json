@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "version": "0.4.1-beta",
+  "scope": "Visual inspection of the actual distribution executable: menu and Continue into adult house; not a manual whole-campaign playthrough.",
+  "observations": [
+    "Menu, original art and animated background visible",
+    "Continue loads adult house and protagonist",
+    "Contextual movement tutorial visible"
+  ],
+  "evidence": [
+    "release-menu.png",
+    "release-adult.png"
+  ],
+  "notExecutedManually": [
+    "F1 hint interaction",
+    "Pause/reduced motion",
+    "Whole opening route"
+  ],
+  "automationLimit": "Computer Use detected user input; further native input stopped. Functional route/pause checks are covered by automated Player/Editor cases.",
+  "graphicsDiagnostic": "GpuFence::Create failed ID3D11Fence 0x80070057 on the local GeForce G210; rendering was observed. Performance and another PC remain unverified."
+}

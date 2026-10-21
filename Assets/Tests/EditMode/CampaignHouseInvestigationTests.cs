@@ -6,6 +6,18 @@ namespace Game.Tests.EditMode
 {
     public sealed class CampaignHouseInvestigationTests
     {
+        [TestCase(0,0)] [TestCase(0,1)] [TestCase(0,3)] [TestCase(0,7)]
+        [TestCase(1,7)] [TestCase(2,7)] [TestCase(3,7)] [TestCase(4,7)] [TestCase(5,7)]
+        public void EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(int step,int routine)
+        {
+            var h=new CampaignHouseInvestigation{step=step,clues=step>=3?7:0,deduced=step>=3};
+            string before=JsonUtility.ToJson(h);
+            string first=h.Hint(routine,0),second=h.Hint(routine,1),solution=h.Hint(routine,2);
+            Assert.That(first,Is.Not.Empty);Assert.That(second,Is.Not.EqualTo(first));
+            Assert.That(solution,Is.Not.EqualTo(first).And.Not.EqualTo(second));
+            if(step==0&&routine==0)Assert.That(second,Does.Contain("cozinha"),"The approved adult map places the wash basin beside the stove.");
+            Assert.That(JsonUtility.ToJson(h),Is.EqualTo(before),"Hints cannot solve or advance the mission.");
+        }
         [Test] public void PreparationAndPlacementPrecedeDisappearance()
         {
             var h=new CampaignHouseInvestigation();

@@ -46,10 +46,15 @@ namespace Game.Tests.EditMode
                 for(int row=0;row<4;row++)
                 {
                     var sprite=CampaignStorySprites.Frame(name,row,0);
-                    Assert.That(sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.StandingHeight).Within(.04f),name+row);
+                    // Complete authored silhouettes vary with facing/breathing (1.413–1.544 world units).
+                    // Test the nominal size band and the exact church ratio, without clipping/rescaling poses.
+                    Assert.That(sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.StandingHeight).Within(.10f),name+row);
                     Assert.That(sprite.bounds.min.y,Is.EqualTo(-.58f).Within(.002f),name+row);
                     var church=CampaignStorySprites.Frame(name,row,0,churchScale:true);
-                    Assert.That(church.bounds.size.y,Is.EqualTo(name=="OuzanaBiologist"?CampaignTeamEdelzio.StandingHeight:CampaignTeamEdelzio.ChurchStandingHeight).Within(.04f),name+row);
+                    float scale=name=="OuzanaBiologist"?1f:CampaignTeamEdelzio.ChurchVisualScale;
+                    Assert.That(church.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.StandingHeight*scale).Within(.10f*scale),name+row);
+                    Assert.That(church.rect,Is.EqualTo(sprite.rect),"Church scaling must retain the complete authored pose.");
+                    Assert.That(church.pixelsPerUnit/sprite.pixelsPerUnit,Is.EqualTo(name=="OuzanaBiologist"?1f:1f/CampaignTeamEdelzio.ChurchVisualScale).Within(.0001f));
                     Assert.That(church.bounds.min.y,Is.EqualTo(-.58f).Within(.002f));
                     Assert.That(CampaignStorySprites.Frame(name,row,0),Is.SameAs(sprite),"The reduced cache must not replace the normal frame.");
                 }

@@ -13,7 +13,13 @@ namespace Game.Tests.PlayMode
         [UnityTest]
         public IEnumerator ExistingSchoolSupportsOpeningInvestigationAndReturn()
         {
+#if UNITY_EDITOR
+            // Archive prototype is tested explicitly without adding it to the shipping campaign.
+            yield return UnityEditor.SceneManagement.EditorSceneManager.LoadSceneAsyncInPlayMode(
+                "Assets/Scenes/"+VarginhaExperimentLab.SceneName+".unity",new LoadSceneParameters(LoadSceneMode.Single));
+#else
             yield return SceneManager.LoadSceneAsync(VarginhaExperimentLab.SceneName);
+#endif
             yield return null;
             yield return null;
             var lab = VarginhaExperimentLab.Active;

@@ -218,10 +218,18 @@ namespace Game.Varginha.Experiment
                 {
                     if(prop.collision!=null)
                     {
-                        var polygon=sr.gameObject.AddComponent<PolygonCollider2D>();
-                        var vertices=new Vector2[prop.collision.Length];
-                        for(int i=0;i<vertices.Length;i++)vertices[i]=sr.transform.InverseTransformPoint(prop.collision[i]);
-                        polygon.SetPath(0,vertices);collider=polygon;
+                        // Adding a polygon beside a sprite triggers Unity's automatic outline read.
+                        // Player textures are intentionally not CPU-readable; our authored floor
+                        // path is already available and must remain the sole collision geometry.
+                        var artwork=sr.sprite;sr.sprite=null;
+                        try
+                        {
+                            var polygon=sr.gameObject.AddComponent<PolygonCollider2D>();polygon.autoTiling=false;
+                            var vertices=new Vector2[prop.collision.Length];
+                            for(int i=0;i<vertices.Length;i++)vertices[i]=sr.transform.InverseTransformPoint(prop.collision[i]);
+                            polygon.SetPath(0,vertices);collider=polygon;
+                        }
+                        finally {sr.sprite=artwork;}
                     }
                     else
                     {

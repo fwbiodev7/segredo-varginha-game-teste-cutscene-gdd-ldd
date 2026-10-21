@@ -6,7 +6,7 @@ using UnityEngine.TestTools;
 
 namespace Game.Tests.PlayMode
 {
-    public class VarginhaInteractionTests
+    public class VarginhaInteractionTests : IsolatedPlayModeTests
     {
         private GameObject _root;
         private const System.Reflection.BindingFlags Private = System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic;
@@ -285,11 +285,11 @@ namespace Game.Tests.PlayMode
         public void PortraitUsesTheSpeakersCurrentAtlas(string speaker, string asset)
         {
             var portrait = VarginhaDialoguePortraits.ForSpeaker(speaker);
-            if (asset == "PadreFabio")
+            if(speaker=="Edelzio"||speaker=="Padre Fábio")
             {
-                var worldSprite = VarginhaReferenceSprites.PadreFabio();
+                var worldSprite = Game.Varginha.Experiment.VarginhaExperimentArt.Body(speaker=="Edelzio"?0:2);
                 Assert.AreSame(worldSprite.texture, portrait.texture);
-                Assert.Less(portrait.rect.height, worldSprite.rect.height);
+                Assert.AreEqual(worldSprite.rect,portrait.rect);
             }
             else Assert.AreSame(Resources.Load<Texture2D>("Varginha/Allies/" + asset), portrait.texture);
         }

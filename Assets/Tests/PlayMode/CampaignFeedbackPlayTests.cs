@@ -97,9 +97,9 @@ namespace Game.Tests.PlayMode
             for(int row=0;row<4;row++)
             {
                 float[] before={Volume(0),Volume(1),Volume(2),Volume(3)};
-                yield return SendMouse(probe,EventType.MouseDown,new Vector2(827.5f,244+row*65));
-                yield return SendMouse(probe,EventType.MouseDrag,new Vector2(945,244+row*65));
-                yield return SendMouse(probe,EventType.MouseUp,new Vector2(945,244+row*65));
+                yield return SendMouse(probe,EventType.MouseDown,new Vector2(827.5f,256+row*65));
+                yield return SendMouse(probe,EventType.MouseDrag,new Vector2(945,256+row*65));
+                yield return SendMouse(probe,EventType.MouseUp,new Vector2(945,256+row*65));
                 Assert.That(Volume(row),Is.GreaterThan(.65f),"Mouse drag changes audio row "+row+" events="+probe.events);
                 for(int other=0;other<4;other++)if(other!=row)
                     Assert.That(Volume(other),Is.EqualTo(before[other]).Within(.001f),"Mouse changes only the selected row");
@@ -113,8 +113,9 @@ namespace Game.Tests.PlayMode
         }
         static IEnumerator SendMouse(CampaignFeedbackMouseProbe probe,EventType type,Vector2 canvas)
         {
-            float scale=Mathf.Min(Screen.width/1280f,Screen.height/720f);
-            var pixel=canvas*scale+new Vector2((Screen.width-1280*scale)/2,(Screen.height-720*scale)/2);
+            Assert.That(probe.viewport.x,Is.GreaterThan(0),"The probe must have received a layout.");
+            float scale=Mathf.Min(probe.viewport.x/1280f,probe.viewport.y/720f);
+            var pixel=canvas*scale+(probe.viewport-new Vector2(1280,720)*scale)/2;
             probe.SendEvent(new Event {type=type,button=0,mousePosition=pixel});
             yield return null;
         }
@@ -139,29 +140,23 @@ namespace Game.Tests.PlayMode
             foreach(bool reduced in new[]{false,true})
             {
                 VarginhaGameSettings.Current.reducedMotion=reduced;
-                CampaignStorySave.Write(new CampaignStory{phase=2});
+                CampaignStorySave.Write(new CampaignStory{phase=2,routine=15,boxFound=true,pagesSolved=true});
                 yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.2f);
                 var stage=VarginhaCampaignStage.Active;
-                var cue=typeof(VarginhaCampaignStage).GetField("_radioCueTime",Hidden);
-                var dialogue=typeof(VarginhaCampaignStage).GetField("_dialogue",Hidden);
-                stage.StartCoroutine((IEnumerator)typeof(VarginhaCampaignStage).GetMethod("SchoolTransition",Hidden).Invoke(stage,null));
+                var cue=typeof(VarginhaCampaignStage).GetField("_cinemaClock",Hidden);
+                var dialogue=typeof(VarginhaCampaignStage).GetField("_cinemaCaption",Hidden);
+                stage.CloseDialogue();stage.Interact("car");
                 Assert.That((string)dialogue.GetValue(stage),Does.Not.Contain("Não deixa ela sair"));
-                yield return new WaitForSeconds(.96f);
+                float phraseDeadline=Time.realtimeSinceStartup+25;
+                while(!((string)dialogue.GetValue(stage)??"").Contains("Não deixa ela sair")&&Time.realtimeSinceStartup<phraseDeadline)yield return null;
                 Assert.That((string)dialogue.GetValue(stage),Does.Contain("Não deixa ela sair"));
-                Assert.That((float)cue.GetValue(stage),Is.GreaterThanOrEqualTo(0));
-                Directory.CreateDirectory("Docs/QAFeedback20261009");
-                // Capture the rendered cue before pausing; deferred screenshots used
-                // to capture the pause menu and hide the effect in both variants.
-                yield return new WaitForEndOfFrame();
-                var image=ScreenCapture.CaptureScreenshotAsTexture();
-                File.WriteAllBytes("Docs/QAFeedback20261009/Radio_"+(reduced?"ReducedMotion":"Normal")+".png",image.EncodeToPNG());
-                Object.Destroy(image);
+                Assert.That(stage.IsActing,Is.True);
+                float clock=(float)cue.GetValue(stage);
                 stage.CloseDialogue();Assert.That(dialogue.GetValue(stage),Is.Not.Null,"Continue cannot erase the timed phrase");
                 stage.TogglePause();float paused=Time.time;yield return new WaitForSecondsRealtime(.25f);
-                Assert.That(Time.time,Is.EqualTo(paused).Within(.001f));Assert.That((float)cue.GetValue(stage),Is.GreaterThanOrEqualTo(0));
-                stage.TogglePause();yield return new WaitForSeconds(.7f);
-                Assert.That((float)cue.GetValue(stage),Is.LessThan(0),"Finite cue cleans up");
-                float deadline=Time.realtimeSinceStartup+8;
+                Assert.That(Time.time,Is.EqualTo(paused).Within(.001f));Assert.That((float)cue.GetValue(stage),Is.EqualTo(clock));
+                stage.TogglePause();
+                float deadline=Time.realtimeSinceStartup+20;
                 while(SceneManager.GetActiveScene().name!=CampaignStorySave.Scene(4)&&Time.realtimeSinceStartup<deadline)yield return null;
                 Assert.That(SceneManager.GetActiveScene().name,Is.EqualTo(CampaignStorySave.Scene(4)));
                 Assert.That(CampaignStorySave.Load().arrival,Is.True);
@@ -218,8 +213,10 @@ namespace Game.Tests.PlayMode
     public class CampaignFeedbackMouseProbe : UnityEditor.EditorWindow
     {
         public string events="";
+        public Vector2 viewport;
         void OnGUI()
         {
+            viewport=new Vector2(Screen.width,Screen.height);
             // Native editor IMGUI events exercise the same settings renderer without
             // depending on the hardware input runtime replaced by InputTestFixture.
             if(Event.current.type==EventType.MouseDown||Event.current.type==EventType.MouseDrag||Event.current.type==EventType.MouseUp)

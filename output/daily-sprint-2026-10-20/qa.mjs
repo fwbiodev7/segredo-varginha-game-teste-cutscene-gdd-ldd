@@ -29,7 +29,7 @@ for(let i=0;i<report.slides;i++){
 }
 await page.evaluate(()=>window.deck.show(0,{animate:false}));await page.keyboard.press('ArrowRight');report.keyboard=await page.locator('#count').textContent()===('2 / '+report.slides);
 await page.locator('#notes').click();report.notes=await page.locator('#note').isVisible();await page.keyboard.press('Escape');report.escape=!(await page.locator('#note').isVisible());
-await sharp({create:{width:1152,height:1080,channels:3,background:'#020608'}}).composite(thumbs.map((input,i)=>({input,left:(i%3)*384,top:Math.floor(i/3)*216}))).png().toFile(path.join(out,'.build/overview.png'));
+await sharp({create:{width:1152,height:Math.ceil(report.slides/3)*216,channels:3,background:'#020608'}}).composite(thumbs.map((input,i)=>({input,left:(i%3)*384,top:Math.floor(i/3)*216}))).png().toFile(path.join(out,'.build/overview.png'));
 // Exercita a navegação real com cada efeito, inclusive interrupções rápidas.
 report.transitions=[];
 await page.evaluate(()=>window.deck.show(0,{animate:false}));

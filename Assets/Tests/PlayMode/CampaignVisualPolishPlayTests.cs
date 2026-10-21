@@ -70,6 +70,8 @@ namespace Game.Tests.PlayMode
         public IEnumerator EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders()
         {
             int[] phases={1,2,3,4,5,6,7,8,9,10,11,12,112,13,14,15,16,18,19,20,21,121};
+            // The Player validates shipped chapters/areas; archived prototypes stay Editor-only.
+            if(!Application.isEditor)phases=Game.Varginha.Experiment.CampaignSequence.Entries.Concat(new[]{10,13,112,121}).Distinct().ToArray();
             CampaignMemorySave.Write(new CampaignMemory{openingSeen=true});
             foreach(int phase in phases)
             {

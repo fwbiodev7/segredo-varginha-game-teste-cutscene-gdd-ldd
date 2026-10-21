@@ -4,9 +4,15 @@
 
 Trinta anos depois de uma noite esquecida, Edelzio encontra uma caixa que devolve perguntas sobre seu passado. Explore casas, a Escola Industrial, trilhas e laboratórios; converse com Renan, Padre Fábio e Ouzana; reúna pistas e conte com seus aliados quando a investigação se transformar em combate.
 
-**Em desenvolvimento · Alpha 0.3 · 14 fases em 5 atos · atualização: 09/10/2026.**
+**Em desenvolvimento · 14 capítulos · candidata Windows 0.4.1-beta · atualização: 21/10/2026.**
 
-Nova build Windows: `jogo_varginha_alpha_0.3_Windows_x64.zip`. Inclui revisões de mapas, HUD, puzzles, atmosfera e recortes dos personagens. Consulte as [notas e o manifesto da Alpha 0.3](Docs/Alpha03/README.md).
+A entrega de 21/10 fecha a abertura adulta: preparação para a escola, chave desaparecida, investigação, reconstrução das páginas e continuidade na Industrial. Inclui dicas progressivas, correções de apresentação dos aliados e compatibilidade dos colisores no Player. A arte original permanece preservada.
+
+O pacote local `Builds/Varginha_0.4.1-beta_2026-10-21_Windows_x64.zip` inclui o roteiro de playtest e manifesto SHA-256. Consulte o [relatório técnico e resultados](output/qa-2026-10-21/RELATORIO.md), os [slides atualizados](output/daily-sprint-2026-10-20/A_Sprint_Final_Varginha.html), o [roteiro de playtest](Docs/CampanhaOficial/PLAYTEST_2026-10-21.md) e as [pendências externas](Docs/CampanhaOficial/PENDENCIAS_2026-10-21.md). A build candidata ainda não foi publicada como GitHub Release; o download público abaixo é da alpha anterior.
+
+O [plano de novas cutscenes baseado no GDD/LDD](Docs/CampanhaOficial/ROTEIRO_CUTSCENES_GDD_LDD_2026-10-21.md) aguarda aprovação para uma etapa posterior. A dublagem infantil foi adiada pelo usuário.
+
+Histórico: a Alpha 0.3 de 09/10 revisou mapas, HUD, puzzles, atmosfera e recortes dos personagens. Consulte suas [notas e manifesto](Docs/Alpha03/README.md).
 
 [Site oficial](https://o-segredo-de-varginha.zfabiobrronaldo.chatgpt.site) · [Como começar](#como-começar) · [Controles](#controles) · [Ajuda para puzzles](#ajuda-para-puzzles) · [Reportar um problema](https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/issues)
 

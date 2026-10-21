@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "checks": [
+    {
+      "clip": 0,
+      "before": "key_deposit | 1/2 | key_place | 450 ms | one-shot | pivot_aligned",
+      "after": "key_deposit | 2/2 | key_rest | 1000 ms | one-shot | pivot_aligned",
+      "firstFrame": true,
+      "lastFrame": true,
+      "finalHold": true
+    },
+    {
+      "clip": 1,
+      "before": "box_open | 1/2 | box_closed | 600 ms | one-shot | pivot_aligned",
+      "after": "box_open | 2/2 | box_open | 1000 ms | one-shot | pivot_aligned",
+      "firstFrame": true,
+      "lastFrame": true,
+      "finalHold": true
+    }
+  ],
+  "errors": [],
+  "scope": "Browser preview timing and pixel-art registration; cinematic integration is covered separately by Unity PlayMode/Player tests."
+}

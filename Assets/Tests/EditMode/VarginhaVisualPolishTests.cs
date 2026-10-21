@@ -1,4 +1,5 @@
 using Game.Varginha;
+using System.Linq;
 using NUnit.Framework;
 using UnityEngine;
 
@@ -12,9 +13,9 @@ namespace Game.Tests.EditMode
             var actor = VarginhaReferenceSprites.EdelzioWalkFrames()[0][0];
             var student = VarginhaStudentSprites.Frame("Matias", 0, 0);
             Assert.AreEqual(1.18f, student.pixelsPerUnit / actor.pixelsPerUnit, .001f);
-            float originalFoot = (6f - 32f) / student.pixelsPerUnit;
-            float enlargedFoot = (6f - actor.pivot.y) / actor.pixelsPerUnit;
-            Assert.AreEqual(originalFoot, enlargedFoot, .001f);
+            Assert.That(Foot(actor),Is.EqualTo(-64f*.4f/actor.pixelsPerUnit).Within(.001f));
+            foreach(var direction in VarginhaReferenceSprites.EdelzioWalkFrames())
+                foreach(var frame in direction)Assert.That(Foot(frame),Is.EqualTo(Foot(actor)).Within(.001f));
         }
 
         [Test]
@@ -30,11 +31,11 @@ namespace Game.Tests.EditMode
                     var windup = attacks[d][combo * 6 + 1];
                     var contact = attacks[d][combo * 6 + 3];
                     Assert.AreNotSame(walk[d][0], contact);
-                    CollectionAssert.AreNotEqual(windup.texture.GetPixels32(), contact.texture.GetPixels32());
-                    Assert.AreEqual(walk[d][0].pivot, contact.pivot);
+                    Assert.That(Pixels(windup).SequenceEqual(Pixels(contact)),Is.False,"Windup and contact must contain different frame pixels.");
+                    Assert.That(Foot(contact),Is.EqualTo(Foot(walk[d][0])).Within(.001f),"A punch must not shift the feet baseline.");
                     Assert.AreEqual(walk[d][0].pixelsPerUnit, contact.pixelsPerUnit);
                     Assert.AreEqual(FilterMode.Point, contact.texture.filterMode);
-                    var pixels = contact.texture.GetPixels32();
+                    var pixels = Pixels(contact);
                     for (int i = 0; i < 64; i++)
                     {
                         Assert.AreEqual(0, pixels[i].a, "No clipping at bottom edge");
@@ -44,6 +45,19 @@ namespace Game.Tests.EditMode
                     }
                 }
             }
+        }
+
+        private static Color32[] Pixels(Sprite sprite)
+        {
+            var rect=sprite.rect;var source=sprite.texture.GetPixels32();
+            var pixels=new Color32[(int)rect.width*(int)rect.height];
+            for(int y=0;y<(int)rect.height;y++)System.Array.Copy(source,((int)rect.y+y)*sprite.texture.width+(int)rect.x,pixels,y*(int)rect.width,(int)rect.width);
+            return pixels;
+        }
+        private static float Foot(Sprite sprite)
+        {
+            Assert.That(VarginhaCharacterFrameGeometry.TryBounds(sprite.texture,sprite.rect,out var visible,out _),Is.True);
+            return (visible.yMin-sprite.rect.yMin-sprite.pivot.y)/sprite.pixelsPerUnit;
         }
 
         [Test]

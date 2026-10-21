@@ -19,6 +19,7 @@ namespace Game.Tests.PlayMode
         [UnitySetUp]
         public IEnumerator SetUp()
         {
+            IsolatedPlayModeTests.ResetScene();
             // Chão
             _groundGo = new GameObject("Ground");
             _groundGo.AddComponent<BoxCollider2D>().size = new Vector2(20f, 1f);
@@ -49,6 +50,9 @@ namespace Game.Tests.PlayMode
         [UnityTest]
         public IEnumerator Rigidbody2D_FallsWithGravity()
         {
+            // Setup's settling delay may already have landed the body on the ground.
+            _rb.position=new Vector2(0,2);_rb.linearVelocity=Vector2.zero;
+            yield return new WaitForFixedUpdate();
             float startY = _playerGo.transform.position.y;
             yield return new WaitForSeconds(0.3f);
             Assert.Less(_playerGo.transform.position.y, startY,

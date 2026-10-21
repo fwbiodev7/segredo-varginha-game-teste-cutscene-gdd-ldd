@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-21",
+  "baseCommit": "44a80afeb79eefcb74f6780655239c1c7aa9dff6",
+  "technicalSuccess": true,
+  "tests": {
+    "editMode": {
+      "total": 348,
+      "passed": 348,
+      "failed": 0,
+      "skipped": 0
+    },
+    "playMode": {
+      "total": 270,
+      "passed": 270,
+      "failed": 0,
+      "skipped": 0
+    },
+    "player": {
+      "total": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0
+    },
+    "spriteHelpers": {
+      "passed": 30,
+      "total": 30
+    },
+    "outputWrapper": {
+      "passed": 12,
+      "total": 12
+    },
+    "nunitSummarizer": {
+      "passed": 6,
+      "total": 6
+    }
+  },
+  "testSources": {
+    "editMode": "editmode-delivery.json",
+    "playMode": "playmode-coverage.json",
+    "player": [
+      "player-final.json",
+      "player-maps.json"
+    ]
+  },
+  "playModeMethod": "Latest result per case, from full suite plus affected-fixture reruns; not a single green full-suite execution.",
+  "singleCleanFullPlayModeRun": false,
+  "playerMethod": "Four unique cases across two native test-Player runs; distribution executable inspected separately. Final post-Player change only corrects kitchen location in hint text, covered by final 348-case EditMode run.",
+  "build": {
+    "result": "Succeeded",
+    "output": "C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Builds/Varginha_0.4.1-beta_2026-10-21/SegredoDeVarginha.exe",
+    "unity": "6000.6.0f1",
+    "version": "0.4.1-beta",
+    "bytes": 340487918,
+    "seconds": 85.5935274,
+    "errors": 0,
+    "warnings": 1,
+    "scenes": [
+      "Assets/Scenes/Menu_MisterioDeVarginha.unity",
+      "Assets/Scenes/Ato1_Fase1_O_Caso_de_Varginha.unity",
+      "Assets/Scenes/Ato2_Fase2_A_Chave_e_a_Caixa.unity",
+      "Assets/Scenes/Ato2_Fase4_Entre_Aulas_e_Pistas.unity",
+      "Assets/Scenes/Ato3_Fase6_Fragmentos.unity",
+      "Assets/Scenes/Ato3_Fase7_A_Mata.unity",
+      "Assets/Scenes/Ato3_Fase8_A_Ancora.unity",
+      "Assets/Scenes/Ato4_Fase9_Ouzana.unity",
+      "Assets/Scenes/Ato4_Fase11_Arquivos_Alterados.unity",
+      "Assets/Scenes/Ato4_Fase12_Casarao_de_Ze_Gomes.unity",
+      "Assets/Scenes/Ato5_Fase14_O_Que_Fabio_Escondeu.unity",
+      "Assets/Scenes/Ato5_Fase15_A_Noite_Interrompida.unity",
+      "Assets/Scenes/Ato6_Fase18_A_Criatura_Ferida.unity",
+      "Assets/Scenes/Ato6_Fase20_O_Verdadeiro_Segredo.unity",
+      "Assets/Scenes/Ato6_Fase21_O_Retorno.unity",
+      "Assets/Scenes/Ato4_Fase10_O_Fusca_Marcado.unity",
+      "Assets/Scenes/Ato4_Fase13_Registros_de_1898.unity",
+      "Assets/Scenes/Ato4_Fase12_Casarao_de_Ze_Gomes_Area1.unity",
+      "Assets/Scenes/Ato6_Fase21_O_Retorno_Area1.unity"
+    ]
+  },
+  "package": {
+    "success": true,
+    "archive": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Builds\\Varginha_0.4.1-beta_2026-10-21_Windows_x64.zip",
+    "bytes": 249589255,
+    "sha256": "426ac9784a89a85e46ccb94ad1d894447a6e817fb79e49da5b8239d82cb1f9b2",
+    "files": 196,
+    "build": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Builds\\Varginha_0.4.1-beta_2026-10-21\\SegredoDeVarginha.exe",
+    "version": "0.4.1-beta"
+  },
+  "smoke": "release-smoke.json",
+  "art": {
+    "frames": 8,
+    "pixelsUnchanged": true,
+    "source": "ARTE.md"
+  },
+  "deferredByUser": [
+    "Voice recording",
+    "New cutscene implementation pending plan approval"
+  ],
+  "externalPending": [
+    "Novice playtest",
+    "Team review",
+    "Whole-campaign manual playthrough",
+    "Another PC/performance"
+  ],
+  "tokenEconomy": "Full logs kept on disk; bounded command summaries. No local model configured and no guaranteed token-saving percentage.",
+  "preservation": "preservation.json",
+  "slides": "slides-qa.json",
+  "technicalDeliveryComplete": true
+}

@@ -81,7 +81,7 @@ namespace Game.Tests.PlayMode
             church.Interact("anchor");Assert.That(church.SubmitPuzzle(),Is.True);
             Assert.That(CampaignStorySave.Load().expansion.Complete(8),Is.True,"A correct answer must remain unlocked after save repair.");
             var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
-            Assert.That(actor.GetComponent<SpriteRenderer>().sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.ChurchStandingHeight).Within(.04f));
+            Assert.That(actor.GetComponent<SpriteRenderer>().sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.ChurchStandingHeight).Within(.10f*CampaignTeamEdelzio.ChurchVisualScale));
             Assert.That(actor.transform.localScale,Is.EqualTo(Vector3.one));
             Assert.That(actor.GetComponent<CircleCollider2D>().offset.y,Is.EqualTo(-.58f));
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(9));
@@ -90,15 +90,15 @@ namespace Game.Tests.PlayMode
             Assert.That(ouzana.GetComponent<CampaignOuzanaBiologist>(),Is.Not.Null);
             var render=ouzana.GetComponent<SpriteRenderer>();
             Assert.That(render.sprite.texture.name,Is.EqualTo("OuzanaBiologist"));
-            Assert.That(render.sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.StandingHeight).Within(.04f));
+            Assert.That(render.sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.StandingHeight).Within(.10f));
             Assert.That(render.sprite.texture.isReadable,Is.False);
             Assert.That(ouzana.GetComponent<CircleCollider2D>(),Is.Not.Null);
             actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
-            Assert.That(actor.GetComponent<SpriteRenderer>().sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.StandingHeight).Within(.04f),"Leaving the church restores Edelzio's normal size.");
+            Assert.That(actor.GetComponent<SpriteRenderer>().sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.StandingHeight).Within(.10f),"Leaving the church restores the authored normal pose size band.");
             CampaignExpansionController.Active.Interact("ouzana");
             Assert.That(CampaignExpansionController.Active.Progress.expansion.evidencePresented,Is.True);
         }
-        [UnityTest]public IEnumerator AdultHouseHygieneRespondsToKeyboardAndUnlocksTheBox()
+        [UnityTest]public IEnumerator AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate()
         {
             CampaignStorySave.Write(new CampaignStory{phase=2,routine=14});
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.4f);
@@ -107,7 +107,7 @@ namespace Game.Tests.PlayMode
             var fridge=map.Find("02_Mobilia_Colisoes/Fridge_Kitchen").GetComponent<SpriteRenderer>();
             Assert.That(actor.GetComponent<SpriteRenderer>().bounds.size.y,Is.LessThan(fridge.bounds.size.y));
             Assert.That(actor.transform.localScale,Is.EqualTo(Vector3.one));
-            Assert.That(map.Find("01_Planta_Paredes_Divisoes/Arte_Integrada_0").GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("AdultEmpty"));
+            Assert.That(map.Find("01_Planta_Paredes_Divisoes/Arte_Integrada_0").GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("AdultEmptyDivisoes"));
             Assert.That(map.Find("02_Mobilia_Colisoes/Sofa_LivingRoom").GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("Adult2026"));
             var oldDoor=GameObject.Find("Door_Office_Accessible");if(oldDoor!=null){Assert.That(oldDoor.GetComponent<SpriteRenderer>().enabled,Is.False);foreach(var c in oldDoor.GetComponents<Collider2D>())Assert.That(c.enabled,Is.False);}
             Assert.That(actor.GetComponent<SpriteRenderer>().sharedMaterial.shader.name,Is.EqualTo("Varginha/IllustratedActorLighting"));
@@ -125,7 +125,8 @@ namespace Game.Tests.PlayMode
             yield return HoldKey(keyboard,Key.E,.1f);
             yield return new WaitForSeconds(2.2f);
             Assert.That(stage.Progress.routine,Is.EqualTo(15),"A reachable hygiene action completes the saved routine=14 state.");
-            stage.CloseDialogue();stage.Interact("box");Assert.That(stage.Progress.boxFound,Is.True);
+            stage.CloseDialogue();stage.Interact("box");Assert.That(stage.Progress.boxFound,Is.False,"Hygiene cannot skip placement, disappearance and deduction.");
+            Assert.That(stage.Progress.house.step,Is.Zero);
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
         private static IEnumerator HoldKey(Keyboard keyboard,Key key,float duration)

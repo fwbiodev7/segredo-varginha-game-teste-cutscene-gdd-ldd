@@ -395,10 +395,8 @@ namespace Game.Varginha
                     _attack[d] = new Sprite[cols];
                     for (int f = 0; f < cols; f++)
                     {
-                        _attack[d][f] = VarginhaCharacterFrameGeometry.Create(texture,
-                            new Rect(f * 64, (3 - d) * 64, 64, 64),
-                            new Vector2(.5f, .5f - (26f / 64f) * (1f - 1f / EdelzioVisualScale)),
-                            EdelzioPixelsPerUnit);
+                        _attack[d][f] = Experiment.CampaignPresentation.AlignedFrame(texture,
+                            new RectInt(f * 64, (3 - d) * 64, 64, 64), EdelzioPixelsPerUnit, false);
                         _attack[d][f].name = $"Edelzio_Attack_{d}_{f}";
                     }
                 }

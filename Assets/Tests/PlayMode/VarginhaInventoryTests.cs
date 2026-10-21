@@ -6,7 +6,7 @@ using UnityEngine.TestTools;
 
 namespace Game.Tests.PlayMode
 {
-    public class VarginhaInventoryTests
+    public class VarginhaInventoryTests : IsolatedPlayModeTests
     {
         private GameObject _root;
         private EdelzioTopDownController _player;

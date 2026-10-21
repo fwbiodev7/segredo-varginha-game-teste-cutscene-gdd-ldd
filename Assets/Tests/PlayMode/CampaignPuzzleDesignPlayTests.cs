@@ -177,14 +177,14 @@ namespace Game.Tests.PlayMode
             yield return SceneManager.LoadSceneAsync(CampaignContinuationDefinition.SceneName(12,1));yield return new WaitForSeconds(3.2f);
             var c=CampaignContinuationController.Active;c.CloseMessage();var data=CampaignIllustratedMaps.Get(112);
             Assert.That(CampaignGuidance.Target(c.Progress,12,1),Is.EqualTo("key"));
-            yield return Walk(c,data.Position(325,350));Assert.That(CampaignGuidance.RoomName(c.Plan,c.Feet),Is.EqualTo("Sala de estar"));
-            yield return Walk(c,data.Position(525,380));Assert.That(CampaignGuidance.RoomName(c.Plan,c.Feet),Is.EqualTo("Hall central"));
+            yield return Walk(c,data.Position(250,400));Assert.That(CampaignGuidance.RoomName(c.Plan,c.Feet),Is.EqualTo("Sala de estar"));
+            yield return Walk(c,data.Position(625,793));Assert.That(CampaignGuidance.RoomName(c.Plan,c.Feet),Is.EqualTo("Hall central"));
             yield return Capture("07_Casarao_Hall_Portas");
-            yield return Walk(c,data.Position(748,329));Assert.That(CampaignGuidance.RoomName(c.Plan,c.Feet),Is.EqualTo("Escritório"));
+            yield return Walk(c,data.Position(1000,710));Assert.That(CampaignGuidance.RoomName(c.Plan,c.Feet),Is.EqualTo("Escritório"));
             yield return Capture("08_Casarao_Escritorio");
             yield return Walk(c,c.Plan.points.Find(p=>p.id=="key").position);yield return Pad(GamepadButton.South);c.CloseMessage();
             Assert.That(c.Progress.continuation.serviceKey,Is.True);
-            yield return Walk(c,data.Position(820,200));Assert.That(CampaignGuidance.RoomName(c.Plan,c.Feet),Is.EqualTo("Corredor de serviço"));
+            yield return Walk(c,data.Position(625,215));Assert.That(CampaignGuidance.RoomName(c.Plan,c.Feet),Is.EqualTo("Corredor de serviço"));
             yield return Capture("09_Casarao_Corredor");
             yield return Pad(GamepadButton.South);yield return new WaitForSeconds(3);
             Assert.That(SceneManager.GetActiveScene().name,Is.EqualTo(CampaignStorySave.Scene(13)));
@@ -215,22 +215,31 @@ namespace Game.Tests.PlayMode
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
         [UnityTest,Timeout(120000)]
-        public IEnumerator CoveredOfficeSofaBlocksRealMovementFromEveryAccessibleSide()
+        public IEnumerator CoveredLivingRoomSofaBlocksRealMovementFromEveryAccessibleSide()
         {
             var story=new CampaignStory{phase=12};story.continuation.area=1;
             CampaignStorySave.Write(story);
             yield return SceneManager.LoadSceneAsync(CampaignContinuationDefinition.SceneName(12,1));yield return new WaitForSeconds(3.2f);
             var c=CampaignContinuationController.Active;c.CloseMessage();
             var body=c.Actor.GetComponent<Rigidbody2D>();var feet=c.Actor.GetComponent<CircleCollider2D>();
-            var sofa=c.transform.Find("Mapa_Campanha/02_Mobilia_Colisoes/Sofá coberto do escritório").GetComponent<PolygonCollider2D>();
+            var sofa=c.transform.Find("Mapa_Campanha/02_Mobilia_Colisoes/Sofá coberto").GetComponent<Collider2D>();
             int contacts=0;float capture=Time.captureDeltaTime;Time.captureDeltaTime=Time.fixedDeltaTime;
             try
             {
                 foreach(var direction in new[]{Vector2.left,Vector2.right,Vector2.up,Vector2.down})
                 {
                     var bounds=sofa.bounds;float extent=direction.x!=0?bounds.extents.x:bounds.extents.y;
-                    var start=(Vector2)bounds.center-direction*(extent+feet.radius+.20f);
-                    if(!c.Plan.IsClear(start,feet.radius))continue;
+                    // Sample along the face: its centre can be obstructed by the round table.
+                    var tangent=new Vector2(-direction.y,direction.x);
+                    float along=direction.x!=0?bounds.extents.y:bounds.extents.x;
+                    Vector2 start=default;bool found=false;
+                    foreach(float offset in new[]{0f,-.6f,.6f})
+                    {
+                        var candidate=(Vector2)bounds.center-direction*(extent+feet.radius+.20f)+tangent*along*offset;
+                        if(!c.Plan.IsClear(candidate,feet.radius))continue;
+                        start=candidate;found=true;break;
+                    }
+                    if(!found)continue;
                     body.position=start-feet.offset;body.linearVelocity=Vector2.zero;c.Actor.SetInputLocked(false);
                     Physics2D.SyncTransforms();yield return new WaitForFixedUpdate();
                     float until=Time.time+.4f;

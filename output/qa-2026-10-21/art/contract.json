@@ -1,0 +1,14 @@
+{
+  "allowSemiTransparency": false,
+  "maxColors": 256,
+  "requiredClips": [
+    "key_deposit",
+    "box_open",
+    "paper_trace",
+    "page_house",
+    "page_tree",
+    "page_figure"
+  ],
+  "lockPivot": true,
+  "maxTextureSize": 2048
+}

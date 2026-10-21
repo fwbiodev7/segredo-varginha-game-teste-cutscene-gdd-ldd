@@ -1,0 +1,17 @@
+{
+  "source": "output\\qa-2026-10-21\\editmode-all-fixed.xml",
+  "tests": {
+    "total": 348,
+    "passed": 347,
+    "failed": 1,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.EditMode.CampaignIllustratedMapTests.ChurchScaleUsesSeparateCachedFramesAndOtherMapsKeepNormalSize",
+      "message": "  Life1\n  Expected: 1.5f +/- 0.0497237556f\n  But was:  1.41712701f\n",
+      "stack": "at Game.Tests.EditMode.CampaignIllustratedMapTests.ChurchScaleUsesSeparateCachedFramesAndOtherMapsKeepNormalSize () [0x00045] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\EditMode\\CampaignIllustratedMapTests.cs:50\n"
+    }
+  ],
+  "success": false
+}

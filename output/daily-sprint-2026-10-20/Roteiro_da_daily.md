@@ -1,9 +1,9 @@
-# Daily de 20/10/2026
+# Daily atualizada em 21/10/2026
 
 ## 1. A SPRINT FINAL
 
-Abertura: 30 segundos. Objetivo: mostrar o que a sprint entregou e fechar as decisões da daily. Recorte de 09/10 a 19/10/2026, inclusive. A data da reunião é 20/10/2026. A referência A Sprint Final orienta os temas, não fornece fatos sobre o projeto.
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\Beta04\README.md
+Apresentação iniciada em 20/10 e atualizada em 21/10. O recorte histórico continua 09–19/10; as novidades posteriores têm datas próprias.
+C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\qa-2026-10-21\RELATORIO.md
 
 ## 2. O recorte da sprint
 
@@ -60,38 +60,49 @@ C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-2
 31 testes EditMode: investigação 11, história 4 e sequência 16. O percurso completo foi aprovado pela auditoria alternativa com verificações de pausa, save, mochila e escola. O runner padrão PlayMode apresentou falha de infraestrutura na troca de modo; não contar a auditoria como resultado desse runner. A fala infantil está legendada; a gravação real é pendência.
 C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\key-investigation-2026-10-20\RELATORIO.md
 C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\key-investigation-2026-10-20\playable-audit.json
+Atualização de 21/10: o runner PlayMode padrão passou em sessão limpa. A dublagem foi adiada pelo usuário; manter legenda e efeitos.
 
-## 10. Duas equipes, um jogo
+## 10. Fechamento de hoje
+
+Resultados técnicos de 21/10. PlayMode: último resultado por caso consolidado entre rodada completa e retestes; não é uma rodada única sem falhas. O Player cobre abertura/escola e colisões. Isso não substitui uma partida manual de toda a campanha em outro PC. Os quatro casos foram executados em dois Players de teste; a versão de distribuição tem inspeção separada. O roteiro, com fontes e divergências explícitas, aguarda aprovação do usuário. Novas cutscenes ficam para a etapa posterior.
+C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\qa-2026-10-21\RELATORIO.md
+C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\qa-2026-10-21\summary.json
+C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\CampanhaOficial\PLAYTEST_2026-10-21.md
+C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\CampanhaOficial\ROTEIRO_CUTSCENES_GDD_LDD_2026-10-21.md
+
+## 11. Duas equipes, um jogo
 
 1 minuto. Adaptar o exemplo do pulo da referência para uma mecânica real do nosso jogo: investigar e seguir pistas. Debater HUD, hierarquia visual e colisão juntos. O critério é proposto para a rodada de hoje e ainda não está aprovado. Evitar revelar a solução dos marcos.
 C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\QANovaCampanha20261009\IMPLEMENTACAO.md
 C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\QAFeedback20261009\IMPLEMENTACAO.md
 
-## 11. IA no processo
+## 12. IA no processo
 
 1 minuto. O README Beta documenta arte original gerada com imagegen e aprovação do laboratório pelo usuário. Ferramentas Python e testes fazem parte do repositório. Não atribuir todo o código à IA nem inventar horas economizadas. O uso de outras engines e produtos citados na referência não é comprovado neste projeto e não aparece como fato nos slides.
 C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\Beta04\README.md
 C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\QANovaCampanha20261009\IMPLEMENTACAO.md
-Hoje: wrapper Tools/AgentOutput implementado e usado. Modelo local não foi configurado; não afirmar economia garantida de 99% de tokens.
+Wrapper Tools/AgentOutput implementado em 20/10 e usado também no fechamento de 21/10. Modelo local não foi configurado; não afirmar economia garantida de 99% de tokens.
 
-## 12. Muitas vozes, um prazo
+## 13. Muitas vozes, um prazo
 
 1 minuto. Conectar aos temas de colaboração e capacidade da referência. O limite de duas tarefas é uma proposta para debate, não uma regra já adotada. Toda tarefa selecionada precisa de responsável e critério de aceite.
 
-## 13. Daily de hoje
+## 14. Daily de hoje
 
 1 minuto. Esta é a agenda proposta para a reunião completa. Se o deck ocupar a fala inteira, encurtar os slides históricos e reservar os 5 minutos de feedback. Para cada pessoa: o que concluiu desde a última daily, o que fará hoje e qual impedimento tem. Não transformar o acumulado da sprint em uma alegação de trabalho feito ontem.
 
-## 14. Pendências para fechar
+## 15. Retornos da equipe
 
-Pendências concretas registradas em Docs/CampanhaOficial/PENDENCIAS_2026-10-20.md. A progressão foi validada no Editor pela auditoria; estas pendências não devem ser apresentadas como uma partida completa da campanha já testada.
+O usuário informou em 21/10 que os testes externos ainda não aconteceram e enviará feedback depois. A voz infantil ficou para uma eventual dublagem futura. Pendências técnicas concluídas e limites estão no relatório.
+C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\CampanhaOficial\PENDENCIAS_2026-10-21.md
+C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\CampanhaOficial\PLAYTEST_2026-10-21.md
 
-## 15. O que observar jogando
+## 16. O que observar jogando
 
-1 minuto. Roteiro proposto para a rodada final, sem afirmar que já foi executado. Registrar build/commit, cena, dispositivo e resolução. Para save, usar uma cópia de teste e não iniciar uma nova história sobre o progresso pessoal. A partida completa continua necessária além desta amostra. O desfecho pode ser demonstrado à parte para evitar spoilers ao público.
+1 minuto. Roteiro atualizado para o playtest externo da abertura adulta, ainda não executado por outra pessoa. A automação local cobre a progressão, mas não a compreensão de um jogador novo. Registrar build/commit, cena, dispositivo e resolução. Para save, usar uma cópia de teste e não iniciar uma nova história sobre o progresso pessoal. A partida completa continua necessária além desta amostra. O desfecho pode ser demonstrado à parte para evitar spoilers ao público.
 C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\Alpha03\README.md
 C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\Beta04\README.md
 
-## 16. Dúvidas, opiniões e feedbacks
+## 17. Dúvidas, opiniões e feedbacks
 
 Reservar o encerramento para dúvidas, opiniões e feedbacks reais da equipe. Ouvir sem antecipar respostas e registrar as contribuições. Fonte editorial: C:/Users/Usuario/Downloads/A Sprint Final.html. Fontes do projeto: git local de 09–19/10, Docs/Alpha03 e Docs/Beta04. Capturas frescas em 20/10: laboratório, casarão e escola. Capturas históricas identificadas em suas legendas. A fonte Press Start 2P vem de Assets/Resources/Fonts/PressStart2P-Regular.ttf.

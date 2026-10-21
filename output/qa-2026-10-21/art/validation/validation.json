@@ -1,0 +1,117 @@
+{
+  "success": true,
+  "status": "structural_pass",
+  "errors": [],
+  "warnings": [],
+  "frames": [
+    {
+      "id": "key_rest",
+      "bbox": [
+        20,
+        48,
+        113,
+        85
+      ],
+      "visiblePixels": 1968,
+      "colors": 31,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "5e1d8421bd77042a0e3807f513a3c38236085592773d2cc89dcc90961e0352b9"
+    },
+    {
+      "id": "key_place",
+      "bbox": [
+        23,
+        39,
+        105,
+        95
+      ],
+      "visiblePixels": 1997,
+      "colors": 30,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "9a5f9fb4ab00a84f0737eb3c73179eb3a4e21bf263d926adcf9b268bc3be0a22"
+    },
+    {
+      "id": "paper_trace",
+      "bbox": [
+        28,
+        24,
+        101,
+        107
+      ],
+      "visiblePixels": 4239,
+      "colors": 31,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "33af662a21184ebe24f5d68b673b20181077d24bb01db7fda250935af060b3cc"
+    },
+    {
+      "id": "box_closed",
+      "bbox": [
+        13,
+        25,
+        112,
+        105
+      ],
+      "visiblePixels": 5902,
+      "colors": 32,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "920d5896caa3771d514a0a8e3043d4a9c87cd1ef2b92f39a9b56e842c083df9d"
+    },
+    {
+      "id": "box_open",
+      "bbox": [
+        11,
+        10,
+        116,
+        111
+      ],
+      "visiblePixels": 7862,
+      "colors": 32,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "0ba8ca8a81d5a8c28d0c28eb2c06b8482a0562ac75113bbcb680ac003f2715e6"
+    },
+    {
+      "id": "page_house",
+      "bbox": [
+        14,
+        17,
+        112,
+        106
+      ],
+      "visiblePixels": 7767,
+      "colors": 30,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "0352ee25ccc808c9bb0ac04297b6cc166ee32a7a9b9c4ea25be9cb13b70e3849"
+    },
+    {
+      "id": "page_tree",
+      "bbox": [
+        11,
+        16,
+        115,
+        104
+      ],
+      "visiblePixels": 8405,
+      "colors": 32,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "36e44cd97e7152d4efe01b8437f1f9ec5fdb1c3f89d7175624163c985c420a6e"
+    },
+    {
+      "id": "page_figure",
+      "bbox": [
+        13,
+        16,
+        113,
+        106
+      ],
+      "visiblePixels": 8016,
+      "colors": 31,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "303e994de88cdeb7bbfca2db39628a014fd99d50e062332db7494c599be8f664"
+    }
+  ],
+  "paletteColors": 228,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\qa-2026-10-21\\art\\export\\atlas.json",
+  "metadataSha256": "6b5a252e00abb93d7b4eac1703b73829a49bcd5e2591ad7e7547134d5afb5f8d"
+}

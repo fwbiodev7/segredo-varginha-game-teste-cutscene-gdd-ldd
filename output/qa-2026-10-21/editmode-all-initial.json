@@ -1,0 +1,37 @@
+{
+  "source": "output/agent-logs/2026-10-21-editmode-all-initial.xml",
+  "tests": {
+    "total": 339,
+    "passed": 333,
+    "failed": 6,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.EditMode.CampaignExpansionTests.ChurchAndBiologyHouseHaveIndependentFloorLightingAndEquipment",
+      "message": "  Expected: same as <Ouzana (UnityEngine.Texture2D)>\n  But was:  <OuzanaDivisoes (UnityEngine.Texture2D)>\n"
+    },
+    {
+      "name": "Game.Tests.EditMode.CampaignHudTests.EveryShippedChapterHasThreeProgressiveHints",
+      "message": "  Expected: not equal to \"Prepare-se para a aula: lave o rosto na pia.\"\n  But was:  \"Prepare-se para a aula: lave o rosto na pia.\"\n"
+    },
+    {
+      "name": "Game.Tests.EditMode.CampaignIllustratedMapTests.ChurchScaleUsesSeparateCachedFramesAndOtherMapsKeepNormalSize",
+      "message": "  Life0\n  Expected: 1.5f +/- 0.0399999991f\n  But was:  1.5438596f\n"
+    },
+    {
+      "name": "Game.Tests.EditMode.CampaignPuzzleDesignTests.MansionRoomsHaveReachableDoorsAndASpecificServiceCorridor",
+      "message": "  Mansion route to (325.00, 350.00)\n  Expected: True\n  But was:  False\n"
+    },
+    {
+      "name": "Game.Tests.EditMode.VarginhaVisualPolishTests.EveryAttackHasDedicatedWindupContactAndRecoveryWithStableGeometry",
+      "message": "  Expected: not equal to < RGBA(0, 0, 0, 0), RGBA(0, 0, 0, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(233, 233, 233, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0), RGBA(6, 5, 5, 0),"
+    },
+    {
+      "name": "Game.Tests.EditMode.VarginhaVisualPolishTests.ProtagonistIsLargerWithoutMovingHisFootBaseline",
+      "message": "  Expected: -0.54843751797918294d +/- 0.0010000000474974513d\n  But was:  -0.63720011711120605d\n"
+    }
+  ],
+  "success": false,
+  "fullEvidence": "output/agent-logs/2026-10-21-editmode-all-initial-full.json"
+}

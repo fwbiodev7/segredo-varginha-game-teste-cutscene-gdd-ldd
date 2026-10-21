@@ -1,0 +1,83 @@
+{
+  "clips": [
+    {
+      "clip": "key_deposit",
+      "file": "clip_000.png",
+      "loop": false,
+      "sequence": [
+        "key_place",
+        "key_rest"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1450,
+      "overlayPairs": [
+        [
+          "key_place",
+          "key_rest"
+        ]
+      ]
+    },
+    {
+      "clip": "box_open",
+      "file": "clip_001.png",
+      "loop": false,
+      "sequence": [
+        "box_closed",
+        "box_open"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1600,
+      "overlayPairs": [
+        [
+          "box_closed",
+          "box_open"
+        ]
+      ]
+    },
+    {
+      "clip": "paper_trace",
+      "file": "clip_002.png",
+      "loop": false,
+      "sequence": [
+        "paper_trace"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": []
+    },
+    {
+      "clip": "page_house",
+      "file": "clip_003.png",
+      "loop": false,
+      "sequence": [
+        "page_house"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": []
+    },
+    {
+      "clip": "page_tree",
+      "file": "clip_004.png",
+      "loop": false,
+      "sequence": [
+        "page_tree"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": []
+    },
+    {
+      "clip": "page_figure",
+      "file": "clip_005.png",
+      "loop": false,
+      "sequence": [
+        "page_figure"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": []
+    }
+  ],
+  "visualReviewCompleted": false
+}

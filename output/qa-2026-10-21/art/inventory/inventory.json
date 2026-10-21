@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\KeyInvestigation\\HouseEvidence.png",
+      "sha256": "bb9202bcafdaf81ba42cca050f5cffa7afe98b8bc3b7ec03c735acc3b1cb8a8d",
+      "bytes": 87596,
+      "size": [
+        512,
+        256
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        11,
+        24,
+        497,
+        239
+      ],
+      "visibleColors": 228,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "04e961bad7024165d29733cc758b86d1fbf9d02984d9fb40b58fabb95475671f"
+    }
+  ],
+  "errors": []
+}

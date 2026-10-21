@@ -129,12 +129,13 @@ namespace Game.Tests.EditMode
         {
             var plan=CampaignContinuationDefinition.Plan(12,1);var data=CampaignIllustratedMaps.Get(112);
             var route=new List<Vector2>();
-            foreach(var pixel in new[]{new Vector2(325,350),new Vector2(748,329),new Vector2(820,200)})
+            // Feet approaches on the approved layout, outside furniture and roof guards.
+            foreach(var pixel in new[]{new Vector2(250,400),new Vector2(1000,710),new Vector2(625,215)})
                 Assert.That(plan.Route(plan.spawn,data.Position(pixel.x,pixel.y),route),Is.True,"Mansion route to "+pixel);
-            Assert.That(CampaignGuidance.RoomName(plan,data.Position(525,380)),Is.EqualTo("Hall central"));
-            Assert.That(CampaignGuidance.RoomName(plan,data.Position(325,350)),Is.EqualTo("Sala de estar"));
-            Assert.That(CampaignGuidance.RoomName(plan,data.Position(748,329)),Is.EqualTo("Escritório"));
-            Assert.That(CampaignGuidance.RoomName(plan,data.Position(820,200)),Is.EqualTo("Corredor de serviço"));
+            Assert.That(CampaignGuidance.RoomName(plan,data.Position(625,793)),Is.EqualTo("Hall central"));
+            Assert.That(CampaignGuidance.RoomName(plan,data.Position(250,400)),Is.EqualTo("Sala de estar"));
+            Assert.That(CampaignGuidance.RoomName(plan,data.Position(1000,710)),Is.EqualTo("Escritório"));
+            Assert.That(CampaignGuidance.RoomName(plan,data.Position(625,215)),Is.EqualTo("Corredor de serviço"));
         }
     }
 }
