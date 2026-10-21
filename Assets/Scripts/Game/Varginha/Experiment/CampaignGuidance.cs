@@ -25,10 +25,10 @@ namespace Game.Varginha.Experiment
                     :!story.codeSolved?"Reabra o notebook: compare os dois grupos na margem para descobrir o horário."
                     :!story.renanConfirmed?"Mostre o horário descoberto a Renan."
                     :"Investigação concluída. Converse com Renan para seguir à biblioteca.";
-                case 6:return (e.visited&1)==0?"Examine o livro aberto: ele guarda o terceiro fragmento e a direção da trilha."
+                case 6:return (e.visited&1)==0?"Examine o livro aberto: ele guarda o terceiro fragmento e uma pista sobre a passagem."
                     :(e.visited&2)==0?"Agora examine o globo para orientar a travessia do rio."
                     :(e.visited&4)==0?"Consulte o painel para localizar a entrada da capela."
-                    :!e.mapSolved?"Na mesa central, posicione os marcos e gire suas setas para conectar a trilha."
+                    :!e.mapSolved?"Na mesa central, trace uma rota da árvore até o portão da capela."
                     :"Mapa concluído. Saia pela entrada sul e siga para a mata.";
                 case 7:return e.forestSigns<3?"Siga a marca de "+new[]{"ÁRVORE","RIO","CAPELA"}[e.forestSigns]+". Use o esconderijo se a presença se aproximar."
                     :!e.fabioMet?"O caminho está registrado. Converse com Fábio na capela."

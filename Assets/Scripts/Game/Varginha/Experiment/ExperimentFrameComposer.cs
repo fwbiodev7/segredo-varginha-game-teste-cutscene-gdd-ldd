@@ -31,12 +31,6 @@ namespace Game.Varginha.Experiment
                 int px = sx + Mathf.Clamp(x * sw / Width + shift, 0, sw - 1);
                 int py = sy + Mathf.Clamp(y * sh / Height, 0, sh - 1);
                 Color32 c = source[py * texture.width + px];
-                if (!reducedMotion && (shot.mode == "interference" || shot.mode == "signal"))
-                {
-                    int noise = (x * 73 + y * 31 + tick * 47) % 101;
-                    byte n = (byte)(noise + 30);
-                    if (shot.mode == "signal" || noise > 89) c = new Color32(n, n, n, 255);
-                }
                 if (shot.mode == "timeskip") c = new Color32(8, 13, 20, 255);
                 if (shot.mode == "flash" && !reducedMotion)
                 {
@@ -48,6 +42,7 @@ namespace Game.Varginha.Experiment
                 { c.r = (byte)(c.r * .88f); c.g = (byte)(c.g * .88f); c.b = (byte)(c.b * .88f); }
                 _pixels[y * Width + x] = c;
             }
+            if(shot.mode=="interference"||shot.mode=="signal")CampaignSignalGlitch.Apply(_pixels,Width,Height,time,reducedMotion);
             if(shot.mode=="news"&&time>.45f&&time<shot.duration-.7f)AnimateReporterMouth(time);
             Apply();
             return Frame;

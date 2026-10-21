@@ -1,0 +1,18 @@
+{
+  "source": "output\\cinematic-opening-2026-10-21\\playmode-fixed.xml",
+  "runResult": "Failed(Child)",
+  "tests": {
+    "total": 5,
+    "passed": 4,
+    "failed": 1,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl",
+      "message": "  Expected: False\n  But was:  True\n",
+      "stack": "at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+<AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl>d__13.MoveNext () [0x00332] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\CampaignCinematicOpeningPlayTests.cs:78\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    }
+  ],
+  "success": false
+}

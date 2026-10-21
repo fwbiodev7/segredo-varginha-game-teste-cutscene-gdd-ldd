@@ -66,7 +66,7 @@ report.failures=[];
 for(const key of ['font','images','keyboard','notes','escape','endBoundary','effectsOff','homeBoundary','reducedMotion','allTransitions'])if(report[key]!==true)report.failures.push(key);
 if(report.overflow.length)report.failures.push('overflow');
 if(errors.length)report.failures.push('javascript_errors');
-if(report.rapidNavigation.index!==5||report.rapidNavigation.active!==1||report.rapidNavigation.leaving!==0||report.rapidNavigation.hidden!==report.slides-1)report.failures.push('rapid_navigation');
+if(report.rapidNavigation.index!==Math.max(0,Math.min(10,report.slides-1)-5)||report.rapidNavigation.active!==1||report.rapidNavigation.leaving!==0||report.rapidNavigation.hidden!==report.slides-1)report.failures.push('rapid_navigation');
 if(report.printSlides!==report.slides)report.failures.push('print_slides');
 report.success=report.failures.length===0;
 await fs.writeFile(path.join(out,'.build/qa.json'),JSON.stringify(report,null,2));

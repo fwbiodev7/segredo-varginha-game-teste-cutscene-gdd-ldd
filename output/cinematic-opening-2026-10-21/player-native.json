@@ -1,0 +1,12 @@
+{
+  "source": "output\\cinematic-opening-2026-10-21\\player-native.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

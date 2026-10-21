@@ -10,7 +10,17 @@ namespace Game.Varginha.Experiment
         private string _cinematicShot, _cinemaTitle, _cinemaCaption;
         private int _cinemaPanel;
         private float _cinemaClock;
-        private ExperimentFrameComposer _missionComposer;
+        private int _cinemaEvent;
+        private bool _cinemaSkipAllowed,_cinemaSkipRequested;
+        private float _cinemaEventClock;
+        public bool CanSkipMissionCinema=>_cinemaEvent!=0&&_cinemaSkipAllowed&&!_paused&&Time.time-_cinemaEventClock>.6f;
+        public bool TrySkipMissionCinema(){if(!CanSkipMissionCinema)return false;_cinemaSkipRequested=true;return true;}
+        private void BeginMissionEvent(int flag)
+        {_cinemaEvent=flag;_cinemaSkipAllowed=(_progress.cinematicsSeen&flag)!=0;_cinemaSkipRequested=false;_cinemaEventClock=Time.time;}
+        private void CompleteMissionEvent()
+        {_progress.cinematicsSeen|=_cinemaEvent;Save();_cinemaEvent=0;_cinemaSkipAllowed=_cinemaSkipRequested=false;}
+        private IEnumerator MissionWait(float seconds)
+        {for(float t=0;t<seconds&&!_cinemaSkipRequested;t+=Time.deltaTime)yield return null;}
 
         private void BuildKeyInvestigation()
         {
@@ -101,43 +111,45 @@ namespace Game.Varginha.Experiment
         }
         private IEnumerator PlaceKey()
         {
-            _busy = true; Lock(); BeginMissionShot("world","ANTES DE SAIR","Vou deixar a chave no balcão. Depois pego a mochila.");
-            CampaignCameraDirector.Reveal(_keyRest,2.8f);
+            _busy = true; Lock();BeginMissionEvent(1); BeginMissionShot("world","ANTES DE SAIR","Vou deixar a chave no balcão. Depois pego a mochila.");
+            CampaignCameraDirector.Reveal(_keyRest,3.8f);
             var action = _player.GetComponent<VarginhaPlayerActionAnimation>();
             _counterKey.enabled = true;
             _counterKey.sprite=CampaignHouseArt.Frame(1);
             Vector3 hand = _player.transform.position + Vector3.up*.1f;
             _counterKey.transform.position=hand;
-            if (action != null) StartCoroutine(action.ReachRoutine(.9f));
-            for (float t=0;t<.45f;t+=Time.deltaTime)
-            { _counterKey.transform.position=Vector3.Lerp(hand,_keyRest,Mathf.SmoothStep(0,1,t/.45f)); yield return null; }
+            if (action != null) StartCoroutine(action.ReachRoutine(1.35f));
+            yield return MissionWait(.28f);
+            for (float t=0;t<.75f&&!_cinemaSkipRequested;t+=Time.deltaTime)
+            {float p=Mathf.SmoothStep(0,1,t/.75f);_counterKey.transform.position=Vector3.Lerp(hand,_keyRest,p)+Vector3.up*Mathf.Sin(p*Mathf.PI)*.13f; yield return null; }
             _counterKey.transform.position = _keyRest; _counterKey.sprite=CampaignHouseArt.Frame(0); _sound.PlayAt("Key",_keyRest);
             _progress.house.PlaceKey(_progress.routine); Save();
-            yield return new WaitForSeconds(1.1f);
-            EndMissionShot(); _busy = false; Lock();
+            yield return MissionWait(1.65f);
+            while(action!=null&&action.IsActing)yield return null;
+            CompleteMissionEvent();EndMissionShot(); _busy = false; Lock();
         }
         private IEnumerator DisappearKey()
         {
             // Commit while the player is in the bedroom: reloading cannot duplicate the key.
-            _progress.house.TakeBag(); _counterKey.enabled = false; Save();
+            BeginMissionEvent(2);_progress.house.TakeBag(); _counterKey.enabled = false; Save();
             transform.Find("Vestigio_Papel_Quarto")?.gameObject.SetActive(true);
             BeginMissionShot("world","UM RUÍDO FORA DO QUARTO","[Um toque metálico na cozinha. Depois, papel raspando.]");
-            _sound.PlayAt("Key",_keyRest); yield return new WaitForSeconds(.6f);
+            _sound.PlayAt("Key",_keyRest); yield return MissionWait(.6f);
             CampaignCameraDirector.Reveal(_keyRest,2.8f);
             _sound.PlayAt("Scratching",_points.Find(p=>p.id=="box").Position);
-            yield return new WaitForSeconds(1.8f);
-            EndMissionShot();
+            yield return MissionWait(2.5f);
+            CompleteMissionEvent();EndMissionShot();
         }
         private IEnumerator OpenKeyBox()
         {
-            _busy=true;Lock();
+            _busy=true;Lock();BeginMissionEvent(4);
             BeginMissionShot("world","A CAIXA DE 1996","[Os arranhões cessam quando Edelzio se abaixa.]");
             var point=_points.Find(p=>p.id=="box").Position;CampaignCameraDirector.Reveal(point,2.5f);
             var action=_player.GetComponent<VarginhaPlayerActionAnimation>();
             if(action!=null)yield return action.CrouchRoutine(.9f);
             _sound.PlayAt("Paper",point);
             _progress.boxFound=true;_progress.house.step=4;Save();RestoreInventory();
-            yield return new WaitForSeconds(.6f);EndMissionShot();_busy=false;
+            yield return MissionWait(1.6f);CompleteMissionEvent();EndMissionShot();_busy=false;
             Cutscene("EU SEI QUE VI ALGUMA COISA", "A chave está dentro da caixa que estava fechada. Ao lado dela, o caderno de 1996.\nNa primeira página: Eu sei que vi alguma coisa.\nO desenho foi rasgado. Há tinta recente sobre os pedaços.",View.Pages);
         }
         private void BeginMissionShot(string shot,string title,string caption,int panel=0)
@@ -145,48 +157,63 @@ namespace Game.Varginha.Experiment
         private void EndMissionShot() { _cinematicShot=null; _sound.CinematicDucking(0); }
         private IEnumerator FuscaSequence()
         {
-            _schoolTransition = _busy = true; _dialogue=null; Lock();
-            BeginMissionShot("world","O CAMINHO DA INDUSTRIAL","Chave no bolso. Mochila pronta. Ainda é possível chegar à aula.");
-            var car = GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/Fusca");
-            if (car == null) car=GameObject.Find("Fusca");
-            if (car != null && car.TryGetComponent<SpriteRenderer>(out var renderer))
+            _schoolTransition=_busy=true;_dialogue=null;Lock();BeginMissionEvent(8);
+            var visuals=_player.GetComponentsInChildren<Renderer>(true);
+            var visibility=new bool[visuals.Length];for(int i=0;i<visuals.Length;i++)visibility[i]=visuals[i].enabled;
+            var body=_player.GetComponent<Rigidbody2D>();bool simulated=body!=null&&body.simulated;
+            bool complete=false;FuscaDoorMotion door=null;
+            try
             {
-                CampaignCameraDirector.Reveal(car.transform.position,4);
-                var door=car.GetComponent<FuscaDoorMotion>()??car.AddComponent<FuscaDoorMotion>();
-                var body=_player.GetComponent<Rigidbody2D>(); if(body!=null){body.linearVelocity=Vector2.zero;body.simulated=false;}
-                var start=_player.transform.position;
-                for(float t=0;t<.7f;t+=Time.deltaTime)
-                {door.SetOpenAmount(t/.7f);_player.transform.position=Vector3.Lerp(start,door.EntryPosition,Mathf.SmoothStep(0,1,t/.7f));yield return null;}
-                _player.SetCarriedItemsVisible(false);
-                foreach(var visual in _player.GetComponentsInChildren<Renderer>())visual.enabled=false;
-                for(float t=0;t<.4f;t+=Time.deltaTime){door.SetOpenAmount(1-t/.4f);yield return null;}
-                door.SetOpenAmount(0); _sound.Play("Starter");
-                var departure=car.GetComponent<FuscaDepartureAnimation>()??car.AddComponent<FuscaDepartureAnimation>();
-                departure.Configure(new[]{renderer.sprite}); departure.Depart(null,1.3f);
-                yield return new WaitForSeconds(1.5f);
+                BeginMissionShot("world","O CAMINHO DA INDUSTRIAL","Chave no bolso. Mochila pronta. Ainda é possível chegar à aula.");
+                var car=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/Fusca")??GameObject.Find("Fusca");
+                if(car!=null&&car.TryGetComponent<SpriteRenderer>(out var renderer))
+                {
+                    CampaignCameraDirector.Reveal(car.transform.position,4);
+                    door=car.GetComponent<FuscaDoorMotion>()??car.AddComponent<FuscaDoorMotion>();
+                    if(body!=null){body.linearVelocity=Vector2.zero;body.simulated=false;}
+                    Vector3 start=_player.transform.position;
+                    for(float t=0;t<.7f&&!_cinemaSkipRequested;t+=Time.deltaTime)
+                    {door.SetOpenAmount(t/.7f);_player.transform.position=Vector3.Lerp(start,door.EntryPosition,Mathf.SmoothStep(0,1,t/.7f));yield return null;}
+                    _player.SetCarriedItemsVisible(false);
+                    foreach(var visual in visuals)visual.enabled=false;
+                    for(float t=0;t<.4f&&!_cinemaSkipRequested;t+=Time.deltaTime){door.SetOpenAmount(1-t/.4f);yield return null;}
+                    door.SetOpenAmount(0);_sound.Play("Starter");
+                    var departure=car.GetComponent<FuscaDepartureAnimation>()??car.AddComponent<FuscaDepartureAnimation>();
+                    departure.Configure(new[]{renderer.sprite});departure.Depart(null,1.3f);
+                    yield return MissionWait(1.5f);
+                }
+                for(int i=0;i<CampaignFuscaCinema.Shots.Length&&!_cinemaSkipRequested;i++)
+                {
+                    var shot=CampaignFuscaCinema.Shots[i];
+                    BeginMissionShot(shot.view,shot.title,shot.caption,shot.panel);
+                    switch(i)
+                    {
+                        case 0:_sound.BeginRoad();_sound.Engine(true,.4f);break;
+                        case 1:_sound.PlayRadioInterference(VarginhaGameSettings.Current.reducedMotion);break;
+                        case 2:_sound.Engine(false);break;
+                        case 3:
+                            _sound.PlayRadioInterference(VarginhaGameSettings.Current.reducedMotion);
+                            _sound.Voice(Resources.Load<AudioClip>("Varginha/Audio/EdelzioCrianca_NaoDeixaElaSair"));break;
+                        case 4:_sound.CinematicDucking(1);break;
+                        case 5:_sound.CinematicDucking(0);_sound.Play("Starter");_sound.Engine(true,.4f);break;
+                        case 6:_sound.Engine(false);break;
+                    }
+                    yield return MissionWait(shot.duration);
+                }
+                bool skipped=_cinemaSkipRequested;
+                complete=true;CompleteMissionEvent();
+                // Keep the arrival framing under the scene fade, including when a seen scene is skipped.
+                if(skipped){BeginMissionShot("arrival","INDUSTRIAL",CampaignFuscaCinema.Shots[6].caption);_cinemaClock-=CampaignFuscaCinema.Shots[6].duration;}
             }
-            _sound.BeginRoad();
-            BeginMissionShot("road","VARGINHA • 2026","[Motor e trânsito.] O caminho de todos os dias.");
-            yield return new WaitForSeconds(2.2f);
-            BeginMissionShot("interior","O RÁDIO","O sinal se perde. Mesmo desligado, o rádio continua chiando.",2);
-            _radioReducedMotion=VarginhaGameSettings.Current.reducedMotion; _sound.PlayRadioInterference(_radioReducedMotion);
-            yield return new WaitForSeconds(2.5f);
-            BeginMissionShot("interior","O PAINEL","O velocímetro dispara. Os faróis apagam. O Fusca está parando.",1);
-            _sound.Engine(false); _sound.Play("Starter"); yield return new WaitForSeconds(2.5f);
-            BeginMissionShot("interior","UMA VOZ CONHECIDA","[Voz infantil no rádio] “Não deixa ela sair.”",2);
-            _sound.PlayRadioInterference(_radioReducedMotion);
-            // A real recorded line may be supplied without replacing it with synthetic speech.
-            var voice=Resources.Load<AudioClip>("Varginha/Audio/EdelzioCrianca_NaoDeixaElaSair");
-            _sound.Voice(voice);
-            yield return new WaitForSeconds(3);
-            BeginMissionShot("interior","SILÊNCIO","A ignição está quente. Nenhum som. Edelzio solta a chave.",3);
-            _sound.CinematicDucking(1); yield return new WaitForSeconds(2.5f);
-            BeginMissionShot("road","NINGUÉM TOCOU NA CHAVE","[O motor volta sozinho.] Preciso conversar com alguém na escola.");
-            _sound.CinematicDucking(0); _sound.Play("Starter"); _sound.Engine(true,.4f); yield return new WaitForSeconds(2.2f);
-            _sound.Engine(false);
-            BeginMissionShot("arrival","INDUSTRIAL","A aula vai começar. Aquela voz era a minha... quando criança. Preciso entender o que aconteceu.");
-            yield return new WaitForSeconds(2);
-            EndMissionShot();
+            finally
+            {
+                if(door!=null)door.SetOpenAmount(0);
+                if(body!=null){body.simulated=simulated;body.linearVelocity=Vector2.zero;}
+                for(int i=0;i<visuals.Length;i++)if(visuals[i]!=null)visuals[i].enabled=visibility[i];
+                if(_player!=null){_player.SetCarriedItemsVisible(true);RestoreInventory();}
+                _sound?.Engine(false);_sound?.CinematicDucking(0);
+                if(!complete){EndMissionShot();_cinemaEvent=0;_busy=_schoolTransition=false;Lock();}
+            }
         }
         private void DrawMissionCinema()
         {
@@ -201,41 +228,22 @@ namespace Game.Varginha.Experiment
                 if(extraY>0)
                 {ExperimentGUI.Box(new Rect(0,-extraY-1,1280,extraY+1),Color.black);ExperimentGUI.Box(new Rect(0,720,1280,extraY+1),Color.black);}
             }
-            if(_cinematicShot=="interior")
-            {
-                _missionComposer??=new ExperimentFrameComposer();
-                _missionComposer.Compose(new ExperimentShot{asset="FuscaBreakdown",panel=_cinemaPanel,mode=_cinemaPanel==2?"interference":"still"},t,reduced);
-                GUI.DrawTexture(new Rect(0,0,1280,720),_missionComposer.Frame);
-            }
-            else if(_cinematicShot=="road") DrawRoadShot(t,reduced);
+            if(_cinematicShot=="interior"||_cinematicShot=="road")
+                CampaignFuscaCinema.DrawCabin(t,_cinemaTitle,_cinematicShot=="road"?0:_cinemaPanel,reduced);
             else if(_cinematicShot=="arrival")
             {
-                ExperimentGUI.Box(new Rect(0,0,1280,720),new Color(.03f,.05f,.07f));
-                var facade=Resources.Load<Texture2D>(VarginhaIndustrialSchoolFacade.ResourcePath);
-                if(facade!=null)GUI.DrawTexture(new Rect(60,90,1160,440),facade,ScaleMode.ScaleToFit);
-                DrawOriginalCar(new Rect(840,430,240,125),CampaignOriginalFusca.Side);
+                CampaignFuscaCinema.DrawArrival(t,reduced);
             }
             ExperimentGUI.Box(new Rect(0,0,1280,86),Color.black);
             ExperimentGUI.Box(new Rect(0,550,1280,170),Color.black);
             ExperimentGUI.Label(new Rect(55,24,1090,46),_cinemaTitle,true);
+            if(CanSkipMissionCinema&&GUI.Button(new Rect(850,25,300,38),"PULAR • ["+VarginhaInputActions.InteractLabel+"]"))TrySkipMissionCinema();
             ExperimentGUI.Caption(new Rect(65,575,1150,115),_cinemaCaption,VarginhaGameSettings.Current.subtitleSize);
             if(_cinemaTitle=="A CAIXA DE 1996")
             {ExperimentGUI.Panel(new Rect(460,145,360,360));CampaignHouseArt.Draw(new Rect(490,165,300,300),t<.6f?3:4);}
             if(t<.22f)ExperimentGUI.Box(new Rect(0,0,1280,720),new Color(0,0,0,1-t/.22f));
             if(!_paused&&CampaignHudIcons.Button(1174,CampaignHudIcons.Icon.Pause,"ESC","Pausa"))TogglePause();
         }
-        private void DrawRoadShot(float t,bool reduced)
-        {
-            ExperimentGUI.Box(new Rect(0,0,1280,720),new Color(.10f,.16f,.18f));
-            ExperimentGUI.Box(new Rect(420,0,440,720),new Color(.18f,.19f,.22f));
-            ExperimentGUI.Box(new Rect(438,0,7,720),new Color(.75f,.75f,.60f));
-            ExperimentGUI.Box(new Rect(835,0,7,720),new Color(.75f,.75f,.60f));
-            int shift=reduced?0:Mathf.FloorToInt(t*64)%140;
-            for(int y=-140;y<720;y+=140)ExperimentGUI.Box(new Rect(637,y+shift,6,70),new Color(.85f,.73f,.34f));
-            DrawOriginalCar(new Rect(666,305,108,202),CampaignOriginalFusca.Top(CampaignWorkshopVehicle.Facing.North));
-        }
-        private static void DrawOriginalCar(Rect rect,Sprite sprite)
-        { var uv=sprite.rect;GUI.DrawTextureWithTexCoords(rect,sprite.texture,new Rect(uv.x/sprite.texture.width,uv.y/sprite.texture.height,uv.width/sprite.texture.width,uv.height/sprite.texture.height)); }
         private void DrawMissionPause(Matrix4x4 matrix)
         {
             if(!_paused)return;

@@ -1,0 +1,12 @@
+{
+  "source": "output\\cinematic-opening-2026-10-21\\editmode-trail-photo.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 367,
+    "passed": 367,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

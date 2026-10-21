@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-21",
+  "baseCommit": "117d2ebebd724b7534b65bd3879f2a8f49445cc9",
+  "technicalSuccess": true,
+  "deliveryComplete": true,
+  "tests": {
+    "editMode": {
+      "total": 367,
+      "passed": 367,
+      "failed": 0,
+      "skipped": 0
+    },
+    "player": {
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "sources": {
+    "editMode": "editmode-trail-photo.xml",
+    "player": "player-delivery-final.xml",
+    "nativeDuplicate": "player-native.xml",
+    "preview": "preview-qa.json"
+  },
+  "editorRegression": {
+    "source": "playmode-fixed.json",
+    "result": "4 passed / 5; the new sequence assertion was corrected and validated in the final native run. This is not a single green Editor suite."
+  },
+  "cinematicScope": "CS03-06 and school arrival only; subsequent chapters/endings are not newly animated.",
+  "previewFrames": 103,
+  "humanPlaytest": false,
+  "anotherPc": false,
+  "voice": "Deferred by user; caption and SFX only.",
+  "status": "Local build/package, native tests, slide QA and preservation complete.",
+  "newPuzzle": "Phase 6: three trail bifurcations, fixed landmarks, preview/undo/hints/partial saves; user approved.",
+  "version": "0.4.2-beta",
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 1
+  },
+  "package": "windows-package.json",
+  "slides": "slides-qa.json",
+  "preservation": "preservation.json"
+}

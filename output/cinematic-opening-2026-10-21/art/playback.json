@@ -1,0 +1,18 @@
+{
+  "success": true,
+  "checks": [
+    {
+      "clip": "driver",
+      "before": "driving_east | 1/4 | steer_0 | 250 ms | loop | pivot_aligned",
+      "after": "driving_east | 4/4 | steer_3 | 250 ms | loop | pivot_aligned",
+      "advances": true
+    },
+    {
+      "clip": "ignition",
+      "before": "hot_ignition | 1/3 | grip | 850 ms | one-shot | pivot_aligned",
+      "after": "hot_ignition | 3/3 | key_remains | 2800 ms | one-shot | pivot_aligned",
+      "advances": true
+    }
+  ],
+  "scope": "Source-art clip timing; native cinematic evidence is separate."
+}

@@ -1,0 +1,61 @@
+{
+  "cell": [
+    724,
+    724
+  ],
+  "columns": 3,
+  "padding": 0,
+  "pixelsPerUnit": 724,
+  "pivot": [
+    314,
+    284
+  ],
+  "frames": [
+    {
+      "id": "grip",
+      "source": "../../../Assets/Resources/Varginha/CinemaOpening/IgnitionCloseup.png",
+      "crop": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "durationMs": 850,
+      "sourceSha256": "76c970822362e4a3f2b61ef8e2e3d8cb978da9cdc8ec715623a0a53a88fcbe0b"
+    },
+    {
+      "id": "release",
+      "source": "../../../Assets/Resources/Varginha/CinemaOpening/IgnitionCloseup.png",
+      "crop": [
+        724,
+        0,
+        724,
+        724
+      ],
+      "durationMs": 650,
+      "sourceSha256": "76c970822362e4a3f2b61ef8e2e3d8cb978da9cdc8ec715623a0a53a88fcbe0b"
+    },
+    {
+      "id": "key_remains",
+      "source": "../../../Assets/Resources/Varginha/CinemaOpening/IgnitionCloseup.png",
+      "crop": [
+        1448,
+        0,
+        724,
+        724
+      ],
+      "durationMs": 2800,
+      "sourceSha256": "76c970822362e4a3f2b61ef8e2e3d8cb978da9cdc8ec715623a0a53a88fcbe0b"
+    }
+  ],
+  "clips": {
+    "hot_ignition": {
+      "frames": [
+        "grip",
+        "release",
+        "key_remains"
+      ],
+      "loop": false
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "tool": "builtin image_gen",
+  "file": "Assets/Resources/Varginha/CinemaOpening/FuscaCabinProportional.png",
+  "sha256": "be3b4ee335b9e352bf2aaccd0498a9b10216b864678c655bf2863ff36f95a8eb",
+  "source": "exec-3274f2b7-c808-43ad-bac4-5c1320d1fa9f.png",
+  "reference": "exec-10206ab7-034a-4bf6-b506-cbebf6fa76f1.png",
+  "request": "Compact cabin to fit the original driver; connected steering column, clean animated gauge, preserve blue/tan/brown materials and transparent windows. Original driver pixels unchanged.",
+  "humanApproved": false,
+  "review": "Four registered source-driver poses inspected; final Unity capture is separate."
+}

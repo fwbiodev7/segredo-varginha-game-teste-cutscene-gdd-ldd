@@ -1,0 +1,88 @@
+{
+  "schema": "unity-slice-plan/v1",
+  "origin": "bottom-left",
+  "image": "sheet.png",
+  "pixelsPerUnit": 233.83966,
+  "sprites": [
+    {
+      "name": "steer_0",
+      "rect": [
+        0,
+        0,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.46875,
+        0.0625
+      ],
+      "alignment": "Custom",
+      "durationMs": 250
+    },
+    {
+      "name": "steer_1",
+      "rect": [
+        320,
+        0,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.46875,
+        0.0625
+      ],
+      "alignment": "Custom",
+      "durationMs": 250
+    },
+    {
+      "name": "steer_2",
+      "rect": [
+        640,
+        0,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.46875,
+        0.0625
+      ],
+      "alignment": "Custom",
+      "durationMs": 250
+    },
+    {
+      "name": "steer_3",
+      "rect": [
+        960,
+        0,
+        320,
+        320
+      ],
+      "pivotNormalized": [
+        0.46875,
+        0.0625
+      ],
+      "alignment": "Custom",
+      "durationMs": 250
+    }
+  ],
+  "clips": {
+    "driving_east": {
+      "frames": [
+        "steer_0",
+        "steer_1",
+        "steer_2",
+        "steer_3"
+      ],
+      "loop": true
+    }
+  },
+  "importSettings": {
+    "textureType": "Sprite",
+    "spriteMode": "Multiple",
+    "filterMode": "Point",
+    "mipmaps": false,
+    "compression": "Uncompressed",
+    "wrapMode": "Clamp"
+  },
+  "note": "Import plan only; Unity does not import this JSON automatically. Preserve existing sprite IDs."
+}

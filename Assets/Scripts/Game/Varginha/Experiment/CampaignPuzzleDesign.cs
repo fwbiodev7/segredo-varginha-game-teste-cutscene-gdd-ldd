@@ -41,7 +41,6 @@ namespace Game.Varginha.Experiment
     public static class CampaignPuzzleDesign
     {
         private static readonly Color Line = new(.43f, .77f, .67f);
-        private static readonly string[] Compass = { "NORTE ↑", "LESTE →", "SUL ↓", "OESTE ←" };
         public static bool Redesigned(int phase) => phase == 11 || phase == 13 || phase == 14 || phase == 15 || phase == 18;
         public static bool Correct(int phase, int choice, int[] answer)
             => phase == 11 ? choice == 3 : CampaignStory.Sequence(answer, Solution(phase));
@@ -64,40 +63,7 @@ namespace Game.Varginha.Experiment
         }
 
         public static void DrawMap(CampaignExpansionState state, ref int selected, Action confirm, Action save)
-        {
-            ExperimentGUI.Label(new Rect(165,170,950,42), "FRAGMENTOS • RECONSTRUIR A TRILHA", true);
-            ExperimentGUI.Label(new Rect(165,222,950,62), "Escolha um marco e depois um lugar no mapa. Gire sua seta para conectar a trilha. Consulte livro, globo e painel; o norte está acima.", small:true);
-            string[] landmarks = { "ÁRVORE", "RIO", "CAPELA" };
-            for (int i = 0; i < 3; i++)
-                if (ExperimentGUI.Button(new Rect(165+i*320,292,290,35), (selected==i?"• ":"")+landmarks[i])) selected=i;
-            // Keep the route above the controls so no button conceals a connection.
-            var positions = new[] { new Vector2(165,405), new Vector2(485,405), new Vector2(805,405) };
-            ExperimentGUI.Box(new Rect(165,337,930,62),new Color(.035f,.09f,.1f));
-            ExperimentGUI.Box(new Rect(310,374,640,3),Line);
-            ExperimentGUI.Box(new Rect(948,357,3,20),Line);
-            for(int i=0;i<3;i++)
-            {
-                int landmark=state.mapOrder[i];
-                ExperimentGUI.Box(new Rect(306+i*320,370,8,8),Line);
-                ExperimentGUI.Label(new Rect(175+i*320,342,270,26),landmarks[landmark]+" • "+Compass[state.mapDirections[landmark]],small:true);
-            }
-            for (int i = 0; i < 3; i++)
-            {
-                int landmark=state.mapOrder[i]; var p=positions[i];
-                if (ExperimentGUI.Button(new Rect(p.x,p.y,290,44), landmarks[landmark]))
-                {
-                    if (selected >= 0)
-                    { int other=Array.IndexOf(state.mapOrder,selected); (state.mapOrder[i],state.mapOrder[other])=(state.mapOrder[other],state.mapOrder[i]); selected=-1;save(); }
-                    else selected=landmark;
-                }
-                if (ExperimentGUI.Button(new Rect(p.x,p.y+47,290,32), "GIRAR • "+Compass[state.mapDirections[landmark]]))
-                { state.mapDirections[landmark]=(state.mapDirections[landmark]+1)%4;save(); }
-            }
-            ExperimentGUI.Label(new Rect(165,494,290,32), "OESTE",small:true);
-            ExperimentGUI.Label(new Rect(485,494,290,32), "CENTRO",small:true);
-            ExperimentGUI.Label(new Rect(805,494,290,32), "LESTE",small:true);
-            if (ExperimentGUI.Button(new Rect(805,530,290,42),"CONFERIR CONEXÕES")) confirm();
-        }
+            =>CampaignTrailPuzzle.Draw(state,ref selected,confirm,save);
 
         public static void Draw(CampaignStory story, int phase, Action<int,int[]> submit, Action save, CampaignSoundscape sound)
         {

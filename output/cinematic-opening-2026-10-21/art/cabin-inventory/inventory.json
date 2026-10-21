@@ -1,0 +1,154 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\CinematicPixelResolve.shader.meta",
+      "sha256": "b5377e944849b25a65a553232bfcd1b717811f7ff1a827126a7fc6f453bd5fdd",
+      "bytes": 204
+    },
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\FuscaCabinFrame.png",
+      "sha256": "b2b38e3c90a29b9463657df936b0ce1fd8d14025be92f191a702a99e84abef3e",
+      "bytes": 1625705,
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "visibleColors": 80845,
+      "semiTransparentPixels": 1182618,
+      "pixelsSha256": "9f0855d469156434eb79235ac4f63adcc6b190efa6da8702e80e7e700a8d330f"
+    },
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\FuscaCabinFrame.png.meta",
+      "sha256": "1013d38303aaedfb49ba7edcccf1fbdd0810560a981e5b0aa3a2ac0fbf549a46",
+      "bytes": 2714
+    },
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\FuscaCabinMorning.png",
+      "sha256": "5be5d381064d9bb1df322d27da1b748e344bb1fd100afc44110e062a9427f6a5",
+      "bytes": 1866822,
+      "size": [
+        1672,
+        940
+      ],
+      "mode": "RGB",
+      "bbox": [
+        0,
+        0,
+        1672,
+        940
+      ],
+      "visibleColors": 205400,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "52720c36ec2cd82506c1ace4a206720ff74f81101a5f6e55583e5f7e464daaf4"
+    },
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\FuscaCabinMorning.png.meta",
+      "sha256": "d7537e1934348753a43cb6cf80a1cbb4ffe81d4f5a2c9067879e7162c365b782",
+      "bytes": 2714
+    },
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\FuscaCabinPhotoShell.png",
+      "sha256": "651330ab41a94e3dc55bc4e9f92314ac8c04550f758998dac7d14368160ce650",
+      "bytes": 1431490,
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "visibleColors": 69886,
+      "semiTransparentPixels": 1221182,
+      "pixelsSha256": "699a5afe78d13f79b988bde9bdad6615d5c3dac928e2020c9d8823082a18e32b"
+    },
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\FuscaCabinPhotoShell.png.meta",
+      "sha256": "f97e05b4053298ab26c4324dcfa3c3cd51f50b661c93edf9bf9311f5658fb6c2",
+      "bytes": 2714
+    },
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\FuscaCabinProportional.png",
+      "sha256": "be3b4ee335b9e352bf2aaccd0498a9b10216b864678c655bf2863ff36f95a8eb",
+      "bytes": 1555424,
+      "size": [
+        1672,
+        941
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "visibleColors": 88711,
+      "semiTransparentPixels": 1184860,
+      "pixelsSha256": "7efb67ea251154fb6b1907c02c740b5439ede7e2a37f785d5e937626f4f895d8"
+    },
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\FuscaCabinProportional.png.meta",
+      "sha256": "d42fe849d19a2afb1593fa053bb917e55e03a1ec55f0b72645b29840d8564298",
+      "bytes": 2714
+    },
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\FuscaDashboardPhoto.png",
+      "sha256": "69c36ac75da565a3e34b0b41725a4713115e9675272d7a2900f1520d373680c4",
+      "bytes": 1480527,
+      "size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        0,
+        2157,
+        724
+      ],
+      "visibleColors": 96957,
+      "semiTransparentPixels": 1049986,
+      "pixelsSha256": "d315b3f7ab7b70f2d67bc050c27db8c8bd3779b41e43a0df1c8775fe8900903f"
+    },
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\FuscaDashboardPhoto.png.meta",
+      "sha256": "e7368a7f9565cb4d4a25f4588e004e30d0d371af359c6c62f4b80c90d9406935",
+      "bytes": 2714
+    },
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\IgnitionCloseup.png",
+      "sha256": "76c970822362e4a3f2b61ef8e2e3d8cb978da9cdc8ec715623a0a53a88fcbe0b",
+      "bytes": 1689809,
+      "size": [
+        2172,
+        724
+      ],
+      "mode": "RGB",
+      "bbox": [
+        0,
+        0,
+        2172,
+        724
+      ],
+      "visibleColors": 79333,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "80b79b3d86c4c3e4248fbe2b89b59681035b2c9bb544385b4fcdacc9e6e5addd"
+    },
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\IgnitionCloseup.png.meta",
+      "sha256": "6a82af5b548ff532448957d926af0ef03701b33aeb664997804c2be0c0c420f3",
+      "bytes": 2714
+    }
+  ],
+  "errors": []
+}

@@ -185,9 +185,9 @@ namespace Game.Varginha.Experiment
             else if (phase == 6)
             {
                 if (id == "map") Open("map");
-                else if (id == "archive") { State.visited |= 1; Say("O livro aberto da biblioteca guarda um registro da região: ÁRVORE, margem oeste. Terceiro fragmento de mapa recolhido. O carimbo de 23:23 corresponde à diocese.\nNota do levantamento: da árvore, a trilha segue para leste."); }
-                else if (id == "school") { State.visited |= 2; Say("Uma anotação junto ao globo ajuda a orientar o levantamento: o RIO atravessa o centro, ligando a árvore à capela.\nNota do levantamento: a ponte cruza o rio de oeste para leste."); }
-                else if (id == "square") { State.visited |= 4; Say("O painel conserva um relato de 1996: a CAPELA fica a leste. Alinhe ÁRVORE → RIO → CAPELA na mesa central, do oeste ao leste.\nNota do levantamento: a entrada da capela fica ao sul; siga para norte ao chegar."); }
+                else if (id == "archive") { State.visited |= 1; Say("O livro guarda o terceiro fragmento. O carimbo de 23:23 corresponde à diocese.\nO levantamento começa na árvore: um tronco caído impede uma das passagens. O registro ficou ao lado do mapa."); }
+                else if (id == "school") { State.visited |= 2; Say("O levantamento junto ao globo mostra o rio entre a árvore e a capela. A ponte é a travessia registrada. Compare a água e os caminhos no mapa."); }
+                else if (id == "square") { State.visited |= 4; Say("O painel conserva o relato de 1996. A entrada da capela fica junto ao portão; o muro bloqueia o outro acesso. Trace uma rota que respeite os três registros na mesa central."); }
                 else if (id.StartsWith("library_shelf")) Say("Estantes da biblioteca da Industrial. Livros de história local, atlas e registros escolares. Os documentos da investigação estão no livro aberto, junto ao globo e no painel de avisos.");
                 else if (id.StartsWith("library_plant")) Say("As plantas recebem a luz das janelas. Entre as estantes, a biblioteca continua silenciosa.");
             }
@@ -332,7 +332,7 @@ namespace Game.Varginha.Experiment
                 : phase == 8 ? "SELO DA ENTIDADE: EDELZIO / CONTENÇÃO: ESTÁVEL. Você é o selo que mantém a entidade contida desde 1996."
                 : phase == 9 ? "A reação contradiz as leituras normais. Ouzana aceita ajudar e entrega o reagente."
                 : "As marcas reproduzem o trajeto árvore, rio e capela. As marcas estão registradas; o Fusca pode partir."); }
-            else Say(_panel=="map"?"Confira os marcos e suas setas: a trilha precisa conectar árvore, ponte e entrada da capela. Os registros continuam no caderno.":"A combinação não corresponde às pistas. Confira os registros e tente novamente; nenhuma pista foi perdida.");
+            else if(_panel!="map")Say("A combinação não corresponde às pistas. Confira os registros e tente novamente; nenhuma pista foi perdida.");
             Save(); return result;
         }
         public void Save()

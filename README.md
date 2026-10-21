@@ -4,13 +4,15 @@
 
 Trinta anos depois de uma noite esquecida, Edelzio encontra uma caixa que devolve perguntas sobre seu passado. Explore casas, a Escola Industrial, trilhas e laboratórios; converse com Renan, Padre Fábio e Ouzana; reúna pistas e conte com seus aliados quando a investigação se transformar em combate.
 
-**Em desenvolvimento · 14 capítulos · candidata Windows 0.4.1-beta · atualização: 21/10/2026.**
+**Em desenvolvimento · 14 capítulos · candidata Windows 0.4.2-beta · atualização: 21/10/2026.**
 
-A entrega de 21/10 fecha a abertura adulta: preparação para a escola, chave desaparecida, investigação, reconstrução das páginas e continuidade na Industrial. Inclui dicas progressivas, correções de apresentação dos aliados e compatibilidade dos colisores no Player. A arte original permanece preservada.
+Revisão de hoje: cabine do Fusca redesenhada a partir da foto de referência, glitch distribuído e desembarque no mapa da escola. O puzzle de Fragmentos agora usa [três bifurcações com pistas visíveis](Docs/CampanhaOficial/PUZZLE_FRAGMENTOS_BIFURCACOES_2026-10-21.md), prévia, desfazer e dicas graduais.
 
-O pacote local `Builds/Varginha_0.4.1-beta_2026-10-21_Windows_x64.zip` inclui o roteiro de playtest e manifesto SHA-256. Consulte o [relatório técnico e resultados](output/qa-2026-10-21/RELATORIO.md), os [slides atualizados](output/daily-sprint-2026-10-20/A_Sprint_Final_Varginha.html), o [roteiro de playtest](Docs/CampanhaOficial/PLAYTEST_2026-10-21.md) e as [pendências externas](Docs/CampanhaOficial/PENDENCIAS_2026-10-21.md). A build candidata ainda não foi publicada como GitHub Release; o download público abaixo é da alpha anterior.
+A entrega de 21/10 fecha a abertura adulta e acrescenta a viagem animada do Fusca: preparação para a escola, chave desaparecida, investigação, reconstrução das páginas e continuidade na Industrial. Inclui dicas progressivas, correções de apresentação dos aliados, compatibilidade dos colisores no Player e glitches com faixas coloridas. A cabine usa camadas, quadros originais do protagonista e instrumentos animados. A arte original permanece preservada.
 
-O [plano de novas cutscenes baseado no GDD/LDD](Docs/CampanhaOficial/ROTEIRO_CUTSCENES_GDD_LDD_2026-10-21.md) aguarda aprovação para uma etapa posterior. A dublagem infantil foi adiada pelo usuário.
+O pacote local `Builds/Varginha_0.4.2-beta_2026-10-21_Windows_x64.zip` inclui o roteiro de playtest e manifesto SHA-256. Consulte o [relatório técnico e resultados](output/cinematic-opening-2026-10-21/RELATORIO.md), os [slides atualizados](output/daily-sprint-2026-10-20/A_Sprint_Final_Varginha.html), o [roteiro de playtest](Docs/CampanhaOficial/PLAYTEST_2026-10-21.md) e as [pendências externas](Docs/CampanhaOficial/PENDENCIAS_2026-10-21.md). A build candidata ainda não foi publicada como GitHub Release; o download público abaixo é da alpha anterior.
+
+A [prévia silenciosa da animação](output/cinematic-opening-2026-10-21/preview.html) usa quadros reais capturados no Player. A [daily curta](output/daily-sprint-2026-10-20/A_Sprint_Final_Varginha.html) tem dez slides. O [roteiro GDD/LDD](Docs/CampanhaOficial/ROTEIRO_CUTSCENES_GDD_LDD_2026-10-21.md) registra o restante do planejamento, com divergências editoriais explícitas. Esta produção cobre somente a abertura e a chegada à escola. A dublagem infantil foi adiada pelo usuário.
 
 Histórico: a Alpha 0.3 de 09/10 revisou mapas, HUD, puzzles, atmosfera e recortes dos personagens. Consulte suas [notas e manifesto](Docs/Alpha03/README.md).
 

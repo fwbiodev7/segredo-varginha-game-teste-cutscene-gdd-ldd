@@ -1,4 +1,5 @@
 """Package only a successful candidate, with checksums and the external-playtest guide."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -15,7 +16,10 @@ def sha(path):
     return h.hexdigest()
 
 def main():
-    report=json.loads((QA/'windows-build.json').read_text(encoding='utf-8'))
+    parser=argparse.ArgumentParser();parser.add_argument('--qa',type=Path,default=QA);args=parser.parse_args()
+    qa=args.qa.resolve()
+    if not qa.is_relative_to(ROOT/'output'):raise ValueError('QA evidence must stay in the project output folder.')
+    report=json.loads((qa/'windows-build.json').read_text(encoding='utf-8'))
     if report['result']!='Succeeded' or report['errors']!=0:raise ValueError('No successful Windows build.')
     exe=Path(report['output']).resolve();folder=exe.parent
     if not folder.is_relative_to(ROOT/'Builds') or not exe.is_file():raise ValueError('Unexpected/missing build output.')
@@ -35,7 +39,7 @@ def main():
         bad=package.testzip()
         if bad:raise ValueError('Corrupt package entry: '+bad)
     result={'success':True,'archive':str(archive),'bytes':archive.stat().st_size,'sha256':sha(archive),'files':len(files)+1,'build':str(exe),'version':report['version']}
-    (QA/'windows-package.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+    (qa/'windows-package.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
     print(json.dumps(result))
 
 if __name__=='__main__':main()

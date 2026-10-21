@@ -12,6 +12,8 @@ namespace Game.Varginha.Experiment
         public bool boxFound, pagesSolved, arrival, renanMet, lesson, archive, buildingSolved;
         public bool symbolsFound, legendFound, codeSolved, renanConfirmed;
         public int studentsTalked;
+        // Additive v3 field: old saves start with no cinematics marked as already watched.
+        public int cinematicsSeen;
         public bool ouzanaNote;
         public int[] pages = { 2, 0, 1 }, symbols = { 1, 0, 1, 0 };
         public int circle = 1, triangle = 1;
@@ -64,7 +66,7 @@ namespace Game.Varginha.Experiment
         }
         public void Repair()
         {
-            phase = Mathf.Clamp(phase, 1, 21); routine &= 15; inspection &= 7;
+            phase = Mathf.Clamp(phase, 1, 21); routine &= 15; inspection &= 7; cinematicsSeen &= 15;
             continuation ??= new CampaignContinuationState(); continuation.Repair();
             CampaignSequence.Migrate(this);
             house ??= new CampaignHouseInvestigation();

@@ -1,0 +1,27 @@
+{
+  "clips": [
+    {
+      "clip": "hot_ignition",
+      "file": "clip_000.png",
+      "loop": false,
+      "sequence": [
+        "grip",
+        "release",
+        "key_remains"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 4300,
+      "overlayPairs": [
+        [
+          "grip",
+          "release"
+        ],
+        [
+          "release",
+          "key_remains"
+        ]
+      ]
+    }
+  ],
+  "visualReviewCompleted": false
+}

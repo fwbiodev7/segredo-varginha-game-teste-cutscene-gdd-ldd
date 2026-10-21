@@ -1,0 +1,59 @@
+{
+  "files": [
+    {
+      "file": "Assets/Resources/Varginha/StoryCharacters/Driving.png",
+      "sha256": "f26d152bf05cda2bd74aee7542b76026ba8772ab67b74c1983d94c7815b08231",
+      "role": "existing source reused without edits"
+    },
+    {
+      "file": "Assets/Resources/Varginha/StoryCharacters/Driving.json",
+      "sha256": "1d51e089e2aa62077a1948b95e22db2be5054593b567afc79db404495b5d29d8",
+      "role": "existing source reused without edits"
+    },
+    {
+      "file": "Assets/Resources/Varginha/KeyInvestigation/HouseEvidence.png",
+      "sha256": "bb9202bcafdaf81ba42cca050f5cffa7afe98b8bc3b7ec03c735acc3b1cb8a8d",
+      "role": "existing source reused without edits"
+    },
+    {
+      "file": "Assets/Resources/Varginha/StoryEffects/FuscaOriginal.png",
+      "sha256": "048dfd8c37a00d2fc84407871ea931f81927efd71bc69d50c733a549292f7344",
+      "role": "existing source reused without edits"
+    },
+    {
+      "file": "Assets/Resources/Varginha/StoryEffects/FuscaOriginalFront.png",
+      "sha256": "740ef1f2896e3fa5b6695e9359f16a52f2a47f67cd1a6b3cef2d71eee0ff6513",
+      "role": "existing source reused without edits"
+    },
+    {
+      "file": "Assets/Resources/Varginha/CinemaOpening/FuscaCabinMorning.png",
+      "sha256": "5be5d381064d9bb1df322d27da1b748e344bb1fd100afc44110e062a9427f6a5",
+      "role": "additional generated source"
+    },
+    {
+      "file": "Assets/Resources/Varginha/CinemaOpening/FuscaCabinFrame.png",
+      "sha256": "b2b38e3c90a29b9463657df936b0ce1fd8d14025be92f191a702a99e84abef3e",
+      "role": "additional generated source"
+    },
+    {
+      "file": "Assets/Resources/Varginha/CinemaOpening/IgnitionCloseup.png",
+      "sha256": "76c970822362e4a3f2b61ef8e2e3d8cb978da9cdc8ec715623a0a53a88fcbe0b",
+      "role": "additional generated source"
+    },
+    {
+      "file": "Assets/Resources/Varginha/CinemaOpening/FuscaCabinProportional.png",
+      "sha256": "be3b4ee335b9e352bf2aaccd0498a9b10216b864678c655bf2863ff36f95a8eb",
+      "role": "additional revised cabin; no approved character pixels edited"
+    },
+    {
+      "file": "Assets/Resources/Varginha/CinemaOpening/FuscaCabinPhotoShell.png",
+      "sha256": "651330ab41a94e3dc55bc4e9f92314ac8c04550f758998dac7d14368160ce650",
+      "role": "new photo-based layered cabin art"
+    },
+    {
+      "file": "Assets/Resources/Varginha/CinemaOpening/FuscaDashboardPhoto.png",
+      "sha256": "69c36ac75da565a3e34b0b41725a4713115e9675272d7a2900f1520d373680c4",
+      "role": "new photo-based layered cabin art"
+    }
+  ]
+}

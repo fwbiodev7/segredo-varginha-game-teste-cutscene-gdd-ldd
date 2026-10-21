@@ -160,6 +160,12 @@ namespace Game.Varginha.Experiment
                 else TogglePause();
             }
             if (_paused) return;
+            if(_cinematicShot!=null)
+            {
+                Lock();
+                if(VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact))TrySkipMissionCinema();
+                return;
+            }
             if (_titleTime < 3) { _titleTime += Time.unscaledDeltaTime; Lock(); return; }
             if (_view == View.Cutscene)
             { _cutTime += Time.unscaledDeltaTime; if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)) FinishCutscene(); return; }
@@ -531,6 +537,6 @@ namespace Game.Varginha.Experiment
         }
         private void Menu() { Save(); Time.timeScale = 1; CampaignCinematics.Load("Menu_MisterioDeVarginha"); }
         private void OnApplicationPause(bool value) { if (value) Save(); }
-        private void OnDestroy() { _missionComposer?.Dispose(); _radioCueTime = -1; _sound?.CinematicDucking(0); if (Active == this) Active = null; Time.timeScale = 1; }
+        private void OnDestroy() { _radioCueTime = -1; _sound?.CinematicDucking(0); if (Active == this) Active = null; Time.timeScale = 1; }
     }
 }

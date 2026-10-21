@@ -1,0 +1,138 @@
+{
+  "schema": "pixel-art-sprite-sheet/v1",
+  "image": "sheet.png",
+  "imageSize": [
+    2172,
+    724
+  ],
+  "pixelsPerUnit": 724,
+  "frames": [
+    {
+      "id": "grip",
+      "rect": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "sourceSize": [
+        724,
+        724
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        314,
+        284
+      ],
+      "durationMs": 850,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\IgnitionCloseup.png",
+        "fileSha256": "76c970822362e4a3f2b61ef8e2e3d8cb978da9cdc8ec715623a0a53a88fcbe0b",
+        "crop": [
+          0,
+          0,
+          724,
+          724
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "release",
+      "rect": [
+        724,
+        0,
+        724,
+        724
+      ],
+      "sourceSize": [
+        724,
+        724
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        314,
+        284
+      ],
+      "durationMs": 650,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\IgnitionCloseup.png",
+        "fileSha256": "76c970822362e4a3f2b61ef8e2e3d8cb978da9cdc8ec715623a0a53a88fcbe0b",
+        "crop": [
+          724,
+          0,
+          724,
+          724
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "key_remains",
+      "rect": [
+        1448,
+        0,
+        724,
+        724
+      ],
+      "sourceSize": [
+        724,
+        724
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        314,
+        284
+      ],
+      "durationMs": 2800,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\CinemaOpening\\IgnitionCloseup.png",
+        "fileSha256": "76c970822362e4a3f2b61ef8e2e3d8cb978da9cdc8ec715623a0a53a88fcbe0b",
+        "crop": [
+          1448,
+          0,
+          724,
+          724
+        ],
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    }
+  ],
+  "clips": {
+    "hot_ignition": {
+      "frames": [
+        "grip",
+        "release",
+        "key_remains"
+      ],
+      "loop": false
+    }
+  }
+}

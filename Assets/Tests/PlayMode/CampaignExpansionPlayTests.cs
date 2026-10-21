@@ -40,7 +40,7 @@ namespace Game.Tests.PlayMode
                 if(phase==6)
                 {
                     foreach(string point in new[]{"archive","school","square","truth0","truth1"}){stage.Interact(point);stage.ClosePanel();}
-                    stage.Progress.expansion.mapOrder=new[]{0,1,2};stage.Progress.expansion.mapDirections=new[]{1,1,0}; stage.Interact("map"); Assert.That(stage.SubmitPuzzle(),Is.True); stage.ClosePanel();
+                    stage.Progress.expansion.trailChoices=new[]{1,0,1}; stage.Interact("map"); Assert.That(stage.SubmitPuzzle(),Is.True); stage.ClosePanel();
                 }
                 if(phase==7)
                 {
@@ -168,8 +168,8 @@ namespace Game.Tests.PlayMode
             Assert.That(stage.Progress.expansion.visited,Is.EqualTo(7),"Each visible object responds to the interaction key.");
             yield return WalkLibrary(stage.Plan,body,keyboard,stage.Plan.points.Find(p=>p.id=="map").position);
             yield return HoldKey(keyboard,Key.E,.1f);
-            stage.Progress.expansion.mapOrder=new[]{2,1,0};Assert.That(stage.SubmitPuzzle(),Is.False);
-            stage.ClosePanel();stage.Interact("map");stage.Progress.expansion.mapOrder=new[]{0,1,2};stage.Progress.expansion.mapDirections=new[]{1,1,0};Assert.That(stage.SubmitPuzzle(),Is.True);stage.ClosePanel();
+            stage.Progress.expansion.trailChoices=new[]{0,1,0};Assert.That(stage.SubmitPuzzle(),Is.False);
+            stage.ClosePanel();stage.Interact("map");stage.Progress.expansion.trailChoices=new[]{1,0,1};Assert.That(stage.SubmitPuzzle(),Is.True);stage.ClosePanel();
             Assert.That(CampaignStorySave.Load().expansion.mapSolved,Is.True);
             yield return WalkLibrary(stage.Plan,body,keyboard,stage.Plan.points.Find(p=>p.id=="exit").position);
             yield return HoldKey(keyboard,Key.E,.1f);

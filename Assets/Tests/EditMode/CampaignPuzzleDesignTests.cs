@@ -8,14 +8,6 @@ namespace Game.Tests.EditMode
 {
     public class CampaignPuzzleDesignTests
     {
-        [Test] [Category("HudPuzzles")] public void MapRequiresBothSpatialPlacementAndConnectedDirections()
-        {
-            var state=new CampaignExpansionState{visited=7,mapOrder=new[]{0,1,2}};
-            Assert.That(state.SolveMap(),Is.False);
-            state.mapDirections=new[]{1,1,0};Assert.That(state.SolveMap(),Is.True);
-            state.mapSolved=false;state.mapOrder=new[]{1,0,2};Assert.That(state.SolveMap(),Is.False);
-            state.mapOrder=new[]{0,1,2};state.visited=3;Assert.That(state.SolveMap(),Is.False);
-        }
         [Test] [Category("HudPuzzles")] public void AlteredArchiveRejectsTheOldFirstChoiceAndUnchangedDetails()
         {
             Assert.That(CampaignPuzzleDesign.Correct(11,0,null),Is.False);

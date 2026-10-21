@@ -38,8 +38,14 @@ O percentual do wrapper mede bytes da saída, não tokens. Nenhum modelo local f
 
 ## Distribuição e daily
 
-`Game.Editor.Testing.VarginhaDailyBuild.Build` gera a candidata 0.4.1-beta em pasta nova e restaura a versão do projeto. Execute com `-batchmode -quit -executeMethod`, sem `-runTests`. O relatório deve terminar em `Succeeded`, com zero erros; confira seus avisos antes de entregar.
+`Game.Editor.Testing.VarginhaDailyBuild.Build` gera a candidata 0.4.2-beta em pasta nova e restaura a versão do projeto. Execute com `-batchmode -quit -executeMethod`, sem `-runTests`. O relatório deve terminar em `Succeeded`, com zero erros; confira seus avisos antes de entregar.
 
-`python Tools/QA/package_windows.py` exige esse relatório, inclui o guia de playtest, calcula SHA-256 por arquivo e do ZIP, reabre o pacote para conferir CRC e rejeita assemblies de testes. Exclui as pastas de backup/debug explicitamente identificadas pela Unity como `DoNotShip`. O pacote permanece local até uma publicação autorizada.
+`python Tools/QA/package_windows.py --qa output/cinematic-opening-2026-10-21` exige esse relatório, inclui o guia de playtest, calcula SHA-256 por arquivo e do ZIP, reabre o pacote para conferir CRC e rejeita assemblies de testes. Exclui as pastas de backup/debug explicitamente identificadas pela Unity como `DoNotShip`. O pacote permanece local até uma publicação autorizada.
 
-`node output/daily-sprint-2026-10-20/build.mjs` usa `output/qa-2026-10-21/summary.json` para atualizar a daily. Depois, execute `qa.mjs` da mesma pasta com o wrapper e revise as imagens. O QA valida 17 slides, nove transições, navegação rápida, fontes/imagens, limites de texto, notas, impressão e movimento reduzido. A apresentação preserva a retrospectiva histórica e identifica as novidades por data; contagens consolidadas de PlayMode não são apresentadas como uma única rodada completa aprovada.
+`node output/daily-sprint-2026-10-20/build.mjs` usa `output/cinematic-opening-2026-10-21/summary.json` para atualizar a daily. Depois, execute `qa.mjs` da mesma pasta com o wrapper e revise as imagens. O QA valida dez slides, nove transições, navegação rápida, fontes/imagens, limites de texto, notas, impressão e movimento reduzido. A apresentação preserva a retrospectiva histórica e identifica as novidades por data; contagens consolidadas de PlayMode não são apresentadas como uma única rodada completa aprovada.
+
+
+`node Tools/QA/cinema_preview.mjs` monta e verifica a prévia silenciosa a partir de pelo menos 40 capturas reais em `output/cinematic-opening-2026-10-21/film`. Não recria a cena nem substitui teste de áudio. Os clipes-fonte da skill possuem seus próprios atlas/JSON/planos Unity e prévias na pasta `art`.
+
+
+A revisão final de 21/10 está em `output/cinematic-opening-2026-10-21`: 367 casos EditMode e cinco casos direcionados no Player Windows. Os XML/JSON identificam cada execução. O caso de UI de Fragmentos agora se chama `TrailMapCanPreviewUndoAndTraceWithController`, substituindo o contrato antigo de ordenar/girar; os novos contratos verificam solução única, feedback com prefixo preservado, dicas e migração. A cobertura histórica em `output/qa-2026-10-21` permanece histórica, sem ser reinterpretada como teste da revisão nova.

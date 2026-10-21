@@ -1,0 +1,72 @@
+{
+  "schema": "unity-slice-plan/v1",
+  "origin": "bottom-left",
+  "image": "sheet.png",
+  "pixelsPerUnit": 724,
+  "sprites": [
+    {
+      "name": "grip",
+      "rect": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "pivotNormalized": [
+        0.43370165745856354,
+        0.6077348066298343
+      ],
+      "alignment": "Custom",
+      "durationMs": 850
+    },
+    {
+      "name": "release",
+      "rect": [
+        724,
+        0,
+        724,
+        724
+      ],
+      "pivotNormalized": [
+        0.43370165745856354,
+        0.6077348066298343
+      ],
+      "alignment": "Custom",
+      "durationMs": 650
+    },
+    {
+      "name": "key_remains",
+      "rect": [
+        1448,
+        0,
+        724,
+        724
+      ],
+      "pivotNormalized": [
+        0.43370165745856354,
+        0.6077348066298343
+      ],
+      "alignment": "Custom",
+      "durationMs": 2800
+    }
+  ],
+  "clips": {
+    "hot_ignition": {
+      "frames": [
+        "grip",
+        "release",
+        "key_remains"
+      ],
+      "loop": false
+    }
+  },
+  "importSettings": {
+    "textureType": "Sprite",
+    "spriteMode": "Multiple",
+    "filterMode": "Point",
+    "mipmaps": false,
+    "compression": "Uncompressed",
+    "wrapMode": "Clamp"
+  },
+  "note": "Import plan only; Unity does not import this JSON automatically. Preserve existing sprite IDs."
+}

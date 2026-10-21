@@ -1,0 +1,23 @@
+{
+  "tool": "builtin image_gen",
+  "reference": "User supplied photo codex-clipboard-d4e58cfc-463c-4534-9342-344805de97a6.png",
+  "sources": [
+    "exec-e029036f-6959-495c-8dc1-651d55d7ddbe.png",
+    "exec-aea018dc-a580-40a1-8b4c-3ff9f6b25eb9.png"
+  ],
+  "files": [
+    {
+      "file": "Assets/Resources/Varginha/CinemaOpening/FuscaCabinPhotoShell.png",
+      "sha256": "651330ab41a94e3dc55bc4e9f92314ac8c04550f758998dac7d14368160ce650",
+      "role": "new photo-based layered cabin art"
+    },
+    {
+      "file": "Assets/Resources/Varginha/CinemaOpening/FuscaDashboardPhoto.png",
+      "sha256": "69c36ac75da565a3e34b0b41725a4713115e9675272d7a2900f1520d373680c4",
+      "role": "new photo-based layered cabin art"
+    }
+  ],
+  "humanApproved": false,
+  "identity": "Original driver and wheel atlas unchanged; four registered poses reviewed.",
+  "layers": "Black vinyl seat/blue cabin shell and independent thin brown dashboard. No added shaft or second wheel."
+}

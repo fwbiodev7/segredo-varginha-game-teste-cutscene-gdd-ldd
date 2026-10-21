@@ -1,0 +1,13 @@
+{
+  "tool": "builtin image_gen",
+  "source": "exec-e6b7bed9-8394-45d6-ac15-f0aa4e192ebd.png",
+  "sha256": "76c970822362e4a3f2b61ef8e2e3d8cb978da9cdc8ec715623a0a53a88fcbe0b",
+  "humanApproved": false,
+  "request": "Three registered ignition poses; original brass key and navy fob; bare forearm with no long sleeve.",
+  "references": [
+    "FuscaCabinMorning.png",
+    "StoryCharacters/Driving.png",
+    "KeyInvestigation/HouseEvidence.png"
+  ],
+  "rejected": "Previous isolated orange hand and cuff replaced; original character sprites untouched."
+}

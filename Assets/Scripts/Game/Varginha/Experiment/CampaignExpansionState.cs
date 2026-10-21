@@ -14,10 +14,12 @@ namespace Game.Varginha.Experiment
         public int workshopHeading;
         public int[] mapOrder = { 2, 0, 1 }, sampleOrder = { 2, 1, 0 }, sealOrder = { 2, 0, 1 };
         public int[] mapDirections = { 0, 2, 1 };
+        public int[] trailChoices = { -1, -1, -1 };
+        public int trailHints,trailFeedback;
         public bool SolveMap()
         {
-            if (visited != 7 || !CampaignStory.Sequence(mapOrder, new[] { 0, 1, 2 })
-                || !CampaignStory.Sequence(mapDirections, new[] { 1, 1, 0 })) return false;
+            if(mapSolved&&visited==7)return true;
+            if(!CampaignTrailPuzzle.Validate(this))return false;
             return mapSolved = true;
         }
         public bool SolveAnchor(int year, int symbol, int record)
@@ -56,6 +58,12 @@ namespace Game.Varginha.Experiment
             for(int i=0;i<3;i++)mapDirections[i]=Mathf.Clamp(mapDirections[i],0,3);
             if(mapSolved)mapDirections=new[]{1,1,0};
             if (visited != 7) mapSolved = false;
+            if(trailChoices==null||trailChoices.Length!=3)trailChoices=new[]{-1,-1,-1};
+            bool gap=false;
+            for(int i=0;i<3;i++)
+            {if(trailChoices[i]<0||trailChoices[i]>1)gap=true;if(gap)trailChoices[i]=-1;}
+            if(mapSolved)for(int i=0;i<3;i++)trailChoices[i]=CampaignTrailPuzzle.CorrectBranch(i);
+            trailHints=Mathf.Clamp(trailHints,0,3);trailFeedback=Mathf.Clamp(trailFeedback,0,5);
             if (!mapSolved || forestSigns < 3) fabioMet = false;
             // A solved book remains solved across reloads, including older saves
             // whose optional inspection/history flags were not registered.

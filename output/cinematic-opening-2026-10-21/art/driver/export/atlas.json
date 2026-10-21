@@ -1,0 +1,178 @@
+{
+  "schema": "pixel-art-sprite-sheet/v1",
+  "image": "sheet.png",
+  "imageSize": [
+    1280,
+    320
+  ],
+  "pixelsPerUnit": 233.83966,
+  "frames": [
+    {
+      "id": "steer_0",
+      "rect": [
+        0,
+        0,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        150,
+        300
+      ],
+      "durationMs": 250,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\StoryCharacters\\Driving.png",
+        "fileSha256": "f26d152bf05cda2bd74aee7542b76026ba8772ab67b74c1983d94c7815b08231",
+        "crop": [
+          123,
+          636,
+          177,
+          296
+        ],
+        "offset": [
+          68,
+          4
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "steer_1",
+      "rect": [
+        320,
+        0,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        150,
+        300
+      ],
+      "durationMs": 250,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\StoryCharacters\\Driving.png",
+        "fileSha256": "f26d152bf05cda2bd74aee7542b76026ba8772ab67b74c1983d94c7815b08231",
+        "crop": [
+          408,
+          636,
+          182,
+          296
+        ],
+        "offset": [
+          68,
+          4
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "steer_2",
+      "rect": [
+        640,
+        0,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        150,
+        300
+      ],
+      "durationMs": 250,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\StoryCharacters\\Driving.png",
+        "fileSha256": "f26d152bf05cda2bd74aee7542b76026ba8772ab67b74c1983d94c7815b08231",
+        "crop": [
+          704,
+          636,
+          180,
+          296
+        ],
+        "offset": [
+          68,
+          4
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "steer_3",
+      "rect": [
+        960,
+        0,
+        320,
+        320
+      ],
+      "sourceSize": [
+        320,
+        320
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        150,
+        300
+      ],
+      "durationMs": 250,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\StoryCharacters\\Driving.png",
+        "fileSha256": "f26d152bf05cda2bd74aee7542b76026ba8772ab67b74c1983d94c7815b08231",
+        "crop": [
+          1000,
+          636,
+          175,
+          296
+        ],
+        "offset": [
+          72,
+          4
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    }
+  ],
+  "clips": {
+    "driving_east": {
+      "frames": [
+        "steer_0",
+        "steer_1",
+        "steer_2",
+        "steer_3"
+      ],
+      "loop": true
+    }
+  }
+}

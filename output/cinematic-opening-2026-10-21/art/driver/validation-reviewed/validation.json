@@ -1,0 +1,65 @@
+{
+  "success": true,
+  "status": "structural_pass",
+  "errors": [],
+  "warnings": [],
+  "frames": [
+    {
+      "id": "steer_0",
+      "bbox": [
+        68,
+        4,
+        245,
+        300
+      ],
+      "visiblePixels": 43220,
+      "colors": 13368,
+      "semiTransparentPixels": 43148,
+      "pixelsSha256": "affa96a4576d2ac23ad755bab747ee90306c6caf24e30472450cf9b574f01ea3"
+    },
+    {
+      "id": "steer_1",
+      "bbox": [
+        68,
+        4,
+        250,
+        300
+      ],
+      "visiblePixels": 42993,
+      "colors": 13933,
+      "semiTransparentPixels": 42911,
+      "pixelsSha256": "3c9ed219be7e292b19c9203f79aa546446ad31c990d9ecc650b550cf374a6c3b"
+    },
+    {
+      "id": "steer_2",
+      "bbox": [
+        68,
+        4,
+        248,
+        300
+      ],
+      "visiblePixels": 43177,
+      "colors": 13641,
+      "semiTransparentPixels": 43092,
+      "pixelsSha256": "b6de0fd574b150e79420aea3e96edf532e2b1d139e47718817ad994de00032a4"
+    },
+    {
+      "id": "steer_3",
+      "bbox": [
+        72,
+        4,
+        247,
+        300
+      ],
+      "visiblePixels": 41967,
+      "colors": 13693,
+      "semiTransparentPixels": 41895,
+      "pixelsSha256": "21c8b9b3e22ae140e454a1affbfa8fe6a9cc6b8bcdcf3386c9566541d1fc2503"
+    }
+  ],
+  "paletteColors": 35258,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\cinematic-opening-2026-10-21\\art\\driver\\export\\atlas.json",
+  "metadataSha256": "a6b191f09b1b73b681edcdb30cadbe97fe07407d2cbcf63c35081a6ac158f7cb"
+}

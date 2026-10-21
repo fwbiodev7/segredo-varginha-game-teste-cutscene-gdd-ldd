@@ -1,0 +1,12 @@
+{
+  "source": "output\\cinematic-opening-2026-10-21\\editmode-distributed.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 359,
+    "passed": 359,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

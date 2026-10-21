@@ -344,7 +344,7 @@ namespace Game.Varginha
             _isActing = false;
             if (_player != null) _player.IsScriptedMotion = false;
             if (_body != null) _body.linearVelocity = Vector2.zero;
-            if (unlockInput) _player?.SetInputLocked(false);
+            if (unlockInput) _player?.SetInputLocked(Experiment.VarginhaCampaignStage.Active?.IsActing==true);
         }
 
         private void OnDisable()

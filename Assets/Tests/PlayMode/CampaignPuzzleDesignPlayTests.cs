@@ -75,28 +75,33 @@ namespace Game.Tests.PlayMode
         }
         static IEnumerator Capture(string name)
         {
-            Directory.CreateDirectory("Docs/QANovaCampanha20261009");
-            yield return new WaitForEndOfFrame();
+            if(Application.isEditor)yield break;
+            const string folder="output/cinematic-opening-2026-10-21/captures";
+            Directory.CreateDirectory(folder);yield return new WaitForEndOfFrame();
             var image=ScreenCapture.CaptureScreenshotAsTexture();
-            File.WriteAllBytes("Docs/QANovaCampanha20261009/"+name+".png",image.EncodeToPNG());Object.Destroy(image);
+            File.WriteAllBytes(folder+"/"+name+".png",image.EncodeToPNG());Object.Destroy(image);
         }
         [UnityTest,Timeout(180000)]
-        [Category("HudPuzzles")] public IEnumerator SpatialMapCanBePlacedRotatedAndConfirmedUsingTheController()
+        [Category("HudPuzzles")] public IEnumerator TrailMapCanPreviewUndoAndTraceWithController()
         {
             var story=new CampaignStory{phase=6};story.expansion.visited=7;CampaignStorySave.Write(story);
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(6));yield return new WaitForSeconds(3.2f);
             var c=CampaignExpansionController.Active;ShowGame();VarginhaGamepadUI.Reset();VarginhaInputActions.Rebuild();
             c.Interact("map");yield return new WaitForSecondsRealtime(.3f);
-            yield return Click(new Rect(165,292,290,35));yield return Click(new Rect(165,405,290,44));
-            yield return Click(new Rect(485,292,290,35));yield return Click(new Rect(485,405,290,44));
-            Assert.That(c.Progress.expansion.mapOrder,Is.EqualTo(new[]{0,1,2}));
-            Rect[] rotate={new Rect(165,452,290,32),new Rect(485,452,290,32),new Rect(805,452,290,32)};
-            int[] directions={1,1,0};
-            for(int i=0;i<3;i++)while(c.Progress.expansion.mapDirections[i]!=directions[i])yield return Click(rotate[i]);
-            yield return Capture("01_Fragmentos_Trilha");
-            yield return Click(new Rect(805,530,290,42));
-            Assert.That(c.Progress.expansion.mapSolved,Is.True);
-            Assert.That(CampaignStorySave.Load().expansion.mapSolved,Is.True);
+            yield return Capture("trail-start");
+            yield return Click(CampaignTrailPuzzle.ChoiceRect(0,0));
+            yield return Capture("trail-preview");
+            Assert.That(c.Progress.expansion.trailChoices[0],Is.EqualTo(-1),"Selection previews without committing.");
+            yield return Click(CampaignTrailPuzzle.TraceRect);yield return Click(CampaignTrailPuzzle.UndoRect);
+            Assert.That(CampaignTrailPuzzle.Step(c.Progress.expansion),Is.Zero);
+            yield return Click(CampaignTrailPuzzle.ChoiceRect(0,1));yield return Click(CampaignTrailPuzzle.TraceRect);
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(6));yield return new WaitForSeconds(3.2f);
+            c=CampaignExpansionController.Active;VarginhaGamepadUI.Reset();VarginhaInputActions.Rebuild();c.Interact("map");
+            yield return new WaitForSecondsRealtime(.3f);
+            Assert.That(c.Progress.expansion.trailChoices[0],Is.EqualTo(1));
+            for(int i=1;i<3;i++){yield return Click(CampaignTrailPuzzle.ChoiceRect(i,i==1?0:1));yield return Click(CampaignTrailPuzzle.TraceRect);}
+            yield return Capture("trail-puzzle");yield return Click(CampaignTrailPuzzle.CheckRect);
+            Assert.That(c.Progress.expansion.mapSolved,Is.True);Assert.That(CampaignStorySave.Load().expansion.mapSolved,Is.True);
             Assert.That(CampaignGuidance.Target(c.Progress,6),Is.EqualTo("exit"));
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }

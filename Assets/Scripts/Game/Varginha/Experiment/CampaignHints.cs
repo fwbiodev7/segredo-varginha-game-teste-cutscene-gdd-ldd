@@ -16,7 +16,7 @@ namespace Game.Varginha.Experiment
                         :!s.buildingSolved?new[]{"Algo na fotografia não pertence ao portão.","Observe a figura junto ao portão no notebook de Renan.","Escolha a resposta sobre o VULTO NO PORTÃO, a segunda alternativa."}
                         :!s.codeSolved?new[]{"As duas anotações parecem formar uma única informação.","Reabra o notebook e compare os dois grupos separados por dois pontos.","O horário é 23:23. Mostre a descoberta a Renan para seguir à biblioteca."}
                         :new[]{"A ampliação revelou um fragmento.","Renan pode confirmar o horário.","Fale com Renan e continue para Fragmentos."};break;
-                case 6:tips=new[]{"Os três documentos descrevem o mesmo trajeto.","Compare livro, globo e painel na biblioteca; monte os fragmentos na mesa.","Posicione ÁRVORE → RIO → CAPELA. Setas da árvore e do rio: LESTE. Chegada à capela: NORTE."};break;
+                case 6:return CampaignTrailPuzzle.Hint(s.expansion,Mathf.Clamp(level,0,2));
                 case 7:tips=new[]{"O caminho repete os símbolos do mapa.","Siga as marcas e use o esconderijo quando a presença se aproximar.","Examine ÁRVORE → RIO → CAPELA e converse com Fábio. O rio registra o checkpoint."};break;
                 case 8:tips=new[]{"O registro de Edelzio pertence à noite do acidente.","Cruze o índice, a inscrição do compartimento e o número da ficha.","Use 1996 • ÂNCORA • REGISTRO 23 no Livro do Tombo."};break;
                 case 9:tips=new[]{"Ouzana pode interpretar o registro e as marcas.","Apresente a Ouzana o registro de Edelzio obtido no Tombo.","A comparação curta com Ouzana entrega o reagente. Siga à oficina; não há ordenação obrigatória de amostras."};break;

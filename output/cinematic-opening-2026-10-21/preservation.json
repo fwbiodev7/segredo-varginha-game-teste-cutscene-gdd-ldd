@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "saves": [
+    {
+      "file": "CampaignMemory1996.json",
+      "sha256": "b24c45a7c17c708ffc5e50df6c5b6d88d0becf56236bf9680cd0d714507ad153",
+      "restoredExactly": true
+    },
+    {
+      "file": "CampaignStory2026.json",
+      "sha256": "82fbee9f01f0067f26d6940154a236dce9c87ea89692eff9505844d52bb6c73e",
+      "restoredExactly": true
+    },
+    {
+      "file": "ExperimentGDDLDDSave.json",
+      "sha256": "2ca4e23982e98f55837dc76184f0c65cf789e1f24400f9abf01780f3d2ff21cb",
+      "restoredExactly": true
+    }
+  ],
+  "userUrpPreserved": true,
+  "userUrpSha256": "bc1af41714d20fee50b831fcb59856376b3458a46f1a08cd88202606469ff147",
+  "projectSettingsRestored": true,
+  "generatedScenesArchived": [
+    "Assets/InitTestScene3305a057-e84f-44b7-b570-d3bf16539924.unity",
+    "Assets/InitTestScene3305a057-e84f-44b7-b570-d3bf16539924.unity.meta",
+    "Assets/InitTestScene8b5b210d-57fe-4b65-974c-73ad3c33aed7.unity",
+    "Assets/InitTestScene8b5b210d-57fe-4b65-974c-73ad3c33aed7.unity.meta"
+  ],
+  "userRecoveryExcluded": [
+    "Assets/_Recovery/0 (5).unity",
+    "Assets/_Recovery/0 (5).unity.meta"
+  ],
+  "note": "Original round-start user bytes restored. Post-test copies preserved in ignored logs. Only own QA Players were closed."
+}

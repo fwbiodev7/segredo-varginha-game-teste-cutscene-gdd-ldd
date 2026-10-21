@@ -1,0 +1,8 @@
+{
+  "file": "palette.zip",
+  "entry": "palette.json",
+  "rawBytes": 15313066,
+  "rawSha256": "9fd16ed270c321b14fdcbaf37388f64fd500d9ffab66b9752cdf286f6f3d041f",
+  "archiveBytes": 3405300,
+  "note": "Complete unchanged inspector palette archived to avoid 900k generated text lines in source review; palette.png is only a swatch preview."
+}

@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "status": "needs_review",
+  "errors": [],
+  "warnings": [
+    "Visible content touches original canvas edge; inspect clipping: grip",
+    "Visible content touches original canvas edge; inspect clipping: release",
+    "Visible content touches original canvas edge; inspect clipping: key_remains"
+  ],
+  "frames": [
+    {
+      "id": "grip",
+      "bbox": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visiblePixels": 524176,
+      "colors": 42581,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "8a92638c84f6f09a5dfc4318c0a4c52b75ef62a145fe383a6bc7a4a5337fc96e"
+    },
+    {
+      "id": "release",
+      "bbox": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visiblePixels": 524176,
+      "colors": 44486,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "33e39b7ab1e915a440917be3f9de3700bcb7dedb3fd4be05cd374dac6174e68d"
+    },
+    {
+      "id": "key_remains",
+      "bbox": [
+        0,
+        0,
+        724,
+        724
+      ],
+      "visiblePixels": 524176,
+      "colors": 33994,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "63d70b0e1c89f1358b901e4faf6329b25dfc755356bcba7f24c5eb220a2da229"
+    }
+  ],
+  "paletteColors": 79333,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\cinematic-opening-2026-10-21\\art\\ignition\\export\\atlas.json",
+  "metadataSha256": "0cf82cc0e69741a0def57bebecb8cbacb4ed64531c3b744e77f3dfabed45cc38"
+}

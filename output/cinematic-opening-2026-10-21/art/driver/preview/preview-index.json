@@ -1,0 +1,36 @@
+{
+  "clips": [
+    {
+      "clip": "driving_east",
+      "file": "clip_000.png",
+      "loop": true,
+      "sequence": [
+        "steer_0",
+        "steer_1",
+        "steer_2",
+        "steer_3"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": [
+        [
+          "steer_0",
+          "steer_1"
+        ],
+        [
+          "steer_1",
+          "steer_2"
+        ],
+        [
+          "steer_2",
+          "steer_3"
+        ],
+        [
+          "steer_3",
+          "steer_0"
+        ]
+      ]
+    }
+  ],
+  "visualReviewCompleted": false
+}

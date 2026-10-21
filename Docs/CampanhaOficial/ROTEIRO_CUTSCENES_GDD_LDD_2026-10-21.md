@@ -2,7 +2,7 @@
 
 Data: 21/10/2026. **Documento de planejamento; não adiciona fases nem muda o jogo por si só.** Contém spoilers de toda a história e dos finais previstos.
 
-**Status: aguardando aprovação do usuário.** Conforme orientação mais recente, o fechamento da entrega atual tem prioridade; a implementação de novas cutscenes será uma etapa posterior.
+**Status atualizado em 21/10:** o usuário autorizou a produção animada da abertura. CS03–06 e a chegada à Industrial estão em implementação/validação nesta etapa, conforme [registro específico](ABERTURA_CINEMATOGRAFICA_2026-10-21.md). As demais sequências e as decisões editoriais abaixo continuam planejamento para etapas posteriores.
 
 ## Fontes e regra de adaptação
 
