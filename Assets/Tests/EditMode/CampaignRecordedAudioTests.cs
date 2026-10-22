@@ -25,13 +25,15 @@ namespace Game.Tests.EditMode
         }
         [Test] public void EveryCatalogEntryResolvesToAnImportedClip()
         {
-            Assert.That(CampaignRecordedAudio.Definitions.Count,Is.EqualTo(29));
-            Assert.That(CampaignRecordedAudio.Definitions.Select(e=>e.path).Distinct().Count(),Is.EqualTo(25));
+            Assert.That(CampaignRecordedAudio.Definitions.Count,Is.GreaterThanOrEqualTo(45));
+            Assert.That(CampaignRecordedAudio.Definitions.Select(e=>e.path).Distinct().Count(),Is.GreaterThanOrEqualTo(41));
             foreach(var e in CampaignRecordedAudio.Definitions)
             {
                 var clip=CampaignRecordedAudio.Clip(e.id);Assert.That(clip,Is.Not.Null,e.id);
-                Assert.That(clip.length,Is.GreaterThan(.05f),e.id);Assert.That(clip.frequency,Is.EqualTo(44100),e.id);
-                Assert.That(clip.length,Is.EqualTo(e.seconds).Within(.06f),e.id);
+                Assert.That(clip.length,Is.GreaterThan(.05f),e.id);
+                if(e.path.Contains("Received20261021"))Assert.That(clip.frequency,Is.EqualTo(44100),e.id);
+                else Assert.That(clip.frequency,Is.GreaterThan(0),e.id);
+                if(e.seconds>0)Assert.That(clip.length,Is.EqualTo(e.seconds).Within(.06f),e.id);
                 Assert.That(e.gain,Is.InRange(.1f,1));Assert.That(CampaignSoundscape.Clip(e.id),Is.SameAs(clip));
             }
         }

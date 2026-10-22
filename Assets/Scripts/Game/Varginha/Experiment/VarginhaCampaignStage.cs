@@ -276,7 +276,7 @@ namespace Game.Varginha.Experiment
                 var bag = GameObject.Find("Backpack_Prop");
                 if (bag != null && !_player.HasBackpack)
                 {
-                    _sound.Play("Zip"); bag.GetComponent<BackpackPickupAnimation>()?.PlayPickup(_player);
+                    _sound.Play("Zip"); _sound.Play("PickupPlim"); bag.GetComponent<BackpackPickupAnimation>()?.PlayPickup(_player);
                     float time = 0; while (!_player.HasBackpack && time < 2) { time += Time.deltaTime; yield return null; }
                     if (!_player.HasBackpack) { _player.EquipBackpack(); bag.SetActive(false); }
                 }
@@ -284,7 +284,7 @@ namespace Game.Varginha.Experiment
             }
             else if (id == "food" && action != null)
             {
-                bool finished = false; action.PlayDrinkCoffee(GameObject.Find("Coffee_Cup")?.transform, () => { finished = true; _player.RestoreOneHeart(); });
+                bool finished = false; action.PlayDrinkCoffee(GameObject.Find("Coffee_Cup")?.transform, () => { finished = true; _player.RestoreOneHeart(); _sound.Play("CoffeeDrink"); });
                 float time = 0; while (!finished && time < 5) { time += Time.deltaTime; yield return null; }
                 if(finished)_progress.routine |= 2;
             }
@@ -296,7 +296,7 @@ namespace Game.Varginha.Experiment
                 if (finished && action.isActiveAndEnabled && !action.IsActing) _progress.routine |= 4;
                 else { _busy = false; VarginhaGameHUD.Instance?.CloseDialogue(); Say("Edelzio", "Vou chegar pelo lado livre da cadeira para preparar o notebook."); yield break; }
             }
-            else { bool finished=action==null;if(action!=null)yield return action.WashFaceRoutine(()=>finished=true);if(finished)_progress.routine|=1; }
+            else { bool finished=action==null;if(action!=null)yield return action.WashFaceRoutine(()=>{finished=true;_sound.Play("FaceWash");});if(finished)_progress.routine|=1; }
             if((_progress.routine&routineBit)==0)
             {
                 _busy=false;RestoreInventory();Save();CampaignPickupNotice.Show("Ação interrompida. Pode tentar novamente.");Lock();yield break;

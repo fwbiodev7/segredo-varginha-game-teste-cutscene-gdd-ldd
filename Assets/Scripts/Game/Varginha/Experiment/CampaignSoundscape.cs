@@ -31,7 +31,7 @@ namespace Game.Varginha.Experiment
             if (environment == "Road")
             {
                 _engine = gameObject.AddComponent<AudioSource>(); _engine.playOnAwake = false; _engine.loop = true; _engine.volume = .22f;
-                _engine.clip = Clip("Engine"); _engine.Play();
+                _engine.clip = CampaignRecordedAudio.Clip("FuscaEngine") ?? Clip("Engine"); _engine.Play();
             }
             var atmosphere = GetComponent<CampaignAtmosphereDirector>() ?? gameObject.AddComponent<CampaignAtmosphereDirector>();
             atmosphere.Configure(environment, actor);
@@ -46,7 +46,7 @@ namespace Game.Varginha.Experiment
         public void BeginRoad()
         {
             _ambient?.Transition(Clip("RoadAmbience"));
-            if(_engine==null){_engine=gameObject.AddComponent<AudioSource>();_engine.playOnAwake=false;_engine.loop=true;_engine.volume=.22f;_engine.clip=Clip("Engine");}
+            if(_engine==null){_engine=gameObject.AddComponent<AudioSource>();_engine.playOnAwake=false;_engine.loop=true;_engine.volume=.22f;_engine.clip=CampaignRecordedAudio.Clip("FuscaEngine") ?? Clip("Engine");}
             Engine(true,.4f);
         }
         public void Voice(AudioClip clip) { if(clip!=null)(GetComponent<CampaignDialogueVoice>()??gameObject.AddComponent<CampaignDialogueVoice>()).Play(clip); }

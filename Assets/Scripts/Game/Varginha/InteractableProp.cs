@@ -218,6 +218,7 @@ namespace Game.Varginha
                             var cupRenderer = GetComponent<SpriteRenderer>();
                             if (cupRenderer != null)
                                 cupRenderer.sprite = VarginhaPixelArtSprites.Create("Coffee_Empty", new Color(.8f, .4f, .2f));
+                            UnityEngine.Object.FindAnyObjectByType<Game.Varginha.Experiment.CampaignSoundscape>()?.Play("CoffeeDrink");
                             GetHud()?.ShowNotice("☕ Você bebe o café e devolve a xícara vazia à mesa.\n+1 CORAÇÃO DE SAÚDE.");
                             OnInteracted?.Invoke(edelzio);
                         });

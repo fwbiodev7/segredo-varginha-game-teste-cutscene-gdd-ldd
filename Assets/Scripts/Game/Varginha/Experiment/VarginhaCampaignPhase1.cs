@@ -255,6 +255,7 @@ namespace Game.Varginha.Experiment
             if (first)
             {
                 _powerSignal=0;
+                _sound?.Play("PowerFailure");
                 _sound?.Play("RadioInterference");CampaignAtmosphereLayer.Interference(transform);
                 CampaignCameraDirector.Reveal(new Vector3(3.4f,5.55f), 3.5f);
                 _sound?.CinematicDucking(.65f);

@@ -184,6 +184,7 @@ namespace Game.Varginha.Experiment
         {
             _sequence=true;_message=null;_panel=null;Actor.SetInputLocked(true);_allies.CombatActive=false;
             _boss=CampaignManifestationCombat.Spawn(transform,Actor,Plan,Plan.bounds.center+Vector2.up*2);
+            if(phase==20)_sound.Play("FabioAlien");
             var camera=Camera.main;if(camera!=null&&camera.GetComponent<VarginhaCameraShake>()==null)camera.gameObject.AddComponent<VarginhaCameraShake>();
             yield return BossShot(false);
             _sequence=false;

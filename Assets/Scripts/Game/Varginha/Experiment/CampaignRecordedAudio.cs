@@ -11,12 +11,19 @@ namespace Game.Varginha.Experiment
         [Serializable]private sealed class Catalog{public Entry[] entries;}
         private static readonly Dictionary<string,Entry> Entries=new();
         private static readonly Dictionary<string,AudioClip> Clips=new();private static int _foot;private static bool _loaded;
+        private static void LoadCatalog(string resourcePath)
+        {
+            var text=Resources.Load<TextAsset>(resourcePath);if(text==null)return;
+            var catalog=JsonUtility.FromJson<Catalog>(text.text);if(catalog?.entries==null)return;
+            foreach(var entry in catalog.entries)Entries[entry.id]=entry;
+        }
         private static void Load()
         {
             if(_loaded)return;_loaded=true;
-            var text=Resources.Load<TextAsset>("Varginha/Audio/Received20261021/Catalog");if(text==null)return;
-            var catalog=JsonUtility.FromJson<Catalog>(text.text);if(catalog?.entries==null)return;
-            foreach(var entry in catalog.entries)Entries[entry.id]=entry;
+            // Os pacotes recebidos são aditivos: o pacote novo pode substituir apenas
+            // um ID explicitamente remapeado, mantendo os efeitos aprovados anteriores.
+            LoadCatalog("Varginha/Audio/Received20261021/Catalog");
+            LoadCatalog("Varginha/Audio/Received20261022/Catalog");
         }
         public static Entry Definition(string id){Load();return Entries.TryGetValue(id,out var entry)?entry:null;}
         public static IReadOnlyCollection<Entry> Definitions{get{Load();return Entries.Values;}}

@@ -1,0 +1,103 @@
+{
+  "received": "2026-10-22",
+  "archive": "C:\\Users\\Usuario\\Downloads\\sons do edelzio.rar",
+  "files": [
+    {
+      "file": "abrindoopopodoedelzioPORtal.mp3",
+      "bytes": 94560,
+      "sha256": "629b4fd071c188da9676eb694b24f2e971a3048418827a43ca75a90a7b47e849",
+      "format": "MP3"
+    },
+    {
+      "file": "alieniginafabio.wav",
+      "bytes": 1406128,
+      "sha256": "7c1878f8fac6b19c6d0d2fe88bb800e73efec74cfbbdee01483017ff0bcf89ff",
+      "format": "WAV"
+    },
+    {
+      "file": "arranhandomadeira.mp3",
+      "bytes": 72960,
+      "sha256": "47bfd2f6455cc809c59204a8d9581c6a1b8a34b1d684c865264f87ff8494ec9f",
+      "format": "MP3"
+    },
+    {
+      "file": "bebenocafe.mp3",
+      "bytes": 76800,
+      "sha256": "0dff431d47c98099a7f8ee5ee60a581a785e377d20c770de832189438c075825",
+      "format": "MP3"
+    },
+    {
+      "file": "chavedoedelziobatendo.wav",
+      "bytes": 176444,
+      "sha256": "c2955c4b2a74ad55aac70a3f8eed6c4cae72db209962cbee2f7c970163f8023b",
+      "format": "WAV"
+    },
+    {
+      "file": "energiacaiuedelzinhobb.mp3",
+      "bytes": 35108,
+      "sha256": "068c10ac9adb8704966c38943368516f79b79a4ff27f7c341f9c500a6a834b8b",
+      "format": "MP3"
+    },
+    {
+      "file": "fechando porta.wav",
+      "bytes": 81014,
+      "sha256": "c8c2e56594445d9f0f4cd77040eaf23388758c84e20549d5960b97d2e1882818",
+      "format": "WAV"
+    },
+    {
+      "file": "fechandoportaldabundadoedelzio.mp3",
+      "bytes": 112128,
+      "sha256": "ba420f0db4459b737fd81a1c267e5804d2a60213058ccfd0d510a8db9456ca8a",
+      "format": "MP3"
+    },
+    {
+      "file": "fusca.wav",
+      "bytes": 6068798,
+      "sha256": "511f07df1703b36338657f281ef8533ffdae06e4b07686ed242db42388361a68",
+      "format": "WAV"
+    },
+    {
+      "file": "laboratorio.mp3",
+      "bytes": 448320,
+      "sha256": "ffa19be872819bcdd34e88e6eeffb3cef63df137a46d434c011dc6622deb04d2",
+      "format": "MP3"
+    },
+    {
+      "file": "lavandorostododedezinho.wav",
+      "bytes": 260750,
+      "sha256": "a1ab335e5c632001c347574bfdd521c049755481067df44e7406476ec64df26e",
+      "format": "WAV"
+    },
+    {
+      "file": "levelupedelzinho.mp3",
+      "bytes": 58514,
+      "sha256": "6ad2124c91f1e5b96d1412e74de05ceb952b41f0508191443aadb15b9300ff96",
+      "format": "MP3"
+    },
+    {
+      "file": "medoedelzio.wav",
+      "bytes": 14490224,
+      "sha256": "9f623396410f8aba9ef85d7bc048272f6d5f2231c6bce51157db582d46625de4",
+      "format": "WAV"
+    },
+    {
+      "file": "plim.wav",
+      "bytes": 253856,
+      "sha256": "dfa447d84e4bf69b2cb33b69744a254f0dfd3a11009ae7455f21f8e984658fe2",
+      "format": "WAV"
+    },
+    {
+      "file": "som de sair a noite.wav",
+      "bytes": 7409530,
+      "sha256": "b35e4688f8342fd1d2e388448152386704f25752df982a29b4efc207ddd43efd",
+      "format": "WAV"
+    },
+    {
+      "file": "teClado.mp3",
+      "bytes": 161332,
+      "sha256": "edc223ffa3f2095f0338bb138cf587b94f35636a84d438d0921691321e4089ba",
+      "format": "MP3"
+    }
+  ],
+  "count": 16
+}

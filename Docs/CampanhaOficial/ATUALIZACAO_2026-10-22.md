@@ -6,7 +6,13 @@ Corrigida a sobreposição dos vidros diurnos por cima do Edelzio. A mesa do Ren
 
 Nesta revisão passaram 398/398 EditMode e 3/3 testes direcionados no Player Windows. A build 0.4.6-beta foi gerada com zero erros e um aviso preexistente de Unity.Pipeline, em pasta nova. Os três testes não são somados aos 16 casos da entrega anterior como se fossem 19 casos únicos. A daily conserva dez slides e inclui as capturas das correções.
 
-A dublagem humana foi adiada pelo autor para **23/10/2026**, porque o microfone não estava disponível hoje. O [pedido de efeitos sonoros](PEDIDO_EFEITOS_SONOROS_2026-10-22.md) reúne 28 famílias, separadas entre primeiro lote, ambientes/puzzles e complementos. Lista copiável e CSV estão em `output/audio-request-2026-10-22/`. Nenhum som novo ainda solicitado foi integrado.
+A dublagem humana foi adiada pelo autor para **23/10/2026**, porque o microfone não estava disponível hoje. O [pedido de efeitos sonoros](PEDIDO_EFEITOS_SONOROS_2026-10-22.md) reúne 28 famílias, separadas entre primeiro lote, ambientes/puzzles e complementos. Lista copiável e CSV estão em `output/audio-request-2026-10-22/`. O primeiro lote solicitado à equipe continua pendente; o pacote do Edelzio recebido no fim do dia está descrito abaixo.
+
+### Pacote Edelzio recebido no fim do dia
+
+O RAR `sons do edelzio.rar` foi extraído e catalogado com 16 arquivos. Os eventos de café, lavagem, teclado, chave, arranhões, mochila, queda de energia, porta e motor do Fusca usam agora as gravações recebidas; portal, laboratório, saída noturna, progresso e efeito vocal ficam disponíveis no mesmo catálogo para as cenas correspondentes. O pacote não contém dublagem textual. O inventário e o mapeamento completo estão em [CREDITOS_AUDIO_EDELZIO_2026-10-22.md](CREDITOS_AUDIO_EDELZIO_2026-10-22.md).
+
+A build de entrega desta integração é a **0.4.7-beta**; a versão 0.4.6-beta permanece disponível para comparação.
 
 Arquivos, cenas, capturas e resultados: `output/school-desk-2026-10-22/RELATORIO.md`. Os ajustes anteriores permanecem registrados abaixo.
 

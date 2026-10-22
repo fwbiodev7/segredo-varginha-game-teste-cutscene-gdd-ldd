@@ -1,0 +1,20 @@
+{
+  "entries": [
+    { "id": "PortalOpen", "path": "Varginha/Audio/Received20261022/PortalOpen", "gain": 0.8, "loop": false, "source": "sons do edelzio/abrindoopopodoedelzioPORtal.mp3" },
+    { "id": "FabioAlien", "path": "Varginha/Audio/Received20261022/FabioAlien", "gain": 0.65, "loop": false, "source": "sons do edelzio/alieniginafabio.wav", "seconds": 7.971 },
+    { "id": "Scratching", "path": "Varginha/Audio/Received20261022/Scratching", "gain": 0.75, "loop": false, "source": "sons do edelzio/arranhandomadeira.mp3" },
+    { "id": "CoffeeDrink", "path": "Varginha/Audio/Received20261022/CoffeeDrink", "gain": 0.8, "loop": false, "source": "sons do edelzio/bebenocafe.mp3" },
+    { "id": "Key", "path": "Varginha/Audio/Received20261022/Key", "gain": 0.8, "loop": false, "source": "sons do edelzio/chavedoedelziobatendo.wav", "seconds": 1.0 },
+    { "id": "PowerFailure", "path": "Varginha/Audio/Received20261022/PowerFailure", "gain": 0.75, "loop": false, "source": "sons do edelzio/energiacaiuedelzinhobb.mp3" },
+    { "id": "DoorClose", "path": "Varginha/Audio/Received20261022/DoorClose", "gain": 0.75, "loop": false, "source": "sons do edelzio/fechando porta.wav", "seconds": 0.459 },
+    { "id": "PortalClose", "path": "Varginha/Audio/Received20261022/PortalClose", "gain": 0.8, "loop": false, "source": "sons do edelzio/fechandoportaldabundadoedelzio.mp3" },
+    { "id": "FuscaEngine", "path": "Varginha/Audio/Received20261022/FuscaEngine", "gain": 0.75, "loop": true, "source": "sons do edelzio/fusca.wav", "seconds": 34.403 },
+    { "id": "LabAmbience", "path": "Varginha/Audio/Received20261022/LabAmbience", "gain": 0.7, "loop": true, "source": "sons do edelzio/laboratorio.mp3" },
+    { "id": "FaceWash", "path": "Varginha/Audio/Received20261022/FaceWash", "gain": 0.8, "loop": false, "source": "sons do edelzio/lavandorostododedezinho.wav", "seconds": 1.478 },
+    { "id": "LevelUp", "path": "Varginha/Audio/Received20261022/LevelUp", "gain": 0.75, "loop": false, "source": "sons do edelzio/levelupedelzinho.mp3" },
+    { "id": "EdelzioFear", "path": "Varginha/Audio/Received20261022/EdelzioFear", "gain": 0.65, "loop": false, "source": "sons do edelzio/medoedelzio.wav", "seconds": 82.144 },
+    { "id": "PickupPlim", "path": "Varginha/Audio/Received20261022/PickupPlim", "gain": 0.75, "loop": false, "source": "sons do edelzio/plim.wav", "seconds": 1.439 },
+    { "id": "NightExit", "path": "Varginha/Audio/Received20261022/NightExit", "gain": 0.65, "loop": true, "source": "sons do edelzio/som de sair a noite.wav", "seconds": 42.004 },
+    { "id": "Typing", "path": "Varginha/Audio/Received20261022/Typing", "gain": 0.75, "loop": false, "source": "sons do edelzio/teClado.mp3" }
+  ]
+}

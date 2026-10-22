@@ -178,7 +178,7 @@ namespace Game.Varginha.Experiment
                     _player.SetCarriedItemsVisible(false);
                     foreach(var visual in visuals)visual.enabled=false;
                     for(float t=0;t<.4f&&!_cinemaSkipRequested;t+=Time.deltaTime){door.SetOpenAmount(1-t/.4f);yield return null;}
-                    door.SetOpenAmount(0);_sound.Play("Starter");
+                    door.SetOpenAmount(0);_sound.Play("DoorClose");_sound.Play("Starter");
                     var departure=car.GetComponent<FuscaDepartureAnimation>()??car.AddComponent<FuscaDepartureAnimation>();
                     departure.Configure(new[]{renderer.sprite});departure.Depart(null,1.3f);
                     yield return MissionWait(1.5f);
