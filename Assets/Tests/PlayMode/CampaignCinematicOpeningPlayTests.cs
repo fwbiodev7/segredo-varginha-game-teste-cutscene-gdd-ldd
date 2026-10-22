@@ -182,7 +182,12 @@ namespace Game.Tests.PlayMode
             var root=GameObject.Find("Mapa_Campanha").transform.Find("Manha_07h");Assert.That(root,Is.Not.Null);
             Assert.That(root.childCount,Is.EqualTo(CampaignAdultMorning.GlassPixels.Length));Assert.That(root.GetComponentsInChildren<Collider2D>(),Is.Empty);
             foreach(var sprite in root.GetComponentsInChildren<SpriteRenderer>())
-            {Assert.That(sprite.sprite.texture.name,Is.EqualTo("MorningTown"));Assert.That(sprite.sortingOrder,Is.GreaterThan(22000),"Daylight glass must stay above lower wall sorting groups.");}
+            {
+                Assert.That(sprite.sprite.texture.name,Is.EqualTo("MorningTown"));
+                var depth=sprite.GetComponent<VarginhaWorldDepth>();Assert.That(depth,Is.Not.Null);
+                depth.Refresh();
+                Assert.That(sprite.GetComponent<UnityEngine.Rendering.SortingGroup>().sortingOrder,Is.LessThan(22000),"Daylight belongs to wall depth, not a layer above all actors.");
+            }
             Assert.That(GameObject.Find("Mapa_Campanha").transform.Find("01_Planta_Paredes_Divisoes/Arte_Integrada_0").GetComponent<SpriteRenderer>().sharedMaterial.shader.name,Is.EqualTo("Varginha/IllustratedMorning"));
             Assert.That(VarginhaCampaignStage.Active.Progress.routine,Is.Zero);Assert.That(VarginhaCampaignStage.Active.Progress.house.step,Is.Zero);
             yield return Capture("adult-morning-07h");

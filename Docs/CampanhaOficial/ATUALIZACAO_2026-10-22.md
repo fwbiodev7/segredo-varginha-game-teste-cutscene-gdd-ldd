@@ -1,4 +1,16 @@
-# Revisão 0.4.5-beta — interface, rotina adulta e cutscenes — 22/10/2026
+# Revisões de 22/10/2026
+
+## Complemento 0.4.6-beta após playtest do autor
+
+Corrigida a sobreposição dos vidros diurnos por cima do Edelzio. A mesa do Renan recebeu notebook visto por trás, mochila apoiada no tampo e três pincéis, com novos sprites transparentes separados. A interação com a fotografia e a colisão da mesa foram preservadas.
+
+Nesta revisão passaram 398/398 EditMode e 3/3 testes direcionados no Player Windows. A build 0.4.6-beta foi gerada com zero erros e um aviso preexistente de Unity.Pipeline, em pasta nova. Os três testes não são somados aos 16 casos da entrega anterior como se fossem 19 casos únicos. A daily conserva dez slides e inclui as capturas das correções.
+
+A dublagem humana foi adiada pelo autor para **23/10/2026**, porque o microfone não estava disponível hoje. O [pedido de efeitos sonoros](PEDIDO_EFEITOS_SONOROS_2026-10-22.md) reúne 28 famílias, separadas entre primeiro lote, ambientes/puzzles e complementos. Lista copiável e CSV estão em `output/audio-request-2026-10-22/`. Nenhum som novo ainda solicitado foi integrado.
+
+Arquivos, cenas, capturas e resultados: `output/school-desk-2026-10-22/RELATORIO.md`. Os ajustes anteriores permanecem registrados abaixo.
+
+## Entrega 0.4.5-beta - interface, rotina adulta e cutscenes
 
 A preparação adulta agora altera os objetos do cenário: beber consome o café, concluir o notebook retira o objeto da mesa e os estados persistem no save. A chave maior fica na mesa do café, com pistas, marcador e caderno coerentes com o novo local. Ações interrompidas não concluem tarefas nem consomem o café. As poses usam a escala visual do Edelzio sem redimensionar os colliders.
 

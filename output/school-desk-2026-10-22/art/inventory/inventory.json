@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\school-desk-2026-10-22\\art\\generated-source.png",
+      "sha256": "73c4747b82b6d7659c1a6e282361a45de2b78592e68d76189b20713d9ecf4c44",
+      "bytes": 786963,
+      "size": [
+        2172,
+        724
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        57,
+        21,
+        2130,
+        724
+      ],
+      "visibleColors": 24564,
+      "semiTransparentPixels": 635056,
+      "pixelsSha256": "2b34d2d6d3cf81cea496ac2f125acdd3d80cd56b24ecc109e94b316cd4450455"
+    }
+  ],
+  "errors": []
+}

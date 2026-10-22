@@ -1,0 +1,82 @@
+{
+  "schema": "unity-slice-plan/v1",
+  "origin": "bottom-left",
+  "image": "sheet.png",
+  "pixelsPerUnit": 100,
+  "sprites": [
+    {
+      "name": "backpack",
+      "rect": [
+        0,
+        0,
+        800,
+        672
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0029761904761904656
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    },
+    {
+      "name": "notebook_rear",
+      "rect": [
+        800,
+        0,
+        800,
+        672
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0029761904761904656
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    },
+    {
+      "name": "whiteboard_markers",
+      "rect": [
+        1600,
+        0,
+        800,
+        672
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0029761904761904656
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    }
+  ],
+  "clips": {
+    "backpack": {
+      "frames": [
+        "backpack"
+      ],
+      "loop": false
+    },
+    "notebook_rear": {
+      "frames": [
+        "notebook_rear"
+      ],
+      "loop": false
+    },
+    "whiteboard_markers": {
+      "frames": [
+        "whiteboard_markers"
+      ],
+      "loop": false
+    }
+  },
+  "importSettings": {
+    "textureType": "Sprite",
+    "spriteMode": "Multiple",
+    "filterMode": "Point",
+    "mipmaps": false,
+    "compression": "Uncompressed",
+    "wrapMode": "Clamp"
+  },
+  "note": "Import plan only; Unity does not import this JSON automatically. Preserve existing sprite IDs."
+}

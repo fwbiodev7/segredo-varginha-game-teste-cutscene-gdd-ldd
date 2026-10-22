@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "status": "structural_pass",
+  "errors": [],
+  "warnings": [],
+  "frames": [
+    {
+      "id": "backpack",
+      "bbox": [
+        99,
+        39,
+        701,
+        670
+      ],
+      "visiblePixels": 291893,
+      "colors": 8978,
+      "semiTransparentPixels": 290812,
+      "pixelsSha256": "3d5389330c6a0109374fc9f06694657e8ab142c4ec388c2b84493cbcef9d65e3"
+    },
+    {
+      "id": "notebook_rear",
+      "bbox": [
+        5,
+        174,
+        793,
+        669
+      ],
+      "visiblePixels": 279726,
+      "colors": 3855,
+      "semiTransparentPixels": 278864,
+      "pixelsSha256": "932cf705becfac397f72854d36b65a7802a4beb135ab3c69246fef44dd6e7ba6"
+    },
+    {
+      "id": "whiteboard_markers",
+      "bbox": [
+        200,
+        383,
+        599,
+        670
+      ],
+      "visiblePixels": 65261,
+      "colors": 18770,
+      "semiTransparentPixels": 65108,
+      "pixelsSha256": "dc53d095fd67ac51b635ecace8673e92cede6728f792b0a9e344267ba5099936"
+    }
+  ],
+  "paletteColors": 24564,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\school-desk-2026-10-22\\art\\export\\atlas.json",
+  "metadataSha256": "cc9387c85e6b99e017cfada4dd23d6ab925dc4de66236d86098076ec89f395f8"
+}

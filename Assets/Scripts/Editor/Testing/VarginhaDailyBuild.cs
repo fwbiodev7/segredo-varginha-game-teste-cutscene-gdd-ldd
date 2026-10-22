@@ -9,8 +9,8 @@ namespace Game.Editor.Testing
     // A separate candidate preserves previous deliveries and restores the project's version.
     public static class VarginhaDailyBuild
     {
-        public const string Version = "0.4.5-beta";
-        public const string Folder = "Builds/Varginha_0.4.5-beta_2026-10-22";
+        public const string Version = "0.4.6-beta";
+        public const string Folder = "Builds/Varginha_0.4.6-beta_2026-10-22";
 
         [MenuItem("Varginha/Build/Daily 22-10 Windows x64")]
         public static void Build()

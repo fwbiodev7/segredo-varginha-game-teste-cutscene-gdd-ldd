@@ -1,0 +1,6 @@
+{
+  "allowSemiTransparency": true,
+  "requiredClips": ["backpack", "notebook_rear", "whiteboard_markers"],
+  "lockPivot": true,
+  "maxTextureSize": 4096
+}

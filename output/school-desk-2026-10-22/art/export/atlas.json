@@ -1,0 +1,148 @@
+{
+  "schema": "pixel-art-sprite-sheet/v1",
+  "image": "sheet.png",
+  "imageSize": [
+    2400,
+    672
+  ],
+  "pixelsPerUnit": 100,
+  "frames": [
+    {
+      "id": "backpack",
+      "rect": [
+        0,
+        0,
+        800,
+        672
+      ],
+      "sourceSize": [
+        800,
+        672
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        400,
+        670
+      ],
+      "durationMs": 1000,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\school-desk-2026-10-22\\art\\generated-source.png",
+        "fileSha256": "73c4747b82b6d7659c1a6e282361a45de2b78592e68d76189b20713d9ecf4c44",
+        "crop": [
+          74,
+          52,
+          602,
+          631
+        ],
+        "offset": [
+          99,
+          39
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "notebook_rear",
+      "rect": [
+        800,
+        0,
+        800,
+        672
+      ],
+      "sourceSize": [
+        800,
+        672
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        400,
+        670
+      ],
+      "durationMs": 1000,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\school-desk-2026-10-22\\art\\generated-source.png",
+        "fileSha256": "73c4747b82b6d7659c1a6e282361a45de2b78592e68d76189b20713d9ecf4c44",
+        "crop": [
+          807,
+          182,
+          790,
+          496
+        ],
+        "offset": [
+          5,
+          174
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "whiteboard_markers",
+      "rect": [
+        1600,
+        0,
+        800,
+        672
+      ],
+      "sourceSize": [
+        800,
+        672
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        400,
+        670
+      ],
+      "durationMs": 1000,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\school-desk-2026-10-22\\art\\generated-source.png",
+        "fileSha256": "73c4747b82b6d7659c1a6e282361a45de2b78592e68d76189b20713d9ecf4c44",
+        "crop": [
+          1730,
+          404,
+          402,
+          287
+        ],
+        "offset": [
+          199,
+          383
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    }
+  ],
+  "clips": {
+    "backpack": {
+      "frames": [
+        "backpack"
+      ],
+      "loop": false
+    },
+    "notebook_rear": {
+      "frames": [
+        "notebook_rear"
+      ],
+      "loop": false
+    },
+    "whiteboard_markers": {
+      "frames": [
+        "whiteboard_markers"
+      ],
+      "loop": false
+    }
+  }
+}

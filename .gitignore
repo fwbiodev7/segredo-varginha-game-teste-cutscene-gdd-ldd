@@ -93,4 +93,7 @@ Desktop.ini
 !/output/house-interactions-2026-10-22/captures/school-exit-car.png
 !/output/house-interactions-2026-10-22/captures/school-arrival-gate.png
 !/output/house-interactions-2026-10-22/captures/ignition-key-remains.png
+/output/school-desk-2026-10-22/backup-*/
+/output/school-desk-2026-10-22/*.log
+/output/school-desk-2026-10-22/art/preview/
 !/output/house-interactions-2026-10-22/captures/wheel-layers-detail.png

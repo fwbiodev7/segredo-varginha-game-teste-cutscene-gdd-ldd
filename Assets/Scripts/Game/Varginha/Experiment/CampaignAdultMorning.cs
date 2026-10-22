@@ -47,9 +47,26 @@ namespace Game.Varginha.Experiment
                 lifetime.sprites.Add(sprite);
                 var go=new GameObject("Vidro_diurno_"+rect.x+"_"+rect.y);go.transform.SetParent(root,false);
                 var area=data.Area(new[]{rect.x,rect.y,rect.width,rect.height});go.transform.position=area.center;
-                var sr=go.AddComponent<SpriteRenderer>();sr.sprite=sprite;sr.sortingOrder=23000;
+                var sr=go.AddComponent<SpriteRenderer>();sr.sprite=sprite;
                 go.transform.localScale=new Vector3(area.width/sprite.bounds.size.x,area.height/sprite.bounds.size.y,1);
+                // Glass belongs to its wall's depth. A global foreground order cut
+                // actors in half whenever their heads crossed a window pane.
+                VarginhaWorldDepth.Ensure(sr,supportingObject:GlassSupport(map,data,rect),offset:1);
             }
+        }
+        private static Transform GlassSupport(Transform map,CampaignIllustratedMaps.Layout data,Rect pane)
+        {
+            Transform support=null;float smallest=float.MaxValue;
+            for(int i=0;i<data.walls.Length;i++)
+            {
+                var art=data.walls[i].art;if(art?.Length!=4)continue;
+                var face=new Rect(art[0],art[1],art[2],art[3]);
+                if(!face.Contains(pane.center)||face.width*face.height>=smallest)continue;
+                var node=map.Find("01_Planta_Paredes_Divisoes/Parede_"+i+"/Face_da_parede");
+                if(node==null)continue;
+                support=node;smallest=face.width*face.height;
+            }
+            return support;
         }
     }
     public sealed class CampaignMorningGlassLifetime:MonoBehaviour

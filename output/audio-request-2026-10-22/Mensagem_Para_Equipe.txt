@@ -1,0 +1,3 @@
+Pessoal, seguem os sons que ainda precisamos para fechar melhor as ações do jogo. Priorizem a chave/caixa, lavar o rosto, café, mochila/notebook e passos no piso. Depois vêm ambientes internos, pistas e feedback dos puzzles. Socos, ataques inimigos, passos em madeira/terra, escola/floresta, motor e os efeitos principais dos apoios já foram recebidos; não precisamos refazer esse lote agora. A dublagem fica para amanhã, 23/10. A tabela abaixo explica o que produzir e onde será usado.
+
+A lista completa e as especificações estão no Markdown e CSV anexos.

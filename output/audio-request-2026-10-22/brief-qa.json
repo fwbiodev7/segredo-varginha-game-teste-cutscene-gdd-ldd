@@ -1,0 +1,12 @@
+{
+  "families": 28,
+  "priorities": {
+    "P1": 12,
+    "P2": 11,
+    "P3": 5
+  },
+  "receivedIds": 29,
+  "receivedWavs": 25,
+  "dubbingPlanned": "2026-10-23",
+  "status": "Production request only; no new audio integrated"
+}

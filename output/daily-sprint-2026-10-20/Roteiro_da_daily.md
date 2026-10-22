@@ -24,17 +24,17 @@ Abrir em 30 segundos. A entrega de hoje reduz a interface, corrige os objetos da
 
 45 segundos. Os identificadores internos antigos permanecem para não quebrar saves. Na apresentação ao jogador, as referências apontam para a mesa do café. Não mudou a solução da investigação.
 
-## 7. Cenário limpo e direção encaixada
+## 7. Janelas e mesa do Renan corrigidas
 
-1 minuto. A base da casa foi limpa somente nas regiões dos objetos substituídos. Café e notebook usam sprites próprios, sem pedaços de mesa. O quintal aproxima grama e plantas dos verdes oliva da árvore. No carro, conferir o encaixe do volante em todos os quatro frames da direção.
+1 minuto. No playtest de hoje, o usuário apontou cortes do personagem pelas janelas e pediu reorganizar a mesa do Renan. A paisagem agora segue a profundidade da parede. Os objetos têm recortes separados, transparência real e base apoiada no tampo. O notebook continua abrindo a fotografia. Foram 3/3 testes direcionados no Player Windows e 398/398 EditMode nesta revisão, sem somar retestes aos 16 casos históricos da entrega anterior.
 
 ## 8. O que foi conferido
 
-1 minuto. As contagens são preenchidas pelo relatório final de QA. Os testes verificam comportamento, pausa, teclado/controle e retomada. Os roteiros separam 47 falas existentes, 98 propostas para cenas atuais e 8 esforços vocais. As propostas novas não foram inseridas silenciosamente no jogo.
+1 minuto. As contagens são preenchidas pelo relatório final de QA. Os testes verificam comportamento, pausa, teclado/controle e retomada. Os roteiros separam 47 falas existentes, 98 propostas para cenas atuais e 8 esforços vocais. As propostas novas não foram inseridas silenciosamente no jogo. Revisão posterior do playtest: mais 3 testes direcionados no Player, incluindo um contrato já existente de manhã. Não são somados como 19 casos únicos.
 
 ## 9. Material pronto para a gravação
 
-45 segundos. Há PDF, Word e textos separados por personagem. Não há reservas de professores ausentes ou finais alternativos. Ainda faltam as gravações humanas, a aprovação de novas formulações do roteiro e o feedback do playtest externo. A mixagem final deve ser conferida em fones e caixas.
+45 segundos. Há PDF, Word e textos separados por personagem. Não há reservas de professores ausentes ou finais alternativos. Ainda faltam as gravações humanas, a aprovação de novas formulações do roteiro e o feedback do playtest externo. A mixagem final deve ser conferida em fones e caixas. O autor informou que o microfone não estava disponível em 22/10. A gravação fica para 23/10. A lista separa sons já recebidos de pedidos: chave e caixa, água e café, mochila e notebook, passos no piso, ambientes, puzzles e complementos de combate. Arquivos pedidos ainda não foram recebidos nem integrados. Reteste humano e mixagem continuam pendentes.
 
 ## 10. Dúvidas, opiniões e feedbacks
 

@@ -1,0 +1,36 @@
+{
+  "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a15918-63bb-7b31-b60b-3eef3c6eca04\\exec-d948e538-0911-4004-9f21-9825e9e3e4b0.png",
+  "sourceSha256": "73c4747b82b6d7659c1a6e282361a45de2b78592e68d76189b20713d9ecf4c44",
+  "method": "Built-in image_gen, new transparent atlas; exact crop/registration only",
+  "authorization": "User: yes aprovado bro, 22/10/2026; not independent artistic approval",
+  "crops": [
+    [
+      74,
+      52,
+      602,
+      631
+    ],
+    [
+      807,
+      182,
+      790,
+      496
+    ],
+    [
+      1730,
+      404,
+      402,
+      287
+    ]
+  ],
+  "sourceSize": [
+    2172,
+    724
+  ],
+  "identity": "Charcoal gray backpack, rear-facing dark notebook, blue/red/black whiteboard markers",
+  "originalAssetsPreserved": [
+    "RenanProps.png",
+    "RenanProps.json",
+    "School.png"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "source": "output\\school-desk-2026-10-22\\editmode.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 398,
+    "passed": 398,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

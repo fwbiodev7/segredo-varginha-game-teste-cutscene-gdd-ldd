@@ -1,0 +1,90 @@
+{
+  "cell": [
+    800,
+    672
+  ],
+  "columns": 3,
+  "padding": 0,
+  "pixelsPerUnit": 100,
+  "pivot": [
+    400,
+    670
+  ],
+  "durationMs": 1000,
+  "frames": [
+    {
+      "id": "backpack",
+      "source": "generated-source.png",
+      "crop": [
+        74,
+        52,
+        602,
+        631
+      ],
+      "anchor": [
+        301.0,
+        631
+      ],
+      "targetAnchor": [
+        400,
+        670
+      ]
+    },
+    {
+      "id": "notebook_rear",
+      "source": "generated-source.png",
+      "crop": [
+        807,
+        182,
+        790,
+        496
+      ],
+      "anchor": [
+        395.0,
+        496
+      ],
+      "targetAnchor": [
+        400,
+        670
+      ]
+    },
+    {
+      "id": "whiteboard_markers",
+      "source": "generated-source.png",
+      "crop": [
+        1730,
+        404,
+        402,
+        287
+      ],
+      "anchor": [
+        201.0,
+        287
+      ],
+      "targetAnchor": [
+        400,
+        670
+      ]
+    }
+  ],
+  "clips": {
+    "backpack": {
+      "frames": [
+        "backpack"
+      ],
+      "loop": false
+    },
+    "notebook_rear": {
+      "frames": [
+        "notebook_rear"
+      ],
+      "loop": false
+    },
+    "whiteboard_markers": {
+      "frames": [
+        "whiteboard_markers"
+      ],
+      "loop": false
+    }
+  }
+}

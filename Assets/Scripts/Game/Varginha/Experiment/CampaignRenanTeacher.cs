@@ -17,17 +17,23 @@ namespace Game.Varginha.Experiment
         }
         public static void DeskItems(Transform owner,CampaignIllustratedMaps.Layout layout)
         {
-            var desk=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/Mesa do professor");
-            Vector2[] pixels={new(685,70),new(714,70),new(742,70)};
-            Vector2[] sizes={new(.4f,.5f),new(.49f,.27f),new(.38f,.3f)};
+            if(owner.Find("Objetos_da_mesa_do_Renan")!=null)return;
+            var desk=owner.Find("Mapa_Campanha/02_Mobilia_Colisoes/Mesa do professor")
+                ??GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/Mesa do professor")?.transform;
+            var items=new GameObject("Objetos_da_mesa_do_Renan").transform;items.SetParent(owner,false);
+            // Bottom contacts rest on the actual desktop, not at arbitrary sprite centres.
+            Vector2[] pixels={new(684,77),new(717,77),new(745,77)};
+            Vector2[] sizes={new(.39f,.46f),new(.65f,.42f),new(.30f,.14f)};
             for(int i=0;i<3;i++)
             {
-                var go=new GameObject(new[]{"Mochila_cinza_do_Renan","Notebook_do_Renan","Material_de_aula_do_Renan"}[i]);go.transform.SetParent(owner,false);
-                var sr=go.AddComponent<SpriteRenderer>();sr.sprite=CampaignStorySprites.Frame("RenanProps",0,i);
+                var go=new GameObject(new[]{"Mochila_cinza_do_Renan","Notebook_do_Renan","Pinceis_de_quadro_do_Renan"}[i]);go.transform.SetParent(items,false);
+                var sr=go.AddComponent<SpriteRenderer>();sr.sprite=CampaignStorySprites.Frame("RenanDeskProps",0,i);
+                if(sr.sprite==null)continue;
                 float fit=Mathf.Min(sizes[i].x/sr.sprite.bounds.size.x,sizes[i].y/sr.sprite.bounds.size.y);
                 go.transform.localScale=Vector3.one*fit;
-                go.transform.position=(Vector3)layout.Position(pixels[i].x,pixels[i].y)-sr.sprite.bounds.center*fit;
-                VarginhaWorldDepth.Ensure(sr,supportingObject:desk?.transform,offset:3);
+                var contact=new Vector3(sr.sprite.bounds.center.x,sr.sprite.bounds.min.y,0);
+                go.transform.position=(Vector3)layout.Position(pixels[i].x,pixels[i].y)-contact*fit;
+                VarginhaWorldDepth.Ensure(sr,supportingObject:desk,offset:3+i);
             }
             var board=new GameObject("Anotações_no_quadro_do_Renan");board.transform.SetParent(owner,false);board.transform.position=layout.Position(990,38);
             var text=board.AddComponent<TextMesh>();text.text="1996\n2026";text.font=Resources.Load<Font>("Fonts/PressStart2P-Regular");text.fontSize=24;text.characterSize=.06f;text.color=new Color(.16f,.23f,.27f);

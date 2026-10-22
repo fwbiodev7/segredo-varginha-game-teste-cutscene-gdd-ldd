@@ -16,6 +16,8 @@ const img={
  key:doc('output/house-interactions-2026-10-22/captures/key-coffee-table-larger.png'),
  house:doc('output/house-interactions-2026-10-22/captures/house-rear-furniture.png'),
  fusca:doc('output/house-interactions-2026-10-22/captures/driving-pose-0.png'),
+ renanDesk:doc('output/school-desk-2026-10-22/captures/renan-desktop.png'),
+ windowFix:doc('output/school-desk-2026-10-22/captures/window-player-332.png'),
 };
 // Recortes preservam proporções. Nenhuma arte do jogo é redesenhada.
 for(const [key,p] of Object.entries(img)){
@@ -32,6 +34,11 @@ if(!qa.technicalSuccess)throw new Error('A entrega de 22/10 ainda não tem QA co
 const count=t=>`${t.passed}/${t.total}`;
 const slides=JSON.parse(await fs.readFile(doc('output/daily-sprint-2026-10-20/conteudo-2026-10-22.json'),'utf8'));
 slides[7].rows[0][1]=count(qa.tests.editMode);slides[7].rows[1][1]=count(qa.tests.player);
+const feedback=JSON.parse(await fs.readFile(doc('output/school-desk-2026-10-22/player-summary.json'),'utf8'));
+if(!feedback.success)throw new Error('A revisão das janelas e mesa do Renan ainda não passou.');
+slides[7].rows[1][1]=count(feedback.tests);
+slides[7].rows[1][2]='Revisão de janelas, mesa e notebook';
+slides[7].rows[2][1]='15 sprites';
 await fs.writeFile(path.join(priv,'slides.json'),JSON.stringify(slides,null,2));
 await fs.writeFile(path.join(priv,'images.json'),JSON.stringify(img,null,2));
 const dataImages={};for(const[k,p]of Object.entries(img))dataImages[k]='data:image/jpeg;base64,'+(await fs.readFile(p)).toString('base64');

@@ -1,0 +1,42 @@
+{
+  "width": 2400,
+  "height": 672,
+  "rows": 1,
+  "columns": 3,
+  "coordinateOrigin": "top-left",
+  "pixelsPerUnit": [
+    100
+  ],
+  "frames": [
+    {
+      "rect": [
+        99,
+        39,
+        602,
+        631
+      ],
+      "anchorX": 400.0,
+      "lift": 0
+    },
+    {
+      "rect": [
+        805,
+        174,
+        788,
+        495
+      ],
+      "anchorX": 1199.0,
+      "lift": 0
+    },
+    {
+      "rect": [
+        1800,
+        383,
+        399,
+        287
+      ],
+      "anchorX": 1999.5,
+      "lift": 0
+    }
+  ]
+}
