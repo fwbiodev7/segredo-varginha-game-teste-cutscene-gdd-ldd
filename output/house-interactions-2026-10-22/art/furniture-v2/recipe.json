@@ -1,0 +1,88 @@
+{
+  "cell": [
+    210,
+    130
+  ],
+  "columns": 3,
+  "padding": 1,
+  "pixelsPerUnit": 100,
+  "pivot": [
+    105,
+    129
+  ],
+  "durationMs": 100,
+  "frames": [
+    {
+      "id": "FridgeBack",
+      "source": "FridgeBack.png"
+    },
+    {
+      "id": "StoveBack",
+      "source": "StoveBack.png"
+    },
+    {
+      "id": "SinkBack",
+      "source": "SinkBack.png"
+    },
+    {
+      "id": "BookshelfBack",
+      "source": "BookshelfBack.png"
+    },
+    {
+      "id": "DresserBack",
+      "source": "DresserBack.png"
+    },
+    {
+      "id": "DeskEmpty",
+      "source": "DeskEmpty.png"
+    },
+    {
+      "id": "CoffeeTableEmpty",
+      "source": "CoffeeTableEmpty.png"
+    }
+  ],
+  "clips": {
+    "FridgeBack": {
+      "frames": [
+        "FridgeBack"
+      ],
+      "loop": false
+    },
+    "StoveBack": {
+      "frames": [
+        "StoveBack"
+      ],
+      "loop": false
+    },
+    "SinkBack": {
+      "frames": [
+        "SinkBack"
+      ],
+      "loop": false
+    },
+    "BookshelfBack": {
+      "frames": [
+        "BookshelfBack"
+      ],
+      "loop": false
+    },
+    "DresserBack": {
+      "frames": [
+        "DresserBack"
+      ],
+      "loop": false
+    },
+    "DeskEmpty": {
+      "frames": [
+        "DeskEmpty"
+      ],
+      "loop": false
+    },
+    "CoffeeTableEmpty": {
+      "frames": [
+        "CoffeeTableEmpty"
+      ],
+      "loop": false
+    }
+  }
+}

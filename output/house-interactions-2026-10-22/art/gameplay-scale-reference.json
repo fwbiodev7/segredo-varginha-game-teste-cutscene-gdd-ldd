@@ -1,0 +1,10 @@
+{
+  "source": "Assets\\Resources\\Varginha\\StoryCharacters\\Life",
+  "rows": [
+    0.68421,
+    0.63812,
+    0.69706,
+    0.70588
+  ],
+  "method": "Alpha >=100, top32% of approved idle frame, divided by authored PPU"
+}

@@ -49,7 +49,7 @@ namespace Game.Varginha.Experiment
             if(_engine==null){_engine=gameObject.AddComponent<AudioSource>();_engine.playOnAwake=false;_engine.loop=true;_engine.volume=.22f;_engine.clip=Clip("Engine");}
             Engine(true,.4f);
         }
-        public void Voice(AudioClip clip) { if(clip!=null&&_effects!=null)_effects.PlayOneShot(clip,.85f); }
+        public void Voice(AudioClip clip) { if(clip!=null)(GetComponent<CampaignDialogueVoice>()??gameObject.AddComponent<CampaignDialogueVoice>()).Play(clip); }
         public void Play(string sound)
         {
             sound=CampaignRecordedAudio.NextFoot(sound);LastEvent=sound;EventSerial++;
@@ -82,7 +82,7 @@ namespace Game.Varginha.Experiment
         public void CinematicDucking(float weight) { _cinematicDuck = Mathf.Clamp01(weight); _ambient?.Duck(_cinematicDuck); }
         public void Suspend(bool value)
         {
-            _suspended=value;
+            _suspended=value;GetComponent<CampaignDialogueVoice>()?.Pause(value);
             _ambient?.Suspend(value);
             if (value) { _engine?.Pause(); _effects?.Pause(); _positional?.Pause(); }
             else { _engine?.UnPause(); _effects?.UnPause(); _positional?.UnPause(); }

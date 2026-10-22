@@ -9,17 +9,13 @@ const priv=path.join(out,'.build');
 await fs.mkdir(priv,{recursive:true});
 const doc=(p)=>path.join(root,p);
 const img={
- support:doc('output/audio-integration-2026-10-21/captures/support-0-impact.png'),
- ouzana:doc('output/audio-integration-2026-10-21/captures/support-1-impact.png'),
- shield:doc('output/audio-integration-2026-10-21/captures/support-2-cast.png'),
  cover:doc('Assets/Resources/Varginha/MenuBackgroundFuscaAzul.png'),
- adult:doc('output/visual-polish-2026-10-21/captures/adult-morning-07h.png'),
- pages:doc('output/visual-polish-2026-10-21/captures/trail-puzzle.png'),
- cabin:doc('output/visual-polish-2026-10-21/captures/fusca-01.png'),
- glitch:doc('output/visual-polish-2026-10-21/captures/fusca-03.png'),
- opening:doc('output/visual-polish-2026-10-21/captures/opening-room-revealed.png'),
- ignition:doc('output/cinematic-opening-2026-10-21/captures/fusca-05.png'),
- school:doc('output/cinematic-opening-2026-10-21/captures/school-exit-car.png'),
+ adult:doc('output/house-interactions-2026-10-22/captures/routine-food-action.png'),
+ pickup:doc('output/house-interactions-2026-10-22/captures/pickup-small-original-panel.png'),
+ subtitles:doc('output/house-interactions-2026-10-22/captures/renan-subtitle-revealed.png'),
+ key:doc('output/house-interactions-2026-10-22/captures/key-coffee-table-larger.png'),
+ house:doc('output/house-interactions-2026-10-22/captures/house-rear-furniture.png'),
+ fusca:doc('output/house-interactions-2026-10-22/captures/driving-pose-0.png'),
 };
 // Recortes preservam proporções. Nenhuma arte do jogo é redesenhada.
 for(const [key,p] of Object.entries(img)){
@@ -31,10 +27,10 @@ for(const [key,p] of Object.entries(img)){
 }
 const font=await fs.readFile(doc('Assets/Resources/Fonts/PressStart2P-Regular.ttf'));
 const source=(...p)=>p.map(x=>doc(x)).join('\n');
-const qa=JSON.parse(await fs.readFile(doc('output/audio-integration-2026-10-21/summary.json'),'utf8'));
-if(!qa.technicalSuccess)throw new Error('A entrega cinematográfica ainda não tem QA concluído.');
+const qa=JSON.parse(await fs.readFile(doc('output/house-interactions-2026-10-22/summary.json'),'utf8'));
+if(!qa.technicalSuccess)throw new Error('A entrega de 22/10 ainda não tem QA concluído.');
 const count=t=>`${t.passed}/${t.total}`;
-const slides=JSON.parse(await fs.readFile(doc('output/daily-sprint-2026-10-20/conteudo-2026-10-21.json'),'utf8'));
+const slides=JSON.parse(await fs.readFile(doc('output/daily-sprint-2026-10-20/conteudo-2026-10-22.json'),'utf8'));
 slides[7].rows[0][1]=count(qa.tests.editMode);slides[7].rows[1][1]=count(qa.tests.player);
 await fs.writeFile(path.join(priv,'slides.json'),JSON.stringify(slides,null,2));
 await fs.writeFile(path.join(priv,'images.json'),JSON.stringify(img,null,2));
@@ -64,5 +60,5 @@ const notes=${JSON.stringify(slides.map(s=>s.notes)).replaceAll('<','\\u003c')};
 ${motionJS}
 </script></body></html>`;
 await fs.writeFile(path.join(out,'A_Sprint_Final_Varginha.html'),html);
-await fs.writeFile(path.join(out,'Roteiro_da_daily.md'),'# Daily curta de 21/10/2026\n\n'+slides.map((s,i)=>`## ${i+1}. ${s.title.replaceAll('\n',' ')}\n\n${s.notes}`).join('\n\n'));
+await fs.writeFile(path.join(out,'Roteiro_da_daily.md'),'# Daily curta de 22/10/2026\n\n'+slides.map((s,i)=>`## ${i+1}. ${s.title.replaceAll('\n',' ')}\n\n${s.notes}`).join('\n\n'));
 console.log(JSON.stringify({slides:slides.length,html:path.join(out,'A_Sprint_Final_Varginha.html'),images:img}));

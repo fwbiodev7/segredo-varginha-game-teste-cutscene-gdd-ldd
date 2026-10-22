@@ -1,0 +1,67 @@
+{
+  "frames": [
+    {
+      "name": "FridgeBack",
+      "rect": [
+        73,
+        15,
+        63,
+        113
+      ]
+    },
+    {
+      "name": "StoveBack",
+      "rect": [
+        284,
+        56,
+        64,
+        73
+      ]
+    },
+    {
+      "name": "SinkBack",
+      "rect": [
+        500,
+        65,
+        55,
+        64
+      ]
+    },
+    {
+      "name": "BookshelfBack",
+      "rect": [
+        32,
+        182,
+        151,
+        75
+      ]
+    },
+    {
+      "name": "DresserBack",
+      "rect": [
+        273,
+        177,
+        89,
+        82
+      ]
+    },
+    {
+      "name": "DeskEmpty",
+      "rect": [
+        485,
+        204,
+        88,
+        56
+      ]
+    },
+    {
+      "name": "CoffeeTableEmpty",
+      "rect": [
+        51,
+        324,
+        110,
+        65
+      ]
+    }
+  ]
+}

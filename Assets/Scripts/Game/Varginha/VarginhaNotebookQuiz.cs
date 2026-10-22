@@ -191,7 +191,7 @@ namespace Game.Varginha
             _player.HasDecodedData = true;
             _player.EquipNotebook();
             _notebook?.CompleteNotebookPuzzle(_player);
-            VarginhaGameHUD.Instance?.ShowDialogue("NOTEBOOK", "DECODIFICACAO CONCLUIDA. O selo de 1898 esta colapsando sob Varginha.");
+            VarginhaGameHUD.Instance?.ShowReading("NOTEBOOK", "DECODIFICACAO CONCLUIDA. O selo de 1898 esta colapsando sob Varginha.");
             VarginhaGameHUD.Instance?.ShowRodrigoHint("Rodrigo: 'Voce conseguiu! Agora va ate o Fusca antes que a entidade bloqueie o caminho.'");
             Close();
         }

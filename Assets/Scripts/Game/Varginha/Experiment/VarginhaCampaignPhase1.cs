@@ -202,7 +202,13 @@ namespace Game.Varginha.Experiment
             {
                 if (_dialogue != null) CloseDialogue(); else TogglePause();
             }
-            if (_paused || _dialogue != null) return;
+            _textMessage.Tick(Time.unscaledDeltaTime,_paused);
+            if (_paused) return;
+            if (_dialogue != null)
+            {
+                if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact) && _textMessage.Advance()) CloseDialogue();
+                return;
+            }
             _stageTime += Time.unscaledDeltaTime;
             if(_powerSignal>=0)_powerSignal+=Time.deltaTime;
             if (_stage == Stage.Opening)
@@ -272,11 +278,14 @@ namespace Game.Varginha.Experiment
         {
             if (index < 0 || index >= _lines.Length) return;
             _memory.evidence |= 1 << index; _dialogue = _lines[index];
+            _textMessage.Show(this,"OBSERVAÇÃO",_dialogue,CampaignMessageKind.Reading);
             _sound?.Play("Paper");
             CampaignCameraDirector.Reveal(_points[index]);
             _player.SetInputLocked(true); if (index == 0) TriggerPowerFailure(); Save();
         }
-        private void CloseDialogue() { _dialogue = null; _player.SetInputLocked(_paused || _stage != Stage.Explore); }
+        private readonly CampaignMessagePresentation _textMessage = new();
+        private readonly CampaignTimedSubtitle _openingSubtitle = new();
+        private void CloseDialogue() { _textMessage.Close(); _dialogue = null; _player.SetInputLocked(_paused || _stage != Stage.Explore); }
         public void TogglePause()
         {
             _paused = !_paused; _settings = false; Time.timeScale = _paused ? 0 : 1; CampaignCinematics.Pause(_paused);
@@ -302,7 +311,7 @@ namespace Game.Varginha.Experiment
                 ExperimentGUI.Box(new Rect(0, 0, 1280, 720), Color.black);
                 CampaignOpeningCinema.Draw(shot,_timeline.ShotTime,settings.reducedMotion,_composer.Frame);
                 ExperimentGUI.Label(new Rect(52, 22, 1100, 44), shot.title, true);
-                if (settings.subtitles) { ExperimentGUI.Panel(new Rect(100, 552, 1080, 75)); ExperimentGUI.Caption(new Rect(125, 565, 1030, 50), shot.subtitle, settings.subtitleSize); }
+                _openingSubtitle.Draw(shot.subtitle,_timeline.ShotTime,shot.duration);
                 if (!_paused && _memory.openingSeen && ExperimentGUI.Button(new Rect(916, 645, 270, 44), "PULAR ABERTURA")) TrySkipOpening();
             }
             else if (_stage == Stage.ActTitle)
@@ -341,11 +350,9 @@ namespace Game.Varginha.Experiment
                 ExperimentGUI.Label(new Rect(275, 445, 760, 70), "Trinta anos depois, uma chave desaparecida traz essa noite de volta.", small: true);
                 if (ExperimentGUI.Button(new Rect(430, 550, 420, 50), "CONTINUAR • FASE 2")) CampaignStorySave.GoTo(2);
             }
-            if (_dialogue != null)
+            if (_dialogue != null && !_paused)
             {
-                ExperimentGUI.Panel(new Rect(170, 420, 940, 235));
-                ExperimentGUI.Label(new Rect(205, 446, 870, 125), _dialogue);
-                if (ExperimentGUI.Button(new Rect(810, 583, 265, 43), "CONTINUAR")) CloseDialogue();
+                if (CampaignMessageBox.Draw(_textMessage) && _textMessage.Advance()) CloseDialogue();
             }
             if (_paused)
             {
@@ -359,6 +366,7 @@ namespace Game.Varginha.Experiment
         }
         private void OnDestroy()
         {
+            _textMessage.Close();
             if (Active == this) Active = null;
             if (_childFrames != null) foreach (var sprite in _childFrames) if (sprite != null) Destroy(sprite);
             _composer?.Dispose(); if (_staticClip != null) Destroy(_staticClip); Time.timeScale = 1;

@@ -1,46 +1,41 @@
-# Daily curta de 21/10/2026
+# Daily curta de 22/10/2026
 
 ## 1. O SEGREDO DE VARGINHA
 
-Abrir em 30 segundos. A candidata 0.4.4 integra o pacote de áudio e as artes dos três apoios. Abertura de 1996, manhã às 7h e novo mapa continuam na entrega. Não houve playtest externo.
+Abrir em 30 segundos. A entrega de hoje reduz a interface, corrige os objetos da rotina adulta e organiza as falas para gravação. Mostrar o comportamento real nos prints. Não atribuir resultados ao playtest da equipe, que ainda não foi recebido.
 
-## 2. O que mudou para quem joga
+## 2. O que muda ao jogar
 
-1 minuto. O ZIP contém 20 MP3 e um M4A, com uma duplicata exata. Foram preparados 25 WAV a partir de 20 fontes únicas. As atribuições autorais foram respeitadas. As mudanças dos apoios foram aprovadas antes de implementar.
+1 minuto. Explicar o resultado para quem joga. As tarefas de preparação e a investigação continuam na mesma missão. A correção dos móveis usa uma base limpa e objetos com transparência, eliminando a duplicação apontada durante a revisão.
 
-## 3. Uma manhã que vira mistério
+## 3. A rotina deixa marcas no cenário
 
-1 minuto. Explicar a ordem: preparação mínima, depósito da chave, busca da mochila, desaparecimento fora do campo de observação. A captura nova mostra as janelas diurnas e a luz da manhã; móveis, colisões e pistas foram preservados. O responsável pelo deslocamento não é mostrado.
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Docs\CampanhaOficial\Referencias\GDD_Usuario.md
+1 minuto. A conclusão real da animação confirma a tarefa. Uma ação interrompida não consome o café nem conclui a lavagem do rosto. O teste repete a entrada na fase e verifica os itens recolhidos. A escala visual das poses foi ajustada sem redimensionar a física do personagem.
 
-## 4. Aprender antes de complicar
+## 4. Um aviso curto, e o jogo continua
 
-1 minuto. A fase Fragmentos foi redesenhada após o feedback do usuário. Sai a permutação de marcos e rotação de setas; entram três bifurcações com obstáculos visíveis. Selecionar só mostra a prévia; traçar confirma. Desfazer, recomeçar, dicas e traçado parcial salvo ajudam sem resolver automaticamente. Há uma rota compatível entre oito combinações. O playtest humano ainda precisa confirmar a dificuldade mediana pretendida.
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Scripts\Game\Varginha\Experiment\CampaignHouseInvestigation.cs
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Scripts\Game\Varginha\Experiment\CampaignPuzzleDesign.cs
+45 segundos. A coleta usa um aviso automático com fila. Documentos, pistas e escolhas que exigem leitura continuam acessíveis em painéis próprios ou no caderno; eles não foram convertidos em avisos que desaparecem antes da leitura.
 
-## 5. O Fusca ganhou movimento
+## 5. Legendas menores e progressivas
 
-1 minuto. Mostrar a demonstração animada em output/visual-polish-2026-10-21/preview.html ou executar o jogo. A composição usa o mesmo sprite original de Edelzio, ampliado sem repintar a identidade. O desembarque reutiliza School.png e as coordenadas/colisões da fase 4, caminhando até o spawn do gameplay. Não é um vídeo pré-renderizado nem uma alegação de animação completa de toda a campanha.
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Scripts\Game\Varginha\Experiment\CampaignFuscaCinema.cs
-C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\output\cinematic-opening-2026-10-21\technical-report.md O motor, a falha de partida, a porta e a interferência agora usam os sons recebidos nos eventos correspondentes. Sem dublagem sintética.
+1 minuto. O texto respeita o tamanho escolhido nas configurações. A pausa congela a fala e sua voz. A gravação humana será associada ao identificador da fala; nenhum diálogo sintético foi criado. O teste de voz usa um clip silencioso apenas para verificar o canal e o relógio.
 
-## 6. Cada som no seu evento
+## 6. A chave fica à vista na mesa do café
 
-1 minuto. A explosão recebida pertence à infância. Sinos ficam na igreja; não substituem o escudo. Sons de TV tratam a interferência visual. Há passos com variações, ambientes em loop e motor separado. A avaliação auditiva em caixas/fones e em outro PC continua pendente. Fonte: Docs/CampanhaOficial/INTEGRACAO_AUDIO_2026-10-21.md
+45 segundos. Os identificadores internos antigos permanecem para não quebrar saves. Na apresentação ao jogador, as referências apontam para a mesa do café. Não mudou a solução da investigação.
 
-## 7. Ataques mais claros
+## 7. Cenário limpo e direção encaixada
 
-1 minuto. Prints em arena controlada, com chefe imobilizado para inspecionar. Dano e recarga foram mantidos. O pulso mostra o alcance radial; o escudo pausa junto da ação. O aviso saiu do centro dos personagens. O mesh tem limite de 256 quads; os apoios não usam ParticleSystem. Fonte: Docs/CampanhaOficial/AUDITORIA_APOIOS_2026-10-21.md
+1 minuto. A base da casa foi limpa somente nas regiões dos objetos substituídos. Café e notebook usam sprites próprios, sem pedaços de mesa. O quintal aproxima grama e plantas dos verdes oliva da árvore. No carro, conferir o encaixe do volante em todos os quatro frames da direção.
 
-## 8. O que já foi conferido
+## 8. O que foi conferido
 
-1 minuto. Rodada ampla de dez casos no Player Windows: abertura, Fusca, combate de alunos e apoios, áudio, pausa e limpeza. Após subir a cúpula, os quatro casos de áudio/apoios foram repetidos e passaram. A linha de apoios mostra esse último reteste. Os 389 casos EditMode incluem catálogo e slicing. Nenhuma dessas contagens substitui benchmark ou playtest humano. Fonte: output/audio-integration-2026-10-21/RELATORIO.md
+1 minuto. As contagens são preenchidas pelo relatório final de QA. Os testes verificam comportamento, pausa, teclado/controle e retomada. Os roteiros separam 47 falas existentes, 98 propostas para cenas atuais e 8 esforços vocais. As propostas novas não foram inseridas silenciosamente no jogo.
 
-## 9. O que falta validar
+## 9. Material pronto para a gravação
 
-45 segundos. Não inventar feedback da equipe. Dublagem continua adiada. A pessoa que não conhece as soluções ainda precisa testar os puzzles e a progressão. Novas cutscenes e finais fora do escopo atual continuam no roteiro documentado.
+45 segundos. Há PDF, Word e textos separados por personagem. Não há reservas de professores ausentes ou finais alternativos. Ainda faltam as gravações humanas, a aprovação de novas formulações do roteiro e o feedback do playtest externo. A mixagem final deve ser conferida em fones e caixas.
 
 ## 10. Dúvidas, opiniões e feedbacks
 
-Reservar o final da daily para ouvir. Não antecipar respostas. Separar observação real, preferência e bug reproduzível. Registrar responsável e critério de validação dos ajustes escolhidos.
+Reservar o final para ouvir a equipe. Registrar o que realmente foi observado e priorizar ajustes reproduzíveis, sem antecipar possíveis feedbacks.

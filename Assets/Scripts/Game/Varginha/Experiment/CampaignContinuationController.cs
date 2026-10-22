@@ -17,6 +17,7 @@ namespace Game.Varginha.Experiment
         public CampaignContinuationState State=>Progress.continuation;
         private CampaignContinuationDefinition _definition;
         private string _message,_panel;
+        private readonly CampaignMessagePresentation _textMessage = new();
         private Vector2 _journalScroll;
         private bool _paused,_settings;
         private int _selected=-1,_choice=-1;
@@ -84,7 +85,7 @@ namespace Game.Varginha.Experiment
             }
             if(phase==20){_allies=gameObject.AddComponent<CampaignFinalAllies>();_allies.Configure(Actor);foreach(int i in State.battleStudents)if(i>=0)_allies.Squad.SelectStudent(i);if(State.battleSupport>=0)_allies.SelectSupport(State.battleSupport);_resumeBattlePending=State.chambersPrepared==7&&!State.manifestationDispelled;}
             if(phase==21&&area==1)School();
-            GameManager.Instance?.StartGame();Say(_definition.intro);Save();
+            GameManager.Instance?.StartGame();if(phase==11)Speak("Renan",_definition.intro.Substring("Renan: ".Length));else Say(_definition.intro);Save();
             if(phase==21&&area==0&&State.CanReturn&&State.finalStep==3){CloseMessage();StartCoroutine(Release());}
         }
         private void LoadChild()
@@ -149,9 +150,11 @@ namespace Game.Varginha.Experiment
             {
                 if(_message!=null)CloseMessage();else if(_panel!=null)_panel=null;else TogglePause();
             }
+            _textMessage.Tick(Time.unscaledDeltaTime,_paused);
+            if(_textMessage.FinishedByVoice)CloseMessage();
             if(_paused)return;_title+=Time.deltaTime;
             if(_returnSeal!=null)_returnSeal.Present(State.finalStep,Time.deltaTime,_sequence&&State.finalStep==1,VarginhaGameSettings.Current.reducedMotion);
-            if(_message!=null&&VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)){CloseMessage();Actor.SetInputLocked(Modal);return;}
+            if(_message!=null&&VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)){AdvanceMessage();Actor.SetInputLocked(Modal);return;}
             if(!Modal)
             {
                 CampaignHud.For(phase).Tick(Time.unscaledDeltaTime,_title>=2,CampaignGuidance.Next(Progress,phase,area),CampaignGuidance.RoomName(Plan,Feet));
@@ -272,7 +275,7 @@ namespace Game.Varginha.Experiment
                 if(station>=0){State.chambersPrepared|=1<<station;ReadEvidence(station);if(State.chambersPrepared==7)StartBattle();}
                 else if(id=="exit"||id=="procedure") {if(State.manifestationDispelled)_panel=State.finalCalibrated?"complete":"calibration";else Say("Prepare os três circuitos e dissipe a manifestação para alcançar a entidade com segurança.");}Save();return;
             }
-            if(phase==14&&id=="fabio"){State.Read(14,7);Say("Fábio: Estes são os registros que escondemos. Compare o início do mecanismo, a transferência de 1996 e a falha atual. A página ocultada está no Tombo.");Save();return;}
+            if(phase==14&&id=="fabio"){State.Read(14,7);Speak("Padre Fábio","Estes são os registros que escondemos. Compare o início do mecanismo, a transferência de 1996 e a falha atual. A página ocultada está no Tombo.");Save();return;}
             if(phase==14&&(id=="page"||id=="timeline")&&(State.clues[3]&128)==0){Say("Apresente os registros do casarão a Fábio primeiro.");return;}
             if(id=="timeline"){OpenPuzzle();return;}
             if(phase==12&&id=="entrance"){ChangeArea(1);return;}
@@ -288,8 +291,8 @@ namespace Game.Varginha.Experiment
                 if((State.clues[1]&1)==0){Say("Compare esta parede com a planta preservada primeiro.");return;}
                 State.serviceRevealed=true;ReadEvidence(1);MarkService();return;
             }
-            if(phase==12&&id=="key"){State.serviceKey=true;ReadEvidence(2);return;}
-            if(id=="renan"){State.Read(11,7);Say("Renan: O papel e o original concordam. A cópia alterada apagou a indicação lateral e a data. Consulte as três versões no notebook.");}
+            if(phase==12&&id=="key"){State.serviceKey=true;State.Read(phase,2);CampaignPickupNotice.Show("Chave de serviço coletada. Registro no caderno.");Save();return;}
+            if(id=="renan"){State.Read(11,7);Speak("Renan","O papel e o original concordam. A cópia alterada apagou a indicação lateral e a data. Consulte as três versões no notebook.");}
             else if(id.StartsWith("student"))Say("A turma observou a tela escurecer durante a ausência de Edelzio. As cópias de Renan permaneceram guardadas; esta conversa é opcional.");
             else if(id=="notebook"&&phase==11){if((State.clues[0]&128)==0)Say("Converse com Renan junto ao quadro branco primeiro.");else _panel="evidence";}
             else if(id=="exit")
@@ -421,10 +424,12 @@ namespace Game.Varginha.Experiment
             _sequence=false;Say(_definition.success);Save();
         }
         private int[] _identity(){var a=new int[_definition.cards.Length];for(int i=0;i<a.Length;i++)a[i]=i;return a;}
-        public void Say(string text){_message=text;Actor?.SetInputLocked(true);}
+        public void Say(string text){_message=text;_textMessage.Show(this,"INVESTIGAÇÃO",text,CampaignMessageKind.Reading);Actor?.SetInputLocked(true);}
+        private void Speak(string speaker,string text){_message=text;_textMessage.Show(this,speaker,text);Actor?.SetInputLocked(true);}
+        private void AdvanceMessage(){if(_textMessage.Advance())CloseMessage();}
         public void CloseMessage()
         {
-            _message=null;
+            _textMessage.Close();_message=null;
             if(_creditsPending){_creditsPending=false;_creditsVisible=true;_creditsTime=0;Save();}
             Actor?.SetInputLocked(Modal);
         }
@@ -510,7 +515,7 @@ namespace Game.Varginha.Experiment
             }
             if(_panel!=null&&!_paused)Panel();
             if(_message!=null&&!_paused)
-            {ExperimentGUI.Panel(new Rect(90,440,1100,240));ExperimentGUI.Label(new Rect(120,465,1040,140),_message);if(ExperimentGUI.Button(new Rect(850,625,290,35),"CONTINUAR"))CloseMessage();}
+            {if(CampaignMessageBox.Draw(_textMessage))AdvanceMessage();}
             if(_endingFade>0)ExperimentGUI.Box(new Rect(0,0,1280,720),new Color(.025f,.06f,.08f,_endingFade));
             if(_memoryImage!=null)
             {
@@ -583,6 +588,6 @@ namespace Game.Varginha.Experiment
         }
         private void Menu(){Save();Time.timeScale=1;CampaignCinematics.Load("Menu_MisterioDeVarginha");}
         private void OnApplicationPause(bool value){if(value)Save();}
-        private void OnDestroy(){RestoreBossShot();if(Active==this)Active=null;Time.timeScale=1;}
+        private void OnDestroy(){_textMessage.Close();RestoreBossShot();if(Active==this)Active=null;Time.timeScale=1;}
     }
 }

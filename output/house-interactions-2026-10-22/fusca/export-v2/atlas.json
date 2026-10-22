@@ -1,0 +1,53 @@
+{
+  "schema": "pixel-art-sprite-sheet/v1",
+  "image": "sheet.png",
+  "imageSize": [
+    36,
+    16
+  ],
+  "pixelsPerUnit": 100,
+  "frames": [
+    {
+      "id": "SteeringColumn",
+      "rect": [
+        1,
+        1,
+        34,
+        14
+      ],
+      "sourceSize": [
+        34,
+        14
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        3,
+        4
+      ],
+      "durationMs": 100,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\fusca\\column-v2.png",
+        "fileSha256": "c18043b54defd069585675fbda89ce915178fba29ee34a5a8a4c0ab42eb4c19f",
+        "crop": null,
+        "offset": [
+          1,
+          1
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    }
+  ],
+  "clips": {
+    "SteeringColumn": {
+      "frames": [
+        "SteeringColumn"
+      ],
+      "loop": false
+    }
+  }
+}

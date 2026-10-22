@@ -9,7 +9,11 @@ namespace Game.Varginha.Experiment
     {
         public const string MorningPath="Varginha/CinemaOpening/MorningTown";
         public const string FramePath="Varginha/CinemaOpening/FuscaCabinCartoon";
-        private static Texture _morning,_frame,_dashboard,_ignition;
+        private static Texture _morning,_frame,_dashboard,_ignition,_column;
+        public static readonly Vector2 SteeringHub=new(540,462);
+        public static readonly Rect DashboardBounds=new(390,300,940,313);
+        // Measured wheel hubs in the untouched 1254px Driving source atlas, top-left origin.
+        private static readonly Vector2[] WheelSource={new(273,812),new(559,810),new(853,812),new(1146,810)};
         private static readonly List<Vector2> ArrivalRoute=new();
         private static CampaignIllustratedMaps.Layout _schoolLayout;
         private static float _arrivalLength;
@@ -49,15 +53,20 @@ namespace Game.Varginha.Experiment
                 GUI.DrawTextureWithTexCoords(new Rect(1280-shift,0,1280,720),_morning,uv);
             }
             if(_frame!=null)GUI.DrawTexture(new Rect(0,0,1280,720),_frame);
-            // Matte cartoon dashboard retains the photo-based registration behind the
-            // approved wheel; no added pole or replacement hand/face is needed.
-            if(_dashboard!=null)GUI.DrawTexture(new Rect(552,325,780,260),_dashboard);
-            if(panel==2)CampaignSignalGlitch.DrawEcho(_frame,new Rect(0,0,1280,720),time,reduced);
-            var actor=CampaignStorySprites.Frame("Driving",2,DriverFrame(time,moving,reduced));
-            // The original steering cycle keeps one registration: the back/hip now
-            // meets the seat rather than hovering forward beside the door handle.
-            DrawActor(actor,new Vector2(400,708),2.05f);
+            // Registered layers: scenery -> cabin -> dashboard/column -> driver -> front trim.
+            // The gauge is directly behind the existing steering wheel. The column
+            // physically connects its hub to the under-dash bracket.
+            DrawDashboard(false);
+            // Needles, gauge ticks and radio belong to the dashboard. Drawing
+            // them after the driver painted amber pixels over the wheel rim.
             DrawInstruments(time,fault,silence||voice,reduced);
+            _column=Resources.Load<Texture2D>("Varginha/HouseFurniture/FuscaSteeringColumn");
+            if(_column!=null)GUI.DrawTexture(new Rect(SteeringHub.x-5,SteeringHub.y-8,72,27),_column);
+            if(panel==2)CampaignSignalGlitch.DrawEcho(_frame,new Rect(0,0,1280,720),time,reduced);
+            int driverFrame=DriverFrame(time,moving,reduced);
+            var actor=CampaignStorySprites.Frame("Driving",2,driverFrame);
+            DrawSprite(DriverBounds(actor,driverFrame),actor);
+            DrawDashboard(true);
             if(silence)
             {
                 // GDD: ignition becomes hot, hand is withdrawn; no injury, repair or culprit is invented.
@@ -69,6 +78,23 @@ namespace Game.Varginha.Experiment
             {
                 CampaignSignalGlitch.DrawCabin(new Rect(0,86,1280,464),_frame,time,reduced,voice||fault);
             }
+        }
+        public static Rect DriverBounds(Sprite sprite,int frame)
+        {
+            if(sprite==null)return Rect.zero;
+            var r=sprite.rect;var point=WheelSource[Mathf.Clamp(frame,0,3)];
+            float sx=sprite.texture.width/1254f,sy=sprite.texture.height/1254f;
+            var local=new Vector2(point.x*sx-r.x,point.y*sy-(sprite.texture.height-r.yMax));
+            const float scale=2.05f;
+            return new Rect(Mathf.Round(SteeringHub.x-local.x*scale),Mathf.Round(SteeringHub.y-local.y*scale),r.width*scale,r.height*scale);
+        }
+        private static void DrawDashboard(bool foreground)
+        {
+            if(_dashboard==null)return;
+            // Split the same artwork at a fixed seam; no duplicate full overlay.
+            const float split=.77f;var r=DashboardBounds;
+            if(foreground)GUI.DrawTextureWithTexCoords(new Rect(r.x,r.y+r.height*split,r.width,r.height*(1-split)),_dashboard,new Rect(0,0,1,1-split));
+            else GUI.DrawTextureWithTexCoords(new Rect(r.x,r.y,r.width,r.height*split),_dashboard,new Rect(0,1-split,1,split));
         }
         private static void DrawIgnition(float time,bool reduced)
         {
@@ -89,7 +115,8 @@ namespace Game.Varginha.Experiment
         }
         private static void DrawInstruments(float time,bool fault,bool stopped,bool reduced)
         {
-            var centre=new Vector2(693,434);Color amber=stopped?new Color(.16f,.14f,.10f):new Color(.95f,.65f,.28f);
+            Vector2 PanelPoint(float x,float y)=>new(DashboardBounds.x+x*DashboardBounds.width,DashboardBounds.y+y*DashboardBounds.height);
+            var centre=PanelPoint(141f/780,109f/260);Color amber=stopped?new Color(.16f,.14f,.10f):new Color(.95f,.65f,.28f);
             for(int i=0;i<11;i++)
             {
                 float a=(-140+i*28)*Mathf.Deg2Rad;
@@ -99,7 +126,7 @@ namespace Game.Varginha.Experiment
             var end=centre+new Vector2(Mathf.Cos(angle)*20,Mathf.Sin(angle)*33);
             PixelLine(centre,end,amber,3);
             ExperimentGUI.Box(new Rect(centre.x-4,centre.y-4,8,8),new Color(.16f,.17f,.18f));
-            var radio=new Rect(837,452,70,19);
+            var radioPoint=PanelPoint(285f/780,127f/260);var radio=new Rect(radioPoint.x,radioPoint.y,70,19);
             ExperimentGUI.Box(radio,new Color(.015f,.035f,.045f));
             for(int i=0;i<7;i++)ExperimentGUI.Box(new Rect(radio.x+5+i*9,radio.y+5,2,8),stopped?new Color(.06f,.09f,.09f):new Color(.12f,.65f,.66f));
             if(!stopped)ExperimentGUI.Box(new Rect(radio.x+7+Mathf.Round(time*8)%52,radio.y+2,3,15),new Color(1,.46f,.17f));

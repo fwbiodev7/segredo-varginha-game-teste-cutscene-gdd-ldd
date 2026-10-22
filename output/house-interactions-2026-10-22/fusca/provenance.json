@@ -1,0 +1,19 @@
+{
+  "tool": "built-in image_gen",
+  "sourceSha256": "b3213dc21b9a8732eca8fb1ae5a6340a8ee59bb545856434685d6fcdf20acb17",
+  "normalization": "Hard alpha 128 before bbox crop; nearest 64x29; original Driving frames unchanged",
+  "references": [
+    "Assets/Resources/Varginha/CinemaOpening/FuscaDashboardCartoon.png",
+    "Assets/Resources/Varginha/StoryCharacters/Driving.png"
+  ],
+  "approval": "Current conversation: Aprovo as camadas e o encaixe do volante",
+  "layers": [
+    "morning",
+    "cabin",
+    "dashboard back",
+    "steering column",
+    "original driver and wheel",
+    "dashboard front trim",
+    "instruments and signal"
+  ]
+}

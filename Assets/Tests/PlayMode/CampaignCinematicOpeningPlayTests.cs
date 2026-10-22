@@ -48,6 +48,20 @@ namespace Game.Tests.PlayMode
             // from the actual test Player. Editor still validates state and timing.
             if(Application.isEditor)yield break;
             yield return new WaitForEndOfFrame();var image=ScreenCapture.CaptureScreenshotAsTexture();
+            if(name.StartsWith("driving-pose-"))
+            {
+                var pixels=image.GetPixels32();int visible=0;
+                foreach(var p in pixels)if(p.r>35||p.g>35||p.b>35)visible++;
+                Assert.That(visible,Is.GreaterThan(pixels.Length/10),"A black fade is not evidence of the steering pose.");
+            }
+            if(name=="school-exit-car"||name=="school-arrival-gate")
+            {
+                foreach(float side in new[]{.025f,.975f})
+                {
+                    var pixel=image.GetPixel(Mathf.RoundToInt(image.width*side),image.height/2);
+                    Assert.That(Mathf.Max(pixel.r,pixel.g,pixel.b),Is.LessThan(.025f),"The live house must not leak beside the school illustration.");
+                }
+            }
             Directory.CreateDirectory(Output+"/captures");File.WriteAllBytes(Output+"/captures/"+name+".png",image.EncodeToPNG());Object.Destroy(image);
         }
         [UnityTest,Timeout(90000)] public IEnumerator AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl()
@@ -61,7 +75,7 @@ namespace Game.Tests.PlayMode
             {
                 var sound=stage.GetComponent<CampaignSoundscape>();if(sound.EventSerial!=soundSerial){sounds.Add(sound.LastEvent??"");soundSerial=sound.EventSerial;}
                 string title=Title(stage);
-                if(title=="VARGINHA • 2026")
+                if(title=="VARGINHA • 2026"&&Clock(stage)>2.2f)
                 {
                     int frame=CampaignFuscaCinema.DriverFrame(Clock(stage),true,false);
                     if(!driverCaptured[frame]){driverCaptured[frame]=true;yield return Capture("driving-pose-"+frame);}

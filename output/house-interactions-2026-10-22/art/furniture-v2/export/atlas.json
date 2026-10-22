@@ -1,0 +1,293 @@
+{
+  "schema": "pixel-art-sprite-sheet/v1",
+  "image": "sheet.png",
+  "imageSize": [
+    634,
+    394
+  ],
+  "pixelsPerUnit": 100,
+  "frames": [
+    {
+      "id": "FridgeBack",
+      "rect": [
+        1,
+        1,
+        210,
+        130
+      ],
+      "sourceSize": [
+        210,
+        130
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        105,
+        129
+      ],
+      "durationMs": 100,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\art\\furniture-v2\\FridgeBack.png",
+        "fileSha256": "3aa81836ae7b341eb8f5d46718f044bd5eba6346a1257f7ee1964928ad430b4a",
+        "crop": null,
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "StoveBack",
+      "rect": [
+        212,
+        1,
+        210,
+        130
+      ],
+      "sourceSize": [
+        210,
+        130
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        105,
+        129
+      ],
+      "durationMs": 100,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\art\\furniture-v2\\StoveBack.png",
+        "fileSha256": "d0f7ee24fa15299a4928141d1b828f0c4f10be4239f9e83eff84fee50a5f8765",
+        "crop": null,
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "SinkBack",
+      "rect": [
+        423,
+        1,
+        210,
+        130
+      ],
+      "sourceSize": [
+        210,
+        130
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        105,
+        129
+      ],
+      "durationMs": 100,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\art\\furniture-v2\\SinkBack.png",
+        "fileSha256": "cd309abe430c8dc6558b32b3d63f9c08d7bcfe25a160e9333d57887a1f31de27",
+        "crop": null,
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "BookshelfBack",
+      "rect": [
+        1,
+        132,
+        210,
+        130
+      ],
+      "sourceSize": [
+        210,
+        130
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        105,
+        129
+      ],
+      "durationMs": 100,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\art\\furniture-v2\\BookshelfBack.png",
+        "fileSha256": "741e6f48a1ed2cf8c53c166ae6e2df1abb9bb7b074ec823f80920a0b47f9146f",
+        "crop": null,
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "DresserBack",
+      "rect": [
+        212,
+        132,
+        210,
+        130
+      ],
+      "sourceSize": [
+        210,
+        130
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        105,
+        129
+      ],
+      "durationMs": 100,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\art\\furniture-v2\\DresserBack.png",
+        "fileSha256": "1d50cd3ebd79c4f0974724fc8d5eb1521b4575e881aecb0bd50ddf404bf66064",
+        "crop": null,
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "DeskEmpty",
+      "rect": [
+        423,
+        132,
+        210,
+        130
+      ],
+      "sourceSize": [
+        210,
+        130
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        105,
+        129
+      ],
+      "durationMs": 100,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\art\\furniture-v2\\DeskEmpty.png",
+        "fileSha256": "fd1133a099292ee863d023cbaf5902a541eee2f55dc179fa76a0e770d953f63b",
+        "crop": null,
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "CoffeeTableEmpty",
+      "rect": [
+        1,
+        263,
+        210,
+        130
+      ],
+      "sourceSize": [
+        210,
+        130
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        105,
+        129
+      ],
+      "durationMs": 100,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\art\\furniture-v2\\CoffeeTableEmpty.png",
+        "fileSha256": "ace42d1894b98a70e3c5eaab6fa072ec289f7df4bb9d09c79050c5e9fb9d1d86",
+        "crop": null,
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    }
+  ],
+  "clips": {
+    "FridgeBack": {
+      "frames": [
+        "FridgeBack"
+      ],
+      "loop": false
+    },
+    "StoveBack": {
+      "frames": [
+        "StoveBack"
+      ],
+      "loop": false
+    },
+    "SinkBack": {
+      "frames": [
+        "SinkBack"
+      ],
+      "loop": false
+    },
+    "BookshelfBack": {
+      "frames": [
+        "BookshelfBack"
+      ],
+      "loop": false
+    },
+    "DresserBack": {
+      "frames": [
+        "DresserBack"
+      ],
+      "loop": false
+    },
+    "DeskEmpty": {
+      "frames": [
+        "DeskEmpty"
+      ],
+      "loop": false
+    },
+    "CoffeeTableEmpty": {
+      "frames": [
+        "CoffeeTableEmpty"
+      ],
+      "loop": false
+    }
+  }
+}

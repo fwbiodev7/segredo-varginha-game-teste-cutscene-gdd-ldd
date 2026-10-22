@@ -1,0 +1,40 @@
+{
+  "frames": [
+    {
+      "name": "CoffeeFull",
+      "rect": [
+        18,
+        37,
+        30,
+        28
+      ]
+    },
+    {
+      "name": "Notebook",
+      "rect": [
+        77,
+        27,
+        41,
+        38
+      ]
+    },
+    {
+      "name": "DeskLamp",
+      "rect": [
+        19,
+        101,
+        27,
+        29
+      ]
+    },
+    {
+      "name": "CoffeeEmpty",
+      "rect": [
+        87,
+        109,
+        22,
+        21
+      ]
+    }
+  ]
+}

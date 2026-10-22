@@ -1,0 +1,104 @@
+{
+  "success": true,
+  "status": "structural_pass",
+  "errors": [],
+  "warnings": [],
+  "frames": [
+    {
+      "id": "FridgeBack",
+      "bbox": [
+        72,
+        14,
+        135,
+        127
+      ],
+      "visiblePixels": 6735,
+      "colors": 2291,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "7ae0b2dcc5b55c7e79bd95fe20c3ade866b4ff56e504fe22653f44738d63b02b"
+    },
+    {
+      "id": "StoveBack",
+      "bbox": [
+        72,
+        55,
+        136,
+        128
+      ],
+      "visiblePixels": 4297,
+      "colors": 2156,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "6ab9fe00af2500e040754c3315232813385e8b8f41e3c631b41d86f04cb92deb"
+    },
+    {
+      "id": "SinkBack",
+      "bbox": [
+        77,
+        64,
+        132,
+        128
+      ],
+      "visiblePixels": 2790,
+      "colors": 1696,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "2c839a96b87d4a41cec5e6891e2a7b9b844e34830b0686c03cf5429dd16192cc"
+    },
+    {
+      "id": "BookshelfBack",
+      "bbox": [
+        31,
+        50,
+        182,
+        125
+      ],
+      "visiblePixels": 10404,
+      "colors": 2841,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "b222f0941aa50700bb8a27ec973d177e0afb32ec4f9ac61d7351fde4c8b063e3"
+    },
+    {
+      "id": "DresserBack",
+      "bbox": [
+        61,
+        45,
+        150,
+        127
+      ],
+      "visiblePixels": 5771,
+      "colors": 2896,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "97697114ce0d1d2888e6913235fd64b9aebc4186441c7a80fcb4f79187b2feac"
+    },
+    {
+      "id": "DeskEmpty",
+      "bbox": [
+        62,
+        72,
+        150,
+        128
+      ],
+      "visiblePixels": 3734,
+      "colors": 1644,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "48d3334a85f20cb1f4325520ef7105f3bdd85194322e08f1a68aead0e792450f"
+    },
+    {
+      "id": "CoffeeTableEmpty",
+      "bbox": [
+        50,
+        61,
+        160,
+        126
+      ],
+      "visiblePixels": 4624,
+      "colors": 1512,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "f53557be7f615563349164a68689758a713e649906e4e827fa2d61217ed6b0ad"
+    }
+  ],
+  "paletteColors": 11649,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\art\\furniture-v2\\export\\atlas.json",
+  "metadataSha256": "d31a367b6c7b956a6b42d51772d2996fe91fc33618067e3dd21b040571e45919"
+}

@@ -1,0 +1,12 @@
+{
+  "source": "output\\house-interactions-2026-10-22\\items-final\\player-native.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

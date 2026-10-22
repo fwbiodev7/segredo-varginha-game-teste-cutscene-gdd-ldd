@@ -1,0 +1,9 @@
+{
+  "tool": "built-in image_gen",
+  "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a15918-63bb-7b31-b60b-3eef3c6eca04\\exec-6afba3ad-a145-4fa0-aaef-b650356f383b.png",
+  "sha256": "ba35a319793634759d5aecd3aa6d4ffc76a4db05ee83d35ef6f67627f4bc20cc",
+  "reference": "Assets/Resources/Varginha/IllustratedMaps/Adult2026.png",
+  "referenceSha256": "70465b8c55e386ac6d9c8b069a6c980655182515683e6581b987eb5c398ba92a",
+  "approval": "User approved rear-view furniture in current conversation",
+  "normalization": "Crop generated objects, nearest-neighbor native scale, bottom anchor, original sprites untouched"
+}

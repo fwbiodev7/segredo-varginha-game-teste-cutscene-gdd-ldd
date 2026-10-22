@@ -1,0 +1,58 @@
+{
+  "cell": [
+    64,
+    64
+  ],
+  "columns": 2,
+  "padding": 1,
+  "pixelsPerUnit": 100,
+  "pivot": [
+    32,
+    64
+  ],
+  "durationMs": 100,
+  "frames": [
+    {
+      "id": "CoffeeFull",
+      "source": "CoffeeFull.png"
+    },
+    {
+      "id": "Notebook",
+      "source": "Notebook.png"
+    },
+    {
+      "id": "DeskLamp",
+      "source": "DeskLamp.png"
+    },
+    {
+      "id": "CoffeeEmpty",
+      "source": "CoffeeEmpty.png"
+    }
+  ],
+  "clips": {
+    "CoffeeFull": {
+      "frames": [
+        "CoffeeFull"
+      ],
+      "loop": false
+    },
+    "Notebook": {
+      "frames": [
+        "Notebook"
+      ],
+      "loop": false
+    },
+    "DeskLamp": {
+      "frames": [
+        "DeskLamp"
+      ],
+      "loop": false
+    },
+    "CoffeeEmpty": {
+      "frames": [
+        "CoffeeEmpty"
+      ],
+      "loop": false
+    }
+  }
+}

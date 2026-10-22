@@ -1,0 +1,166 @@
+{
+  "schema": "unity-slice-plan/v1",
+  "origin": "bottom-left",
+  "image": "sheet.png",
+  "pixelsPerUnit": 100,
+  "sprites": [
+    {
+      "name": "FridgeBack",
+      "rect": [
+        1,
+        263,
+        210,
+        130
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.007692307692307665
+      ],
+      "alignment": "Custom",
+      "durationMs": 100
+    },
+    {
+      "name": "StoveBack",
+      "rect": [
+        212,
+        263,
+        210,
+        130
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.007692307692307665
+      ],
+      "alignment": "Custom",
+      "durationMs": 100
+    },
+    {
+      "name": "SinkBack",
+      "rect": [
+        423,
+        263,
+        210,
+        130
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.007692307692307665
+      ],
+      "alignment": "Custom",
+      "durationMs": 100
+    },
+    {
+      "name": "BookshelfBack",
+      "rect": [
+        1,
+        132,
+        210,
+        130
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.007692307692307665
+      ],
+      "alignment": "Custom",
+      "durationMs": 100
+    },
+    {
+      "name": "DresserBack",
+      "rect": [
+        212,
+        132,
+        210,
+        130
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.007692307692307665
+      ],
+      "alignment": "Custom",
+      "durationMs": 100
+    },
+    {
+      "name": "DeskEmpty",
+      "rect": [
+        423,
+        132,
+        210,
+        130
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.007692307692307665
+      ],
+      "alignment": "Custom",
+      "durationMs": 100
+    },
+    {
+      "name": "CoffeeTableEmpty",
+      "rect": [
+        1,
+        1,
+        210,
+        130
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.007692307692307665
+      ],
+      "alignment": "Custom",
+      "durationMs": 100
+    }
+  ],
+  "clips": {
+    "FridgeBack": {
+      "frames": [
+        "FridgeBack"
+      ],
+      "loop": false
+    },
+    "StoveBack": {
+      "frames": [
+        "StoveBack"
+      ],
+      "loop": false
+    },
+    "SinkBack": {
+      "frames": [
+        "SinkBack"
+      ],
+      "loop": false
+    },
+    "BookshelfBack": {
+      "frames": [
+        "BookshelfBack"
+      ],
+      "loop": false
+    },
+    "DresserBack": {
+      "frames": [
+        "DresserBack"
+      ],
+      "loop": false
+    },
+    "DeskEmpty": {
+      "frames": [
+        "DeskEmpty"
+      ],
+      "loop": false
+    },
+    "CoffeeTableEmpty": {
+      "frames": [
+        "CoffeeTableEmpty"
+      ],
+      "loop": false
+    }
+  },
+  "importSettings": {
+    "textureType": "Sprite",
+    "spriteMode": "Multiple",
+    "filterMode": "Point",
+    "mipmaps": false,
+    "compression": "Uncompressed",
+    "wrapMode": "Clamp"
+  },
+  "note": "Import plan only; Unity does not import this JSON automatically. Preserve existing sprite IDs."
+}

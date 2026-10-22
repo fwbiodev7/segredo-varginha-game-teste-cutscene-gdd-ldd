@@ -1,0 +1,103 @@
+{
+  "schema": "unity-slice-plan/v1",
+  "origin": "bottom-left",
+  "image": "sheet.png",
+  "pixelsPerUnit": 100,
+  "sprites": [
+    {
+      "name": "CoffeeFull",
+      "rect": [
+        1,
+        66,
+        64,
+        64
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 100
+    },
+    {
+      "name": "Notebook",
+      "rect": [
+        66,
+        66,
+        64,
+        64
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 100
+    },
+    {
+      "name": "DeskLamp",
+      "rect": [
+        1,
+        1,
+        64,
+        64
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 100
+    },
+    {
+      "name": "CoffeeEmpty",
+      "rect": [
+        66,
+        1,
+        64,
+        64
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 100
+    }
+  ],
+  "clips": {
+    "CoffeeFull": {
+      "frames": [
+        "CoffeeFull"
+      ],
+      "loop": false
+    },
+    "Notebook": {
+      "frames": [
+        "Notebook"
+      ],
+      "loop": false
+    },
+    "DeskLamp": {
+      "frames": [
+        "DeskLamp"
+      ],
+      "loop": false
+    },
+    "CoffeeEmpty": {
+      "frames": [
+        "CoffeeEmpty"
+      ],
+      "loop": false
+    }
+  },
+  "importSettings": {
+    "textureType": "Sprite",
+    "spriteMode": "Multiple",
+    "filterMode": "Point",
+    "mipmaps": false,
+    "compression": "Uncompressed",
+    "wrapMode": "Clamp"
+  },
+  "note": "Import plan only; Unity does not import this JSON automatically. Preserve existing sprite IDs."
+}

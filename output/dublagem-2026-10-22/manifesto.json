@@ -1,0 +1,28 @@
+{
+  "total": 153,
+  "elenco": 16,
+  "edelzio": 78,
+  "estados": {
+    "P": 98,
+    "E": 47,
+    "V": 8
+  },
+  "personagens": {
+    "Apresentador do noticiário": 3,
+    "Edelzio criança": 9,
+    "Edelzio": 69,
+    "Renan": 17,
+    "Yasmin": 3,
+    "Pedro": 3,
+    "Matias": 3,
+    "Fabio": 3,
+    "Marcos": 3,
+    "Anna Sabia": 3,
+    "Ana Tavares": 3,
+    "Luis Miguel Messias": 3,
+    "Luis Martins": 3,
+    "Rodrigo": 3,
+    "Padre Fábio": 13,
+    "Ouzana": 12
+  }
+}

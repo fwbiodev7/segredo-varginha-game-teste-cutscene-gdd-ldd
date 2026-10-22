@@ -106,7 +106,7 @@ namespace Game.Varginha
 
             // Notificação ao jogador
             var hud = VarginhaGameHUD.Instance ?? FindAnyObjectByType<VarginhaGameHUD>();
-            hud?.ShowDialogue("Edelzio", "🔦 Você pegou a LANTERNA!\nEla foi guardada na sua Mochila.\nAbra a Mochila [G] para EQUIPÁ-LA na Hotbar e poder usá-la!");
+            hud?.ShowNotice("Lanterna coletada. Equipe na mochila [G].");
 
             StartCoroutine(CollectAnimationRoutine(edelzio));
         }

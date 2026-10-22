@@ -10,6 +10,7 @@ namespace Game.Varginha.Experiment
         private string _cinematicShot, _cinemaTitle, _cinemaCaption;
         private int _cinemaPanel;
         private float _cinemaClock;
+        private readonly CampaignTimedSubtitle _cinemaSubtitle = new();
         private int _cinemaEvent;
         private bool _cinemaSkipAllowed,_cinemaSkipRequested;
         private float _cinemaEventClock;
@@ -27,18 +28,18 @@ namespace Game.Varginha.Experiment
             var layout = CampaignIllustratedMaps.Get(2);
             Vector2 Position(float x, float y, Vector2 fallback) => layout != null ? layout.Position(x,y) + Vector2.up*.58f : fallback;
             // These are walkable approach points, independent from the tabletop artwork.
-            AddEvidencePoint("counter", "BALCÃO • CHAVE DO FUSCA", Position(620,620,new Vector2(3,-3)));
+            AddEvidencePoint("counter", "MESA DO CAFÉ • CHAVE DO FUSCA", Position(749,600,new Vector2(4.6f,-2.05f)));
             AddEvidencePoint("exitclue", "PORTA • FECHADURA", Position(947,424,new Vector2(8,0)));
             AddEvidencePoint("paperclue", "PAPEL PRESO JUNTO AO QUARTO", Position(407,325,new Vector2(-1,1)));
             foreach(var objective in _guidancePlan.points)
             {var contextual=_points.Find(p=>p.id==objective.id);if(contextual!=null)objective.label=contextual.label;}
-            _keyRest = layout != null ? (Vector3)layout.Position(590,698) : new Vector3(3,-4);
+            _keyRest = layout != null ? (Vector3)layout.Position(733,531) : new Vector3(3,-4);
             var key = new GameObject("Chave_Fusca_Balcao"); key.transform.SetParent(transform);
             key.transform.position = _keyRest;
             _counterKey = key.AddComponent<SpriteRenderer>();
             _counterKey.sprite = CampaignHouseArt.Frame(0);
-            key.transform.localScale = Vector3.one * .52f; _counterKey.sortingOrder = 30;
-            var support=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/Kitchen_Cabinet")??GameObject.Find("Kitchen_Cabinet");
+            key.transform.localScale = Vector3.one * .9f; _counterKey.sortingOrder = 30;
+            var support=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/CoffeeTable_Kitchen")??GameObject.Find("CoffeeTable_Kitchen");
             VarginhaWorldDepth.Ensure(_counterKey,supportingObject:support!=null?support.transform:null,offset:2);
             _counterKey.enabled = _progress.house.KeyOnCounter;
             var paper = new GameObject("Vestigio_Papel_Quarto"); paper.transform.SetParent(transform);
@@ -67,23 +68,23 @@ namespace Game.Varginha.Experiment
             {
                 if (h.step == 0)
                 {
-                    if ((_progress.routine & 7) != 7) Say("Edelzio",h.Objective(_progress.routine));
+                    if ((_progress.routine & 7) != 7) CampaignPickupNotice.Show(h.Objective(_progress.routine));
                     else StartCoroutine(PlaceKey());
                 }
                 else if (h.KeyOnCounter) Say("Edelzio","Deixei a chave aqui. Falta buscar a mochila no quarto.");
-                else if (!h.Complete) ObserveKeyClue(0,"O balcão está vazio. O copo continua no mesmo lugar; não há chave no chão.");
+                else if (!h.Complete) ObserveKeyClue(0,"A chave não está na mesa do café. Não há nada no chão ao redor.");
                 else Say("Edelzio","A chave está guardada comigo. Não vou deixá-la aqui outra vez.");
                 return true;
             }
             if (id == "exitclue" || id == "paperclue")
             {
-                if (!h.Missing) { Say("Edelzio",h.Objective(_progress.routine)); return true; }
+                if (!h.Missing) { CampaignPickupNotice.Show(h.Objective(_progress.routine)); return true; }
                 ObserveKeyClue(id == "exitclue" ? 1 : 2,id == "exitclue"
                     ? "O trinco continua fechado por dentro. Não abri esta porta desde que acordei."
                     : "Um pedacinho de papel envelhecido ficou preso junto ao quarto. Há um traço azul, igual ao das minhas anotações de infância.");
                 return true;
             }
-            if (id == "bag" && h.step == 0) { Say("Edelzio",h.Objective(_progress.routine)); return true; }
+            if (id == "bag" && h.step == 0) { CampaignPickupNotice.Show(h.Objective(_progress.routine)); return true; }
             if (id == "box" && h.CanOpenBox && !_progress.boxFound) { StartCoroutine(OpenKeyBox()); return true; }
             if (id == "box" && !h.CanOpenBox)
             {
@@ -111,7 +112,7 @@ namespace Game.Varginha.Experiment
         }
         private IEnumerator PlaceKey()
         {
-            _busy = true; Lock();BeginMissionEvent(1); BeginMissionShot("world","ANTES DE SAIR","Vou deixar a chave no balcão. Depois pego a mochila.");
+            _busy = true; Lock();BeginMissionEvent(1); BeginMissionShot("world","ANTES DE SAIR","Vou deixar a chave na mesa do café. Depois pego a mochila.");
             CampaignCameraDirector.Reveal(_keyRest,3.8f);
             var action = _player.GetComponent<VarginhaPlayerActionAnimation>();
             _counterKey.enabled = true;
@@ -157,7 +158,7 @@ namespace Game.Varginha.Experiment
         private void EndMissionShot() { _cinematicShot=null; _sound.CinematicDucking(0); }
         private IEnumerator FuscaSequence()
         {
-            _schoolTransition=_busy=true;_dialogue=null;Lock();BeginMissionEvent(8);
+            _schoolTransition=_busy=true;_textMessage.Close();_dialogue=null;Lock();BeginMissionEvent(8);
             var visuals=_player.GetComponentsInChildren<Renderer>(true);
             var visibility=new bool[visuals.Length];for(int i=0;i<visuals.Length;i++)visibility[i]=visuals[i].enabled;
             var body=_player.GetComponent<Rigidbody2D>();bool simulated=body!=null&&body.simulated;
@@ -193,7 +194,7 @@ namespace Game.Varginha.Experiment
                         case 2:_sound.Engine(false);_sound.Play("CarFail");break;
                         case 3:
                             _sound.PlayRadioInterference(VarginhaGameSettings.Current.reducedMotion);
-                            _sound.Voice(Resources.Load<AudioClip>("Varginha/Audio/EdelzioCrianca_NaoDeixaElaSair"));break;
+                            _sound.Voice(Resources.Load<AudioClip>("Varginha/Audio/Voices/"+CampaignMessagePresentation.IdFor("Edelzio criança","Não deixa ela sair."))??Resources.Load<AudioClip>("Varginha/Audio/EdelzioCrianca_NaoDeixaElaSair"));break;
                         case 4:_sound.CinematicDucking(1);break;
                         case 5:_sound.CinematicDucking(0);_sound.Play("Starter");_sound.Engine(true,.4f);break;
                         case 6:_sound.Engine(false);_sound.Play("DoorOpen");break;
@@ -221,6 +222,9 @@ namespace Game.Varginha.Experiment
             float t=Time.time-_cinemaClock;
             if(_cinematicShot!="world")
             {
+                // Arrival uses an inset school illustration. Clear its entire
+                // viewport first so the live house cannot show through its margins.
+                ExperimentGUI.Box(new Rect(0,0,1280,720),Color.black);
                 float scale=Mathf.Min(Screen.width/1280f,Screen.height/720f);
                 float extraX=(Screen.width/scale-1280)/2,extraY=(Screen.height/scale-720)/2;
                 if(extraX>0)
@@ -238,7 +242,7 @@ namespace Game.Varginha.Experiment
             ExperimentGUI.Box(new Rect(0,550,1280,170),Color.black);
             ExperimentGUI.Label(new Rect(55,24,1090,46),_cinemaTitle,true);
             if(CanSkipMissionCinema&&GUI.Button(new Rect(850,25,300,38),"PULAR • ["+VarginhaInputActions.InteractLabel+"]"))TrySkipMissionCinema();
-            ExperimentGUI.Caption(new Rect(65,575,1150,115),_cinemaCaption,VarginhaGameSettings.Current.subtitleSize);
+            _cinemaSubtitle.Draw(_cinemaCaption,t);
             if(_cinemaTitle=="A CAIXA DE 1996")
             {ExperimentGUI.Panel(new Rect(460,145,360,360));CampaignHouseArt.Draw(new Rect(490,165,300,300),t<.6f?3:4);}
             if(t<.22f)ExperimentGUI.Box(new Rect(0,0,1280,720),new Color(0,0,0,1-t/.22f));
@@ -259,13 +263,19 @@ namespace Game.Varginha.Experiment
             else if (_progress.house.step==0 && (_progress.routine & 7)!=7) line="["+VarginhaInputActions.InteractLabel+"] interagir • ["+CampaignHudIcons.KeyLabel(CampaignHudIcons.Icon.Notebook)+"] consultar objetivos e pistas • F1 dicas graduais";
             else if ((_progress.routine & 8)!=0 && (_progress.house.tutorial&4)==0) line="["+CampaignHudIcons.KeyLabel(CampaignHudIcons.Icon.Backpack)+"] abrir mochila • consulte seus itens antes de partir";
             else return;
-            ExperimentGUI.Panel(new Rect(145,605,990,58));ExperimentGUI.Label(new Rect(163,615,954,42),line,small:true);
+            if((_progress.house.tutorial&1)==0)line="Movimente-se e aproxime-se da pia.";
+            else if((_progress.routine&7)!=7)line="["+VarginhaInputActions.InteractLabel+"] interagir   ["+CampaignHudIcons.KeyLabel(CampaignHudIcons.Icon.Notebook)+"] pistas   F1 dicas";
+            else line="["+CampaignHudIcons.KeyLabel(CampaignHudIcons.Icon.Backpack)+"] abrir mochila";
+            var style=CampaignMessagePresentation.TextStyle(10);float width=Mathf.Clamp(line.Length*10+32,240,560);
+            float height=style.CalcHeight(new GUIContent(line),width-24)+18;
+            var area=new Rect(640-width/2,690-height,width,height);ExperimentGUI.Panel(area);
+            GUI.Label(new Rect(area.x+12,area.y+9,width-24,height-18),line,style);
             if(VarginhaInputActions.InventoryPressed)_progress.house.tutorial|=4;
         }
         private void DrawKeyDeduction()
         {
             ExperimentGUI.Label(new Rect(140,143,995,55),"CHAVE DESAPARECIDA • CRUZAR EVIDÊNCIAS",true);
-            ExperimentGUI.Label(new Rect(145,215,975,130),"BALCÃO: vazio; copo intacto.\nSAÍDA: trinco fechado por dentro.\nQUARTO: papel envelhecido com traço azul junto à passagem.");
+            ExperimentGUI.Label(new Rect(145,215,975,130),"MESA DO CAFÉ: chave ausente; nada no chão.\nSAÍDA: trinco fechado por dentro.\nQUARTO: papel envelhecido com traço azul junto à passagem.");
             string[] choices={"Alguém entrou pela porta e levou a chave.","O papel liga o desaparecimento aos objetos antigos do quarto.","A chave foi esquecida no carro antes de entrar em casa."};
             for(int i=0;i<3;i++)if(ExperimentGUI.Button(new Rect(145,355+i*48,975,42),choices[i]))SubmitKeyConclusion(i);
         }

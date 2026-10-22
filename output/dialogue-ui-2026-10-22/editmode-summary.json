@@ -1,0 +1,18 @@
+{
+  "source": "output\\dialogue-ui-2026-10-22\\editmode.xml",
+  "runResult": "Failed(Child)",
+  "tests": {
+    "total": 398,
+    "passed": 397,
+    "failed": 1,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.EditMode.CampaignExpansionTests.AllNewPosesUseDedicatedBackpackSheetsWithCompleteHeadsAndStableFeet",
+      "message": "  Expected: less than 0.0500000007f\n  But was:  0.80392158f\n",
+      "stack": "at Game.Tests.EditMode.CampaignExpansionTests.AllNewPosesUseDedicatedBackpackSheetsWithCompleteHeadsAndStableFeet () [0x00206] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\EditMode\\CampaignExpansionTests.cs:109\n"
+    }
+  ],
+  "success": false
+}

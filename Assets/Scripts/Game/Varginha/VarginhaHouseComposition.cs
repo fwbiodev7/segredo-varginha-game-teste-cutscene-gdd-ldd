@@ -55,6 +55,13 @@ namespace Game.Varginha
         public static GameObject EnsureNotebookChair(Transform notebook)
         {
             if (notebook == null) return null;
+            // The removable notebook is parented to the campaign map; its authored
+            // chair anchor remains in the original house hierarchy.
+            if (Experiment.VarginhaCampaignStage.Active?.phase == 2)
+            {
+                var campaignChair = GameObject.Find("Chair_Office");
+                if (campaignChair != null) return campaignChair;
+            }
             GameObject chair = null;
             foreach (var item in notebook.root.GetComponentsInChildren<Transform>(true))
                 if (item.name == "Chair_Office") { chair = item.gameObject; break; }

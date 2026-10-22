@@ -1,0 +1,14 @@
+{
+  "version": "0.4.5-beta",
+  "archive": "Builds\\Varginha_0.4.5-beta_2026-10-22_Windows_x64.zip",
+  "bytes": 292421925,
+  "sha256": "975d6c87aa9c6fc1c385e892ded16520bb01607db4fd3446da2422f1dd56388b",
+  "files": 198,
+  "zipCrcVerified": true,
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 1
+  },
+  "smoke": "16 unique native Player cases; normal candidate compiled and archive checked, no separate human playtest."
+}

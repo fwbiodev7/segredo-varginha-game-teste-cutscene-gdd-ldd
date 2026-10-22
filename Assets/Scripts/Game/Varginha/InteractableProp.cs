@@ -157,7 +157,8 @@ namespace Game.Varginha
                     var flashlightComp = edelzio.GetComponent<EdelzioFlashlight>();
                     if (flashlightComp != null) flashlightComp.enabled = true;
                     message = "📦 Você puxa o baú debaixo da cama...\nEncontrou a CHAVE DO FUSCA e o CADERNO DE 1996!\nUma LANTERNA rolou de dentro do baú!\nPressione [V] para ligar/desligar a lanterna.\nNa última página está escrito: 'ELA AINDA ESTÁ AQUI'!";
-                    GetHud()?.ShowDialogue("Edelzio", message);
+                    GetHud()?.ShowNotice("Chave do Fusca e caderno de 1996 coletados.");
+                    GetHud()?.ShowReading("CADERNO DE 1996", message);
                     GetHud()?.ShowRodrigoHint("Rodrigo: 'O que foi isso?! As luzes começaram a piscar! Pegue seu notebook e vá até o Fusca no quintal rápido!'");
                     EntityManifestationAI.AwakenEntity();
                     VarginhaDarkness.Ensure(edelzio, false).TriggerPowerSurges();
@@ -172,13 +173,13 @@ namespace Game.Varginha
                         HideCollectedWorldObject();
                     }
                     message = "🎒 Você pegou a sua MOCHILA! Seus itens e caderno agora estão guardados em segurança.";
-                    GetHud()?.ShowDialogue("Edelzio", message);
+                    GetHud()?.ShowNotice(message);
                     break;
 
                 case PropType.NotebookLaptop:
                     if (edelzio.HasDecodedData)
                     {
-                        GetHud()?.ShowDialogue("NOTEBOOK", "O notebook ja esta decodificado. As coordenadas apontam para o Fusca.");
+                        GetHud()?.ShowReading("NOTEBOOK", "O notebook ja esta decodificado. As coordenadas apontam para o Fusca.");
                         break;
                     }
                     var quiz = GetQuiz();
@@ -199,7 +200,7 @@ namespace Game.Varginha
                     edelzio.TryConsumeInventoryItem(3);
                     HideCollectedWorldObject();
                     message = "O notebook terminou a decodificacao. As coordenadas apontam para o Fusca.";
-                    GetHud()?.ShowDialogue("NOTEBOOK", message);
+                    GetHud()?.ShowReading("NOTEBOOK", message);
                     GetHud()?.ShowRodrigoHint("Rodrigo: 'Pegue o Fusca antes que a entidade bloqueie o caminho.'");
                     break;
 
@@ -217,14 +218,14 @@ namespace Game.Varginha
                             var cupRenderer = GetComponent<SpriteRenderer>();
                             if (cupRenderer != null)
                                 cupRenderer.sprite = VarginhaPixelArtSprites.Create("Coffee_Empty", new Color(.8f, .4f, .2f));
-                            GetHud()?.ShowDialogue("Edelzio", "☕ Você bebe o café e devolve a xícara vazia à mesa.\n+1 CORAÇÃO DE SAÚDE.");
+                            GetHud()?.ShowNotice("☕ Você bebe o café e devolve a xícara vazia à mesa.\n+1 CORAÇÃO DE SAÚDE.");
                             OnInteracted?.Invoke(edelzio);
                         });
                         return;
                     }
                     edelzio.RestoreOneHeart();
                     message = "☕ Você bebe o café quente. (+1 CORAÇÃO DE SAÚDE)";
-                    GetHud()?.ShowDialogue("Edelzio", message);
+                    GetHud()?.ShowNotice(message);
                     break;
 
                 case PropType.ChurchSeat:
@@ -249,12 +250,12 @@ namespace Game.Varginha
                     edelzio.TryConsumeInventoryItem(4);
                     HideCollectedWorldObject();
                     message = "📜 Documento Antigo de 1898:\n'Relatório de Zé Gomes: Encontramos algo nas cavernas que não deveria ter sido acordado.'";
-                    GetHud()?.ShowDialogue("Pista Histórica", message);
+                    GetHud()?.ShowReading("Pista Histórica", message);
                     break;
 
                 case PropType.FuseBox:
                     message = "⚡ Caixa de Fusíveis: A fiação está sobrecarregada por pulsos eletromagnéticos impossíveis.";
-                    GetHud()?.ShowDialogue("Investigação", message);
+                    GetHud()?.ShowReading("Investigação", message);
                     break;
 
                 case PropType.PadreFabio:
@@ -264,7 +265,7 @@ namespace Game.Varginha
 
                 case PropType.SecretTome:
                     message = inspectMessage;
-                    GetHud()?.ShowDialogue("Livro do Tombo Secreto", message);
+                    GetHud()?.ShowReading("Livro do Tombo Secreto", message);
                     break;
             }
 

@@ -48,7 +48,7 @@ namespace Game.Varginha
             if (_isActing) yield break;
             yield return PoseRoutine("Edelzio_Reach", duration, .92f);
         }
-        public IEnumerator WashFaceRoutine()
+        public IEnumerator WashFaceRoutine(Action onComplete = null)
         {
             if (_isActing) yield break;
             BeginAction();
@@ -57,7 +57,9 @@ namespace Game.Varginha
                 if(Experiment.VarginhaCampaignStage.Active?.phase==2)
                     yield return MoveToPosition(Experiment.CampaignAdultHouse.WashApproach,.28f);
                 _spriteAnimation?.SetActionPose("Edelzio_WashFace");
-                yield return new WaitForSeconds(1.65f);
+                for(float elapsed=0;elapsed<1.65f;elapsed+=Time.deltaTime)
+                {if(!isActiveAndEnabled)yield break;yield return null;}
+                onComplete?.Invoke();
             }
             finally { _spriteAnimation?.ClearActionPose(); EndAction(); }
         }
@@ -101,7 +103,7 @@ namespace Game.Varginha
                 _spriteAnimation?.SetSeatingFrame(frame);
                 yield return new WaitForSeconds(.16f);
             }
-            VarginhaGameHUD.Instance?.ShowDialogue("Edelzio", "Vou me sentar um instante. [E] para levantar.");
+            VarginhaGameHUD.Instance?.ShowNotice("Sentado. [E] para levantar.");
             yield return null; // Do not consume the same key press that started the interaction.
             while (_player != null && _player.CurrentSanity > 0f)
             {
@@ -247,7 +249,10 @@ namespace Game.Varginha
             Vector3 standingScale = transform.localScale;
             _poseStandingScale = standingScale;
             int poseVersion = ++_poseVersion;
-            Vector3 poseScale = new Vector3(standingScale.x * 1.035f, standingScale.y * verticalScale, standingScale.z);
+            // Campaign sheets already contain the physical crouch/reach. Scaling the root
+            // again changes both body proportions and colliders during the animation.
+            Vector3 poseScale = GetComponent<Experiment.CampaignTeamEdelzio>()!=null ? standingScale
+                : new Vector3(standingScale.x * 1.035f, standingScale.y * verticalScale, standingScale.z);
             float blendElapsed = 0f;
             const float blendDuration = .12f;
             while (blendElapsed < blendDuration)

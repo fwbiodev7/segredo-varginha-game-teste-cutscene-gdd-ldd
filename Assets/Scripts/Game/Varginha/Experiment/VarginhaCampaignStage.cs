@@ -22,6 +22,7 @@ namespace Game.Varginha.Experiment
         private readonly List<Point> _points = new();
         private bool _ready, _paused, _settings, _busy;
         private CampaignSoundscape _sound;
+        private CampaignHouseRoutineItems _routineItems;
         private CampaignMapPlan _guidancePlan;
         private readonly List<CampaignSchoolLife> _students = new();
         public bool IsActing => _busy;
@@ -30,6 +31,7 @@ namespace Game.Varginha.Experiment
         private bool _schoolTransition, _radioReducedMotion;
         private float _radioCueTime = -1;
         private string _dialogue, _speaker, _feedback, _cutTitle, _cutText;
+        private readonly CampaignMessagePresentation _textMessage = new();
         private int _selected = -1;
         private View _afterCut;
         private sealed class Point
@@ -70,7 +72,7 @@ namespace Game.Varginha.Experiment
             if (_player.GetComponent<CampaignTeamEdelzio>() == null) _player.gameObject.AddComponent<CampaignTeamEdelzio>();
             _player.SetCombatLocked(false); _player.CanDodge = false;
             CampaignPresentation.FootCollision(_player, false);
-            if (phase == 2) { CampaignAdultHouse.Apply(); BuildHousePoints(); } else BuildSchoolPoints();
+            if (phase == 2) { CampaignAdultHouse.Apply(); _routineItems=gameObject.AddComponent<CampaignHouseRoutineItems>();_routineItems.Build();BuildHousePoints(); } else BuildSchoolPoints();
             if (_progress.positionPhase == phase && CampaignMapPlan.Create(phase).IsClear(new Vector2(_progress.x,_progress.y-.58f))) _player.transform.position = new Vector3(_progress.x, _progress.y);
             else _player.transform.position = (Vector3)(CampaignMapPlan.Create(phase).spawn+Vector2.up*.58f);
             RestoreInventory();
@@ -84,6 +86,7 @@ namespace Game.Varginha.Experiment
             _player.HasBackpack = phase > 2 || _progress.boxFound || (_progress.routine & 8) != 0;
             _player.HasFuscaKey = _player.HasResearchNotebook = phase > 2 || _progress.pagesSolved;
             _player.HasDecodedData = phase > 2 || _progress.boxFound || (_progress.routine & 4) != 0;
+            _routineItems?.Restore(_progress.routine);
             if(_progress.boxFound)GameObject.Find("Backpack_Prop")?.SetActive(false);
         }
         private void BuildHousePoints()
@@ -159,7 +162,14 @@ namespace Game.Varginha.Experiment
                 else if (_view != View.World && _view != View.Cutscene && _view != View.Complete) Show(View.World);
                 else TogglePause();
             }
+            _textMessage.Tick(Time.unscaledDeltaTime, _paused);
+            if (_textMessage.FinishedByVoice) { if (_view == View.Cutscene) FinishCutscene(); else CloseDialogue(); }
             if (_paused) return;
+            if (_dialogue != null)
+            {
+                if (_carContext ? VarginhaInputActions.CarPressed : VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)) AdvanceDialogue();
+                return;
+            }
             if(_cinematicShot!=null)
             {
                 Lock();
@@ -168,7 +178,7 @@ namespace Game.Varginha.Experiment
             }
             if (_titleTime < 3) { _titleTime += Time.unscaledDeltaTime; Lock(); return; }
             if (_view == View.Cutscene)
-            { _cutTime += Time.unscaledDeltaTime; if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)) FinishCutscene(); return; }
+            { _cutTime += Time.unscaledDeltaTime; if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)) { if (!_cutIsSpeech || _textMessage.Advance()) FinishCutscene(); } return; }
             if (IsBlocked) return;
             CampaignHud.For(phase).Tick(Time.unscaledDeltaTime,true,CampaignGuidance.Next(_progress,phase));
             if (Keyboard.current?.f1Key.wasPressedThisFrame == true) { OpenHints(); return; }
@@ -239,7 +249,7 @@ namespace Game.Varginha.Experiment
                 if(phase>=4&&_progress.codeSolved)
                 {
                     _progress.renanConfirmed=true;
-                    Cutscene("UM HORÁRIO QUE SE REPETE", "Renan: 23:23. Essa anotação também aparece nos registros da cidade.\nLeve a fotografia à biblioteca; pode haver outra parte dessa história lá.", View.Complete);
+                    Cutscene("UM HORÁRIO QUE SE REPETE", "23:23. Essa anotação também aparece nos registros da cidade.\nLeve a fotografia à biblioteca; pode haver outra parte dessa história lá.", View.Complete,"Renan");
                 }
                 else Say("Renan",phase==4
                     ?"Edelzio, encontrei uma fotografia antiga ligada ao caso de 1996. Pode abrir meu notebook na mesa. Observe o portão: há algo estranho nela."
@@ -257,7 +267,7 @@ namespace Game.Varginha.Experiment
         private IEnumerator RoutineAction(string id)
         {
             int routineBit = id == "wash" ? 1 : id == "food" ? 2 : id == "work" ? 4 : 8;
-            if ((_progress.routine & routineBit) != 0 && !(id == "bag" && _progress.house.KeyOnCounter)) { Say("Edelzio", "Já está pronto. " + _progress.house.Objective(_progress.routine)); yield break; }
+            if ((_progress.routine & routineBit) != 0 && !(id == "bag" && _progress.house.KeyOnCounter)) { CampaignPickupNotice.Show("Já está pronto. " + _progress.house.Objective(_progress.routine)); yield break; }
             _busy = true; Lock();
             var action = _player.GetComponent<VarginhaPlayerActionAnimation>();
             var visual = _player.GetComponent<VarginhaPlayerSpriteAnimation>();
@@ -274,25 +284,29 @@ namespace Game.Varginha.Experiment
             }
             else if (id == "food" && action != null)
             {
-                bool finished = false; action.PlayDrinkCoffee(GameObject.Find("Coffee_Cup")?.transform, () => finished = true);
+                bool finished = false; action.PlayDrinkCoffee(GameObject.Find("Coffee_Cup")?.transform, () => { finished = true; _player.RestoreOneHeart(); });
                 float time = 0; while (!finished && time < 5) { time += Time.deltaTime; yield return null; }
-                _progress.routine |= 2;
+                if(finished)_progress.routine |= 2;
             }
             else if (id == "work" && action != null)
             {
                 bool finished = false;
                 action.PlayNotebookSession(GameObject.Find("Notebook_TI")?.transform, () => { finished = true; _sound.Play("Typing"); });
                 float time = 0; while (action.IsActing && time < 5) { time += Time.deltaTime; yield return null; }
-                if (finished) _progress.routine |= 4;
+                if (finished && action.isActiveAndEnabled && !action.IsActing) _progress.routine |= 4;
                 else { _busy = false; VarginhaGameHUD.Instance?.CloseDialogue(); Say("Edelzio", "Vou chegar pelo lado livre da cadeira para preparar o notebook."); yield break; }
             }
-            else { if (action != null) yield return action.WashFaceRoutine(); _progress.routine |= 1; }
+            else { bool finished=action==null;if(action!=null)yield return action.WashFaceRoutine(()=>finished=true);if(finished)_progress.routine|=1; }
+            if((_progress.routine&routineBit)==0)
+            {
+                _busy=false;RestoreInventory();Save();CampaignPickupNotice.Show("Ação interrompida. Pode tentar novamente.");Lock();yield break;
+            }
             if (id == "bag" && _progress.house.KeyOnCounter) yield return DisappearKey();
             _busy = false; VarginhaGameHUD.Instance?.CloseDialogue(); RestoreInventory(); Save();
-            Say("Edelzio", id == "bag" ? "Mochila pronta. Ouvi um ruído na cozinha... deixei a chave no balcão."
-                : id == "work" ? "Notebook carregado e material de aula pronto. Por um instante, a tela mostrou o desenho de uma árvore."
-                : id == "food" ? "Café e pão. São 07:10; preciso levar o notebook para a Industrial."
-                : "Rosto lavado. Só mais um dia de trabalho... mas aquela lembrança de 1996 voltou no sonho.");
+            CampaignPickupNotice.Show(id == "bag" ? "Mochila coletada. Confira a mesa do café."
+                : id == "work" ? "Notebook pronto. A tela mostrou uma árvore."
+                : id == "food" ? "Café da manhã concluído. São 07:10."
+                : "Rosto lavado. Preparação atualizada.");
         }
         private void StudentInteraction(int index)
         {
@@ -319,20 +333,23 @@ namespace Game.Varginha.Experiment
             if (IsBlocked || !_player.HasBackpack) return false;
             _sound?.Play("Zip"); return VarginhaGameHUD.Instance != null && VarginhaGameHUD.Instance.OpenBackpack();
         }
-        private void Say(string speaker, string line) { _speaker = speaker; _dialogue = line; Lock(); }
-        public void CloseDialogue() { if (_schoolTransition) return; _dialogue = null; Lock(); }
+        private void Say(string speaker, string line) { _speaker = speaker; _dialogue = line; _textMessage.Show(this,speaker,line); Lock(); }
+        private void AdvanceDialogue() { if (_textMessage.Advance()) CloseDialogue(); }
+        public void CloseDialogue() { if (_schoolTransition) return; _textMessage.Close(); _dialogue = null; Lock(); }
         private void Show(View value) { _view = value; _selected = -1; _feedback = null; Lock(); }
-        private void Cutscene(string title, string line, View next)
-        { _cutTitle = title; _cutText = line; _afterCut = next; _cutTime = 0; Show(View.Cutscene); }
-        public void FinishCutscene() => Show(_afterCut);
+        private bool _cutIsSpeech;
+        private void Cutscene(string title, string line, View next, string speaker = null)
+        { _cutTitle = title; _cutText = line; _afterCut = next; _cutTime = 0; _cutIsSpeech = speaker != null; if (_cutIsSpeech) _textMessage.Show(this,speaker,line); Show(View.Cutscene); }
+        public void FinishCutscene() { _textMessage.Close(); _cutIsSpeech = false; Show(_afterCut); }
         public void TogglePause() { _paused = !_paused; _settings = false; Time.timeScale = _paused ? 0 : 1; CampaignCinematics.Pause(_paused); _sound?.Suspend(_paused); Lock(); }
         private void Lock() { if (_player != null) _player.SetInputLocked(IsBlocked); }
         public bool SubmitPages()
         {
             if (!_progress.SubmitPages()) { _feedback = "As páginas ainda não acompanham os elementos da fotografia."; return false; }
             Save(); RestoreInventory();
+            CampaignPickupNotice.Show("Chave, caderno e fragmento de mapa 1 adicionados à mochila.");
             _sound?.Play("Success");
-            Cutscene("ELA AINDA ESTÁ AQUI", "Casa à esquerda. Árvore no centro. Figura à direita.\nAo alinhar as páginas, surge uma escrita recente: ELA AINDA ESTÁ AQUI.\nChave, caderno e FRAGMENTO DE MAPA 1 adicionados à mochila.", View.World); return true;
+            Cutscene("ELA AINDA ESTÁ AQUI", "Casa à esquerda. Árvore no centro. Figura à direita.\nAo alinhar as páginas, surge uma escrita recente: ELA AINDA ESTÁ AQUI.\nOs registros foram guardados no caderno.", View.World); return true;
         }
         public bool SubmitPhotoClue(int choice)
         {
@@ -386,27 +403,17 @@ namespace Game.Varginha.Experiment
                 if (_view != View.World) DrawInvestigation();
             }
             DrawRadioInterference();
-            if (_dialogue != null)
+            if (_dialogue != null && !_paused)
             {
-                ExperimentGUI.Panel(new Rect(125, 405, 1030, 255));
-                bool portrait = _speaker == "Renan" || _students.Exists(student => student.StudentName == _speaker);
-                if (_speaker == "Renan") CampaignStorySprites.Portrait(new Rect(145,430,125,135),"RenanTeaching");
-                else if (portrait)
-                {
-                    var head = VarginhaStudentSprites.Portrait(_speaker);
-                    if (head != null) GUI.DrawTextureWithTexCoords(new Rect(150, 440, 120, 120), head.texture, new Rect(head.rect.x / head.texture.width, head.rect.y / head.texture.height, head.rect.width / head.texture.width, head.rect.height / head.texture.height));
-                }
-                float left = portrait ? 290 : 160;
-                ExperimentGUI.Label(new Rect(left, 421, 815, 42), _speaker);
-                ExperimentGUI.Caption(new Rect(left, 469, 815, 134), _dialogue, VarginhaGameSettings.Current.subtitleSize);
                 if (_speaker == "Renan")
                 {
-                    if (ExperimentGUI.Button(new Rect(155,607,210,38), "FOTOGRAFIA")) DiscussWithRenan(0);
-                    if (ExperimentGUI.Button(new Rect(385,607,210,38), "ANOTAÇÕES")) DiscussWithRenan(1);
-                    if (ExperimentGUI.Button(new Rect(615,607,210,38), "PESQUISA")) DiscussWithRenan(2);
+                    float y = CampaignMessageBox.Bounds(_textMessage).y - 40;
+                    if (ExperimentGUI.Button(new Rect(195,y,270,30), "FOTOGRAFIA")) DiscussWithRenan(0);
+                    if (ExperimentGUI.Button(new Rect(505,y,270,30), "ANOTAÇÕES")) DiscussWithRenan(1);
+                    if (ExperimentGUI.Button(new Rect(815,y,270,30), "PESQUISA")) DiscussWithRenan(2);
                 }
                 bool dialogueEnabled = GUI.enabled; GUI.enabled = dialogueEnabled && !_schoolTransition;
-                if (_carContext ? VarginhaGamepadUI.CarButton(new Rect(870,607,250,38),"CONTINUAR") : ExperimentGUI.Button(new Rect(870,607,250,38),"CONTINUAR")) CloseDialogue();
+                if (CampaignMessageBox.Draw(_textMessage,_carContext)) AdvanceDialogue();
                 GUI.enabled = dialogueEnabled;
             }
             if (_paused)
@@ -494,6 +501,12 @@ namespace Game.Varginha.Experiment
         }
         private void DrawCutscene()
         {
+            if (_cutIsSpeech)
+            {
+                ExperimentGUI.Label(new Rect(100,140,1080,60),_cutTitle,true);
+                if(CampaignMessageBox.Draw(_textMessage) && _textMessage.Advance())FinishCutscene();
+                return;
+            }
             if(phase==2)
             {
                 ExperimentGUI.Box(new Rect(0,0,1280,720),new Color(0,0,0,.65f));
@@ -537,6 +550,6 @@ namespace Game.Varginha.Experiment
         }
         private void Menu() { Save(); Time.timeScale = 1; CampaignCinematics.Load("Menu_MisterioDeVarginha"); }
         private void OnApplicationPause(bool value) { if (value) Save(); }
-        private void OnDestroy() { _radioCueTime = -1; _sound?.CinematicDucking(0); if (Active == this) Active = null; Time.timeScale = 1; }
+        private void OnDestroy() { _textMessage.Close(); _radioCueTime = -1; _sound?.CinematicDucking(0); if (Active == this) Active = null; Time.timeScale = 1; }
     }
 }

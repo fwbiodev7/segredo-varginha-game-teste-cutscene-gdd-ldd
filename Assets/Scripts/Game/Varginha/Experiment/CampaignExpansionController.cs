@@ -10,6 +10,7 @@ namespace Game.Varginha.Experiment
     {
         public int phase = 6;
         public static CampaignExpansionController Active { get; private set; }
+        public bool IsModalOpen => Blocked || _driving || _parking || _departing;
         public static string SceneName(int number)
         {
             string[] names = { "Fragmentos", "A_Mata", "A_Ancora", "Ouzana", "O_Fusca_Marcado" };
@@ -22,6 +23,7 @@ namespace Game.Varginha.Experiment
         private EdelzioTopDownController _actor;
         private CampaignSoundscape _sound;
         private string _message, _panel;
+        private readonly CampaignMessagePresentation _textMessage = new();
         private Vector2 _journalScroll;
         private bool _paused, _settings, _hidden, _driving, _parking, _departing;
         private CampaignWorkshopVehicle _vehicle;
@@ -105,12 +107,15 @@ namespace Game.Varginha.Experiment
             if(_paused&&_settings&&VarginhaInputActions.CancelPressed&&!VarginhaInputActions.PausePressed){_settings=false;return;}
             if ((VarginhaInputActions.PausePressed || VarginhaInputActions.CancelPressed && (_paused || _message!=null || _panel!=null)))
             {
-                if (_message != null && phase!=10) _message = null;
+                if (_message != null && phase!=10) CloseMessage();
                 else if (_panel != null && _panel != "complete") _panel = null;
                 else TogglePause();
                 Lock();
             }
+            _textMessage.Tick(Time.unscaledDeltaTime,_paused);
+            if (_textMessage.FinishedByVoice) CloseMessage();
             if (_paused) return;
+            if (_message != null && (phase == 10 ? VarginhaInputActions.CarPressed : VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact))) { AdvanceMessage(); Lock(); return; }
             _title += Time.deltaTime;
             if (Blocked) { _vehicle?.StopInput(); Lock(); return; }
             if(_parking)CampaignHud.For(phase).BeginTutorial("estacionar");
@@ -123,7 +128,7 @@ namespace Game.Varginha.Experiment
                     State.workshopParked=true;_parking=false;_vehicle.ParkAtBay();_sound.Engine(false);
                     _actor.gameObject.SetActive(true);_actor.GetComponent<Rigidbody2D>().position=Plan.points.Find(p=>p.id=="drive").position+Vector2.up*.58f;
                     Camera.main.GetComponent<Game.Level.CameraFollow2D>().Target=_actor.transform;
-                    Say("Fusca estacionado. O reagente pode revelar o que ficou escondido na lataria.");Save();
+                    CampaignPickupNotice.Show("Fusca estacionado. O reagente pode revelar o que ficou escondido na lataria.");Save();
                 }
                 SaveVehiclePeriodically();Lock();return;
             }
@@ -205,8 +210,8 @@ namespace Game.Varginha.Experiment
                 else if (id == "hide") { _hidden = !_hidden; Say(_hidden ? "Você se abriga e recupera o fôlego. A presença perde seu rastro enquanto você permanece aqui." : "Você sai do abrigo."); }
                 else if (id == "fabio")
                 {
-                    if (State.forestSigns < 3) Say("Fábio: siga as marcas para entender por que veio até aqui.");
-                    else { State.fabioMet = true; Say("Fábio: eu esperava que você se lembrasse. Venha ao arquivo; há um registro com seu nome."); }
+                    if (State.forestSigns < 3) Speak("Padre Fábio","siga as marcas para entender por que veio até aqui.");
+                    else { State.fabioMet = true; Speak("Padre Fábio","eu esperava que você se lembrasse. Venha ao arquivo; há um registro com seu nome."); }
                 }
             }
             else if (phase == 8)
@@ -215,11 +220,11 @@ namespace Game.Varginha.Experiment
                 else if (id == "symbol") { State.anchorClues |= 2; Say("A inscrição do compartimento traz o símbolo ÂNCORA."); }
                 else if (id == "record") { State.anchorClues |= 4; Say("Ficha de Edelzio: registro 23. Relacione ano, símbolo e número."); }
                 else if (id == "anchor") Open("anchor");
-                else if (id == "trust") { if (State.anchorFound) Open("trust"); else Say("Fábio: confira os arquivos antes de me cobrar uma resposta."); }
+                else if (id == "trust") { if (State.anchorFound) Open("trust"); else Speak("Padre Fábio","confira os arquivos antes de me cobrar uma resposta."); }
             }
             else if (phase == 9)
             {
-                if (id == "ouzana") { State.evidencePresented = State.anchorFound; if(State.evidencePresented){State.labClues=7;State.SolveSamples();} Say(State.anchorFound ? "Ouzana: o controle é neutro, o resíduo reage. A comparação confirma as marcas de contenção. Leve o reagente à oficina; as leituras ficaram no caderno." : "Ouzana precisa do registro de Edelzio e das evidências da mata."); }
+                if (id == "ouzana") { bool hadReagent=State.reagentUnlocked; State.evidencePresented = State.anchorFound; if(State.evidencePresented){State.labClues=7;State.SolveSamples();} if(!hadReagent&&State.reagentUnlocked)CampaignPickupNotice.Show("Reagente recebido: seis cargas. Leituras no caderno."); if(State.anchorFound)Speak("Ouzana","o controle é neutro, o resíduo reage. A comparação confirma as marcas de contenção. Leve o reagente à oficina; as leituras ficaram no caderno.");else Say("Ouzana precisa do registro de Edelzio e das evidências da mata."); }
                 else if (id == "control") { State.labClues |= 1; Say("Controle: leitura neutra. É o primeiro passo do protocolo."); }
                 else if (id == "residue") { State.labClues |= 2; Say("Resíduo: leitura instável. Compare com o controle antes de aplicar o reagente."); }
                 else if (id == "protocol") { State.labClues |= 4; Say("Protocolo: CONTROLE → RESÍDUO → REAGENTE. A reação deve ser observada depois da comparação."); }
@@ -235,7 +240,7 @@ namespace Game.Varginha.Experiment
                     else Say((State.sprayed & (1 << region)) != 0 ? "Esta marca já foi registrada." : "Reagente indisponível. Confira a bancada de reserva.");
                 }
                 else if (id == "seal") Say(State.stabilized ? "ÁRVORE • I, RIO • II e CAPELA • III registrados. O Fusca pode partir." : "Aplique o reagente no Fusca para revelar as marcas.");
-                else if (id == "refill") { if (State.reagentUnlocked) State.reagentCharges = 6; Say("Reserva recarregada. Ouzana deixou reagente suficiente para repetir os testes sem bloquear a investigação."); }
+                else if (id == "refill") { if (State.reagentUnlocked) State.reagentCharges = 6; CampaignPickupNotice.Show("Reserva recarregada. Ouzana deixou reagente suficiente para repetir os testes sem bloquear a investigação."); }
                 else if (id == "drive") { if (!State.stabilized) Say("Revele as marcas com o reagente antes de partir."); else BeginDeparture(); }
             }
             Save(); Lock();
@@ -310,8 +315,11 @@ namespace Game.Varginha.Experiment
             State.workshopDeparted=true;_departing=false;_sound.Engine(false);_panel="complete";Save();Lock();
         }
         private void Open(string panel) { _panel = panel; _selected = -1; Lock(); }
-        private void Say(string message) { _message = message; Lock(); }
-        public void ClosePanel() { _message = _panel = null; Lock(); }
+        private void Say(string message) { _message = message; _textMessage.Show(this,"INVESTIGAÇÃO",message,CampaignMessageKind.Reading); Lock(); }
+        private void Speak(string speaker,string message) { _message = message; _textMessage.Show(this,speaker,message); Lock(); }
+        private void AdvanceMessage() { if (_textMessage.Advance()) CloseMessage(); }
+        private void CloseMessage() { _textMessage.Close(); _message=null; Lock(); }
+        public void ClosePanel() { _textMessage.Close(); _message = _panel = null; Lock(); }
         private void Lock() => _actor?.SetInputLocked(Blocked || _driving || _parking || _departing);
         private void TogglePause()
         {
@@ -328,7 +336,7 @@ namespace Game.Varginha.Experiment
         {
             bool result = _panel == "map" ? State.SolveMap() : _panel == "anchor" ? State.SolveAnchor(_year,_symbol,_record)
                 : _panel == "samples" ? State.SolveSamples() : _panel == "seal" && State.Stabilize();
-            if (result) { _panel = null; _sound.Play("Success"); Say(phase == 6 ? "As coordenadas revelam a entrada da mata. Destino registrado."
+            if (result) { if(phase==9)CampaignPickupNotice.Show("Reagente recebido: seis cargas. Leituras no caderno."); _panel = null; _sound.Play("Success"); Say(phase == 6 ? "As coordenadas revelam a entrada da mata. Destino registrado."
                 : phase == 8 ? "SELO DA ENTIDADE: EDELZIO / CONTENÇÃO: ESTÁVEL. Você é o selo que mantém a entidade contida desde 1996."
                 : phase == 9 ? "A reação contradiz as leituras normais. Ouzana aceita ajudar e entrega o reagente."
                 : "As marcas reproduzem o trajeto árvore, rio e capela. As marcas estão registradas; o Fusca pode partir."); }
@@ -391,11 +399,9 @@ namespace Game.Varginha.Experiment
             if (phase == 7) ExperimentGUI.Label(new Rect(35,158,610,40), "SANIDADE " + Mathf.RoundToInt(_actor.CurrentSanity) + " • MARCAS " + State.forestSigns + "/3",small:true);
             if (phase == 10 && !_departing && !_parking) ExperimentGUI.Label(new Rect(35,158,610,40), "REAGENTE " + State.reagentCharges + " • MARCAS " + Count(State.sprayed) + "/3",small:true);
             if (_panel != null) DrawPanel();
-            if (_message != null)
+            if (_message != null && !_paused)
             {
-                ExperimentGUI.Panel(new Rect(150,395,980,235));
-                ExperimentGUI.Caption(new Rect(180,420,920,145),_message,VarginhaGameSettings.Current.subtitleSize);
-                if (phase==10 ? VarginhaGamepadUI.CarButton(new Rect(820,570,270,42),"CONTINUAR") : ExperimentGUI.Button(new Rect(820,570,270,42),"CONTINUAR")) { _message = null; Lock(); }
+                if (CampaignMessageBox.Draw(_textMessage,phase==10)) AdvanceMessage();
             }
             if (_paused)
             {
@@ -471,6 +477,6 @@ namespace Game.Varginha.Experiment
         }
         private void Menu() { Save(); Time.timeScale=1; CampaignCinematics.Load("Menu_MisterioDeVarginha"); }
         private void OnApplicationPause(bool pause) { if (pause) Save(); }
-        private void OnDestroy() { if (Active == this) Active = null; Time.timeScale = 1; }
+        private void OnDestroy() { _textMessage.Close(); if (Active == this) Active = null; Time.timeScale = 1; }
     }
 }

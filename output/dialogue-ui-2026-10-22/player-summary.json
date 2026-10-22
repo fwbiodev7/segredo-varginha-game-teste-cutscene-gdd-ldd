@@ -1,0 +1,12 @@
+{
+  "source": "output\\dialogue-ui-2026-10-22\\player-native.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

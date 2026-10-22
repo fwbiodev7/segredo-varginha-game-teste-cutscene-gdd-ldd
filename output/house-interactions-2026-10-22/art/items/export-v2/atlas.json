@@ -1,0 +1,173 @@
+{
+  "schema": "pixel-art-sprite-sheet/v1",
+  "image": "sheet.png",
+  "imageSize": [
+    131,
+    131
+  ],
+  "pixelsPerUnit": 100,
+  "frames": [
+    {
+      "id": "CoffeeFull",
+      "rect": [
+        1,
+        1,
+        64,
+        64
+      ],
+      "sourceSize": [
+        64,
+        64
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        32,
+        64
+      ],
+      "durationMs": 100,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\art\\items\\CoffeeFull.png",
+        "fileSha256": "3c04048186630e2769259fdcefb28b3a838afa962bfa2be0b41615616c503791",
+        "crop": null,
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "Notebook",
+      "rect": [
+        66,
+        1,
+        64,
+        64
+      ],
+      "sourceSize": [
+        64,
+        64
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        32,
+        64
+      ],
+      "durationMs": 100,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\art\\items\\Notebook.png",
+        "fileSha256": "03806f8b1eb54728cd904b4de744c52be3bd3b9304eded018797216e1b02480b",
+        "crop": null,
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "DeskLamp",
+      "rect": [
+        1,
+        66,
+        64,
+        64
+      ],
+      "sourceSize": [
+        64,
+        64
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        32,
+        64
+      ],
+      "durationMs": 100,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\art\\items\\DeskLamp.png",
+        "fileSha256": "24d0d523cef3b6d6bad9252dcbe06c4d3563e9b71de69f31db176d8745c1f5a7",
+        "crop": null,
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "CoffeeEmpty",
+      "rect": [
+        66,
+        66,
+        64,
+        64
+      ],
+      "sourceSize": [
+        64,
+        64
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        32,
+        64
+      ],
+      "durationMs": 100,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\art\\items\\CoffeeEmpty.png",
+        "fileSha256": "821e74b75182534974f1b4d92204eecf3e9e02abed606634360542e76c54861d",
+        "crop": null,
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    }
+  ],
+  "clips": {
+    "CoffeeFull": {
+      "frames": [
+        "CoffeeFull"
+      ],
+      "loop": false
+    },
+    "Notebook": {
+      "frames": [
+        "Notebook"
+      ],
+      "loop": false
+    },
+    "DeskLamp": {
+      "frames": [
+        "DeskLamp"
+      ],
+      "loop": false
+    },
+    "CoffeeEmpty": {
+      "frames": [
+        "CoffeeEmpty"
+      ],
+      "loop": false
+    }
+  }
+}

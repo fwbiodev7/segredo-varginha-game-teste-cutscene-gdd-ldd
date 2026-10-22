@@ -47,10 +47,10 @@ namespace Game.Varginha.Experiment
             if (step == 0) return (routine & 1) == 0 ? "Prepare-se para a aula: lave o rosto na pia."
                 : (routine & 2) == 0 ? "Tome o café na cozinha antes de sair."
                 : (routine & 4) == 0 ? "Confira o material da aula no notebook do escritório."
-                : "Deixe a chave do Fusca no balcão antes de buscar a mochila.";
-            if (step == 1) return "A chave ficou no balcão. Busque a mochila no quarto.";
+                : "Deixe a chave do Fusca na mesa do café antes de buscar a mochila.";
+            if (step == 1) return "A chave ficou na mesa do café. Busque a mochila no quarto.";
             if (!deduced) return clues == 7 ? "Compare as três pistas no registro da investigação. O que elas permitem concluir?"
-                : "A chave sumiu. Observe o balcão, a porta de saída e o papel junto ao quarto.";
+                : "A chave sumiu. Observe a mesa do café, a porta de saída e o papel junto ao quarto.";
             return step < 4 ? "O ruído vem debaixo da cama. Reexamine a caixa de brinquedos."
                 : "Reconstrua o desenho do caderno comparando as bordas rasgadas e os traços.";
         }
@@ -75,14 +75,14 @@ namespace Game.Varginha.Experiment
                     : level == 1 ? "O notebook ficou no escritório."
                     : "Interaja com o notebook no escritório para conferir o material da aula.";
                 return level == 0 ? "Organize o que vai levar antes de buscar a mochila."
-                    : level == 1 ? "O balcão da cozinha deixa a chave à vista."
-                    : "Aproxime-se do balcão e interaja para deixar a chave do Fusca.";
+                    : level == 1 ? "A mesa do café deixa a chave à vista."
+                    : "Aproxime-se da mesa do café e interaja para deixar a chave do Fusca.";
             }
-            if (step == 1) return level == 0 ? "A chave está segura no balcão; falta um item da preparação."
+            if (step == 1) return level == 0 ? "A chave está segura na mesa do café; falta um item da preparação."
                 : level == 1 ? "A mochila ficou no quarto."
-                : "Vá ao quarto e interaja com a mochila; depois volte ao balcão.";
+                : "Vá ao quarto e interaja com a mochila; depois volte aa mesa do café.";
             if (!deduced) return level == 0 ? "Compare o que mudou e o que permaneceu igual."
-                : level == 1 ? "O balcão, a fechadura e o papel junto ao quarto permitem descartar algumas hipóteses."
+                : level == 1 ? "O mesa do café, a fechadura e o papel junto ao quarto permitem descartar algumas hipóteses."
                 : "Observe os três pontos. Relacione a saída fechada com o papel da caixa: investigue dentro da casa.";
             if (step < 4) return level == 0 ? "As pistas apontam para algo que ficou dentro da casa."
                 : level == 1 ? "Escute o ruído perto da cama e observe a origem do papel."

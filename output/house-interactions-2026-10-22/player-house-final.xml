@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="6" result="Failed(Child)" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="0001-01-01 00:00:00Z" end-time="0001-01-01 00:00:00Z" duration="50,508797">
+  <test-suite type="TestSuite" id="1000" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="284" result="Failed" site="Child" start-time="2026-10-22 11:09:37Z" end-time="2026-10-22 11:10:28Z" duration="50.508797" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+  work
+  Expected: not equal to 0
+  But was:  0
+at Game.Tests.PlayMode.CampaignMessagePlayTests+&lt;RoutineConsumesRealItemsAndKeepsThemGoneAfterReload&gt;d__14.MoveNext () [0x00220] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Tests\PlayMode\CampaignMessagePlayTests.cs:62
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+<properties><property name="platform" value="PlayMode"></property></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="Assembly" id="1330" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Temp/UnityTempFile-9412965de702d2840a9bef854000b4c4/PlayerWithTests/PlayerWithTests_Data/Managed/GamePlayModeTests.dll" runstate="Runnable" testcasecount="284" result="Failed" site="Child" start-time="2026-10-22 11:09:37Z" end-time="2026-10-22 11:10:28Z" duration="50.469761" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+  work
+  Expected: not equal to 0
+  But was:  0
+at Game.Tests.PlayMode.CampaignMessagePlayTests+&lt;RoutineConsumesRealItemsAndKeepsThemGoneAfterReload&gt;d__14.MoveNext () [0x00220] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Tests\PlayMode\CampaignMessagePlayTests.cs:62
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+<properties><property name="_PID" value="7952"></property><property name="_APPDOMAIN" value="Unity Root Domain"></property><property name="platform" value="PlayMode"></property><property name="EditorOnly" value="False"></property></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1331" name="Game" fullname="Game" runstate="Runnable" testcasecount="284" result="Failed" site="Child" start-time="2026-10-22 11:09:37Z" end-time="2026-10-22 11:10:28Z" duration="50.443005" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+  work
+  Expected: not equal to 0
+  But was:  0
+at Game.Tests.PlayMode.CampaignMessagePlayTests+&lt;RoutineConsumesRealItemsAndKeepsThemGoneAfterReload&gt;d__14.MoveNext () [0x00220] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Tests\PlayMode\CampaignMessagePlayTests.cs:62
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1332" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="284" result="Failed" site="Child" start-time="2026-10-22 11:09:37Z" end-time="2026-10-22 11:10:28Z" duration="50.417633" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+  work
+  Expected: not equal to 0
+  But was:  0
+at Game.Tests.PlayMode.CampaignMessagePlayTests+&lt;RoutineConsumesRealItemsAndKeepsThemGoneAfterReload&gt;d__14.MoveNext () [0x00220] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Tests\PlayMode\CampaignMessagePlayTests.cs:62
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1333" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="284" result="Failed" site="Child" start-time="2026-10-22 11:09:37Z" end-time="2026-10-22 11:10:28Z" duration="50.394545" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+  work
+  Expected: not equal to 0
+  But was:  0
+at Game.Tests.PlayMode.CampaignMessagePlayTests+&lt;RoutineConsumesRealItemsAndKeepsThemGoneAfterReload&gt;d__14.MoveNext () [0x00220] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Tests\PlayMode\CampaignMessagePlayTests.cs:62
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestFixture" id="1064" name="CampaignMessagePlayTests" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2026-10-22 11:09:37Z" end-time="2026-10-22 11:10:28Z" duration="50.381641" total="6" passed="5" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+  work
+  Expected: not equal to 0
+  But was:  0
+at Game.Tests.PlayMode.CampaignMessagePlayTests+&lt;RoutineConsumesRealItemsAndKeepsThemGoneAfterReload&gt;d__14.MoveNext () [0x00220] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Tests\PlayMode\CampaignMessagePlayTests.cs:62
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-case id="1067" name="BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue" methodname="BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="377815916" result="Passed" start-time="2026-10-22 11:09:37Z" end-time="2026-10-22 11:09:54Z" duration="16.727828" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+</output></test-case><test-case id="1066" name="InterruptedCoffeeAndWashDoNotConsumeTheirObjectives" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives" methodname="InterruptedCoffeeAndWashDoNotConsumeTheirObjectives" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="572403675" result="Passed" start-time="2026-10-22 11:09:54Z" end-time="2026-10-22 11:10:06Z" duration="11.823584" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+</output></test-case><test-case id="1069" name="RecordedVoiceUsesItsOwnVolumeAndPauseClock" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock" methodname="RecordedVoiceUsesItsOwnVolumeAndPauseClock" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="17898745" result="Passed" start-time="2026-10-22 11:10:06Z" end-time="2026-10-22 11:10:07Z" duration="0.666404" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+</output></test-case><test-case id="1068" name="RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly" methodname="RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="69137636" result="Passed" start-time="2026-10-22 11:10:07Z" end-time="2026-10-22 11:10:15Z" duration="8.086971" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+</output></test-case><test-case id="1065" name="RoutineConsumesRealItemsAndKeepsThemGoneAfterReload" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload" methodname="RoutineConsumesRealItemsAndKeepsThemGoneAfterReload" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="2134557234" result="Failed" start-time="2026-10-22 11:10:15Z" end-time="2026-10-22 11:10:25Z" duration="10.198595" asserts="0">  work
+  Expected: not equal to 0
+  But was:  0
+at Game.Tests.PlayMode.CampaignMessagePlayTests+&lt;RoutineConsumesRealItemsAndKeepsThemGoneAfterReload&gt;d__14.MoveNext () [0x00220] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Tests\PlayMode\CampaignMessagePlayTests.cs:62
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>  work
+  Expected: not equal to 0
+  But was:  0
+at Game.Tests.PlayMode.CampaignMessagePlayTests+&lt;RoutineConsumesRealItemsAndKeepsThemGoneAfterReload&gt;d__14.MoveNext () [0x00220] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Tests\PlayMode\CampaignMessagePlayTests.cs:62
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+<message>  work
+  Expected: not equal to 0
+  But was:  0
+</message><stack-trace>at Game.Tests.PlayMode.CampaignMessagePlayTests+&lt;RoutineConsumesRealItemsAndKeepsThemGoneAfterReload&gt;d__14.MoveNext () [0x00220] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\Assets\Tests\PlayMode\CampaignMessagePlayTests.cs:62
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+</stack-trace></failure><output>NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+</output></test-case><test-case id="1070" name="ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal" methodname="ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="1266733153" result="Passed" start-time="2026-10-22 11:10:25Z" end-time="2026-10-22 11:10:28Z" duration="2.858952" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+</output></test-case></test-suite></test-suite></test-suite></test-suite></test-suite></test-suite>
+</test-run>

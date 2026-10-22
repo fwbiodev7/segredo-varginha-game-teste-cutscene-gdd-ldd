@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\HouseFurniture\\FuscaSteeringColumn.png",
+      "sha256": "c18043b54defd069585675fbda89ce915178fba29ee34a5a8a4c0ab42eb4c19f",
+      "bytes": 773,
+      "size": [
+        32,
+        12
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        0,
+        0,
+        32,
+        12
+      ],
+      "visibleColors": 81,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "d19fa063d2637e5682a2bd48e43ad99dacef5f31a4a30898cebb208b1b174021"
+    }
+  ],
+  "errors": []
+}

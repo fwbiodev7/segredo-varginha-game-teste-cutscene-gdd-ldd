@@ -1,0 +1,40 @@
+{
+  "schema": "unity-slice-plan/v1",
+  "origin": "bottom-left",
+  "image": "sheet.png",
+  "pixelsPerUnit": 100,
+  "sprites": [
+    {
+      "name": "SteeringColumn",
+      "rect": [
+        1,
+        1,
+        34,
+        14
+      ],
+      "pivotNormalized": [
+        0.08823529411764706,
+        0.7142857142857143
+      ],
+      "alignment": "Custom",
+      "durationMs": 100
+    }
+  ],
+  "clips": {
+    "SteeringColumn": {
+      "frames": [
+        "SteeringColumn"
+      ],
+      "loop": false
+    }
+  },
+  "importSettings": {
+    "textureType": "Sprite",
+    "spriteMode": "Multiple",
+    "filterMode": "Point",
+    "mipmaps": false,
+    "compression": "Uncompressed",
+    "wrapMode": "Clamp"
+  },
+  "note": "Import plan only; Unity does not import this JSON automatically. Preserve existing sprite IDs."
+}

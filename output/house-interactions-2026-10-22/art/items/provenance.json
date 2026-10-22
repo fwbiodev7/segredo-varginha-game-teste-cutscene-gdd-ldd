@@ -1,0 +1,10 @@
+{
+  "tool": "built-in image_gen",
+  "sourceSha256": "23aa910f719da64d0f22fcce0fed1db08b3f9957cae0d6fb02d273c2483d1a6a",
+  "normalization": "Alpha bbox crop; nearest native scale; alpha threshold 128; no background removal by color key",
+  "reference": "Assets\\Resources\\Varginha\\IllustratedMaps\\AdultEmptyDivisoes.png",
+  "sourceSize": [
+    1263,
+    1246
+  ]
+}

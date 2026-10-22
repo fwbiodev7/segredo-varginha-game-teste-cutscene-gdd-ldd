@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Game.Managers;
 using Game.UI;
+using Game.Varginha.Experiment;
 using UnityEngine.InputSystem;
 
 namespace Game.Varginha
@@ -47,7 +48,7 @@ namespace Game.Varginha
         private Sprite _speakerPortrait;
         private Vector2 _dialogueScroll;
         private string _activeDialogue;
-        private readonly TypewriterText _dialogueTypewriter = new TypewriterText();
+        private readonly CampaignMessagePresentation _textMessage = new();
         private readonly TypewriterText _rodrigoTypewriter = new TypewriterText();
         private readonly TypewriterText _interactionTypewriter = new TypewriterText();
         private string _lastInteractionInstruction;
@@ -121,6 +122,9 @@ namespace Game.Varginha
 
         private void Update()
         {
+            _textMessage.Tick(Time.unscaledDeltaTime, _isPaused || IsInventoryOpen || VarginhaTravelCinematic.IsTravelling);
+            if (_textMessage.FinishedByVoice) CloseDialogue();
+            if (_isDialogueOpen && !_isPaused && !IsInventoryOpen && (_carDialogue ? VarginhaInputActions.CarPressed : VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact))) AdvanceDialogue();
             if (CampaignInventoryOnly) return;
             if (_edelzio == null) _edelzio = Object.FindAnyObjectByType<EdelzioTopDownController>();
             if (!IsGameplayVisible || VarginhaTravelCinematic.IsTravelling) return;
@@ -208,6 +212,7 @@ namespace Game.Varginha
 
         private void OnDisable()
         {
+            _textMessage.Close();
             CloseBackpack();
             SceneManager.sceneLoaded -= HandleSceneLoaded;
             if (Instance == this) Instance = null;
@@ -218,6 +223,7 @@ namespace Game.Varginha
             CloseBackpack();
             // Este HUD vive junto aos managers; uma nova fase precisa sempre iniciar limpa.
             _isVictoryOpen = false;
+            _textMessage.Close();
             _isDialogueOpen = false;
             _isGameOver = false;
             _isPaused = false;
@@ -338,14 +344,22 @@ namespace Game.Varginha
             _speakerPortrait = VarginhaDialoguePortraits.ForSpeaker(speaker);
             _dialogueScroll = Vector2.zero;
             _activeDialogue = message;
-            _dialogueTypewriter.Set(message);
+            _textMessage.Show(this,speaker,message);
             _isDialogueOpen = true;
         }
 
         public void CloseDialogue()
         {
+            _textMessage.Close();
             _isDialogueOpen = false;
             _carDialogue=false;
+        }
+        private void AdvanceDialogue() { if (_textMessage.Advance()) CloseDialogue(); }
+        public void ShowNotice(string message) => CampaignPickupNotice.Show(message);
+        public void ShowReading(string title,string message)
+        {
+            ShowDialogue(title,message);
+            _textMessage.Show(this,title,message,CampaignMessageKind.Reading);
         }
         public void ShowCarDialogue(string speaker,string message){ShowDialogue(speaker,message);_carDialogue=true;}
 
@@ -385,20 +399,11 @@ namespace Game.Varginha
             if (Game.Varginha.VarginhaTravelCinematic.IsTravelling) return;
             InitStyles();
 
-            _dialogueTypewriter.Tick(38f);
-            _rodrigoTypewriter.Tick(28f);
-            _interactionTypewriter.Tick(42f);
-
-            if ((_isDialogueOpen && _dialogueTypewriter.HasAdvanced) || _rodrigoTypewriter.HasAdvanced)
+            if (!_isPaused)
             {
-                PlayTypewriterBlip();
-            }
-
-            if (_isDialogueOpen && !_carDialogue && Event.current.type == EventType.KeyDown && Event.current.keyCode == KeyCode.Space)
-            {
-                if (_dialogueTypewriter.IsComplete) CloseDialogue();
-                else _dialogueTypewriter.RevealImmediately();
-                Event.current.Use();
+                _rodrigoTypewriter.Tick(28f);
+                _interactionTypewriter.Tick(42f);
+                if (_rodrigoTypewriter.HasAdvanced && !_textMessage.HasVoice) PlayTypewriterBlip();
             }
 
             if (_edelzio == null)
@@ -641,47 +646,9 @@ namespace Game.Varginha
         private void DrawDialogueWindow()
         {
             VarginhaGamepadUI.Begin("hud:dialogue:"+GetEntityId(),true,90,_carDialogue);
-            Rect modal = GetBottomDialogRect(900f, Mathf.Min(280f, Screen.height * .48f));
-            float pad = Mathf.Clamp(modal.width * .055f, 12f, 34f);
-            float buttonHeight = Mathf.Clamp(modal.height * .18f, 30f, 46f);
-            float speakerHeight = Mathf.Clamp(modal.height * .18f, 24f, 40f);
-            _speakerStyle.fontSize = Mathf.Clamp(Mathf.RoundToInt(modal.width / 42f), 9, 17);
-            _dialogueTextStyle.fontSize = Mathf.Clamp(Mathf.RoundToInt(modal.width / 55f), 8, 15);
-            _buttonStyle.fontSize = Mathf.Clamp(Mathf.RoundToInt(modal.width / 48f), 8, 14);
-
-            PixelHUDFrame.Draw(modal, _whiteTex, PanelColor, PanelBorder);
-            GUI.color = Color.white;
-
-            float portraitSize = Mathf.Min(modal.width * .19f, modal.height - buttonHeight - pad * 2f);
-            Rect portrait = new Rect(modal.x + pad, modal.y + pad, portraitSize, portraitSize);
-            PixelHUDFrame.Draw(portrait, _whiteTex, new Color(.06f, .10f, .14f), new Color(.44f, .66f, .66f));
-            VarginhaDialoguePortraits.Draw(new Rect(portrait.x + 6, portrait.y + 6, portrait.width - 12, portrait.height - 12), _speakerPortrait);
-            float textX = portrait.xMax + pad * .7f;
-            float textWidth = modal.xMax - pad - textX;
-            GUI.Label(new Rect(textX, modal.y + pad * .35f, textWidth, speakerHeight), _activeSpeaker, _speakerStyle);
-            Rect textArea = new Rect(textX, modal.y + speakerHeight + pad, textWidth,
-                Mathf.Max(24f, modal.height - speakerHeight - buttonHeight - pad * 2.5f));
-            float contentHeight = _dialogueTextStyle.CalcHeight(new GUIContent(_activeDialogue), textWidth - 18f);
-            _dialogueScroll = VarginhaGamepadUI.BeginScrollView(textArea, _dialogueScroll,
-                new Rect(0, 0, textWidth - 18f, Mathf.Max(textArea.height, contentHeight)));
-            GUI.Label(new Rect(0, 0, textWidth - 18f, Mathf.Max(textArea.height, contentHeight)), _dialogueTypewriter.VisibleText, _dialogueTextStyle);
-            VarginhaGamepadUI.EndScrollView();
-
-            float buttonWidth = Mathf.Min(modal.width - pad * 2f, 250f);
-            if (VarginhaGamepadUI.Button(new Rect(modal.x + (modal.width - buttonWidth) * .5f, modal.yMax - buttonHeight - pad * .55f, buttonWidth, buttonHeight), "CONTINUAR", _buttonStyle))
-            {
-                if (_dialogueTypewriter.IsComplete) CloseDialogue();
-                else _dialogueTypewriter.RevealImmediately();
-            }
-
-            if (_dialogueTypewriter.IsComplete)
-            {
-                float blink = Mathf.PingPong(Time.unscaledTime * 3.5f, 1f);
-                if (blink > 0.25f)
-                {
-                    GUI.Label(new Rect(modal.xMax - pad - 120f, modal.yMax - buttonHeight - pad * .45f, 110f, 20f), "["+VarginhaInputActions.InteractLabel+"] ▼", _hotbarNumberStyle);
-                }
-            }
+            var before = ExperimentGUI.BeginCanvas(); ExperimentGUI.Init();
+            if (CampaignMessageBox.Draw(_textMessage,_carDialogue)) AdvanceDialogue();
+            GUI.matrix = before;
         }
 
         private static AudioClip _typewriterClip;

@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\HouseFurniture\\HouseFurnitureBacks.png",
+      "sha256": "f28572c97488edcf39b4060ab1fb00b86a4f12017bc813a5cac9d2781d402e04",
+      "bytes": 71349,
+      "size": [
+        634,
+        394
+      ],
+      "mode": "RGBA",
+      "bbox": [
+        32,
+        15,
+        573,
+        389
+      ],
+      "visibleColors": 11649,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "c604b923b33aaac3929131d22275e35a8508d6582b0b546fbdcf1575f70d781c"
+    }
+  ],
+  "errors": []
+}

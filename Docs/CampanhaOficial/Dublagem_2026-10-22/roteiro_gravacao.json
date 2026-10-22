@@ -1,0 +1,1379 @@
+[
+  {
+    "id": "fala_a8f3bd3534fbe71c",
+    "personagem": "Apresentador do noticiário",
+    "cena": "A01 Jornal e TV de 1996",
+    "direcao": "Sóbrio, jornal local fictício. Sem tom de revelação.",
+    "fala": "Moradores de Varginha relatam ter visto uma criatura em diferentes pontos da cidade.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_958f9f785fa2bb43",
+    "personagem": "Apresentador do noticiário",
+    "cena": "A01 Jornal e TV de 1996",
+    "direcao": "Cauteloso. Não confirmar nave nem origem da criatura.",
+    "fala": "Os relatos ainda são contraditórios. Até o momento, não há uma explicação para o que foi visto.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_7f97dc9aec7c5559",
+    "personagem": "Apresentador do noticiário",
+    "cena": "A01 Jornal e TV de 1996",
+    "direcao": "Encerrar a reportagem normalmente, antes da falha de sinal.",
+    "fala": "Nossa equipe continua acompanhando o caso. Voltamos a qualquer momento com novas informações.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_93d75bd803f9bf58",
+    "personagem": "Edelzio criança",
+    "cena": "A02 A casa em 1996",
+    "direcao": "Seis anos, curioso, observando a TV antes do apagão.",
+    "fala": "Será que alguém viu ela de perto?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_635c3e665d2b29ef",
+    "personagem": "Edelzio criança",
+    "cena": "A02 A casa em 1996",
+    "direcao": "Baixo, concentrado no desenho. Sem conhecimento do futuro.",
+    "fala": "Eu vou desenhar antes que eu esqueça.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_fbd612f16dc00412",
+    "personagem": "Edelzio criança",
+    "cena": "A02 A casa em 1996",
+    "direcao": "Só depois da falha de energia, surpresa contida.",
+    "fala": "Ué... a televisão quebrou?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_2c92b0c2fa7ef621",
+    "personagem": "Edelzio criança",
+    "cena": "A02 A casa em 1996",
+    "direcao": "Ao notar o brilho pela janela. Curiosidade vence o receio.",
+    "fala": "Tem uma luz lá fora.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_9f678cad7f129b53",
+    "personagem": "Edelzio",
+    "cena": "A03 Rotina das sete da manhã",
+    "direcao": "Acordando, cotidiano. Conversa consigo mesmo.",
+    "fala": "Sete horas. Se eu sair logo, ainda chego antes da turma.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_e223f0a5aeeb2df9",
+    "personagem": "Edelzio",
+    "cena": "A03 Rotina das sete da manhã",
+    "direcao": "Na pia, pensativo. Não narrar botões nem tutorial.",
+    "fala": "Aquele sonho de novo... Logo hoje.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_f8881cefe11e98da",
+    "personagem": "Edelzio",
+    "cena": "A03 Rotina das sete da manhã",
+    "direcao": "Antes de beber o café. Tom familiar, sem pressa teatral.",
+    "fala": "Um café e eu já vou.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_bbf065ddcea3fbc8",
+    "personagem": "Edelzio",
+    "cena": "A03 Rotina das sete da manhã",
+    "direcao": "Ao preparar o notebook. Ainda sem explicar a anomalia.",
+    "fala": "O material da aula está aqui. Só falta guardar tudo.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_816490092779e773",
+    "personagem": "Edelzio",
+    "cena": "A03 Rotina das sete da manhã",
+    "direcao": "Se a animação mostrar o desenho da árvore na tela.",
+    "fala": "Espera... esse desenho não estava aberto.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_7bb1f3e8066a77b4",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Adulto, 36 anos.",
+    "fala": "Deixei a chave aqui. Falta buscar a mochila no quarto.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:74"
+  },
+  {
+    "id": "fala_ebb30bd913523b6d",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Adulto, 36 anos.",
+    "fala": "A chave está guardada comigo. Não vou deixá-la aqui outra vez.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:76"
+  },
+  {
+    "id": "fala_e74fec7b70c63a91",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Adulto, 36 anos.",
+    "fala": "A caixa continua fechada. Antes de mexer, preciso entender o que mudou na casa.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:92"
+  },
+  {
+    "id": "fala_6c094ae5dc65f4ef",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Adulto, 36 anos.",
+    "fala": "Minha caixa de brinquedos de 1996. Faz anos que não abro. Preciso preparar a aula.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:92"
+  },
+  {
+    "id": "fala_b51af4553ee27766",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Adulto, 36 anos.",
+    "fala": "A porta não foi aberta. O papel parece vir da minha caixa... Agora escuto arranhões debaixo da cama.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:110"
+  },
+  {
+    "id": "fala_37bd4a7aaee1ac69",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Adulto, 36 anos.",
+    "fala": "Guardei a chave, o caderno e o primeiro fragmento de mapa. A mensagem continua ali: ELA AINDA ESTÁ AQUI.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:229"
+  },
+  {
+    "id": "fala_a43d705d58389c5a",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Adulto, 36 anos.",
+    "fala": "Investigue a caixa sob a cama e organize as páginas para encontrar a chave.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:240"
+  },
+  {
+    "id": "fala_5a0f722c0e9e1a66",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Adulto, 36 anos.",
+    "fala": "Vou chegar pelo lado livre da cadeira para preparar o notebook.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:297"
+  },
+  {
+    "id": "fala_7f13ef90eda56765",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Adulto, 36 anos.",
+    "fala": "A chave não está na mesa do café. Não há nada no chão ao redor. A observação ficou registrada no caderno.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:75"
+  },
+  {
+    "id": "fala_b2063562def83c8d",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Adulto, 36 anos.",
+    "fala": "exitclue A observação ficou registrada no caderno.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:82"
+  },
+  {
+    "id": "fala_0da7451a840080f7",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Adulto, 36 anos.",
+    "fala": "O trinco continua fechado por dentro. Não abri esta porta desde que acordei. A observação ficou registrada no caderno.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:82"
+  },
+  {
+    "id": "fala_fcc040800101c01c",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Adulto, 36 anos.",
+    "fala": "Um pedacinho de papel envelhecido ficou preso junto ao quarto. Há um traço azul, igual ao das minhas anotações de infância. A observação ficou registrada no caderno.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:82"
+  },
+  {
+    "id": "fala_6c01031966ebdf99",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Depositando a chave. Natural, sem presságio exagerado.",
+    "fala": "Vou deixar a chave na mesa do café. Depois pego a mochila.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_03ddf7489ff4a965",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Volta à mesa e percebe a ausência. Pequena pausa depois de aqui.",
+    "fala": "Eu deixei a chave aqui... Tenho certeza.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_34b580b7c2721074",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Inspeciona a porta. Observação, sem conclusão sobrenatural.",
+    "fala": "A porta está trancada por dentro. Ninguém saiu por aqui.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_e7d366720af517f7",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Encontra o papel. Reconhecimento começa, sem revelar a solução completa.",
+    "fala": "Esse traço azul... Parece o do meu caderno de criança.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_b3a838d2e590964e",
+    "personagem": "Edelzio",
+    "cena": "A04 A chave na mesa do café",
+    "direcao": "Depois de relacionar as pistas e ouvir os arranhões.",
+    "fala": "O barulho vem debaixo da cama.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_680428dad014e257",
+    "personagem": "Edelzio",
+    "cena": "A05 A caixa e o caderno",
+    "direcao": "Ao abrir a caixa. Confusão crescente, sem nomear o responsável.",
+    "fala": "Como a chave veio parar aqui dentro?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_852bf61755f2c222",
+    "personagem": "Edelzio",
+    "cena": "A05 A caixa e o caderno",
+    "direcao": "Reconhece o caderno e segura a emoção.",
+    "fala": "Eu não abria essa caixa há anos.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_1d240aafb2762eea",
+    "personagem": "Edelzio",
+    "cena": "A05 A caixa e o caderno",
+    "direcao": "Leitura da primeira página. Texto literal do GDD.",
+    "fala": "Eu sei que vi alguma coisa.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_f13bfd6d71551662",
+    "personagem": "Edelzio",
+    "cena": "A05 A caixa e o caderno",
+    "direcao": "Só após o puzzle revelar a escrita recente. Texto literal do GDD.",
+    "fala": "Ela ainda está aqui.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_0336516338fd3486",
+    "personagem": "Edelzio",
+    "cena": "A05 A caixa e o caderno",
+    "direcao": "Depois da leitura, sem certeza sobre autoria ou origem.",
+    "fala": "A letra é minha. Mas eu não lembro de escrever isso.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_01345e370c5a0298",
+    "personagem": "Edelzio criança",
+    "cena": "A06 O surto do Fusca",
+    "direcao": "A mesma pessoa aos seis anos em 1996.",
+    "fala": "Não deixa ela sair.",
+    "estado": "E",
+    "origem": "Docs/CampanhaOficial/Referencias/GDD_Usuario.md:258"
+  },
+  {
+    "id": "fala_4e0356946621cf04",
+    "personagem": "Edelzio",
+    "cena": "A06 O surto do Fusca",
+    "direcao": "No começo da viagem, tentando manter a rotina.",
+    "fala": "Chego à escola, dou a aula... Depois eu olho esse caderno com calma.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_20bc5e930169500b",
+    "personagem": "Edelzio",
+    "cena": "A06 O surto do Fusca",
+    "direcao": "Primeira falha do rádio. Incômodo, ainda procurando explicação comum.",
+    "fala": "Não é possível. Agora o rádio também?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_9c3f44769f033663",
+    "personagem": "Edelzio",
+    "cena": "A06 O surto do Fusca",
+    "direcao": "Quando o painel e o motor falham. Frase curta, sem gritar continuamente.",
+    "fala": "Calma... Encosta. Encosta.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_582dfd2aef85fbd7",
+    "personagem": "Edelzio",
+    "cena": "A06 O surto do Fusca",
+    "direcao": "Depois da voz infantil. Reconhecimento incompleto.",
+    "fala": "Essa voz... era a minha?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_d1398065a10b7909",
+    "personagem": "Edelzio",
+    "cena": "A06 O surto do Fusca",
+    "direcao": "Soltando a ignição quente. Reação física curta.",
+    "fala": "Ah! Está queimando!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_9e7dc37be39c5288",
+    "personagem": "Edelzio",
+    "cena": "A06 O surto do Fusca",
+    "direcao": "Após o silêncio e o retorno espontâneo do motor.",
+    "fala": "Eu não encostei na chave.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_ad59095502327f8b",
+    "personagem": "Edelzio",
+    "cena": "A06 O surto do Fusca",
+    "direcao": "Chegando à Industrial. Recuperar o fôlego, disfarçar o abalo.",
+    "fala": "Preciso falar com alguém. Mas primeiro, a turma.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_e2a4a5b1b8618cce",
+    "personagem": "Renan",
+    "cena": "A07 A Industrial",
+    "direcao": "Apoio técnico e professor já conhecido.",
+    "fala": "23:23. Essa anotação também aparece nos registros da cidade.\nLeve a fotografia à biblioteca; pode haver outra parte dessa história lá.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:252"
+  },
+  {
+    "id": "fala_bbcb7ed80eb16994",
+    "personagem": "Renan",
+    "cena": "A07 A Industrial",
+    "direcao": "Apoio técnico e professor já conhecido.",
+    "fala": "Edelzio, encontrei uma fotografia antiga ligada ao caso de 1996. Pode abrir meu notebook na mesa. Observe o portão: há algo estranho nela.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:254"
+  },
+  {
+    "id": "fala_4eb73f08d22deda7",
+    "personagem": "Renan",
+    "cena": "A07 A Industrial",
+    "direcao": "Apoio técnico e professor já conhecido.",
+    "fala": "Reabra a mesma fotografia no meu notebook. Dois grupos iguais de números aparecem na margem, separados por dois pontos.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:254"
+  },
+  {
+    "id": "fala_098a6465f983f550",
+    "personagem": "Edelzio",
+    "cena": "A07 A Industrial",
+    "direcao": "Adulto, 36 anos.",
+    "fala": "Vou conversar com Renan antes de usar o notebook dele.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:260"
+  },
+  {
+    "id": "fala_5639cb916fdbadea",
+    "personagem": "Edelzio",
+    "cena": "A07 A Industrial",
+    "direcao": "Adulto, 36 anos.",
+    "fala": "23:23. Vou mostrar essa descoberta a Renan.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:263"
+  },
+  {
+    "id": "fala_3f770a9f96cca77e",
+    "personagem": "Renan",
+    "cena": "A07 A Industrial",
+    "direcao": "Apoio técnico e professor já conhecido.",
+    "fala": "Observe a pessoa no portão. Não há registro de ninguém ali no momento da fotografia.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:456"
+  },
+  {
+    "id": "fala_d4b16974a0ebed72",
+    "personagem": "Renan",
+    "cena": "A07 A Industrial",
+    "direcao": "Apoio técnico e professor já conhecido.",
+    "fala": "As duas anotações na margem são iguais: 23 e 23. Com os dois pontos entre elas, parecem um horário.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:456"
+  },
+  {
+    "id": "fala_8a433f4e332d7f5a",
+    "personagem": "Renan",
+    "cena": "A07 A Industrial",
+    "direcao": "Apoio técnico e professor já conhecido.",
+    "fala": "Os registros da biblioteca podem ajudar a entender a origem dessa imagem. Guarde a cópia no seu caderno.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:456"
+  },
+  {
+    "id": "fala_1e63fc5c1e673a3b",
+    "personagem": "Renan",
+    "cena": "A07 A Industrial",
+    "direcao": "Apoio técnico e professor já conhecido.",
+    "fala": "Estou aqui na Industrial, Edelzio. Os arquivos mudaram, mas os documentos físicos permitem conferir a verdade. No laboratório podemos testar o mapa, a cronologia e o código da fotografia.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaExperimentalCharacters.cs:54"
+  },
+  {
+    "id": "fala_ecb8a7e4e670092c",
+    "personagem": "Yasmin",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "Estou conferindo arquivos. A fotografia que Renan encontrou é de 1996.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315"
+  },
+  {
+    "id": "fala_563a8b4f2118ef2b",
+    "personagem": "Yasmin",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326"
+  },
+  {
+    "id": "fala_61f21f0074f11a78",
+    "personagem": "Pedro",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "Estou organizando o projeto. O notebook do professor está na mesa junto ao quadro.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315"
+  },
+  {
+    "id": "fala_94a7d500e2fc0ff0",
+    "personagem": "Pedro",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326"
+  },
+  {
+    "id": "fala_13712f87ed3cc6b3",
+    "personagem": "Matias",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "Estou comparando imagens. Tem alguém naquelo portão? É difícil distinguir o rosto.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315"
+  },
+  {
+    "id": "fala_5b441acf926f73d7",
+    "personagem": "Matias",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326"
+  },
+  {
+    "id": "fala_653dfbe3566c05a5",
+    "personagem": "Fabio",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "Estou anotando os resultados. O portão me chamou atenção antes de qualquer outra coisa.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315"
+  },
+  {
+    "id": "fala_7337041fdb99ac61",
+    "personagem": "Fabio",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326"
+  },
+  {
+    "id": "fala_d0e1d4abf5ed2eb5",
+    "personagem": "Marcos",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "Estou fazendo a pesquisa. Uma imagem pode guardar uma história inteira.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315"
+  },
+  {
+    "id": "fala_bfc1a43019aa63fd",
+    "personagem": "Marcos",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326"
+  },
+  {
+    "id": "fala_991e5f678faa38e0",
+    "personagem": "Anna Sabia",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "Estou revisando documentos. A sombra não parece combinar com a luz da fotografia.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315"
+  },
+  {
+    "id": "fala_d5f41ae3c873c26e",
+    "personagem": "Anna Sabia",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326"
+  },
+  {
+    "id": "fala_c012708c940af1e6",
+    "personagem": "Ana Tavares",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "Estou verificando a legenda. Os dois grupos na margem da foto são iguais.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315"
+  },
+  {
+    "id": "fala_b3fdb25fffa836d4",
+    "personagem": "Ana Tavares",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326"
+  },
+  {
+    "id": "fala_ec049d673987744d",
+    "personagem": "Luis Miguel Messias",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "Estou levando material à aula. O projetor piscou com o cabo conectado. Renan também viu.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315"
+  },
+  {
+    "id": "fala_051db73741de7701",
+    "personagem": "Luis Miguel Messias",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326"
+  },
+  {
+    "id": "fala_fc7892f20af8381e",
+    "personagem": "Luis Martins",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "Estou conversando no intervalo. Renan está mostrando documentos antigos à turma.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315"
+  },
+  {
+    "id": "fala_174654d00a768cbd",
+    "personagem": "Luis Martins",
+    "cena": "A07 A Industrial",
+    "direcao": "Aluno da Industrial.",
+    "fala": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326"
+  },
+  {
+    "id": "fala_add73e0386381d5f",
+    "personagem": "Edelzio",
+    "cena": "A07 A Industrial",
+    "direcao": "Professor cumprimentando a sala, tentando soar normal.",
+    "fala": "Bom dia, pessoal. Vamos conferir o que vocês fizeram?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_e40d542702de198d",
+    "personagem": "Renan",
+    "cena": "A07 A Industrial",
+    "direcao": "Percebe que Edelzio chegou preocupado, sem já saber do carro.",
+    "fala": "Bom dia, Edelzio. Aconteceu alguma coisa?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_9da3809d800937bb",
+    "personagem": "Edelzio",
+    "cena": "A07 A Industrial",
+    "direcao": "Responde sem contar toda a experiência para os alunos.",
+    "fala": "Tive um problema no caminho. Depois eu te conto.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_89533a71f054a85c",
+    "personagem": "Edelzio",
+    "cena": "A07 A Industrial",
+    "direcao": "Ao estudar a foto. Formula o problema, não entrega resposta.",
+    "fala": "A imagem é antiga. Esse detalhe na margem é que não combina.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_4b80a27cdcb9f8d6",
+    "personagem": "Edelzio",
+    "cena": "A07 A Industrial",
+    "direcao": "Somente depois de o jogador acertar o horário.",
+    "fala": "Vinte e três e vinte e três. O mesmo número, duas vezes.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_888d0b91f66f2696",
+    "personagem": "Edelzio",
+    "cena": "A08 Os fragmentos do mapa",
+    "direcao": "Primeiro contato com o mapa de bifurcações. Orienta a observação.",
+    "fala": "Vou comparar o mapa com os registros antes de escolher o caminho.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_fb9b39ee6242253c",
+    "personagem": "Rodrigo",
+    "cena": "A08 Os fragmentos do mapa",
+    "direcao": "Guia da interface. Só quando o jogador pedir a primeira dica.",
+    "fala": "Observe o terreno desenhado. A descrição das pistas ajuda a decidir em cada bifurcação.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_24a0690b5b60c1a8",
+    "personagem": "Rodrigo",
+    "cena": "A08 Os fragmentos do mapa",
+    "direcao": "Segunda dica, sem dizer a sequência de respostas.",
+    "fala": "Confira onde dá para atravessar a água e por onde se entra na capela.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_0ef36ffd87edfc33",
+    "personagem": "Edelzio",
+    "cena": "A09 A mata",
+    "direcao": "Reconhece a marca da primeira bifurcação, em voz baixa.",
+    "fala": "A árvore do desenho... É aqui.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_90689650e29c5b35",
+    "personagem": "Edelzio",
+    "cena": "A09 A mata",
+    "direcao": "Durante a perseguição. Respiração curta, sem anunciar monstros confirmados.",
+    "fala": "Tem alguma coisa atrás de mim.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_a678196580027add",
+    "personagem": "Rodrigo",
+    "cena": "A09 A mata",
+    "direcao": "Dica contextual de fuga. Clara, curta, sem interferir fisicamente.",
+    "fala": "Procure abrigo. Espere a presença se afastar antes de continuar.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_4b4bf6870d815f8b",
+    "personagem": "Padre Fábio",
+    "cena": "A10 O arquivo de Fábio",
+    "direcao": "Guardião dos registros.",
+    "fala": "siga as marcas para entender por que veio até aqui.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignExpansionController.cs:213"
+  },
+  {
+    "id": "fala_1d1d01bbfd1bdffc",
+    "personagem": "Padre Fábio",
+    "cena": "A10 O arquivo de Fábio",
+    "direcao": "Guardião dos registros.",
+    "fala": "eu esperava que você se lembrasse. Venha ao arquivo; há um registro com seu nome.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignExpansionController.cs:214"
+  },
+  {
+    "id": "fala_ec2682021e042812",
+    "personagem": "Padre Fábio",
+    "cena": "A10 O arquivo de Fábio",
+    "direcao": "Guardião dos registros.",
+    "fala": "confira os arquivos antes de me cobrar uma resposta.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignExpansionController.cs:223"
+  },
+  {
+    "id": "fala_aeb22dca140d175a",
+    "personagem": "Edelzio",
+    "cena": "A10 O arquivo de Fábio",
+    "direcao": "Ao ser reconhecido pelo padre. Estranhamento.",
+    "fala": "O senhor sabe quem eu sou?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_7469f32fc92f4954",
+    "personagem": "Padre Fábio",
+    "cena": "A10 O arquivo de Fábio",
+    "direcao": "Evasivo, preocupado. Não entregar acordo, exploração ou final nesta cena.",
+    "fala": "Seu nome está nos registros, Edelzio. Eu esperava que você voltasse a procurá-los.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_25b9e4f109d90228",
+    "personagem": "Edelzio",
+    "cena": "A10 O arquivo de Fábio",
+    "direcao": "Pede evidência, em vez de aceitar uma explicação pronta.",
+    "fala": "Então me mostre. Eu preciso ver o que está escrito.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_f03be6f8d77b2f09",
+    "personagem": "Padre Fábio",
+    "cena": "A10 O arquivo de Fábio",
+    "direcao": "Aponta os registros sem resolver a combinação do livro.",
+    "fala": "Compare o índice com a ficha. O documento mais antigo explica a origem, não a sua data de registro.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_4429aa0fef1dd70b",
+    "personagem": "Edelzio",
+    "cena": "A10 O arquivo de Fábio",
+    "direcao": "Só depois da revelação da âncora ou selo vivo.",
+    "fala": "Meu nome... Aqui? Desde 1996?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_8680493e81165ecc",
+    "personagem": "Padre Fábio",
+    "cena": "A10 O arquivo de Fábio",
+    "direcao": "Grave, ainda com informação incompleta.",
+    "fala": "A ligação não ficou no passado. Os sinais que você viu agora vêm dela.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_1e5b0598491ec16e",
+    "personagem": "Edelzio",
+    "cena": "A10 O arquivo de Fábio",
+    "direcao": "Variação de escolha calma. Gravar separada da confrontação.",
+    "fala": "Eu quero entender. Comece pelo que o senhor sabe de verdade.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_71b2d8122ac03b4d",
+    "personagem": "Edelzio",
+    "cena": "A10 O arquivo de Fábio",
+    "direcao": "Variação de confrontação, indignação contida.",
+    "fala": "Se o senhor sabia disso, por que nunca me contou?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_3724924d3c612006",
+    "personagem": "Ouzana",
+    "cena": "A11 O laboratório de Ouzana",
+    "direcao": "Bióloga.",
+    "fala": "o controle é neutro, o resíduo reage. A comparação confirma as marcas de contenção. Leve o reagente à oficina; as leituras ficaram no caderno.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignExpansionController.cs:227"
+  },
+  {
+    "id": "fala_2394648da8eb05fe",
+    "personagem": "Ouzana",
+    "cena": "A11 O laboratório de Ouzana",
+    "direcao": "Científica, objetiva. Antes do teste, evitar diagnóstico fechado.",
+    "fala": "Me mostre as amostras e os registros. Primeiro a gente compara, depois tenta explicar.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_5c35d8d1a580a3be",
+    "personagem": "Edelzio",
+    "cena": "A11 O laboratório de Ouzana",
+    "direcao": "Relata sintomas observados sem inventar causalidade.",
+    "fala": "O rádio falhou, o painel disparou e a ignição esquentou. Depois o motor voltou sozinho.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_9bd6b4b129c5ffc7",
+    "personagem": "Ouzana",
+    "cena": "A11 O laboratório de Ouzana",
+    "direcao": "Na bancada, ensina um critério de comparação.",
+    "fala": "Esta é a amostra de controle. Sem ela, qualquer reação pode enganar a gente.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_8ed0bd3ade787083",
+    "personagem": "Ouzana",
+    "cena": "A11 O laboratório de Ouzana",
+    "direcao": "Após a reação do resíduo, surpresa breve, não discurso.",
+    "fala": "Isso não deveria reagir assim.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_1a855d8fb1720d37",
+    "personagem": "Edelzio",
+    "cena": "A11 O laboratório de Ouzana",
+    "direcao": "Pergunta sem apresentar a resposta ao jogador.",
+    "fala": "O que esse brilho está mostrando?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_a5d4d0213fbc785c",
+    "personagem": "Ouzana",
+    "cena": "A11 O laboratório de Ouzana",
+    "direcao": "Entrega do reagente após a análise. Não equivale a magia genérica.",
+    "fala": "O reagente torna as marcas visíveis. Use onde houver indício, não em qualquer superfície.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_49caeab543766109",
+    "personagem": "Edelzio",
+    "cena": "A12 O Fusca marcado",
+    "direcao": "Depois de revelar os símbolos, sem dizer a ordem antes do jogador.",
+    "fala": "As marcas do carro aparecem nos registros da trilha.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_34bccb1a6884505a",
+    "personagem": "Ouzana",
+    "cena": "A12 O Fusca marcado",
+    "direcao": "Inspeção posterior às marcas. Fala de observação, não de origem definitiva.",
+    "fala": "O padrão continua na lataria. O estabilizador ajudou o carro, mas não removeu a ligação.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_8057e9ad20fedbde",
+    "personagem": "Renan",
+    "cena": "A13 Arquivos e cópias preservadas",
+    "direcao": "Apoio técnico e professor já conhecido.",
+    "fala": "O papel e o original concordam. A cópia alterada apagou a indicação lateral e a data. Consulte as três versões no notebook.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignContinuationController.cs:295"
+  },
+  {
+    "id": "fala_eb1a10f0572033c7",
+    "personagem": "Renan",
+    "cena": "A13 Arquivos e cópias preservadas",
+    "direcao": "Apoio técnico e professor já conhecido.",
+    "fala": "A cópia impressa não mudou. Guardei o original e o arquivo alterado. Vamos comparar antes de perder outra pista.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignContinuationDefinition.cs:39"
+  },
+  {
+    "id": "fala_13d27e111dc9af50",
+    "personagem": "Edelzio",
+    "cena": "A13 Arquivos e cópias preservadas",
+    "direcao": "Quando a imagem digital diverge da cópia física.",
+    "fala": "Não foi isso que a gente viu antes.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_b2f664cb75f12d97",
+    "personagem": "Renan",
+    "cena": "A13 Arquivos e cópias preservadas",
+    "direcao": "Calmo, metódico. Sem alegar controle total da interferência.",
+    "fala": "Por isso eu guardei as cópias. Vamos comparar uma coisa de cada vez.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_0ce715b05e8f5fd1",
+    "personagem": "Renan",
+    "cena": "A13 Arquivos e cópias preservadas",
+    "direcao": "Depois da comparação feita pelo jogador.",
+    "fala": "A alteração está aqui. O original e a impressão ainda concordam entre si.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_385147812be2ad7b",
+    "personagem": "Edelzio",
+    "cena": "A13 Arquivos e cópias preservadas",
+    "direcao": "Ao decidir seguir a planta reconstruída.",
+    "fala": "Se mudaram o acesso no arquivo, eu vou conferir no lugar.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_61cb565453c3f8df",
+    "personagem": "Edelzio",
+    "cena": "A14 O casarão",
+    "direcao": "Diante dos registros de 1898. Não tratar Zé Gomes como contemporâneo.",
+    "fala": "Mil oitocentos e noventa e oito. Isso começou muito antes daquela noite.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_a3675b5e444fd1f5",
+    "personagem": "Edelzio",
+    "cena": "A14 O casarão",
+    "direcao": "Só após achar os indícios da participação dos guardiões. Citação do LDD.",
+    "fala": "Você sabia disso?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_e99cdea111206d5a",
+    "personagem": "Padre Fábio",
+    "cena": "A14 O casarão",
+    "direcao": "Resposta retida. Uma pausa respirada, sem fala inventada para preencher o silêncio.",
+    "fala": "[Silêncio de dois segundos. Respiração contida.]",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_75908e39b91e7295",
+    "personagem": "Padre Fábio",
+    "cena": "A15 A página escondida",
+    "direcao": "Guardião dos registros.",
+    "fala": "Estes são os registros que escondemos. Compare o início do mecanismo, a transferência de 1996 e a falha atual. A página ocultada está no Tombo.",
+    "estado": "E",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignContinuationController.cs:278"
+  },
+  {
+    "id": "fala_d97ab48f54c56471",
+    "personagem": "Padre Fábio",
+    "cena": "A15 A página escondida",
+    "direcao": "Após reconstruir a linha temporal, assume sua participação no ocultamento.",
+    "fala": "Eu escondi a página. Não vou pedir que você confie em mim sem ler o que ela diz.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_b290e8a3ff9db069",
+    "personagem": "Edelzio",
+    "cena": "A15 A página escondida",
+    "direcao": "Tenso, precisa distinguir documento de lembrança.",
+    "fala": "Eu vou ler. E depois o senhor vai me explicar por que escondeu.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_a41551310fae4b60",
+    "personagem": "Edelzio criança",
+    "cena": "A16 A segunda lembrança",
+    "direcao": "Depois de ver a criatura recuar. Ainda sem acordo completo.",
+    "fala": "Você está machucada?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_53bc5f651d87ccbd",
+    "personagem": "Edelzio",
+    "cena": "A16 A segunda lembrança",
+    "direcao": "Após a memória, percebe a diferença sem concluir a revelação final cedo.",
+    "fala": "Ela recuou... Não foi assim que eu lembrava.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_cfe205714bb97797",
+    "personagem": "Ouzana",
+    "cena": "A17 A descida",
+    "direcao": "Lendo a área inundada. Alerta baseado no cenário, sem instruir a solução inteira.",
+    "fala": "A água encosta nos condutores. Confiram o circuito antes de tocar no painel.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_98b0868f508e7ff0",
+    "personagem": "Renan",
+    "cena": "A17 A descida",
+    "direcao": "Mantém o apoio técnico sem se tornar onisciente.",
+    "fala": "Eu acompanho a alimentação. Me avisem se o sinal mudar.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_0b55b7a653ea74c4",
+    "personagem": "Edelzio",
+    "cena": "A17 A descida",
+    "direcao": "Diante da mudança da arquitetura, estranheza baixa.",
+    "fala": "Isso aqui já não parece uma construção.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_d1963b41b7df241f",
+    "personagem": "Edelzio",
+    "cena": "A18 A criatura ferida",
+    "direcao": "Só após comparar os registros humanos, ferimentos e leitura do reagente.",
+    "fala": "Você está tentando voltar.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_d20c6271b6ecd787",
+    "personagem": "Ouzana",
+    "cena": "A18 A criatura ferida",
+    "direcao": "Após confirmar os dois circuitos. Separar retorno de contenção.",
+    "fala": "A passagem e o selo são coisas diferentes. Abrir uma não significa romper o outro agora.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_cd900fa26c834c8a",
+    "personagem": "Edelzio",
+    "cena": "A18 A criatura ferida",
+    "direcao": "Compreensão cresce, sem transformar a criatura no alvo de extermínio.",
+    "fala": "A gente está olhando para uma prisão.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_ddfaa9581fd68854",
+    "personagem": "Edelzio criança",
+    "cena": "A19 A lembrança do acordo",
+    "direcao": "Apenas na lembrança completa, nunca no prólogo inicial.",
+    "fala": "Se eu ajudar, você consegue voltar pra casa?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_32cfde34ddeb14d1",
+    "personagem": "Edelzio criança",
+    "cena": "A19 A lembrança do acordo",
+    "direcao": "Receio infantil. A escolha é temporária, não promessa de sacrifício eterno.",
+    "fala": "Eu seguro... mas só até você passar, tá?",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_8af2c7578623352f",
+    "personagem": "Edelzio",
+    "cena": "A19 A lembrança do acordo",
+    "direcao": "Depois de recuperar a lembrança inteira. Lucidez, não triunfo.",
+    "fala": "Eu aceitei ajudar. Não aceitei ficar preso para sempre.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_5230cb03692d6e5f",
+    "personagem": "Padre Fábio",
+    "cena": "A19 A lembrança do acordo",
+    "direcao": "Assume a manutenção posterior da ligação, sem apagar a escolha original da criança.",
+    "fala": "A ligação devia terminar com o retorno. Nós a mantivemos.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_ce2590971970e91d",
+    "personagem": "Renan",
+    "cena": "A20 A manifestação final",
+    "direcao": "Chamada de apoio cyber. Curta para não cobrir a ação.",
+    "fala": "Vou interromper o sinal. Aproveita a abertura!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_2871df3e750d2ccd",
+    "personagem": "Ouzana",
+    "cena": "A20 A manifestação final",
+    "direcao": "Arremesso do frasco. Aviso antes da área persistente.",
+    "fala": "Afastem-se do frasco!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_586f4b0526ab41c4",
+    "personagem": "Padre Fábio",
+    "cena": "A20 A manifestação final",
+    "direcao": "Ativação do escudo. Firme, sem voz abafada artificialmente.",
+    "fala": "Fiquem perto. Eu protejo vocês!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_0c57cde468492330",
+    "personagem": "Edelzio",
+    "cena": "A20 A manifestação final",
+    "direcao": "Orientação após as leituras, distingue manifestação de entidade.",
+    "fala": "Segurem a manifestação. Eu vou estabilizar a passagem!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_6a8b1cd0385e9e2e",
+    "personagem": "Yasmin",
+    "cena": "A20 A manifestação final",
+    "direcao": "Uma chamada breve. Não acrescenta poder ou personalidade canônica.",
+    "fala": "Professor, estou pronta!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_4038c7771a040aa3",
+    "personagem": "Pedro",
+    "cena": "A20 A manifestação final",
+    "direcao": "Uma chamada breve, em cooperação.",
+    "fala": "Pode contar comigo!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_1eca478b850d7e9c",
+    "personagem": "Matias",
+    "cena": "A20 A manifestação final",
+    "direcao": "Observando uma janela real de recuperação.",
+    "fala": "Agora! Ela abriu a guarda!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_33beba429ed35806",
+    "personagem": "Fabio",
+    "cena": "A20 A manifestação final",
+    "direcao": "Aluno Fabio, voz diferente do Padre Fábio. Aviso de perigo.",
+    "fala": "Cuidado com o chão!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_6432258ef3c06aca",
+    "personagem": "Marcos",
+    "cena": "A20 A manifestação final",
+    "direcao": "Só quando o ataque estiver disponível. Sem dizer tempo fixo.",
+    "fala": "Estou pronto de novo!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_6dfecb49833f8fd5",
+    "personagem": "Anna Sabia",
+    "cena": "A20 A manifestação final",
+    "direcao": "Apoio curto, sem se sobrepor ao diálogo principal.",
+    "fala": "Eu acompanho você!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_6092519c7fe86013",
+    "personagem": "Ana Tavares",
+    "cena": "A20 A manifestação final",
+    "direcao": "Aviso de área perigosa.",
+    "fala": "Sai dessa área!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_fc540d171aa67a26",
+    "personagem": "Luis Miguel Messias",
+    "cena": "A20 A manifestação final",
+    "direcao": "Chamada de ajuda, sem declarar resultado antes do impacto.",
+    "fala": "Estou indo ajudar!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_ce34d35d6eb2cdbc",
+    "personagem": "Luis Martins",
+    "cena": "A20 A manifestação final",
+    "direcao": "Encerramento de ação, apenas no evento confirmado.",
+    "fala": "Consegui abrir espaço!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_324f26d67ece00a6",
+    "personagem": "Ouzana",
+    "cena": "A21 O retorno e o epílogo",
+    "direcao": "Depois da passagem estabilizada, orienta a sequência final.",
+    "fala": "A passagem está estável. Mantenha a ligação até ela atravessar.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_c4b058b1c24b2397",
+    "personagem": "Edelzio",
+    "cena": "A21 O retorno e o epílogo",
+    "direcao": "Ao permitir a travessia. Sem agressividade contra a criatura.",
+    "fala": "Pode ir. Eu seguro até você passar.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_806716d718172c79",
+    "personagem": "Renan",
+    "cena": "A21 O retorno e o epílogo",
+    "direcao": "Somente depois da travessia confirmada.",
+    "fala": "Ela atravessou. Agora, Edelzio!",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_21d7dac0591eefec",
+    "personagem": "Edelzio",
+    "cena": "A21 O retorno e o epílogo",
+    "direcao": "Ao encerrar a ligação após o retorno, alívio sem grito de vitória.",
+    "fala": "O acordo termina aqui.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_1ce9c6ff943f63d6",
+    "personagem": "Padre Fábio",
+    "cena": "A21 O retorno e o epílogo",
+    "direcao": "Epílogo. Responsabilidade, não apagamento do passado.",
+    "fala": "Desta vez, o registro vai contar a verdade.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_bbc2ffafbd457659",
+    "personagem": "Ouzana",
+    "cena": "A21 O retorno e o epílogo",
+    "direcao": "Epílogo de pesquisa, sem afirmar que todos os mistérios acabaram.",
+    "fala": "Ainda há resíduos. Mas a reação mudou depois que a passagem fechou.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_b1f882b414dfbec1",
+    "personagem": "Renan",
+    "cena": "A21 O retorno e o epílogo",
+    "direcao": "Industrial, devolvendo as cópias.",
+    "fala": "Guarde os originais. Eu fico com uma cópia de segurança.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "fala_078fbd5f732b36bc",
+    "personagem": "Edelzio",
+    "cena": "A21 O retorno e o epílogo",
+    "direcao": "Última fala atual, próxima ao Fusca. Recupera a certeza sem explicar tudo.",
+    "fala": "Eu sei o que vi. E agora sei por que voltei.",
+    "estado": "P",
+    "origem": "Redação para a cena indicada, baseada no GDD/LDD e na campanha atual"
+  },
+  {
+    "id": "esforco_edelzio_01",
+    "personagem": "Edelzio",
+    "cena": "A22 Esforços vocais",
+    "direcao": "Um susto curto, sem palavra. Duas intensidades.",
+    "fala": "[Passo interrompido por susto: sem palavras.]",
+    "estado": "V",
+    "origem": "Direção de gravação, sem novo fato narrativo"
+  },
+  {
+    "id": "esforco_edelzio_02",
+    "personagem": "Edelzio",
+    "cena": "A22 Esforços vocais",
+    "direcao": "Reação curta à queimadura, sem prolongar o grito.",
+    "fala": "[Ignição quente: sem palavras.]",
+    "estado": "V",
+    "origem": "Direção de gravação, sem novo fato narrativo"
+  },
+  {
+    "id": "esforco_edelzio_03",
+    "personagem": "Edelzio",
+    "cena": "A22 Esforços vocais",
+    "direcao": "Três respirações de esforço curtas, com espaço para montagem.",
+    "fala": "[Fuga: sem palavras.]",
+    "estado": "V",
+    "origem": "Direção de gravação, sem novo fato narrativo"
+  },
+  {
+    "id": "esforco_edelzio_04",
+    "personagem": "Edelzio",
+    "cena": "A22 Esforços vocais",
+    "direcao": "Impacto vocal breve e recuperação do fôlego.",
+    "fala": "[Queda e recuperação: sem palavras.]",
+    "estado": "V",
+    "origem": "Direção de gravação, sem novo fato narrativo"
+  },
+  {
+    "id": "esforco_edelzio_crianca_05",
+    "personagem": "Edelzio criança",
+    "cena": "A22 Esforços vocais",
+    "direcao": "Reação assustada curta; não incluir a frase do Fusca.",
+    "fala": "[Clarão: sem palavras.]",
+    "estado": "V",
+    "origem": "Direção de gravação, sem novo fato narrativo"
+  },
+  {
+    "id": "esforco_padre_fabio_06",
+    "personagem": "Padre Fábio",
+    "cena": "A22 Esforços vocais",
+    "direcao": "Esforço breve ao sustentar a proteção.",
+    "fala": "[Proteção: sem palavras.]",
+    "estado": "V",
+    "origem": "Direção de gravação, sem novo fato narrativo"
+  },
+  {
+    "id": "esforco_ouzana_07",
+    "personagem": "Ouzana",
+    "cena": "A22 Esforços vocais",
+    "direcao": "Expiração curta de esforço.",
+    "fala": "[Arremesso do frasco: sem palavras.]",
+    "estado": "V",
+    "origem": "Direção de gravação, sem novo fato narrativo"
+  },
+  {
+    "id": "esforco_renan_08",
+    "personagem": "Renan",
+    "cena": "A22 Esforços vocais",
+    "direcao": "Susto contido e recuperação da fala.",
+    "fala": "[Interferência inesperada: sem palavras.]",
+    "estado": "V",
+    "origem": "Direção de gravação, sem novo fato narrativo"
+  }
+]

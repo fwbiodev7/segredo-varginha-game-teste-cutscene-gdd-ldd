@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "status": "structural_pass",
+  "errors": [],
+  "warnings": [],
+  "frames": [
+    {
+      "id": "SteeringColumn",
+      "bbox": [
+        1,
+        1,
+        33,
+        13
+      ],
+      "visiblePixels": 170,
+      "colors": 81,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "1393573a581c6ab4372d75c9358baa11425bcd79f29c03b4384c7b7f97ac9568"
+    }
+  ],
+  "paletteColors": 81,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\fusca\\export-v2\\atlas.json",
+  "metadataSha256": "c3d87e60fb23a566eb4a999bbe9aa540f114ab525af591d0c39367c76b822e78"
+}

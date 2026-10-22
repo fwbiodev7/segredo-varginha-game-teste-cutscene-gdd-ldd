@@ -20,6 +20,7 @@ namespace Game.Varginha.Experiment
         private bool _paused, _settings, _inspect;
         private bool _headlights=true;
         private string _feedback;
+        private readonly CampaignTimedSubtitle _drivingSubtitle = new(), _inspectionSubtitle = new();
         private AudioSource _radio;
         private AudioClip _static;
         private Sprite _carSprite;
@@ -149,7 +150,7 @@ namespace Game.Varginha.Experiment
                 string signal = _progress.driveDistance < 25 ? "RÁDIO: previsão do tempo e notícias locais."
                     : _progress.driveDistance < 45 ? "O rádio perde o sinal. O farol parece iluminar a mesma rua outra vez."
                     : "No retrovisor, a lembrança de uma criança: NÃO DEIXE ELA SAIR.";
-                if (VarginhaGameSettings.Current.subtitles) { ExperimentGUI.Panel(new Rect(160, 630, 960, 65)); ExperimentGUI.Caption(new Rect(182, 643, 916, 44), signal, VarginhaGameSettings.Current.subtitleSize); }
+                _drivingSubtitle.Draw(signal,_stateTime);
             }
             if (_paused)
             {
@@ -173,9 +174,8 @@ namespace Game.Varginha.Experiment
             ExperimentGUI.Panel(new Rect(90,55,940,62));
             ExperimentGUI.Label(new Rect(110,70,900,43), _state == State.Restart ? "QUATRO SEGUNDOS DE SILÊNCIO" : "FUSCA • ALGO ESTÁ ERRADO", true);
             if (!_paused && CampaignHudIcons.Button(1174, CampaignHudIcons.Icon.Pause, "ESC", "Pausa")) TogglePause();
-            ExperimentGUI.Panel(new Rect(110,472,1060,142));
-            ExperimentGUI.Caption(new Rect(135,488,1010,116), _state == State.Restart ? "O rádio está desligado. Ninguém toca a chave.\nO motor recomeça sozinho."
-                : _feedback ?? "O Fusca parou no meio da rua. O silêncio é estranho.\nInspecione a ignição, o rádio e o painel.", VarginhaGameSettings.Current.subtitleSize);
+            _inspectionSubtitle.Draw(_state == State.Restart ? "O rádio está desligado. Ninguém toca a chave.\nO motor recomeça sozinho."
+                : _feedback ?? "O Fusca parou no meio da rua. O silêncio é estranho.\nInspecione a ignição, o rádio e o painel.",_stateTime);
             if (_state != State.Restart)
             {
                 string[] parts={"IGNIÇÃO","RÁDIO","PAINEL"};

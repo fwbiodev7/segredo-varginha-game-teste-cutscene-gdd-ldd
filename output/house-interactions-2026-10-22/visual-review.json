@@ -1,0 +1,12 @@
+{
+  "reviewer": "Codex visual inspection",
+  "furnitureContact": "art/furniture-v2/preview/contact.png",
+  "itemsContact": "art/items/preview-v2/contact.png",
+  "columnContact": "fusca/preview-v2/contact.png",
+  "nativeWheelFrames": "wheel-four-frames.png",
+  "nativeHouse": "captures/house-rear-furniture.png",
+  "schoolMargins": "captures/school-exit-car.png",
+  "allFourDrivingFramesReviewed": true,
+  "itemBottomEdgeWarnings": "Complete silhouettes intentionally grounded at canvas bottom; no content clipped.",
+  "limits": "Geometric checks and visual inspection are not an external playtest."
+}

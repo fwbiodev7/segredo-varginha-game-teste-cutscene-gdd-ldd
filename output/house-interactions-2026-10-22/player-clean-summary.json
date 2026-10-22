@@ -1,0 +1,18 @@
+{
+  "source": "output\\house-interactions-2026-10-22\\clean-final\\player-native.xml",
+  "runResult": "Failed",
+  "tests": {
+    "total": 16,
+    "passed": 15,
+    "failed": 1,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload",
+      "message": "  Visual fitting must not scale the collider parent: Fridge_Kitchen\n  Expected: (1.00, 1.00, 1.00)\n  But was:  (1.91, 1.91, 1.00)\n",
+      "stack": "at Game.Tests.PlayMode.CampaignMessagePlayTests+<RoutineConsumesRealItemsAndKeepsThemGoneAfterReload>d__14.MoveNext () [0x001c8] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\CampaignMessagePlayTests.cs:63\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    }
+  ],
+  "success": false
+}

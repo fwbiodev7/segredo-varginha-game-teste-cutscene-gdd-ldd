@@ -1,0 +1,70 @@
+{
+  "success": true,
+  "status": "needs_review",
+  "errors": [],
+  "warnings": [
+    "Visible content touches original canvas edge; inspect clipping: CoffeeFull",
+    "Visible content touches original canvas edge; inspect clipping: Notebook",
+    "Visible content touches original canvas edge; inspect clipping: DeskLamp",
+    "Visible content touches original canvas edge; inspect clipping: CoffeeEmpty"
+  ],
+  "frames": [
+    {
+      "id": "CoffeeFull",
+      "bbox": [
+        17,
+        36,
+        47,
+        64
+      ],
+      "visiblePixels": 656,
+      "colors": 536,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "fe93210eeb4b63321d1230f95b6d5d4ad1868f04e668f276027430a3d3f5ac04"
+    },
+    {
+      "id": "Notebook",
+      "bbox": [
+        11,
+        26,
+        52,
+        64
+      ],
+      "visiblePixels": 1387,
+      "colors": 831,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "72fb1a4f36b9965dee34420cbbec35c62cd5a3ef75b4a59dd0ab1e8153bb55ee"
+    },
+    {
+      "id": "DeskLamp",
+      "bbox": [
+        18,
+        35,
+        45,
+        64
+      ],
+      "visiblePixels": 384,
+      "colors": 347,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "3963298845539df94ecddb864ea8c3e77025e73535e5231413b8f968b265e649"
+    },
+    {
+      "id": "CoffeeEmpty",
+      "bbox": [
+        21,
+        43,
+        43,
+        64
+      ],
+      "visiblePixels": 358,
+      "colors": 303,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "8c0815294a7e888604327cb08d793bba67130d4e5da2cc5cba35ba46d49c5be3"
+    }
+  ],
+  "paletteColors": 1949,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\house-interactions-2026-10-22\\art\\items\\export-v2\\atlas.json",
+  "metadataSha256": "9dd2a2fa4c4efc116d357258eca74e782a15b6c2b853c5b6ea22ddb94c22f34e"
+}

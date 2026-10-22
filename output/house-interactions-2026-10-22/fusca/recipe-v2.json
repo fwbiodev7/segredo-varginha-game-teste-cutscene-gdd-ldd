@@ -1,0 +1,31 @@
+{
+  "cell": [
+    34,
+    14
+  ],
+  "columns": 1,
+  "padding": 1,
+  "pixelsPerUnit": 100,
+  "pivot": [
+    3,
+    4
+  ],
+  "frames": [
+    {
+      "id": "SteeringColumn",
+      "source": "column-v2.png",
+      "offset": [
+        1,
+        1
+      ]
+    }
+  ],
+  "clips": {
+    "SteeringColumn": {
+      "frames": [
+        "SteeringColumn"
+      ],
+      "loop": false
+    }
+  }
+}

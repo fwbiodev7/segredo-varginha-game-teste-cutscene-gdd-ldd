@@ -160,6 +160,7 @@ namespace Game.Varginha.Experiment
                 // Cinematic beds own their evolving mix and apply the same music slider.
                 if (source.GetComponent<CampaignAmbientBridge>() != null) continue;
                 if (source.GetComponent<CampaignSoundscape>()?.OwnsDynamicSource(source) == true) continue;
+                if (source.GetComponent<CampaignDialogueVoice>()?.Owns(source) == true) continue;
                 if (source.GetComponent<CampaignAtmosphereDirector>()?.OwnsAtmosphereSource(source) == true) continue;
                 if (source.GetComponent<Game.Varginha.MenuCinematicAtmosphere>()?.OwnsAudioSource(source) == true) continue;
                 if (!_bases.TryGetValue(source, out float baseline)) { baseline = source.volume; _bases[source] = baseline; }

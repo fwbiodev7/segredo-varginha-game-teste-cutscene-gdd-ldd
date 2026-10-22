@@ -133,6 +133,14 @@ namespace Game.Varginha.Experiment
             int standingColumn=idle?0:name=="EdelzioActions"||name=="EdelzioInteractions"?4:name=="EdelzioWalk"?1:0;
             var standing=rectangles[row*columns+standingColumn];
             float ppu=Mathf.Max(1,standing.height)/CurrentStandingHeight;
+            if(name=="EdelzioActions"||name=="EdelzioInteractions")
+            {
+                // Measured from the approved Life idle sheet (top 32% alpha silhouette).
+                // Normalize head scale rather than stretching the entire action/root body.
+                float[] headWorld={.68421f,.63812f,.69706f,.70588f};
+                float headPixels=HeadWidth(texture,rect);
+                if(headPixels>0)ppu=headPixels/(headWorld[row]*(IsChurch?ChurchVisualScale:1));
+            }
             // Padding preserves the full silhouette at the edges of punch poses.
             float left=Mathf.Max(0,Mathf.Floor(rect.x-ppu*.22f)),right=Mathf.Min(texture.width,Mathf.Ceil(rect.xMax+ppu*.22f));
             rect=new Rect(left,rect.y,right-left,rect.height);
@@ -146,6 +154,14 @@ namespace Game.Varginha.Experiment
         {
             if(Anchors.TryGetValue((texture,outline),out float anchor))return anchor;
             return BodyAnchorX(texture,outline,texture.GetPixels32());
+        }
+        private static float HeadWidth(Texture2D texture,Rect outline)
+        {
+            var pixels=texture.GetPixels32();int left=(int)outline.xMax,right=(int)outline.xMin-1;
+            int bottom=Mathf.CeilToInt(outline.yMin+outline.height*.68f);
+            for(int y=bottom;y<(int)outline.yMax;y++)for(int x=(int)outline.xMin;x<(int)outline.xMax;x++)
+                if(pixels[y*texture.width+x].a>=100){left=Mathf.Min(left,x);right=Mathf.Max(right,x);}
+            return Mathf.Max(0,right-left+1);
         }
         private static float BodyAnchorX(Texture2D texture,Rect outline,Color32[] pixels)
         {

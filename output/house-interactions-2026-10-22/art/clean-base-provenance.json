@@ -1,0 +1,58 @@
+{
+  "tool": "built-in image_gen; masked compositing only",
+  "source": "Assets\\Resources\\Varginha\\IllustratedMaps\\AdultEmptyDivisoes.png",
+  "sourceSha256": "770dfe66b1ff226831e0f3a814a0e779cd2a59ab81d9f4e0e216a80ccbb46708",
+  "generatedSha256": "71150ba595e1137ace5a126ab116e55dc3357060961d1637861c05c17983418e",
+  "regionsXYXY": {
+    "dresser": [
+      24,
+      280,
+      126,
+      394
+    ],
+    "desk": [
+      24,
+      428,
+      146,
+      511
+    ],
+    "bookshelves": [
+      24,
+      638,
+      238,
+      754
+    ],
+    "coffee_table": [
+      647,
+      493,
+      765,
+      589
+    ],
+    "stove_and_sink": [
+      485,
+      659,
+      655,
+      755
+    ],
+    "fridge": [
+      844,
+      623,
+      926,
+      756
+    ],
+    "desk_left_leg": [
+      24,
+      510,
+      58,
+      534
+    ],
+    "desk_right_leg": [
+      113,
+      510,
+      146,
+      534
+    ]
+  },
+  "outsideMaskPixelsIdentical": true,
+  "resultSha256": "6d94399fbd318dcdbeeeed38a1c6fdae389f1d38c2a3bd45ad67bb71280e59d1"
+}

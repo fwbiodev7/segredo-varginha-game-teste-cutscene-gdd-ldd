@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="16" result="Failed(Child)" total="16" passed="10" failed="6" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="0001-01-01 00:00:00Z" end-time="0001-01-01 00:00:00Z" duration="163,5817473">
+  <test-suite type="TestSuite" id="1000" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="284" result="Failed" site="Child" start-time="2026-10-22 11:03:56Z" end-time="2026-10-22 11:06:40Z" duration="163.581747" total="16" passed="10" failed="6" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsUnhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+One or more child tests had errorsUnhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties><property name="platform" value="PlayMode"></property></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="Assembly" id="1330" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Temp/UnityTempFile-64c3eaf692751ff418d4edbcc38a3d05/PlayerWithTests/PlayerWithTests_Data/Managed/GamePlayModeTests.dll" runstate="Runnable" testcasecount="284" result="Failed" site="Child" start-time="2026-10-22 11:03:56Z" end-time="2026-10-22 11:06:40Z" duration="163.543894" total="16" passed="10" failed="6" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsUnhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+One or more child tests had errorsUnhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties><property name="_PID" value="18588"></property><property name="_APPDOMAIN" value="Unity Root Domain"></property><property name="platform" value="PlayMode"></property><property name="EditorOnly" value="False"></property></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1331" name="Game" fullname="Game" runstate="Runnable" testcasecount="284" result="Failed" site="Child" start-time="2026-10-22 11:03:56Z" end-time="2026-10-22 11:06:40Z" duration="163.518732" total="16" passed="10" failed="6" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsUnhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+One or more child tests had errorsUnhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1332" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="284" result="Failed" site="Child" start-time="2026-10-22 11:03:56Z" end-time="2026-10-22 11:06:40Z" duration="163.494412" total="16" passed="10" failed="6" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsUnhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+One or more child tests had errorsUnhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1333" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="284" result="Failed" site="Child" start-time="2026-10-22 11:03:56Z" end-time="2026-10-22 11:06:40Z" duration="163.470540" total="16" passed="10" failed="6" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsUnhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+One or more child tests had errorsUnhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestFixture" id="1013" name="CampaignCinematicOpeningPlayTests" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-22 11:03:56Z" end-time="2026-10-22 11:04:32Z" duration="35.390925" total="5" passed="2" failed="3" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsUnhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-case id="1018" name="AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress" methodname="AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" seed="1304060508" result="Failed" start-time="2026-10-22 11:03:56Z" end-time="2026-10-22 11:04:02Z" duration="5.792945" asserts="0">Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+<message>Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.Expect</message><stack-trace>UnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+</stack-trace></failure><output>Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress
+</output></test-case><test-case id="1014" name="AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" methodname="AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" seed="1411971368" result="Failed" start-time="2026-10-22 11:04:02Z" end-time="2026-10-22 11:04:07Z" duration="4.397505" asserts="0">Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+<message>Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.Expect</message><stack-trace>UnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+</stack-trace></failure><output>Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+</output></test-case><test-case id="1017" name="NewspaperAndTvRevealDeliverControlBeforeThePowerFailure" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure" methodname="NewspaperAndTvRevealDeliverControlBeforeThePowerFailure" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" seed="407572128" result="Passed" start-time="2026-10-22 11:04:07Z" end-time="2026-10-22 11:04:27Z" duration="20.327758" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure
+</output></test-case><test-case id="1016" name="PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu" methodname="PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" seed="430651038" result="Passed" start-time="2026-10-22 11:04:27Z" end-time="2026-10-22 11:04:28Z" duration="0.545249" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu
+</output></test-case><test-case id="1015" name="SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems" methodname="SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" seed="2052748529" result="Failed" start-time="2026-10-22 11:04:28Z" end-time="2026-10-22 11:04:32Z" duration="4.307915" asserts="0">Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="30000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+<message>Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.Expect</message><stack-trace>UnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+</stack-trace></failure><output>Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems
+</output></test-case></test-suite><test-suite type="TestFixture" id="1019" name="CampaignContinuationPlayTests" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-22 11:04:32Z" end-time="2026-10-22 11:05:41Z" duration="69.048686" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+<properties></properties><test-case id="1027" name="AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork" methodname="AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="1323365643" result="Passed" start-time="2026-10-22 11:04:32Z" end-time="2026-10-22 11:05:41Z" duration="69.032764" asserts="0">QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA skills: controller ready
+QA skills: target prepared
+QA skills: activated Yasmin
+QA skills: attack Yasmin / 0
+QA skills: attack Yasmin / 1
+QA skills: activated Pedro
+QA skills: attack Pedro / 0
+QA skills: attack Pedro / 1
+QA skills: activated Matias
+QA skills: attack Matias / 0
+QA skills: attack Matias / 1
+QA skills: activated Fabio
+QA skills: attack Fabio / 0
+QA skills: attack Fabio / 1
+QA skills: activated Marcos
+QA skills: attack Marcos / 0
+QA skills: attack Marcos / 1
+QA skills: activated Anna Sabia
+QA skills: attack Anna Sabia / 0
+QA skills: attack Anna Sabia / 1
+QA skills: activated Ana Tavares
+QA skills: attack Ana Tavares / 0
+QA skills: attack Ana Tavares / 1
+QA skills: activated Luis Miguel Messias
+QA skills: attack Luis Miguel Messias / 0
+QA skills: attack Luis Miguel Messias / 1
+QA skills: activated Luis Martins
+QA skills: attack Luis Martins / 0
+QA skills: attack Luis Martins / 1
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork
+</output></test-case></test-suite><test-suite type="TestFixture" id="1064" name="CampaignMessagePlayTests" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2026-10-22 11:05:41Z" end-time="2026-10-22 11:06:05Z" duration="24.353257" total="6" passed="3" failed="3" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsUnhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-case id="1067" name="BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue" methodname="BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="1914034726" result="Failed" start-time="2026-10-22 11:05:41Z" end-time="2026-10-22 11:05:45Z" duration="4.349831" asserts="0">Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+<message>Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.Expect</message><stack-trace>UnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+</stack-trace></failure><output>Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+</output></test-case><test-case id="1066" name="InterruptedCoffeeAndWashDoNotConsumeTheirObjectives" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives" methodname="InterruptedCoffeeAndWashDoNotConsumeTheirObjectives" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="1723744460" result="Failed" start-time="2026-10-22 11:05:45Z" end-time="2026-10-22 11:05:50Z" duration="4.333727" asserts="0">Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+<message>Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.Expect</message><stack-trace>UnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+</stack-trace></failure><output>Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+</output></test-case><test-case id="1069" name="RecordedVoiceUsesItsOwnVolumeAndPauseClock" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock" methodname="RecordedVoiceUsesItsOwnVolumeAndPauseClock" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="862363301" result="Passed" start-time="2026-10-22 11:05:50Z" end-time="2026-10-22 11:05:50Z" duration="0.707407" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock
+</output></test-case><test-case id="1068" name="RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly" methodname="RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="461288699" result="Passed" start-time="2026-10-22 11:05:50Z" end-time="2026-10-22 11:05:58Z" duration="7.699803" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly
+</output></test-case><test-case id="1065" name="RoutineConsumesRealItemsAndKeepsThemGoneAfterReload" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload" methodname="RoutineConsumesRealItemsAndKeepsThemGoneAfterReload" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="1818852372" result="Failed" start-time="2026-10-22 11:05:58Z" end-time="2026-10-22 11:06:02Z" duration="4.373801" asserts="0">Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.ExpectUnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+<message>Unhandled log message: '[Error] Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).'. Use UnityEngine.TestTools.LogAssert.Expect</message><stack-trace>UnityEngine.Sprite:OverrideGeometry (UnityEngine.Vector2[],uint16[])
+Game.Varginha.Experiment.CampaignHouseFurniture:Crop (UnityEngine.Transform,Game.Varginha.Experiment.CampaignIllustratedMaps/Layout,string,single[],single[],UnityEngine.Vector2[],int) (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseFurniture.cs:58)
+Game.Varginha.Experiment.CampaignHouseRoutineItems:Build () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/CampaignHouseRoutineItems.cs:15)
+Game.Varginha.Experiment.VarginhaCampaignStage/&lt;Start&gt;d__81:MoveNext () (at C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:75)
+UnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)
+
+</stack-trace></failure><output>Invalid vertex array. Some vertices are outside of the Sprite rectangle: (34.000000, 32.000000).
+Invalid vertex array. Some vertices are outside of the Sprite rectangle: (41.000000, 38.000000).
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+</output></test-case><test-case id="1070" name="ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal" methodname="ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="494223953" result="Passed" start-time="2026-10-22 11:06:02Z" end-time="2026-10-22 11:06:05Z" duration="2.875338" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal
+</output></test-case></test-suite><test-suite type="TestFixture" id="1078" name="CampaignRecordedAudioPlayTests" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-22 11:06:05Z" end-time="2026-10-22 11:06:40Z" duration="34.640982" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties></properties><test-case id="1082" name="ChildExplosionIsEmittedOnceAtTheAuthoredLaunch" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch" methodname="ChildExplosionIsEmittedOnceAtTheAuthoredLaunch" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" seed="312225960" result="Passed" start-time="2026-10-22 11:06:05Z" end-time="2026-10-22 11:06:07Z" duration="1.684131" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch
+</output></test-case><test-case id="1079" name="CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets" methodname="CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" seed="1466652441" result="Passed" start-time="2026-10-22 11:06:07Z" end-time="2026-10-22 11:06:07Z" duration="0.308254" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets
+</output></test-case><test-case id="1080" name="ShieldSoundFollowsPauseEffectsSliderAndLifetime" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime" methodname="ShieldSoundFollowsPauseEffectsSliderAndLifetime" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" seed="1591554969" result="Passed" start-time="2026-10-22 11:06:07Z" end-time="2026-10-22 11:06:09Z" duration="1.840023" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime
+</output></test-case><test-case id="1081" name="ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals" methodname="ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" seed="274580066" result="Passed" start-time="2026-10-22 11:06:09Z" end-time="2026-10-22 11:06:40Z" duration="30.746504" asserts="0">SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>SUPPORT_AUDIT Renan: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=98; maximumSpriteWidth=4.667
+SUPPORT_AUDIT Ouzana: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=5.000
+SUPPORT_AUDIT Padre Fábio: audioCues=1; maxEffectObjects=1; particleSystems=0; maximumQuads=0; maximumSpriteWidth=7.667
+SUPPORT_AUDIT FIX_VERIFIED: shield protection, animation and audio freeze together during modal dialogue.
+SUPPORT_AUDIT CONCURRENT: three support effects active, no ParticleSystem; all cleaned after lifetime.
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals
+</output></test-case></test-suite></test-suite></test-suite></test-suite></test-suite></test-suite>
+</test-run>

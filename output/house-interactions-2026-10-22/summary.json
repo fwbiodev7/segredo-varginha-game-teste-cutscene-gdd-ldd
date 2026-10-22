@@ -1,0 +1,174 @@
+{
+  "date": "2026-10-22",
+  "technicalSuccess": true,
+  "tests": {
+    "editMode": {
+      "total": 398,
+      "passed": 398,
+      "failed": 0,
+      "skipped": 0
+    },
+    "player": {
+      "total": 16,
+      "passed": 16,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "playerCountMeaning": "Unique native cases, selecting the latest result of each case; retests are not added as new cases.",
+  "playerCases": [
+    {
+      "name": "Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AdultHouseHasDaylightGlassWithoutChangingFurnitureOrProgress",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\delivery\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\layers-final\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.NewspaperAndTvRevealDeliverControlBeforeThePowerFailure",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\delivery\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\delivery\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.SeenMovieCanSkipInReducedMotionWithoutRepeatingOrLosingItems",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\delivery\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.AllStudentsHaveTwoTimedAttacksAndSupportSkillsWork",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\clean-final\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\delivery\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\delivery\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignMessagePlayTests.RecordedVoiceUsesItsOwnVolumeAndPauseClock",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\delivery\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignMessagePlayTests.RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\delivery\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\style-final\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignMessagePlayTests.ServiceKeyReceiptDoesNotOpenADialogueAndStaysInJournal",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\delivery\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChildExplosionIsEmittedOnceAtTheAuthoredLaunch",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\clean-final\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.CyberMeshHasAHardBudgetEvenWithMoreThanSixTargets",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\clean-final\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ShieldSoundFollowsPauseEffectsSliderAndLifetime",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\clean-final\\player-native.xml"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ThreeSupportCastsHaveSingleAudioCuesAndBoundedVisuals",
+      "result": "Passed",
+      "evidence": "output\\house-interactions-2026-10-22\\clean-final\\player-native.xml"
+    }
+  ],
+  "editModeEvidence": "output\\house-interactions-2026-10-22\\editmode-delivery.xml",
+  "art": {
+    "frames": 12,
+    "errors": 0,
+    "warnings": 4,
+    "warningDisposition": "Four items intentionally rest on the bottom canvas edge, with full alpha bbox and external atlas padding. Visually reviewed."
+  },
+  "recordingScripts": {
+    "total": 153,
+    "edelzio": 78,
+    "existing": 47,
+    "proposed": 98,
+    "vocalEfforts": 8,
+    "humanRecordingsReceived": false
+  },
+  "externalPlaytestReceived": false,
+  "restoration": {
+    "originalSaves": 3,
+    "preferencesExactMatch": true,
+    "projectSettingsFiles": 28,
+    "preExistingUrpPreserved": true
+  },
+  "dailyQa": {
+    "success": true,
+    "slides": 10,
+    "transitions": 9,
+    "evidence": "output\\house-interactions-2026-10-22\\daily-qa.json"
+  },
+  "build": {
+    "result": "Succeeded",
+    "output": "C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Builds/Varginha_0.4.5-beta_2026-10-22/SegredoDeVarginha.exe",
+    "unity": "6000.6.0f1",
+    "version": "0.4.5-beta",
+    "bytes": 388700012,
+    "seconds": 101.5203724,
+    "errors": 0,
+    "warnings": 1,
+    "scenes": [
+      "Assets/Scenes/Menu_MisterioDeVarginha.unity",
+      "Assets/Scenes/Ato1_Fase1_O_Caso_de_Varginha.unity",
+      "Assets/Scenes/Ato2_Fase2_A_Chave_e_a_Caixa.unity",
+      "Assets/Scenes/Ato2_Fase4_Entre_Aulas_e_Pistas.unity",
+      "Assets/Scenes/Ato3_Fase6_Fragmentos.unity",
+      "Assets/Scenes/Ato3_Fase7_A_Mata.unity",
+      "Assets/Scenes/Ato3_Fase8_A_Ancora.unity",
+      "Assets/Scenes/Ato4_Fase9_Ouzana.unity",
+      "Assets/Scenes/Ato4_Fase11_Arquivos_Alterados.unity",
+      "Assets/Scenes/Ato4_Fase12_Casarao_de_Ze_Gomes.unity",
+      "Assets/Scenes/Ato5_Fase14_O_Que_Fabio_Escondeu.unity",
+      "Assets/Scenes/Ato5_Fase15_A_Noite_Interrompida.unity",
+      "Assets/Scenes/Ato6_Fase18_A_Criatura_Ferida.unity",
+      "Assets/Scenes/Ato6_Fase20_O_Verdadeiro_Segredo.unity",
+      "Assets/Scenes/Ato6_Fase21_O_Retorno.unity",
+      "Assets/Scenes/Ato4_Fase10_O_Fusca_Marcado.unity",
+      "Assets/Scenes/Ato4_Fase13_Registros_de_1898.unity",
+      "Assets/Scenes/Ato4_Fase12_Casarao_de_Ze_Gomes_Area1.unity",
+      "Assets/Scenes/Ato6_Fase21_O_Retorno_Area1.unity"
+    ]
+  },
+  "package": {
+    "version": "0.4.5-beta",
+    "archive": "Builds\\Varginha_0.4.5-beta_2026-10-22_Windows_x64.zip",
+    "bytes": 292421925,
+    "sha256": "975d6c87aa9c6fc1c385e892ded16520bb01607db4fd3446da2422f1dd56388b",
+    "files": 198,
+    "zipCrcVerified": true,
+    "build": {
+      "result": "Succeeded",
+      "errors": 0,
+      "warnings": 1
+    },
+    "smoke": "16 unique native Player cases; normal candidate compiled and archive checked, no separate human playtest."
+  }
+}

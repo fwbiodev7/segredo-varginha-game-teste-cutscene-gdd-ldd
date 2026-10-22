@@ -1,0 +1,605 @@
+[
+  {
+    "id": "fala_75908e39b91e7295",
+    "personagem": "Padre Fábio",
+    "texto": "Estes são os registros que escondemos. Compare o início do mecanismo, a transferência de 1996 e a falha atual. A página ocultada está no Tombo.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignContinuationController.cs:278",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_8057e9ad20fedbde",
+    "personagem": "Renan",
+    "texto": "O papel e o original concordam. A cópia alterada apagou a indicação lateral e a data. Consulte as três versões no notebook.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignContinuationController.cs:295",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_4b4bf6870d815f8b",
+    "personagem": "Padre Fábio",
+    "texto": "siga as marcas para entender por que veio até aqui.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignExpansionController.cs:213",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_1d1d01bbfd1bdffc",
+    "personagem": "Padre Fábio",
+    "texto": "eu esperava que você se lembrasse. Venha ao arquivo; há um registro com seu nome.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignExpansionController.cs:214",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_ec2682021e042812",
+    "personagem": "Padre Fábio",
+    "texto": "confira os arquivos antes de me cobrar uma resposta.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignExpansionController.cs:223",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_3724924d3c612006",
+    "personagem": "Ouzana",
+    "texto": "o controle é neutro, o resíduo reage. A comparação confirma as marcas de contenção. Leve o reagente à oficina; as leituras ficaram no caderno.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignExpansionController.cs:227",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_7bb1f3e8066a77b4",
+    "personagem": "Edelzio",
+    "texto": "Deixei a chave aqui. Falta buscar a mochila no quarto.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:74",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_ebb30bd913523b6d",
+    "personagem": "Edelzio",
+    "texto": "A chave está guardada comigo. Não vou deixá-la aqui outra vez.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:76",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_e74fec7b70c63a91",
+    "personagem": "Edelzio",
+    "texto": "A caixa continua fechada. Antes de mexer, preciso entender o que mudou na casa.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:92",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_6c094ae5dc65f4ef",
+    "personagem": "Edelzio",
+    "texto": "Minha caixa de brinquedos de 1996. Faz anos que não abro. Preciso preparar a aula.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:92",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_b51af4553ee27766",
+    "personagem": "Edelzio",
+    "texto": "A porta não foi aberta. O papel parece vir da minha caixa... Agora escuto arranhões debaixo da cama.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:110",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_37bd4a7aaee1ac69",
+    "personagem": "Edelzio",
+    "texto": "Guardei a chave, o caderno e o primeiro fragmento de mapa. A mensagem continua ali: ELA AINDA ESTÁ AQUI.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:229",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_a43d705d58389c5a",
+    "personagem": "Edelzio",
+    "texto": "Investigue a caixa sob a cama e organize as páginas para encontrar a chave.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:240",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_e2a4a5b1b8618cce",
+    "personagem": "Renan",
+    "texto": "23:23. Essa anotação também aparece nos registros da cidade.\nLeve a fotografia à biblioteca; pode haver outra parte dessa história lá.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:252",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_bbcb7ed80eb16994",
+    "personagem": "Renan",
+    "texto": "Edelzio, encontrei uma fotografia antiga ligada ao caso de 1996. Pode abrir meu notebook na mesa. Observe o portão: há algo estranho nela.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:254",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_4eb73f08d22deda7",
+    "personagem": "Renan",
+    "texto": "Reabra a mesma fotografia no meu notebook. Dois grupos iguais de números aparecem na margem, separados por dois pontos.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:254",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_098a6465f983f550",
+    "personagem": "Edelzio",
+    "texto": "Vou conversar com Renan antes de usar o notebook dele.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:260",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_5639cb916fdbadea",
+    "personagem": "Edelzio",
+    "texto": "23:23. Vou mostrar essa descoberta a Renan.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:263",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_5a0f722c0e9e1a66",
+    "personagem": "Edelzio",
+    "texto": "Vou chegar pelo lado livre da cadeira para preparar o notebook.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:297",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_3f770a9f96cca77e",
+    "personagem": "Renan",
+    "texto": "Observe a pessoa no portão. Não há registro de ninguém ali no momento da fotografia.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:456",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_d4b16974a0ebed72",
+    "personagem": "Renan",
+    "texto": "As duas anotações na margem são iguais: 23 e 23. Com os dois pontos entre elas, parecem um horário.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:456",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_8a433f4e332d7f5a",
+    "personagem": "Renan",
+    "texto": "Os registros da biblioteca podem ajudar a entender a origem dessa imagem. Guarde a cópia no seu caderno.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:456",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_1e63fc5c1e673a3b",
+    "personagem": "Renan",
+    "texto": "Estou aqui na Industrial, Edelzio. Os arquivos mudaram, mas os documentos físicos permitem conferir a verdade. No laboratório podemos testar o mapa, a cronologia e o código da fotografia.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaExperimentalCharacters.cs:54",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_d80d2ea89900b7aa",
+    "personagem": "Edelzio",
+    "texto": "Nao posso partir sem o caderno de pesquisas de 1996.",
+    "origem": "Assets/Scripts/Game/Varginha/FuscaLevelExit.cs:28",
+    "escopo": "FLUXO LEGADO",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_7b9c57a76f997e08",
+    "personagem": "Edelzio",
+    "texto": "O motor pegou. Segure firme - vamos sair daqui!",
+    "origem": "Assets/Scripts/Game/Varginha/FuscaLevelExit.cs:58",
+    "escopo": "FLUXO LEGADO",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_9e1fe686d6948d66",
+    "personagem": "Rodrigo",
+    "texto": "O que foi isso?! As luzes começaram a piscar! Pegue seu notebook e vá até o Fusca no quintal rápido!",
+    "origem": "Assets/Scripts/Game/Varginha/InteractableProp.cs:162",
+    "escopo": "INTERFACE LEGADA",
+    "observacao": "Guia externo ao mundo do jogo",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_75e90e995f5d337f",
+    "personagem": "Rodrigo",
+    "texto": "Pegue o Fusca antes que a entidade bloqueie o caminho.",
+    "origem": "Assets/Scripts/Game/Varginha/InteractableProp.cs:204",
+    "escopo": "INTERFACE LEGADA",
+    "observacao": "Guia externo ao mundo do jogo",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_2dc023fd223221e8",
+    "personagem": "Rodrigo",
+    "texto": "Voce conseguiu! Agora va ate o Fusca antes que a entidade bloqueie o caminho.",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaNotebookQuiz.cs:195",
+    "escopo": "INTERFACE LEGADA",
+    "observacao": "Guia externo ao mundo do jogo",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_1757ffc327867d30",
+    "personagem": "Edelzio",
+    "texto": "A escola está cercada... ainda bem que trouxe o Fusca e tudo o que encontrei em casa.",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPhase2Controller.cs:116",
+    "escopo": "FLUXO LEGADO",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_1844e8c575cb7fa2",
+    "personagem": "Edelzio",
+    "texto": "Vou deixar o Fusca no estacionamento. A porta da escola está aberta: preciso encontrar meus alunos!",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPhase2Controller.cs:128",
+    "escopo": "FLUXO LEGADO",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_b004fda721844401",
+    "personagem": "Rodrigo",
+    "texto": "Siga a faixa até a porta da escola. Derrote os ETs e traga os nove alunos de volta ao estacionamento.",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPhase2Controller.cs:151",
+    "escopo": "INTERFACE LEGADA",
+    "observacao": "Guia externo ao mundo do jogo",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_508610459dcfcd22",
+    "personagem": "Edelzio",
+    "texto": "Consegui! A escola está livre. Todos para o Fusca, rápido!",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPhase2Controller.cs:188",
+    "escopo": "FLUXO LEGADO",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_0781fca0238e3b07",
+    "personagem": "Rodrigo",
+    "texto": "Os alunos vão até o Fusca sozinhos. Vá para o estacionamento; Edelzio embarca quando todos chegarem.",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPhase2Controller.cs:189",
+    "escopo": "INTERFACE LEGADA",
+    "observacao": "Guia externo ao mundo do jogo",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_51bd2aaed7751f62",
+    "personagem": "Edelzio",
+    "texto": "As coordenadas do notebook apontam para a área subterrânea da diocese.\nSe o Livro do Tombo existir, ele pode explicar o que aconteceu em 1898.",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPhase3Controller.cs:120",
+    "escopo": "FLUXO LEGADO",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_b52753e0b79ca96d",
+    "personagem": "Rodrigo",
+    "texto": "Os ETs fecharam a passagem. Abra a mochila na hotbar ou com [G], entre na aba Alunos e equipe um colega. O comando especial chama somente esse aluno, com recarga de 5 segundos.",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPhase3Controller.cs:125",
+    "escopo": "FLUXO LEGADO",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_47723280071e1899",
+    "personagem": "Rodrigo",
+    "texto": "Mochila [G], aba Alunos: escolher aliado. O especial usa o aluno equipado. Mire no ET, derrote as manifestações e examine o Padre Fábio.",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPhase3Controller.cs:134",
+    "escopo": "INTERFACE LEGADA",
+    "observacao": "Guia externo ao mundo do jogo",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_94d8f66667afc8a7",
+    "personagem": "Padre Fábio",
+    "texto": "A passagem foi protegida por décadas. Agora venha, Edelzio: o Livro do Tombo Secreto guarda a verdade sobre Zé Gomes.",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPhase3Controller.cs:144",
+    "escopo": "FLUXO LEGADO",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_11b7a06a4a195098",
+    "personagem": "Rodrigo",
+    "texto": "Fale com Padre Fábio e depois examine o Livro do Tombo Secreto.",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPhase3Controller.cs:147",
+    "escopo": "INTERFACE LEGADA",
+    "observacao": "Guia externo ao mundo do jogo",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_828aa5c32858200e",
+    "personagem": "Rodrigo",
+    "texto": "Espere a turma preparar o comando, escolha um aluno pronto e mire em um ET próximo.",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPhase3Controller.cs:165",
+    "escopo": "INTERFACE LEGADA",
+    "observacao": "Guia externo ao mundo do jogo",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_1b75b4688d763ddd",
+    "personagem": "Padre Fábio",
+    "texto": "As manifestações ainda estão bloqueando a passagem. Ajude meus alunos e derrote os ETs primeiro.",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPhase3Controller.cs:187",
+    "escopo": "FLUXO LEGADO",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_4d61c4c19e9cc7d9",
+    "personagem": "Padre Fábio",
+    "texto": "Seu nome foi registrado em 1996, Edelzio. O livro guarda a história de 1898 e explica por que você é o próprio selo vivo.",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPhase3Controller.cs:191",
+    "escopo": "FLUXO LEGADO",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_6f47dcc696a485ea",
+    "personagem": "Edelzio",
+    "texto": "Vou me aproximar da cadeira pelo lado livre da mesa para usar o notebook.",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPlayerActionAnimation.cs:142",
+    "escopo": "FLUXO LEGADO",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_ecb8a7e4e670092c",
+    "personagem": "Yasmin",
+    "texto": "Estou conferindo arquivos. A fotografia que Renan encontrou é de 1996.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Conversa opcional na Industrial",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_563a8b4f2118ef2b",
+    "personagem": "Yasmin",
+    "texto": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Somente depois de decifrar o horário",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_61f21f0074f11a78",
+    "personagem": "Pedro",
+    "texto": "Estou organizando o projeto. O notebook do professor está na mesa junto ao quadro.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Conversa opcional na Industrial",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_94a7d500e2fc0ff0",
+    "personagem": "Pedro",
+    "texto": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Somente depois de decifrar o horário",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_13712f87ed3cc6b3",
+    "personagem": "Matias",
+    "texto": "Estou comparando imagens. Tem alguém naquelo portão? É difícil distinguir o rosto.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Conversa opcional na Industrial",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_5b441acf926f73d7",
+    "personagem": "Matias",
+    "texto": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Somente depois de decifrar o horário",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_653dfbe3566c05a5",
+    "personagem": "Fabio",
+    "texto": "Estou anotando os resultados. O portão me chamou atenção antes de qualquer outra coisa.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Conversa opcional na Industrial",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_7337041fdb99ac61",
+    "personagem": "Fabio",
+    "texto": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Somente depois de decifrar o horário",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_d0e1d4abf5ed2eb5",
+    "personagem": "Marcos",
+    "texto": "Estou fazendo a pesquisa. Uma imagem pode guardar uma história inteira.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Conversa opcional na Industrial",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_bfc1a43019aa63fd",
+    "personagem": "Marcos",
+    "texto": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Somente depois de decifrar o horário",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_991e5f678faa38e0",
+    "personagem": "Anna Sabia",
+    "texto": "Estou revisando documentos. A sombra não parece combinar com a luz da fotografia.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Conversa opcional na Industrial",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_d5f41ae3c873c26e",
+    "personagem": "Anna Sabia",
+    "texto": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Somente depois de decifrar o horário",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_c012708c940af1e6",
+    "personagem": "Ana Tavares",
+    "texto": "Estou verificando a legenda. Os dois grupos na margem da foto são iguais.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Conversa opcional na Industrial",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_b3fdb25fffa836d4",
+    "personagem": "Ana Tavares",
+    "texto": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Somente depois de decifrar o horário",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_ec049d673987744d",
+    "personagem": "Luis Miguel Messias",
+    "texto": "Estou levando material à aula. O projetor piscou com o cabo conectado. Renan também viu.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Conversa opcional na Industrial",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_051db73741de7701",
+    "personagem": "Luis Miguel Messias",
+    "texto": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Somente depois de decifrar o horário",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_fc7892f20af8381e",
+    "personagem": "Luis Martins",
+    "texto": "Estou conversando no intervalo. Renan está mostrando documentos antigos à turma.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:315",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Conversa opcional na Industrial",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_174654d00a768cbd",
+    "personagem": "Luis Martins",
+    "texto": "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs:326",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "Somente depois de decifrar o horário",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_7f13ef90eda56765",
+    "personagem": "Edelzio",
+    "texto": "A chave não está na mesa do café. Não há nada no chão ao redor. A observação ficou registrada no caderno.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:75",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_b2063562def83c8d",
+    "personagem": "Edelzio",
+    "texto": "exitclue A observação ficou registrada no caderno.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:82",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_0da7451a840080f7",
+    "personagem": "Edelzio",
+    "texto": "O trinco continua fechado por dentro. Não abri esta porta desde que acordei. A observação ficou registrada no caderno.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:82",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_fcc040800101c01c",
+    "personagem": "Edelzio",
+    "texto": "Um pedacinho de papel envelhecido ficou preso junto ao quarto. Há um traço azul, igual ao das minhas anotações de infância. A observação ficou registrada no caderno.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs:82",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_eb1a10f0572033c7",
+    "personagem": "Renan",
+    "texto": "A cópia impressa não mudou. Guardei o original e o arquivo alterado. Vamos comparar antes de perder outra pista.",
+    "origem": "Assets/Scripts/Game/Varginha/Experiment/CampaignContinuationDefinition.cs:39",
+    "escopo": "CAMPANHA ATUAL",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_08be9ad8614d2f7a",
+    "personagem": "Padre Fábio",
+    "texto": "Eu protejo os registros da diocese. Derrote os invasores e depois leia o Livro do Tombo Secreto.",
+    "origem": "Assets/Scripts/Game/Varginha/VarginhaPhase3Controller.cs:453",
+    "escopo": "FLUXO LEGADO",
+    "observacao": "",
+    "estado": "TEXTO EXISTENTE"
+  },
+  {
+    "id": "fala_01345e370c5a0298",
+    "personagem": "Edelzio criança",
+    "texto": "Não deixa ela sair.",
+    "origem": "Docs/CampanhaOficial/Referencias/GDD_Usuario.md:258",
+    "escopo": "GDD E CUTSCENE ATUAL",
+    "observacao": "Gravar voz seca. Interferência aplicada depois; nunca antecipar ao prólogo.",
+    "estado": "TEXTO EXISTENTE"
+  }
+]
