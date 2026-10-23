@@ -39,6 +39,7 @@ namespace Game.Tests.PlayMode
             var state=story.expansion;
             state.workshopParked=phase==10;
             state.visited=7;state.mapSolved=true;state.forestSigns=3;state.fabioMet=true;
+            state.anchorClues=7;state.bookOrder=new[]{0,1,2};state.bookLinks=new[]{0,1,2};
             state.SolveAnchor(1996,1,23);
             return story;
         }
@@ -154,9 +155,9 @@ namespace Game.Tests.PlayMode
             float steeringCapture=Time.captureDeltaTime;Time.captureDeltaTime=Time.fixedDeltaTime;
             try
             {
-                yield return KeyFor(Key.A,.18f);Assert.That(vehicle.Direction,Is.EqualTo(CampaignWorkshopVehicle.Facing.West));
-                yield return KeyFor(Key.D,.18f);Assert.That(vehicle.Direction,Is.EqualTo(CampaignWorkshopVehicle.Facing.East));
-                yield return KeyFor(Key.S,.1f);Assert.That(vehicle.Direction,Is.EqualTo(CampaignWorkshopVehicle.Facing.South));
+                yield return KeyFor(Key.A,.18f);Assert.That(vehicle.Direction,Is.EqualTo(CampaignWorkshopVehicle.Facing.North),"Steering at rest cannot rotate the car on its center.");
+                yield return KeyFor(Key.D,.18f);Assert.That(vehicle.Direction,Is.EqualTo(CampaignWorkshopVehicle.Facing.North));
+                yield return KeyFor(Key.S,.1f);Assert.That(vehicle.Speed,Is.LessThan(0),"Reverse retains the car's physical heading.");
                 yield return KeyFor(Key.UpArrow,1);
             }
             finally { Time.captureDeltaTime=steeringCapture; }
@@ -188,6 +189,29 @@ namespace Game.Tests.PlayMode
             Assert.That(car.GetComponent<BoxCollider2D>().Distance(actor.GetComponent<CircleCollider2D>()).isOverlapped,Is.False);
             yield return Load(10);Assert.That(CampaignExpansionController.Active.Progress.expansion.workshopParked,Is.True);
             Assert.That(Object.FindAnyObjectByType<EdelzioTopDownController>().GetComponent<SpriteRenderer>().sprite.bounds.size.y,Is.EqualTo(1.5f).Within(.10f));
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
+        [UnityTest,Timeout(60000)] public IEnumerator FuscaCanReverseFromTheBottomWallAndKeepsSmoothSteeringAndYawSave()
+        {
+            var story=Ready(10);story.expansion.workshopParked=false;CampaignStorySave.Write(story);
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(10));yield return new WaitForSeconds(3.2f);
+            var stage=CampaignExpansionController.Active;stage.enabled=false;
+            var vehicle=Object.FindAnyObjectByType<CampaignWorkshopVehicle>();var body=vehicle.GetComponent<Rigidbody2D>();
+            vehicle.SetPosition(new Vector2(.17f,-5.86f));vehicle.SetControls(new Vector2(0,-1));
+            yield return new WaitForSeconds(.8f);float bottom=body.position.y;
+            Assert.That(bottom,Is.GreaterThan(-5.94f),"The southern boundary remains solid.");
+            vehicle.SetControls(Vector2.up);yield return new WaitForSeconds(1.1f);
+            Assert.That(body.position.y,Is.GreaterThan(bottom+.7f),"Forward motion must separate from the lower wall without changing colliders.");
+            vehicle.StopInput();vehicle.SetPosition(new Vector2(-5,-4.7f));vehicle.SetFacing(CampaignWorkshopVehicle.Facing.North);
+            vehicle.SetControls(new Vector2(1,1));yield return new WaitForSeconds(.45f);
+            Assert.That(Mathf.Abs(vehicle.Heading),Is.InRange(.3f,40f),"Heading changes progressively while moving.");
+            Assert.That(vehicle.Speed,Is.GreaterThan(0));float heading=vehicle.Heading;
+            var saved=new CampaignExpansionState();vehicle.SaveParking(saved);saved.Repair();
+            Assert.That(saved.workshopHasYaw,Is.True);Assert.That(saved.workshopYaw,Is.EqualTo(heading).Within(.01f));
+            vehicle.SetControls(Vector2.zero);var start=body.position;yield return new WaitForSeconds(.1f);
+            Assert.That(Vector2.Distance(start,body.position),Is.GreaterThan(.005f),"Releasing the throttle coasts rather than teleporting to rest.");
+            yield return new WaitForSeconds(.9f);Assert.That(Mathf.Abs(vehicle.Speed),Is.LessThan(.01f));
+            Assert.That(Mathf.Abs(vehicle.Steering),Is.LessThan(.01f));
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
     }

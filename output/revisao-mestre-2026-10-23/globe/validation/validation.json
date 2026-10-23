@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "status": "needs_review",
+  "errors": [],
+  "warnings": [
+    "Visible content touches original canvas edge; inspect clipping: school_globe_static"
+  ],
+  "frames": [
+    {
+      "id": "school_globe_static",
+      "bbox": [
+        0,
+        0,
+        44,
+        64
+      ],
+      "visiblePixels": 2816,
+      "colors": 2213,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "a721c59385ef50ac6f7841bdba9c4a03599f15ee69c0cd95985a9d6e51b9c215"
+    }
+  ],
+  "paletteColors": 2213,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\revisao-mestre-2026-10-23\\globe\\export\\atlas.json",
+  "metadataSha256": "d00fe6b4007917d587b41bb3c08c021460baee7b0e21e58f52eac3f0eddab1e2"
+}

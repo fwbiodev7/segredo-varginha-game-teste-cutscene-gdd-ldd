@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Rendering;
 
 namespace Game.Varginha.Experiment
 {
@@ -18,6 +19,7 @@ namespace Game.Varginha.Experiment
         private float _transitionProgress, _bars;
         private bool _menuDeparture, _signalMessage;
         private float _signalSweep;
+        private float _transitionTimeScale=1;
         public static bool MenuSignalMessageVisible => _instance!=null&&_instance._signalMessage;
         private void Awake() => SceneManager.sceneLoaded += SceneLoaded;
         private void SceneLoaded(Scene scene, LoadSceneMode mode) => ReleasePause();
@@ -31,6 +33,7 @@ namespace Game.Varginha.Experiment
                     var go = new GameObject("Transições_da_história");
                     _instance = go.AddComponent<CampaignCinematics>(); DontDestroyOnLoad(go);
                 }
+                _instance.enabled=true;
                 return _instance;
             }
         }
@@ -45,7 +48,7 @@ namespace Game.Varginha.Experiment
         }
         private IEnumerator ChangeScene(string scene, CampaignTransitionProfile profile)
         {
-            _loading = true; _profile = profile;
+            _transitionTimeScale=Time.timeScale;_loading = true; _profile = profile;
             var menu=Game.Varginha.VarginhaMainMenu.Active;
             _menuDeparture=menu!=null && SceneManager.GetActiveScene().name=="Menu_MisterioDeVarginha";
             bool reduced = VarginhaGameSettings.Current.reducedMotion;
@@ -131,6 +134,10 @@ namespace Game.Varginha.Experiment
         private void CapturePause()
         {
             ReleasePause(); var camera=Camera.main; if (camera==null) return;
+            // Batch/headless validation has no stable render target for URP's
+            // SubmitRenderRequest. The game still pauses normally; the frozen
+            // backdrop is omitted only in this non-interactive environment.
+            if (Application.isBatchMode || SystemInfo.graphicsDeviceType == GraphicsDeviceType.Null) return;
             _blur ??=new Material(Resources.Load<Shader>("Varginha/IllustratedMaps/PausePixelBlur")) { hideFlags=HideFlags.DontSave };
             int width=Mathf.Clamp(Mathf.RoundToInt(90f*Screen.width/Mathf.Max(1,Screen.height)),90,384);
             _pauseFrame=new RenderTexture(width,90,16,RenderTextureFormat.ARGB32) { filterMode=FilterMode.Point, name="Pausa congelada em pixels" }; _pauseFrame.Create();
@@ -154,6 +161,8 @@ namespace Game.Varginha.Experiment
         {
             if (!_loading && _fade<=0) return;
             var matrix=GUI.matrix; var color=GUI.color; int depth=GUI.depth;
+            try
+            {
             GUI.matrix=Matrix4x4.identity; GUI.depth=-20000;
             if(_menuDeparture&&_signalSweep>0&&_signalSweep<1)
             {
@@ -191,10 +200,18 @@ namespace Game.Varginha.Experiment
                 Game.UI.PixelMenuTheme.Label(new Rect(250,338,780,44),"96.4 MHz — SINAL PERDIDO",12,
                     Game.UI.PixelMenuTheme.Muted,TextAnchor.MiddleCenter);
             }
-            GUI.color=color; GUI.matrix=matrix; GUI.depth=depth;
+            }
+            finally {GUI.color=color; GUI.matrix=matrix; GUI.depth=depth;}
         }
         private void ReleasePause() { if (_pauseFrame==null) return; _pauseFrame.Release(); Destroy(_pauseFrame); _pauseFrame=null; }
         private void ReleaseTransition() { if (_transitionFrame == null) return; _transitionFrame.Release(); Destroy(_transitionFrame); _transitionFrame = null; }
-        private void OnDestroy() { SceneManager.sceneLoaded-=SceneLoaded; ReleasePause(); ReleaseTransition(); if (_blur!=null) Destroy(_blur); if (_instance==this) { _instance=null; Time.timeScale=1; } }
+        private void OnDisable()
+        {
+            bool loading=_loading;StopAllCoroutines();
+            _fade=_bars=_signalSweep=0;_signalMessage=_menuDeparture=_loading=false;
+            ReleasePause();ReleaseTransition();
+            if(loading)Time.timeScale=_transitionTimeScale;
+        }
+        private void OnDestroy() { SceneManager.sceneLoaded-=SceneLoaded; ReleasePause(); ReleaseTransition(); if (_blur!=null) Destroy(_blur); if (_instance==this) _instance=null; }
     }
 }

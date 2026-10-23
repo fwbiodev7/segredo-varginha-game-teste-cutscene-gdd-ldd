@@ -28,6 +28,28 @@ namespace Game.Varginha
         private bool _notebookSession;
         private Vector3? _poseStandingScale;
         private int _poseVersion;
+        private AudioSource _actionAudio;
+        private string _audioCue;
+        private bool _audioPaused;
+        public bool OwnsAudioSource(AudioSource source)=>source==_actionAudio;
+
+        private void StartActionAudio(string cue)
+        {
+            if(_actionAudio==null){_actionAudio=gameObject.AddComponent<AudioSource>();_actionAudio.playOnAwake=false;_actionAudio.spatialBlend=0;}
+            _actionAudio.Stop();_audioCue=cue;_audioPaused=false;
+            _actionAudio.clip=Experiment.CampaignSoundscape.Clip(cue);_actionAudio.loop=false;
+            _actionAudio.volume=.48f*Experiment.CampaignRecordedAudio.Gain(cue)*Experiment.VarginhaGameSettings.Current.effects;
+            _actionAudio.Play();
+        }
+        private void StopActionAudio(){_actionAudio?.Stop();_audioCue=null;_audioPaused=false;}
+        private void Update()
+        {
+            if(_actionAudio==null||_audioCue==null)return;
+            _actionAudio.volume=.48f*Experiment.CampaignRecordedAudio.Gain(_audioCue)*Experiment.VarginhaGameSettings.Current.effects;
+            bool paused=Time.timeScale<=0;
+            if(paused==_audioPaused)return;_audioPaused=paused;
+            if(paused)_actionAudio.Pause();else _actionAudio.UnPause();
+        }
 
         private void Awake()
         {
@@ -57,8 +79,14 @@ namespace Game.Varginha
                 if(Experiment.VarginhaCampaignStage.Active?.phase==2)
                     yield return MoveToPosition(Experiment.CampaignAdultHouse.WashApproach,.28f);
                 _spriteAnimation?.SetActionPose("Edelzio_WashFace");
+                bool waterStarted=false;
                 for(float elapsed=0;elapsed<1.65f;elapsed+=Time.deltaTime)
-                {if(!isActiveAndEnabled)yield break;yield return null;}
+                {
+                    if(!isActiveAndEnabled)yield break;
+                    if(!waterStarted&&Experiment.CampaignTeamEdelzio.WashFrame(elapsed)>=2)
+                    {waterStarted=true;StartActionAudio("FaceWash");}
+                    yield return null;
+                }
                 onComplete?.Invoke();
             }
             finally { _spriteAnimation?.ClearActionPose(); EndAction(); }
@@ -132,7 +160,9 @@ namespace Game.Varginha
                 }
                 Vector3 seatPosition = chair.transform.position;
                 // The body sits in front of the backrest, between the chair and the tabletop.
-                if (Experiment.VarginhaCampaignStage.Active != null) seatPosition += Vector3.up * .77f;
+                var seating=GetComponent<Experiment.CampaignSeatingLayers>();
+                if(seating!=null&&seating.IsOfficeSeat)seatPosition=seating.OfficeSeatPosition;
+                else if (Experiment.VarginhaCampaignStage.Active != null) seatPosition += Vector3.up * .77f;
                 yield return MoveToPosition(seatPosition, .34f);
                 if (Vector2.Distance(transform.position, seatPosition) > .4f)
                 {
@@ -207,6 +237,7 @@ namespace Game.Varginha
                 _spriteAnimation?.SetCoffeeFrame(1);
                 yield return MoveCup(cup, new Vector3(-.045f, -.055f, 0), -14f, .14f);
                 _spriteAnimation?.SetCoffeeFrame(2);
+                if(sip==0)StartActionAudio("CoffeeDrink");
                 yield return new WaitForSeconds(.28f);
                 _spriteAnimation?.SetCoffeeFrame(3);
                 yield return MoveCup(cup, new Vector3(-.11f, -.20f, 0), 0f, .14f);
@@ -346,6 +377,7 @@ namespace Game.Varginha
 
         private void EndAction(bool unlockInput = true)
         {
+            StopActionAudio();
             _isActing = false;
             if (_player != null) _player.IsScriptedMotion = false;
             if (_body != null) _body.linearVelocity = Vector2.zero;
@@ -354,6 +386,7 @@ namespace Game.Varginha
 
         private void OnDisable()
         {
+            StopActionAudio();
             StopAllCoroutines();
             _poseVersion++;
             if (_poseStandingScale.HasValue)

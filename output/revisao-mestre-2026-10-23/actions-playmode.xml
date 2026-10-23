@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="15" result="Failed(Child)" total="15" passed="7" failed="8" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-23 15:19:59Z" end-time="2026-10-23 15:20:33Z" duration="34,0276746">
+  <test-suite type="TestSuite" id="1346" name="Varginha_Master_QA_20261023" fullname="Varginha_Master_QA_20261023" runstate="Runnable" testcasecount="292" result="Failed" site="Child" start-time="2026-10-23 15:19:59Z" end-time="2026-10-23 15:20:33Z" duration="34.027675" total="15" passed="7" failed="8" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1685" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="292" result="Failed" site="Child" start-time="2026-10-23 15:19:59Z" end-time="2026-10-23 15:20:33Z" duration="34.013531" total="15" passed="7" failed="8" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="31504" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1686" name="Game" fullname="Game" runstate="Runnable" testcasecount="292" result="Failed" site="Child" start-time="2026-10-23 15:19:59Z" end-time="2026-10-23 15:20:33Z" duration="33.999875" total="15" passed="7" failed="8" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1687" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="292" result="Failed" site="Child" start-time="2026-10-23 15:19:59Z" end-time="2026-10-23 15:20:33Z" duration="33.983811" total="15" passed="7" failed="8" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1688" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="292" result="Failed" site="Child" start-time="2026-10-23 15:19:59Z" end-time="2026-10-23 15:20:33Z" duration="33.964643" total="15" passed="7" failed="8" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1411" name="CampaignMessagePlayTests" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-23 15:19:59Z" end-time="2026-10-23 15:20:30Z" duration="31.419315" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1416" name="DoorBagAndKeyFollowTheRequiredOrderAndReleaseTheExit" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.DoorBagAndKeyFollowTheRequiredOrderAndReleaseTheExit" methodname="DoorBagAndKeyFollowTheRequiredOrderAndReleaseTheExit" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="1914363340" result="Passed" start-time="2026-10-23 15:19:59Z" end-time="2026-10-23 15:20:11Z" duration="12.278550" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignMessagePlayTests.DoorBagAndKeyFollowTheRequiredOrderAndReleaseTheExit
+QA test: Game.Tests.PlayMode.CampaignMessagePlayTests.DoorBagAndKeyFollowTheRequiredOrderAndReleaseTheExit
+QA result: Passed Game.Tests.PlayMode.CampaignMessagePlayTests.DoorBagAndKeyFollowTheRequiredOrderAndReleaseTheExit
+QA result: Passed Game.Tests.PlayMode.CampaignMessagePlayTests.DoorBagAndKeyFollowTheRequiredOrderAndReleaseTheExit
+]]></output>
+              </test-case>
+              <test-case id="1413" name="InterruptedCoffeeAndWashDoNotConsumeTheirObjectives" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives" methodname="InterruptedCoffeeAndWashDoNotConsumeTheirObjectives" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="839001521" result="Passed" start-time="2026-10-23 15:20:11Z" end-time="2026-10-23 15:20:23Z" duration="11.780081" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+QA test: Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+QA result: Passed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+QA result: Passed Game.Tests.PlayMode.CampaignMessagePlayTests.InterruptedCoffeeAndWashDoNotConsumeTheirObjectives
+]]></output>
+              </test-case>
+              <test-case id="1414" name="RoutineAudioStartsWithPoseAndStopsOnCancelOrCompletion" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineAudioStartsWithPoseAndStopsOnCancelOrCompletion" methodname="RoutineAudioStartsWithPoseAndStopsOnCancelOrCompletion" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="1092339671" result="Passed" start-time="2026-10-23 15:20:23Z" end-time="2026-10-23 15:20:30Z" duration="7.331483" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineAudioStartsWithPoseAndStopsOnCancelOrCompletion
+QA test: Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineAudioStartsWithPoseAndStopsOnCancelOrCompletion
+QA result: Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineAudioStartsWithPoseAndStopsOnCancelOrCompletion
+QA result: Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineAudioStartsWithPoseAndStopsOnCancelOrCompletion
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1587" name="VarginhaCombatTests" fullname="Game.Tests.PlayMode.VarginhaCombatTests" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" testcasecount="12" result="Failed" site="Child" start-time="2026-10-23 15:20:30Z" end-time="2026-10-23 15:20:33Z" duration="2.497282" total="12" passed="4" failed="8" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1591" name="AllThreeComboContactsDealDamage" fullname="Game.Tests.PlayMode.VarginhaCombatTests.AllThreeComboContactsDealDamage" methodname="AllThreeComboContactsDealDamage" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="1485180590" result="Failed" start-time="2026-10-23 15:20:30Z" end-time="2026-10-23 15:20:30Z" duration="0.048201" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaCombatTests+<AllThreeComboContactsDealDamage>d__6.MoveNext () [0x000e2] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\VarginhaCombatTests.cs:92
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaCombatTests.AllThreeComboContactsDealDamage
+QA test: Game.Tests.PlayMode.VarginhaCombatTests.AllThreeComboContactsDealDamage
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.AllThreeComboContactsDealDamage
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.AllThreeComboContactsDealDamage
+]]></output>
+              </test-case>
+              <test-case id="1598" name="AncestralEntityRemainsInvulnerable" fullname="Game.Tests.PlayMode.VarginhaCombatTests.AncestralEntityRemainsInvulnerable" methodname="AncestralEntityRemainsInvulnerable" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="1384539795" result="Passed" start-time="2026-10-23 15:20:30Z" end-time="2026-10-23 15:20:30Z" duration="0.035802" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaCombatTests.AncestralEntityRemainsInvulnerable
+QA test: Game.Tests.PlayMode.VarginhaCombatTests.AncestralEntityRemainsInvulnerable
+QA result: Passed Game.Tests.PlayMode.VarginhaCombatTests.AncestralEntityRemainsInvulnerable
+QA result: Passed Game.Tests.PlayMode.VarginhaCombatTests.AncestralEntityRemainsInvulnerable
+]]></output>
+              </test-case>
+              <test-case id="1599" name="CombatCursorInstantiatesWithAttackAndDetectsTarget" fullname="Game.Tests.PlayMode.VarginhaCombatTests.CombatCursorInstantiatesWithAttackAndDetectsTarget" methodname="CombatCursorInstantiatesWithAttackAndDetectsTarget" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="202848993" result="Passed" start-time="2026-10-23 15:20:30Z" end-time="2026-10-23 15:20:30Z" duration="0.065661" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaCombatTests.CombatCursorInstantiatesWithAttackAndDetectsTarget
+QA test: Game.Tests.PlayMode.VarginhaCombatTests.CombatCursorInstantiatesWithAttackAndDetectsTarget
+QA result: Passed Game.Tests.PlayMode.VarginhaCombatTests.CombatCursorInstantiatesWithAttackAndDetectsTarget
+QA result: Passed Game.Tests.PlayMode.VarginhaCombatTests.CombatCursorInstantiatesWithAttackAndDetectsTarget
+]]></output>
+              </test-case>
+              <test-case id="1592" name="EarlyQueuedClickChainsExactlyOnePunch" fullname="Game.Tests.PlayMode.VarginhaCombatTests.EarlyQueuedClickChainsExactlyOnePunch" methodname="EarlyQueuedClickChainsExactlyOnePunch" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="130317306" result="Failed" start-time="2026-10-23 15:20:30Z" end-time="2026-10-23 15:20:31Z" duration="0.039478" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaCombatTests+<EarlyQueuedClickChainsExactlyOnePunch>d__7.MoveNext () [0x00039] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\VarginhaCombatTests.cs:108
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaCombatTests.EarlyQueuedClickChainsExactlyOnePunch
+QA test: Game.Tests.PlayMode.VarginhaCombatTests.EarlyQueuedClickChainsExactlyOnePunch
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.EarlyQueuedClickChainsExactlyOnePunch
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.EarlyQueuedClickChainsExactlyOnePunch
+]]></output>
+              </test-case>
+              <test-case id="1588" name="EdelzioCanMoveDuringAttackAndAttackAgainWithoutCooldown" fullname="Game.Tests.PlayMode.VarginhaCombatTests.EdelzioCanMoveDuringAttackAndAttackAgainWithoutCooldown" methodname="EdelzioCanMoveDuringAttackAndAttackAgainWithoutCooldown" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="1736118233" result="Failed" start-time="2026-10-23 15:20:31Z" end-time="2026-10-23 15:20:31Z" duration="0.033822" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaCombatTests+<EdelzioCanMoveDuringAttackAndAttackAgainWithoutCooldown>d__2.MoveNext () [0x0006a] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\VarginhaCombatTests.cs:29
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaCombatTests.EdelzioCanMoveDuringAttackAndAttackAgainWithoutCooldown
+QA test: Game.Tests.PlayMode.VarginhaCombatTests.EdelzioCanMoveDuringAttackAndAttackAgainWithoutCooldown
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.EdelzioCanMoveDuringAttackAndAttackAgainWithoutCooldown
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.EdelzioCanMoveDuringAttackAndAttackAgainWithoutCooldown
+]]></output>
+              </test-case>
+              <test-case id="1594" name="LockCancelsQueuedPunchWithoutErasingInteractionPose" fullname="Game.Tests.PlayMode.VarginhaCombatTests.LockCancelsQueuedPunchWithoutErasingInteractionPose" methodname="LockCancelsQueuedPunchWithoutErasingInteractionPose" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="2145319466" result="Failed" start-time="2026-10-23 15:20:31Z" end-time="2026-10-23 15:20:31Z" duration="0.055945" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaCombatTests+<LockCancelsQueuedPunchWithoutErasingInteractionPose>d__9.MoveNext () [0x00108] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\VarginhaCombatTests.cs:163
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaCombatTests.LockCancelsQueuedPunchWithoutErasingInteractionPose
+QA test: Game.Tests.PlayMode.VarginhaCombatTests.LockCancelsQueuedPunchWithoutErasingInteractionPose
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.LockCancelsQueuedPunchWithoutErasingInteractionPose
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.LockCancelsQueuedPunchWithoutErasingInteractionPose
+]]></output>
+              </test-case>
+              <test-case id="1597" name="MinorManifestationTakesDamageOnlyThroughCombatTarget" fullname="Game.Tests.PlayMode.VarginhaCombatTests.MinorManifestationTakesDamageOnlyThroughCombatTarget" methodname="MinorManifestationTakesDamageOnlyThroughCombatTarget" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="116110013" result="Passed" start-time="2026-10-23 15:20:31Z" end-time="2026-10-23 15:20:31Z" duration="0.048784" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaCombatTests.MinorManifestationTakesDamageOnlyThroughCombatTarget
+QA test: Game.Tests.PlayMode.VarginhaCombatTests.MinorManifestationTakesDamageOnlyThroughCombatTarget
+QA result: Passed Game.Tests.PlayMode.VarginhaCombatTests.MinorManifestationTakesDamageOnlyThroughCombatTarget
+QA result: Passed Game.Tests.PlayMode.VarginhaCombatTests.MinorManifestationTakesDamageOnlyThroughCombatTarget
+]]></output>
+              </test-case>
+              <test-case id="1589" name="MovementReversesAndStopsInAllEightDirections" fullname="Game.Tests.PlayMode.VarginhaCombatTests.MovementReversesAndStopsInAllEightDirections" methodname="MovementReversesAndStopsInAllEightDirections" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="1565985463" result="Failed" start-time="2026-10-23 15:20:31Z" end-time="2026-10-23 15:20:31Z" duration="0.004607" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: greater than 4.0f
+  But was:  0.0f
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaCombatTests.MovementReversesAndStopsInAllEightDirections () [0x0011c] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\VarginhaCombatTests.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaCombatTests.MovementReversesAndStopsInAllEightDirections
+QA test: Game.Tests.PlayMode.VarginhaCombatTests.MovementReversesAndStopsInAllEightDirections
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.MovementReversesAndStopsInAllEightDirections
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.MovementReversesAndStopsInAllEightDirections
+]]></output>
+              </test-case>
+              <test-case id="1590" name="PunchAtlasHasFourDirectionsAndThreeSixFrameCombos" fullname="Game.Tests.PlayMode.VarginhaCombatTests.PunchAtlasHasFourDirectionsAndThreeSixFrameCombos" methodname="PunchAtlasHasFourDirectionsAndThreeSixFrameCombos" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="1378861316" result="Passed" start-time="2026-10-23 15:20:31Z" end-time="2026-10-23 15:20:31Z" duration="0.000372" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaCombatTests.PunchAtlasHasFourDirectionsAndThreeSixFrameCombos
+QA test: Game.Tests.PlayMode.VarginhaCombatTests.PunchAtlasHasFourDirectionsAndThreeSixFrameCombos
+QA result: Passed Game.Tests.PlayMode.VarginhaCombatTests.PunchAtlasHasFourDirectionsAndThreeSixFrameCombos
+QA result: Passed Game.Tests.PlayMode.VarginhaCombatTests.PunchAtlasHasFourDirectionsAndThreeSixFrameCombos
+]]></output>
+              </test-case>
+              <test-case id="1595" name="PunchDamagesOnlyAtContactAndOnlyOnceForMultipleColliders" fullname="Game.Tests.PlayMode.VarginhaCombatTests.PunchDamagesOnlyAtContactAndOnlyOnceForMultipleColliders" methodname="PunchDamagesOnlyAtContactAndOnlyOnceForMultipleColliders" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="1329730031" result="Failed" start-time="2026-10-23 15:20:31Z" end-time="2026-10-23 15:20:31Z" duration="0.077769" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: 66.0d +/- 0.0010000000474974513d
+  But was:  100.0d
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaCombatTests+<PunchDamagesOnlyAtContactAndOnlyOnceForMultipleColliders>d__10.MoveNext () [0x00180] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\VarginhaCombatTests.cs:186
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaCombatTests.PunchDamagesOnlyAtContactAndOnlyOnceForMultipleColliders
+QA test: Game.Tests.PlayMode.VarginhaCombatTests.PunchDamagesOnlyAtContactAndOnlyOnceForMultipleColliders
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.PunchDamagesOnlyAtContactAndOnlyOnceForMultipleColliders
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.PunchDamagesOnlyAtContactAndOnlyOnceForMultipleColliders
+]]></output>
+              </test-case>
+              <test-case id="1593" name="SpamKeepsEveryAuthoredPoseEvenAtTenFramesPerSecond" fullname="Game.Tests.PlayMode.VarginhaCombatTests.SpamKeepsEveryAuthoredPoseEvenAtTenFramesPerSecond" methodname="SpamKeepsEveryAuthoredPoseEvenAtTenFramesPerSecond" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="683359246" result="Failed" start-time="2026-10-23 15:20:31Z" end-time="2026-10-23 15:20:31Z" duration="0.040136" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: True
+  But was:  False
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaCombatTests+<SpamKeepsEveryAuthoredPoseEvenAtTenFramesPerSecond>d__8.MoveNext () [0x00073] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\VarginhaCombatTests.cs:133
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaCombatTests.SpamKeepsEveryAuthoredPoseEvenAtTenFramesPerSecond
+QA test: Game.Tests.PlayMode.VarginhaCombatTests.SpamKeepsEveryAuthoredPoseEvenAtTenFramesPerSecond
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.SpamKeepsEveryAuthoredPoseEvenAtTenFramesPerSecond
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.SpamKeepsEveryAuthoredPoseEvenAtTenFramesPerSecond
+]]></output>
+              </test-case>
+              <test-case id="1596" name="WallBlocksPunchAndDisableRestoresHitstop" fullname="Game.Tests.PlayMode.VarginhaCombatTests.WallBlocksPunchAndDisableRestoresHitstop" methodname="WallBlocksPunchAndDisableRestoresHitstop" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="665498275" result="Failed" start-time="2026-10-23 15:20:31Z" end-time="2026-10-23 15:20:33Z" duration="2.032822" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: less than 100.0f
+  But was:  100.0f
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaCombatTests+<WallBlocksPunchAndDisableRestoresHitstop>d__11.MoveNext () [0x001f0] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\VarginhaCombatTests.cs:216
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaCombatTests.WallBlocksPunchAndDisableRestoresHitstop
+QA test: Game.Tests.PlayMode.VarginhaCombatTests.WallBlocksPunchAndDisableRestoresHitstop
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.WallBlocksPunchAndDisableRestoresHitstop
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.WallBlocksPunchAndDisableRestoresHitstop
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Master_QA_20261023\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Master_QA_20261023\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

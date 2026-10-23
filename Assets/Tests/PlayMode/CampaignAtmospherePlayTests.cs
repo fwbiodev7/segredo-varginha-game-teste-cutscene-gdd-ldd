@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Game.Varginha;
 using Game.Varginha.Experiment;
 using NUnit.Framework;
@@ -35,6 +36,38 @@ namespace Game.Tests.PlayMode
         }
         static void RestoreFile(string path, string contents)
         { if (contents == null) { if (File.Exists(path)) File.Delete(path); } else File.WriteAllText(path, contents); }
+        [UnityTest,Timeout(60000)] public IEnumerator RepeatedGlitchesAndConfigurationRestoreCameraAndLightingWithoutResidue()
+        {
+            yield return Load(4);var director=CampaignAtmosphereDirector.Active;var camera=Camera.main.GetUniversalAdditionalCameraData();
+            var flags=System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance;
+            bool post=(bool)typeof(CampaignAtmosphereDirector).GetField("_previousPost",flags).GetValue(director);
+            LayerMask mask=(LayerMask)typeof(CampaignAtmosphereDirector).GetField("_previousMask",flags).GetValue(director);
+            int sources=director.GetComponents<AudioSource>().Length;
+            CampaignAtmosphereDirector.Interference(.8f);director.Advance(.5f);Assert.That(director.PulseWeight,Is.GreaterThan(0));
+            director.enabled=false;Assert.That(director.PulseWeight,Is.Zero);
+            Assert.That(camera.renderPostProcessing,Is.EqualTo(post));Assert.That(camera.volumeLayerMask,Is.EqualTo(mask));
+            director.enabled=true;yield return null;Assert.That(director.PulseWeight,Is.Zero);
+            var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
+            director.Configure("School",actor);director.Configure("School",actor);yield return null;
+            Assert.That(director.GetComponentsInChildren<UnityEngine.Rendering.Volume>(true).Count(v=>v.enabled),Is.EqualTo(1));
+            Assert.That(director.GetComponents<AudioSource>().Length,Is.EqualTo(sources));
+            director.enabled=false;Assert.That(camera.renderPostProcessing,Is.EqualTo(post));Assert.That(camera.volumeLayerMask,Is.EqualTo(mask));
+            var go=new GameObject("Light_snapshot_QA");var light=go.AddComponent<SpriteRenderer>();var baseline=new Color(.4f,.5f,.6f,.2f);light.color=baseline;
+            var layer=go.AddComponent<CampaignAtmosphereLayer>();layer.Configure(light);CampaignAtmosphereLayer.Interference(go.transform);yield return null;
+            layer.enabled=false;Assert.That(light.color,Is.EqualTo(baseline));layer.enabled=true;yield return null;
+            Assert.That(light.color.r,Is.EqualTo(baseline.r).Within(.0001f));Assert.That(light.color.g,Is.EqualTo(baseline.g).Within(.0001f));
+            Object.Destroy(go);yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
+        [UnityTest,Timeout(60000)] public IEnumerator DisablingAnInterruptedTransitionClearsTemporaryOverlaysAndRestoresItsClock()
+        {
+            yield return Load(4);Time.timeScale=.7f;
+            CampaignCinematics.Load(CampaignStorySave.Scene(8),new CampaignTransitionProfile{style=CampaignTransitionStyle.Fade,duration=1.5f,letterbox=true});
+            yield return null;var cinema=Object.FindAnyObjectByType<CampaignCinematics>();Assert.That(CampaignCinematics.IsTransitioning,Is.True);
+            cinema.enabled=false;Assert.That(CampaignCinematics.IsTransitioning,Is.False);Assert.That(Time.timeScale,Is.EqualTo(.7f));
+            var flags=System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance;
+            foreach(string field in new[]{"_fade","_bars","_signalSweep"})Assert.That((float)typeof(CampaignCinematics).GetField(field,flags).GetValue(cinema),Is.Zero,field);
+            Time.timeScale=1;yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
         static IEnumerator Load(int phase, int area = 0)
         {
             var story = new CampaignStory { phase = phase }; story.continuation.area = area; CampaignStorySave.Write(story);
@@ -49,6 +82,23 @@ namespace Game.Tests.PlayMode
             else if (phase <= 10) CampaignExpansionController.Active.ClosePanel();
             else CampaignContinuationController.Active.CloseMessage();
             yield return null; yield return null;
+        }
+        [UnityTest,Timeout(60000)] public IEnumerator RepeatedGlitchesReturnToTheSameReadableSceneAfterRecovery()
+        {
+            yield return Load(4);var director=CampaignAtmosphereDirector.Active;director.Advance(8);yield return null;
+            float baseline=Capture(Camera.main,"04_glitch_before.png");
+            for(int repeat=0;repeat<3;repeat++)
+            {
+                CampaignAtmosphereLayer.Interference(director.transform);CampaignAtmosphereDirector.Interference(.9f);
+                yield return new WaitForSeconds(.3f);director.Advance(2);yield return null;
+                Assert.That(director.PulseWeight,Is.GreaterThan(.5f));
+                if(repeat==0)Capture(Camera.main,"04_glitch_peak.png");
+                director.Advance(6);yield return new WaitForSeconds(1.8f);
+                Assert.That(director.PulseWeight,Is.Zero);
+                float recovered=Capture(Camera.main,"04_glitch_recovered_"+repeat+".png");
+                Assert.That(recovered,Is.EqualTo(baseline).Within(.025f),"A finished interference cannot leave a dark field.");
+            }
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
         [UnityTest, Timeout(180000)] public IEnumerator EveryChapterAndSubareaHasReadablePostProcessingAndBoundedResources()
         {

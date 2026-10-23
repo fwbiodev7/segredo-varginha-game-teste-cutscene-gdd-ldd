@@ -181,7 +181,7 @@ namespace Game.Tests.PlayMode
             }
             Assert.That(stage.Progress.routine&7,Is.EqualTo(7),"All three authored preparation animations complete.");
             var layout=CampaignIllustratedMaps.Get(2);
-            actor.transform.position=layout.Position(620,620)+Vector2.up*.58f;Physics2D.SyncTransforms();
+            actor.transform.position=layout.Position(749,600)+Vector2.up*.58f;Physics2D.SyncTransforms();
             stage.Interact("counter");
             yield return new WaitForSeconds(.8f);
             stage.TogglePause();float px=actor.transform.position.x;
@@ -192,12 +192,17 @@ namespace Game.Tests.PlayMode
             while(stage.IsActing&&Time.realtimeSinceStartup<deadline)yield return null;
             Assert.That(stage.Progress.house.KeyOnCounter,Is.True);
             Assert.That(GameObject.Find("Chave_Fusca_Balcao").GetComponent<SpriteRenderer>().enabled,Is.True);
-            var counterGroup=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/Kitchen_Cabinet").GetComponent<UnityEngine.Rendering.SortingGroup>();
-            Assert.That(GameObject.Find("Chave_Fusca_Balcao").GetComponent<UnityEngine.Rendering.SortingGroup>().sortingOrder,Is.GreaterThan(counterGroup.sortingOrder),"The key must render on top of the counter, not behind the furniture.");
+            var counterGroup=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/CoffeeTable_Kitchen").GetComponent<UnityEngine.Rendering.SortingGroup>();
+            Assert.That(GameObject.Find("Chave_Fusca_Balcao").GetComponent<UnityEngine.Rendering.SortingGroup>().sortingOrder,Is.GreaterThan(counterGroup.sortingOrder),"The key must render on top of its coffee table, not behind the furniture.");
             stage.Save();
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.3f);
             stage=VarginhaCampaignStage.Active;actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
             Assert.That(stage.Progress.house.KeyOnCounter,Is.True,"Reload restores the key on the counter.");
+            stage.Interact("bag");Assert.That(stage.IsActing,Is.False,"Bag pickup starts only after the door reminder.");
+            Assert.That(stage.Progress.house.Missing,Is.False);
+            stage.Interact("exitclue");stage.CloseDialogue();
+            Assert.That(stage.Progress.house.bagReminder,Is.True);
+            Assert.That(stage.transform.Find("Porta_Saida_Condicional").GetComponent<BoxCollider2D>().enabled,Is.True);
             At("bag");stage.Interact("bag");deadline=Time.realtimeSinceStartup+9;
             while(stage.IsActing&&Time.realtimeSinceStartup<deadline)yield return null;
             stage.CloseDialogue();

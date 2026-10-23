@@ -4,11 +4,26 @@ using Game.Varginha;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
+using UnityEngine.SceneManagement;
 
 namespace Game.Tests.PlayMode
 {
     public class VarginhaCombatTests
     {
+        [UnitySetUp] public IEnumerator IsolateFromMenusAndCampaignInputLocks()
+        {
+            var isolated=SceneManager.CreateScene("Combat_QA_"+System.Guid.NewGuid().ToString("N"));
+            SceneManager.SetActiveScene(isolated);
+            for(int i=SceneManager.sceneCount-1;i>=0;i--)
+            {
+                var scene=SceneManager.GetSceneAt(i);
+                // The first batch test may still be owned by Unity's bootstrap scene.
+                // Unload game scenes and our own fixtures, never the test runner itself.
+                if(scene!=isolated&&(scene.name.StartsWith("Combat_QA_")||scene.name.StartsWith("Ato")||scene.name=="Menu_MisterioDeVarginha"))
+                    yield return SceneManager.UnloadSceneAsync(scene);
+            }
+            Time.timeScale=1;VarginhaGameHUD.Instance?.CloseDialogue();yield return null;
+        }
         private GameObject _targetObject;
 
         [TearDown]
@@ -121,6 +136,45 @@ namespace Game.Tests.PlayMode
             yield return null;
             Assert.IsFalse(attack.IsAttacking, "Multiple clicks buffer one punch, not an unlimited chain.");
             Assert.AreEqual(2, attack.ComboStep);
+        }
+        [UnityTest] public IEnumerator SpamKeepsEveryAuthoredPoseEvenAtTenFramesPerSecond()
+        {
+            float previous=Time.captureDeltaTime;
+            try
+            {
+                Time.captureDeltaTime=.1f;
+                var attack=CreateAttacker();var renderer=_targetObject.GetComponent<SpriteRenderer>();
+                var frames=new System.Collections.Generic.HashSet<Sprite>();
+                Assert.That(attack.TryAttack(Vector2.right),Is.True);frames.Add(renderer.sprite);
+                for(int click=0;click<40;click++)attack.QueueAttack(Vector2.left);
+                float deadline=Time.realtimeSinceStartup+8;
+                while(attack.ComboStep==1&&attack.IsAttacking&&Time.realtimeSinceStartup<deadline)
+                {frames.Add(renderer.sprite);yield return null;}
+                Assert.That(frames.Count,Is.EqualTo(6),"A slow frame cannot erase an authored anticipation or recovery pose.");
+                Assert.That(attack.ComboStep,Is.EqualTo(2));
+                while(attack.IsAttacking&&Time.realtimeSinceStartup<deadline)yield return null;
+                Assert.That(attack.IsAttacking,Is.False);Assert.That(attack.ComboStep,Is.EqualTo(2),"Forty clicks still buffer only one follow-up.");
+                Assert.That(_targetObject.GetComponent<VarginhaPlayerSpriteAnimation>().HasActionPose,Is.False);
+            }
+            finally {Time.captureDeltaTime=previous;}
+        }
+        [UnityTest,Timeout(15000)] public IEnumerator CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch()
+        {
+            var attack=CreateAttacker();var team=_targetObject.AddComponent<Game.Varginha.Experiment.CampaignTeamEdelzio>();
+            var visual=_targetObject.GetComponent<VarginhaPlayerSpriteAnimation>();var renderer=_targetObject.GetComponent<SpriteRenderer>();
+            yield return null;Assert.That(attack.TryAttack(Vector2.right),Is.True);attack.QueueAttack(Vector2.left);
+            var seen=new[]{new System.Collections.Generic.HashSet<int>(),new System.Collections.Generic.HashSet<int>()};
+            float deadline=Time.realtimeSinceStartup+5;
+            while(attack.IsAttacking&&Time.realtimeSinceStartup<deadline)
+            {
+                int step=attack.ComboStep-1,phase=visual.CombatFrame;
+                team.SendMessage("LateUpdate");
+                int pose=phase switch{0=>0,1 or 2=>1,3=>2,4=>3,_=>0};
+                Assert.That(renderer.sprite.name,Is.EqualTo("Team_V4_Punch_"+(step==0?2:1)+"_"+pose),"The renderer follows this punch's phase, not the first punch's clock.");
+                seen[step].Add(pose);yield return null;
+            }
+            Assert.That(attack.IsAttacking,Is.False);Assert.That(seen[0].Count,Is.EqualTo(4));Assert.That(seen[1].Count,Is.EqualTo(4));
+            Assert.That(visual.HasActionPose,Is.False);Assert.That(visual.CombatFrame,Is.EqualTo(-1));
         }
 
         [UnityTest]

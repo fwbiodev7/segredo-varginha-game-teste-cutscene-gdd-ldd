@@ -30,6 +30,7 @@ namespace Game.Tests.EditMode
         [Test] public void EarlierInvestigationsMigrateToAParkedVehicle()
         {
             var state=new CampaignExpansionState { evidencePresented=true,labClues=7,sampleOrder=new[]{0,1,2} };
+            state.anchorClues=7;state.bookOrder=new[]{0,1,2};state.bookLinks=new[]{0,1,2};
             state.SolveAnchor(1996,1,23);state.SolveSamples();state.Spray(0);
             var restored=JsonUtility.FromJson<CampaignExpansionState>(JsonUtility.ToJson(state));restored.Repair();
             Assert.That(restored.workshopParked,Is.True);Assert.That(restored.sprayed,Is.EqualTo(7));Assert.That(restored.reagentCharges,Is.EqualTo(5));

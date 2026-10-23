@@ -38,6 +38,7 @@ namespace Game.Varginha.Experiment
         private string _environment;
         private float _clock, _pulseTime = 5, _pulseStrength, _nextDetail = 28, _poll;
         private CampaignAtmosphereProfile _target;
+        private bool _configured;
         public float Tension { get; private set; }
         public float Clock => _clock;
         public float PulseWeight { get; private set; }
@@ -58,12 +59,14 @@ namespace Game.Varginha.Experiment
         }
         public void Configure(string environment, EdelzioTopDownController actor)
         {
+            if(_configured)ReleaseConfiguration();
             Active = this; _environment = environment; _actor = actor;
             _continuation = GetComponent<CampaignContinuationController>(); _expansion = GetComponent<CampaignExpansionController>();
             _stage = GetComponent<VarginhaCampaignStage>(); _opening = GetComponent<VarginhaCampaignPhase1>(); _drive = GetComponent<VarginhaCampaignDrive>();
             _phase = _continuation != null ? _continuation.phase : _expansion != null ? _expansion.phase : _stage != null ? _stage.phase : _opening != null ? 1 : _drive != null ? 3 : CampaignAtmosphereProfile.ScenePhase(gameObject.scene.name);
             _area = _continuation != null ? _continuation.area : 0;
             if (_phase == 0) { enabled = false; return; }
+            _configured=true;
             _target = Resolve(); Tension = _hasPrevious ? _previousTension : _target.tension; _hasPrevious = true;
             _bridge = CampaignAmbientBridge.Instance;
             _camera = Camera.main;
@@ -166,6 +169,7 @@ namespace Game.Varginha.Experiment
         }
         private void OnDisable()
         {
+            _pulseTime=5;_pulseStrength=PulseWeight=0;
             if (_volume != null) _volume.enabled = false;
             if (_cameraData != null) { _cameraData.renderPostProcessing = _previousPost; _cameraData.volumeLayerMask = _previousMask; }
             foreach (var dust in _dust) if (dust != null) dust.enabled = false;
@@ -175,8 +179,17 @@ namespace Game.Varginha.Experiment
         private void OnDestroy()
         {
             if (Active == this) Active = null;
+            ReleaseConfiguration();
+        }
+        private void ReleaseConfiguration()
+        {
+            OnDisable();
+            if(_volume!=null)Destroy(_volume.gameObject);
+            if(_detail!=null)Destroy(_detail);
+            foreach(var dust in _dust)if(dust!=null)Destroy(dust.gameObject);
             if (_profile != null) { foreach (var component in _profile.components) Destroy(component); Destroy(_profile); }
             if (_dustSprite != null) Destroy(_dustSprite);
+            _volume=null;_profile=null;_detail=null;_dustSprite=null;_cameraData=null;_configured=false;
         }
     }
 }

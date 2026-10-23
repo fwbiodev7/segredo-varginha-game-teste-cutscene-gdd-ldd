@@ -50,7 +50,7 @@ namespace Game.Tests.EditMode
         [Test] public void HouseAndWorkshopRequireEvidenceWithoutRoutineOrRepeatedPuzzles()
         {
             var s=new CampaignStory{boxFound=true,pages=new[]{0,1,2}};Assert.That(s.SubmitPages(),Is.True);s.Repair();Assert.That(s.CanLeaveHouse,Is.True);Assert.That(s.routine,Is.Zero);
-            var e=s.expansion;Assert.That(e.SolveSamples(),Is.False);e.SolveAnchor(1996,1,23);e.evidencePresented=true;
+            var e=s.expansion;Assert.That(e.SolveSamples(),Is.False);e.anchorClues=7;e.bookOrder=new[]{0,1,2};e.bookLinks=new[]{0,1,2};e.SolveAnchor(1996,1,23);e.evidencePresented=true;
             Assert.That(e.SolveSamples(),Is.True);Assert.That(e.Spray(1),Is.True);Assert.That(e.sprayed,Is.EqualTo(7));Assert.That(e.reagentCharges,Is.EqualTo(5));Assert.That(e.Complete(10),Is.True);Assert.That(e.testDriven,Is.False);
         }
 

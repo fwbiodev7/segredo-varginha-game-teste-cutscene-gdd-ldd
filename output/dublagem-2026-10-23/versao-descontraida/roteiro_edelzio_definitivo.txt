@@ -1,0 +1,82 @@
+﻿FALAS DO EDELZIO PARA GRAVAR
+VERSÃO R2 - TOM NATURAL
+
+14 falas do adulto e 1 da criança. Leia só a fala, sem o número e a orientação.
+Fale como no dia a dia. Uma tomada boa basta. Deixe um segundo de silêncio antes e depois.
+Nomeie ED01_t01, ED02_t01... e envie os originais na pasta Edelzio_R2, de preferência em ZIP.
+
+ED01 - Preparando o notebook
+(Natural, falando consigo mesmo.)
+Vou dar a volta pra chegar no notebook.
+
+ED02 - Olhando a caixa antes do sumiço
+(Uma lembrança rápida, sem parar a rotina.)
+Minha caixa de brinquedos... Faz tempo, hein? Depois eu vejo isso.
+
+ED03 - Deixando a chave na mesa
+(Tranquilo, sem desconfiar de nada.)
+Vou deixar a chave aqui e pegar a mochila.
+
+ED04 - Voltando à mesa
+(Cotidiano, sem pressa.)
+A chave tá aqui. Só falta a mochila.
+
+ED05 - Percebendo o sumiço
+(Estranhando o sumiço.)
+Ué... cadê a chave? Nem no chão ela tá.
+
+ED06 - Conferindo a porta
+(Pensando alto, sem tirar conclusões.)
+A porta tá trancada por dentro. Eu nem mexi nela.
+
+ED07 - Encontrando o papel
+(Curioso, começando a reconhecer.)
+Olha esse papel velho... Esse traço azul parece o dos meus desenhos de criança.
+
+ED08 - Antes de abrir a caixa
+(Cauteloso, sem dramatizar demais.)
+Calma... Antes de abrir essa caixa, deixa eu entender o que tá acontecendo.
+
+ED09 - Ouvindo os arranhões
+(Começa pensando; termina prestando atenção ao barulho.)
+A porta não abriu... Esse papel parece ser da caixa. Pera... tem algo arranhando debaixo da cama.
+
+ED10 - Depois de resolver a caixa
+(Um alívio curto que vira inquietação.)
+Pronto, guardei tudo. Mas essa frase... Ela ainda está aqui.
+
+ED11 - Com a chave recuperada
+(Firme, com um pouco de desconfiança.)
+Dessa vez, essa chave fica comigo.
+
+ED12 - Se tentar sair antes de investigar
+(Lembrando o que ainda precisa fazer.)
+Antes de sair, preciso olhar a caixa e juntar essas páginas.
+
+ED13 - Antes de usar o notebook do Renan
+(Natural, como numa conversa.)
+Deixa eu falar com o Renan antes de mexer no notebook dele.
+
+ED14 - Depois de decifrar o horário
+(Percebeu uma pista; sem ler números em voz alta.)
+É esse o horário... O Renan precisa ver isso.
+
+CR01 - Voz de criança no rádio do Fusca
+(Baixo, com medo contido. Sem filtro de rádio.)
+Não deixa ela sair.
+
+SONS OPCIONAIS - SOMENTE SE PEDIDOS
+Interprete o som. Não leia a descrição.
+
+S01 - Susto adulto: Um susto curto, sem palavra.
+
+S02 - Queimadura adulta: Uma reação curta de dor, sem prolongar.
+
+S03 - Fuga adulta: Três respirações curtas de esforço, com pausas.
+
+S04 - Queda adulta: Um impacto breve e recuperação do fôlego.
+
+S05 - Susto criança: Uma reação curta ao clarão, sem palavras.
+
+ENVIO
+Mande os arquivos originais na melhor qualidade. Se puder, use WAV. Não precisa converter nem editar. Para repetir uma fala: ED01_t02.

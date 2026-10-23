@@ -12,10 +12,14 @@ namespace Game.Varginha.Experiment
         public bool workshopParked,workshopDeparted,workshopHasCarPosition;
         public float workshopCarX,workshopCarY;
         public int workshopHeading;
+        public bool workshopHasYaw;
+        public float workshopYaw;
         public int[] mapOrder = { 2, 0, 1 }, sampleOrder = { 2, 1, 0 }, sealOrder = { 2, 0, 1 };
         public int[] mapDirections = { 0, 2, 1 };
         public int[] trailChoices = { -1, -1, -1 };
         public int trailHints,trailFeedback;
+        public int[] bookOrder={2,0,1},bookLinks={-1,-1,-1};
+        public int bookHints,bookFeedback;
         public bool SolveMap()
         {
             if(mapSolved&&visited==7)return true;
@@ -24,8 +28,7 @@ namespace Game.Varginha.Experiment
         }
         public bool SolveAnchor(int year, int symbol, int record)
         {
-            // The combination is the answer. Separate inspection triggers must not
-            // reject a player who has already understood the visible records.
+            if(!CampaignBookPuzzle.Ready(this))return false;
             if (year != 1996 || symbol != 1 || record != 23) return false;
             anchorYear = year; anchorSymbol = symbol; anchorRecord = record;
             anchorClues = 7;
@@ -59,16 +62,19 @@ namespace Game.Varginha.Experiment
             if(mapSolved)mapDirections=new[]{1,1,0};
             if (visited != 7) mapSolved = false;
             if(trailChoices==null||trailChoices.Length!=3)trailChoices=new[]{-1,-1,-1};
-            bool gap=false;
             for(int i=0;i<3;i++)
-            {if(trailChoices[i]<0||trailChoices[i]>1)gap=true;if(gap)trailChoices[i]=-1;}
+            {if(trailChoices[i]<0||trailChoices[i]>1)trailChoices[i]=-1;}
             if(mapSolved)for(int i=0;i<3;i++)trailChoices[i]=CampaignTrailPuzzle.CorrectBranch(i);
             trailHints=Mathf.Clamp(trailHints,0,3);trailFeedback=Mathf.Clamp(trailFeedback,0,5);
             if (!mapSolved || forestSigns < 3) fabioMet = false;
+            RepairOrder(ref bookOrder);
+            if(bookLinks==null||bookLinks.Length!=3)bookLinks=new[]{-1,-1,-1};
+            for(int i=0;i<3;i++)if(bookLinks[i]<0||bookLinks[i]>2||(anchorClues&(1<<bookLinks[i]))==0)bookLinks[i]=-1;
+            bookHints=Mathf.Clamp(bookHints,0,3);bookFeedback=Mathf.Clamp(bookFeedback,0,3);
             // A solved book remains solved across reloads, including older saves
             // whose optional inspection/history flags were not registered.
             if (anchorFound && anchorClues != 7 && (anchorYear != 1996 || anchorSymbol != 1 || anchorRecord != 23)) anchorFound = false;
-            if (anchorFound) { anchorClues = 7; anchorYear = 1996; anchorSymbol = 1; anchorRecord = 23; }
+            if (anchorFound) { anchorClues = 7; anchorYear = 1996; anchorSymbol = 1; anchorRecord = 23; bookOrder=new[]{0,1,2};bookLinks=new[]{0,1,2}; }
             if (!anchorFound) evidencePresented = false;
             if (!anchorFound || !evidencePresented) reagentUnlocked = false;
             if (!reagentUnlocked) { sprayed = 0; stabilized = false; }
@@ -78,6 +84,8 @@ namespace Game.Varginha.Experiment
             if(sprayed!=0||stabilized||testDriven)workshopParked=true;
             if(!stabilized)workshopDeparted=false;
             workshopHeading=Mathf.Clamp(workshopHeading,0,3);
+            if(float.IsNaN(workshopYaw)||float.IsInfinity(workshopYaw)){workshopHasYaw=false;workshopYaw=0;}
+            workshopYaw=Mathf.Repeat(workshopYaw+180,360)-180;
             if(float.IsNaN(workshopCarX)||float.IsInfinity(workshopCarX)||float.IsNaN(workshopCarY)||float.IsInfinity(workshopCarY))
             {workshopHasCarPosition=false;workshopCarX=workshopCarY=0;}
             workshopCarX=Mathf.Clamp(workshopCarX,-10,10);workshopCarY=Mathf.Clamp(workshopCarY,-5.9f,5.9f);

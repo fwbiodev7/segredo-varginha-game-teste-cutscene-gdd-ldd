@@ -116,7 +116,8 @@ namespace Game.Varginha.Experiment
             var wallTexture=string.IsNullOrEmpty(data.architecture)?Texture(data.image):Texture(data.architecture);
             if(plan.phase==2)
             {
-                var interactiveBase=Resources.Load<Texture2D>("Varginha/HouseFurniture/AdultInteractiveBase");
+                var interactiveBase=Resources.Load<Texture2D>("Varginha/HouseFurniture/AdultInteractiveSeatAligned")
+                    ??Resources.Load<Texture2D>("Varginha/HouseFurniture/AdultInteractiveBase");
                 if(interactiveBase!=null){image=interactiveBase;wallTexture=interactiveBase;}
             }
             float tileHeight=data.height*data.Scale;
@@ -168,6 +169,7 @@ namespace Game.Varginha.Experiment
                 }
             }
             if(furnished)Furnish(map,plan);
+            if(furnished&&plan.phase==6)BuildSchoolGlobe(map,data);
             CampaignAdultMorning.Build(map,data);
             CampaignStainedGlassLighting.Build(map,data);
             var lighting=map.gameObject.AddComponent<CampaignIllustratedLighting>();lighting.Configure(data);
@@ -261,6 +263,22 @@ namespace Game.Varginha.Experiment
         }
         private static Texture2D Texture(string id)=>Resources.Load<Texture2D>("Varginha/IllustratedMaps/"+id)
             ??throw new InvalidOperationException("Imagem de cenário ausente: "+id);
+        private static void BuildSchoolGlobe(Transform map,Layout data)
+        {
+            var cabinet=map.Find("02_Mobilia_Colisoes/Armario do globo");
+            var texture=Resources.Load<Texture2D>("Varginha/SchoolGlobe/Globe");if(cabinet==null||texture==null)return;
+            const string key="SchoolGlobe20261023";
+            if(!Sprites.TryGetValue(key,out var sprite)||sprite==null)
+            {
+                sprite=Sprite.Create(texture,new Rect(0,0,44,64),new Vector2(.5f,0),50,0,SpriteMeshType.FullRect);
+                sprite.name="school_globe_static";Sprites[key]=sprite;
+            }
+            var globe=new GameObject("Globo_Esferico_Arquivo");
+            // Cabinet artwork is scaled; retain a unit world scale for the native overlay.
+            globe.transform.SetParent(cabinet,true);globe.transform.position=data.Position(896,190);
+            var renderer=globe.AddComponent<SpriteRenderer>();renderer.sprite=sprite;
+            VarginhaWorldDepth.Ensure(renderer,supportingObject:cabinet,offset:2);
+        }
         private static Rect SourceRect(Layout data,float[] rect,Texture2D texture=null)
         {
             var t=texture??Texture(data.image);float x=t.width/(float)data.width,y=t.height/(float)data.height;

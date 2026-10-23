@@ -29,16 +29,35 @@ for(const [key,p] of Object.entries(img)){
 }
 const font=await fs.readFile(doc('Assets/Resources/Fonts/PressStart2P-Regular.ttf'));
 const source=(...p)=>p.map(x=>doc(x)).join('\n');
-const qa=JSON.parse(await fs.readFile(doc('output/house-interactions-2026-10-22/summary.json'),'utf8'));
-if(!qa.technicalSuccess)throw new Error('A entrega de 22/10 ainda não tem QA concluído.');
 const count=t=>`${t.passed}/${t.total}`;
-const slides=JSON.parse(await fs.readFile(doc('output/daily-sprint-2026-10-20/conteudo-2026-10-22.json'),'utf8'));
-slides[7].rows[0][1]=count(qa.tests.editMode);slides[7].rows[1][1]=count(qa.tests.player);
+const readTestResult=async source=>{
+ const xml=await fs.readFile(doc(source),'utf8');
+ const root=xml.match(/<test-run\b([^>]+)>/);
+ if(!root)throw new Error(`Resultado de teste não reconhecido: ${source}`);
+ const attrs=Object.fromEntries([...root[1].matchAll(/([\w-]+)="([^"]*)"/g)].map(m=>[m[1],m[2]]));
+ const result={source,result:attrs.result,total:Number(attrs.total),passed:Number(attrs.passed),failed:Number(attrs.failed),skipped:Number(attrs.skipped),endedAt:attrs['end-time']};
+ if(result.result!=='Passed'||!Number.isInteger(result.total)||result.total<=0||result.passed!==result.total||result.failed!==0||result.skipped!==0||!result.endedAt?.startsWith('2026-10-22'))throw new Error(`Rever a evidência antes de publicar a daily: ${source}`);
+ return result;
+};
+const complete=await readTestResult('output/school-desk-2026-10-22/editmode.xml');
+const audio=await readTestResult('Docs/QAAlpha01/EditModeResults.xml');
+const combat=await readTestResult('Docs/QAAlpha01/PlayModeResults.xml');
+// Os XMLs de QAAlpha01 são sobrescritos por execuções direcionadas.
+// Não usar a contagem inicial do arquivo de progresso como suíte concluída.
+if(complete.total!==398||audio.total!==12||combat.total!==3)throw new Error('O escopo dos testes mudou; revisar as notas da daily.');
 const feedback=JSON.parse(await fs.readFile(doc('output/school-desk-2026-10-22/player-summary.json'),'utf8'));
-if(!feedback.success)throw new Error('A revisão das janelas e mesa do Renan ainda não passou.');
+if(!feedback.success||feedback.tests.total!==3||feedback.tests.passed!==3)throw new Error('A revisão das janelas e mesa do Renan ainda não passou.');
+const delivered=JSON.parse(await fs.readFile(doc('output/school-desk-2026-10-22/windows-build.json'),'utf8'));
+const packaged=JSON.parse(await fs.readFile(doc('output/school-desk-2026-10-22/windows-package.json'),'utf8'));
+if(delivered.result!=='Succeeded'||delivered.version!=='0.4.7-beta'||delivered.errors!==0||!packaged.success||packaged.version!==delivered.version)throw new Error('A entrega 0.4.7-beta não está comprovada pelos manifestos.');
+const slides=JSON.parse(await fs.readFile(doc('output/daily-sprint-2026-10-20/conteudo-2026-10-23.json'),'utf8'));
+if(slides.length!==10||slides[7].kind!=='quality')throw new Error('Preservar os dez slides e a posição das evidências.');
+slides[7].rows[0][1]=count(complete);
 slides[7].rows[1][1]=count(feedback.tests);
-slides[7].rows[1][2]='Revisão de janelas, mesa e notebook';
-slides[7].rows[2][1]='15 sprites';
+slides[7].rows[2][1]=count(audio);
+slides[7].rows[3][1]=count(combat);
+slides[7].rows[4][1]=delivered.version.replace('-beta','');
+await fs.writeFile(path.join(priv,'evidencias-2026-10-23.json'),JSON.stringify({daily:'2026-10-23',complete,audio,combat,player:{source:'output/school-desk-2026-10-22/player-summary.json',...feedback.tests},build:{source:'output/school-desk-2026-10-22/windows-build.json',...delivered},package:{source:'output/school-desk-2026-10-22/windows-package.json',...packaged},gameTestsRunForDaily:false},null,2));
 await fs.writeFile(path.join(priv,'slides.json'),JSON.stringify(slides,null,2));
 await fs.writeFile(path.join(priv,'images.json'),JSON.stringify(img,null,2));
 const dataImages={};for(const[k,p]of Object.entries(img))dataImages[k]='data:image/jpeg;base64,'+(await fs.readFile(p)).toString('base64');
@@ -58,7 +77,7 @@ const body=s=>{
 const motionCSS=await fs.readFile(path.join(out,'motion.css'),'utf8');
 const motionJS=await fs.readFile(path.join(out,'motion.js'),'utf8');
 const fxMarkup='<div id="transition-fx" aria-hidden="true"><div class="shutter">'+Array.from({length:144},()=>'<i></i>').join('')+'</div><div class="signal-band"></div><div class="signal-band"></div><div class="signal-band"></div><div class="sweep"></div><div class="aura"></div><div class="door left"></div><div class="door right"></div><div class="crt-line"></div><div class="film-edge left"></div><div class="film-edge right"></div></div><div id="crt" aria-hidden="true"></div><div id="progress" aria-hidden="true"></div>';
-const html=`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A Sprint Final • O Segredo de Varginha</title><style>
+const html=`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily 23/10/2026 • O Segredo de Varginha</title><style>
 @font-face{font-family:Pixel;src:url(data:font/ttf;base64,${font.toString('base64')}) format('truetype');font-display:block}
 :root{--ink:#071018;--paper:#eee9d2;--muted:#a8b9bb;--cyan:#73d6da;--amber:#ffb96c;--line:#344d55}*{box-sizing:border-box}body{margin:0;background:#020608;color:var(--paper);font-family:Consolas,'Courier New',monospace;overflow:hidden}button{font:inherit;color:inherit;background:transparent;border:1px solid var(--line);cursor:pointer;padding:8px 13px}button:hover,button:focus-visible{border-color:var(--cyan);color:var(--cyan)}#stage{position:absolute;width:1280px;height:720px;left:50%;top:50%;transform:translate(-50%,-50%) scale(var(--scale,1));transform-origin:center}.slide{position:absolute;inset:0;padding:58px 64px 72px;background:var(--ink);display:none;overflow:hidden}.slide.on{display:block}.slide:not(.on){display:none!important}.tag{font-family:Pixel,monospace;font-size:11px;color:var(--cyan);letter-spacing:1px;margin-bottom:28px}h1,h2,h3{margin:0}h1,h2{font-family:Pixel,monospace;font-weight:400}h1{font-size:48px;line-height:1.4}h2{font-size:30px;line-height:1.45;max-width:1140px}h3{font-family:Pixel,monospace;font-size:12px;line-height:1.8;color:var(--amber);font-weight:400}.lead{font-size:25px;line-height:1.35;color:var(--muted);margin:24px 0 30px;max-width:950px}p{font-size:23px;line-height:1.42;margin:8px 0 0}figure{margin:0;min-width:0}figure img{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated}figcaption{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.4}.split{display:grid;grid-template-columns:435px 1fr;gap:40px;margin-top:25px;align-items:center}.split .lead{font-size:24px;margin:0 0 28px}.split figure img{height:352px}.items{display:grid;gap:25px}.items p{font-size:22px}.bottom{position:absolute;left:64px;right:64px;bottom:66px;color:var(--cyan);font-size:19px;line-height:1.4}.footer{position:absolute;left:64px;right:64px;bottom:25px;display:flex;justify-content:space-between;font-size:12px;color:#7f999e;letter-spacing:1px}.footer:before{content:'';position:absolute;top:-13px;width:100%;height:1px;background:var(--line)}table{width:100%;border-collapse:collapse;margin-top:34px;text-align:left}td,th{border-bottom:1px solid var(--line);padding:21px 20px 21px 0;vertical-align:middle;font-weight:400;font-size:22px;line-height:1.35}th{color:var(--cyan);width:27%}.timeline td:nth-child(2){color:var(--amber);width:17%}.quality th{width:36%}.quality td:nth-child(2){font-family:Pixel;font-size:20px;color:var(--amber);width:15%}.quality td{font-size:20px}.daily th{width:17%;color:var(--amber)}.priorities th{width:14%;color:var(--amber)}.priorities td{font-size:21px}.priorities td:nth-child(2){width:35%}.duo{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px}.duo figure img{height:294px}.duo figcaption{display:none}.duo h3{margin-top:21px}.duo p{font-size:22px}.widephoto{margin-top:24px;width:780px}.widephoto figure img{height:438px}.photo .items{position:absolute;left:886px;top:206px;width:320px;gap:27px}.photo .items p{font-size:21px}.photo figcaption{font-size:12px}.voices .items,.close .items{margin-top:40px;gap:28px;max-width:1000px}.voices .items>div,.close .items>div{display:grid;grid-template-columns:220px 1fr;gap:25px}.voices .items p,.close .items p{margin:0;font-size:24px}.feedback .items{margin-top:37px;gap:29px}.feedback .items>div{display:grid;grid-template-columns:420px 1fr;gap:32px}.feedback h3{font-family:Consolas,monospace;color:var(--amber);font-size:24px}.feedback p{margin:0;font-size:22px}.feedback .lead:empty{display:none}.cover{padding:0}.cover .tag{position:absolute;left:64px;top:56px;z-index:2}.coverimg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.6}.coverimg:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#02070bf5,#02070bc9 48%,#02070b00 82%)}.covertext{position:absolute;left:64px;top:179px}.covertext h2{font-size:24px;margin-top:31px;color:var(--cyan)}.covertext p{font-size:22px;margin-top:25px}.cover .footer{z-index:2}.close h2{font-size:35px;line-height:1.5}.close .lead{margin-top:20px}#nav{position:fixed;bottom:8px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;opacity:.35;transition:opacity .2s;font-size:12px;z-index:5}#nav:hover,#nav:focus-within{opacity:1}#note{position:fixed;inset:12% 12%;padding:34px;background:#101f27;border:2px solid var(--cyan);z-index:9;overflow:auto;white-space:pre-wrap;font:18px/1.6 Consolas,monospace}#note[hidden]{display:none}#help{font-size:12px;color:var(--muted)}
 .slide:nth-of-type(15) .split .lead{margin-bottom:18px;font-size:22px}.slide:nth-of-type(15) .items{gap:16px}.slide:nth-of-type(15) .items p{font-size:20px;line-height:1.3}.slide:nth-of-type(15) .items h3{font-size:11px}@media print{@page{size:13.333in 7.5in;margin:0}body{overflow:visible;background:var(--ink);print-color-adjust:exact;-webkit-print-color-adjust:exact}#stage{position:static;transform:none;width:1280px;height:auto}.slide{display:block!important;position:relative;width:1280px;height:720px;break-after:page}#nav,#note{display:none!important}}
@@ -67,5 +86,5 @@ const notes=${JSON.stringify(slides.map(s=>s.notes)).replaceAll('<','\\u003c')};
 ${motionJS}
 </script></body></html>`;
 await fs.writeFile(path.join(out,'A_Sprint_Final_Varginha.html'),html);
-await fs.writeFile(path.join(out,'Roteiro_da_daily.md'),'# Daily curta de 22/10/2026\n\n'+slides.map((s,i)=>`## ${i+1}. ${s.title.replaceAll('\n',' ')}\n\n${s.notes}`).join('\n\n'));
+await fs.writeFile(path.join(out,'Roteiro_da_daily.md'),'# Daily de 23/10/2026\n\n'+slides.map((s,i)=>`## ${i+1}. ${s.title.replaceAll('\n',' ')}\n\n${s.notes}`).join('\n\n'));
 console.log(JSON.stringify({slides:slides.length,html:path.join(out,'A_Sprint_Final_Varginha.html'),images:img}));

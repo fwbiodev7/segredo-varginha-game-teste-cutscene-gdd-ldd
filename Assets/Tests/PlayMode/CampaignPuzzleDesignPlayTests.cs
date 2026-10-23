@@ -82,24 +82,27 @@ namespace Game.Tests.PlayMode
             File.WriteAllBytes(folder+"/"+name+".png",image.EncodeToPNG());Object.Destroy(image);
         }
         [UnityTest,Timeout(180000)]
-        [Category("HudPuzzles")] public IEnumerator TrailMapCanPreviewUndoAndTraceWithController()
+        [Category("HudPuzzles")] public IEnumerator TrailMapSelectsSavesAndCorrectsAnySegmentWithController()
         {
             var story=new CampaignStory{phase=6};story.expansion.visited=7;CampaignStorySave.Write(story);
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(6));yield return new WaitForSeconds(3.2f);
             var c=CampaignExpansionController.Active;ShowGame();VarginhaGamepadUI.Reset();VarginhaInputActions.Rebuild();
             c.Interact("map");yield return new WaitForSecondsRealtime(.3f);
             yield return Capture("trail-start");
-            yield return Click(CampaignTrailPuzzle.ChoiceRect(0,0));
-            yield return Capture("trail-preview");
-            Assert.That(c.Progress.expansion.trailChoices[0],Is.EqualTo(-1),"Selection previews without committing.");
-            yield return Click(CampaignTrailPuzzle.TraceRect);yield return Click(CampaignTrailPuzzle.UndoRect);
-            Assert.That(CampaignTrailPuzzle.Step(c.Progress.expansion),Is.Zero);
-            yield return Click(CampaignTrailPuzzle.ChoiceRect(0,1));yield return Click(CampaignTrailPuzzle.TraceRect);
+            yield return Click(CampaignTrailPuzzle.ChoiceRect(2,1));
+            Assert.That(c.Progress.expansion.trailChoices[2],Is.EqualTo(1),"Selection commits immediately, in any order.");
+            Assert.That(CampaignStorySave.Load().expansion.trailChoices[2],Is.EqualTo(1));
+            yield return Click(CampaignTrailPuzzle.ChoiceRect(0,1));
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(6));yield return new WaitForSeconds(3.2f);
             c=CampaignExpansionController.Active;VarginhaGamepadUI.Reset();VarginhaInputActions.Rebuild();c.Interact("map");
             yield return new WaitForSecondsRealtime(.3f);
             Assert.That(c.Progress.expansion.trailChoices[0],Is.EqualTo(1));
-            for(int i=1;i<3;i++){yield return Click(CampaignTrailPuzzle.ChoiceRect(i,i==1?0:1));yield return Click(CampaignTrailPuzzle.TraceRect);}
+            Assert.That(c.Progress.expansion.trailChoices[2],Is.EqualTo(1));
+            yield return Click(CampaignTrailPuzzle.ChoiceRect(1,1));
+            yield return Click(CampaignTrailPuzzle.CheckRect);
+            CollectionAssert.AreEqual(new[]{1,1,1},c.Progress.expansion.trailChoices);
+            Assert.That(c.Progress.expansion.mapSolved,Is.False);
+            yield return Click(CampaignTrailPuzzle.ChoiceRect(1,0));
             yield return Capture("trail-puzzle");yield return Click(CampaignTrailPuzzle.CheckRect);
             Assert.That(c.Progress.expansion.mapSolved,Is.True);Assert.That(CampaignStorySave.Load().expansion.mapSolved,Is.True);
             Assert.That(CampaignGuidance.Target(c.Progress,6),Is.EqualTo("exit"));
@@ -120,6 +123,47 @@ namespace Game.Tests.PlayMode
             yield return Click(new Rect(755,530,360,32));Assert.That(c.Progress.continuation.solved[4],Is.True);
             Assert.That(CampaignStorySave.Load().continuation.solved[4],Is.True);
             _keyboardNavigation=false;yield return new WaitForSeconds(4);
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
+        [UnityTest,Timeout(60000)] public IEnumerator CompactContinueUsesControllerAndCannotSkipTwoChapters()
+        {
+            var story=new CampaignStory{phase=6};story.expansion.visited=7;story.expansion.mapSolved=true;CampaignStorySave.Write(story);
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(6));yield return new WaitForSeconds(3.2f);
+            var c=CampaignExpansionController.Active;ShowGame();VarginhaGamepadUI.Reset();VarginhaInputActions.Rebuild();
+            Assert.That(c.ContinueChapter(),Is.False,"The compact control cannot bypass the exit interaction.");
+            c.Interact("exit");yield return new WaitForSecondsRealtime(.2f);
+            yield return Capture("compact-continue-library");
+            yield return Click(new Rect(1010,650,220,42));
+            Assert.That(c.ContinueChapter(),Is.False,"Repeated submit cannot schedule a second advance.");
+            float deadline=Time.realtimeSinceStartup+15;
+            while(CampaignCinematics.IsTransitioning&&Time.realtimeSinceStartup<deadline)yield return null;
+            Assert.That(CampaignStorySave.Load().phase,Is.EqualTo(7));
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
+        [UnityTest,Timeout(120000)] public IEnumerator BookCanBeReassembledLinkedSavedAndCorrectedWithController()
+        {
+            CampaignStorySave.Write(new CampaignStory{phase=8});
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(8));yield return new WaitForSeconds(3.2f);
+            var c=CampaignExpansionController.Active;
+            foreach(string id in new[]{"index","symbol","record"}){c.Interact(id);c.ClosePanel();}
+            ShowGame();VarginhaGamepadUI.Reset();VarginhaInputActions.Rebuild();c.Interact("anchor");yield return new WaitForSecondsRealtime(.3f);
+            yield return Capture("book-start");
+            yield return Click(CampaignBookPuzzle.PieceRect(0));yield return Click(CampaignBookPuzzle.PieceRect(1));
+            CollectionAssert.AreEqual(new[]{0,2,1},c.Progress.expansion.bookOrder);
+            yield return Click(CampaignBookPuzzle.EvidenceRect(0));yield return Click(CampaignBookPuzzle.LinkRect(0));
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(8));yield return new WaitForSeconds(3.2f);
+            c=CampaignExpansionController.Active;VarginhaGamepadUI.Reset();VarginhaInputActions.Rebuild();c.Interact("anchor");yield return new WaitForSecondsRealtime(.3f);
+            CollectionAssert.AreEqual(new[]{0,2,1},c.Progress.expansion.bookOrder);Assert.That(c.Progress.expansion.bookLinks[0],Is.Zero);
+            yield return Click(CampaignBookPuzzle.PieceRect(1));yield return Click(CampaignBookPuzzle.PieceRect(2));
+            yield return Click(CampaignBookPuzzle.EvidenceRect(2));yield return Click(CampaignBookPuzzle.LinkRect(1));
+            yield return Click(CampaignBookPuzzle.EvidenceRect(1));yield return Click(CampaignBookPuzzle.LinkRect(2));
+            yield return Click(CampaignBookPuzzle.CheckRect);Assert.That(c.Progress.expansion.anchorFound,Is.False);
+            yield return Capture("book-wrong-reference");
+            CollectionAssert.AreEqual(new[]{0,2,1},c.Progress.expansion.bookLinks);
+            yield return Click(CampaignBookPuzzle.EvidenceRect(1));yield return Click(CampaignBookPuzzle.LinkRect(1));
+            yield return Click(CampaignBookPuzzle.EvidenceRect(2));yield return Click(CampaignBookPuzzle.LinkRect(2));
+            yield return Capture("book-reconstructed");yield return Click(CampaignBookPuzzle.CheckRect);
+            Assert.That(c.Progress.expansion.anchorFound,Is.True);Assert.That(CampaignStorySave.Load().expansion.anchorFound,Is.True);
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
         [UnityTest,Timeout(240000)]

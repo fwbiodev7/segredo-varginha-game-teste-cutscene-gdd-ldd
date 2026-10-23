@@ -35,9 +35,12 @@ namespace Game.Editor.Testing
             try
             {
                 if (request.action == "inspect")
-                    File.WriteAllText(Output + "/EditorState.txt", "Play=" + Application.isPlaying + "\nPipeline=" + GraphicsSettings.currentRenderPipeline + "\nQuality=" + QualitySettings.renderPipeline + "\nScenes=" + string.Join(",", EditorSceneManager.GetSceneManagerSetup().Select(s => s.path)));
+                    File.WriteAllText(Output + "/EditorState.txt", "Play=" + Application.isPlaying + "\nPipeline=" + GraphicsSettings.currentRenderPipeline + "\nQuality=" + QualitySettings.renderPipeline + "\nScenes=" + string.Join(",", Enumerable.Range(0,EditorSceneManager.sceneCount).Select(EditorSceneManager.GetSceneAt).Select(s => s.path))
+                        + "\nDirtyScenes=" + string.Join(",", Enumerable.Range(0,EditorSceneManager.sceneCount).Select(EditorSceneManager.GetSceneAt).Where(s=>s.isDirty).Select(s=>s.path)));
                 else if (request.action == "test")
                 {
+                    if(EditorApplication.isPlayingOrWillChangePlaymode || Enumerable.Range(0,EditorSceneManager.sceneCount).Select(EditorSceneManager.GetSceneAt).Any(s=>s.isDirty))
+                        throw new InvalidOperationException("QA preserved the active play session or unsaved scene. Run after the scene is saved and play mode ends.");
                     var api = ScriptableObject.CreateInstance<TestRunnerApi>();
                     api.RegisterCallbacks(new Results(request.mode, api));
                     api.Execute(new ExecutionSettings(new Filter { testMode = request.mode == "PlayMode" ? TestMode.PlayMode : TestMode.EditMode, testNames = request.names }));

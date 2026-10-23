@@ -27,7 +27,7 @@ namespace Game.Varginha.Experiment
                 foreach(var renderer in map.GetComponentsInChildren<SpriteRenderer>())
                 {
                     if(renderer.sprite==null||renderer.name.StartsWith("Vidro_diurno"))continue;
-                    bool original=renderer.sprite.texture.name==data.image||renderer.sprite.texture.name==data.background||renderer.sprite.texture.name=="AdultInteractiveBase";
+                    bool original=renderer.sprite.texture.name==data.image||renderer.sprite.texture.name==data.background||renderer.sprite.texture.name=="AdultInteractiveBase"||renderer.sprite.texture.name=="AdultInteractiveSeatAligned";
                     bool furniture=renderer.sprite.texture.name=="HouseFurnitureBacks"||renderer.sprite.texture.name=="HouseRoutineItems";
                     if(!original&&!furniture)continue;
                     renderer.sharedMaterial=original?mapMaterial:furnitureMaterial;

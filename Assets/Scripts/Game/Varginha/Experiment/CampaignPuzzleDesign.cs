@@ -94,16 +94,18 @@ namespace Game.Varginha.Experiment
                     proofs=new[]{"REGISTROS • o selo protege a ruptura","FERIMENTOS • marcas da contenção","REAGENTE • circuitos externos/internos"};
                     claims=new[]{"A contenção feriu a criatura","O circuito externo abre o retorno","O selo dura até a travessia terminar"}; links=state.hypotheses;
                 }
-                ExperimentGUI.Label(new Rect(145,248,990,42),title,true);
-                ExperimentGUI.Label(new Rect(145,295,990,36),instruction,small:true);
-                ExperimentGUI.Label(new Rect(145,331,990,20),state.selected<0?"Selecione uma prova e depois seu destino.":"PROVA SELECIONADA • "+proofs[state.selected],small:true);
+                BoardHeader(title,instruction);
+                int linked=0;for(int i=0;i<links.Length;i++)if(links[i]>=0)linked++;
+                ExperimentGUI.Label(new Rect(145,331,650,20),state.selected<0?"Escolha um cartão de prova e toque no destino.":"PROVA SELECIONADA • "+proofs[state.selected],small:true);
+                ExperimentGUI.Label(new Rect(875,331,240,20),"VÍNCULOS "+linked+"/"+links.Length,small:true);
                 // The evidence rack changes order; the first button is not always the answer.
                 for (int row=0;row<proofs.Length;row++)
                 {
                     int proof=(row+1)%proofs.Length;
-                    if(ExperimentGUI.Choice(new Rect(145,352+row*43,425,39),proofs[proof],state.selected==proof))state.selected=proof;
+                    Rect proofRect=new Rect(145,352+row*43,425,39);
+                    if(CardButton(proofRect,"PROVA "+(proof+1),proofs[proof],"",state.selected==proof,false))state.selected=proof;
                     string assigned=links[row]<0?"— escolher prova —":proofs[links[row]];
-                    if(ExperimentGUI.Button(new Rect(600,352+row*43,515,39),claims[row]+"\n"+assigned)&&state.selected>=0)
+                    if(CardButton(new Rect(600,352+row*43,515,39),"DESTINO "+(row+1),claims[row],assigned,links[row]>=0,true)&&state.selected>=0)
                     {
                         int previous=Array.IndexOf(links,state.selected);if(previous>=0)links[previous]=-1;
                         links[row]=state.selected;state.selected=-1;save();
@@ -115,8 +117,7 @@ namespace Game.Varginha.Experiment
         }
         private static void Comparison(CampaignPuzzleProgress state, Action<int,int[]> submit, Action save)
         {
-            ExperimentGUI.Label(new Rect(145,248,990,40),"ARQUIVOS • ENCONTRAR O QUE FOI APAGADO",true);
-            ExperimentGUI.Label(new Rect(145,294,990,40),"Compare as plantas. Marque os dois detalhes alterados na lista à direita; os outros permanecem iguais.",small:true);
+            BoardHeader("ARQUIVOS • ENCONTRAR O QUE FOI APAGADO","Compare os dois cartões de planta. Marque os detalhes que mudaram e registre somente as diferenças.");
             Blueprint(new Rect(145,340,325,178),false);Blueprint(new Rect(490,340,325,178),true);
             string[] areas={"ACESSO LATERAL","DATA DO REGISTRO","PORTA PRINCIPAL","JARDIM","ASSINATURA","ESCADA INTERNA"};
             for(int i=0;i<areas.Length;i++)
@@ -138,14 +139,13 @@ namespace Game.Varginha.Experiment
         }
         private static void Memory(CampaignPuzzleProgress state, Action<int,int[]> submit, Action save, CampaignSoundscape sound)
         {
-            ExperimentGUI.Label(new Rect(145,248,990,40),"1996 • RECONSTRUIR A LEMBRANÇA",true);
-            ExperimentGUI.Label(new Rect(145,294,990,48),"Acione os vestígios na ordem em que aconteceram. Observe a casa e releia as pistas. Cada ação entra na lembrança abaixo.",small:true);
+            BoardHeader("1996 • RECONSTRUIR A LEMBRANÇA","Escolha os quatro vestígios na ordem da noite. A trilha visual abaixo mostra o que já foi lembrado.");
             string[] names={"NOTÍCIA NA TV","DESENHO","ENERGIA APAGADA","PRESENÇA NO QUINTAL"};
             string[] motifs={"Child90_TV","Child90_Desk","Lamp","Tree"};int[] display={3,0,2,1};
             for(int i=0;i<4;i++)
             {
                 int clue=display[i];Rect tile=new(145+i*245,352,230,115);
-                if(ExperimentGUI.Button(tile,names[clue])&&state.memory.Length<4&&Array.IndexOf(state.memory,clue)<0)
+                if(MemoryCard(tile,names[clue],state.memory.Length<4&&Array.IndexOf(state.memory,clue)<0)&&state.memory.Length<4&&Array.IndexOf(state.memory,clue)<0)
                 {int length=state.memory.Length;Array.Resize(ref state.memory,length+1);state.memory[length]=clue;sound?.Play(clue==1?"Paper":"UI");save();}
                 // Original prop sprites accompany the controls without a new raster asset.
                 var sprite=CampaignInteriorArt.Contains(motifs[clue])?CampaignInteriorArt.Prop(motifs[clue]):CampaignVisualAssets.Prop(motifs[clue]);
@@ -158,6 +158,34 @@ namespace Game.Varginha.Experiment
             if(ExperimentGUI.Button(new Rect(515,530,230,32),"DESFAZER ÚLTIMA")){Array.Resize(ref state.memory,state.memory.Length-1);save();}
             GUI.enabled=true;
             if(ExperimentGUI.Button(new Rect(755,530,360,32),"CONFERIR LEMBRANÇA"))submit(-1,state.memory);
+        }
+        private static void BoardHeader(string title,string instruction)
+        {
+            ExperimentGUI.Panel(new Rect(135,236,1010,96));
+            ExperimentGUI.Box(new Rect(145,246,5,73),ExperimentGUI.Accent);
+            ExperimentGUI.Label(new Rect(165,245,950,38),title,true);
+            ExperimentGUI.Label(new Rect(165,287,950,32),instruction,small:true);
+        }
+        private static bool CardButton(Rect rect,string kicker,string title,string detail,bool selected,bool destination)
+        {
+            bool clicked=ExperimentGUI.Button(rect,"");
+            var fill=selected?new Color(.12f,.25f,.27f):destination&&detail!="— escolher prova —"?new Color(.065f,.17f,.19f):new Color(.035f,.105f,.13f);
+            ExperimentGUI.Box(new Rect(rect.x+2,rect.y+2,rect.width-4,rect.height-4),fill);
+            ExperimentGUI.Box(new Rect(rect.x+2,rect.y+2,4,rect.height-4),selected?ExperimentGUI.Paper:destination?ExperimentGUI.Accent:ExperimentGUI.Muted);
+            ExperimentGUI.Label(new Rect(rect.x+17,rect.y+4,rect.width-27,14),kicker,small:true);
+            ExperimentGUI.Label(new Rect(rect.x+17,rect.y+16,rect.width-27,18),title,small:true);
+            if(!string.IsNullOrEmpty(detail))ExperimentGUI.Label(new Rect(rect.x+17,rect.y+27,rect.width-27,11),detail,small:true);
+            if(selected)ExperimentGUI.Box(new Rect(rect.x+rect.width-10,rect.y+7,3,rect.height-14),ExperimentGUI.Paper);
+            return clicked;
+        }
+        private static bool MemoryCard(Rect rect,string title,bool enabled)
+        {
+            bool clicked=ExperimentGUI.Button(rect,"");
+            var fill=enabled?new Color(.07f,.20f,.20f):new Color(.035f,.105f,.13f);
+            ExperimentGUI.Box(new Rect(rect.x+2,rect.y+2,rect.width-4,rect.height-4),fill);
+            ExperimentGUI.Box(new Rect(rect.x+2,rect.y+2,4,rect.height-4),enabled?ExperimentGUI.Accent:ExperimentGUI.Muted);
+            ExperimentGUI.Label(new Rect(rect.x+15,rect.y+74,rect.width-30,30),title,small:true);
+            return clicked;
         }
         private static void Sprite(Rect r, Sprite sprite)
         {

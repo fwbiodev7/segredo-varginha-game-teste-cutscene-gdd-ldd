@@ -7,11 +7,16 @@ namespace Game.Varginha.Experiment
     public sealed class CampaignHouseInvestigation
     {
         public int step, clues, tutorial;
-        public bool deduced;
+        public bool deduced, bagReminder;
         public bool KeyOnCounter => step == 1;
         public bool Missing => step >= 2;
         public bool CanOpenBox => step >= 3 && deduced;
         public bool Complete => step >= 5;
+        public bool RememberBag()
+        {
+            if(step!=1||bagReminder)return false;
+            bagReminder=true;return true;
+        }
         public bool PlaceKey(int routine)
         {
             if (step != 0 || (routine & 7) != 7) return false;
@@ -19,7 +24,7 @@ namespace Game.Varginha.Experiment
         }
         public bool TakeBag()
         {
-            if (step != 1) return false;
+            if (step != 1 || !bagReminder) return false;
             step = 2; return true;
         }
         public bool Observe(int clue)
@@ -40,6 +45,8 @@ namespace Game.Varginha.Experiment
             else if (step >= 4) step = 2;
             if (deduced && clues == 7) step = Math.Max(step, 3);
             else { deduced = false; if (step == 3) step = 2; }
+            // Older saves already past the pickup must never repeat the new door reminder.
+            if(step>=2)bagReminder=true;
         }
         public string Objective(int routine)
         {
@@ -48,15 +55,15 @@ namespace Game.Varginha.Experiment
                 : (routine & 2) == 0 ? "Tome o café na cozinha antes de sair."
                 : (routine & 4) == 0 ? "Confira o material da aula no notebook do escritório."
                 : "Deixe a chave do Fusca na mesa do café antes de buscar a mochila.";
-            if (step == 1) return "A chave ficou na mesa do café. Busque a mochila no quarto.";
+            if (step == 1) return bagReminder ? "Pegue a mochila no quarto antes de sair." : "Tudo preparado. Vá até a porta de saída.";
             if (!deduced) return clues == 7 ? "Compare as três pistas no registro da investigação. O que elas permitem concluir?"
-                : "A chave sumiu. Observe a mesa do café, a porta de saída e o papel junto ao quarto.";
+                : "A chave sumiu. Confira a mesa, a porta e o rastro de papel perto do quarto.";
             return step < 4 ? "O ruído vem debaixo da cama. Reexamine a caixa de brinquedos."
                 : "Reconstrua o desenho do caderno comparando as bordas rasgadas e os traços.";
         }
         public string Target(int routine) => Complete ? "car" : step == 0
             ? (routine & 1) == 0 ? "wash" : (routine & 2) == 0 ? "food" : (routine & 4) == 0 ? "work" : "counter"
-            : step == 1 ? "bag" : deduced ? "box" : null;
+            : step == 1 ? bagReminder ? "bag" : "exitclue" : deduced ? "box" : null;
         public string Hint(int routine, int level)
         {
             level = Mathf.Clamp(level, 0, 2);
@@ -78,12 +85,14 @@ namespace Game.Varginha.Experiment
                     : level == 1 ? "A mesa do café deixa a chave à vista."
                     : "Aproxime-se da mesa do café e interaja para deixar a chave do Fusca.";
             }
-            if (step == 1) return level == 0 ? "A chave está segura na mesa do café; falta um item da preparação."
+            if (step == 1 && !bagReminder) return level == 0 ? "A rotina está pronta. É hora de sair."
+                : level == 1 ? "A saída fica do lado direito da sala." : "Vá à porta da sala e tente sair.";
+            if (step == 1) return level == 0 ? "Falta levar o material da aula."
                 : level == 1 ? "A mochila ficou no quarto."
-                : "Vá ao quarto e interaja com a mochila; depois volte aa mesa do café.";
+                : "Vá ao quarto e pegue a mochila; depois volte à mesa do café.";
             if (!deduced) return level == 0 ? "Compare o que mudou e o que permaneceu igual."
-                : level == 1 ? "O mesa do café, a fechadura e o papel junto ao quarto permitem descartar algumas hipóteses."
-                : "Observe os três pontos. Relacione a saída fechada com o papel da caixa: investigue dentro da casa.";
+                : level == 1 ? "Confira a mesa, o trinco e a direção dos pedaços de papel."
+                : "A porta não abriu e os papéis seguem até a cama. Vale procurar na caixa.";
             if (step < 4) return level == 0 ? "As pistas apontam para algo que ficou dentro da casa."
                 : level == 1 ? "Escute o ruído perto da cama e observe a origem do papel."
                 : "Reexamine a caixa de brinquedos debaixo da cama.";

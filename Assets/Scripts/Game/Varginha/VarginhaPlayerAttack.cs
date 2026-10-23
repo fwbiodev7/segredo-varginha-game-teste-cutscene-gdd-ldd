@@ -17,7 +17,10 @@ namespace Game.Varginha
         [SerializeField] private float screenShakeDuration = .09f;
         [SerializeField] private float screenShakeMagnitude = .045f;
         private const float ComboWindow = .75f;
-        private static readonly float[] Durations = { .025f, .05f, .025f, .07f, .05f, .04f };
+        // The previous timings made the six authored poses flash by in roughly a
+        // quarter second. Keep the contact on pose 3, but give anticipation and
+        // recovery enough time to read at 60 Hz and during a small hit-stop.
+        private static readonly float[] Durations = { .045f, .065f, .045f, .095f, .06f, .07f };
         private static readonly int[][] ComboFrames =
         {
             new[] { 0, 1, 2, 3, 4, 5 }, // jab
@@ -103,7 +106,6 @@ namespace Game.Varginha
             const int impactPose = 3;
             int variant = _attackFrames[row].Length >= 18 ? (_comboStep - 1) * 6 : 0;
             bool interrupted = false;
-            float remaining = 0f;
             for (int pose = 0; pose < frames.Length; pose++)
             {
                 if (MustInterrupt)
@@ -111,16 +113,19 @@ namespace Game.Varginha
                     interrupted = true;
                     break;
                 }
-                _animation.SetCombatPose(_attackFrames[row][variant + frames[pose]], direction);
+                _animation.SetCombatPose(_attackFrames[row][variant + frames[pose]], direction,pose);
                 if (pose == impactPose) yield return ImpactRoutine(direction);
                 float duration = Durations[pose] * (_comboStep == 3 ? 1.12f : 1f);
-                remaining += duration;
-                while (remaining > 0f)
+                // Never spend a previous frame's overrun on the next authored pose:
+                // at low FPS that skipped anticipation/recovery in the same render frame.
+                float remaining = duration;
+                do
                 {
                     yield return null;
                     remaining -= Time.deltaTime;
                     if (MustInterrupt) { interrupted = true; break; }
                 }
+                while (remaining > 0f);
                 if (interrupted) break;
             }
             if (interrupted)

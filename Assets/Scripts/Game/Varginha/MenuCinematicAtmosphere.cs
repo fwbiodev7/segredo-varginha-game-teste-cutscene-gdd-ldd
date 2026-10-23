@@ -43,7 +43,7 @@ namespace Game.Varginha
             {_material.SetTexture("_UfoClean",clean);_material.SetTexture("_UfoSprite",saucer);_material.SetFloat("_UfoLayered",1);}
             _nextSound=Time.unscaledTime+28;
             _bed=gameObject.AddComponent<AudioSource>();_bed.playOnAwake=false;_bed.loop=true;_bed.volume=0;
-            _bed.clip=CampaignAtmosphereAudio.Bed("Road",0);_bed.Play();
+            _bed.clip=CampaignRecordedAudio.Clip("MenuMusic")??CampaignAtmosphereAudio.Bed("Road",0);_bed.Play();
             _effects=gameObject.AddComponent<AudioSource>();_effects.playOnAwake=false;_effects.volume=0;
         }
         public void NotifyActivity()

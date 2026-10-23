@@ -1,41 +1,41 @@
-# Daily curta de 22/10/2026
+# Daily de 23/10/2026
 
 ## 1. O SEGREDO DE VARGINHA
 
-Abrir em 30 segundos. A entrega de hoje reduz a interface, corrige os objetos da rotina adulta e organiza as falas para gravação. Mostrar o comportamento real nos prints. Não atribuir resultados ao playtest da equipe, que ainda não foi recebido.
+30 segundos. Esta daily de 23/10 apresenta a entrega de 22/10 e o estado encontrado no projeto. O último commit é a2946be, de 22/10 às 13h51. A build empacotada é a 0.4.7-beta. Há alterações locais posteriores ao commit, que aparecem separadas. Não há evidência de uma nova entrega ou de gravações concluídas em 23/10. As capturas continuam identificadas como registros de 22/10.
 
-## 2. O que muda ao jogar
+## 2. O que chega à daily de hoje
 
-1 minuto. Explicar o resultado para quem joga. As tarefas de preparação e a investigação continuam na mesma missão. A correção dos móveis usa uma base limpa e objetos com transparência, eliminando a duplicação apontada durante a revisão.
+45 segundos. As entregas de 22/10 abrangem a rotina adulta, os móveis, as camadas do Fusca, a chegada à escola, a chave na mesa do café, os avisos e as legendas. Após o playtest do autor, janelas e mesa do Renan foram corrigidas. O pacote de efeitos do Edelzio entrou no último commit. A documentação confirma o ZIP 0.4.7-beta, com zero erros de build e um aviso preexistente. A dublagem estava prevista para 23/10 por indisponibilidade do microfone em 22/10. Essa previsão não comprova que a gravação aconteceu.
 
-## 3. A rotina deixa marcas no cenário
+## 3. As ações mudam os objetos da casa
 
-1 minuto. A conclusão real da animação confirma a tarefa. Uma ação interrompida não consome o café nem conclui a lavagem do rosto. O teste repete a entrada na fase e verifica os itens recolhidos. A escala visual das poses foi ajustada sem redimensionar a física do personagem.
+45 segundos. Beber o café e concluir o notebook alteram seus objetos apenas ao terminar a ação. Interrupções não concluem a tarefa nem consomem o café. A lavagem segue o mesmo contrato de conclusão. A chave maior usa a mesa do café, com pistas, marcador e caderno coerentes. O save restaura os estados. A investigação mantém sua solução. As vistas traseiras dos móveis e a escala visual das poses foram corrigidas sem mudar as colisões aprovadas.
 
-## 4. Um aviso curto, e o jogo continua
+## 4. Janelas e mesa do Renan revisadas
 
-45 segundos. A coleta usa um aviso automático com fila. Documentos, pistas e escolhas que exigem leitura continuam acessíveis em painéis próprios ou no caderno; eles não foram convertidos em avisos que desaparecem antes da leitura.
+45 segundos. O autor apontou os problemas no playtest da 0.4.5-beta em 22/10. Os vidros agora seguem a profundidade da parede. A mesa mantém arte e colisão originais, com notebook de costas, mochila e três pincéis separados por transparência. O notebook continua abrindo a fotografia e os objetos não se duplicam. A revisão teve 398/398 EditMode e 3/3 testes direcionados no Player Windows. Esses três casos não devem ser somados aos 16 casos históricos da entrega anterior. Feedback externo continua pendente.
 
-## 5. Legendas menores e progressivas
+## 5. Avisos menores e falas progressivas
 
-1 minuto. O texto respeita o tamanho escolhido nas configurações. A pausa congela a fala e sua voz. A gravação humana será associada ao identificador da fala; nenhum diálogo sintético foi criado. O teste de voz usa um clip silencioso apenas para verificar o canal e o relógio.
+45 segundos. Os avisos de coleta e ações usam o fundo pixel art original em tamanho menor e desaparecem após o tempo de leitura. Documentos, pistas e escolhas essenciais continuam em painéis próprios ou no caderno. As legendas respeitam o tamanho escolhido nas configurações. A confirmação revela primeiro e avança depois. A voz tem canal separado e acompanha a pausa. A infraestrutura está pronta para receber takes humanos por IDs estáveis, mas isso não significa que a dublagem já foi recebida.
 
-## 6. A chave fica à vista na mesa do café
+## 6. Ajustes presentes no projeto
 
-45 segundos. Os identificadores internos antigos permanecem para não quebrar saves. Na apresentação ao jogador, as referências apontam para a mesa do café. Não mudou a solução da investigação.
+1 minuto. Estes ajustes estão no working tree, fora do commit a2946be. A ação do Fusca usa GUI.Button e conserva os atalhos. Os seis frames dos golpes passam de aproximadamente 0,26 s para 0,38 s, mantendo o contato na pose 3. Os puzzles de associação de provas, comparação de arquivos e lembrança usam cabeçalhos e cartões mais claros, sem mudar as respostas. O laboratório prioriza LabAmbience e a fase de retorno dispara PortalOpen e PortalClose. Há ainda uma proteção técnica para a captura de pausa em testes sem renderização, sem mudar a pausa interativa. Os testes direcionados de áudio e combate passaram em 22/10. Não foi localizada uma validação final bem-sucedida do portal nem comprovação de que esses ajustes estejam no ZIP 0.4.7-beta. Retestar clique, puzzles, portal e a build final continua necessário.
 
-## 7. Janelas e mesa do Renan corrigidas
+## 7. 16 gravações do Edelzio no catálogo
 
-1 minuto. No playtest de hoje, o usuário apontou cortes do personagem pelas janelas e pediu reorganizar a mesa do Renan. A paisagem agora segue a profundidade da parede. Os objetos têm recortes separados, transparência real e base apoiada no tampo. O notebook continua abrindo a fotografia. Foram 3/3 testes direcionados no Player Windows e 398/398 EditMode nesta revisão, sem somar retestes aos 16 casos históricos da entrega anterior.
+45 segundos. O pacote de 16 arquivos contém efeitos e ambientes, sem falas de dublagem textual. O último commit integra os eventos de rotina, arranhões, chave, queda de energia, porta e Fusca. Portal, laboratório, progresso, saída noturna e efeito vocal também estão no catálogo. O working tree complementa os gatilhos de portal e o ambiente do laboratório. EdelzioFear é um efeito vocal, não uma fala legendada. As pendências incluem ouvir a mixagem em fones e caixas, conferir os gatilhos e completar o pedido da equipe. O pedido de efeitos reúne 28 famílias, sem significar 28 famílias recebidas ou concluídas.
 
-## 8. O que foi conferido
+## 8. Testes com data e escopo definidos
 
-1 minuto. As contagens são preenchidas pelo relatório final de QA. Os testes verificam comportamento, pausa, teclado/controle e retomada. Os roteiros separam 47 falas existentes, 98 propostas para cenas atuais e 8 esforços vocais. As propostas novas não foram inseridas silenciosamente no jogo. Revisão posterior do playtest: mais 3 testes direcionados no Player, incluindo um contrato já existente de manhã. Não são somados como 19 casos únicos.
+1 minuto. A suíte completa da revisão visual tem 398 testes aprovados. A rodada do Player Windows tem três casos aprovados. O XML mais recente de EditMode tem somente 12 testes direcionados de áudio, todos aprovados às 15h02 de 22/10, no horário de Brasília. O XML mais recente de PlayMode tem três casos de animação e combate aprovados às 15h14 de 22/10. O arquivo de progresso iniciado com 399 não comprova uma suíte completa de 399 casos. Não somar rodadas nem apresentar os testes de combate como testes no Player distribuído. O manifesto de build comprova 0.4.7-beta gerada em Unity 6000.6.0f1, zero erros e um aviso preexistente, e o manifesto do pacote confirma o ZIP. Nenhuma nova suíte do jogo foi executada para editar esta daily.
 
-## 9. Material pronto para a gravação
+## 9. Dublagem, revisão e próximo playtest
 
-45 segundos. Há PDF, Word e textos separados por personagem. Não há reservas de professores ausentes ou finais alternativos. Ainda faltam as gravações humanas, a aprovação de novas formulações do roteiro e o feedback do playtest externo. O pacote sons do edelzio.rar trouxe 16 efeitos: café, lavagem, teclado, chave, arranhões, mochila, queda de energia, porta, motor do Fusca e ambientes; eles já estão no catálogo e nas interações correspondentes. O autor informou que o microfone não estava disponível em 22/10. A gravação fica para 23/10. A lista da equipe continua separando os efeitos ainda pendentes. Reteste humano e mixagem em fones e caixas continuam pendentes.
+1 minuto. A dublagem foi adiada de 22 para 23/10 porque o microfone estava indisponível. Os roteiros estão separados em PDF, Word e textos por personagem. São 153 entradas: 47 falas existentes, 98 propostas para cenas atuais e oito esforços vocais. O roteiro do Edelzio adulto e criança soma 78 entradas. As propostas precisam de revisão antes de gravar ou integrar novas formulações. Depois de receber os takes, selecionar, editar, associar aos IDs e conferir níveis e sincronismo. O playtest externo, a mixagem em fones e caixas e o desempenho em outro PC seguem pendentes nos registros. Testar os ajustes locais e produzir uma nova validação da build antes de tratá-los como parte da entrega.
 
 ## 10. Dúvidas, opiniões e feedbacks
 
-Reservar o final para ouvir a equipe. Registrar o que realmente foi observado e priorizar ajustes reproduzíveis, sem antecipar possíveis feedbacks.
+Reservar o final para ouvir a equipe. Registrar a versão testada, a cena, os passos e o resultado observado. Confirmar o estado real da gravação e combinar o próximo playtest. Não antecipar feedbacks nem declarar como concluídas atividades ainda sem evidência.

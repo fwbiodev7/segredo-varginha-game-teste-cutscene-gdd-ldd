@@ -15,6 +15,15 @@ namespace Game.Varginha.Experiment
         private CampaignStory _progress;
         private Transform _car;
         private Rigidbody2D _body;
+        private BoxCollider2D _box;
+        private readonly RaycastHit2D[] _hits=new RaycastHit2D[16];
+        private readonly Collider2D[] _contacts=new Collider2D[16];
+        [SerializeField] private float forwardSpeed=9,reverseSpeed=4,acceleration=5,coastDeceleration=4,brakeDeceleration=12;
+        [SerializeField] private float maximumSteerAngle=32,steerResponse=3.5f,steerReturn=4,wheelbase=1.7f,lateralGrip=18;
+        private float _speed,_steer,_yaw;
+        private Vector2 _velocity;
+        public float Speed=>_speed;
+        public float Steering=>_steer;
         private Vector2 _input;
         private float _titleTime, _stateTime, _saveTime;
         private bool _paused, _settings, _inspect;
@@ -45,14 +54,18 @@ namespace Game.Varginha.Experiment
         {
             var plan=CampaignMapPlan.Create(3);CampaignMapConstruction.Build(transform,plan);
             var car = new GameObject("Fusca_TopView_Campanha"); car.transform.SetParent(transform); _car = car.transform;
-            _car.position = new Vector3(plan.spawn.x, _progress.driveDistance);
+            var road=CampaignIllustratedMaps.Get(3);
+            // The old map spawn is on the west pavement, outside its lane limits.
+            // Start the physical car in the lane instead of casting through that curb.
+            float laneX=road!=null?road.Position((road.laneBorders[0]+road.laneBorders[1])*.5f,0).x:plan.spawn.x;
+            _car.position = new Vector3(laneX, _progress.driveDistance);
             _carFrames = new Sprite[4];
             for (int i = 0; i < 4; i++) _carFrames[i] = CampaignOriginalFusca.Top(CampaignWorkshopVehicle.Facing.North,2f);
             _carSprite = _carFrames[1];
             _carRenderer = car.AddComponent<SpriteRenderer>(); _carRenderer.sprite = _carSprite; _carRenderer.sortingOrder = 5;
-            _body = car.AddComponent<Rigidbody2D>(); _body.gravityScale = 0; _body.constraints = RigidbodyConstraints2D.FreezeRotation;
+            _body = car.AddComponent<Rigidbody2D>(); _body.gravityScale = 0; _body.bodyType=RigidbodyType2D.Kinematic;
             _body.interpolation = RigidbodyInterpolation2D.Interpolate; _body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
-            car.AddComponent<BoxCollider2D>().size = new Vector2(1.05f, 1.9f);
+            _box=car.AddComponent<BoxCollider2D>();_box.size = new Vector2(1.05f, 1.9f);
             CampaignFuscaLighting.Add(car.transform);
             var cameraObject = new GameObject("Main Camera"); cameraObject.transform.SetParent(transform); cameraObject.tag = "MainCamera";
             var camera = cameraObject.AddComponent<Camera>(); camera.orthographic = true; camera.orthographicSize = 7;
@@ -104,12 +117,28 @@ namespace Game.Varginha.Experiment
         }
         private void FixedUpdate()
         {
-            if (_titleTime < 3 || _paused || _inspect || _state != State.Drive) { _body.linearVelocity = Vector2.zero; return; }
-            Vector2 target = _body.position + new Vector2(_input.x * 4, _input.y * 9) * Time.fixedDeltaTime;
+            if (_titleTime < 3 || _paused || _inspect || _state != State.Drive || CampaignCinematics.IsTransitioning)
+            { _speed=_steer=0;_velocity=Vector2.zero;_body.linearVelocity = Vector2.zero; return; }
+            float dt=Time.fixedDeltaTime;
+            _speed=CampaignVehiclePhysics.Speed(_speed,_input.y,forwardSpeed,reverseSpeed,acceleration,coastDeceleration,brakeDeceleration,dt);
+            _steer=Mathf.MoveTowards(_steer,_input.x,Mathf.Max(.1f,Mathf.Abs(_input.x)<.01f?steerReturn:steerResponse)*dt);
+            float nextYaw=_yaw-_speed/Mathf.Max(.5f,wheelbase)*Mathf.Tan(_steer*Mathf.Clamp(maximumSteerAngle,1,55)*Mathf.Deg2Rad)*Mathf.Rad2Deg*dt;
+            var filter=new ContactFilter2D{useTriggers=false};filter.SetLayerMask(~0);
+            int overlaps=Physics2D.OverlapBox(_body.position,_box.size,nextYaw,filter,_contacts);bool clear=true;
+            for(int i=0;i<overlaps;i++)if(_contacts[i].attachedRigidbody!=_body){clear=false;break;}
+            if(clear){_yaw=nextYaw;_body.MoveRotation(_yaw);}
+            Vector2 forward=new(-Mathf.Sin(_yaw*Mathf.Deg2Rad),Mathf.Cos(_yaw*Mathf.Deg2Rad));
+            _velocity=Vector2.Lerp(_velocity,forward*_speed,1-Mathf.Exp(-Mathf.Max(.1f,lateralGrip)*dt));
+            Vector2 target=_body.position+_velocity*dt;
             var road=CampaignIllustratedMaps.Get(3);
             float left=road!=null?road.Position(road.laneBorders[0],0).x+.55f:-3.8f,right=road!=null?road.Position(road.laneBorders[1],0).x-.55f:3.8f;
             target.x = Mathf.Clamp(target.x,left,right); target.y = Mathf.Clamp(target.y, 0, 120);
-            _progress.driveDistance=_body.position.y;_body.MovePosition(target);
+            Vector2 delta=target-_body.position;
+            if(delta.sqrMagnitude<.000001f&&_velocity.sqrMagnitude>.001f){_speed=0;_velocity=Vector2.zero;}
+            float distance=CampaignVehiclePhysics.ClearDistance(_body,_box,_yaw,delta,_hits);
+            if(distance<delta.magnitude){_speed=0;_velocity=Vector2.zero;}
+            if(delta.sqrMagnitude>.000001f)_body.MovePosition(_body.position+delta.normalized*distance);
+            _progress.driveDistance=_body.position.y;
         }
         public void BreakDown() { _state = State.Breakdown; _input = Vector2.zero; _body.linearVelocity = Vector2.zero; _radio.Stop(); _sound.Engine(false); _sound.Play("Key"); _inspect = true; _detail = 0; _frameTick = -1; Save(); }
         public void Inspect(int index)

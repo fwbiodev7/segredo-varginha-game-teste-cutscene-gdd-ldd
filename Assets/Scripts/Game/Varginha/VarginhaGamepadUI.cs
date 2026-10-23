@@ -132,9 +132,14 @@ namespace Game.Varginha
         {
             var node = Register(rect, car: true);
             float hover=Game.UI.PixelButtonHover.Amount(rect,Game.UI.PixelButtonHover.Focused(rect));
-            GUI.Box(rect, "[" + VarginhaInputActions.CarLabel + "] " + text, Game.UI.PixelButtonHover.SmoothStyle(style,hover));
+            // Car actions used to be drawn with GUI.Box, which looked like a button
+            // but ignored mouse clicks. Keep the W/gamepad hint while using the same
+            // clickable path as every other campaign action.
+            bool clicked=GUI.Button(rect, "[" + VarginhaInputActions.CarLabel + "] " + text,
+                Game.UI.PixelButtonHover.SmoothStyle(style,hover));
             Game.UI.PixelButtonHover.Decorate(rect,hover);
-            return Pressed(node);
+            if(clicked&&node!=null){_current.selected=node.id;_current.selection=node;_showSelection=false;}
+            Focus(node);return clicked||Pressed(node);
         }
         private static bool Pressed(Node node)
         {

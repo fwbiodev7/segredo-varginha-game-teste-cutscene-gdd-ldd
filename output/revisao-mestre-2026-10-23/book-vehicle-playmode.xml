@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Failed(Child)" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-23 15:34:11Z" end-time="2026-10-23 15:34:54Z" duration="43,1928806">
+  <test-suite type="TestSuite" id="1351" name="Varginha_Master_QA_20261023" fullname="Varginha_Master_QA_20261023" runstate="Runnable" testcasecount="296" result="Failed" site="Child" start-time="2026-10-23 15:34:11Z" end-time="2026-10-23 15:34:54Z" duration="43.192881" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1695" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="296" result="Failed" site="Child" start-time="2026-10-23 15:34:11Z" end-time="2026-10-23 15:34:54Z" duration="43.177217" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="21812" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1696" name="Game" fullname="Game" runstate="Runnable" testcasecount="296" result="Failed" site="Child" start-time="2026-10-23 15:34:11Z" end-time="2026-10-23 15:34:54Z" duration="43.161365" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1697" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="296" result="Failed" site="Child" start-time="2026-10-23 15:34:11Z" end-time="2026-10-23 15:34:54Z" duration="43.148575" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1698" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="296" result="Failed" site="Child" start-time="2026-10-23 15:34:11Z" end-time="2026-10-23 15:34:54Z" duration="43.131657" total="5" passed="3" failed="2" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1394" name="CampaignExpansionPlayTests" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-23 15:34:11Z" end-time="2026-10-23 15:34:13Z" duration="2.017140" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1396" name="ReconstructedChurchRecordKeepsTheOuzanaReward" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward" methodname="ReconstructedChurchRecordKeepsTheOuzanaReward" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="603601453" result="Passed" start-time="2026-10-23 15:34:11Z" end-time="2026-10-23 15:34:13Z" duration="1.991872" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+QA test: Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+QA result: Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1411" name="CampaignLabWorkshopAuditTests" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-23 15:34:13Z" end-time="2026-10-23 15:34:27Z" duration="13.777646" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1416" name="FuscaCanReverseFromTheBottomWallAndKeepsSmoothSteeringAndYawSave" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.FuscaCanReverseFromTheBottomWallAndKeepsSmoothSteeringAndYawSave" methodname="FuscaCanReverseFromTheBottomWallAndKeepsSmoothSteeringAndYawSave" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="142748060" result="Failed" label="Error" start-time="2026-10-23 15:34:13Z" end-time="2026-10-23 15:34:17Z" duration="3.585857" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[System.NullReferenceException : Object reference not set to an instance of an object]]></message>
+                  <stack-trace><![CDATA[  at Game.Tests.PlayMode.CampaignLabWorkshopAuditTests+<Load>d__12.MoveNext () [0x0007c] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignLabWorkshopAuditTests.cs:52 
+  at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52 ]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.FuscaCanReverseFromTheBottomWallAndKeepsSmoothSteeringAndYawSave
+QA test: Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.FuscaCanReverseFromTheBottomWallAndKeepsSmoothSteeringAndYawSave
+QA result: Failed:Error Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.FuscaCanReverseFromTheBottomWallAndKeepsSmoothSteeringAndYawSave
+QA result: Failed:Error Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.FuscaCanReverseFromTheBottomWallAndKeepsSmoothSteeringAndYawSave
+]]></output>
+              </test-case>
+              <test-case id="1415" name="PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload" methodname="PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="189083895" result="Failed" start-time="2026-10-23 15:34:17Z" end-time="2026-10-23 15:34:27Z" duration="10.185770" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Vehicle stopped inside the bay: body=(0.17, 1.44), rendered=(0.17, 1.44, 0.00), bay=(0.17, 1.00), body distance=0,4383507, heading=North, speed=0,1003143
+  Expected: True
+  But was:  False
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.CampaignLabWorkshopAuditTests+<PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload>d__18.MoveNext () [0x00515] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignLabWorkshopAuditTests.cs:179
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload
+QA test: Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload
+QA result: Failed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload
+QA result: Failed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1426" name="CampaignPuzzleDesignPlayTests" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-23 15:34:27Z" end-time="2026-10-23 15:34:49Z" duration="21.987388" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1430" name="BookCanBeReassembledLinkedSavedAndCorrectedWithController" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.BookCanBeReassembledLinkedSavedAndCorrectedWithController" methodname="BookCanBeReassembledLinkedSavedAndCorrectedWithController" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" seed="303062428" result="Passed" start-time="2026-10-23 15:34:27Z" end-time="2026-10-23 15:34:49Z" duration="21.965944" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="120000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.BookCanBeReassembledLinkedSavedAndCorrectedWithController
+QA test: Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.BookCanBeReassembledLinkedSavedAndCorrectedWithController
+Shader 'Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling' is not supported or has been stripped from the build (in 'Blit FSR Upscaling'). PostProcessing render passes will not execute.
+Shader 'Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling' is not supported or has been stripped from the build (in 'Blit FSR Upscaling'). PostProcessing render passes will not execute.
+QA result: Passed Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.BookCanBeReassembledLinkedSavedAndCorrectedWithController
+QA result: Passed Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.BookCanBeReassembledLinkedSavedAndCorrectedWithController
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1459" name="CampaignVehicleContactTests" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-23 15:34:49Z" end-time="2026-10-23 15:34:54Z" duration="5.297068" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1460" name="InitialContactWithTheBottomWallDoesNotTrapForwardMotion" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion" methodname="InitialContactWithTheBottomWallDoesNotTrapForwardMotion" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" seed="2115034371" result="Passed" start-time="2026-10-23 15:34:49Z" end-time="2026-10-23 15:34:54Z" duration="5.251564" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+QA result: Passed Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+QA result: Passed Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Master_QA_20261023\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Master_QA_20261023\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-23 15:32:35Z" end-time="2026-10-23 15:32:41Z" duration="5,7866519">
+  <test-suite type="TestSuite" id="1350" name="Varginha_Master_QA_20261023" fullname="Varginha_Master_QA_20261023" runstate="Runnable" testcasecount="295" result="Failed" site="Child" start-time="2026-10-23 15:32:35Z" end-time="2026-10-23 15:32:41Z" duration="5.786652" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1693" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="295" result="Failed" site="Child" start-time="2026-10-23 15:32:35Z" end-time="2026-10-23 15:32:41Z" duration="5.773057" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="29392" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1694" name="Game" fullname="Game" runstate="Runnable" testcasecount="295" result="Failed" site="Child" start-time="2026-10-23 15:32:35Z" end-time="2026-10-23 15:32:41Z" duration="5.759905" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1695" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="295" result="Failed" site="Child" start-time="2026-10-23 15:32:35Z" end-time="2026-10-23 15:32:41Z" duration="5.745022" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1696" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="295" result="Failed" site="Child" start-time="2026-10-23 15:32:35Z" end-time="2026-10-23 15:32:41Z" duration="5.728227" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1457" name="CampaignVehicleContactTests" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-10-23 15:32:35Z" end-time="2026-10-23 15:32:41Z" duration="5.704448" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1458" name="InitialContactWithTheBottomWallDoesNotTrapForwardMotion" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion" methodname="InitialContactWithTheBottomWallDoesNotTrapForwardMotion" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" seed="1990372432" result="Failed" start-time="2026-10-23 15:32:35Z" end-time="2026-10-23 15:32:41Z" duration="5.679027" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  An initial contact must allow movement away from the wall.
+  Expected: greater than -5.42000008f
+  But was:  -6.01999998f
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.CampaignVehicleContactTests+<InitialContactWithTheBottomWallDoesNotTrapForwardMotion>d__3.MoveNext () [0x00174] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignVehicleContactTests.cs:35
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+QA result: Failed Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+QA result: Failed Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Master_QA_20261023\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Master_QA_20261023\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

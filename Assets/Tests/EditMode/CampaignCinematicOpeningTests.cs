@@ -89,7 +89,13 @@ namespace Game.Tests.EditMode
             Assert.That(layout.image,Is.EqualTo("School"));
             Assert.That(CampaignFuscaCinema.SchoolArrivalRoute.Count,Is.GreaterThan(1));
             for(float t=.65f;t<5.8f;t+=.06f)
+            {
                 Assert.That(plan.IsClear(CampaignFuscaCinema.ArrivalFootPosition(t,false)),Is.True,"Arrival walk at "+t);
+                var world=CampaignFuscaCinema.ArrivalFootPosition(t,false);
+                var pixel=new Vector2((world.x-layout.Bounds.xMin)/layout.Scale,(layout.Bounds.yMax-world.y)/layout.Scale);
+                bool paved=new Rect(290,822,35,145).Contains(pixel)||new Rect(290,811,435,47).Contains(pixel)||new Rect(650,765,120,92).Contains(pixel);
+                Assert.That(paved,Is.True,"The entire arrival stays on asphalt, lower sidewalk and central paved access: "+pixel);
+            }
             Assert.That(Vector2.Distance(CampaignFuscaCinema.ArrivalFootPosition(5.8f,false),plan.spawn),Is.LessThan(.02f));
             Assert.That(CampaignFuscaCinema.ArrivalFootPosition(0,true),Is.EqualTo(CampaignFuscaCinema.ArrivalFootPosition(5.8f,true)));
             Assert.That(CampaignSignalGlitch.BurstStrength(.6f),Is.GreaterThan(.5f));

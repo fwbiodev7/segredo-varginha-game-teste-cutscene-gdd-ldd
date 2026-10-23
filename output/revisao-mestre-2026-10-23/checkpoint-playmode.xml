@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Failed(Child)" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-23 16:22:01Z" end-time="2026-10-23 16:22:40Z" duration="38,9775693">
+  <test-suite type="TestSuite" id="1359" name="Varginha_Master_QA_20261023" fullname="Varginha_Master_QA_20261023" runstate="Runnable" testcasecount="304" result="Failed" site="Child" start-time="2026-10-23 16:22:01Z" end-time="2026-10-23 16:22:40Z" duration="38.977569" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1711" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="304" result="Failed" site="Child" start-time="2026-10-23 16:22:01Z" end-time="2026-10-23 16:22:40Z" duration="38.965061" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="32504" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1712" name="Game" fullname="Game" runstate="Runnable" testcasecount="304" result="Failed" site="Child" start-time="2026-10-23 16:22:01Z" end-time="2026-10-23 16:22:40Z" duration="38.953426" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1713" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="304" result="Failed" site="Child" start-time="2026-10-23 16:22:01Z" end-time="2026-10-23 16:22:40Z" duration="38.936362" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1714" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="304" result="Failed" site="Child" start-time="2026-10-23 16:22:01Z" end-time="2026-10-23 16:22:40Z" duration="38.919760" total="5" passed="4" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1360" name="CampaignAtmospherePlayTests" fullname="Game.Tests.PlayMode.CampaignAtmospherePlayTests" classname="Game.Tests.PlayMode.CampaignAtmospherePlayTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-23 16:22:01Z" end-time="2026-10-23 16:22:16Z" duration="14.575563" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties>
+                <property name="Category" value="Atmosphere" />
+              </properties>
+              <test-case id="1363" name="RepeatedGlitchesReturnToTheSameReadableSceneAfterRecovery" fullname="Game.Tests.PlayMode.CampaignAtmospherePlayTests.RepeatedGlitchesReturnToTheSameReadableSceneAfterRecovery" methodname="RepeatedGlitchesReturnToTheSameReadableSceneAfterRecovery" classname="Game.Tests.PlayMode.CampaignAtmospherePlayTests" runstate="Runnable" seed="1550113117" result="Passed" start-time="2026-10-23 16:22:01Z" end-time="2026-10-23 16:22:16Z" duration="14.549873" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignAtmospherePlayTests.RepeatedGlitchesReturnToTheSameReadableSceneAfterRecovery
+QA test: Game.Tests.PlayMode.CampaignAtmospherePlayTests.RepeatedGlitchesReturnToTheSameReadableSceneAfterRecovery
+Shader 'Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling' is not supported or has been stripped from the build (in 'Blit FSR Upscaling'). PostProcessing render passes will not execute.
+Shader 'Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling' is not supported or has been stripped from the build (in 'Blit FSR Upscaling'). PostProcessing render passes will not execute.
+QA result: Passed Game.Tests.PlayMode.CampaignAtmospherePlayTests.RepeatedGlitchesReturnToTheSameReadableSceneAfterRecovery
+QA result: Passed Game.Tests.PlayMode.CampaignAtmospherePlayTests.RepeatedGlitchesReturnToTheSameReadableSceneAfterRecovery
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1467" name="CampaignSchoolDeskPlayTests" fullname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" classname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-23 16:22:16Z" end-time="2026-10-23 16:22:24Z" duration="7.792512" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1469" name="OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach" fullname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach" methodname="OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach" classname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" runstate="Runnable" seed="1299129010" result="Passed" start-time="2026-10-23 16:22:16Z" end-time="2026-10-23 16:22:24Z" duration="7.734845" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="40000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+QA test: Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+QA result: Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+QA result: Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1472" name="CampaignVehicleContactTests" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2026-10-23 16:22:24Z" end-time="2026-10-23 16:22:40Z" duration="16.514243" total="3" passed="2" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1475" name="InitialContactWithTheBottomWallDoesNotTrapForwardMotion" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion" methodname="InitialContactWithTheBottomWallDoesNotTrapForwardMotion" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" seed="114689" result="Passed" start-time="2026-10-23 16:22:24Z" end-time="2026-10-23 16:22:29Z" duration="5.778669" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+QA result: Passed Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+QA result: Passed Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+]]></output>
+              </test-case>
+              <test-case id="1473" name="LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit" methodname="LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" seed="873714621" result="Failed" start-time="2026-10-23 16:22:29Z" end-time="2026-10-23 16:22:35Z" duration="5.383716" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: greater than 0.200000003f
+  But was:  0.0f
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.CampaignVehicleContactTests+<LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit>d__4.MoveNext () [0x0017c] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignVehicleContactTests.cs:40
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+QA result: Failed Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+QA result: Failed Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+]]></output>
+              </test-case>
+              <test-case id="1474" name="OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests.OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection" methodname="OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" seed="673103767" result="Passed" start-time="2026-10-23 16:22:35Z" end-time="2026-10-23 16:22:40Z" duration="5.342762" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection
+QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection
+QA result: Passed Game.Tests.PlayMode.CampaignVehicleContactTests.OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection
+QA result: Passed Game.Tests.PlayMode.CampaignVehicleContactTests.OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Master_QA_20261023\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Master_QA_20261023\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

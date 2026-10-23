@@ -1,0 +1,28 @@
+{
+  "cell": [
+    44,
+    64
+  ],
+  "columns": 1,
+  "padding": 0,
+  "pixelsPerUnit": 50,
+  "pivot": [
+    22,
+    64
+  ],
+  "frames": [
+    {
+      "id": "school_globe_static",
+      "source": "globe-replacement-plate.png",
+      "durationMs": 1000
+    }
+  ],
+  "clips": {
+    "school_globe_static": {
+      "frames": [
+        "school_globe_static"
+      ],
+      "loop": true
+    }
+  }
+}

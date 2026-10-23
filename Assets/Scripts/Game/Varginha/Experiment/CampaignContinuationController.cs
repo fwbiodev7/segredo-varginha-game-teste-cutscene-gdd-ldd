@@ -367,7 +367,7 @@ namespace Game.Varginha.Experiment
             if(id=="friends"){Say(_definition.documents[2]);return;}
             if(id=="entity"){Say("A entidade ferida espera a passagem estável. Edelzio mantém o selo durante a travessia.");return;}
             if(id!="procedure"&&id!="exit")return;
-            if(State.finalStep==0){State.finalStep=1;_sound.Play("AlienBurst");Say("A passagem de retorno está aberta. A ligação de Edelzio permanece enquanto a entidade se aproxima.");}
+            if(State.finalStep==0){State.finalStep=1;_sound.Play("PortalOpen");Say("A passagem de retorno está aberta. A ligação de Edelzio permanece enquanto a entidade se aproxima.");}
             else if(State.finalStep==1){StartCoroutine(Crossing());}
             else if(State.finalStep==2){State.finalStep=3;StartCoroutine(Release());}
             else if(State.finalStep==4){ChangeArea(1);return;}Save();
@@ -381,7 +381,7 @@ namespace Game.Varginha.Experiment
         }
         private IEnumerator Release()
         {
-            _sequence=true;_sound.Play("Success");float t=0;
+            _sequence=true;_sound.Play("PortalClose");float t=0;
             while(t<2.8f){t+=Time.deltaTime;_endingFade=t<1.4f?Mathf.Clamp01(t/1.4f):Mathf.Clamp01((2.8f-t)/1.4f);yield return null;}
             _endingFade=0;State.finalStep=4;State.finalSealActive=false;_sequence=false;if(_portal!=null)_portal.enabled=false;
             var friends=Plan.points.Find(p=>p.id=="friends").position;
@@ -535,12 +535,16 @@ namespace Game.Varginha.Experiment
         }
         private void Panel()
         {
+            // Success has already been presented as dialogue or memory. Preserve
+            // final calibration/ending screens, which carry narrative guidance.
+            if(_panel=="complete"&&phase<20)
+            {if(ExperimentGUI.ContinueChapterButton())ContinueChapter();return;}
             ExperimentGUI.Box(new Rect(0,155,1280,565),new Color(0,0,0,.7f));ExperimentGUI.Panel(new Rect(100,175,1080,465));
             ExperimentGUI.Label(new Rect(135,195,1010,40),_panel=="journal"?"CADERNO • EVIDÊNCIAS":_definition.title,true);
             if(_panel=="complete")
             {
                 ExperimentGUI.Label(new Rect(145,260,990,160),_definition.success);
-                if(ExperimentGUI.Button(new Rect(420,490,440,50),phase==21?"SALVAR E VOLTAR AO MENU":CampaignSequence.ContinueLabel(phase))){if(phase==21){Menu();return;}Save();Progress.continuation.area=0;Progress.positionPhase=0;CampaignStorySave.Write(Progress);CampaignStorySave.GoTo(CampaignSequence.Next(phase));}
+                if(ExperimentGUI.Button(new Rect(420,490,440,50),phase==21?"SALVAR E VOLTAR AO MENU":CampaignSequence.ContinueLabel(phase)))ContinueChapter();
             }
             else if(_panel=="hints") CampaignHints.Draw(Progress,phase,ref _hintLevel);
             else if(_panel=="journal")
@@ -588,6 +592,15 @@ namespace Game.Varginha.Experiment
             if(ExperimentGUI.Button(new Rect(145,570,360,40),"VOLTAR À EXPLORAÇÃO"))_panel=null;
         }
         private void Menu(){Save();Time.timeScale=1;CampaignCinematics.Load("Menu_MisterioDeVarginha");}
+        private bool _chapterAdvancing;
+        public bool ContinueChapter()
+        {
+            if(Progress==null||_chapterAdvancing||_paused||_panel!="complete"||CampaignCinematics.IsTransitioning)return false;
+            _chapterAdvancing=true;
+            if(phase==21){Menu();return true;}
+            Save();Progress.continuation.area=0;Progress.positionPhase=0;CampaignStorySave.Write(Progress);
+            CampaignStorySave.GoTo(CampaignSequence.Next(phase));return true;
+        }
         private void OnApplicationPause(bool value){if(value)Save();}
         private void OnDestroy(){_textMessage.Close();RestoreBossShot();if(Active==this)Active=null;Time.timeScale=1;}
     }

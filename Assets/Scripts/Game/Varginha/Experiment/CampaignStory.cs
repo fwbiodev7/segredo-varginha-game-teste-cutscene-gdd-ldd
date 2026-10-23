@@ -71,6 +71,7 @@ namespace Game.Varginha.Experiment
             CampaignSequence.Migrate(this);
             house ??= new CampaignHouseInvestigation();
             house.Repair(boxFound, pagesSolved && boxFound);
+            if(house.KeyOnCounter&&(routine&8)!=0){house.RememberBag();house.TakeBag();}
             int maxArea=phase==17?2:phase==12||phase==21?1:0;
             if(continuation.area>maxArea){continuation.area=maxArea;positionPhase=0;}
             expansion ??= new CampaignExpansionState(); expansion.Repair();

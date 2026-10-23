@@ -42,6 +42,8 @@ namespace Game.Tests.EditMode
         [TestCase("ChildExplosion","soundreality-explosion-fx")]
         [TestCase("FabioShield","dragon-studio-angelical-synth-pad")]
         [TestCase("ChurchBell","alex_jauk-old-town-church-bells")]
+        [TestCase("MenuMusic","musicamenuinicialslowed.mp3")]
+        [TestCase("ChurchAmbience","igrejamedo.mp3")]
         public void AuthoredAssignmentsKeepTheirSourceIdentity(string id,string file)
             =>Assert.That(CampaignRecordedAudio.Definition(id).source,Does.Contain(file));
         [Test] public void RecordedBossAliasesDoNotReuseTheChildExplosion()
@@ -70,6 +72,22 @@ namespace Game.Tests.EditMode
             Assert.That(CampaignRecordedAudio.Ambient("School",2),Is.Null);
             Assert.That(CampaignRecordedAudio.Ambient("School",0),Is.SameAs(CampaignRecordedAudio.Clip("SchoolAmbience")));
             Assert.That(CampaignRecordedAudio.Ambient("Forest",1),Is.SameAs(CampaignRecordedAudio.Clip("ForestAmbience")));
+        }
+        [Test] public void LaboratoryUsesTheReceivedLoopingBed()
+        {
+            var clip=CampaignRecordedAudio.Clip("LabAmbience");
+            Assert.That(CampaignRecordedAudio.Ambient("Lab",0),Is.SameAs(clip));
+            Assert.That(CampaignRecordedAudio.Definition("LabAmbience").loop,Is.True);
+            Assert.That(clip,Is.Not.Null);
+        }
+        [TestCase(0)][TestCase(1)][TestCase(2)]
+        public void ChurchKeepsReceivedDarkBedAcrossTensionChanges(int band)
+        {
+            var clip=CampaignRecordedAudio.Clip("ChurchAmbience");
+            Assert.That(clip,Is.Not.Null);
+            Assert.That(CampaignAtmosphereAudio.Bed("Church",band),Is.SameAs(clip));
+            Assert.That(clip,Is.Not.SameAs(CampaignRecordedAudio.Clip("ChurchBell")));
+            Assert.That(CampaignRecordedAudio.Definition("ChurchAmbience").loop,Is.True);
         }
         [Test] public void FootstepsVaryWithoutConsumingGameplayRandomness()
         {

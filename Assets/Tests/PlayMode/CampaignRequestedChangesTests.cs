@@ -66,7 +66,7 @@ namespace Game.Tests.PlayMode
         }
         [UnityTest,Timeout(60000)] public IEnumerator OuzanaDoorAndCasaraoArrivalsHaveReachableDestinations()
         {
-            var story=new CampaignStory{phase=9};story.expansion.SolveAnchor(1996,1,23);CampaignStorySave.Write(story);yield return Load(9);
+            var story=new CampaignStory{phase=9};story.expansion.anchorFound=true;story.expansion.anchorClues=7;CampaignStorySave.Write(story);yield return Load(9);
             var ouzana=CampaignExpansionController.Active;Assert.That(GameObject.Find("Porta_de_saida_Ouzana"),Is.Not.Null);
             var route=new System.Collections.Generic.List<Vector2>();Assert.That(ouzana.Plan.Route(ouzana.Plan.spawn,ouzana.Plan.points.Find(p=>p.id=="exit").position,route),Is.True);
             ouzana.Interact("ouzana");CampaignStorySave.GoTo(10);

@@ -43,6 +43,53 @@ namespace Game.Tests.PlayMode
             string folder=Path.Combine(CinemaQaEvidence.Folder,"captures");Directory.CreateDirectory(folder);
             File.WriteAllBytes(Path.Combine(folder,name+".png"),image.EncodeToPNG());Object.Destroy(image);
         }
+        static void CaptureWorld(string name)
+        {
+            var camera=Camera.main;var old=camera.targetTexture;var active=RenderTexture.active;
+            var target=RenderTexture.GetTemporary(960,540,24);target.filterMode=FilterMode.Point;
+            var image=new Texture2D(960,540,TextureFormat.RGB24,false);
+            try
+            {
+                camera.targetTexture=target;VarginhaPixelPresentation.RenderInto(camera,target);RenderTexture.active=target;
+                image.ReadPixels(new Rect(0,0,960,540),0,0);image.Apply();
+                string folder=Path.Combine(CinemaQaEvidence.Folder,"world-review");Directory.CreateDirectory(folder);
+                File.WriteAllBytes(Path.Combine(folder,name+".png"),image.EncodeToPNG());
+            }
+            finally{camera.targetTexture=old;RenderTexture.active=active;RenderTexture.ReleaseTemporary(target);Object.Destroy(image);}
+        }
+        [UnityTest,Timeout(40000)] public IEnumerator GlobeKeepsItsNativeScaleCabinetContactAndInvestigation()
+        {
+            yield return Load(6);var data=CampaignIllustratedMaps.Get(6);
+            var globe=GameObject.Find("Globo_Esferico_Arquivo").GetComponent<SpriteRenderer>();var cabinet=globe.transform.parent;
+            Assert.That(globe.sprite.texture.width,Is.EqualTo(44));Assert.That(globe.sprite.texture.height,Is.EqualTo(64));
+            Assert.That(globe.sprite.texture.filterMode,Is.EqualTo(FilterMode.Point));Assert.That(globe.sprite.pixelsPerUnit,Is.EqualTo(50));
+            Assert.That(globe.transform.lossyScale,Is.EqualTo(Vector3.one));Assert.That(globe.bounds.size.x,Is.EqualTo(.88f).Within(.001f));
+            Assert.That(globe.GetComponent<Collider2D>(),Is.Null);Assert.That(cabinet.GetComponent<Collider2D>(),Is.Not.Null);
+            Assert.That(globe.GetComponent<SortingGroup>().sortingOrder,Is.GreaterThan(cabinet.GetComponent<SortingGroup>().sortingOrder));
+            Focus(data.Position(896,169),1.8f);yield return null;CaptureWorld("globe-library");
+            CampaignExpansionController.Active.Interact("school");Assert.That(CampaignExpansionController.Active.Progress.expansion.visited&2,Is.EqualTo(2));
+        }
+        [UnityTest,Timeout(40000)] public IEnumerator OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach()
+        {
+            yield return Load(2);var stage=VarginhaCampaignStage.Active;var data=CampaignIllustratedMaps.Get(2);
+            var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();var body=actor.GetComponent<Rigidbody2D>();
+            var action=actor.GetComponent<VarginhaPlayerActionAnimation>();var visual=actor.GetComponent<VarginhaPlayerSpriteAnimation>();
+            var chair=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/Office_Chair").GetComponent<SpriteRenderer>();
+            Vector2 approach=data.Objective("work")+Vector2.up*.58f;body.position=approach;yield return new WaitForFixedUpdate();
+            Focus(data.Position(86,487),1.8f);CaptureWorld("office-approach");stage.Interact("work");
+            float deadline=Time.realtimeSinceStartup+5;
+            while(visual.CurrentActionPose!="Edelzio_UseNotebook"&&Time.realtimeSinceStartup<deadline)yield return null;
+            Assert.That(visual.CurrentActionPose,Is.EqualTo("Edelzio_UseNotebook"));yield return null;
+            var renderer=actor.GetComponent<SpriteRenderer>();
+            Assert.That(actor.transform.position.x,Is.EqualTo(chair.bounds.center.x).Within(.035f),"Torso is centered on the actual chair, not the old hidden anchor.");
+            Assert.That(renderer.sprite.name,Does.EndWith("_OfficeOccludedLegs"));
+            Assert.That(renderer.bounds.min.y,Is.GreaterThan(chair.bounds.center.y+.15f),"The rear seat hides the lower legs instead of drawing shoes on the cushion.");
+            Assert.That(renderer.bounds.min.y,Is.LessThan(chair.bounds.max.y),"The torso overlaps the backrest instead of floating above it.");
+            CaptureWorld("office-notebook-seated");
+            while(stage.IsActing&&Time.realtimeSinceStartup<deadline)yield return null;
+            Assert.That(stage.IsActing,Is.False);Assert.That(stage.Progress.routine&4,Is.EqualTo(4));
+            Assert.That(Vector2.Distance(body.position,approach),Is.LessThan(.1f));CaptureWorld("office-return");
+        }
         [UnityTest,Timeout(40000)]public IEnumerator ClassroomDesktopStaysSupportedAndNotebookInteractionWorks()
         {
             yield return Load(4);var stage=VarginhaCampaignStage.Active;

@@ -28,11 +28,12 @@ namespace Game.Tests.EditMode
             Assert.That(s.SolveMap(),Is.False);CollectionAssert.AreEqual(new[]{1,0,1},s.trailChoices);
             Assert.That(s.trailFeedback,Is.EqualTo(4));s.visited=7;Assert.That(s.SolveMap(),Is.True);
         }
-        [Test] public void WrongCrossingRetainsTheEarlierValidPassage()
+        [Test] public void WrongCrossingRetainsAllChoicesForDirectCorrection()
         {
             var s=new CampaignExpansionState{visited=7,trailChoices=new[]{1,1,1}};
-            Assert.That(s.SolveMap(),Is.False);CollectionAssert.AreEqual(new[]{1,-1,-1},s.trailChoices);
+            Assert.That(s.SolveMap(),Is.False);CollectionAssert.AreEqual(new[]{1,1,1},s.trailChoices);
             Assert.That(s.trailFeedback,Is.EqualTo(2));Assert.That(CampaignTrailPuzzle.Feedback(s),Does.Contain("ponte"));
+            Assert.That(CampaignTrailPuzzle.Select(s,1,0),Is.True);Assert.That(s.SolveMap(),Is.True);
         }
         [Test] public void TraceUndoRestartAndPartialSaveRemainPredictable()
         {
@@ -52,8 +53,20 @@ namespace Game.Tests.EditMode
         [Test] public void MalformedOrGappedTraceCannotGrantProgress()
         {
             var s=new CampaignExpansionState{visited=7,trailChoices=new[]{1,-9,1},trailHints=99};s.Repair();
-            CollectionAssert.AreEqual(new[]{1,-1,-1},s.trailChoices);Assert.That(s.trailHints,Is.EqualTo(3));
+            CollectionAssert.AreEqual(new[]{1,-1,1},s.trailChoices);Assert.That(s.trailHints,Is.EqualTo(3));
             Assert.That(s.SolveMap(),Is.False);Assert.That(s.mapSolved,Is.False);
+        }
+        [Test] public void OutOfOrderSelectionsAndChangesSurviveSaveRepair()
+        {
+            var s=new CampaignExpansionState{visited=7};
+            Assert.That(CampaignTrailPuzzle.Select(s,2,0),Is.True);
+            Assert.That(CampaignTrailPuzzle.Filled(s),Is.EqualTo(1));
+            var restored=JsonUtility.FromJson<CampaignExpansionState>(JsonUtility.ToJson(s));restored.Repair();
+            CollectionAssert.AreEqual(new[]{-1,-1,0},restored.trailChoices);
+            CampaignTrailPuzzle.Select(restored,0,1);CampaignTrailPuzzle.Select(restored,1,0);
+            CampaignTrailPuzzle.Select(restored,2,1);Assert.That(restored.SolveMap(),Is.True);
+            Assert.That(CampaignTrailPuzzle.Select(restored,0,0),Is.False);
+            Assert.That(CampaignTrailPuzzle.Select(s,3,0),Is.False);
         }
         [Test] public void ProgressiveHintsBeginWithObservationRatherThanTheAnswer()
         {

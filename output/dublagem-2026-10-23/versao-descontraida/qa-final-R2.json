@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "checks": {
+    "pages": true,
+    "all_lines": true,
+    "unique_codes": true,
+    "no_spoken_numbers": true,
+    "no_spoken_log_notice": true,
+    "child_line_preserved": true,
+    "no_technical_ids": true,
+    "all_new_hashes_correct": true,
+    "fourteen_revised_ids": true,
+    "no_blank_pages": true,
+    "approved_dialogue_matches_game": true,
+    "spoken_clue_suffix_removed": true,
+    "exact_requested_filename": true,
+    "zip_integrity": true
+  },
+  "pages": 3,
+  "lines": 15,
+  "rewritten": 14,
+  "optional_vocals": 5,
+  "game_modified": true,
+  "integration_approval_pending": false,
+  "pdf_sha256": "f0ec28e158716c147b1027570aa827c305fb1b5171bf4500f9d23cc00e38b86f",
+  "failures": [],
+  "visual_review": {
+    "completed": true,
+    "pages": [
+      1,
+      2,
+      3
+    ],
+    "renderer": "Poppler pdftoppm",
+    "dpi": 115,
+    "issues": []
+  }
+}

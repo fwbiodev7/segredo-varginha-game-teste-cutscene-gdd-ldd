@@ -5,6 +5,12 @@ namespace Game.Varginha.Experiment
 {
     internal static class ExperimentGUI
     {
+        public static readonly Rect ContinueChapterRect=new(1010,650,220,42);
+        public static bool ContinueChapterButton()
+        {
+            Label(new Rect(1010,626,220,20),"PROGRESSO SALVO",small:true);
+            return Button(ContinueChapterRect,"CONTINUAR");
+        }
         public static readonly Color Ink = new(.025f, .045f, .065f);
         public static readonly Color Paper = new(.91f, .87f, .73f);
         public static readonly Color Muted = new(.57f, .68f, .66f);

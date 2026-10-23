@@ -1,0 +1,40 @@
+{
+  "schema": "unity-slice-plan/v1",
+  "origin": "bottom-left",
+  "image": "sheet.png",
+  "pixelsPerUnit": 50,
+  "sprites": [
+    {
+      "name": "school_globe_static",
+      "rect": [
+        0,
+        0,
+        44,
+        64
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.0
+      ],
+      "alignment": "Custom",
+      "durationMs": 1000
+    }
+  ],
+  "clips": {
+    "school_globe_static": {
+      "frames": [
+        "school_globe_static"
+      ],
+      "loop": true
+    }
+  },
+  "importSettings": {
+    "textureType": "Sprite",
+    "spriteMode": "Multiple",
+    "filterMode": "Point",
+    "mipmaps": false,
+    "compression": "Uncompressed",
+    "wrapMode": "Clamp"
+  },
+  "note": "Import plan only; Unity does not import this JSON automatically. Preserve existing sprite IDs."
+}

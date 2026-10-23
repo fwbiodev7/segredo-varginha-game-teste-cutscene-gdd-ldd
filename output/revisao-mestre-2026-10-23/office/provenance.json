@@ -1,0 +1,32 @@
+{
+  "source_sha256": "6d94399fbd318dcdbeeeed38a1c6fdae389f1d38c2a3bd45ad67bb71280e59d1",
+  "target_sha256": "cf7f04bf6f38e6625c85cbd84d89dee1eb2f06e272e5032f53cd020aca3e3ed2",
+  "chair_source": [
+    59,
+    497,
+    54,
+    59
+  ],
+  "chair_target": [
+    59,
+    481,
+    54,
+    59
+  ],
+  "footprint_source": [
+    65,
+    531,
+    43,
+    22
+  ],
+  "footprint_target": [
+    65,
+    515,
+    43,
+    22
+  ],
+  "clean_floor_source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a16833-5617-7d30-bc5d-7298bd7f3401\\exec-e0971760-35be-45b1-9680-8d0aa7b86426.png",
+  "filter": "original chair pixels copied at integer offset; generated clean floor restricted to the old contour and three-pixel cleanup margin",
+  "original_asset_preserved": true,
+  "changed_pixels": 4345
+}

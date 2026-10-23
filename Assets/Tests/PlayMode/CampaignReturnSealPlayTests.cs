@@ -90,9 +90,10 @@ namespace Game.Tests.PlayMode
             var viewingPosition=controller.Plan.points.Find(p=>p.id=="procedure").position+Vector2.down*2.4f+Vector2.up*.58f;
             controller.Actor.GetComponent<Rigidbody2D>().position=viewingPosition;
             yield return new WaitForSeconds(.7f);
-            var seal=Object.FindAnyObjectByType<CampaignReturnSeal>();var renderer=seal.GetComponent<SpriteRenderer>();
+            var seal=Object.FindAnyObjectByType<CampaignReturnSeal>();var renderer=seal.GetComponent<SpriteRenderer>();var sound=controller.GetComponent<CampaignSoundscape>();
             Assert.That(renderer.enabled,Is.False);Advance(controller);yield return new WaitForSeconds(1.3f);
             Assert.That(controller.State.finalStep,Is.EqualTo(1));Assert.That(renderer.enabled,Is.True);
+            Assert.That(sound.LastEvent,Is.EqualTo("PortalOpen"),"Opening the return seal must emit the received portal cue.");
             System.IO.Directory.CreateDirectory("Preview/SeloRetorno20261010");
             ScreenCapture.CaptureScreenshot("Preview/SeloRetorno20261010/SeloNaFase.png");yield return null;
             controller.CloseMessage();controller.TogglePause();var paused=renderer.sprite;
@@ -107,11 +108,12 @@ namespace Game.Tests.PlayMode
             Assert.That(controller.State.finalStep,Is.EqualTo(2));Assert.That(entity.enabled,Is.False);
             Assert.That(controller.State.finalSealActive,Is.True);Assert.That(renderer.enabled,Is.True);
             SceneManager.LoadScene(CampaignContinuationDefinition.SceneName(21));yield return null;yield return null;
-            controller=CampaignContinuationController.Active;controller.CloseMessage();
+            controller=CampaignContinuationController.Active;controller.CloseMessage();sound=controller.GetComponent<CampaignSoundscape>();
             renderer=Object.FindAnyObjectByType<CampaignReturnSeal>().GetComponent<SpriteRenderer>();
             Assert.That(controller.State.finalStep,Is.EqualTo(2));Assert.That(renderer.enabled,Is.True);
             Assert.That(GameObject.Find("Entidade ferida").GetComponent<SpriteRenderer>().enabled,Is.False);
             Advance(controller);yield return new WaitForSeconds(.7f);Assert.That(controller.State.finalStep,Is.EqualTo(3));
+            Assert.That(sound.LastEvent,Is.EqualTo("PortalClose"),"Starting the seal release must emit the received closing cue.");
             deadline=Time.realtimeSinceStartup+5;
             while(controller.State.finalStep!=4&&Time.realtimeSinceStartup<deadline)yield return null;
             Assert.That(controller.State.finalStep,Is.EqualTo(4));Assert.That(renderer.enabled,Is.False);

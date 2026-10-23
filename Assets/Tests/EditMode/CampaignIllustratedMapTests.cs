@@ -27,13 +27,15 @@ namespace Game.Tests.EditMode
             }
         }
         [TestCase(0)][TestCase(1)][TestCase(3)][TestCase(7)]
-        public void CorrectChurchCombinationSurvivesReloadWithoutHiddenInspectionGates(int inspected)
+        public void ChurchRequiresActualEvidenceAndReconstructionBeforeReward(int inspected)
         {
             var state = new CampaignExpansionState { anchorClues = inspected };
             Assert.That(state.SolveAnchor(1996,0,23),Is.False);
             Assert.That(state.SolveAnchor(1996,1,1),Is.False);
             Assert.That(state.SolveAnchor(1898,1,23),Is.False);
             Assert.That(state.anchorClues,Is.EqualTo(inspected));
+            Assert.That(state.SolveAnchor(1996,1,23),Is.False,"A numeric guess cannot bypass the document puzzle.");
+            state.anchorClues=7;state.bookOrder=new[]{0,1,2};state.bookLinks=new[]{0,1,2};
             Assert.That(state.SolveAnchor(1996,1,23),Is.True);
             var restored = JsonUtility.FromJson<CampaignExpansionState>(JsonUtility.ToJson(state));
             restored.Repair();

@@ -2182,15 +2182,16 @@
         {
           "name": "Office_Chair",
           "motif": "OriginalChair",
+          "source": [59, 497, 54, 59],
           "art": [
             59,
-            497,
+            481,
             54,
             59
           ],
           "base": [
             65,
-            531,
+            515,
             43,
             22
           ],

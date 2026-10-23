@@ -1,0 +1,15 @@
+{
+  "pages": 12,
+  "previous_template_version_pages": 35,
+  "original_report_pages": 46,
+  "visual_inspection": "Todas as 12 páginas abertas individualmente em PNG a 100 dpi; sem cortes, sobreposições ou glifos ausentes.",
+  "A4": true,
+  "unresolved_fields": [],
+  "overflow": [],
+  "native_toc": true,
+  "body_font": "Times New Roman 12",
+  "body_line_spacing": 1.5,
+  "margins_cm": [3,3,2,2],
+  "primary_sections": 5,
+  "source_cutoff": "2026-10-23; revisão mestre ainda em andamento, sem alegar conclusão das correções"
+}

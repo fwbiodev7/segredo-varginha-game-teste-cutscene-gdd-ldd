@@ -33,6 +33,7 @@ namespace Game.Varginha
         public bool IsSeated { get; private set; }
         public bool IsDrinking { get; private set; }
         public bool IsPunching => _attackPose;
+        public int CombatFrame { get; private set; }=-1;
         public int ActionFrame { get; private set; }
         public string CurrentActionPose { get; private set; }
         public bool HasActionPose => _actionPose != null;
@@ -43,8 +44,9 @@ namespace Game.Varginha
             if (_attackPose) ClearActionPose();
         }
 
-        public void SetCombatPose(Sprite pose, Vector2 direction)
+        public void SetCombatPose(Sprite pose, Vector2 direction,int frame=-1)
         {
+            CombatFrame=frame;
             _typing = false;
             _actionPose = pose;
             _attackPose = true;
@@ -199,6 +201,7 @@ namespace Game.Varginha
             CurrentActionPose=poseId;ActionFrame=poseId=="Edelzio_UseNotebook"?1:0;
             ActionFacingDirection = poseId == "Edelzio_WashFace" ? Vector2.down : poseId == "Edelzio_Sit" || poseId == "Edelzio_UseNotebook" ? _seatingFacing : Vector2.down;
             _attackPose = false;
+            CombatFrame=-1;
             EnsureFrames();
             IsSeated = poseId == "Edelzio_Sit" || poseId == "Edelzio_UseNotebook";
             IsDrinking = poseId == "Edelzio_DrinkCoffee";
@@ -234,6 +237,7 @@ namespace Game.Varginha
 
         public void ClearActionPose()
         {
+            CombatFrame=-1;
             CurrentActionPose=null;ActionFrame=0;
             _actionPose = null;
             _typing = false;

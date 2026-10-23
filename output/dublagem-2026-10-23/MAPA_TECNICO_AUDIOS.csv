@@ -1,0 +1,78 @@
+﻿codigo,personagem,arquivo_recebido,id_do_jogo,arquivo_final,situacao,texto
+ED01,Edelzio,ED01_t01.ext,fala_5a0f722c0e9e1a66,fala_5a0f722c0e9e1a66.wav,Fala atual no canal de diálogo,Vou chegar pelo lado livre da cadeira para preparar o notebook.
+ED02,Edelzio,ED02_t01.ext,fala_6c094ae5dc65f4ef,fala_6c094ae5dc65f4ef.wav,Fala atual no canal de diálogo,Minha caixa de brinquedos de 1996. Faz anos que não abro. Preciso preparar a aula.
+ED03,Edelzio,ED03_t01.ext,fala_6c01031966ebdf99,fala_6c01031966ebdf99.wav,Texto já exibido na cutscene; precisa ligar reprodução de voz,Vou deixar a chave na mesa do café. Depois pego a mochila.
+ED04,Edelzio,ED04_t01.ext,fala_7bb1f3e8066a77b4,fala_7bb1f3e8066a77b4.wav,Fala atual no canal de diálogo,Deixei a chave aqui. Falta buscar a mochila no quarto.
+ED05,Edelzio,ED05_t01.ext,fala_7f13ef90eda56765,fala_7f13ef90eda56765.wav,Fala atual no canal de diálogo,A chave não está na mesa do café. Não há nada no chão ao redor. A observação ficou registrada no caderno.
+ED06,Edelzio,ED06_t01.ext,fala_0da7451a840080f7,fala_0da7451a840080f7.wav,Fala atual no canal de diálogo,O trinco continua fechado por dentro. Não abri esta porta desde que acordei. A observação ficou registrada no caderno.
+ED07,Edelzio,ED07_t01.ext,fala_fcc040800101c01c,fala_fcc040800101c01c.wav,Fala atual no canal de diálogo,"Um pedacinho de papel envelhecido ficou preso junto ao quarto. Há um traço azul, igual ao das minhas anotações de infância. A observação ficou registrada no caderno."
+ED08,Edelzio,ED08_t01.ext,fala_e74fec7b70c63a91,fala_e74fec7b70c63a91.wav,Fala atual no canal de diálogo,"A caixa continua fechada. Antes de mexer, preciso entender o que mudou na casa."
+ED09,Edelzio,ED09_t01.ext,fala_b51af4553ee27766,fala_b51af4553ee27766.wav,Fala atual no canal de diálogo,A porta não foi aberta. O papel parece vir da minha caixa... Agora escuto arranhões debaixo da cama.
+ED10,Edelzio,ED10_t01.ext,fala_37bd4a7aaee1ac69,fala_37bd4a7aaee1ac69.wav,Fala atual no canal de diálogo,"Guardei a chave, o caderno e o primeiro fragmento de mapa. A mensagem continua ali: ELA AINDA ESTÁ AQUI."
+ED11,Edelzio,ED11_t01.ext,fala_ebb30bd913523b6d,fala_ebb30bd913523b6d.wav,Fala atual no canal de diálogo,A chave está guardada comigo. Não vou deixá-la aqui outra vez.
+ED12,Edelzio,ED12_t01.ext,fala_a43d705d58389c5a,fala_a43d705d58389c5a.wav,Fala atual no canal de diálogo,Investigue a caixa sob a cama e organize as páginas para encontrar a chave.
+ED13,Edelzio,ED13_t01.ext,fala_098a6465f983f550,fala_098a6465f983f550.wav,Fala atual no canal de diálogo,Vou conversar com Renan antes de usar o notebook dele.
+ED14,Edelzio,ED14_t01.ext,fala_5639cb916fdbadea,fala_5639cb916fdbadea.wav,Fala atual no canal de diálogo,23:23. Vou mostrar essa descoberta a Renan.
+CR01,Edelzio criança,CR01_t01.ext,fala_01345e370c5a0298,fala_01345e370c5a0298.wav,Fala com gatilho de voz dedicado no Fusca,Não deixa ela sair.
+S01,Edelzio,S01_t01.ext,esforco_edelzio_01,esforco_edelzio_01.wav,"Esforço opcional, sem gatilho garantido",[Passo interrompido por susto: sem palavras.]
+S02,Edelzio,S02_t01.ext,esforco_edelzio_02,esforco_edelzio_02.wav,"Esforço opcional, sem gatilho garantido",[Ignição quente: sem palavras.]
+S03,Edelzio,S03_t01.ext,esforco_edelzio_03,esforco_edelzio_03.wav,"Esforço opcional, sem gatilho garantido",[Fuga: sem palavras.]
+S04,Edelzio,S04_t01.ext,esforco_edelzio_04,esforco_edelzio_04.wav,"Esforço opcional, sem gatilho garantido",[Queda e recuperação: sem palavras.]
+S05,Edelzio criança,S05_t01.ext,esforco_edelzio_crianca_05,esforco_edelzio_crianca_05.wav,"Esforço opcional, sem gatilho garantido",[Clarão: sem palavras.]
+REV01,Edelzio criança,REV01_t01.ext,fala_93d75bd803f9bf58,fala_93d75bd803f9bf58.wav,"Proposta, revisar e ligar à cena antes de usar",Será que alguém viu ela de perto?
+REV02,Edelzio criança,REV02_t01.ext,fala_635c3e665d2b29ef,fala_635c3e665d2b29ef.wav,"Proposta, revisar e ligar à cena antes de usar",Eu vou desenhar antes que eu esqueça.
+REV03,Edelzio criança,REV03_t01.ext,fala_fbd612f16dc00412,fala_fbd612f16dc00412.wav,"Proposta, revisar e ligar à cena antes de usar",Ué... a televisão quebrou?
+REV04,Edelzio criança,REV04_t01.ext,fala_2c92b0c2fa7ef621,fala_2c92b0c2fa7ef621.wav,"Proposta, revisar e ligar à cena antes de usar",Tem uma luz lá fora.
+REV05,Edelzio,REV05_t01.ext,fala_9f678cad7f129b53,fala_9f678cad7f129b53.wav,"Proposta, revisar e ligar à cena antes de usar","Sete horas. Se eu sair logo, ainda chego antes da turma."
+REV06,Edelzio,REV06_t01.ext,fala_e223f0a5aeeb2df9,fala_e223f0a5aeeb2df9.wav,"Proposta, revisar e ligar à cena antes de usar",Aquele sonho de novo... Logo hoje.
+REV07,Edelzio,REV07_t01.ext,fala_f8881cefe11e98da,fala_f8881cefe11e98da.wav,"Proposta, revisar e ligar à cena antes de usar",Um café e eu já vou.
+REV08,Edelzio,REV08_t01.ext,fala_bbf065ddcea3fbc8,fala_bbf065ddcea3fbc8.wav,"Proposta, revisar e ligar à cena antes de usar",O material da aula está aqui. Só falta guardar tudo.
+REV09,Edelzio,REV09_t01.ext,fala_816490092779e773,fala_816490092779e773.wav,"Proposta, revisar e ligar à cena antes de usar",Espera... esse desenho não estava aberto.
+REV10,Edelzio,REV10_t01.ext,fala_03ddf7489ff4a965,fala_03ddf7489ff4a965.wav,"Proposta, revisar e ligar à cena antes de usar",Eu deixei a chave aqui... Tenho certeza.
+REV11,Edelzio,REV11_t01.ext,fala_34b580b7c2721074,fala_34b580b7c2721074.wav,"Proposta, revisar e ligar à cena antes de usar",A porta está trancada por dentro. Ninguém saiu por aqui.
+REV12,Edelzio,REV12_t01.ext,fala_e7d366720af517f7,fala_e7d366720af517f7.wav,"Proposta, revisar e ligar à cena antes de usar",Esse traço azul... Parece o do meu caderno de criança.
+REV13,Edelzio,REV13_t01.ext,fala_b3a838d2e590964e,fala_b3a838d2e590964e.wav,"Proposta, revisar e ligar à cena antes de usar",O barulho vem debaixo da cama.
+REV14,Edelzio,REV14_t01.ext,fala_680428dad014e257,fala_680428dad014e257.wav,"Proposta, revisar e ligar à cena antes de usar",Como a chave veio parar aqui dentro?
+REV15,Edelzio,REV15_t01.ext,fala_852bf61755f2c222,fala_852bf61755f2c222.wav,"Proposta, revisar e ligar à cena antes de usar",Eu não abria essa caixa há anos.
+REV16,Edelzio,REV16_t01.ext,fala_1d240aafb2762eea,fala_1d240aafb2762eea.wav,"Proposta, revisar e ligar à cena antes de usar",Eu sei que vi alguma coisa.
+REV17,Edelzio,REV17_t01.ext,fala_f13bfd6d71551662,fala_f13bfd6d71551662.wav,"Proposta, revisar e ligar à cena antes de usar",Ela ainda está aqui.
+REV18,Edelzio,REV18_t01.ext,fala_0336516338fd3486,fala_0336516338fd3486.wav,"Proposta, revisar e ligar à cena antes de usar",A letra é minha. Mas eu não lembro de escrever isso.
+REV19,Edelzio,REV19_t01.ext,fala_4e0356946621cf04,fala_4e0356946621cf04.wav,"Proposta, revisar e ligar à cena antes de usar","Chego à escola, dou a aula... Depois eu olho esse caderno com calma."
+REV20,Edelzio,REV20_t01.ext,fala_20bc5e930169500b,fala_20bc5e930169500b.wav,"Proposta, revisar e ligar à cena antes de usar",Não é possível. Agora o rádio também?
+REV21,Edelzio,REV21_t01.ext,fala_9c3f44769f033663,fala_9c3f44769f033663.wav,"Proposta, revisar e ligar à cena antes de usar",Calma... Encosta. Encosta.
+REV22,Edelzio,REV22_t01.ext,fala_582dfd2aef85fbd7,fala_582dfd2aef85fbd7.wav,"Proposta, revisar e ligar à cena antes de usar",Essa voz... era a minha?
+REV23,Edelzio,REV23_t01.ext,fala_d1398065a10b7909,fala_d1398065a10b7909.wav,"Proposta, revisar e ligar à cena antes de usar",Ah! Está queimando!
+REV24,Edelzio,REV24_t01.ext,fala_9e7dc37be39c5288,fala_9e7dc37be39c5288.wav,"Proposta, revisar e ligar à cena antes de usar",Eu não encostei na chave.
+REV25,Edelzio,REV25_t01.ext,fala_ad59095502327f8b,fala_ad59095502327f8b.wav,"Proposta, revisar e ligar à cena antes de usar","Preciso falar com alguém. Mas primeiro, a turma."
+REV26,Edelzio,REV26_t01.ext,fala_add73e0386381d5f,fala_add73e0386381d5f.wav,"Proposta, revisar e ligar à cena antes de usar","Bom dia, pessoal. Vamos conferir o que vocês fizeram?"
+REV27,Edelzio,REV27_t01.ext,fala_9da3809d800937bb,fala_9da3809d800937bb.wav,"Proposta, revisar e ligar à cena antes de usar",Tive um problema no caminho. Depois eu te conto.
+REV28,Edelzio,REV28_t01.ext,fala_89533a71f054a85c,fala_89533a71f054a85c.wav,"Proposta, revisar e ligar à cena antes de usar",A imagem é antiga. Esse detalhe na margem é que não combina.
+REV29,Edelzio,REV29_t01.ext,fala_4b80a27cdcb9f8d6,fala_4b80a27cdcb9f8d6.wav,"Proposta, revisar e ligar à cena antes de usar","Vinte e três e vinte e três. O mesmo número, duas vezes."
+REV30,Edelzio,REV30_t01.ext,fala_888d0b91f66f2696,fala_888d0b91f66f2696.wav,"Proposta, revisar e ligar à cena antes de usar",Vou comparar o mapa com os registros antes de escolher o caminho.
+REV31,Edelzio,REV31_t01.ext,fala_0ef36ffd87edfc33,fala_0ef36ffd87edfc33.wav,"Proposta, revisar e ligar à cena antes de usar",A árvore do desenho... É aqui.
+REV32,Edelzio,REV32_t01.ext,fala_90689650e29c5b35,fala_90689650e29c5b35.wav,"Proposta, revisar e ligar à cena antes de usar",Tem alguma coisa atrás de mim.
+REV33,Edelzio,REV33_t01.ext,fala_aeb22dca140d175a,fala_aeb22dca140d175a.wav,"Proposta, revisar e ligar à cena antes de usar",O senhor sabe quem eu sou?
+REV34,Edelzio,REV34_t01.ext,fala_25b9e4f109d90228,fala_25b9e4f109d90228.wav,"Proposta, revisar e ligar à cena antes de usar",Então me mostre. Eu preciso ver o que está escrito.
+REV35,Edelzio,REV35_t01.ext,fala_4429aa0fef1dd70b,fala_4429aa0fef1dd70b.wav,"Proposta, revisar e ligar à cena antes de usar",Meu nome... Aqui? Desde 1996?
+REV36,Edelzio,REV36_t01.ext,fala_1e5b0598491ec16e,fala_1e5b0598491ec16e.wav,"Proposta, revisar e ligar à cena antes de usar",Eu quero entender. Comece pelo que o senhor sabe de verdade.
+REV37,Edelzio,REV37_t01.ext,fala_71b2d8122ac03b4d,fala_71b2d8122ac03b4d.wav,"Proposta, revisar e ligar à cena antes de usar","Se o senhor sabia disso, por que nunca me contou?"
+REV38,Edelzio,REV38_t01.ext,fala_5c35d8d1a580a3be,fala_5c35d8d1a580a3be.wav,"Proposta, revisar e ligar à cena antes de usar","O rádio falhou, o painel disparou e a ignição esquentou. Depois o motor voltou sozinho."
+REV39,Edelzio,REV39_t01.ext,fala_1a855d8fb1720d37,fala_1a855d8fb1720d37.wav,"Proposta, revisar e ligar à cena antes de usar",O que esse brilho está mostrando?
+REV40,Edelzio,REV40_t01.ext,fala_49caeab543766109,fala_49caeab543766109.wav,"Proposta, revisar e ligar à cena antes de usar",As marcas do carro aparecem nos registros da trilha.
+REV41,Edelzio,REV41_t01.ext,fala_13d27e111dc9af50,fala_13d27e111dc9af50.wav,"Proposta, revisar e ligar à cena antes de usar",Não foi isso que a gente viu antes.
+REV42,Edelzio,REV42_t01.ext,fala_385147812be2ad7b,fala_385147812be2ad7b.wav,"Proposta, revisar e ligar à cena antes de usar","Se mudaram o acesso no arquivo, eu vou conferir no lugar."
+REV43,Edelzio,REV43_t01.ext,fala_61cb565453c3f8df,fala_61cb565453c3f8df.wav,"Proposta, revisar e ligar à cena antes de usar",Mil oitocentos e noventa e oito. Isso começou muito antes daquela noite.
+REV44,Edelzio,REV44_t01.ext,fala_a3675b5e444fd1f5,fala_a3675b5e444fd1f5.wav,"Proposta, revisar e ligar à cena antes de usar",Você sabia disso?
+REV45,Edelzio,REV45_t01.ext,fala_b290e8a3ff9db069,fala_b290e8a3ff9db069.wav,"Proposta, revisar e ligar à cena antes de usar",Eu vou ler. E depois o senhor vai me explicar por que escondeu.
+REV46,Edelzio criança,REV46_t01.ext,fala_a41551310fae4b60,fala_a41551310fae4b60.wav,"Proposta, revisar e ligar à cena antes de usar",Você está machucada?
+REV47,Edelzio,REV47_t01.ext,fala_53bc5f651d87ccbd,fala_53bc5f651d87ccbd.wav,"Proposta, revisar e ligar à cena antes de usar",Ela recuou... Não foi assim que eu lembrava.
+REV48,Edelzio,REV48_t01.ext,fala_0b55b7a653ea74c4,fala_0b55b7a653ea74c4.wav,"Proposta, revisar e ligar à cena antes de usar",Isso aqui já não parece uma construção.
+REV49,Edelzio,REV49_t01.ext,fala_d1963b41b7df241f,fala_d1963b41b7df241f.wav,"Proposta, revisar e ligar à cena antes de usar",Você está tentando voltar.
+REV50,Edelzio,REV50_t01.ext,fala_cd900fa26c834c8a,fala_cd900fa26c834c8a.wav,"Proposta, revisar e ligar à cena antes de usar",A gente está olhando para uma prisão.
+REV51,Edelzio criança,REV51_t01.ext,fala_ddfaa9581fd68854,fala_ddfaa9581fd68854.wav,"Proposta, revisar e ligar à cena antes de usar","Se eu ajudar, você consegue voltar pra casa?"
+REV52,Edelzio criança,REV52_t01.ext,fala_32cfde34ddeb14d1,fala_32cfde34ddeb14d1.wav,"Proposta, revisar e ligar à cena antes de usar","Eu seguro... mas só até você passar, tá?"
+REV53,Edelzio,REV53_t01.ext,fala_8af2c7578623352f,fala_8af2c7578623352f.wav,"Proposta, revisar e ligar à cena antes de usar",Eu aceitei ajudar. Não aceitei ficar preso para sempre.
+REV54,Edelzio,REV54_t01.ext,fala_0c57cde468492330,fala_0c57cde468492330.wav,"Proposta, revisar e ligar à cena antes de usar",Segurem a manifestação. Eu vou estabilizar a passagem!
+REV55,Edelzio,REV55_t01.ext,fala_c4b058b1c24b2397,fala_c4b058b1c24b2397.wav,"Proposta, revisar e ligar à cena antes de usar",Pode ir. Eu seguro até você passar.
+REV56,Edelzio,REV56_t01.ext,fala_21d7dac0591eefec,fala_21d7dac0591eefec.wav,"Proposta, revisar e ligar à cena antes de usar",O acordo termina aqui.
+REV57,Edelzio,REV57_t01.ext,fala_078fbd5f732b36bc,fala_078fbd5f732b36bc.wav,"Proposta, revisar e ligar à cena antes de usar",Eu sei o que vi. E agora sei por que voltei.

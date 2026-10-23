@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-23 15:54:59Z" end-time="2026-10-23 15:55:00Z" duration="0,7143686">
+  <test-suite type="TestSuite" id="1354" name="Varginha_Master_QA_20261023" fullname="Varginha_Master_QA_20261023" runstate="Runnable" testcasecount="299" result="Failed" site="Child" start-time="2026-10-23 15:54:59Z" end-time="2026-10-23 15:55:00Z" duration="0.714369" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1701" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="299" result="Failed" site="Child" start-time="2026-10-23 15:54:59Z" end-time="2026-10-23 15:55:00Z" duration="0.683856" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="16404" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1702" name="Game" fullname="Game" runstate="Runnable" testcasecount="299" result="Failed" site="Child" start-time="2026-10-23 15:54:59Z" end-time="2026-10-23 15:55:00Z" duration="0.677802" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1703" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="299" result="Failed" site="Child" start-time="2026-10-23 15:54:59Z" end-time="2026-10-23 15:55:00Z" duration="0.660890" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1704" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="299" result="Failed" site="Child" start-time="2026-10-23 15:54:59Z" end-time="2026-10-23 15:55:00Z" duration="0.644314" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1602" name="VarginhaCombatTests" fullname="Game.Tests.PlayMode.VarginhaCombatTests" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" testcasecount="13" result="Failed" site="Child" start-time="2026-10-23 15:54:59Z" end-time="2026-10-23 15:55:00Z" duration="0.631238" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1609" name="CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch" fullname="Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch" methodname="CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="304238386" result="Failed" start-time="2026-10-23 15:54:59Z" end-time="2026-10-23 15:55:00Z" duration="0.603098" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="15000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  The renderer follows this punch's phase, not the first punch's clock.
+  String lengths are both 17. Strings differ at index 16.
+  Expected: "Team_V4_Punch_2_1"
+  But was:  "Team_V4_Punch_2_0"
+  ---------------------------^
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaCombatTests+<CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch>d__10.MoveNext () [0x0013c] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\VarginhaCombatTests.cs:173
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch
+QA test: Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch
+QA result: Failed Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Master_QA_20261023\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Master_QA_20261023\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

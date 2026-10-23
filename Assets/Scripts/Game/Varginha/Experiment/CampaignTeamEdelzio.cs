@@ -78,7 +78,12 @@ namespace Game.Varginha.Experiment
             if(punching)
             {
                 float elapsed=Time.time-_punchStarted;
-                int punchFrame=elapsed<.10f?0:elapsed<.18f?1:elapsed<.23f?2:3;
+                // The visible campaign sheet has four authored poses. Follow the
+                // attack's actual phase, including every buffered follow-up; one
+                // wall clock across the whole combo used to stick on its last pose.
+                int punchFrame=_actions.CombatFrame>=0?_actions.CombatFrame switch
+                    {0=>0,1 or 2=>1,3=>2,4=>3,_=>0}
+                    :elapsed<.10f?0:elapsed<.18f?1:elapsed<.23f?2:3;
                 pose=StoryFrame("Punch",direction,punchFrame+(equipped?4:0));
             }
             else if(acting && interaction=="Edelzio_WashFace")
@@ -104,6 +109,8 @@ namespace Game.Varginha.Experiment
             }
             if(pose!=null)
             {
+                if(_actions!=null&&_actions.IsSeated&&face.y>.5f&&GetComponent<CampaignSeatingLayers>()?.IsOfficeSeat==true)
+                    pose=CampaignSeatingLayers.OfficeTorso(pose);
                 _renderer.sprite=pose;
                 _renderer.color=Color.white;_renderer.flipX=false;
                 _renderer.GetPropertyBlock(_equipment);

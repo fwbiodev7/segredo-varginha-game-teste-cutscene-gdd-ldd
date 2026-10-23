@@ -7,7 +7,8 @@ const {chromium}=require('playwright');const sharp=require('sharp');
 const out=path.join(process.cwd(),'output/daily-sprint-2026-10-20');
 const browser=await chromium.launch({headless:true,channel:'chrome'});
 const page=await browser.newPage({viewport:{width:1280,height:720},deviceScaleFactor:1});
-await page.goto(pathToFileURL('C:/Users/Usuario/Downloads/A Sprint Final.html').href);
+// Comparar com a daily de 22/10 preservada antes desta revisão.
+await page.goto(pathToFileURL(path.join(out,'.build/before-2026-10-23/A_Sprint_Final_Varginha.html')).href);
 await page.waitForTimeout(500);
 const refs=await page.locator('.slide').count();
 await fs.mkdir(path.join(out,'.build/reference'),{recursive:true});
@@ -19,11 +20,29 @@ const errors=[];page.on('pageerror',e=>errors.push(e.message));
 await page.goto(pathToFileURL(path.join(out,'A_Sprint_Final_Varginha.html')).href);
 await page.evaluate(()=>document.fonts.ready);
 const report={slides:await page.locator('.slide').count(),referenceSlides:refs,font:await page.evaluate(()=>document.fonts.check('24px Pixel')),images:await page.locator('img').evaluateAll(a=>a.every(i=>i.complete&&i.naturalWidth>0)),errors,overflow:[]};
+const renderedText=await page.locator('#stage').textContent();
+const slideSource=JSON.parse(await fs.readFile(path.join(out,'conteudo-2026-10-23.json'),'utf8'));
+const renderedNotes=await page.evaluate(()=>notes);
+report.content={
+ dailyDate:await page.locator('.slide').first().locator('.tag').innerText()==='DAILY 23/10/2026',
+ expectedSlides:report.slides===10&&report.slides===refs,
+ correctTitle:(await page.title()).includes('23/10/2026'),
+ noStaleTomorrow:!renderedText.includes('amanhã')&&!renderedNotes.some(n=>n.includes('amanhã')),
+ deliveredVersion:renderedText.includes('0.4.7-beta'),
+ localChangesSeparated:renderedText.includes('ALTERAÇÕES LOCAIS POSTERIORES AO COMMIT')&&renderedText.includes('Inclusão desses ajustes na build entregue ainda não comprovada'),
+ historicalTests:renderedText.includes('EVIDÊNCIAS DE 22/10')&&['398/398','12/12','3/3'].every(s=>renderedText.includes(s))&&!renderedText.includes('399/399'),
+ pendingDubbing:renderedText.includes('Prevista para hoje')&&renderedText.includes('Gravação e playtest externo ainda sem confirmação'),
+ notesMatch:renderedNotes.length===slideSource.length&&renderedNotes.every((n,i)=>n===slideSource[i].notes),
+ preservedEffects:await page.evaluate(()=>window.deck.effectNames.length===9)
+};
+report.clipping=[];
 const thumbs=[];
 for(let i=0;i<report.slides;i++){
  await page.evaluate(i=>window.deck.show(i,{animate:false}),i);
  const overflow=await page.locator('.slide.on').evaluate(s=>[...s.querySelectorAll('h1,h2,h3,p,table,figure')].filter(e=>{const r=e.getBoundingClientRect();return r.bottom>690||r.right>1240||r.left<0}).map(e=>({tag:e.tagName,text:e.textContent.slice(0,80),bounds:e.getBoundingClientRect().toJSON()})));
  if(overflow.length)report.overflow.push({slide:i+1,elements:overflow});
+ const clipped=await page.locator('.slide.on').evaluate(s=>[...s.querySelectorAll('h1,h2,h3,p,td,th,figcaption')].filter(e=>e.scrollWidth>e.clientWidth+1||e.scrollHeight>e.clientHeight+1).map(e=>({tag:e.tagName,text:e.textContent.slice(0,100),width:[e.clientWidth,e.scrollWidth],height:[e.clientHeight,e.scrollHeight]})));
+ if(clipped.length)report.clipping.push({slide:i+1,elements:clipped});
  const p=path.join(out,`.build/slide-${String(i+1).padStart(2,'0')}.png`);await page.screenshot({path:p});
  thumbs.push(await sharp(p).resize(384,216).png().toBuffer());
 }
@@ -66,6 +85,8 @@ report.failures=[];
 for(const key of ['font','images','keyboard','notes','escape','endBoundary','effectsOff','homeBoundary','reducedMotion','allTransitions'])if(report[key]!==true)report.failures.push(key);
 if(report.overflow.length)report.failures.push('overflow');
 if(errors.length)report.failures.push('javascript_errors');
+for(const [key,passed]of Object.entries(report.content))if(!passed)report.failures.push('content_'+key);
+if(report.clipping.length)report.failures.push('clipping');
 if(report.rapidNavigation.index!==Math.max(0,Math.min(10,report.slides-1)-5)||report.rapidNavigation.active!==1||report.rapidNavigation.leaving!==0||report.rapidNavigation.hidden!==report.slides-1)report.failures.push('rapid_navigation');
 if(report.printSlides!==report.slides)report.failures.push('print_slides');
 report.success=report.failures.length===0;

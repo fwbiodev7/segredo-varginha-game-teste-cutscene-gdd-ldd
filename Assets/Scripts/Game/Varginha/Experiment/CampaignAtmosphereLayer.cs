@@ -8,7 +8,12 @@ namespace Game.Varginha.Experiment
         private SpriteRenderer _light;
         private Color _baseColor;
         private float _time, _paranormal;
-        public void Configure(SpriteRenderer light) { _light = light; _baseColor = light.color; }
+        public void Configure(SpriteRenderer light)
+        {
+            if(_light==light)return;
+            if(_light!=null)_light.color=_baseColor;
+            _light=light;_baseColor=light.color;_paranormal=0;
+        }
         public static void Interference(Transform root)
         {
             CampaignAtmosphereDirector.Interference();
@@ -25,6 +30,6 @@ namespace Game.Varginha.Experiment
             var color = Color.Lerp(_baseColor, new Color(.48f, .77f, .85f, _baseColor.a), _paranormal * .18f);
             color.a = _baseColor.a * breath; _light.color = color;
         }
-        private void OnDisable() { if (_light != null) _light.color = _baseColor; }
+        private void OnDisable() { _paranormal=0;if (_light != null) _light.color = _baseColor; }
     }
 }

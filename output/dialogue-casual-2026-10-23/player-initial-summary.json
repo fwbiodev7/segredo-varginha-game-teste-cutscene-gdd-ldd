@@ -1,0 +1,18 @@
+{
+  "source": "output\\dialogue-casual-2026-10-23\\player-initial-native.xml",
+  "runResult": "Failed",
+  "tests": {
+    "total": 3,
+    "passed": 2,
+    "failed": 1,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign",
+      "message": "  The key must render on top of the counter, not behind the furniture.\n  Expected: greater than 12633\n  But was:  12324\n",
+      "stack": "at Game.Tests.PlayMode.CampaignChaptersTests+<PrepareAdultHouse>d__13.MoveNext () [0x00353] in C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Tests\\PlayMode\\CampaignChaptersTests.cs:196\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    }
+  ],
+  "success": false
+}

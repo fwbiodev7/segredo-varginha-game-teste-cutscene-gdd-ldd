@@ -98,3 +98,14 @@ Desktop.ini
 /output/school-desk-2026-10-22/*.log
 /output/school-desk-2026-10-22/art/preview/
 !/output/house-interactions-2026-10-22/captures/wheel-layers-detail.png
+
+# Local master-review evidence: keep checkpoints, sources and XML; omit bulk logs/frames.
+/output/revisao-mestre-2026-10-23/*.log
+/output/revisao-mestre-2026-10-23/**/film/
+/output/revisao-mestre-2026-10-23/**/opening-film/
+/output/revisao-mestre-2026-10-23/captures/
+/output/revisao-mestre-2026-10-23/atmosphere-review/*.png
+/output/revisao-mestre-2026-10-23/office/*.png
+/output/relatorio-resumido-abnt-2026-10-23/render/
+/output/dialogue-casual-2026-10-23/*.log
+/output/dialogue-casual-2026-10-23/captures/

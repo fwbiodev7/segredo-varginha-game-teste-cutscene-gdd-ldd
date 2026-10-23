@@ -1,0 +1,27 @@
+{
+  "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\IllustratedMaps\\IndustrialLibrary.png",
+  "source_sha256": "dda56c2cbfb26054282189f01e45e76929adfd2a349db28741b66093de6c3271",
+  "generated_source_sha256": "cb0a455e4f21138d6e984f71cda8a12ee399b1f0ba94e1573670e396d2225c72",
+  "native_globe": [
+    40,
+    56
+  ],
+  "plate": [
+    44,
+    64
+  ],
+  "source_rectangle": [
+    874,
+    126,
+    44,
+    64
+  ],
+  "PPU": 50,
+  "pivot_top_origin": [
+    22,
+    64
+  ],
+  "changed_pixels": 1502,
+  "outside_plate_changed": 0,
+  "artwork": "New isolated globe generated; exact original background retained outside the replacement plate; neighbouring authored wood reused only below the sphere."
+}

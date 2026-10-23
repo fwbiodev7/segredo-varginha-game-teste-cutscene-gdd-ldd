@@ -154,6 +154,7 @@ namespace Game.Varginha.Experiment
         {
             if (CampaignCinematics.IsTransitioning) return;
             if (!_ready) return;
+            if(_houseExitGate!=null)_houseExitGate.enabled=!_progress.CanLeaveHouse;
             if (VarginhaGameHUD.Instance?.IsInventoryOpen == true) return;
             if(_paused&&_settings&&VarginhaInputActions.CancelPressed&&!VarginhaInputActions.PausePressed){_settings=false;return;}
             if ((VarginhaInputActions.PausePressed || VarginhaInputActions.CancelPressed && (_paused || _dialogue!=null || _view!=View.World)))
@@ -180,6 +181,12 @@ namespace Game.Varginha.Experiment
             if (_view == View.Cutscene)
             { _cutTime += Time.unscaledDeltaTime; if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)) { if (!_cutIsSpeech || _textMessage.Advance()) FinishCutscene(); } return; }
             if (IsBlocked) return;
+            if(phase==2&&_progress.house.KeyOnCounter&&!_progress.house.bagReminder)
+            {
+                var exit=_points.Find(p=>p.id=="exitclue");
+                if(exit!=null&&Vector2.Distance(_player.transform.position,exit.Position)<1.1f)
+                {HandleKeyInteraction("exitclue");return;}
+            }
             CampaignHud.For(phase).Tick(Time.unscaledDeltaTime,true,CampaignGuidance.Next(_progress,phase));
             if (Keyboard.current?.f1Key.wasPressedThisFrame == true) { OpenHints(); return; }
             if (VarginhaInputActions.InventoryPressed) { OpenBackpack(); return; }
@@ -226,7 +233,7 @@ namespace Game.Varginha.Experiment
                     StartCoroutine(RoutineAction("bag")); break;
                 case "box":
 
-                    if (_progress.pagesSolved) { Say("Edelzio", "Guardei a chave, o caderno e o primeiro fragmento de mapa. A mensagem continua ali: ELA AINDA ESTÁ AQUI."); break; }
+                    if (_progress.pagesSolved) { Say("Edelzio", "Pronto, guardei tudo. Mas essa frase... Ela ainda está aqui."); break; }
                     if (!_progress.boxFound)
                     {
                         _progress.boxFound = true;
@@ -237,7 +244,7 @@ namespace Game.Varginha.Experiment
                     break;
                 case "car":
                     if (_progress.CanLeaveHouse) DepartForSchool();
-                    else Say("Edelzio", "Investigue a caixa sob a cama e organize as páginas para encontrar a chave.");
+                    else Say("Edelzio", "Antes de sair, preciso olhar a caixa e juntar essas páginas.");
                     break;
             }
         }
@@ -257,10 +264,10 @@ namespace Game.Varginha.Experiment
             }
             else if(id=="notebook")
             {
-                if(!_progress.renanMet){Say("Edelzio","Vou conversar com Renan antes de usar o notebook dele.");return;}
+                if(!_progress.renanMet){Say("Edelzio","Deixa eu falar com o Renan antes de mexer no notebook dele.");return;}
                 if(!_progress.buildingSolved){_progress.photoOpened=true;Show(View.Photo);}
 
-                else if(_progress.codeSolved)Say("Edelzio","23:23. Vou mostrar essa descoberta a Renan.");
+                else if(_progress.codeSolved)Say("Edelzio","É esse o horário... O Renan precisa ver isso.");
                 else{_progress.timeOpened=true;Show(View.Code);}
             }
         }
@@ -284,7 +291,7 @@ namespace Game.Varginha.Experiment
             }
             else if (id == "food" && action != null)
             {
-                bool finished = false; action.PlayDrinkCoffee(GameObject.Find("Coffee_Cup")?.transform, () => { finished = true; _player.RestoreOneHeart(); _sound.Play("CoffeeDrink"); });
+                bool finished = false; action.PlayDrinkCoffee(GameObject.Find("Coffee_Cup")?.transform, () => { finished = true; _player.RestoreOneHeart(); });
                 float time = 0; while (!finished && time < 5) { time += Time.deltaTime; yield return null; }
                 if(finished)_progress.routine |= 2;
             }
@@ -294,9 +301,9 @@ namespace Game.Varginha.Experiment
                 action.PlayNotebookSession(GameObject.Find("Notebook_TI")?.transform, () => { finished = true; _sound.Play("Typing"); });
                 float time = 0; while (action.IsActing && time < 5) { time += Time.deltaTime; yield return null; }
                 if (finished && action.isActiveAndEnabled && !action.IsActing) _progress.routine |= 4;
-                else { _busy = false; VarginhaGameHUD.Instance?.CloseDialogue(); Say("Edelzio", "Vou chegar pelo lado livre da cadeira para preparar o notebook."); yield break; }
+                else { _busy = false; VarginhaGameHUD.Instance?.CloseDialogue(); Say("Edelzio", "Vou dar a volta pra chegar no notebook."); yield break; }
             }
-            else { bool finished=action==null;if(action!=null)yield return action.WashFaceRoutine(()=>{finished=true;_sound.Play("FaceWash");});if(finished)_progress.routine|=1; }
+            else { bool finished=action==null;if(action!=null)yield return action.WashFaceRoutine(()=>{finished=true;});if(finished)_progress.routine|=1; }
             if((_progress.routine&routineBit)==0)
             {
                 _busy=false;RestoreInventory();Save();CampaignPickupNotice.Show("Ação interrompida. Pode tentar novamente.");Lock();yield break;
@@ -377,8 +384,7 @@ namespace Game.Varginha.Experiment
             if (VarginhaGameHUD.Instance?.IsInventoryOpen == true) return;
             ExperimentGUI.Init(); GUI.depth = -3100;
             if(_titleTime<3){CampaignChapterPreview.Draw(phase,_titleTime);return;}
-            if(_view==View.Complete)CampaignChapterPreview.Background(phase==4?5:6);
-            else if(_view==View.Cutscene && phase!=2)CampaignChapterPreview.Background(phase,_cutTime);
+            if(_view==View.Cutscene && phase!=2)CampaignChapterPreview.Background(phase,_cutTime);
             var matrix = ExperimentGUI.BeginCanvas();
             if (_cinematicShot != null) { DrawMissionCinema(); DrawMissionPause(matrix); GUI.matrix = matrix; return; }
             if (_view == View.Cutscene) DrawCutscene();
@@ -537,15 +543,18 @@ namespace Game.Varginha.Experiment
         }
         private void DrawComplete()
         {
-            ExperimentGUI.Panel(new Rect(180,130,930,510));
-            ExperimentGUI.Label(new Rect(220, 165, 895, 55), "FASE " + CampaignSequence.Chapter(phase) + " CONCLUÍDA", true);
-            ExperimentGUI.Label(new Rect(220, 270, 870, 155), "Renan confirmou o horário. A ampliação revelou outro fragmento. Leve a fotografia aos registros da cidade.\n\nPróxima fase: Fragmentos.");
-            if (phase >= 4 && ExperimentGUI.Button(new Rect(370, 490, 540, 55), "CONTINUAR • FASE 4 • FRAGMENTOS")) CampaignStorySave.GoTo(6);
-            if (ExperimentGUI.Button(new Rect(370, 570, 540, 45), "SALVAR E VOLTAR AO MENU")) Menu();
+            if(ExperimentGUI.ContinueChapterButton())ContinueChapter();
+        }
+        private bool _chapterAdvancing;
+        public bool ContinueChapter()
+        {
+            if(_progress==null||_chapterAdvancing||_paused||_view!=View.Complete||!_progress.renanConfirmed||CampaignCinematics.IsTransitioning)return false;
+            _chapterAdvancing=true;Save();CampaignStorySave.GoTo(6);return true;
         }
         public void Save()
         {
             if (_progress == null || _player == null) return;
+            if(_houseExitGate!=null)_houseExitGate.enabled=!_progress.CanLeaveHouse;
             _progress.positionPhase = phase; _progress.x = _player.transform.position.x; _progress.y = _player.transform.position.y; CampaignStorySave.Write(_progress);
         }
         private void Menu() { Save(); Time.timeScale = 1; CampaignCinematics.Load("Menu_MisterioDeVarginha"); }

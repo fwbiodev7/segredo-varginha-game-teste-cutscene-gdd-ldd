@@ -26,7 +26,10 @@ namespace Game.Varginha.Experiment
             _surface=environment=="Forest"?"FootNature":_school?"FootTile":"FootWood";
             _effects = gameObject.AddComponent<AudioSource>(); _effects.playOnAwake = false; _effects.volume = .48f;
             _ambient = CampaignAmbientBridge.Instance;
-            _ambient.Suspend(false); _ambient.Duck(0); _ambient.Transition(Clip(environment + "Ambience"));
+            _ambient.Suspend(false); _ambient.Duck(0);
+            // Recorded beds take precedence over the procedural fallback. The explicit
+            // resolver also keeps the laboratory bed alive through scene transitions.
+            _ambient.Transition(CampaignRecordedAudio.Ambient(environment, 0) ?? Clip(environment + "Ambience"));
             if (_actor != null) _previous = _actor.transform.position;
             if (environment == "Road")
             {

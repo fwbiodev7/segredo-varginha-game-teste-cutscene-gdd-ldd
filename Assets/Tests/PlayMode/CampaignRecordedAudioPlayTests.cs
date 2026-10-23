@@ -46,6 +46,18 @@ namespace Game.Tests.PlayMode
             Assert.That(cyber.QuadCount,Is.EqualTo(64+24*6));Assert.That(cyber.QuadCount,Is.LessThanOrEqualTo(CampaignCyberPulse.MaxQuads));
             Object.Destroy(go);Object.Destroy(target);yield return null;
         }
+        [UnityTest,Timeout(60000)] public IEnumerator ChurchBedUsesReceivedClipAndFadesOutOnReturnToMenu()
+        {
+            var story=new CampaignStory{phase=8};story.expansion.visited=7;story.expansion.mapSolved=true;
+            story.expansion.forestSigns=3;story.expansion.fabioMet=true;CampaignStorySave.Write(story);
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(8));yield return new WaitForSecondsRealtime(3.3f);
+            var bridge=Object.FindAnyObjectByType<CampaignAmbientBridge>();Assert.That(bridge,Is.Not.Null);
+            var clip=CampaignRecordedAudio.Clip("ChurchAmbience");
+            var channel=bridge.GetComponents<AudioSource>().Single(s=>s.clip==clip);
+            Assert.That(channel.loop,Is.True);Assert.That(channel.isPlaying,Is.True);
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");yield return new WaitForSecondsRealtime(1);
+            Assert.That(bridge.GetComponents<AudioSource>().Any(s=>s.clip==clip&&s.isPlaying),Is.False);
+        }
         [UnityTest] public IEnumerator ShieldSoundFollowsPauseEffectsSliderAndLifetime()
         {
             var go=new GameObject("Audio_QA");var sound=go.AddComponent<CampaignSoundscape>();

@@ -1,0 +1,6 @@
+{
+  "entries": [
+    { "id": "MenuMusic", "path": "Varginha/Audio/Received20261023/MenuMusic", "gain": 1, "loop": true, "source": "musicamenuinicialslowed.mp3" },
+    { "id": "ChurchAmbience", "path": "Varginha/Audio/Received20261023/ChurchAmbience", "gain": 1, "loop": true, "source": "igrejamedo.mp3" }
+  ]
+}

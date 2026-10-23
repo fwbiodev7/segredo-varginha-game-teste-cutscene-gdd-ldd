@@ -218,7 +218,7 @@ namespace Game.Varginha.Experiment
             {
                 if (id == "index") { State.anchorClues |= 1; Say("Índice do Tombo: o registro de Edelzio pertence a 1996. O documento de 1898 é anterior e não substitui essa data."); }
                 else if (id == "symbol") { State.anchorClues |= 2; Say("A inscrição do compartimento traz o símbolo ÂNCORA."); }
-                else if (id == "record") { State.anchorClues |= 4; Say("Ficha de Edelzio: registro 23. Relacione ano, símbolo e número."); }
+                else if (id == "record") { State.anchorClues |= 4; Say("Ficha de Edelzio: registro 23. Reorganize a página do Tombo e relacione cada campo à sua fonte."); }
                 else if (id == "anchor") Open("anchor");
                 else if (id == "trust") { if (State.anchorFound) Open("trust"); else Speak("Padre Fábio","confira os arquivos antes de me cobrar uma resposta."); }
             }
@@ -287,8 +287,7 @@ namespace Game.Varginha.Experiment
             float movement = (Keyboard.current?.dKey.isPressed == true || Keyboard.current?.rightArrowKey.isPressed == true ? 1 : 0)
                 - (Keyboard.current?.aKey.isPressed == true || Keyboard.current?.leftArrowKey.isPressed == true ? 1 : 0);
             if(VarginhaInputActions.Move.sqrMagnitude>0)movement=VarginhaInputActions.Move.x;
-            _vehicle.SetPosition(new Vector2(Mathf.Clamp(car.position.x + movement * Time.deltaTime * 4,-8,8),-4.5f));
-            if(movement!=0)_vehicle.SetFacing(movement<0?CampaignWorkshopVehicle.Facing.West:CampaignWorkshopVehicle.Facing.East);
+            _vehicle.SetTrackControls(movement);
             if (car.position.x < 7.5f) return;
             // Keep the parked collider off the exit where Edelzio leaves the vehicle.
             _vehicle.SetPosition(new Vector2(7.5f,-4.5f));_vehicle.FinishTrack();
@@ -334,13 +333,13 @@ namespace Game.Varginha.Experiment
         }
         public bool SubmitPuzzle()
         {
-            bool result = _panel == "map" ? State.SolveMap() : _panel == "anchor" ? State.SolveAnchor(_year,_symbol,_record)
+            bool result = _panel == "map" ? State.SolveMap() : _panel == "anchor" ? CampaignBookPuzzle.Submit(State)
                 : _panel == "samples" ? State.SolveSamples() : _panel == "seal" && State.Stabilize();
             if (result) { if(phase==9)CampaignPickupNotice.Show("Reagente recebido: seis cargas. Leituras no caderno."); _panel = null; _sound.Play("Success"); Say(phase == 6 ? "As coordenadas revelam a entrada da mata. Destino registrado."
                 : phase == 8 ? "SELO DA ENTIDADE: EDELZIO / CONTENÇÃO: ESTÁVEL. Você é o selo que mantém a entidade contida desde 1996."
                 : phase == 9 ? "A reação contradiz as leituras normais. Ouzana aceita ajudar e entrega o reagente."
                 : "As marcas reproduzem o trajeto árvore, rio e capela. As marcas estão registradas; o Fusca pode partir."); }
-            else if(_panel!="map")Say("A combinação não corresponde às pistas. Confira os registros e tente novamente; nenhuma pista foi perdida.");
+            else if(_panel!="map"&&_panel!="anchor")Say("A combinação não corresponde às pistas. Confira os registros e tente novamente; nenhuma pista foi perdida.");
             Save(); return result;
         }
         public void Save()
@@ -386,7 +385,8 @@ namespace Game.Varginha.Experiment
             }
             else if (_parking)
             {
-                ExperimentGUI.ContextPrompt(_vehicle.CanPark?"["+VarginhaInputActions.CarLabel+"] ESTACIONAR E SAIR":null,VarginhaInputActions.MoveLabel+" • CONDUZIR    "+VarginhaInputActions.CarLabel+" • ESTACIONAR",CampaignHud.For(phase));
+                ExperimentGUI.ContextPrompt(_vehicle.CanPark?"["+VarginhaInputActions.CarLabel+"] ESTACIONAR E SAIR":null,
+                    VarginhaInputActions.UsingGamepad?"ANALÓGICO • ACELERAR / RÉ E VOLANTE":"W/S • ACELERAR / FREAR / RÉ    A/D • VOLANTE    W • ESTACIONAR",CampaignHud.For(phase));
             }
             else if (_driving) ExperimentGUI.ContextPrompt(null,VarginhaInputActions.MoveLabel+" • CONDUZIR    "+VarginhaInputActions.PauseLabel+" • PAUSA",CampaignHud.For(phase));
             else
@@ -422,13 +422,15 @@ namespace Game.Varginha.Experiment
         }
         private void DrawPanel()
         {
-            ExperimentGUI.Box(new Rect(0,115,1280,605),new Color(0,0,0,.8f)); ExperimentGUI.Panel(new Rect(125,145,1030,480));
+            if(_panel=="complete"&&phase!=10)
+            {if(ExperimentGUI.ContinueChapterButton())ContinueChapter();return;}
+            ExperimentGUI.Box(new Rect(0,115,1280,605),new Color(0,0,0,.8f)); ExperimentGUI.Panel(new Rect(125,145,1030,_panel=="anchor"?530:480));
             if (_panel == "complete")
             {
                 ExperimentGUI.Label(new Rect(165,175,950,55),phase==9?"ANÁLISE CONCLUÍDA • IR À OFICINA":"FASE " + CampaignSequence.Chapter(phase) + " CONCLUÍDA",true);
                 ExperimentGUI.Label(new Rect(165,250,950,155),phase == 10 ? "O rádio recebe uma ligação. Renan: Edelzio, preciso que você volte. A imagem está diferente da que imprimimos. A cópia em papel conservou o detalhe anterior."
                     : "Pistas e progresso salvos. Próxima etapa: " + CampaignSequence.Title(CampaignSequence.Next(phase)) + ".");
-                if (phase==10 ? VarginhaGamepadUI.CarButton(new Rect(365,465,550,50),CampaignSequence.ContinueLabel(phase)) : ExperimentGUI.Button(new Rect(365,465,550,50),CampaignSequence.ContinueLabel(phase))) { Save(); CampaignStorySave.GoTo(CampaignSequence.Next(phase)); }
+                if (phase==10 ? VarginhaGamepadUI.CarButton(new Rect(365,465,550,50),CampaignSequence.ContinueLabel(phase)) : ExperimentGUI.Button(new Rect(365,465,550,50),CampaignSequence.ContinueLabel(phase))) ContinueChapter();
                 if (ExperimentGUI.Button(new Rect(365,535,550,45),"SALVAR E VOLTAR AO MENU")) Menu(); return;
             }
             if (_panel == "hints") CampaignHints.Draw(Progress,phase,ref _hintLevel);
@@ -451,14 +453,7 @@ namespace Game.Varginha.Experiment
                 if (ExperimentGUI.Button(new Rect(650,435,455,55),"CONFRONTAR FÁBIO")) { State.trust = -1; ClosePanel(); Save(); }
             }
             else if (_panel == "anchor")
-            {
-                ExperimentGUI.Label(new Rect(165,170,950,45),"LIVRO DO TOMBO",true);
-                ExperimentGUI.Label(new Rect(165,245,950,100),"Combine as três pistas encontradas no arquivo e no subterrâneo. 1898 descreve a contenção anterior; a ficha de Edelzio é de 1996.");
-                if (ExperimentGUI.Button(new Rect(165,365,280,55),"ANO: " + _year)) { _year = _year == 1898 ? 1996 : 1898; Save(); }
-                if (ExperimentGUI.Button(new Rect(475,365,280,55),"SÍMBOLO: " + (_symbol == 0 ? "ÁRVORE" : "ÂNCORA"))) { _symbol = 1-_symbol; Save(); }
-                if (ExperimentGUI.Button(new Rect(785,365,280,55),"REGISTRO: " + _record)) { _record = _record == 1 ? 23 : 1; Save(); }
-                if (ExperimentGUI.Button(new Rect(785,475,280,50),"ABRIR COMPARTIMENTO")) SubmitPuzzle();
-            }
+                CampaignBookPuzzle.Draw(State,ref _bookPiece,ref _bookEvidence,()=>SubmitPuzzle(),Save);
             else if(_panel=="map")
                 CampaignPuzzleDesign.DrawMap(State,ref _selected,()=>SubmitPuzzle(),Save);
             else
@@ -473,9 +468,16 @@ namespace Game.Varginha.Experiment
                 }
                 if (ExperimentGUI.Button(new Rect(785,475,300,50),"CONFIRMAR")) SubmitPuzzle();
             }
-            if (ExperimentGUI.Button(new Rect(165,555,300,45),"VOLTAR À EXPLORAÇÃO")) ClosePanel();
+            if (ExperimentGUI.Button(_panel=="anchor"?new Rect(165,628,300,32):new Rect(165,555,300,45),"VOLTAR À EXPLORAÇÃO")) ClosePanel();
         }
         private void Menu() { Save(); Time.timeScale=1; CampaignCinematics.Load("Menu_MisterioDeVarginha"); }
+        private bool _chapterAdvancing;
+        private int _bookPiece=-1,_bookEvidence=-1;
+        public bool ContinueChapter()
+        {
+            if(Progress==null||_chapterAdvancing||_paused||_panel!="complete"||!State.Complete(phase)||CampaignCinematics.IsTransitioning)return false;
+            _chapterAdvancing=true;Save();CampaignStorySave.GoTo(CampaignSequence.Next(phase));return true;
+        }
         private void OnApplicationPause(bool pause) { if (pause) Save(); }
         private void OnDestroy() { _textMessage.Close(); if (Active == this) Active = null; Time.timeScale = 1; }
     }

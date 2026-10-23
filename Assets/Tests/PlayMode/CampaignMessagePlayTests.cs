@@ -101,9 +101,34 @@ namespace Game.Tests.PlayMode
             Assert.That(stage.Progress.routine&1,Is.Zero);action.enabled=true;
             stage.Interact("wash");yield return WaitAction(stage);Assert.That(stage.Progress.routine&1,Is.EqualTo(1));
         }
+        [UnityTest,Timeout(60000)] public IEnumerator RoutineAudioStartsWithPoseAndStopsOnCancelOrCompletion()
+        {
+            CampaignStorySave.Write(new CampaignStory{phase=2});yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.3f);
+            var stage=VarginhaCampaignStage.Active;var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
+            var action=actor.GetComponent<VarginhaPlayerActionAnimation>();var visual=actor.GetComponent<VarginhaPlayerSpriteAnimation>();
+            var field=typeof(VarginhaPlayerActionAnimation).GetField("_actionAudio",BindingFlags.NonPublic|BindingFlags.Instance);
+            foreach(string id in new[]{"wash","food"})
+            {
+                actor.GetComponent<Rigidbody2D>().position=id=="wash"?CampaignAdultHouse.WashApproach:CampaignIllustratedMaps.Get(2).Objective(id)+Vector2.up*.58f;
+                yield return new WaitForFixedUpdate();stage.Interact(id);
+                float deadline=Time.realtimeSinceStartup+3;AudioSource source=null;
+                do{yield return null;source=(AudioSource)field.GetValue(action);}while((source==null||!source.isPlaying)&&Time.realtimeSinceStartup<deadline);
+                Assert.That(source,Is.Not.Null);Assert.That(source.isPlaying,Is.True);Assert.That(action.IsActing,Is.True);
+                Assert.That(source.clip,Is.SameAs(CampaignRecordedAudio.Clip(id=="wash"?"FaceWash":"CoffeeDrink")));
+                Assert.That(visual.CurrentActionPose,Is.EqualTo(id=="wash"?"Edelzio_WashFace":"Edelzio_DrinkCoffee"));
+                if(id=="food")Assert.That(visual.ActionFrame,Is.EqualTo(2),"Coffee starts when the cup reaches the mouth.");
+                VarginhaGameSettings.Current.effects=0;yield return null;Assert.That(source.volume,Is.Zero);
+                VarginhaGameSettings.Current.effects=_effects;Time.timeScale=0;yield return null;
+                Assert.That(source.isPlaying,Is.False);Assert.That(action.IsActing,Is.True);Time.timeScale=1;yield return null;
+                if(id=="wash")action.enabled=false;
+                yield return WaitAction(stage);Assert.That(source.isPlaying,Is.False,"No tail may survive the animation or cancellation.");
+                if(id=="wash"){Assert.That(stage.Progress.routine&1,Is.Zero);action.enabled=true;}
+                else Assert.That(stage.Progress.routine&2,Is.EqualTo(2));
+            }
+        }
         [UnityTest,Timeout(60000)] public IEnumerator BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue()
         {
-            var story=new CampaignStory{phase=2,routine=7};story.house.step=1;CampaignStorySave.Write(story);
+            var story=new CampaignStory{phase=2,routine=7};story.house.step=1;story.house.bagReminder=true;CampaignStorySave.Write(story);
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.3f);
             var stage=VarginhaCampaignStage.Active;stage.Interact("bag");
             float deadline=Time.realtimeSinceStartup+15;
@@ -114,6 +139,27 @@ namespace Game.Tests.PlayMode
             yield return null;Assert.That(VarginhaCampaignStage.IsModalOpen,Is.False);Assert.That(Object.FindAnyObjectByType<EdelzioTopDownController>().IsInputLocked,Is.False);
             yield return Capture("pickup-small-original-panel");
             yield return new WaitForSeconds(7.3f);Assert.That(notice.CurrentText,Is.Null,"No input required to dismiss a pickup.");
+        }
+        [UnityTest,Timeout(60000)] public IEnumerator DoorBagAndKeyFollowTheRequiredOrderAndReleaseTheExit()
+        {
+            var story=new CampaignStory{phase=2,routine=7};story.house.step=1;CampaignStorySave.Write(story);
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.3f);
+            var stage=VarginhaCampaignStage.Active;var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
+            var gate=stage.transform.Find("Porta_Saida_Condicional").GetComponent<BoxCollider2D>();
+            Assert.That(gate.enabled,Is.True);stage.Interact("bag");Assert.That(stage.IsActing,Is.False);
+            Assert.That(stage.Progress.house.Missing,Is.False);stage.Interact("counter");stage.CloseDialogue();
+            Assert.That(stage.Progress.house.clues,Is.Zero,"Key search cannot begin before pickup.");
+            stage.Interact("exitclue");stage.CloseDialogue();Assert.That(stage.Progress.house.bagReminder,Is.True);
+            Assert.That(CampaignStorySave.Load().house.bagReminder,Is.True);
+            actor.GetComponent<Rigidbody2D>().position=CampaignIllustratedMaps.Get(2).Objective("bag")+Vector2.up*.58f;
+            yield return new WaitForFixedUpdate();stage.Interact("bag");yield return WaitAction(stage);
+            Assert.That(stage.Progress.house.Missing,Is.True);Assert.That(stage.Progress.routine&8,Is.EqualTo(8));
+            Assert.That(stage.transform.Find("Vestigio_Papel_Quarto").childCount,Is.EqualTo(3));
+            foreach(string id in new[]{"counter","exitclue","paperclue"}){stage.Interact(id);stage.CloseDialogue();}
+            Assert.That(stage.SubmitKeyConclusion(1),Is.True);stage.CloseDialogue();stage.Interact("box");yield return WaitAction(stage);
+            Assert.That(stage.Progress.boxFound,Is.True);stage.FinishCutscene();
+            stage.Progress.pages=new[]{0,1,2};Assert.That(stage.SubmitPages(),Is.True);
+            Assert.That(stage.Progress.CanLeaveHouse,Is.True);Assert.That(gate.enabled,Is.False);
         }
         [UnityTest,Timeout(60000)] public IEnumerator RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly()
         {

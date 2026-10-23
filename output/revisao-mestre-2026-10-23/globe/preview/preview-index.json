@@ -1,0 +1,16 @@
+{
+  "clips": [
+    {
+      "clip": "school_globe_static",
+      "file": "clip_000.png",
+      "loop": true,
+      "sequence": [
+        "school_globe_static"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 1000,
+      "overlayPairs": []
+    }
+  ],
+  "visualReviewCompleted": false
+}

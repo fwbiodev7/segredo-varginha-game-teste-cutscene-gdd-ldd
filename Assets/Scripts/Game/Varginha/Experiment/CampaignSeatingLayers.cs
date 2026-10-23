@@ -8,13 +8,26 @@ namespace Game.Varginha.Experiment
     public sealed class CampaignSeatingLayers : MonoBehaviour
     {
         private static readonly Dictionary<string,Sprite> StudentPoses = new();
+        private static readonly Dictionary<Sprite,Sprite> OfficePoses = new();
         private SpriteRenderer _actor, _chair, _back;
         private VarginhaPlayerSpriteAnimation _action;
         private bool _always;
         private bool _chairBehind;
         private string _student;
         public bool IsOfficeSeat => _chair!=null&&_chair.name=="Office_Chair";
+        public Vector3 OfficeSeatPosition=>_chair.bounds.center+Vector3.down*.01f;
         public Collider2D SeatCollider => _chair!=null?_chair.GetComponent<Collider2D>():null;
+        public static Sprite OfficeTorso(Sprite original)
+        {
+            if(original==null)return null;
+            if(OfficePoses.TryGetValue(original,out var pose)&&pose!=null)return pose;
+            var rect=original.rect;float trim=rect.height*.28f;
+            rect.y+=trim;rect.height-=trim;
+            // The seat hides the legs in the rear view. Preserve torso pixels and registration.
+            pose=Sprite.Create(original.texture,rect,new Vector2(original.pivot.x/rect.width,
+                (original.pivot.y-trim)/rect.height),original.pixelsPerUnit,0,SpriteMeshType.FullRect);
+            pose.name=original.name+"_OfficeOccludedLegs";OfficePoses[original]=pose;return pose;
+        }
         public static Sprite StudentPose(string name)
         {
             if (StudentPoses.TryGetValue(name,out var pose) && pose != null) return pose;

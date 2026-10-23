@@ -24,6 +24,7 @@ namespace Game.Varginha.Experiment
             // um ID explicitamente remapeado, mantendo os efeitos aprovados anteriores.
             LoadCatalog("Varginha/Audio/Received20261021/Catalog");
             LoadCatalog("Varginha/Audio/Received20261022/Catalog");
+            LoadCatalog("Varginha/Audio/Received20261023/Catalog");
         }
         public static Entry Definition(string id){Load();return Entries.TryGetValue(id,out var entry)?entry:null;}
         public static IReadOnlyCollection<Entry> Definitions{get{Load();return Entries.Values;}}
@@ -40,7 +41,11 @@ namespace Game.Varginha.Experiment
             int variant=_foot++%3;return variant==0?id:id+(variant+1);
         }
         public static AudioClip Ambient(string environment,int band)
-            =>environment=="Forest"?Clip("ForestAmbience"):environment=="School"&&band==0?Clip("SchoolAmbience"):null;
+            =>environment=="Forest"?Clip("ForestAmbience")
+            :environment=="School"&&band==0?Clip("SchoolAmbience")
+            :environment=="Lab"&&band==0?Clip("LabAmbience")
+            :environment=="Church"?Clip("ChurchAmbience")
+            :null;
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         private static void Clear(){Clips.Clear();Entries.Clear();_loaded=false;_foot=0;}
     }

@@ -1,0 +1,53 @@
+{
+  "schema": "pixel-art-sprite-sheet/v1",
+  "image": "sheet.png",
+  "imageSize": [
+    44,
+    64
+  ],
+  "pixelsPerUnit": 50,
+  "frames": [
+    {
+      "id": "school_globe_static",
+      "rect": [
+        0,
+        0,
+        44,
+        64
+      ],
+      "sourceSize": [
+        44,
+        64
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        22,
+        64
+      ],
+      "durationMs": 1000,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\revisao-mestre-2026-10-23\\globe\\globe-replacement-plate.png",
+        "fileSha256": "76403ea88b5a5040c939bcda2d8009b4aaf3d80cf5eaad62c7c77b7531c22dd8",
+        "crop": null,
+        "offset": [
+          0,
+          0
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    }
+  ],
+  "clips": {
+    "school_globe_static": {
+      "frames": [
+        "school_globe_static"
+      ],
+      "loop": true
+    }
+  }
+}

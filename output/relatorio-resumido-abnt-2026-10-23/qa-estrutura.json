@@ -1,0 +1,164 @@
+{
+  "backend": "Native Microsoft Word PDF; canonical render_docx.py rasterize with task-local conversion adapter; Poppler",
+  "page_count": 12,
+  "pages": [
+    {
+      "page": 1,
+      "words": 25,
+      "first": [
+        "ESCOLA ESTADUAL DEPUTADO DOMINGOS DE FIGUEIREDO",
+        "TURMA DO 3º ANO DE DESENVOLVIMENTO DE SISTEMAS"
+      ],
+      "last": [
+        "Relatório do desenvolvimento do projeto",
+        "VARGINHA, 2026"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 2,
+      "words": 46,
+      "first": [
+        "TURMA DO 3º ANO DE DESENVOLVIMENTO DE SISTEMAS",
+        "O SEGREDO DE VARGINHA"
+      ],
+      "last": [
+        "Professores: Renan e Alex.",
+        "VARGINHA, 2026"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 3,
+      "words": 14,
+      "first": [
+        "LISTA DE ILUSTRAÇÕES",
+        "Figura 1 - Escola Industrial no acervo da remasterização ......................................................... 9"
+      ],
+      "last": [
+        "LISTA DE ILUSTRAÇÕES",
+        "Figura 1 - Escola Industrial no acervo da remasterização ......................................................... 9"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 4,
+      "words": 12,
+      "first": [
+        "LISTA DE TABELAS",
+        "Tabela 1 - Principais marcos do desenvolvimento .................................................................... 7"
+      ],
+      "last": [
+        "LISTA DE TABELAS",
+        "Tabela 1 - Principais marcos do desenvolvimento .................................................................... 7"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 5,
+      "words": 44,
+      "first": [
+        "SUMÁRIO",
+        "1 INTRODUÇÃO .......................................................................................................... 5"
+      ],
+      "last": [
+        "4 RESULTADOS ESPERADOS ............................................................................... 10",
+        "5 REFERÊNCIAS BIBLIOGRÁFICAS ................................................................... 11"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 6,
+      "words": 288,
+      "first": [
+        "5",
+        "1 INTRODUÇÃO"
+      ],
+      "last": [
+        "Deputado Domingos de Figueiredo, sob acompanhamento dos professores Renan e Alex. Não",
+        "foram inventadas divisões individuais de tarefas, carga horária ou orçamento."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 7,
+      "words": 270,
+      "first": [
+        "6",
+        "2 REFERENCIAL TEÓRICO"
+      ],
+      "last": [
+        "pista é compreensível. Da mesma forma, gerar um executável não comprova uma partida",
+        "completa. Essa distinção fundamenta a leitura dos resultados e a identificação das pendências."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 8,
+      "words": 225,
+      "first": [
+        "7",
+        "3 PROCEDIMENTOS METODOLÓGICOS"
+      ],
+      "last": [
+        "diferentes computadores ou cálculo de custos. A data inicial indica o primeiro registro",
+        "disponível, e a síntese técnica não substitui uma auditoria histórica completa."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 9,
+      "words": 286,
+      "first": [
+        "8",
+        "3.2 Campanha arquitetura e mecânicas"
+      ],
+      "last": [
+        "interface. Opções de volume e redução de movimento ampliam a adaptação da apresentação;",
+        "não constituem, por si só, comprovação de acessibilidade integral."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 10,
+      "words": 209,
+      "first": [
+        "9",
+        "3.3 Produção comunicação e qualidade"
+      ],
+      "last": [
+        "roteiros e materiais do website complementam o executável (Projeto O Segredo de Varginha,",
+        "2026c)."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 11,
+      "words": 285,
+      "first": [
+        "10",
+        "4 RESULTADOS ESPERADOS"
+      ],
+      "last": [
+        "evidência de publicação final, avaliação externa abrangente ou implementação de todos os",
+        "finais originalmente planejados."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 12,
+      "words": 159,
+      "first": [
+        "11",
+        "5 REFERÊNCIAS BIBLIOGRÁFICAS"
+      ],
+      "last": [
+        "Varginha, 2026c. Acervo interno em Docs e output, incluindo dialogue-casual-2026-10-23 e",
+        "revisao-mestre-2026-10-23. Consulta em: 23 out. 2026."
+      ],
+      "outside_expected_print_area": []
+    }
+  ],
+  "pdf_A4": true,
+  "unresolved_fields": []
+}

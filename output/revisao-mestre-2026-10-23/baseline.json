@@ -1,0 +1,181 @@
+{
+  "purpose": "Baseline de alterações preexistentes antes da revisão mestre; não é backup completo",
+  "commit": "a2946beef819a873beb3743badaed2f90882b268",
+  "tracked_modified": [
+    {
+      "path": "Assets/Resources/Varginha/CinemaOpening/ChildRoom1996.png.meta",
+      "bytes": 2714,
+      "sha256": "fbfceebe13338aeb80146d9fa4fe6dc2c22792ab1c01dc1911d2874a21abb913"
+    },
+    {
+      "path": "Assets/Resources/Varginha/CinemaOpening/ChildWatchingTV.png.meta",
+      "bytes": 2714,
+      "sha256": "4c60bf657ccbb19417f70ec5990c8621045c7431b2d3140c5f1c415167304827"
+    },
+    {
+      "path": "Assets/Resources/Varginha/CinemaOpening/FuscaCabinCartoon.png.meta",
+      "bytes": 2714,
+      "sha256": "26777629feeb1c9f5f51a4c166f06a5b28ca5d8608a2580e18e9dc937b28dd68"
+    },
+    {
+      "path": "Assets/Resources/Varginha/CinemaOpening/FuscaDashboardCartoon.png.meta",
+      "bytes": 2714,
+      "sha256": "c12a919e6198131088c9088e93a1c88ead1a02b564a8bc92406dcf1a6b069622"
+    },
+    {
+      "path": "Assets/Resources/Varginha/CinemaOpening/MorningTown.png.meta",
+      "bytes": 2714,
+      "sha256": "861450ff32af5c39abb34a1189cd1cb3674dc2a42576c00a66ea7cb688f1c756"
+    },
+    {
+      "path": "Assets/Resources/Varginha/CinemaOpening/Newspaper1996.png.meta",
+      "bytes": 2714,
+      "sha256": "1e55ddffbe6a65e7d3ff64b3de1c74f14a79cd42279546b8ecc3c4d17f5c3eaa"
+    },
+    {
+      "path": "Assets/Resources/Varginha/HouseFurniture/AdultInteractiveBase.png.meta",
+      "bytes": 2714,
+      "sha256": "a05b54fe9a3b51d1ebb6eadb7cc1ecfc16944a71a4983d74ec04c82f353084aa"
+    },
+    {
+      "path": "Assets/Resources/Varginha/HouseFurniture/FuscaSteeringColumn.png.meta",
+      "bytes": 2714,
+      "sha256": "6fefb13e67642f59f944fdf72a576dd8c66ca6c5a8d19c9cf8dd3f4928e1cfb6"
+    },
+    {
+      "path": "Assets/Resources/Varginha/HouseFurniture/HouseFurnitureBacks.png.meta",
+      "bytes": 2714,
+      "sha256": "b2e588a8065a0158953202f97f9151a72d3c6bdd859ca24620fea0b0a15695eb"
+    },
+    {
+      "path": "Assets/Resources/Varginha/HouseFurniture/HouseRoutineItems.png.meta",
+      "bytes": 2714,
+      "sha256": "235cd0602fafb8fd1e1de9d3adbf4eae3dd0c2b6c9bc47250b66c4b8a8ece68b"
+    },
+    {
+      "path": "Assets/Resources/Varginha/StoryCharacters/SupportEffectsV2.png.meta",
+      "bytes": 2714,
+      "sha256": "f9f909da621cb003096a8e976992d730f387eb713d69c581db63d5f8da4a5898"
+    },
+    {
+      "path": "Assets/Resources/Varginha/TrailPuzzle/Landmarks.png.meta",
+      "bytes": 2714,
+      "sha256": "4d446d3d0909686b47810002d995142003cbd2ce58595322770ed0fd34a1fad6"
+    },
+    {
+      "path": "Assets/Resources/Varginha/TrailPuzzle/Terrain.png.meta",
+      "bytes": 2714,
+      "sha256": "b91204200ff07afff1c9ee0725a5a87fd905aad35c4af475f0c6473bdd7c8ae8"
+    },
+    {
+      "path": "Assets/Scripts/Editor/Testing/VarginhaDailyBuild.cs",
+      "bytes": 2777,
+      "sha256": "c2b6b620eb41a1409d8549332a983a28898419750bb764d786d5e1af510768e5"
+    },
+    {
+      "path": "Assets/Scripts/Game/Varginha/Experiment/CampaignCinematics.cs",
+      "bytes": 11845,
+      "sha256": "3a6c4c657113b24bc9af72e9354dc26b56abc4c53e7fab48a501d948777c7cab"
+    },
+    {
+      "path": "Assets/Scripts/Game/Varginha/Experiment/CampaignContinuationController.cs",
+      "bytes": 43125,
+      "sha256": "f718f4ac0d11fb392152d71aa65082a9ea66baf9d6f96db16599e1593dfd3021"
+    },
+    {
+      "path": "Assets/Scripts/Game/Varginha/Experiment/CampaignHouseSequence.cs",
+      "bytes": 20126,
+      "sha256": "b46d3f5148d1dd0b1f4bcb6eaf7bbb27d9b68d45551c7eadbe1a8dca69ae5b69"
+    },
+    {
+      "path": "Assets/Scripts/Game/Varginha/Experiment/CampaignPuzzleDesign.cs",
+      "bytes": 14542,
+      "sha256": "c43496e6f6c8c0b7d6b4289dc416d4e5fa1cd4863b9aa3cb6fd8a225d40eb766"
+    },
+    {
+      "path": "Assets/Scripts/Game/Varginha/Experiment/CampaignRecordedAudio.cs",
+      "bytes": 3422,
+      "sha256": "407f862f701a30a8161716e45a1266e89648445068faab29ef18a3a565d4ded1"
+    },
+    {
+      "path": "Assets/Scripts/Game/Varginha/Experiment/CampaignSoundscape.cs",
+      "bytes": 12749,
+      "sha256": "03188798076b7dcfe0b03a8974ba1e1d835e50db3a380fe9b56f0d371056d247"
+    },
+    {
+      "path": "Assets/Scripts/Game/Varginha/Experiment/VarginhaCampaignStage.cs",
+      "bytes": 38574,
+      "sha256": "8883e5ecfec5752d2e6a93f892047ba7963ad17054219ec5f8610f90e622eea2"
+    },
+    {
+      "path": "Assets/Scripts/Game/Varginha/VarginhaGamepadUI.cs",
+      "bytes": 12313,
+      "sha256": "3cc0ed2f3ca0299bca0272a51ca34cb6fed6d9dcdacf8ff43c55f567ab61239f"
+    },
+    {
+      "path": "Assets/Scripts/Game/Varginha/VarginhaPlayerAttack.cs",
+      "bytes": 17471,
+      "sha256": "60f5ca18766ed79518f68b3baa78042033d0012274dbad7e552de8bce85961ba"
+    },
+    {
+      "path": "Assets/Tests/EditMode/CampaignRecordedAudioTests.cs",
+      "bytes": 5826,
+      "sha256": "f102cd510cfd6ac01014bd7660b71d999188cfd72f67b0fed47ce27c4c5fd9bd"
+    },
+    {
+      "path": "Assets/Tests/PlayMode/CampaignChaptersTests.cs",
+      "bytes": 22201,
+      "sha256": "450e4350c4265bf3a54e247925ec01a749b89f377bdc20c3d59263803bf00380"
+    },
+    {
+      "path": "Assets/Tests/PlayMode/CampaignReturnSealPlayTests.cs",
+      "bytes": 9199,
+      "sha256": "ccc171ef0c2c1bcf8d5a55d8c2479ad34317f0255997720b016e5ea98440019e"
+    },
+    {
+      "path": "Assets/UniversalRenderPipelineGlobalSettings.asset",
+      "bytes": 28329,
+      "sha256": "bc1af41714d20fee50b831fcb59856376b3458a46f1a08cd88202606469ff147"
+    },
+    {
+      "path": "Docs/QAAlpha01/EditModeProgress.txt",
+      "bytes": 2852,
+      "sha256": "262ffaa94d9f0e269916a60d146ed622d9ee05231af98a2120c1384fde8db1f5"
+    },
+    {
+      "path": "Docs/QAAlpha01/EditModeResults.xml",
+      "bytes": 12584,
+      "sha256": "7fb0b9546cefa07285a8845b38b96fabe48c9848a8dcb1b0195094553259c888"
+    },
+    {
+      "path": "Docs/QAAlpha01/PlayModeProgress.txt",
+      "bytes": 556,
+      "sha256": "d074be14b4390adeb276fb68bf89220b0e83761396ec562399443c04e88fc297"
+    },
+    {
+      "path": "Docs/QAAlpha01/PlayModeResults.xml",
+      "bytes": 5786,
+      "sha256": "c24b5b07812759a9de74f78b534509c9e669c164bc3184d728b7468c1994f084"
+    },
+    {
+      "path": "output/daily-sprint-2026-10-20/A_Sprint_Final_Varginha.html",
+      "bytes": 2459230,
+      "sha256": "0e758fdeadbacd534fa9b573205dffca0124657247525d607ed9cb90c1235a0f"
+    },
+    {
+      "path": "output/daily-sprint-2026-10-20/Roteiro_da_daily.md",
+      "bytes": 6052,
+      "sha256": "210add0e4ab1f328ba516fde1a6bc42ddb247c86b93362e24230f5192d44cc5a"
+    },
+    {
+      "path": "output/daily-sprint-2026-10-20/build.mjs",
+      "bytes": 14344,
+      "sha256": "df619a65ebe99d1cc52fa1747915066deb5099709b2edbd0fd30bd7df60e7751"
+    },
+    {
+      "path": "output/daily-sprint-2026-10-20/qa.mjs",
+      "bytes": 8763,
+      "sha256": "78c782e3b6d29862bb478641e24809e3d9b7fd1633580e76a2e75c8197b7ac90"
+    }
+  ]
+}

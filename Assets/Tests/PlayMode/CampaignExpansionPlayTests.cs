@@ -51,6 +51,7 @@ namespace Game.Tests.PlayMode
                 if(phase==8)
                 {
                     foreach(string point in new[]{"index","symbol","record","truth2"}){stage.Interact(point);stage.ClosePanel();}
+                    stage.Progress.expansion.bookOrder=new[]{0,1,2};stage.Progress.expansion.bookLinks=new[]{0,1,2};
                     Assert.That(stage.Progress.expansion.SolveAnchor(1996,1,23),Is.True);stage.Save();
                 }
                 if(phase==9)
@@ -69,7 +70,7 @@ namespace Game.Tests.PlayMode
             }
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
-        [UnityTest] public IEnumerator CorrectChurchAnswerAndOuzanaWorkWithoutLegacyInspectionFlags()
+        [UnityTest] public IEnumerator ReconstructedChurchRecordKeepsTheOuzanaReward()
         {
             var story=new CampaignStory {phase=8};
             story.expansion.anchorYear=1996;story.expansion.anchorSymbol=1;story.expansion.anchorRecord=23;
@@ -78,6 +79,9 @@ namespace Game.Tests.PlayMode
             yield return null;yield return new WaitForSeconds(.2f);
             var church=CampaignExpansionController.Active;
             Assert.That(church.Progress.expansion.anchorClues,Is.Zero);
+            church.Interact("anchor");Assert.That(church.SubmitPuzzle(),Is.False);
+            foreach(string id in new[]{"index","symbol","record"}){church.Interact(id);church.ClosePanel();}
+            church.Progress.expansion.bookOrder=new[]{0,1,2};church.Progress.expansion.bookLinks=new[]{0,1,2};
             church.Interact("anchor");Assert.That(church.SubmitPuzzle(),Is.True);
             Assert.That(CampaignStorySave.Load().expansion.Complete(8),Is.True,"A correct answer must remain unlocked after save repair.");
             var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();

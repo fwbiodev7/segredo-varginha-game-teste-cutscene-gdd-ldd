@@ -1,0 +1,82 @@
+﻿FALAS DO EDELZIO PARA GRAVAR
+O Segredo de Varginha - 23/10/2026
+
+14 falas do adulto e 1 da criança. Leia só a fala. Não leia o número nem a orientação.
+Uma boa tomada por fala. Deixe 1 segundo de silêncio antes e depois. Sem música ou efeitos.
+Nomeie: ED01_t01, ED02_t01... Se repetir: ED01_t02. Mande os arquivos originais juntos, de preferência em ZIP.
+
+ED01 - Preparando o notebook
+(Natural, procurando um acesso à cadeira.)
+Vou chegar pelo lado livre da cadeira para preparar o notebook.
+
+ED02 - Olhando a caixa antes do sumiço
+(Cotidiano, com uma lembrança distante.)
+Minha caixa de brinquedos de 1996. Faz anos que não abro. Preciso preparar a aula.
+
+ED03 - Deixando a chave na mesa
+(Natural, antes de buscar a mochila.)
+Vou deixar a chave na mesa do café. Depois pego a mochila.
+
+ED04 - Voltando à mesa
+(Tranquilo, a chave ainda está no lugar.)
+Deixei a chave aqui. Falta buscar a mochila no quarto.
+
+ED05 - Percebendo o sumiço
+(Confuso, observando o local.)
+A chave não está na mesa do café. Não há nada no chão ao redor. A observação ficou registrada no caderno.
+
+ED06 - Conferindo a porta
+(Baixo, raciocinando.)
+O trinco continua fechado por dentro. Não abri esta porta desde que acordei. A observação ficou registrada no caderno.
+
+ED07 - Encontrando o papel
+(Curioso, reconhecendo o traço azul.)
+Um pedacinho de papel envelhecido ficou preso junto ao quarto. Há um traço azul, igual ao das minhas anotações de infância. A observação ficou registrada no caderno.
+
+ED08 - Antes de abrir a caixa
+(Cauteloso, tentando entender.)
+A caixa continua fechada. Antes de mexer, preciso entender o que mudou na casa.
+
+ED09 - Ouvindo os arranhões
+(Tensão crescente, sem gritar.)
+A porta não foi aberta. O papel parece vir da minha caixa... Agora escuto arranhões debaixo da cama.
+
+ED10 - Depois de resolver a caixa
+(Contido. Leia a mensagem final com inquietação.)
+Guardei a chave, o caderno e o primeiro fragmento de mapa. A mensagem continua ali: ELA AINDA ESTÁ AQUI.
+
+ED11 - Com a chave recuperada
+(Firme, um pouco desconfiado.)
+A chave está guardada comigo. Não vou deixá-la aqui outra vez.
+
+ED12 - Se tentar sair antes de investigar
+(Orientação calma.)
+Investigue a caixa sob a cama e organize as páginas para encontrar a chave.
+
+ED13 - Antes de usar o notebook do Renan
+(Natural, tom de conversa.)
+Vou conversar com Renan antes de usar o notebook dele.
+
+ED14 - Depois de decifrar o horário
+(Leia 23:23 como vinte e três e vinte e três.)
+23:23. Vou mostrar essa descoberta a Renan.
+
+CR01 - Voz de criança no rádio do Fusca
+(Baixo, com medo contido. Grave sem filtro de rádio.)
+Não deixa ela sair.
+
+SONS OPCIONAIS - SOMENTE SE PEDIDOS
+Interprete o som. Não leia a descrição.
+
+S01 - Susto adulto: Um susto curto, sem palavra.
+
+S02 - Queimadura adulta: Uma reação curta de dor, sem prolongar.
+
+S03 - Fuga adulta: Três respirações curtas de esforço, com pausas.
+
+S04 - Queda adulta: Um impacto breve e recuperação do fôlego.
+
+S05 - Susto criança: Uma reação curta ao clarão, sem palavras.
+
+ENVIO
+Se puder, grave em WAV. Caso contrário, envie o arquivo original na melhor qualidade. Não precisa converter, editar nem aplicar filtros.

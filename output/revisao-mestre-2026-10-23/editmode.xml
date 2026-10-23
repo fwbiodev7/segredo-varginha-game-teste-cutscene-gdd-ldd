@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="26" result="Passed" total="26" passed="26" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0,332764">
+  <test-suite type="TestSuite" id="1000" name="Varginha_Master_QA_20261023" fullname="Varginha_Master_QA_20261023" runstate="Runnable" testcasecount="405" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.332764" total="26" passed="26" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1476" name="GameEditModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Library/ScriptAssemblies/GameEditModeTests.dll" runstate="Runnable" testcasecount="405" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.310524" total="26" passed="26" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="22920" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1477" name="Game" fullname="Game" runstate="Runnable" testcasecount="405" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.287037" total="26" passed="26" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1478" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="405" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.278604" total="26" passed="26" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1479" name="EditMode" fullname="Game.Tests.EditMode" runstate="Runnable" testcasecount="405" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.271014" total="26" passed="26" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1215" name="CampaignRecordedAudioTests" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" testcasecount="17" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.216555" total="17" passed="17" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="ParameterizedMethod" id="1225" name="AuthoredAssignmentsKeepTheirSourceIdentity" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.046729" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1218" name="AuthoredAssignmentsKeepTheirSourceIdentity(&quot;RenanPulse&quot;,&quot;wayofx-glitch_hit_variation1&quot;)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity(&quot;RenanPulse&quot;,&quot;wayofx-glitch_hit_variation1&quot;)" methodname="AuthoredAssignmentsKeepTheirSourceIdentity" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="1224098444" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.028820" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("RenanPulse","wayofx-glitch_hit_variation1")
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("RenanPulse","wayofx-glitch_hit_variation1")
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("RenanPulse","wayofx-glitch_hit_variation1")
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("RenanPulse","wayofx-glitch_hit_variation1")
+]]></output>
+                </test-case>
+                <test-case id="1219" name="AuthoredAssignmentsKeepTheirSourceIdentity(&quot;OuzanaGlass&quot;,&quot;magiaz-vidro-quebrando&quot;)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity(&quot;OuzanaGlass&quot;,&quot;magiaz-vidro-quebrando&quot;)" methodname="AuthoredAssignmentsKeepTheirSourceIdentity" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="36301938" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000162" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("OuzanaGlass","magiaz-vidro-quebrando")
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("OuzanaGlass","magiaz-vidro-quebrando")
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("OuzanaGlass","magiaz-vidro-quebrando")
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("OuzanaGlass","magiaz-vidro-quebrando")
+]]></output>
+                </test-case>
+                <test-case id="1220" name="AuthoredAssignmentsKeepTheirSourceIdentity(&quot;ChildExplosion&quot;,&quot;soundreality-explosion-fx&quot;)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity(&quot;ChildExplosion&quot;,&quot;soundreality-explosion-fx&quot;)" methodname="AuthoredAssignmentsKeepTheirSourceIdentity" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="465778346" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000145" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChildExplosion","soundreality-explosion-fx")
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChildExplosion","soundreality-explosion-fx")
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChildExplosion","soundreality-explosion-fx")
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChildExplosion","soundreality-explosion-fx")
+]]></output>
+                </test-case>
+                <test-case id="1221" name="AuthoredAssignmentsKeepTheirSourceIdentity(&quot;FabioShield&quot;,&quot;dragon-studio-angelical-synth-pad&quot;)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity(&quot;FabioShield&quot;,&quot;dragon-studio-angelical-synth-pad&quot;)" methodname="AuthoredAssignmentsKeepTheirSourceIdentity" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="1168082429" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000127" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("FabioShield","dragon-studio-angelical-synth-pad")
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("FabioShield","dragon-studio-angelical-synth-pad")
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("FabioShield","dragon-studio-angelical-synth-pad")
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("FabioShield","dragon-studio-angelical-synth-pad")
+]]></output>
+                </test-case>
+                <test-case id="1222" name="AuthoredAssignmentsKeepTheirSourceIdentity(&quot;ChurchBell&quot;,&quot;alex_jauk-old-town-church-bells&quot;)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity(&quot;ChurchBell&quot;,&quot;alex_jauk-old-town-church-bells&quot;)" methodname="AuthoredAssignmentsKeepTheirSourceIdentity" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="1195673653" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000133" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChurchBell","alex_jauk-old-town-church-bells")
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChurchBell","alex_jauk-old-town-church-bells")
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChurchBell","alex_jauk-old-town-church-bells")
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChurchBell","alex_jauk-old-town-church-bells")
+]]></output>
+                </test-case>
+                <test-case id="1223" name="AuthoredAssignmentsKeepTheirSourceIdentity(&quot;MenuMusic&quot;,&quot;musicamenuinicialslowed.mp3&quot;)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity(&quot;MenuMusic&quot;,&quot;musicamenuinicialslowed.mp3&quot;)" methodname="AuthoredAssignmentsKeepTheirSourceIdentity" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="1593124365" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000195" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("MenuMusic","musicamenuinicialslowed.mp3")
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("MenuMusic","musicamenuinicialslowed.mp3")
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("MenuMusic","musicamenuinicialslowed.mp3")
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("MenuMusic","musicamenuinicialslowed.mp3")
+]]></output>
+                </test-case>
+                <test-case id="1224" name="AuthoredAssignmentsKeepTheirSourceIdentity(&quot;ChurchAmbience&quot;,&quot;igrejamedo.mp3&quot;)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity(&quot;ChurchAmbience&quot;,&quot;igrejamedo.mp3&quot;)" methodname="AuthoredAssignmentsKeepTheirSourceIdentity" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="662957107" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000142" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChurchAmbience","igrejamedo.mp3")
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChurchAmbience","igrejamedo.mp3")
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChurchAmbience","igrejamedo.mp3")
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChurchAmbience","igrejamedo.mp3")
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-case id="1227" name="BedsStreamAndShortEffectsPreloadWithoutLossyCompression" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.BedsStreamAndShortEffectsPreloadWithoutLossyCompression" methodname="BedsStreamAndShortEffectsPreloadWithoutLossyCompression" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="1422574939" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.047573" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.BedsStreamAndShortEffectsPreloadWithoutLossyCompression
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.BedsStreamAndShortEffectsPreloadWithoutLossyCompression
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.BedsStreamAndShortEffectsPreloadWithoutLossyCompression
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.BedsStreamAndShortEffectsPreloadWithoutLossyCompression
+]]></output>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1233" name="ChurchKeepsReceivedDarkBedAcrossTensionChanges" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.010073" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1230" name="ChurchKeepsReceivedDarkBedAcrossTensionChanges(0)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(0)" methodname="ChurchKeepsReceivedDarkBedAcrossTensionChanges" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="881501713" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.004248" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(0)
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(0)
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(0)
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(0)
+]]></output>
+                </test-case>
+                <test-case id="1231" name="ChurchKeepsReceivedDarkBedAcrossTensionChanges(1)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(1)" methodname="ChurchKeepsReceivedDarkBedAcrossTensionChanges" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="800131840" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000367" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(1)
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(1)
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(1)
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(1)
+]]></output>
+                </test-case>
+                <test-case id="1232" name="ChurchKeepsReceivedDarkBedAcrossTensionChanges(2)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(2)" methodname="ChurchKeepsReceivedDarkBedAcrossTensionChanges" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="1375444694" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000344" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(2)
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(2)
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(2)
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.ChurchKeepsReceivedDarkBedAcrossTensionChanges(2)
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-case id="1217" name="EveryCatalogEntryResolvesToAnImportedClip" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.EveryCatalogEntryResolvesToAnImportedClip" methodname="EveryCatalogEntryResolvesToAnImportedClip" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="698530144" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.010672" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.EveryCatalogEntryResolvesToAnImportedClip
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.EveryCatalogEntryResolvesToAnImportedClip
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.EveryCatalogEntryResolvesToAnImportedClip
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.EveryCatalogEntryResolvesToAnImportedClip
+]]></output>
+              </test-case>
+              <test-case id="1234" name="FootstepsVaryWithoutConsumingGameplayRandomness" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.FootstepsVaryWithoutConsumingGameplayRandomness" methodname="FootstepsVaryWithoutConsumingGameplayRandomness" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="1614862590" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.002314" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.FootstepsVaryWithoutConsumingGameplayRandomness
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.FootstepsVaryWithoutConsumingGameplayRandomness
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.FootstepsVaryWithoutConsumingGameplayRandomness
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.FootstepsVaryWithoutConsumingGameplayRandomness
+]]></output>
+              </test-case>
+              <test-case id="1229" name="LaboratoryUsesTheReceivedLoopingBed" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.LaboratoryUsesTheReceivedLoopingBed" methodname="LaboratoryUsesTheReceivedLoopingBed" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="249152073" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000303" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.LaboratoryUsesTheReceivedLoopingBed
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.LaboratoryUsesTheReceivedLoopingBed
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.LaboratoryUsesTheReceivedLoopingBed
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.LaboratoryUsesTheReceivedLoopingBed
+]]></output>
+              </test-case>
+              <test-case id="1228" name="NightNatureAndCrowdedSchoolDoNotLeakIntoMorningOrInvadedSchool" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.NightNatureAndCrowdedSchoolDoNotLeakIntoMorningOrInvadedSchool" methodname="NightNatureAndCrowdedSchoolDoNotLeakIntoMorningOrInvadedSchool" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="461865122" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000330" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.NightNatureAndCrowdedSchoolDoNotLeakIntoMorningOrInvadedSchool
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.NightNatureAndCrowdedSchoolDoNotLeakIntoMorningOrInvadedSchool
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.NightNatureAndCrowdedSchoolDoNotLeakIntoMorningOrInvadedSchool
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.NightNatureAndCrowdedSchoolDoNotLeakIntoMorningOrInvadedSchool
+]]></output>
+              </test-case>
+              <test-case id="1226" name="RecordedBossAliasesDoNotReuseTheChildExplosion" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.RecordedBossAliasesDoNotReuseTheChildExplosion" methodname="RecordedBossAliasesDoNotReuseTheChildExplosion" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="1750156437" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.006236" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.RecordedBossAliasesDoNotReuseTheChildExplosion
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.RecordedBossAliasesDoNotReuseTheChildExplosion
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.RecordedBossAliasesDoNotReuseTheChildExplosion
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.RecordedBossAliasesDoNotReuseTheChildExplosion
+]]></output>
+              </test-case>
+              <test-case id="1216" name="RuntimeSupportFramesMatchTheExportedArtSlicing" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.RuntimeSupportFramesMatchTheExportedArtSlicing" methodname="RuntimeSupportFramesMatchTheExportedArtSlicing" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="791188418" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.073182" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.RuntimeSupportFramesMatchTheExportedArtSlicing
+QA test: Game.Tests.EditMode.CampaignRecordedAudioTests.RuntimeSupportFramesMatchTheExportedArtSlicing
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.RuntimeSupportFramesMatchTheExportedArtSlicing
+QA result: Passed Game.Tests.EditMode.CampaignRecordedAudioTests.RuntimeSupportFramesMatchTheExportedArtSlicing
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1267" name="CampaignTrailPuzzleTests" fullname="Game.Tests.EditMode.CampaignTrailPuzzleTests" classname="Game.Tests.EditMode.CampaignTrailPuzzleTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.020927" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1273" name="CompletedOldSaveRetainsForestAndSubsequentProgress" fullname="Game.Tests.EditMode.CampaignTrailPuzzleTests.CompletedOldSaveRetainsForestAndSubsequentProgress" methodname="CompletedOldSaveRetainsForestAndSubsequentProgress" classname="Game.Tests.EditMode.CampaignTrailPuzzleTests" runstate="Runnable" seed="744216368" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.002394" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.CompletedOldSaveRetainsForestAndSubsequentProgress
+QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.CompletedOldSaveRetainsForestAndSubsequentProgress
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.CompletedOldSaveRetainsForestAndSubsequentProgress
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.CompletedOldSaveRetainsForestAndSubsequentProgress
+]]></output>
+              </test-case>
+              <test-case id="1268" name="ExactlyOneOfTheEightRoutesMatchesAllPhysicalEvidence" fullname="Game.Tests.EditMode.CampaignTrailPuzzleTests.ExactlyOneOfTheEightRoutesMatchesAllPhysicalEvidence" methodname="ExactlyOneOfTheEightRoutesMatchesAllPhysicalEvidence" classname="Game.Tests.EditMode.CampaignTrailPuzzleTests" runstate="Runnable" seed="573233328" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000426" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.ExactlyOneOfTheEightRoutesMatchesAllPhysicalEvidence
+QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.ExactlyOneOfTheEightRoutesMatchesAllPhysicalEvidence
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.ExactlyOneOfTheEightRoutesMatchesAllPhysicalEvidence
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.ExactlyOneOfTheEightRoutesMatchesAllPhysicalEvidence
+]]></output>
+              </test-case>
+              <test-case id="1269" name="LegacyPermutationAndDirectionsCannotSolveTheReplacementPuzzle" fullname="Game.Tests.EditMode.CampaignTrailPuzzleTests.LegacyPermutationAndDirectionsCannotSolveTheReplacementPuzzle" methodname="LegacyPermutationAndDirectionsCannotSolveTheReplacementPuzzle" classname="Game.Tests.EditMode.CampaignTrailPuzzleTests" runstate="Runnable" seed="1896882035" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000613" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.LegacyPermutationAndDirectionsCannotSolveTheReplacementPuzzle
+QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.LegacyPermutationAndDirectionsCannotSolveTheReplacementPuzzle
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.LegacyPermutationAndDirectionsCannotSolveTheReplacementPuzzle
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.LegacyPermutationAndDirectionsCannotSolveTheReplacementPuzzle
+]]></output>
+              </test-case>
+              <test-case id="1274" name="MalformedOrGappedTraceCannotGrantProgress" fullname="Game.Tests.EditMode.CampaignTrailPuzzleTests.MalformedOrGappedTraceCannotGrantProgress" methodname="MalformedOrGappedTraceCannotGrantProgress" classname="Game.Tests.EditMode.CampaignTrailPuzzleTests" runstate="Runnable" seed="462370100" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000447" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.MalformedOrGappedTraceCannotGrantProgress
+QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.MalformedOrGappedTraceCannotGrantProgress
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.MalformedOrGappedTraceCannotGrantProgress
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.MalformedOrGappedTraceCannotGrantProgress
+]]></output>
+              </test-case>
+              <test-case id="1270" name="MissingEvidenceDoesNotEraseACompletedTraceOrUnlockTheForest" fullname="Game.Tests.EditMode.CampaignTrailPuzzleTests.MissingEvidenceDoesNotEraseACompletedTraceOrUnlockTheForest" methodname="MissingEvidenceDoesNotEraseACompletedTraceOrUnlockTheForest" classname="Game.Tests.EditMode.CampaignTrailPuzzleTests" runstate="Runnable" seed="1324538516" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000448" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.MissingEvidenceDoesNotEraseACompletedTraceOrUnlockTheForest
+QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.MissingEvidenceDoesNotEraseACompletedTraceOrUnlockTheForest
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.MissingEvidenceDoesNotEraseACompletedTraceOrUnlockTheForest
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.MissingEvidenceDoesNotEraseACompletedTraceOrUnlockTheForest
+]]></output>
+              </test-case>
+              <test-case id="1275" name="OutOfOrderSelectionsAndChangesSurviveSaveRepair" fullname="Game.Tests.EditMode.CampaignTrailPuzzleTests.OutOfOrderSelectionsAndChangesSurviveSaveRepair" methodname="OutOfOrderSelectionsAndChangesSurviveSaveRepair" classname="Game.Tests.EditMode.CampaignTrailPuzzleTests" runstate="Runnable" seed="1073818024" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.001455" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.OutOfOrderSelectionsAndChangesSurviveSaveRepair
+QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.OutOfOrderSelectionsAndChangesSurviveSaveRepair
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.OutOfOrderSelectionsAndChangesSurviveSaveRepair
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.OutOfOrderSelectionsAndChangesSurviveSaveRepair
+]]></output>
+              </test-case>
+              <test-case id="1276" name="ProgressiveHintsBeginWithObservationRatherThanTheAnswer" fullname="Game.Tests.EditMode.CampaignTrailPuzzleTests.ProgressiveHintsBeginWithObservationRatherThanTheAnswer" methodname="ProgressiveHintsBeginWithObservationRatherThanTheAnswer" classname="Game.Tests.EditMode.CampaignTrailPuzzleTests" runstate="Runnable" seed="1520996743" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.001023" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.ProgressiveHintsBeginWithObservationRatherThanTheAnswer
+QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.ProgressiveHintsBeginWithObservationRatherThanTheAnswer
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.ProgressiveHintsBeginWithObservationRatherThanTheAnswer
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.ProgressiveHintsBeginWithObservationRatherThanTheAnswer
+]]></output>
+              </test-case>
+              <test-case id="1272" name="TraceUndoRestartAndPartialSaveRemainPredictable" fullname="Game.Tests.EditMode.CampaignTrailPuzzleTests.TraceUndoRestartAndPartialSaveRemainPredictable" methodname="TraceUndoRestartAndPartialSaveRemainPredictable" classname="Game.Tests.EditMode.CampaignTrailPuzzleTests" runstate="Runnable" seed="1614226687" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000616" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.TraceUndoRestartAndPartialSaveRemainPredictable
+QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.TraceUndoRestartAndPartialSaveRemainPredictable
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.TraceUndoRestartAndPartialSaveRemainPredictable
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.TraceUndoRestartAndPartialSaveRemainPredictable
+]]></output>
+              </test-case>
+              <test-case id="1271" name="WrongCrossingRetainsAllChoicesForDirectCorrection" fullname="Game.Tests.EditMode.CampaignTrailPuzzleTests.WrongCrossingRetainsAllChoicesForDirectCorrection" methodname="WrongCrossingRetainsAllChoicesForDirectCorrection" classname="Game.Tests.EditMode.CampaignTrailPuzzleTests" runstate="Runnable" seed="78007511" result="Passed" start-time="2026-10-23 15:12:29Z" end-time="2026-10-23 15:12:29Z" duration="0.000541" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.WrongCrossingRetainsAllChoicesForDirectCorrection
+QA test: Game.Tests.EditMode.CampaignTrailPuzzleTests.WrongCrossingRetainsAllChoicesForDirectCorrection
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.WrongCrossingRetainsAllChoicesForDirectCorrection
+QA result: Passed Game.Tests.EditMode.CampaignTrailPuzzleTests.WrongCrossingRetainsAllChoicesForDirectCorrection
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Master_QA_20261023\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Master_QA_20261023\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

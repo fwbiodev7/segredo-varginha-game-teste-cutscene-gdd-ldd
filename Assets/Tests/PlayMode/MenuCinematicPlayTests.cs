@@ -48,6 +48,18 @@ namespace Game.Tests.PlayMode
             Assert.That(VarginhaMainMenu.Active,Is.Not.Null);
         }
         private static string Panel => typeof(VarginhaMainMenu).GetField("panel",Private).GetValue(VarginhaMainMenu.Active).ToString();
+        [UnityTest] public IEnumerator ReceivedMenuMusicLoopsRespectsVolumeAndStopsWhenDisabled()
+        {
+            yield return LoadMenu();
+            var atmosphere=Object.FindAnyObjectByType<MenuCinematicAtmosphere>();
+            var source=(AudioSource)typeof(MenuCinematicAtmosphere).GetField("_bed",Private).GetValue(atmosphere);
+            Assert.That(source.clip,Is.SameAs(CampaignRecordedAudio.Clip("MenuMusic")));
+            Assert.That(source.loop,Is.True);Assert.That(source.isPlaying,Is.True);
+            VarginhaGameSettings.Current.music=0;yield return null;Assert.That(source.volume,Is.Zero);
+            VarginhaGameSettings.Current.music=1;yield return null;Assert.That(source.volume,Is.EqualTo(.23f).Within(.001f));
+            atmosphere.BeginDeparture();atmosphere.Departure(1);yield return null;Assert.That(source.volume,Is.Zero);
+            atmosphere.enabled=false;Assert.That(source.isPlaying,Is.False);
+        }
         private static IEnumerator KeyPress(Keyboard keyboard,Key key)
         {
             InputSystem.QueueStateEvent(keyboard,new KeyboardState(key));yield return null;yield return null;

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-23 15:15:59Z" end-time="2026-10-23 15:17:47Z" duration="107,9529018">
+  <test-suite type="TestSuite" id="1343" name="Varginha_Master_QA_20261023" fullname="Varginha_Master_QA_20261023" runstate="Runnable" testcasecount="289" result="Passed" start-time="2026-10-23 15:15:59Z" end-time="2026-10-23 15:17:47Z" duration="107.952902" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1679" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="289" result="Passed" start-time="2026-10-23 15:15:59Z" end-time="2026-10-23 15:17:47Z" duration="107.939435" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="20468" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1680" name="Game" fullname="Game" runstate="Runnable" testcasecount="289" result="Passed" start-time="2026-10-23 15:15:59Z" end-time="2026-10-23 15:17:47Z" duration="107.927392" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1681" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="289" result="Passed" start-time="2026-10-23 15:15:59Z" end-time="2026-10-23 15:17:47Z" duration="107.909996" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1682" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="289" result="Passed" start-time="2026-10-23 15:15:59Z" end-time="2026-10-23 15:17:47Z" duration="107.886370" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1349" name="CampaignChaptersTests" fullname="Game.Tests.PlayMode.CampaignChaptersTests" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-23 15:15:59Z" end-time="2026-10-23 15:17:06Z" duration="67.623857" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1355" name="HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" fullname="Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" methodname="HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="1312644980" result="Passed" start-time="2026-10-23 15:15:59Z" end-time="2026-10-23 15:17:06Z" duration="67.602342" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Category" value="HudPuzzles" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+QA test: Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+QA result: Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1408" name="CampaignMessagePlayTests" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-23 15:17:06Z" end-time="2026-10-23 15:17:22Z" duration="15.899514" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1411" name="BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue" methodname="BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="1699139997" result="Passed" start-time="2026-10-23 15:17:07Z" end-time="2026-10-23 15:17:22Z" duration="15.866288" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+QA test: Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+QA result: Passed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+QA result: Passed Game.Tests.PlayMode.CampaignMessagePlayTests.BagPickupKeepsTheOriginalSmallPanelAndNeedsNoContinue
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1415" name="CampaignPuzzleDesignPlayTests" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-23 15:17:22Z" end-time="2026-10-23 15:17:40Z" duration="17.496779" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1416" name="TrailMapSelectsSavesAndCorrectsAnySegmentWithController" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.TrailMapSelectsSavesAndCorrectsAnySegmentWithController" methodname="TrailMapSelectsSavesAndCorrectsAnySegmentWithController" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" seed="1791396690" result="Passed" start-time="2026-10-23 15:17:22Z" end-time="2026-10-23 15:17:40Z" duration="17.491284" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="180000" />
+                  <property name="Category" value="HudPuzzles" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.TrailMapSelectsSavesAndCorrectsAnySegmentWithController
+QA test: Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.TrailMapSelectsSavesAndCorrectsAnySegmentWithController
+Shader 'Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling' is not supported or has been stripped from the build (in 'Blit FSR Upscaling'). PostProcessing render passes will not execute.
+Shader 'Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling' is not supported or has been stripped from the build (in 'Blit FSR Upscaling'). PostProcessing render passes will not execute.
+QA result: Passed Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.TrailMapSelectsSavesAndCorrectsAnySegmentWithController
+QA result: Passed Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.TrailMapSelectsSavesAndCorrectsAnySegmentWithController
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1422" name="CampaignRecordedAudioPlayTests" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-23 15:17:40Z" end-time="2026-10-23 15:17:45Z" duration="5.531969" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1424" name="ChurchBedUsesReceivedClipAndFadesOutOnReturnToMenu" fullname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChurchBedUsesReceivedClipAndFadesOutOnReturnToMenu" methodname="ChurchBedUsesReceivedClipAndFadesOutOnReturnToMenu" classname="Game.Tests.PlayMode.CampaignRecordedAudioPlayTests" runstate="Runnable" seed="13818799" result="Passed" start-time="2026-10-23 15:17:40Z" end-time="2026-10-23 15:17:45Z" duration="5.465925" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChurchBedUsesReceivedClipAndFadesOutOnReturnToMenu
+QA test: Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChurchBedUsesReceivedClipAndFadesOutOnReturnToMenu
+QA result: Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChurchBedUsesReceivedClipAndFadesOutOnReturnToMenu
+QA result: Passed Game.Tests.PlayMode.CampaignRecordedAudioPlayTests.ChurchBedUsesReceivedClipAndFadesOutOnReturnToMenu
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1534" name="MenuCinematicPlayTests" fullname="Game.Tests.PlayMode.MenuCinematicPlayTests" classname="Game.Tests.PlayMode.MenuCinematicPlayTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-23 15:17:45Z" end-time="2026-10-23 15:17:47Z" duration="1.282841" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1535" name="ReceivedMenuMusicLoopsRespectsVolumeAndStopsWhenDisabled" fullname="Game.Tests.PlayMode.MenuCinematicPlayTests.ReceivedMenuMusicLoopsRespectsVolumeAndStopsWhenDisabled" methodname="ReceivedMenuMusicLoopsRespectsVolumeAndStopsWhenDisabled" classname="Game.Tests.PlayMode.MenuCinematicPlayTests" runstate="Runnable" seed="259985358" result="Passed" start-time="2026-10-23 15:17:45Z" end-time="2026-10-23 15:17:47Z" duration="1.231648" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.MenuCinematicPlayTests.ReceivedMenuMusicLoopsRespectsVolumeAndStopsWhenDisabled
+QA test: Game.Tests.PlayMode.MenuCinematicPlayTests.ReceivedMenuMusicLoopsRespectsVolumeAndStopsWhenDisabled
+QA result: Passed Game.Tests.PlayMode.MenuCinematicPlayTests.ReceivedMenuMusicLoopsRespectsVolumeAndStopsWhenDisabled
+QA result: Passed Game.Tests.PlayMode.MenuCinematicPlayTests.ReceivedMenuMusicLoopsRespectsVolumeAndStopsWhenDisabled
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Master_QA_20261023\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Master_QA_20261023\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

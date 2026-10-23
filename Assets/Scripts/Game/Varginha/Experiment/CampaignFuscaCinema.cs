@@ -171,10 +171,12 @@ namespace Game.Varginha.Experiment
             var car=System.Array.Find(_schoolLayout.props,p=>p.name=="Fusca");if(car==null)return;
             var start=_schoolLayout.Position(car.art[0]-28,car.art[1]+car.art[3]*.57f);
             var plan=CampaignMapPlan.Create(4);ArrivalRoute.Clear();
-            if(!plan.Route(start,plan.spawn,ArrivalRoute))return;
-            // Route uses a quarter-metre navigation grid. Restore exact authored
-            // endpoints so the scene handoff cannot introduce a visible jump.
-            ArrivalRoute.Insert(0,start);ArrivalRoute.Add(plan.spawn);
+            // Shortest-path navigation also accepts grass. The arrival is staged on
+            // the lower sidewalk and central paved access, measured on the original map.
+            ArrivalRoute.Add(start);
+            ArrivalRoute.Add(_schoolLayout.Position(306,835));
+            ArrivalRoute.Add(_schoolLayout.Position(700,835));
+            ArrivalRoute.Add(plan.spawn);
             _arrivalLength=0;for(int i=1;i<ArrivalRoute.Count;i++)_arrivalLength+=Vector2.Distance(ArrivalRoute[i-1],ArrivalRoute[i]);
         }
         public static Vector2 ArrivalFootPosition(float time,bool reduced)
