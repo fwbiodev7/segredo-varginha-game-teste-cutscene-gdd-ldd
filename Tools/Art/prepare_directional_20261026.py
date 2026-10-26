@@ -12,6 +12,7 @@ DEST = ROOT / "Assets/Resources/Varginha/StoryCharacters/Directional20261026"
 # 256px cells keep a generous transparent gutter around every directional pose
 # while staying at Unity's 2048px maximum for a single 8x8 atlas.
 CELL, ALPHA = 256, 250
+SOURCE_GUTTER = 12
 TARGET = {"Edelzio":1.50,"EdelzioNoBag":1.50,"EdelzioChild":1.08,"Renan":1.50,"PadreFabio":1.50,"Marcos":1.12,"Yasmin":1.12,"Pedro":1.12,"Matias":1.12,"AnaTavares":1.12,"AnnaSabia":1.12,"LuisMartins":1.12,"LuisMiguelMessias":1.12,"Fabio":1.12,"ManifestationBoss":4.60}
 
 def write_meta(path, importer, guid):
@@ -44,7 +45,14 @@ def main():
             y0,y1=round(row*h/8),round((row+1)*h/8)
             for col in range(8):
                 x0,x1=round(col*w/8),round((col+1)*w/8)
-                tile=raw[y0:y1,x0:x1].copy()
+                # Some generated poses touch or cross their nominal source
+                # grid (notably Edelzio's right-facing profile). Read a small
+                # overlap, then select the component anchored inside this
+                # source cell so the missing nose/hair/shoes are recovered
+                # without importing a neighboring pose.
+                sx0,sx1=max(0,x0-SOURCE_GUTTER),min(w,x1+SOURCE_GUTTER)
+                sy0,sy1=max(0,y0-SOURCE_GUTTER),min(h,y1+SOURCE_GUTTER)
+                tile=raw[sy0:sy1,sx0:sx1].copy()
                 # Marcos' generated walk rows accidentally inherit a blue ball
                 # fragment at the top of one cell. He walks empty-handed; remove
                 # only saturated blue from the upper body, keeping blue shoes.
@@ -69,30 +77,28 @@ def main():
                     tile[:,:,3][dark & ~outline]=0
                 active=(tile[:,:,3]>=ALPHA).astype("uint8")
                 # Image generation occasionally spills a neighboring frame into
-                # the gutter. Pick the component nearest the cell center, then
+                # the gutter. Pick the component with most opaque pixels inside
+                # the nominal cell, then
                 # retain only parts touching it after a 1px dilation (e.g. a
                 # disconnected hand-held prop). This removes clipped ghosts at
                 # the cell edges that otherwise show up behind feet in Unity.
                 count,labels,stats,centroids=cv2.connectedComponentsWithStats(active,8)
                 keep=np.zeros(active.shape,dtype=bool)
                 if count>1:
-                    candidates=[]
-                    cx,cy=active.shape[1]/2,active.shape[0]/2
-                    for label in range(1,count):
-                        area=int(stats[label,cv2.CC_STAT_AREA])
-                        if area<12: continue
-                        x,y=centroids[label]
-                        distance=((x-cx)**2+(y-cy)**2)**.5
-                        candidates.append((area,distance,label))
-                    if candidates:
-                        # Prefer the dominant silhouette; centered distance is
-                        # the tie-breaker for stray neighboring-cell fragments.
-                        main=max(candidates,key=lambda item:(item[0],-item[1]))[2]
+                    cx0,cx1=x0-sx0,x1-sx0
+                    cy0,cy1=y0-sy0,y1-sy0
+                    central=labels[cy0:cy1,cx0:cx1]
+                    core_counts=np.bincount(central.ravel(),minlength=count)
+                    core_counts[0]=0
+                    main=int(np.argmax(core_counts))
+                    if core_counts[main]>0:
                         core=(labels==main).astype("uint8")
                         near=cv2.dilate(core,np.ones((3,3),np.uint8),iterations=1)>0
                         keep|=labels==main
-                        for area,distance,label in candidates:
-                            if label!=main and np.any(near & (labels==label)):
+                        for label in range(1,count):
+                            if label==main: continue
+                            area=int(stats[label,cv2.CC_STAT_AREA])
+                            if area>=12 and np.any(near & (labels==label)):
                                 keep|=labels==label
                 tile[:,:,3]=np.where(keep,255,0)
                 sprite=Image.fromarray(tile,"RGBA"); bounds=sprite.getchannel("A").getbbox()
