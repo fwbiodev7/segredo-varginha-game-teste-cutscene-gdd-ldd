@@ -143,6 +143,20 @@ namespace Game.Tests.PlayMode
             yield return Capture("compact-continue-next-chapter");
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
+        [UnityTest,Timeout(60000)] public IEnumerator ContinuationContinueOpensAndAdvancesToTheNextChapter()
+        {
+            var story=new CampaignStory{phase=14};story.continuation.solved[3]=true;CampaignStorySave.Write(story);
+            yield return SceneManager.LoadSceneAsync(CampaignContinuationDefinition.SceneName(14));yield return new WaitForSeconds(3.2f);
+            var c=CampaignContinuationController.Active;c.CloseMessage();c.Interact("exit");
+            yield return Capture("continuation-chapter-complete");
+            Assert.That(c.ContinueChapter(),Is.True,"The saved chapter completion advances once.");
+            Assert.That(c.ContinueChapter(),Is.False,"Repeated submit cannot queue another chapter.");
+            float deadline=Time.realtimeSinceStartup+15;while(CampaignCinematics.IsTransitioning&&Time.realtimeSinceStartup<deadline)yield return null;
+            Assert.That(CampaignStorySave.Load().phase,Is.EqualTo(15));
+            yield return new WaitForSecondsRealtime(3.5f);CampaignContinuationController.Active?.CloseMessage();
+            CampaignExpansionController.Active?.ClosePanel();yield return Capture("continuation-next-chapter");
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
         [UnityTest,Timeout(120000)] public IEnumerator BookCanBeReassembledLinkedSavedAndCorrectedWithController()
         {
             CampaignStorySave.Write(new CampaignStory{phase=8});
