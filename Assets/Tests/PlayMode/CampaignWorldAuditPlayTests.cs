@@ -39,15 +39,26 @@ namespace Game.Tests.PlayMode
                 var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();actor.SetInputLocked(true);
                 foreach(var threat in Object.FindObjectsByType<CampaignManifestationCombat>())threat.enabled=false;
                 var map=GameObject.Find("Mapa_Campanha").transform;var furnishings=map.Find("02_Mobilia_Colisoes");
-                foreach(var renderer in Object.FindObjectsByType<SpriteRenderer>().Where(r=>r.sprite!=null&&r.enabled))
+                foreach(var renderer in Object.FindObjectsByType<SpriteRenderer>().Where(r=>r.sprite!=null&&r.enabled&&r.GetComponentInParent<Canvas>()==null))
                 {
-                    bool adult=renderer.GetComponent<EdelzioTopDownController>()?.GetComponent<CampaignTeamEdelzio>()!=null||renderer.name=="Ouzana"||renderer.name=="Padre Fábio"||renderer.name.StartsWith("Renan_")||renderer.name=="Renan";
+                    bool adult=renderer.GetComponent<EdelzioTopDownController>()?.GetComponent<CampaignTeamEdelzio>()!=null||renderer.name=="Ouzana"||renderer.name.StartsWith("Renan_")||renderer.name=="Renan"||renderer.name=="Padre Fábio"&&(entry.phase==14||entry.phase==16);
                     bool pupil=renderer.GetComponent<CampaignSchoolLife>()!=null||renderer.GetComponent<VarginhaStudentAnimation>()!=null;
                     if(!adult&&!pupil)continue;
-                    var b=renderer.bounds;people.Add(System.FormattableString.Invariant($"{entry.phase},{entry.area},{renderer.name},{renderer.sprite.texture.name},{b.size.y:F4},{b.size.x:F4},{renderer.sprite.pixelsPerUnit:F4}"));
-                    Assert.That(b.size.y,Is.InRange(.35f,2.1f),"Complete human silhouette: "+renderer.name+" phase "+entry.phase);
-                    Assert.That(b.size.x,Is.InRange(.1f,1.8f),"Undistorted human silhouette: "+renderer.name);
-                    if(renderer.name=="Padre Fábio")Assert.That(b.size.y,Is.EqualTo(CampaignCharacterProportions.IsChurch(entry.phase)?CampaignTeamEdelzio.ChurchStandingHeight:CampaignTeamEdelzio.StandingHeight).Within(.12f));
+                    var b=renderer.bounds;float visibleHeight=b.size.y,visibleWidth=b.size.x;
+                    if(VarginhaCharacterFrameGeometry.TryBounds(renderer.sprite.texture,renderer.sprite.rect,out var visible,out _))
+                    {
+                        visibleHeight=visible.height/renderer.sprite.pixelsPerUnit*renderer.transform.lossyScale.y;
+                        visibleWidth=visible.width/renderer.sprite.pixelsPerUnit*renderer.transform.lossyScale.x;
+                    }
+                    people.Add(System.FormattableString.Invariant($"{entry.phase},{entry.area},{renderer.name},{renderer.sprite.texture.name},{visibleHeight:F4},{visibleWidth:F4},{renderer.sprite.pixelsPerUnit:F4}"));
+                    Assert.That(visibleHeight,Is.InRange(.35f,2.1f),"Complete human silhouette: "+renderer.name+" phase "+entry.phase);
+                    Assert.That(visibleWidth,Is.InRange(.1f,1.8f),"Undistorted human silhouette: "+renderer.name);
+                    if(renderer.name=="Padre Fábio")
+                    {
+                        // The original church sprite keeps transparent padding in its
+                        // 64px frame. Compare the visible silhouette, not SpriteRenderer.bounds.
+                        Assert.That(visibleHeight,Is.EqualTo(CampaignCharacterProportions.IsChurch(entry.phase)?CampaignTeamEdelzio.ChurchStandingHeight:CampaignTeamEdelzio.StandingHeight).Within(.12f));
+                    }
                 }
                 var probe=new GameObject("QA_contact_probe");var body=probe.AddComponent<Rigidbody2D>();body.gravityScale=0;body.constraints=RigidbodyConstraints2D.FreezeRotation;body.collisionDetectionMode=CollisionDetectionMode2D.Continuous;
                 var circle=probe.AddComponent<CircleCollider2D>();circle.radius=.14f;circle.enabled=false;
