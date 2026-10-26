@@ -29,7 +29,7 @@ Shader "Varginha/IllustratedMorning"
                     // Remove the old chair silhouette with a rounded edge while
                     // retaining enough margin to cover its legs and floor shadow.
                     float distance=roundedBoxDistance(p,float2(85,530),float2(32,38),18.0);
-                    float coverage=1-smoothstep(-2.0,10.0,distance);
+                    float coverage=1-smoothstep(-4.0,20.0,distance);
                     // Sample from nearby uncovered floor so its plank lighting blends
                     // with the repaired seat area instead of importing a distant patch.
                     fixed4 floor=tex2D(_MainTex,i.uv+float2(80.0/1889,0))*i.color;

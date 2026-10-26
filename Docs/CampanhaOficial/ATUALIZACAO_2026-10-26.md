@@ -12,7 +12,7 @@ Auditoria global de colisões e proporções no Player terminou aprovada (1/1), 
 
 Também foi salva a lista detalhada de estados e próximos passos em `PENDENCIAS_REVISAO_MESTRE_2026-10-26.md`. A apresentação de daily ainda precisa receber as atualizações posteriores a 23/10. A abertura do HTML local foi recusada pela política do navegador para `file://`; não foi tentado contornar essa restrição. O roteiro completo para a apresentação de 30/10 continua previsto depois de concluir e validar a revisão.
 
-Após inspecionar a captura do notebook, o shader passou a amostrar o piso próximo à cadeira, reduzindo a diferença de iluminação do recorte. `office-nearby-floor-player-valid.xml` confirmou 1/1 aprovação no Player. A emenda continua perceptível na imagem atualizada, portanto o item 02 permanece Parcial. Captura: `output/revisao-final-2026-10-26/world-review/office-notebook-seated.png`.
+Após inspecionar a captura do notebook, o shader passou a amostrar o piso próximo à cadeira e usa uma transição arredondada de 24 px. `office-nearby-floor-player-valid.xml` e `office-feathered-floor-player.xml` confirmaram 1/1 no Player. A borda está mais suave e as pernas continuam ocultas, mas ainda há mudança de piso visível ao redor da cadeira; item 02 permanece Parcial. Captura: `output/revisao-final-2026-10-26/world-review/office-notebook-seated.png`.
 
 O item 04, recuperação após glitch, foi concluído: `visual-fixed.xml` aprovou 1/1 a sequência de três glitches, e comparei antes, pico e recuperação. A cena recuperada volta à luminância-base dentro de 0,025; `vehicle-glitch-playmode.xml` já havia confirmado que desativação, reconfiguração e cancelamento limpam os estados visuais e de áudio.
 
