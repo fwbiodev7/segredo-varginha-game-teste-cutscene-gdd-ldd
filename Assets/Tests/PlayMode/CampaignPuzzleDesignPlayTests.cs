@@ -138,6 +138,9 @@ namespace Game.Tests.PlayMode
             float deadline=Time.realtimeSinceStartup+15;
             while(CampaignCinematics.IsTransitioning&&Time.realtimeSinceStartup<deadline)yield return null;
             Assert.That(CampaignStorySave.Load().phase,Is.EqualTo(7));
+            yield return new WaitForSecondsRealtime(3.5f);
+            CampaignExpansionController.Active?.ClosePanel();CampaignContinuationController.Active?.CloseMessage();
+            yield return Capture("compact-continue-next-chapter");
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
         [UnityTest,Timeout(120000)] public IEnumerator BookCanBeReassembledLinkedSavedAndCorrectedWithController()
