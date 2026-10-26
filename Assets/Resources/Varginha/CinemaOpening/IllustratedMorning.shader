@@ -12,6 +12,11 @@ Shader "Varginha/IllustratedMorning"
             #pragma fragment frag
             #include "UnityCG.cginc"
             sampler2D _MainTex;fixed4 _Color;float _ReferenceMap,_OfficeFloor;
+            float roundedBoxDistance(float2 p,float2 center,float2 halfSize,float radius)
+            {
+                float2 q=abs(p-center)-halfSize+radius;
+                return length(max(q,0.0))+min(max(q.x,q.y),0.0)-radius;
+            }
             struct Input{float4 vertex:POSITION;float2 uv:TEXCOORD0;fixed4 color:COLOR;};
             struct Output{float4 vertex:SV_POSITION;float2 uv:TEXCOORD0;fixed4 color:COLOR;};
             Output vert(Input v){Output o;o.vertex=UnityObjectToClipPos(v.vertex);o.uv=v.uv;o.color=v.color*_Color;return o;}
@@ -21,8 +26,10 @@ Shader "Varginha/IllustratedMorning"
                 float2 p=float2(i.uv.x*1889,(1-i.uv.y)*833);
                 if(_OfficeFloor>.5)
                 {
-                    float2 outside=max(float2(54,494)-p,p-float2(116,566));
-                    float coverage=1-saturate(max(outside.x,outside.y)/8);
+                    // Remove the old chair silhouette with a rounded edge while
+                    // retaining enough margin to cover its legs and floor shadow.
+                    float distance=roundedBoxDistance(p,float2(85,530),float2(32,38),18.0);
+                    float coverage=1-smoothstep(-2.0,10.0,distance);
                     fixed4 floor=tex2D(_MainTex,i.uv+float2(160.0/1889,0))*i.color;
                     c=lerp(c,floor,coverage);
                 }
