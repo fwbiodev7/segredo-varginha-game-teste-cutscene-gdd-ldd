@@ -96,19 +96,25 @@ namespace Game.Tests.PlayMode
 
         [UnityTest] public IEnumerator EdelzioCompactOriginalWalkAndPunchFramesRenderWhole()
         {
+            int[] walkColumns={0,1,3};
             var walk=new List<Sprite>();var punch=new List<Sprite>();
             foreach(bool equipped in new[]{false,true})for(int direction=0;direction<4;direction++)
             {
-                for(int frame=0;frame<4;frame++)walk.Add(CampaignTeamEdelzio.Frame("EdelzioWalk",direction,frame,equipped));
+                foreach(int frame in walkColumns)walk.Add(CampaignTeamEdelzio.Frame("EdelzioWalk",direction,frame,equipped));
                 for(int frame=0;frame<3;frame++)punch.Add(CampaignTeamEdelzio.Frame("EdelzioPunch",direction,frame,equipped));
             }
             yield return null;
             foreach(var sprite in walk)ValidateOriginalFrame(sprite);
             foreach(var sprite in punch)ValidateOriginalFrame(sprite);
+            Assert.That(CampaignTeamEdelzio.WalkFrameAt(0f),Is.EqualTo(0));
+            Assert.That(CampaignTeamEdelzio.WalkFrameAt(.2f),Is.EqualTo(1));
+            Assert.That(CampaignTeamEdelzio.WalkFrameAt(.4f),Is.EqualTo(3));
             for(int direction=0;direction<4;direction++)
             {
-                yield return Capture(walk[direction*4+1],$"Edelzio_Original_Walk_{direction}.png",.1f);
-                yield return Capture(punch[direction*3+1],$"Edelzio_Original_Punch_{direction}.png",.1f);
+                for(int frame=0;frame<walkColumns.Length;frame++)
+                    yield return Capture(CampaignTeamEdelzio.Frame("EdelzioWalk",direction,walkColumns[frame]),$"Edelzio_Walk_D{direction}_F{frame}.png",.1f);
+                for(int frame=0;frame<3;frame++)
+                    yield return Capture(CampaignTeamEdelzio.Frame("EdelzioPunch",direction,frame),$"Edelzio_Punch_D{direction}_F{frame}.png",.1f);
             }
         }
 

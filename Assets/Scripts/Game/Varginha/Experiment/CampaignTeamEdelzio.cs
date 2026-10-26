@@ -26,8 +26,6 @@ namespace Game.Varginha.Experiment
             int[] frames={0,1,2,3,2,3,2,1,0};return frames[Mathf.Clamp((int)(time/.18f),0,frames.Length-1)];
         }
         public static float CurrentStandingHeight => IsChurch ? ChurchStandingHeight : StandingHeight;
-        private bool _wasPunching;
-        private float _punchStarted;
         private string _lastInteraction;
         private float _interactionStarted;
         private float _jumpStarted = -100, _nextJump;
@@ -70,23 +68,10 @@ namespace Game.Varginha.Experiment
             Vector2 face=acting?_actions.ActionFacingDirection:_actor.FacingDirection;
             int direction=Mathf.Abs(face.y)>=Mathf.Abs(face.x)?face.y>0?3:0:face.x<0?1:2;
             bool punching=_actions!=null&&_actions.IsPunching;
-            if(punching&&!_wasPunching)_punchStarted=Time.time;
-            _wasPunching=punching;
             string interaction=acting?_actions.CurrentActionPose:null;
             if(interaction!=_lastInteraction){_interactionStarted=Time.time;_lastInteraction=interaction;}
             Sprite pose;
-            if(punching)
-            {
-                float elapsed=Time.time-_punchStarted;
-                // The visible campaign sheet has four authored poses. Follow the
-                // attack's actual phase, including every buffered follow-up; one
-                // wall clock across the whole combo used to stick on its last pose.
-                int punchFrame=_actions.CombatFrame>=0?_actions.CombatFrame switch
-                    {0=>0,1 or 2=>1,3=>2,4=>3,_=>0}
-                    :elapsed<.10f?0:elapsed<.18f?1:elapsed<.23f?2:3;
-                pose=StoryFrame("Punch",direction,punchFrame+(equipped?4:0));
-            }
-            else if(acting && interaction=="Edelzio_WashFace")
+            if(acting && interaction=="Edelzio_WashFace")
                 pose=StoryFrame(equipped?"LifeGray":"Life",direction,8+WashFrame(Time.time-_interactionStarted));
             else if(_actions!=null&&_actions.IsSeated)
                 pose=face.y>.5f&&GetComponent<CampaignSeatingLayers>()?.IsOfficeSeat==true
@@ -97,7 +82,7 @@ namespace Game.Varginha.Experiment
                 pose=Frame("EdelzioInteractions",direction,(_actions.CurrentActionPose=="Edelzio_Reach"?3:0)+Mathf.Clamp((int)((Time.time-_interactionStarted)*8),0,2),equipped);
             else
             {
-                int frame=_actor.IsMoving&&!_actor.IsInputLocked?(int)(Time.time*7)%4:1;
+                int frame=_actor.IsMoving&&!_actor.IsInputLocked?WalkFrameAt(Time.time):1;
                 if(IsJumping) pose=StoryFrame(equipped?"LifeGray":"Life",direction,4+Mathf.Clamp((int)((Time.time-_jumpStarted)*8.4f),0,3));
                 else if(!_actor.IsMoving || _actor.IsInputLocked)
                 {
@@ -130,6 +115,11 @@ namespace Game.Varginha.Experiment
             foreach(Transform part in transform)if(part.name.Contains("Beard")||part.name.Contains("Barba"))part.gameObject.SetActive(false);
         }
         public static Sprite Idle=>Frame("EdelzioIdle",0,0);
+        // Three carefully selected source poses retain the alternating stride
+        // while avoiding the visually redundant fourth pose. 5.25 FPS keeps
+        // the original four-pose cycle's overall duration (4 / 7 seconds).
+        public static int WalkFrameAt(float time)
+            => ((int)(time*5.25f)%3) switch {0=>0,1=>1,_=>3};
         private static Sprite StoryFrame(string name,int row,int column)
             => CampaignStorySprites.Frame(name,row,column,churchScale:IsChurch);
         public static Sprite Frame(string name,int row,int column,bool withBackpack=false)
