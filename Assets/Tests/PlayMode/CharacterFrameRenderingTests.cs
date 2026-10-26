@@ -94,6 +94,24 @@ namespace Game.Tests.PlayMode
             File.WriteAllText(Folder+"/LegacyFramesCount.txt",sprites.Count.ToString());
         }
 
+        [UnityTest] public IEnumerator EdelzioCompactOriginalWalkAndPunchFramesRenderWhole()
+        {
+            var walk=new List<Sprite>();var punch=new List<Sprite>();
+            foreach(bool equipped in new[]{false,true})for(int direction=0;direction<4;direction++)
+            {
+                for(int frame=0;frame<4;frame++)walk.Add(CampaignTeamEdelzio.Frame("EdelzioWalk",direction,frame,equipped));
+                for(int frame=0;frame<3;frame++)punch.Add(CampaignTeamEdelzio.Frame("EdelzioPunch",direction,frame,equipped));
+            }
+            yield return null;
+            foreach(var sprite in walk)ValidateOriginalFrame(sprite);
+            foreach(var sprite in punch)ValidateOriginalFrame(sprite);
+            for(int direction=0;direction<4;direction++)
+            {
+                yield return Capture(walk[direction*4+1],$"Edelzio_Original_Walk_{direction}.png",.1f);
+                yield return Capture(punch[direction*3+1],$"Edelzio_Original_Punch_{direction}.png",.1f);
+            }
+        }
+
         [UnityTest,Timeout(180000)] public IEnumerator RendersEveryDirectional20261026FrameThroughUnitySpriteRenderer()
         {
             string[] names={"Edelzio","EdelzioNoBag","EdelzioChild","Renan","PadreFabio","Yasmin","Pedro","Matias","AnaTavares","AnnaSabia","Marcos","LuisMartins","LuisMiguelMessias","Fabio","ManifestationBoss"};
@@ -166,6 +184,11 @@ namespace Game.Tests.PlayMode
                 Assert.That(Vector2.Distance(expected,uv[i]),Is.LessThan(.0001f),sprite.name+" UV drift");
                 Assert.That(uv[i].x,Is.InRange(-.000001f,1.000001f),sprite.name);Assert.That(uv[i].y,Is.InRange(-.000001f,1.000001f),sprite.name);
             }
+        }
+        static void ValidateOriginalFrame(Sprite sprite)
+        {
+            Assert.That(sprite,Is.Not.Null,"A compact Edelzio source frame must exist.");
+            Validate(sprite);
         }
         static IEnumerator Capture(Sprite sprite,string file,float centreY)
         {

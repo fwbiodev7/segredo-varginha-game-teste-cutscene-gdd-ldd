@@ -101,22 +101,19 @@ namespace Game.Varginha.Experiment
                 if(IsJumping) pose=StoryFrame(equipped?"LifeGray":"Life",direction,4+Mathf.Clamp((int)((Time.time-_jumpStarted)*8.4f),0,3));
                 else if(!_actor.IsMoving || _actor.IsInputLocked)
                 {
-                    float cycle=Time.time%3.6f;
-                    int breath=cycle>3.45f?3:Mathf.FloorToInt(cycle*1.5f)%3;
-                    pose=StoryFrame(equipped?"LifeGray":"Life",direction,breath);
+                    // Keep the compact approved walk strip as the idle pose too;
+                    // the generated life atlas has clipped details around feet.
+                    pose=Frame("EdelzioWalk",direction,1,equipped);
                 }
                 else pose=Frame("EdelzioWalk",direction,frame,equipped);
             }
-            string directionalName="Directional20261026/"+(equipped?"Edelzio":"EdelzioNoBag");
             if(punching)
             {
-                int attackColumn=4+Mathf.Clamp(_actions.CombatFrame,0,3);
-                pose=StoryFrame(directionalName,CampaignStorySprites.EightDirection(face),attackColumn);
-            }
-            else if(!acting&&!IsJumping&&_actions?.IsDrinking!=true&&_actions?.IsSeated!=true)
-            {
-                int walkColumn=_actor.IsMoving&&!_actor.IsInputLocked?(int)(Time.time*7f)%4:0;
-                pose=StoryFrame(directionalName,CampaignStorySprites.EightDirection(face),walkColumn);
+                // Use the compact approved four-direction attack strip. The
+                // generated 8x8 sheet has incomplete limb pixels, so it must
+                // not replace the complete original punches at runtime.
+                int attackFrame=_actions.CombatFrame switch {0=>0,1 or 2=>1,3=>2,_=>0};
+                pose=Frame("EdelzioPunch",direction,attackFrame,equipped);
             }
             if(pose!=null)
             {
