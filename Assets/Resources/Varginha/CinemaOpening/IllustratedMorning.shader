@@ -30,7 +30,9 @@ Shader "Varginha/IllustratedMorning"
                     // retaining enough margin to cover its legs and floor shadow.
                     float distance=roundedBoxDistance(p,float2(85,530),float2(32,38),18.0);
                     float coverage=1-smoothstep(-2.0,10.0,distance);
-                    fixed4 floor=tex2D(_MainTex,i.uv+float2(160.0/1889,0))*i.color;
+                    // Sample from nearby uncovered floor so its plank lighting blends
+                    // with the repaired seat area instead of importing a distant patch.
+                    fixed4 floor=tex2D(_MainTex,i.uv+float2(80.0/1889,0))*i.color;
                     c=lerp(c,floor,coverage);
                 }
                 bool yard=p.x>960;
