@@ -3,7 +3,7 @@ using Game.Varginha.Experiment;
 
 namespace Game.Varginha
 {
-    /// <summary>Distance-driven four-direction walk. Stops on a stable pose and never stretches pixels.</summary>
+    /// <summary>Distance-driven eight-direction walk with a compact three-pose cycle.</summary>
     [DisallowMultipleComponent]
     [RequireComponent(typeof(SpriteRenderer))]
     public sealed class VarginhaStudentAnimation : MonoBehaviour
@@ -50,7 +50,9 @@ namespace Game.Varginha
                     _direction = VarginhaStudentSprites.Direction(movement);
                 _artDirection=CampaignStorySprites.EightDirection(movement);
                 _stride += Mathf.Max(Time.deltaTime * 8.5f, distance * 4.0f);
-                Present(Mathf.FloorToInt(_stride) & 3);
+                // Keep the original four-pose gait duration while presenting three
+                // authored poses, matching the compact Edelzio walk cycle.
+                Present(Mathf.FloorToInt(_stride * .75f) % 3);
             }
             else
             {
@@ -63,9 +65,10 @@ namespace Game.Varginha
         {
             var asset=VarginhaStudentSprites.AssetName(_student);
             var directional="Directional20261026/"+asset;
+            int sourceFrame=CampaignStorySprites.WalkColumn(frame);
             var sprite=Resources.Load<TextAsset>("Varginha/StoryCharacters/"+directional)!=null
-                ?CampaignStorySprites.Frame(directional,_artDirection,frame)
-                :VarginhaStudentSprites.Frame(_student, _direction, frame);
+                ?CampaignStorySprites.Frame(directional,_artDirection,sourceFrame)
+                :VarginhaStudentSprites.Frame(_student, _direction, sourceFrame);
             if (sprite == null) return;
             FrameIndex = frame;
             _renderer.sprite = sprite;

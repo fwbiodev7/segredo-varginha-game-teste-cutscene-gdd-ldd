@@ -47,18 +47,23 @@ namespace Game.Varginha.Experiment
             paper.transform.position = (Vector3)(Position(407,325,new Vector2(-1,1)) - Vector2.up*.5f);
             var scrap=paper.AddComponent<SpriteRenderer>();
             scrap.sprite=CampaignHouseArt.Frame(2);
-            paper.transform.localScale=Vector3.one*.42f;scrap.sortingOrder=4;
+            paper.transform.localScale=Vector3.one*.58f;scrap.sortingOrder=4;
             VarginhaWorldDepth.Ensure(scrap);
             if(layout!=null)
             {
                 // Reuse the received paper artwork as a visible, local trail toward the bed.
                 var trail=new[]{new Vector2(355,309),new Vector2(300,291),new Vector2(242,275)};
+                var scales=new[]{.54f,.60f,.66f};
+                var rotations=new[]{-13f,9f,-6f};
                 for(int i=0;i<trail.Length;i++)
                 {
-                    var piece=new GameObject("Papel_Rastro_"+i);piece.transform.SetParent(paper.transform);
+                    // Keep every scrap in world scale: inheriting the main clue's
+                    // scale made the trail tiny and visually merge into one mark.
+                    var piece=new GameObject("Papel_Rastro_"+i);piece.transform.SetParent(transform);
                     piece.transform.position=layout.Position(trail[i].x,trail[i].y);
-                    piece.transform.localScale=Vector3.one*(.45f+i*.08f);
-                    var art=piece.AddComponent<SpriteRenderer>();art.sprite=scrap.sprite;VarginhaWorldDepth.Ensure(art);
+                    piece.transform.localScale=Vector3.one*scales[i];
+                    piece.transform.rotation=Quaternion.Euler(0,0,rotations[i]);
+                    var art=piece.AddComponent<SpriteRenderer>();art.sprite=scrap.sprite;art.sortingOrder=5+i;VarginhaWorldDepth.Ensure(art);
                 }
             }
             paper.SetActive(_progress.house.Missing);

@@ -32,7 +32,7 @@ namespace Game.Varginha.Experiment
             if(name=="Fabio"&&variant==1)return null;
             string sheet="Directional20261026/"+name;
             if(Resources.Load<TextAsset>("Varginha/StoryCharacters/"+sheet)==null)return null;
-            int column=stage<=0?4:stage==1?5:stage==2?6:7;
+            int column=CampaignStorySprites.AttackColumn(stage<=0?0:stage==1?1:2);
             return CampaignStorySprites.Frame(sheet,CampaignStorySprites.EightDirection(facing),column);
         }
         public static Sprite Effect(string student,int variant,int stage)

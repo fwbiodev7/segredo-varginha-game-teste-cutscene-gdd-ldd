@@ -155,7 +155,8 @@ namespace Game.Varginha.Experiment
                 var point=ArrivalFootPosition(time,reduced);var next=ArrivalFootPosition(time+.08f,reduced);
                 var delta=next-point;int row=Mathf.Abs(delta.y)>Mathf.Abs(delta.x)?(delta.y>0?3:0):(delta.x<0?1:2);
                 bool walking=!reduced&&time<5.5f;
-                var actor=CampaignStorySprites.Frame("WalkGray",row,walking?Mathf.FloorToInt(time*7)%4:0);
+                int walkPose=walking?Mathf.FloorToInt(time*5.25f)%3:0;
+                var actor=CampaignStorySprites.Frame("WalkGray",row,walking?CampaignStorySprites.WalkColumn(walkPose):0);
                 if(actor!=null)DrawActor(actor,ScreenPoint(Image(point)),CampaignTeamEdelzio.StandingHeight/_schoolLayout.Scale*scale/actor.rect.height);
             }
             // Foreground car naturally occludes the first step out of its door.

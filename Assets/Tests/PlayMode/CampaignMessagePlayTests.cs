@@ -154,7 +154,20 @@ namespace Game.Tests.PlayMode
             actor.GetComponent<Rigidbody2D>().position=CampaignIllustratedMaps.Get(2).Objective("bag")+Vector2.up*.58f;
             yield return new WaitForFixedUpdate();stage.Interact("bag");yield return WaitAction(stage);
             Assert.That(stage.Progress.house.Missing,Is.True);Assert.That(stage.Progress.routine&8,Is.EqualTo(8));
-            Assert.That(stage.transform.Find("Vestigio_Papel_Quarto").childCount,Is.EqualTo(3));
+            var mainPaper=stage.transform.Find("Vestigio_Papel_Quarto");
+            Assert.That(mainPaper,Is.Not.Null);
+            var previousPaper=mainPaper.GetComponent<SpriteRenderer>();
+            var trailPieces=new Transform[3];
+            for(int i=0;i<trailPieces.Length;i++)
+            {
+                trailPieces[i]=stage.transform.Find("Papel_Rastro_"+i);
+                Assert.That(trailPieces[i],Is.Not.Null,"Each clue scrap must be a separately scaled world object.");
+                Assert.That(trailPieces[i].parent,Is.EqualTo(stage.transform));
+                Assert.That(trailPieces[i].GetComponent<SpriteRenderer>().sprite,Is.EqualTo(previousPaper.sprite));
+                Assert.That(trailPieces[i].localScale.x,Is.GreaterThan(.5f));
+                if(i>0)Assert.That(Vector2.Distance(trailPieces[i-1].position,trailPieces[i].position),Is.GreaterThan(.7f));
+            }
+            Assert.That(trailPieces[0].eulerAngles.z,Is.Not.EqualTo(trailPieces[1].eulerAngles.z),"Distinct paper angles keep the clue trail readable.");
             foreach(string id in new[]{"counter","exitclue","paperclue"}){stage.Interact(id);stage.CloseDialogue();}
             Assert.That(stage.SubmitKeyConclusion(1),Is.True);stage.CloseDialogue();stage.Interact("box");yield return WaitAction(stage);
             Assert.That(stage.Progress.boxFound,Is.True);stage.FinishCutscene();

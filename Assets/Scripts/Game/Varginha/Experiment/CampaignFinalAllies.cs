@@ -153,9 +153,9 @@ namespace Game.Varginha.Experiment
    while(t<duration)
    {
     if(!CombatActive)break;if(!Running){yield return null;continue;}t+=Time.deltaTime;float u=Mathf.Clamp01(t/duration);
-    if(i==1)actor.sprite=CampaignOuzanaVisual.Attack(facing,t<.09f?3:t<.19f?4:5);
-    else if(i==0)actor.sprite=CampaignStorySprites.Frame("Directional20261026/Renan",CampaignStorySprites.EightDirection(facing),u<.35f?5:u<.7f?6:7);
-    else actor.sprite=CampaignStorySprites.Frame("Directional20261026/PadreFabio",CampaignStorySprites.EightDirection(facing),5);
+    if(i==1)actor.sprite=CampaignOuzanaVisual.Attack(facing,t<.19f?1:2);
+    else if(i==0)actor.sprite=CampaignStorySprites.Frame("Directional20261026/Renan",CampaignStorySprites.EightDirection(facing),u<.7f?5:7);
+    else actor.sprite=CampaignStorySprites.Frame("Directional20261026/PadreFabio",CampaignStorySprites.EightDirection(facing),u<.7f?5:7);
     int frame=i==0?Mathf.Min(3,(int)(u*4)):i==1?Mathf.Min(1,(int)(u*2)):t<.5f?Mathf.Min(2,(int)(t*6)):3+(VarginhaGameSettings.Current.reducedMotion?0:(int)(t*2)%2);
     fx.sprite=Effect(i,frame);
     if(i==1)go.transform.position=Vector2.Lerp(start,end,u)+Vector2.up*Mathf.Sin(u*Mathf.PI)*1.2f;

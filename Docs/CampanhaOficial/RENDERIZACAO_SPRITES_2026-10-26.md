@@ -22,3 +22,18 @@ Nenhuma cena foi editada. A validação de floresta carrega a fase 7 em runtime;
 - Prévia dos 64 quadros do Edelzio inspecionada visualmente após a importação no Unity.
 
 Logs, XMLs e capturas completos estão em `output/revisao-final-2026-10-26/`; são evidências locais de QA e não fazem parte dos recursos do jogo.
+
+## Ajustes de recorte, ciclos e papéis da fase 2
+
+Na revisão seguinte, os 15 atlas direcionais passaram a usar os retângulos completos declarados em seus manifestos, com malha Full Rect. Isso preserva pixels de cabelo, mãos, roupas e calçados que podiam ser descartados pela geometria apertada. A caminhada percorre três poses selecionadas (0, 1 e 3) mantendo a duração do ciclo anterior; ataques direcionais usam preparação, impacto e recuperação (colunas 4, 5 e 7). O mesmo padrão foi aplicado à Ouzana, ao padre e ao Renan no combate final, às manifestações maior e menor, e à entidade híbrida da floresta. O desenho original e as regras de combate foram preservados.
+
+Na investigação da fase 2, o papel principal e os três fragmentos agora têm tamanho legível, rotação variada e posição independente no mundo. Antes, os fragmentos herdavam a escala reduzida do papel principal e podiam parecer sobrepostos. Eles continuam surgindo somente quando a pista está ativa.
+
+Arquivos de código alterados: `CampaignStorySprites.cs`, `VarginhaStudentAnimation.cs`, `CampaignHeroArt.cs`, `CampaignOuzanaVisual.cs`, `CampaignFinalAllies.cs`, `CampaignManifestationCombat.cs`, `CampaignExpansionController.cs`, `CampaignFuscaCinema.cs` e `CampaignHouseSequence.cs`. Os testes de renderização e integração correspondentes foram atualizados em `CharacterFrameRenderingTests.cs` e `CampaignMessagePlayTests.cs`. Nenhuma cena ou textura-fonte foi editada.
+
+Verificação adicional em 26/10/2026:
+
+- Unity PlayMode (Editor): 6 testes passaram, incluindo renderização dos 960 quadros dos 15 atlas e validação dos quadros completos da Ouzana e da entidade da floresta.
+- Unity PlayMode (Player Windows): os mesmos 6 testes passaram.
+- Integração da fase 2: o percurso das pistas passou; confirmou sprites compartilhados, três fragmentos separados, escala independente e exibição condicional.
+- Prévias dos 15 atlas inspecionadas após renderização pelo `SpriteRenderer` do Unity. XMLs e imagens de evidência permanecem em `output/revisao-final-2026-10-26/`.

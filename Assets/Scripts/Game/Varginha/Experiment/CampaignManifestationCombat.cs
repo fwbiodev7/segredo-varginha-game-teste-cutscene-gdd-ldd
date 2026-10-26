@@ -84,10 +84,22 @@ namespace Game.Varginha.Experiment
         private void Pose(int direction,int pose,bool flow=false)
         {
             Sprite authored=null;
-            if(!_minor)
+            if(_minor)
+            {
+                int frame=pose<=1?CampaignStorySprites.WalkColumn(pose*2+(flow?1:0))
+                    :pose==2?2:pose==3?(flow?4:2):pose==4?4:5;
+                authored=CombatFrame(direction,frame,true);
+            }
+            else
             {
                 Vector2 facing=direction switch{1=>Vector2.left,2=>Vector2.up,3=>Vector2.right,_=>Vector2.down};
-                int frame=pose<=1?pose*2+(flow?1:0):pose==2?(flow?5:4):pose==3?(flow?7:6):pose==4?4:pose==5?6:7;
+                int frame=pose<=1
+                    ?CampaignStorySprites.WalkColumn(pose*2+(flow?1:0))
+                    :pose==2?CampaignStorySprites.AttackColumn(flow?1:0)
+                    :pose==3?CampaignStorySprites.AttackColumn(flow?2:1)
+                    :pose==4?CampaignStorySprites.AttackColumn(0)
+                    :pose==5?CampaignStorySprites.AttackColumn(flow?2:1)
+                    :CampaignStorySprites.AttackColumn(2);
                 authored=CampaignStorySprites.Frame("Directional20261026/ManifestationBoss",CampaignStorySprites.EightDirection(facing),frame);
             }
             _renderer.sprite=authored??(flow?FlowFrame(direction,pose,_minor):CombatFrame(direction,pose,_minor));
@@ -239,8 +251,8 @@ namespace Game.Varginha.Experiment
             if(_stage==0)
             {
                 if(delta.magnitude>1.3f)_walkTime+=Time.deltaTime;
-                int step=(int)(_walkTime*(_minor?10:7))%4;
-                if(delta.magnitude>1.3f)Pose(direction,step/2,step%2==1);else Pose(direction,0);
+                int step=(int)(_walkTime*(_minor?7.5f:5.25f))%3;
+                if(delta.magnitude>1.3f)PoseWalk(direction,step);else Pose(direction,0);
                 if(delta.magnitude>1.3f){_movementTarget=_player.transform.position;_movementSpeed=(_minor?2.3f:_enraged?1.55f:1.2f)*_speedScale;}
                 if(_timer>(_minor?2.2f:_enraged?2.35f:3f)*_intervalScale){_stage=1;_timer=0;_attackDirection=direction;_attackFacing=delta.normalized;_waveAttack=!_minor&&_attackCycle++%2==1;_target=_waveAttack?(Vector2)transform.position:(Vector2)_player.transform.position;_warning.transform.position=_target-Vector2.up*.58f;_warning.transform.localScale=Vector3.one*(_waveAttack?5.9f:_minor?1.6f:2.6f);_warning.enabled=true;}
             }
@@ -281,6 +293,7 @@ namespace Game.Varginha.Experiment
             if(_shock.enabled){float p=1-(_shockUntil-Time.time)/.6f;_shock.transform.localScale=Vector3.one*Mathf.Lerp(.3f,5.9f,p);_shock.color=new Color(.3f,.85f,1,1-p);if(Time.time>=_shockUntil)_shock.enabled=false;}
             if(!_minor&&Time.time>=_nextSpawn){_nextSpawn=Time.time+(_enraged?7:9);SpawnMinion();}
         }
+        private void PoseWalk(int direction,int frame)=>Pose(direction,frame==2?1:0,frame>0);
         private void FixedUpdate()
         {
             if(_entering||_exiting||Defeated||_player==null||_player.IsInputLocked||CampaignContinuationController.Active?.Modal==true||!_body.simulated){_repulsion=Vector2.zero;return;}

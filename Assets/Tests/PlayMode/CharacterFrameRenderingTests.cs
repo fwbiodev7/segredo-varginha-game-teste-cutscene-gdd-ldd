@@ -147,6 +147,9 @@ namespace Game.Tests.PlayMode
                         var renderer=renderers[row*8+col];
                         renderer.sprite=CampaignStorySprites.Frame("Directional20261026/"+name,row,col);
                         Assert.That(renderer.sprite,Is.Not.Null,name+" "+row+":"+col);
+                        Assert.That(renderer.sprite.rect.width,Is.EqualTo(sheet.frames[row*8+col].rect[2]),name+" frame width must match manifest bounds");
+                        Assert.That(renderer.sprite.rect.height,Is.EqualTo(sheet.frames[row*8+col].rect[3]),name+" frame height must match manifest bounds");
+                        Assert.That(renderer.sprite.vertices.Length,Is.EqualTo(4),name+" frame must retain its complete authored rectangle");
                         renderer.transform.localScale=name=="ManifestationBoss"?Vector3.one*.32f:Vector3.one;
                         float footY=(3.5f-row)*2.4f-.2f;
                         renderer.transform.position=new Vector3((col-3.5f)*2.4f,footY,0);
@@ -175,6 +178,34 @@ namespace Game.Tests.PlayMode
                 RenderTexture.active=previous;camera.targetTexture=null;target.Release();Object.Destroy(image);Object.Destroy(target);
                 foreach(var renderer in renderers)if(renderer!=null)Object.Destroy(renderer.gameObject);Object.Destroy(owner);
             }
+            yield return null;
+        }
+
+        [UnityTest] public IEnumerator OuzanaAndForestAnimationFramesKeepTheirFullAuthoredBounds()
+        {
+            foreach(var entry in new[]{("OuzanaWalkV2",8,6),("OuzanaAttackV2",8,6),("ForestPresenceHybridV1",8,4)})
+            {
+                var manifest=Resources.Load<TextAsset>("Varginha/StoryCharacters/"+entry.Item1);
+                Assert.That(manifest,Is.Not.Null,entry.Item1);
+                var sheet=JsonUtility.FromJson<Sheet>(manifest.text);
+                Assert.That(sheet.columns,Is.EqualTo(entry.Item3),entry.Item1+" authored columns");
+                Assert.That(sheet.rows,Is.EqualTo(entry.Item2),entry.Item1+" direction rows");
+                for(int row=0;row<sheet.rows;row++)for(int col=0;col<sheet.columns;col++)
+                {
+                    var sprite=CampaignStorySprites.Frame(entry.Item1,row,col);
+                    var source=sheet.frames[row*sheet.columns+col];
+                    Assert.That(sprite,Is.Not.Null,entry.Item1+" "+row+":"+col);
+                    Assert.That(sprite.rect.width,Is.EqualTo(source.rect[2]),entry.Item1+" frame width");
+                    Assert.That(sprite.rect.height,Is.EqualTo(source.rect[3]),entry.Item1+" frame height");
+                    Assert.That(sprite.vertices.Length,Is.EqualTo(4),entry.Item1+" frame keeps complete bounds");
+                }
+            }
+            Assert.That(CampaignStorySprites.WalkColumn(0),Is.EqualTo(0));
+            Assert.That(CampaignStorySprites.WalkColumn(1),Is.EqualTo(1));
+            Assert.That(CampaignStorySprites.WalkColumn(2),Is.EqualTo(3));
+            Assert.That(CampaignStorySprites.AttackColumn(0),Is.EqualTo(4));
+            Assert.That(CampaignStorySprites.AttackColumn(1),Is.EqualTo(5));
+            Assert.That(CampaignStorySprites.AttackColumn(2),Is.EqualTo(7));
             yield return null;
         }
 

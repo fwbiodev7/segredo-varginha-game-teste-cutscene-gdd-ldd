@@ -350,10 +350,10 @@ namespace Game.Varginha.Experiment
         private void SetForestPresencePose(Vector2 facing)
         {
             int direction=CampaignStorySprites.EightDirection(facing);
-            int frame=(int)(Time.time*8f)%4;
+            int frame=(int)(Time.time*6f)%3;
             if(direction==_presenceDirection&&frame==_presenceFrame)return;
             _presenceDirection=direction;_presenceFrame=frame;
-            _entity.sprite=CampaignStorySprites.Frame("ForestPresenceHybridV1",direction,frame);
+            _entity.sprite=CampaignStorySprites.Frame("ForestPresenceHybridV1",direction,CampaignStorySprites.WalkColumn(frame));
         }
         private void SetForestCheckpoint(Vector2 point)
         {

@@ -35,7 +35,8 @@ namespace Game.Varginha.Experiment
             float sx = (float)sheet.texture.width/sheet.data.width, sy = (float)sheet.texture.height/sheet.data.height;
             var body = new Rect(crop[0]*sx, (sheet.data.height-crop[1]-crop[3])*sy, crop[2]*sx, crop[3]*sy);
             float anchorX = f.anchorX*sx;
-            if (VarginhaCharacterFrameGeometry.TryBounds(sheet.texture,body,out var visible,out var centre))
+            bool preserveManifestRect = IsAnimationAtlas(name);
+            if (!preserveManifestRect && VarginhaCharacterFrameGeometry.TryBounds(sheet.texture,body,out var visible,out var centre))
             { body = visible; anchorX = centre; }
             var rect = body;
             if (portrait)
@@ -46,13 +47,22 @@ namespace Game.Varginha.Experiment
             float ppu = sheet.data.pixelsPerUnit[row]*sy;
             if (reduced) ppu /= CampaignTeamEdelzio.ChurchVisualScale;
             var pivot = new Vector2((anchorX-rect.x)/rect.width, portrait ? .5f : (.58f-f.lift)*ppu/rect.height);
-            sprite = VarginhaCharacterFrameGeometry.Create(sheet.texture, rect, pivot, ppu, 0, SpriteMeshType.FullRect);
+            // Directional atlases were authored with separated, tight per-frame bounds.
+            // A metadata-derived tight mesh could omit small detached pixels (hands,
+            // hair edges, shoes) even when the manifest rectangle contains them.
+            sprite = preserveManifestRect
+                ? Sprite.Create(sheet.texture, rect, pivot, ppu, 0, SpriteMeshType.FullRect)
+                : VarginhaCharacterFrameGeometry.Create(sheet.texture, rect, pivot, ppu, 0, SpriteMeshType.FullRect);
             sprite.name = "Team_V4_" + name + "_" + row + "_" + column + (portrait ? "_Head" : "");
             sheet.sprites[key] = sprite; return sprite;
         }
         private static bool IsEdelzio(string name) => name.StartsWith("Directional20261026/Edelzio",StringComparison.Ordinal)
             || name == "WalkGray" || name == "Life" || name == "LifeGray"
             || name == "Punch" || name == "Seated" || name == "SeatedGray" || name == "SeatedDeskNorth" || name == "Driving";
+        private static bool IsAnimationAtlas(string name) => name.StartsWith("Directional20261026/",StringComparison.Ordinal)
+            || name == "OuzanaWalkV2" || name == "OuzanaAttackV2" || name == "ForestPresenceHybridV1";
+        public static int WalkColumn(int frame) => frame switch { 0 => 0, 1 => 1, _ => 3 };
+        public static int AttackColumn(int frame) => frame switch { 0 => 4, 1 => 5, _ => 7 };
         public static int EightDirection(Vector2 face)
         {
             float angle = Mathf.Atan2(face.x,-face.y)*Mathf.Rad2Deg;
