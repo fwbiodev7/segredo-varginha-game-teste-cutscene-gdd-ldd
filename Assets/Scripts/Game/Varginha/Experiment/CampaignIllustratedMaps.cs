@@ -116,8 +116,7 @@ namespace Game.Varginha.Experiment
             var wallTexture=string.IsNullOrEmpty(data.architecture)?Texture(data.image):Texture(data.architecture);
             if(plan.phase==2)
             {
-                var interactiveBase=Resources.Load<Texture2D>("Varginha/HouseFurniture/AdultInteractiveSeatAligned")
-                    ??Resources.Load<Texture2D>("Varginha/HouseFurniture/AdultInteractiveBase");
+                var interactiveBase=Resources.Load<Texture2D>("Varginha/HouseFurniture/AdultInteractiveBase");
                 if(interactiveBase!=null){image=interactiveBase;wallTexture=interactiveBase;}
             }
             float tileHeight=data.height*data.Scale;

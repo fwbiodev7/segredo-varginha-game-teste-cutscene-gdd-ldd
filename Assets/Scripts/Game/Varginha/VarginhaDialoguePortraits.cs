@@ -15,6 +15,11 @@ namespace Game.Varginha
             string key = Normalize(speaker);
             if (Cache.TryGetValue(key, out var cached) && cached != null && cached.texture != null) return cached;
             Sprite portrait = null;
+            if(key=="ouzana")
+            {
+                portrait=Experiment.CampaignStorySprites.Frame("OuzanaAttackV2",0,5,true);
+                Cache[key]=portrait;return portrait;
+            }
             int referenceCell = key == "edelzio" ? 0 : key == "renan" ? 1 : key == "padre fabio" ? 2 : key == "ouzana" ? 3 : -1;
             if (referenceCell >= 0) portrait = Experiment.VarginhaExperimentArt.Body(referenceCell);
             if (portrait != null) { Cache[key] = portrait; return portrait; }

@@ -1,0 +1,654 @@
+{
+  "source": "reference-20261026-dark-brown-glasses",
+  "width": 1351,
+  "height": 1801,
+  "columns": 6,
+  "rows": 8,
+  "directions": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+  ],
+  "coordinateOrigin": "top-left",
+  "pixelsPerUnit": [
+    108,
+    108,
+    108,
+    108,
+    108,
+    108,
+    108,
+    108
+  ],
+  "frames": [
+    {
+      "rect": [
+        56,
+        52,
+        114,
+        151
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "attack",
+      "direction": "S",
+      "index": 0
+    },
+    {
+      "rect": [
+        279,
+        52,
+        119,
+        151
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "attack",
+      "direction": "S",
+      "index": 1
+    },
+    {
+      "rect": [
+        507,
+        52,
+        113,
+        151
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "attack",
+      "direction": "S",
+      "index": 2
+    },
+    {
+      "rect": [
+        738,
+        53,
+        100,
+        150
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "attack",
+      "direction": "S",
+      "index": 3
+    },
+    {
+      "rect": [
+        961,
+        53,
+        105,
+        150
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "attack",
+      "direction": "S",
+      "index": 4
+    },
+    {
+      "rect": [
+        1190,
+        52,
+        96,
+        151
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "attack",
+      "direction": "S",
+      "index": 5
+    },
+    {
+      "rect": [
+        58,
+        280,
+        109,
+        148
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "attack",
+      "direction": "SW",
+      "index": 0
+    },
+    {
+      "rect": [
+        278,
+        280,
+        120,
+        148
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "attack",
+      "direction": "SW",
+      "index": 1
+    },
+    {
+      "rect": [
+        508,
+        279,
+        110,
+        149
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "attack",
+      "direction": "SW",
+      "index": 2
+    },
+    {
+      "rect": [
+        731,
+        280,
+        114,
+        148
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "attack",
+      "direction": "SW",
+      "index": 3
+    },
+    {
+      "rect": [
+        959,
+        280,
+        107,
+        148
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "attack",
+      "direction": "SW",
+      "index": 4
+    },
+    {
+      "rect": [
+        1191,
+        280,
+        95,
+        148
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "attack",
+      "direction": "SW",
+      "index": 5
+    },
+    {
+      "rect": [
+        63,
+        504,
+        100,
+        149
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "attack",
+      "direction": "W",
+      "index": 0
+    },
+    {
+      "rect": [
+        281,
+        503,
+        115,
+        150
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "attack",
+      "direction": "W",
+      "index": 1
+    },
+    {
+      "rect": [
+        508,
+        503,
+        109,
+        150
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "attack",
+      "direction": "W",
+      "index": 2
+    },
+    {
+      "rect": [
+        726,
+        504,
+        124,
+        149
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "attack",
+      "direction": "W",
+      "index": 3
+    },
+    {
+      "rect": [
+        957,
+        504,
+        111,
+        149
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "attack",
+      "direction": "W",
+      "index": 4
+    },
+    {
+      "rect": [
+        1193,
+        506,
+        90,
+        147
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "attack",
+      "direction": "W",
+      "index": 5
+    },
+    {
+      "rect": [
+        60,
+        728,
+        107,
+        150
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "attack",
+      "direction": "NW",
+      "index": 0
+    },
+    {
+      "rect": [
+        276,
+        727,
+        124,
+        151
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "attack",
+      "direction": "NW",
+      "index": 1
+    },
+    {
+      "rect": [
+        513,
+        726,
+        100,
+        152
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "attack",
+      "direction": "NW",
+      "index": 2
+    },
+    {
+      "rect": [
+        724,
+        729,
+        129,
+        149
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "attack",
+      "direction": "NW",
+      "index": 3
+    },
+    {
+      "rect": [
+        952,
+        727,
+        121,
+        151
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "attack",
+      "direction": "NW",
+      "index": 4
+    },
+    {
+      "rect": [
+        1194,
+        728,
+        87,
+        150
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "attack",
+      "direction": "NW",
+      "index": 5
+    },
+    {
+      "rect": [
+        59,
+        949,
+        107,
+        154
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "attack",
+      "direction": "N",
+      "index": 0
+    },
+    {
+      "rect": [
+        279,
+        949,
+        118,
+        154
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "attack",
+      "direction": "N",
+      "index": 1
+    },
+    {
+      "rect": [
+        510,
+        946,
+        107,
+        157
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "attack",
+      "direction": "N",
+      "index": 2
+    },
+    {
+      "rect": [
+        741,
+        945,
+        93,
+        158
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "attack",
+      "direction": "N",
+      "index": 3
+    },
+    {
+      "rect": [
+        965,
+        947,
+        95,
+        156
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "attack",
+      "direction": "N",
+      "index": 4
+    },
+    {
+      "rect": [
+        1192,
+        949,
+        91,
+        154
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "attack",
+      "direction": "N",
+      "index": 5
+    },
+    {
+      "rect": [
+        59,
+        1178,
+        107,
+        150
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "attack",
+      "direction": "NE",
+      "index": 0
+    },
+    {
+      "rect": [
+        276,
+        1177,
+        124,
+        151
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "attack",
+      "direction": "NE",
+      "index": 1
+    },
+    {
+      "rect": [
+        513,
+        1176,
+        100,
+        152
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "attack",
+      "direction": "NE",
+      "index": 2
+    },
+    {
+      "rect": [
+        723,
+        1179,
+        129,
+        149
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "attack",
+      "direction": "NE",
+      "index": 3
+    },
+    {
+      "rect": [
+        953,
+        1177,
+        121,
+        151
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "attack",
+      "direction": "NE",
+      "index": 4
+    },
+    {
+      "rect": [
+        1195,
+        1178,
+        87,
+        150
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "attack",
+      "direction": "NE",
+      "index": 5
+    },
+    {
+      "rect": [
+        61,
+        1398,
+        103,
+        155
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "attack",
+      "direction": "E",
+      "index": 0
+    },
+    {
+      "rect": [
+        280,
+        1399,
+        115,
+        154
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "attack",
+      "direction": "E",
+      "index": 1
+    },
+    {
+      "rect": [
+        514,
+        1399,
+        98,
+        154
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "attack",
+      "direction": "E",
+      "index": 2
+    },
+    {
+      "rect": [
+        729,
+        1397,
+        118,
+        156
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "attack",
+      "direction": "E",
+      "index": 3
+    },
+    {
+      "rect": [
+        961,
+        1397,
+        105,
+        156
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "attack",
+      "direction": "E",
+      "index": 4
+    },
+    {
+      "rect": [
+        1192,
+        1398,
+        92,
+        155
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "attack",
+      "direction": "E",
+      "index": 5
+    },
+    {
+      "rect": [
+        60,
+        1626,
+        105,
+        152
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "attack",
+      "direction": "SE",
+      "index": 0
+    },
+    {
+      "rect": [
+        284,
+        1626,
+        108,
+        152
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "attack",
+      "direction": "SE",
+      "index": 1
+    },
+    {
+      "rect": [
+        508,
+        1624,
+        110,
+        154
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "attack",
+      "direction": "SE",
+      "index": 2
+    },
+    {
+      "rect": [
+        732,
+        1626,
+        112,
+        152
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "attack",
+      "direction": "SE",
+      "index": 3
+    },
+    {
+      "rect": [
+        953,
+        1626,
+        119,
+        152
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "attack",
+      "direction": "SE",
+      "index": 4
+    },
+    {
+      "rect": [
+        1189,
+        1624,
+        99,
+        154
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "attack",
+      "direction": "SE",
+      "index": 5
+    }
+  ]
+}

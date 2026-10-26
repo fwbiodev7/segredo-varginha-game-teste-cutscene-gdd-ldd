@@ -24,6 +24,17 @@ namespace Game.Varginha.Experiment
         }
         public static bool Available(string student)=>Resources.Load<TextAsset>("Varginha/StoryCharacters/Hero"+VarginhaStudentSprites.AssetName(student))!=null;
         public static Sprite Pose(string student,int variant,bool left,int stage)=>CampaignStorySprites.Frame("Hero"+VarginhaStudentSprites.AssetName(student),variant,(left?3:0)+stage);
+        public static Sprite DirectionalPose(string student,int variant,Vector2 facing,int stage)
+        {
+            string name=VarginhaStudentSprites.AssetName(student);
+            // Fabio's second power is the original discus throw; its existing
+            // authored art and projectile timing stay paired with that move.
+            if(name=="Fabio"&&variant==1)return null;
+            string sheet="Directional20261026/"+name;
+            if(Resources.Load<TextAsset>("Varginha/StoryCharacters/"+sheet)==null)return null;
+            int column=stage<=0?4:stage==1?5:stage==2?6:7;
+            return CampaignStorySprites.Frame(sheet,CampaignStorySprites.EightDirection(facing),column);
+        }
         public static Sprite Effect(string student,int variant,int stage)
         {
             string name=VarginhaStudentSprites.AssetName(student),key=name+variant+stage;

@@ -10,9 +10,19 @@ namespace Game.Varginha.Experiment
         {
             // Writing, pointing to the board, then explaining to the seated class.
             float time=Time.time%12;
-            int row=time<7?3:0;
-            int frame=time<7?1+Mathf.FloorToInt(Time.time*2)%2:Mathf.FloorToInt(Time.time)%4;
-            var sprite=CampaignStorySprites.Frame("RenanTeaching",row,frame);
+            Sprite sprite;
+            if(time<7)
+            {
+                int frame=1+Mathf.FloorToInt(Time.time*2)%2;
+                sprite=CampaignStorySprites.Frame("RenanTeaching",3,frame);
+            }
+            else
+            {
+                var actor=FindFirstObjectByType<EdelzioTopDownController>();
+                Vector2 facing=actor!=null?(Vector2)actor.transform.position-(Vector2)transform.position:Vector2.down;
+                sprite=CampaignStorySprites.Frame("Directional20261026/Renan",CampaignStorySprites.EightDirection(facing),0)
+                    ??CampaignStorySprites.Frame("RenanTeaching",0,Mathf.FloorToInt(Time.time)%4);
+            }
             if(sprite!=null)_renderer.sprite=sprite;
         }
         public static void DeskItems(Transform owner,CampaignIllustratedMaps.Layout layout)

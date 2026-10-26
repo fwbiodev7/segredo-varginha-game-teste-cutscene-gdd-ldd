@@ -206,7 +206,7 @@ namespace Game.Tests.PlayMode
             Assert.That(GameObject.Find("Entidade ferida"),Is.Null,"The specimen already appears inside the capsule.");
             var scientist=c.transform.Find("Ouzana");
             Assert.That(scientist,Is.Not.Null);
-            Assert.That(scientist.GetComponent<SpriteRenderer>().sprite.name,Does.Contain("OuzanaBiologist_2_2"));
+            Assert.That(scientist.GetComponent<SpriteRenderer>().sprite,Is.SameAs(CampaignOuzanaVisual.Idle(Vector2.right)));
             Assert.That(c.Plan.IsClear((Vector2)scientist.position-Vector2.up*.58f,.3f),Is.True);
             Physics2D.SyncTransforms();
             var route=new System.Collections.Generic.List<Vector2>();

@@ -104,7 +104,7 @@ namespace Game.Tests.PlayMode
             yield return WalkToAndInteract("tutorial");Assert.That(state.reagentCharges,Is.EqualTo(6));stage.ClosePanel();
             stage.Save();yield return Load(9);stage=CampaignExpansionController.Active;
             Assert.That(stage.Progress.expansion.Complete(9),Is.True);
-            Assert.That(GameObject.Find("Ouzana").GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("OuzanaBiologist"));
+            Assert.That(GameObject.Find("Ouzana").GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("OuzanaAttackV2"));
             yield return WalkToAndInteract("exit");Assert.That(Modal(stage,"_panel"),Is.EqualTo("complete"));
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }

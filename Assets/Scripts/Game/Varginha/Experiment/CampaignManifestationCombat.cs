@@ -83,7 +83,14 @@ namespace Game.Varginha.Experiment
         }
         private void Pose(int direction,int pose,bool flow=false)
         {
-            _renderer.sprite=flow?FlowFrame(direction,pose,_minor):CombatFrame(direction,pose,_minor);
+            Sprite authored=null;
+            if(!_minor)
+            {
+                Vector2 facing=direction switch{1=>Vector2.left,2=>Vector2.up,3=>Vector2.right,_=>Vector2.down};
+                int frame=pose<=1?pose*2+(flow?1:0):pose==2?(flow?5:4):pose==3?(flow?7:6):pose==4?4:pose==5?6:7;
+                authored=CampaignStorySprites.Frame("Directional20261026/ManifestationBoss",CampaignStorySprites.EightDirection(facing),frame);
+            }
+            _renderer.sprite=authored??(flow?FlowFrame(direction,pose,_minor):CombatFrame(direction,pose,_minor));
             int size=_minor?1:0;string prefix="Varginha/StoryCharacters/Manifestation"+(_minor?"Child":"Boss");
             if(CombatSizes[size]==null){var data=Resources.Load<TextAsset>(prefix+"CombatV2");if(data!=null)CombatSizes[size]=JsonUtility.FromJson<PoseAtlas>(data.text);}
             if(flow&&FlowSizes[size]==null){var data=Resources.Load<TextAsset>(prefix+"FlowV1");if(data!=null)FlowSizes[size]=JsonUtility.FromJson<PoseAtlas>(data.text);}

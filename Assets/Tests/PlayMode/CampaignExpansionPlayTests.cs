@@ -93,7 +93,7 @@ namespace Game.Tests.PlayMode
             var ouzana=GameObject.Find("Ouzana");
             Assert.That(ouzana.GetComponent<CampaignOuzanaBiologist>(),Is.Not.Null);
             var render=ouzana.GetComponent<SpriteRenderer>();
-            Assert.That(render.sprite.texture.name,Is.EqualTo("OuzanaBiologist"));
+            Assert.That(render.sprite.texture.name,Is.EqualTo("OuzanaAttackV2"));
             Assert.That(render.sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.StandingHeight).Within(.10f));
             Assert.That(render.sprite.texture.isReadable,Is.False);
             Assert.That(ouzana.GetComponent<CircleCollider2D>(),Is.Not.Null);

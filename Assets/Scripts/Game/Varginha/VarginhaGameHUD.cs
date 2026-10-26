@@ -863,7 +863,7 @@ namespace Game.Varginha
             // A held attack click cannot immediately dismiss the death screen.
             GUI.enabled = previousEnabled && Time.unscaledTime - _gameOverOpenedAt >= .65f;
             if (PauseButton(new Rect(modal.x + 22, modal.y + 161f * scale, modal.width - 44, 44f * scale),
-                "TENTAR ESTA FASE NOVAMENTE", "01", scale)) VarginhaGameOverFlow.RetryCurrentPhase();
+                  Game.Varginha.Experiment.CampaignExpansionController.Active?.phase==7?"VOLTAR AO ÚLTIMO CHECKPOINT":"TENTAR ESTA FASE NOVAMENTE", "01", scale)) VarginhaGameOverFlow.RetryCurrentPhase();
             if (PauseButton(new Rect(modal.x + 22, modal.y + 215f * scale, modal.width - 44, 44f * scale),
                 "REINICIAR INVESTIGACAO", "02", scale)) VarginhaGameOverFlow.ReturnToPhaseOne();
             if (PauseButton(new Rect(modal.x + 22, modal.y + 269f * scale, modal.width - 44, 44f * scale),

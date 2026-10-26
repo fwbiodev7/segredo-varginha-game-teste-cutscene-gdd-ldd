@@ -23,6 +23,7 @@ namespace Game.Varginha.Experiment
             if(shader!=null)
             {
                 var mapMaterial=new Material(shader){name="Casa_07h_paleta_quintal"};mapMaterial.SetFloat("_ReferenceMap",1);_materials.Add(mapMaterial);
+                var floorMaterial=new Material(mapMaterial){name="Casa_07h_piso_original_continuo"};floorMaterial.SetFloat("_OfficeFloor",1);_materials.Add(floorMaterial);
                 var furnitureMaterial=new Material(shader){name="Casa_07h_moveis"};furnitureMaterial.SetFloat("_ReferenceMap",0);_materials.Add(furnitureMaterial);
                 foreach(var renderer in map.GetComponentsInChildren<SpriteRenderer>())
                 {
@@ -30,7 +31,7 @@ namespace Game.Varginha.Experiment
                     bool original=renderer.sprite.texture.name==data.image||renderer.sprite.texture.name==data.background||renderer.sprite.texture.name=="AdultInteractiveBase"||renderer.sprite.texture.name=="AdultInteractiveSeatAligned";
                     bool furniture=renderer.sprite.texture.name=="HouseFurnitureBacks"||renderer.sprite.texture.name=="HouseRoutineItems";
                     if(!original&&!furniture)continue;
-                    renderer.sharedMaterial=original?mapMaterial:furnitureMaterial;
+                    renderer.sharedMaterial=original?(renderer.name.StartsWith("Arte_Integrada_")?floorMaterial:mapMaterial):furnitureMaterial;
                 }
             }
         }

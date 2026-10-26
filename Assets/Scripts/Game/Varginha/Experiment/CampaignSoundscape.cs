@@ -149,6 +149,7 @@ namespace Game.Varginha.Experiment
                     value = Mathf.Sin(t * Mathf.PI * 2 * SuccessNotes[note]) * .16f * Mathf.Exp(-(t % .25f) * 9);
                 }
                 else if (id == "Scratching") value = filtered*.35f*Mathf.Pow(Mathf.Max(0,Mathf.Sin(t*29)),5)*Mathf.Exp(-t*1.5f);
+                else if(id=="Heartbeat")value=Mathf.Sin(t*Mathf.PI*2*58)*(.28f*Mathf.Exp(-t*42)+.18f*Mathf.Exp(-Mathf.Abs(t-.12f)*48));
                 else if (id == "RadioInterference") value = (filtered * .22f + noise * .025f) * Mathf.Sin(Mathf.Clamp01(t / duration) * Mathf.PI);
                 else if (id == "Starter") value = filtered * .4f * (.5f + .5f * Mathf.Sin(t * 95)) + Mathf.Sin(t * Mathf.PI * 2 * (28 + t * 20)) * .25f;
                 else if(id=="AlienBurst")value=(filtered*.32f+Mathf.Sin(t*Mathf.PI*2*(70-t*35))*.24f+Mathf.Sin(t*Mathf.PI*2*190)*.06f)*Mathf.Exp(-t*4);

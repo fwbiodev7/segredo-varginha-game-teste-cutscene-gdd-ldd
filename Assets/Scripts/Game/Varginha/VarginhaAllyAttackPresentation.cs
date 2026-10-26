@@ -184,8 +184,11 @@ namespace Game.Varginha
                 }
                 if(authored)
                 {
-                    int pose=time<anticipation?0:time<anticipation+action?1:2;
-                    actor.sprite=Experiment.CampaignHeroArt.Pose(student,variant,sign<0,pose);
+                    int pose=time<anticipation?0:move<.65f?1:move<1?2:3;
+                    Vector2 facing=(Vector2)(destination-start);
+                    if(facing.sqrMagnitude<.001f)facing=sign<0?Vector2.left:Vector2.right;
+                    actor.sprite=Experiment.CampaignHeroArt.DirectionalPose(student,variant,facing,pose)
+                        ??Experiment.CampaignHeroArt.Pose(student,variant,sign<0,Mathf.Min(2,pose));
                     actor.transform.localScale=Vector3.one;actor.transform.rotation=Quaternion.identity;
                     actor.transform.position=Vector3.Lerp(start,destination+Vector3.left*sign*.8f,ease);
                     shadow.transform.position=actor.transform.position-Vector3.up*.58f;

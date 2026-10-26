@@ -72,6 +72,8 @@ namespace Game.Tests.PlayMode
         [UnityTest,Timeout(40000)] public IEnumerator OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach()
         {
             yield return Load(2);var stage=VarginhaCampaignStage.Active;var data=CampaignIllustratedMaps.Get(2);
+            var floor=GameObject.Find("Mapa_Campanha/01_Planta_Paredes_Divisoes/Arte_Integrada_0").GetComponent<SpriteRenderer>();
+            Assert.That(floor.sharedMaterial.GetFloat("_OfficeFloor"),Is.EqualTo(1),"The morning palette must preserve the floor repair.");
             var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();var body=actor.GetComponent<Rigidbody2D>();
             var action=actor.GetComponent<VarginhaPlayerActionAnimation>();var visual=actor.GetComponent<VarginhaPlayerSpriteAnimation>();
             var chair=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/Office_Chair").GetComponent<SpriteRenderer>();

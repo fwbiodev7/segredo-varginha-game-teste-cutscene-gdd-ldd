@@ -18,6 +18,13 @@ namespace Game.Varginha.Experiment
                 var texture = Resources.Load<Texture2D>("Varginha/StoryCharacters/" + name);
                 var json = Resources.Load<TextAsset>("Varginha/StoryCharacters/" + name);
                 if (texture == null || json == null) return null;
+                // The shared geometry cache indexes imported textures by their
+                // short filename. These versioned atlases reuse familiar names
+                // (Edelzio, Marcos, Renan) and dimensions, so give them a unique
+                // runtime identity before Sprite.Create to avoid borrowing meshes
+                // authored for older sheets with different cell layouts.
+                if (name.StartsWith("Directional20261026/",StringComparison.Ordinal))
+                    texture.name = "Directional20261026_" + name.Substring("Directional20261026/".Length);
                 sheet = new Sheet { texture = texture, data = JsonUtility.FromJson<Manifest>(json.text) }; Sheets[name] = sheet;
             }
             if (row < 0 || row >= sheet.data.rows || column < 0 || column >= sheet.data.columns) return null;
@@ -43,7 +50,8 @@ namespace Game.Varginha.Experiment
             sprite.name = "Team_V4_" + name + "_" + row + "_" + column + (portrait ? "_Head" : "");
             sheet.sprites[key] = sprite; return sprite;
         }
-        private static bool IsEdelzio(string name) => name == "WalkGray" || name == "Life" || name == "LifeGray"
+        private static bool IsEdelzio(string name) => name.StartsWith("Directional20261026/Edelzio",StringComparison.Ordinal)
+            || name == "WalkGray" || name == "Life" || name == "LifeGray"
             || name == "Punch" || name == "Seated" || name == "SeatedGray" || name == "SeatedDeskNorth" || name == "Driving";
         public static int EightDirection(Vector2 face)
         {

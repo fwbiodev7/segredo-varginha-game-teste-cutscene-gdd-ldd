@@ -14,6 +14,9 @@ namespace Game.Varginha.Experiment
         public int workshopHeading;
         public bool workshopHasYaw;
         public float workshopYaw;
+        public bool forestHasCheckpoint;
+        public float forestCheckpointX,forestCheckpointY;
+        public int forestCheckpointSigns;
         public int[] mapOrder = { 2, 0, 1 }, sampleOrder = { 2, 1, 0 }, sealOrder = { 2, 0, 1 };
         public int[] mapDirections = { 0, 2, 1 };
         public int[] trailChoices = { -1, -1, -1 };
@@ -54,6 +57,8 @@ namespace Game.Varginha.Experiment
         public void Repair()
         {
             visited &= 7; truthClues &= 7; forestSigns = Mathf.Clamp(forestSigns, 0, 3); anchorClues &= 7; labClues &= 7; sprayed &= 7;
+            forestCheckpointSigns=Mathf.Clamp(forestCheckpointSigns,0,3);
+            if(float.IsNaN(forestCheckpointX)||float.IsInfinity(forestCheckpointX)||float.IsNaN(forestCheckpointY)||float.IsInfinity(forestCheckpointY))forestHasCheckpoint=false;
             reagentCharges = Mathf.Clamp(reagentCharges, 0, 6); trust = Mathf.Clamp(trust, -1, 1);
             anchorYear = anchorYear == 1996 ? 1996 : 1898; anchorSymbol = Mathf.Clamp(anchorSymbol,0,1); anchorRecord = anchorRecord == 23 ? 23 : 1;
             RepairOrder(ref mapOrder); RepairOrder(ref sampleOrder); RepairOrder(ref sealOrder);

@@ -7,26 +7,29 @@ namespace Game.Varginha.Experiment
     {
         private SpriteRenderer _renderer;
         private EdelzioTopDownController _player;
-        private int _row, _frame = -1;
-        private float _nextPose;
-        private void Awake() => _renderer = GetComponent<SpriteRenderer>();
+        private Vector2 _facing=Vector2.down;
+        private Vector3 _lastPosition;
+        private float _walkClock;
+        private void Awake()
+        {
+            _renderer=GetComponent<SpriteRenderer>();_renderer.sharedMaterial=CampaignOuzanaVisual.Material;
+            _lastPosition=transform.position;
+        }
         private void Start() => _player = FindAnyObjectByType<EdelzioTopDownController>();
         private void LateUpdate()
         {
-            if (Time.time < _nextPose) return;
-            _nextPose = Time.time + .35f;
-            int row = 0;
-            if (_player != null)
+            if(Time.timeScale<=0)return;
+            Vector2 travel=transform.position-_lastPosition;_lastPosition=transform.position;
+            bool moving=travel.sqrMagnitude>.000001f;
+            if(moving){_facing=travel.normalized;_walkClock+=Time.deltaTime;}
+            else if (_player != null)
             {
                 Vector2 toward = _player.transform.position - transform.position;
                 if (toward.sqrMagnitude < 9 && toward.sqrMagnitude > .04f)
-                    row = Mathf.Abs(toward.y) >= Mathf.Abs(toward.x) ? toward.y > 0 ? 3 : 0 : toward.x < 0 ? 1 : 2;
+                    _facing=toward.normalized;
             }
-            float cycle = Time.time % 16;
-            int frame = cycle < 8 ? Mathf.FloorToInt(Time.time * 1.4f) % 2 : cycle < 12 ? 2 : 3;
-            if (row == _row && frame == _frame) return;
-            var sprite = CampaignStorySprites.Frame("OuzanaBiologist", row, frame);
-            if (sprite != null) { _renderer.sprite = sprite; _row = row; _frame = frame; }
+            var sprite=moving?CampaignOuzanaVisual.Walk(_facing,_walkClock):CampaignOuzanaVisual.Idle(_facing);
+            if(sprite!=null)_renderer.sprite=sprite;
         }
     }
 }

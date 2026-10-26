@@ -17,29 +17,23 @@ namespace Game.Varginha.Experiment
   public const float PulseRadius=5.5f,FlaskRadius=2,ShieldRadius=2.7f;
   static readonly Sprite[,] effects=new Sprite[3,8]; EdelzioTopDownController player; Vector2 shieldCentre; float shieldRemaining,commandBusyUntil;
   static Material cleanShield,pixelEffects;
-  static readonly Dictionary<Sprite,Sprite> arenaPriestSprites=new();
+  Vector2 ouzanaFacing=Vector2.down;float ouzanaWalkClock;Vector2[] supportFacing={Vector2.down,Vector2.down,Vector2.down};
   public VarginhaStudentAllySquad Squad {get;private set;}
   public int SelectedSupport {get;private set;}=-1;
   public bool CombatActive {get;set;}
   public float DamageMultiplier=>CombatActive&&shieldRemaining>0&&Vector2.Distance(shieldCentre,player.transform.position)<ShieldRadius?.45f:1;
   public float ShieldRemaining=>shieldRemaining;
   public float Cooldown(int i)=>Mathf.Max(0,ready[i]-Time.time);
-  public static Sprite Portrait(int i)=>i==0?CampaignStorySprites.Frame("RenanTeaching",0,0):i==1?CampaignStorySprites.Frame("OuzanaBiologist",0,0):VarginhaReferenceSprites.PadreFabio();
+  public static Sprite Portrait(int i)=>i==0?CampaignStorySprites.Frame("Directional20261026/Renan",0,0):i==1?CampaignOuzanaVisual.Idle(Vector2.down):CampaignStorySprites.Frame("Directional20261026/PadreFabio",0,0)??VarginhaReferenceSprites.PadreFabio();
   public static Sprite PortraitForFinalScene(int i)=>ArenaPose(i,Portrait(i));
   static Sprite ArenaPose(int i,Sprite source)
   {
-   if(i!=2||source==null)return source;
-   if(arenaPriestSprites.TryGetValue(source,out var sprite)&&sprite!=null)return sprite;
-   float ppu=source.pixelsPerUnit/1.7f;
-   // Scale around the feet, keeping both the arena navigation anchor and church assets intact.
-   var pivot=new Vector2(source.pivot.x/source.rect.width,(source.pivot.y-.58f*source.pixelsPerUnit+.58f*ppu)/source.rect.height);
-   sprite=VarginhaCharacterFrameGeometry.Create(source.texture,source.rect,pivot,ppu,0,SpriteMeshType.FullRect);sprite.name=source.name+"_Arena";
-   return arenaPriestSprites[source]=sprite;
+   return i==2?CampaignCharacterProportions.Priest(source,20):source;
   }
   public void Configure(EdelzioTopDownController p)
   {
    Active=this;player=p;Squad=VarginhaStudentAllySquad.BuildForFuturePhase(transform,p.transform,false);Squad.ActivateManualAllies(5,true);Squad.ConfigureSelectionSlots(3);
-   for(int i=0;i<3;i++){var go=new GameObject(Names[i]+"_Apoio");go.transform.SetParent(transform);go.transform.position=p.transform.position;actors[i]=go.AddComponent<SpriteRenderer>();actors[i].sprite=ArenaPose(i,Portrait(i));actors[i].enabled=false;VarginhaWorldDepth.Ensure(actors[i]);}
+   for(int i=0;i<3;i++){var go=new GameObject(Names[i]+"_Apoio");go.transform.SetParent(transform);go.transform.position=p.transform.position;actors[i]=go.AddComponent<SpriteRenderer>();actors[i].sprite=ArenaPose(i,Portrait(i));if(i==1)actors[i].sharedMaterial=CampaignOuzanaVisual.Material;actors[i].enabled=false;VarginhaWorldDepth.Ensure(actors[i]);}
   }
   public bool SelectSupport(int i)
   {
@@ -51,10 +45,26 @@ namespace Game.Varginha.Experiment
   void LateUpdate()
   {
    if(SelectedSupport<0||casting[SelectedSupport]||player==null||Time.timeScale<=0||CampaignContinuationController.Active?.Modal==true)return;
-   var actor=actors[SelectedSupport];Vector2 destination=(Vector2)player.transform.position+Vector2.down*1.8f;
+   var actor=actors[SelectedSupport];Vector2 before=actor.transform.position,destination=(Vector2)player.transform.position+Vector2.down*1.8f;
    if(Time.time>=nextPath){VarginhaSchoolNavigation.FindPath(player.transform,actor.transform.position,destination,followPath);nextPath=Time.time+.3f;}
    while(followPath.Count>1&&VarginhaSchoolNavigation.CanWalkSegment(actor.transform.position,followPath[1]))followPath.RemoveAt(0);
    if(followPath.Count>0)actor.transform.position=Vector2.MoveTowards(actor.transform.position,followPath[0],3.5f*Time.deltaTime);
+   if(SelectedSupport==1)
+   {
+    Vector2 travel=(Vector2)actor.transform.position-before;
+    if(travel.sqrMagnitude>.000001f){ouzanaFacing=travel.normalized;ouzanaWalkClock+=Time.deltaTime;actor.sprite=CampaignOuzanaVisual.Walk(ouzanaFacing,ouzanaWalkClock);}
+    else actor.sprite=CampaignOuzanaVisual.Idle(ouzanaFacing);
+   }
+   else
+   {
+    Vector2 travel=(Vector2)actor.transform.position-before;
+    if(travel.sqrMagnitude>.000001f)supportFacing[SelectedSupport]=travel.normalized;
+    int direction=CampaignStorySprites.EightDirection(supportFacing[SelectedSupport]);
+    int frame=travel.sqrMagnitude>.000001f?(int)(Time.time*8f)%4:0;
+    string sheet=SelectedSupport==0?"Directional20261026/Renan":"Directional20261026/PadreFabio";
+    actor.sprite=CampaignStorySprites.Frame(sheet,direction,frame)
+     ??ArenaPose(SelectedSupport,SelectedSupport==0?CampaignStorySprites.Frame("RenanTeaching",0,0):VarginhaReferenceSprites.PadreFabio());
+   }
   }
   bool Running=>CombatActive&&player!=null&&!player.IsInputLocked&&CampaignContinuationController.Active?.Modal!=true&&Time.timeScale>0;
   void Update()
@@ -123,10 +133,14 @@ namespace Game.Varginha.Experiment
   IEnumerator Present(int i)
   {
    casting[i]=true;var actor=actors[i];Vector2 start=player.transform.position,end=Target();int side=end.x<start.x?0:3;
-   actor.transform.position=start+Vector2.left*.7f;actor.sprite=ArenaPose(i,CampaignStorySprites.Frame("SupportAttacks",i,side));
-   float t=0;while(t<.32f&&CombatActive){if(Running)t+=Time.deltaTime;yield return null;}
+   actor.transform.position=start+Vector2.left*.7f;
+   Vector2 facing=end-(Vector2)actor.transform.position;if(facing.sqrMagnitude<.001f)facing=player.FacingDirection;
+   if(i==1)ouzanaFacing=facing.normalized;
+   if(i!=1)supportFacing[i]=facing.normalized;
+   actor.sprite=i==1?CampaignOuzanaVisual.Attack(facing,0):CampaignStorySprites.Frame(i==0?"Directional20261026/Renan":"Directional20261026/PadreFabio",CampaignStorySprites.EightDirection(facing),4)??ArenaPose(i,CampaignStorySprites.Frame("SupportAttacks",i,side));
+   float t=0;while(t<.32f&&CombatActive){if(Running){t+=Time.deltaTime;if(i==1)actor.sprite=CampaignOuzanaVisual.Attack(facing,t<.1f?0:t<.21f?1:2);}yield return null;}
    if(!CombatActive){casting[i]=false;actor.sprite=ArenaPose(i,Portrait(i));yield break;}
-   actor.sprite=ArenaPose(i,CampaignStorySprites.Frame("SupportAttacks",i,side+1));
+   actor.sprite=i==1?CampaignOuzanaVisual.Attack(facing,3):CampaignStorySprites.Frame(i==0?"Directional20261026/Renan":"Directional20261026/PadreFabio",CampaignStorySprites.EightDirection(facing),5)??ArenaPose(i,CampaignStorySprites.Frame("SupportAttacks",i,side+1));
    var go=new GameObject("Habilidade_"+Names[i]);go.transform.SetParent(transform);var fx=go.AddComponent<SpriteRenderer>();fx.sortingOrder=30000;fx.flipX=end.x<start.x;go.transform.position=start;
    CampaignCyberPulse cyber=null;var struck=new List<SpriteRenderer>(CampaignCyberPulse.MaxTargets);
    if(i==0)cyber=go.AddComponent<CampaignCyberPulse>();
@@ -139,6 +153,9 @@ namespace Game.Varginha.Experiment
    while(t<duration)
    {
     if(!CombatActive)break;if(!Running){yield return null;continue;}t+=Time.deltaTime;float u=Mathf.Clamp01(t/duration);
+    if(i==1)actor.sprite=CampaignOuzanaVisual.Attack(facing,t<.09f?3:t<.19f?4:5);
+    else if(i==0)actor.sprite=CampaignStorySprites.Frame("Directional20261026/Renan",CampaignStorySprites.EightDirection(facing),u<.35f?5:u<.7f?6:7);
+    else actor.sprite=CampaignStorySprites.Frame("Directional20261026/PadreFabio",CampaignStorySprites.EightDirection(facing),5);
     int frame=i==0?Mathf.Min(3,(int)(u*4)):i==1?Mathf.Min(1,(int)(u*2)):t<.5f?Mathf.Min(2,(int)(t*6)):3+(VarginhaGameSettings.Current.reducedMotion?0:(int)(t*2)%2);
     fx.sprite=Effect(i,frame);
     if(i==1)go.transform.position=Vector2.Lerp(start,end,u)+Vector2.up*Mathf.Sin(u*Mathf.PI)*1.2f;
@@ -148,7 +165,7 @@ namespace Game.Varginha.Experiment
    }
    if(i<2&&CombatActive){Hit(i,i==0?start:end,i==0?PulseRadius:FlaskRadius,i==0?42:24,struck);fx.flipX=false;if(i==0){go.transform.position=struck.Count>0&&struck[0]!=null?struck[0].bounds.center:(Vector3)end;go.transform.localScale=Vector3.one*1.4f;}if(i==1){go.transform.position=end;go.transform.localScale=Vector3.one*1.5f;sound?.PlayAt("OuzanaGlass",end);}}
    if(i==2){shieldRemaining=0;sound?.EndShield();}
-   actor.sprite=ArenaPose(i,CampaignStorySprites.Frame("SupportAttacks",i,side+2));t=0;float tail=i==1?2.6f:.45f,tick=.65f;
+   actor.sprite=i==1?CampaignOuzanaVisual.Idle(facing):ArenaPose(i,CampaignStorySprites.Frame("SupportAttacks",i,side+2));t=0;float tail=i==1?2.6f:.45f,tick=.65f;
    while(t<tail)
    {
     if(!CombatActive)break;if(!Running){yield return null;continue;}t+=Time.deltaTime;
@@ -156,7 +173,7 @@ namespace Game.Varginha.Experiment
     if(i==0)cyber.Draw(start,end,t/tail,t,true,struck);
     if(i==1&&t>=tick){tick+=.65f;Hit(1,end,FlaskRadius,6);}yield return null;
    }
-   casting[i]=false;actor.sprite=ArenaPose(i,Portrait(i));followPath.Clear();nextPath=0;Destroy(go);
+   casting[i]=false;actor.sprite=i==1?CampaignOuzanaVisual.Idle(facing):ArenaPose(i,Portrait(i));followPath.Clear();nextPath=0;Destroy(go);
   }
   void OnDestroy(){if(Active==this)Active=null;}
  }

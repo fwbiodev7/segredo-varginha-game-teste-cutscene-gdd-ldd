@@ -94,6 +94,66 @@ namespace Game.Tests.PlayMode
             File.WriteAllText(Folder+"/LegacyFramesCount.txt",sprites.Count.ToString());
         }
 
+        [UnityTest,Timeout(180000)] public IEnumerator RendersEveryDirectional20261026FrameThroughUnitySpriteRenderer()
+        {
+            string[] names={"Edelzio","EdelzioNoBag","EdelzioChild","Renan","PadreFabio","Yasmin","Pedro","Matias","AnaTavares","AnnaSabia","Marcos","LuisMartins","LuisMiguelMessias","Fabio","ManifestationBoss"};
+            const int cell=240, sheetSize=cell*8;
+            var owner=new GameObject("Camera_QA_Atlas_Direcional");owner.layer=29;
+            var camera=owner.AddComponent<Camera>();camera.enabled=true;camera.orthographic=true;camera.orthographicSize=cell*8f/200f;
+            camera.aspect=1;camera.cullingMask=1<<29;camera.clearFlags=CameraClearFlags.SolidColor;camera.backgroundColor=new Color(.16f,.15f,.17f,1);
+            camera.transform.position=new Vector3(0,0,-10);camera.allowHDR=false;camera.allowMSAA=false;
+            var renderers=new SpriteRenderer[64];
+            for(int i=0;i<renderers.Length;i++){var actor=new GameObject("Quadro_QA_Direcional_"+i);actor.layer=29;renderers[i]=actor.AddComponent<SpriteRenderer>();}
+            var data=owner.AddComponent<UnityEngine.Rendering.Universal.UniversalAdditionalCameraData>();
+            data.renderPostProcessing=false;data.antialiasing=UnityEngine.Rendering.Universal.AntialiasingMode.None;
+            var target=new RenderTexture(sheetSize,sheetSize,24,RenderTextureFormat.ARGB32);target.Create();
+            var image=new Texture2D(sheetSize,sheetSize,TextureFormat.RGB24,false);
+            var previous=RenderTexture.active;
+            try
+            {
+                foreach(string name in names)
+                {
+                    var json=Resources.Load<TextAsset>("Varginha/StoryCharacters/Directional20261026/"+name);
+                    var texture=Resources.Load<Texture2D>("Varginha/StoryCharacters/Directional20261026/"+name);
+                    Assert.That(json,Is.Not.Null,name+" manifest imported");Assert.That(texture,Is.Not.Null,name+" texture imported");
+                    var sheet=JsonUtility.FromJson<Sheet>(json.text);
+                    Assert.That(sheet.columns,Is.EqualTo(8),name);Assert.That(sheet.rows,Is.EqualTo(8),name);Assert.That(sheet.frames.Length,Is.EqualTo(64),name);
+                    for(int row=0;row<8;row++)for(int col=0;col<8;col++)
+                    {
+                        var renderer=renderers[row*8+col];
+                        renderer.sprite=CampaignStorySprites.Frame("Directional20261026/"+name,row,col);
+                        Assert.That(renderer.sprite,Is.Not.Null,name+" "+row+":"+col);
+                        renderer.transform.localScale=name=="ManifestationBoss"?Vector3.one*.32f:Vector3.one;
+                        float footY=(3.5f-row)*2.4f-.2f;
+                        renderer.transform.position=new Vector3((col-3.5f)*2.4f,footY,0);
+                    }
+                    Assert.That(texture.name,Does.Contain("Directional20261026_"+name),name+" gets an isolated runtime geometry identity");
+                    yield return null;
+                    camera.targetTexture=target;VarginhaPixelPresentation.RenderInto(camera,target);
+                    RenderTexture.active=target;image.ReadPixels(new Rect(0,0,sheetSize,sheetSize),0,0);image.Apply();
+                    var colors=new HashSet<Color32>();var pixels=image.GetPixels32();
+                    for(int i=0;i<pixels.Length&&colors.Count<12;i+=97)colors.Add(pixels[i]);
+                    Assert.That(colors.Count,Is.GreaterThan(3),name+" Unity render must contain the sprite artwork, not only the clear color.");
+                    Color32 clear=image.GetPixel(2,2);
+                    for(int row=0;row<8;row++)for(int col=0;col<8;col++)
+                    {
+                        int visible=0,x0=col*cell,y0=(7-row)*cell;
+                        for(int y=y0+8;y<y0+cell-8;y+=4)for(int x=x0+8;x<x0+cell-8;x+=4)
+                            if(pixels[y*sheetSize+x].r!=clear.r||pixels[y*sheetSize+x].g!=clear.g||pixels[y*sheetSize+x].b!=clear.b)visible++;
+                        Assert.That(visible,Is.GreaterThan(8),name+" frame "+row+":"+col+" must render inside its own 8x8 cell.");
+                    }
+                    string path=Path.Combine(CinemaQaEvidence.Folder,"directional-unity-render",name+".png");
+                    Directory.CreateDirectory(Path.GetDirectoryName(path));File.WriteAllBytes(path,image.EncodeToPNG());
+                }
+            }
+            finally
+            {
+                RenderTexture.active=previous;camera.targetTexture=null;target.Release();Object.Destroy(image);Object.Destroy(target);
+                foreach(var renderer in renderers)if(renderer!=null)Object.Destroy(renderer.gameObject);Object.Destroy(owner);
+            }
+            yield return null;
+        }
+
         static void Validate(Sprite sprite)
         {
             Assert.That(sprite.vertices.Length,Is.GreaterThanOrEqualTo(4),sprite.name);

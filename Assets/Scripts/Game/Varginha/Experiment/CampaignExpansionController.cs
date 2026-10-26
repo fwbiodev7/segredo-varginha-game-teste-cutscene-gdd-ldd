@@ -35,7 +35,12 @@ namespace Game.Varginha.Experiment
         private readonly List<Vector2> _chasePath = new();
         private Vector2 _safePoint;
         private string _guideTarget;
-        private bool Blocked => _paused || _title < 2.5f || _message != null || _panel != null || VarginhaGameHUD.Instance?.IsInventoryOpen == true || _actor?.GetComponent<VarginhaPlayerActionAnimation>()?.IsActing == true;
+        private bool _forestCaught,_chaseStarted;
+        private float _chaseGrace,_heartbeat;
+        private int _presenceDirection=-1,_presenceFrame=-1;
+        public bool ForestCaught=>_forestCaught;
+        public float PursuitPressure{get;private set;}
+        private bool Blocked => _forestCaught || VarginhaGameHUD.Instance?.IsGameOver==true || _paused || _title < 2.5f || _message != null || _panel != null || VarginhaGameHUD.Instance?.IsInventoryOpen == true || _actor?.GetComponent<VarginhaPlayerActionAnimation>()?.IsActing == true;
         private string Objective => phase == 6 ? "Examine livro, globo e painel na biblioteca da Industrial. Alinhe os fragmentos na mesa central."
             : phase == 7 ? "Árvore → rio → capela. Use o esconderijo durante a perseguição."
             : phase == 8 ? "Cruze ano, símbolo e número no Livro do Tombo."
@@ -50,7 +55,14 @@ namespace Game.Varginha.Experiment
         }
         private void Start()
         {
-            Progress = CampaignStorySave.Load(); Progress.phase = phase; _safePoint = phase == 7 && State.forestSigns > 0 ? Plan.points.Find(p=>p.id=="sign1").position : Plan.spawn;
+            Progress = CampaignStorySave.Load(); Progress.phase = phase;
+            _safePoint=Plan.spawn;
+            if(phase==7)
+            {
+                if(State.forestHasCheckpoint&&Plan.IsClear(new Vector2(State.forestCheckpointX,State.forestCheckpointY),.23f))
+                    _safePoint=new Vector2(State.forestCheckpointX,State.forestCheckpointY);
+                else SetForestCheckpoint(State.forestSigns>=2?Plan.points.Find(p=>p.id=="sign1").position:Plan.spawn);
+            }
             _year = State.anchorYear; _symbol = State.anchorSymbol; _record = State.anchorRecord;
             _actor.HasBackpack = _actor.HasResearchNotebook = _actor.HasFuscaKey = _actor.HasDecodedData = true;
             if (VarginhaGameHUD.Instance == null)
@@ -72,8 +84,24 @@ namespace Game.Varginha.Experiment
                 if(_parking){Camera.main.GetComponent<Game.Level.CameraFollow2D>().Target=car;_sound.Engine(true);}
                 for (int i = 0; i < 3; i++) if ((State.sprayed & (1 << i)) != 0) RevealMark(i);
             }
-            if (phase == 7 || phase == 8) CreateNPC("Padre Fábio", VarginhaReferenceSprites.PadreFabio(), Plan.points.Find(p=>p.id==(phase==7?"fabio":"trust")).position+new Vector2(phase==7?-.55f:.55f,.6f));
-            if (phase == 9) CreateNPC("Ouzana", CampaignStorySprites.Frame("OuzanaBiologist",0,0),Plan.points.Find(p=>p.id=="ouzana").position+new Vector2(.9f,.6f)).AddComponent<CampaignOuzanaBiologist>();
+            if (phase == 7 || phase == 8)
+            {
+                var target=Plan.points.Find(p=>p.id==(phase==7?"fabio":"trust"));
+                Vector2 position=target.position+new Vector2(.55f,.6f);
+                if(phase==7)
+                {
+                    var forest=CampaignIllustratedMaps.Get(7);
+                    // The old west offset put half his body behind the bell.
+                    // Keep the full larger silhouette on the eastern paving.
+                    target.position=forest.Position(1370,335);
+                    position=forest.Position(1405,335)+Vector2.up*.58f;
+                }
+                bool churchScale=CampaignCharacterProportions.IsChurch(phase);
+                var directionalPriest=churchScale?null:CampaignStorySprites.Frame("Directional20261026/PadreFabio",0,0);
+                var priest=CreateNPC("Padre Fábio",directionalPriest??CampaignCharacterProportions.Priest(VarginhaReferenceSprites.PadreFabio(),phase),position);
+                if(!churchScale)priest.AddComponent<CampaignDirectionalNpc>().Configure("Directional20261026/PadreFabio",_actor.transform);
+            }
+            if (phase == 9) CreateNPC("Ouzana", CampaignOuzanaVisual.Idle(Vector2.down),Plan.points.Find(p=>p.id=="ouzana").position+new Vector2(.9f,.6f)).AddComponent<CampaignOuzanaBiologist>();
             GameManager.Instance?.StartGame(); Save(); Lock();
         }
         private GameObject CreateNPC(string name, Sprite sprite, Vector2 position)
@@ -95,14 +123,18 @@ namespace Game.Varginha.Experiment
         }
         private void CreateEntity()
         {
-            var go = new GameObject("Manifestação não combatível"); go.transform.SetParent(transform); go.transform.position = new Vector3(-8,2);
-            _entity = go.AddComponent<SpriteRenderer>(); _entity.sprite = VarginhaPixelArtSprites.Create("ET_Subordinate_Entity", Color.gray);
-            _entity.color = new Color(.19f,.23f,.22f,.6f); VarginhaWorldDepth.Ensure(_entity, true);
+            var go = new GameObject("Manifestação não combatível"); go.transform.SetParent(transform); go.transform.position = Plan.spawn;
+            _entity = go.AddComponent<SpriteRenderer>();
+            _entity.sprite = CampaignStorySprites.Frame("ForestPresenceHybridV1",0,0);
+            go.transform.localScale=Vector3.one*.9f;
+            _entity.color = new Color(.86f,.93f,.86f,.95f); VarginhaWorldDepth.Ensure(_entity, true);
+            go.AddComponent<CampaignForestPresence>();go.SetActive(false);
         }
         private void Update()
         {
             if (CampaignCinematics.IsTransitioning) return;
             if (Progress == null) return;
+            if(_forestCaught||VarginhaGameHUD.Instance?.IsGameOver==true){_actor.SetInputLocked(true);return;}
             if (VarginhaGameHUD.Instance?.IsInventoryOpen == true) return;
             if(_paused&&_settings&&VarginhaInputActions.CancelPressed&&!VarginhaInputActions.PausePressed){_settings=false;return;}
             if ((VarginhaInputActions.PausePressed || VarginhaInputActions.CancelPressed && (_paused || _message!=null || _panel!=null)))
@@ -202,7 +234,7 @@ namespace Game.Varginha.Experiment
                 {
                     int sign = int.Parse(id.Substring(4));
                     if (!State.mapSolved) Say("É preciso alinhar o mapa antes de seguir os símbolos.");
-                    else if (sign == State.forestSigns) { State.forestSigns++; if (sign == 1) _safePoint = Plan.points.Find(p=>p.id=="sign1").position; Say(sign == 0 ? "A marca da árvore aponta para a clareira. O ruído acompanha seus passos."
+                    else if (sign == State.forestSigns) { State.forestSigns++; if (sign == 1) SetForestCheckpoint(Plan.points.Find(p=>p.id=="sign1").position); Say(sign == 0 ? "A marca da árvore aponta para a clareira. O ruído acompanha seus passos."
                         : sign == 1 ? "A marca do rio aponta para a ponte. Há algo se movendo entre as árvores. Use o esconderijo ou siga até a capela."
                         : "A marca da capela confirma o caminho. Fábio espera dentro da ruína."); }
                     else Say(sign < State.forestSigns ? "Este símbolo já está no caderno." : "A direção não corresponde ao mapa. Procure o símbolo anterior.");
@@ -254,23 +286,96 @@ namespace Game.Varginha.Experiment
         private void Chase()
         {
             bool active = State.forestSigns >= 2 && !State.fabioMet; _entity.gameObject.SetActive(active);
-            if (!active || Blocked) return;
-            if (_hidden) { _actor.RestoreSanity(Time.deltaTime * 7); return; }
-            _routeTimer -= Time.deltaTime;
+            if (!active || Blocked){PursuitPressure=0;return;}
             Vector2 feet = (Vector2)_actor.transform.position + new Vector2(0,-.58f);
-            if (_routeTimer <= 0) { _routeTimer = .8f; Plan.Route(_entity.transform.position, feet, _chasePath); }
+            if(!_chaseStarted)
+            {
+                _chaseStarted=true;_chaseGrace=1.4f;
+                // Enter on the actual traversable route, a fair distance behind
+                // the player, instead of inside an opaque tree canopy.
+                var approach=new List<Vector2>();Vector2 spawn=Plan.spawn;
+                if(Plan.Route(Plan.spawn,feet,approach))
+                {
+                    approach.Add(feet);float remaining=5.2f;Vector2 cursor=feet;
+                    for(int i=approach.Count-1;i>=0;i--)
+                    {
+                        float length=Vector2.Distance(cursor,approach[i]);
+                        if(length>=remaining){spawn=Vector2.MoveTowards(cursor,approach[i],remaining);break;}
+                        remaining-=length;cursor=approach[i];spawn=cursor;
+                    }
+                }
+                _entity.transform.position=spawn;_sound.Play("Scratching");_routeTimer=0;
+            }
+            float distance=Vector2.Distance(_entity.transform.position,feet);
+            PursuitPressure=_hidden?0:Mathf.InverseLerp(8,1,distance);
+            if(_hidden)
+            {
+                _actor.RestoreSanity(Time.deltaTime*7);
+                if(distance<4)
+                {
+                    _routeTimer-=Time.deltaTime;
+                    if(_routeTimer<=0){_routeTimer=.4f;Plan.Route(_entity.transform.position,Plan.spawn,_chasePath);}
+                    MovePursuer(2.2f);
+                }
+                _heartbeat=0;return;
+            }
+            if(_chaseGrace>0){_chaseGrace-=Time.deltaTime;return;}
+            _routeTimer -= Time.deltaTime;
+            if (_routeTimer <= 0) { _routeTimer = .3f; Plan.Route(_entity.transform.position, feet, _chasePath); }
+            // Running opens a gap; walking hesitantly lets the presence gain.
+            MovePursuer(Mathf.Lerp(5.0f,3.9f,PursuitPressure));
+            distance=Vector2.Distance(_entity.transform.position,feet);
+            if(distance<.68f){CaughtInForest();return;}
+            float drain=distance<4?Time.deltaTime*Mathf.Lerp(2,7,PursuitPressure):0;
+            if(_actor.CurrentSanity<=drain){CaughtInForest();return;}
+            if(drain>0)_actor.DrainSanity(drain);
+            _heartbeat-=Time.deltaTime;
+            if(PursuitPressure>.15f&&_heartbeat<=0)
+            {
+                _heartbeat=Mathf.Lerp(1.1f,.42f,PursuitPressure);_sound.Play("Heartbeat");
+                if(PursuitPressure>.72f)Camera.main?.GetComponent<VarginhaCameraShake>()?.Shake(.12f,.025f);
+            }
+        }
+        private void MovePursuer(float speed)
+        {
             if (_chasePath.Count > 0)
             {
-                _entity.transform.position = Vector2.MoveTowards(_entity.transform.position,_chasePath[0],Time.deltaTime * 2.15f);
+                Vector2 before=_entity.transform.position;
+                _entity.transform.position = Vector2.MoveTowards(before,_chasePath[0],Time.deltaTime*speed);
+                Vector2 travel=(Vector2)_entity.transform.position-before;
+                if(travel.sqrMagnitude>.0001f)SetForestPresencePose(travel);
                 if (Vector2.Distance(_entity.transform.position,_chasePath[0]) < .08f) _chasePath.RemoveAt(0);
             }
-            if (Vector2.Distance(_entity.transform.position,feet) < 3) _actor.DrainSanity(Time.deltaTime * 3);
-            if (Vector2.Distance(_entity.transform.position,feet) < .7f || _actor.CurrentSanity <= 0) ReturnToCheckpoint();
+        }
+        private void SetForestPresencePose(Vector2 facing)
+        {
+            int direction=CampaignStorySprites.EightDirection(facing);
+            int frame=(int)(Time.time*8f)%4;
+            if(direction==_presenceDirection&&frame==_presenceFrame)return;
+            _presenceDirection=direction;_presenceFrame=frame;
+            _entity.sprite=CampaignStorySprites.Frame("ForestPresenceHybridV1",direction,frame);
+        }
+        private void SetForestCheckpoint(Vector2 point)
+        {
+            _safePoint=Plan.IsClear(point,.23f)?point:Plan.spawn;
+            State.forestHasCheckpoint=true;State.forestCheckpointX=_safePoint.x;State.forestCheckpointY=_safePoint.y;
+            State.forestCheckpointSigns=State.forestSigns;
+        }
+        private void CaughtInForest()
+        {
+            if(_forestCaught)return;
+            _forestCaught=true;_chasePath.Clear();PursuitPressure=0;
+            State.forestSigns=State.forestCheckpointSigns;
+            Progress.positionPhase=7;Progress.x=_safePoint.x;Progress.y=_safePoint.y+.58f;
+            CampaignStorySave.Write(Progress);
+            _actor.GetComponent<Rigidbody2D>().linearVelocity=Vector2.zero;_actor.SetInputLocked(true);
+            _sound.Suspend(true);GameManager.Instance?.TriggerGameOver();
+            VarginhaGameHUD.Instance?.ShowGameOver("A PRESENÇA ALCANÇOU EDELZIO");Time.timeScale=0;
         }
         public void ReturnToCheckpoint()
         {
             _actor.GetComponent<Rigidbody2D>().position = _safePoint + new Vector2(0,.58f); _actor.GetComponent<Rigidbody2D>().linearVelocity = Vector2.zero;
-            _actor.RestoreSanity(100); _entity.transform.position = new Vector3(-8,2); _chasePath.Clear();
+            _actor.RestoreSanity(100); _entity.transform.position = Plan.spawn; _chasePath.Clear();_chaseStarted=false;
             Say("A presença alcançou você. Retorno ao último ponto seguro; as pistas continuam no caderno."); Save();
         }
         private void BeginDrive()
@@ -344,7 +449,7 @@ namespace Game.Varginha.Experiment
         }
         public void Save()
         {
-            if (Progress == null || _actor == null) return;
+            if (Progress == null || _actor == null || _forestCaught) return;
             // A later visit to the book must not overwrite its solved combination.
             if (State.anchorFound) { _year = 1996; _symbol = 1; _record = 23; }
             State.anchorYear = _year; State.anchorSymbol = _symbol; State.anchorRecord = _record;
@@ -355,6 +460,7 @@ namespace Game.Varginha.Experiment
         {
             VarginhaGamepadUI.Begin("expansion:"+GetEntityId()+":"+_panel+":"+_paused+":"+(_message!=null),_panel!=null||_message!=null||_paused,50,phase==10&&!_paused&&(_message!=null||_panel=="complete"||_panel=="seal"));
             if (Progress == null) return;
+            if(_forestCaught||VarginhaGameHUD.Instance?.IsGameOver==true)return;
             if (VarginhaGameHUD.Instance?.IsInventoryOpen == true) return;
             GUI.depth = -3100;
             if (_title < 2.5f)

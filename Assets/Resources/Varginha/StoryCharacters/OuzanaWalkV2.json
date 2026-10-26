@@ -1,0 +1,654 @@
+{
+  "source": "reference-20261026-dark-brown-glasses",
+  "width": 1351,
+  "height": 1801,
+  "columns": 6,
+  "rows": 8,
+  "directions": [
+    "S",
+    "SW",
+    "W",
+    "NW",
+    "N",
+    "NE",
+    "E",
+    "SE"
+  ],
+  "coordinateOrigin": "top-left",
+  "pixelsPerUnit": [
+    108,
+    108,
+    108,
+    108,
+    108,
+    108,
+    108,
+    108
+  ],
+  "frames": [
+    {
+      "rect": [
+        61,
+        47,
+        103,
+        156
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "walk",
+      "direction": "S",
+      "index": 0
+    },
+    {
+      "rect": [
+        287,
+        47,
+        102,
+        156
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "walk",
+      "direction": "S",
+      "index": 1
+    },
+    {
+      "rect": [
+        512,
+        47,
+        102,
+        156
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "walk",
+      "direction": "S",
+      "index": 2
+    },
+    {
+      "rect": [
+        738,
+        50,
+        101,
+        153
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "walk",
+      "direction": "S",
+      "index": 3
+    },
+    {
+      "rect": [
+        962,
+        47,
+        102,
+        156
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "walk",
+      "direction": "S",
+      "index": 4
+    },
+    {
+      "rect": [
+        1188,
+        48,
+        100,
+        155
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "walk",
+      "direction": "S",
+      "index": 5
+    },
+    {
+      "rect": [
+        62,
+        276,
+        101,
+        152
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "walk",
+      "direction": "SW",
+      "index": 0
+    },
+    {
+      "rect": [
+        287,
+        276,
+        102,
+        152
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "walk",
+      "direction": "SW",
+      "index": 1
+    },
+    {
+      "rect": [
+        514,
+        276,
+        98,
+        152
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "walk",
+      "direction": "SW",
+      "index": 2
+    },
+    {
+      "rect": [
+        737,
+        276,
+        101,
+        152
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "walk",
+      "direction": "SW",
+      "index": 3
+    },
+    {
+      "rect": [
+        962,
+        276,
+        101,
+        152
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "walk",
+      "direction": "SW",
+      "index": 4
+    },
+    {
+      "rect": [
+        1188,
+        276,
+        100,
+        152
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "walk",
+      "direction": "SW",
+      "index": 5
+    },
+    {
+      "rect": [
+        67,
+        499,
+        93,
+        154
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "walk",
+      "direction": "W",
+      "index": 0
+    },
+    {
+      "rect": [
+        293,
+        499,
+        89,
+        154
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "walk",
+      "direction": "W",
+      "index": 1
+    },
+    {
+      "rect": [
+        520,
+        499,
+        87,
+        154
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "walk",
+      "direction": "W",
+      "index": 2
+    },
+    {
+      "rect": [
+        742,
+        499,
+        91,
+        154
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "walk",
+      "direction": "W",
+      "index": 3
+    },
+    {
+      "rect": [
+        969,
+        499,
+        88,
+        154
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "walk",
+      "direction": "W",
+      "index": 4
+    },
+    {
+      "rect": [
+        1195,
+        499,
+        87,
+        154
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "walk",
+      "direction": "W",
+      "index": 5
+    },
+    {
+      "rect": [
+        67,
+        714,
+        92,
+        164
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "walk",
+      "direction": "NW",
+      "index": 0
+    },
+    {
+      "rect": [
+        293,
+        715,
+        90,
+        163
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "walk",
+      "direction": "NW",
+      "index": 1
+    },
+    {
+      "rect": [
+        518,
+        715,
+        90,
+        163
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "walk",
+      "direction": "NW",
+      "index": 2
+    },
+    {
+      "rect": [
+        743,
+        715,
+        91,
+        163
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "walk",
+      "direction": "NW",
+      "index": 3
+    },
+    {
+      "rect": [
+        968,
+        715,
+        89,
+        163
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "walk",
+      "direction": "NW",
+      "index": 4
+    },
+    {
+      "rect": [
+        1193,
+        715,
+        90,
+        163
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "walk",
+      "direction": "NW",
+      "index": 5
+    },
+    {
+      "rect": [
+        63,
+        942,
+        100,
+        161
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "walk",
+      "direction": "N",
+      "index": 0
+    },
+    {
+      "rect": [
+        290,
+        938,
+        97,
+        165
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "walk",
+      "direction": "N",
+      "index": 1
+    },
+    {
+      "rect": [
+        515,
+        940,
+        96,
+        163
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "walk",
+      "direction": "N",
+      "index": 2
+    },
+    {
+      "rect": [
+        740,
+        937,
+        97,
+        166
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "walk",
+      "direction": "N",
+      "index": 3
+    },
+    {
+      "rect": [
+        965,
+        940,
+        96,
+        163
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "walk",
+      "direction": "N",
+      "index": 4
+    },
+    {
+      "rect": [
+        1189,
+        939,
+        97,
+        164
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "walk",
+      "direction": "N",
+      "index": 5
+    },
+    {
+      "rect": [
+        66,
+        1167,
+        95,
+        161
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "walk",
+      "direction": "NE",
+      "index": 0
+    },
+    {
+      "rect": [
+        291,
+        1169,
+        94,
+        159
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "walk",
+      "direction": "NE",
+      "index": 1
+    },
+    {
+      "rect": [
+        516,
+        1169,
+        94,
+        159
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "walk",
+      "direction": "NE",
+      "index": 2
+    },
+    {
+      "rect": [
+        740,
+        1168,
+        95,
+        160
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "walk",
+      "direction": "NE",
+      "index": 3
+    },
+    {
+      "rect": [
+        966,
+        1169,
+        94,
+        159
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "walk",
+      "direction": "NE",
+      "index": 4
+    },
+    {
+      "rect": [
+        1191,
+        1170,
+        94,
+        158
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "walk",
+      "direction": "NE",
+      "index": 5
+    },
+    {
+      "rect": [
+        67,
+        1388,
+        92,
+        165
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "walk",
+      "direction": "E",
+      "index": 0
+    },
+    {
+      "rect": [
+        291,
+        1388,
+        95,
+        165
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "walk",
+      "direction": "E",
+      "index": 1
+    },
+    {
+      "rect": [
+        516,
+        1389,
+        95,
+        164
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "walk",
+      "direction": "E",
+      "index": 2
+    },
+    {
+      "rect": [
+        741,
+        1388,
+        93,
+        165
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "walk",
+      "direction": "E",
+      "index": 3
+    },
+    {
+      "rect": [
+        964,
+        1389,
+        97,
+        164
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "walk",
+      "direction": "E",
+      "index": 4
+    },
+    {
+      "rect": [
+        1190,
+        1389,
+        96,
+        164
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "walk",
+      "direction": "E",
+      "index": 5
+    },
+    {
+      "rect": [
+        63,
+        1618,
+        100,
+        160
+      ],
+      "anchorX": 113,
+      "lift": 0,
+      "action": "walk",
+      "direction": "SE",
+      "index": 0
+    },
+    {
+      "rect": [
+        287,
+        1614,
+        101,
+        164
+      ],
+      "anchorX": 338,
+      "lift": 0,
+      "action": "walk",
+      "direction": "SE",
+      "index": 1
+    },
+    {
+      "rect": [
+        513,
+        1617,
+        100,
+        161
+      ],
+      "anchorX": 563,
+      "lift": 0,
+      "action": "walk",
+      "direction": "SE",
+      "index": 2
+    },
+    {
+      "rect": [
+        738,
+        1615,
+        101,
+        163
+      ],
+      "anchorX": 788,
+      "lift": 0,
+      "action": "walk",
+      "direction": "SE",
+      "index": 3
+    },
+    {
+      "rect": [
+        962,
+        1615,
+        102,
+        163
+      ],
+      "anchorX": 1013,
+      "lift": 0,
+      "action": "walk",
+      "direction": "SE",
+      "index": 4
+    },
+    {
+      "rect": [
+        1188,
+        1616,
+        101,
+        162
+      ],
+      "anchorX": 1238,
+      "lift": 0,
+      "action": "walk",
+      "direction": "SE",
+      "index": 5
+    }
+  ]
+}

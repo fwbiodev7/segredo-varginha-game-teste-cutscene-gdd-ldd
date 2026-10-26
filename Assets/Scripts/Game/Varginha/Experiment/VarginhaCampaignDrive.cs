@@ -134,10 +134,10 @@ namespace Game.Varginha.Experiment
             float left=road!=null?road.Position(road.laneBorders[0],0).x+.55f:-3.8f,right=road!=null?road.Position(road.laneBorders[1],0).x-.55f:3.8f;
             target.x = Mathf.Clamp(target.x,left,right); target.y = Mathf.Clamp(target.y, 0, 120);
             Vector2 delta=target-_body.position;
-            if(delta.sqrMagnitude<.000001f&&_velocity.sqrMagnitude>.001f){_speed=0;_velocity=Vector2.zero;}
+            if(delta.sqrMagnitude<=1e-12f&&_velocity.sqrMagnitude>.001f){_speed=0;_velocity=Vector2.zero;}
             float distance=CampaignVehiclePhysics.ClearDistance(_body,_box,_yaw,delta,_hits);
             if(distance<delta.magnitude){_speed=0;_velocity=Vector2.zero;}
-            if(delta.sqrMagnitude>.000001f)_body.MovePosition(_body.position+delta.normalized*distance);
+            if(delta.sqrMagnitude>1e-12f)_body.MovePosition(_body.position+delta.normalized*distance);
             _progress.driveDistance=_body.position.y;
         }
         public void BreakDown() { _state = State.Breakdown; _input = Vector2.zero; _body.linearVelocity = Vector2.zero; _radio.Stop(); _sound.Engine(false); _sound.Play("Key"); _inspect = true; _detail = 0; _frameTick = -1; Save(); }

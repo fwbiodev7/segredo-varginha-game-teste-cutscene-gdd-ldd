@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using Game.Managers;
 using Game.Player;
+using Game.Varginha;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -70,7 +71,7 @@ namespace Game.Varginha.Experiment
             if(phase==18)
             {
                 // The approved map already contains the frozen ET inside its glass capsule.
-                NPC("Ouzana",CampaignStorySprites.Frame("OuzanaBiologist",2,2),
+                NPC("Ouzana",CampaignOuzanaVisual.Idle(Vector2.right),
                     Plan.points.Find(p=>p.id=="reading").position+new Vector2(-.45f,.1125f));
             }
             if(phase==21&&area==0)
@@ -112,6 +113,7 @@ namespace Game.Varginha.Experiment
                 var student=NPC(VarginhaPhase2Controller.StudentNames[i],VarginhaStudentSprites.Frame(VarginhaPhase2Controller.StudentNames[i],3,0),point,false);
                 var chair=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/Cadeira azul "+indexes[i])?.GetComponent<SpriteRenderer>();
                 CampaignSeatingLayers.Attach(student.GetComponent<SpriteRenderer>(),chair,true);
+                student.AddComponent<VarginhaStudentAnimation>().Configure(VarginhaPhase2Controller.StudentNames[i],Vector2.up);
                 if(chair!=null){var feet=student.GetComponent<CircleCollider2D>();point=student.transform.TransformPoint(feet.offset);}
                 Plan.points.Add(new CampaignMapPlan.Point("student"+i,VarginhaPhase2Controller.StudentNames[i]+" • CONVERSAR",point.x,point.y));
             }
@@ -131,6 +133,7 @@ namespace Game.Varginha.Experiment
             }
             var go=new GameObject(name);go.transform.SetParent(transform);go.transform.position=feet+Vector2.up*.58f;
             var sr=go.AddComponent<SpriteRenderer>();sr.sprite=sprite;
+            if(name=="Ouzana")sr.sharedMaterial=CampaignOuzanaVisual.Material;
             var collider=go.AddComponent<CircleCollider2D>();collider.radius=.23f;collider.offset=Vector2.down*.58f;
             VarginhaWorldDepth.Ensure(sr,ground:collider);return go;
         }

@@ -1,6 +1,6 @@
 Shader "Varginha/IllustratedMorning"
 {
-    Properties{[PerRendererData]_MainTex("Artwork",2D)="white"{} _Color("Tint",Color)=(1,1,1,1) _ReferenceMap("Original map UV",Float)=1}
+    Properties{[PerRendererData]_MainTex("Artwork",2D)="white"{} _Color("Tint",Color)=(1,1,1,1) _ReferenceMap("Original map UV",Float)=1 _OfficeFloor("Repair original office floor",Float)=0}
     SubShader
     {
         Tags{"Queue"="Transparent" "RenderType"="Transparent" "CanUseSpriteAtlas"="True"}
@@ -11,7 +11,7 @@ Shader "Varginha/IllustratedMorning"
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
-            sampler2D _MainTex;fixed4 _Color;float _ReferenceMap;
+            sampler2D _MainTex;fixed4 _Color;float _ReferenceMap,_OfficeFloor;
             struct Input{float4 vertex:POSITION;float2 uv:TEXCOORD0;fixed4 color:COLOR;};
             struct Output{float4 vertex:SV_POSITION;float2 uv:TEXCOORD0;fixed4 color:COLOR;};
             Output vert(Input v){Output o;o.vertex=UnityObjectToClipPos(v.vertex);o.uv=v.uv;o.color=v.color*_Color;return o;}
@@ -19,6 +19,13 @@ Shader "Varginha/IllustratedMorning"
             {
                 fixed4 c=tex2D(_MainTex,i.uv)*i.color;
                 float2 p=float2(i.uv.x*1889,(1-i.uv.y)*833);
+                if(_OfficeFloor>.5)
+                {
+                    float2 outside=max(float2(54,494)-p,p-float2(116,566));
+                    float coverage=1-saturate(max(outside.x,outside.y)/8);
+                    fixed4 floor=tex2D(_MainTex,i.uv+float2(160.0/1889,0))*i.color;
+                    c=lerp(c,floor,coverage);
+                }
                 bool yard=p.x>960;
                 bool plant=p.x>25&&p.x<110&&p.y>280&&p.y<337;
                 bool green=c.g>c.r*1.16&&c.g>c.b*1.12;

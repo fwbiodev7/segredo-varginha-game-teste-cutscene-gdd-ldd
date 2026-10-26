@@ -23,7 +23,10 @@ namespace Game.Tests.PlayMode
         private static IEnumerator Hold(Keyboard keyboard,Key key,float seconds)
         {
             float until=Time.time+seconds;
-            while(Time.time<until){InputSystem.QueueStateEvent(keyboard,new KeyboardState(key));yield return null;}
+            while(Time.time<until)
+            {
+                InputSystem.QueueStateEvent(keyboard,new KeyboardState(key));yield return null;
+            }
             InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return null;
         }
         [UnityTest,Timeout(60000)] public IEnumerator LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit()
@@ -37,7 +40,16 @@ namespace Game.Tests.PlayMode
             new GameObject("LegacyRoad_QA").AddComponent<VarginhaCampaignDrive>();yield return new WaitForSeconds(3.4f);
             var road=VarginhaCampaignDrive.Active;var body=GameObject.Find("Fusca_TopView_Campanha").GetComponent<Rigidbody2D>();
             yield return Hold(keyboard,Key.DownArrow,.6f);Assert.That(body.position.y,Is.EqualTo(0).Within(.02f));
-            yield return Hold(keyboard,Key.UpArrow,.5f);Assert.That(body.position.y,Is.GreaterThan(.2f));
+            yield return Hold(keyboard,Key.UpArrow,.5f);
+            if(body.position.y<=.2f)
+            {
+                var fields=System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance;
+                foreach(string field in new[]{"_state","_titleTime","_paused","_inspect","_input","_speed","_velocity"})
+                    Debug.Log("ROAD_DIAGNOSTIC "+field+"="+typeof(VarginhaCampaignDrive).GetField(field,fields).GetValue(road));
+                var box=body.GetComponent<BoxCollider2D>();var hits=Physics2D.BoxCastAll(body.position,box.size,body.rotation,Vector2.up,.15f);
+                foreach(var hit in hits)if(hit.collider!=box)Debug.Log("ROAD_CONTACT "+hit.collider.name+" distance="+hit.distance+" normal="+hit.normal+" separation="+box.Distance(hit.collider).distance);
+            }
+            Assert.That(body.position.y,Is.GreaterThan(.2f));
             Assert.That(road.Speed,Is.InRange(1.5f,4f),"The initial half second must accelerate instead of jumping to full speed.");
             float speed=road.Speed,y=body.position.y;yield return new WaitForSeconds(.1f);
             Assert.That(road.Speed,Is.GreaterThan(0));Assert.That(road.Speed,Is.LessThan(speed));Assert.That(body.position.y,Is.GreaterThan(y));

@@ -13,7 +13,9 @@ namespace Game.Varginha.Experiment
         }
         public static float ClearDistance(Rigidbody2D body,BoxCollider2D box,float yaw,Vector2 delta,RaycastHit2D[] hits)
         {
-            if(delta.sqrMagnitude<.000001f)return 0;
+            // Acceleration starts with sub-millimetre fixed steps. Treating those
+            // as blocked travel resets the road's speed before it can build up.
+            if(delta.sqrMagnitude<=1e-12f)return 0;
             var filter=new ContactFilter2D{useTriggers=false};filter.SetLayerMask(~0);
             int count=Physics2D.BoxCast(body.position,box.size,yaw,delta.normalized,filter,hits,delta.magnitude+.035f);
             float distance=delta.magnitude;

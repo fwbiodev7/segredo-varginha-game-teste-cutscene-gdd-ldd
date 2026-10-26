@@ -107,6 +107,17 @@ namespace Game.Varginha.Experiment
                 }
                 else pose=Frame("EdelzioWalk",direction,frame,equipped);
             }
+            string directionalName="Directional20261026/"+(equipped?"Edelzio":"EdelzioNoBag");
+            if(punching)
+            {
+                int attackColumn=4+Mathf.Clamp(_actions.CombatFrame,0,3);
+                pose=StoryFrame(directionalName,CampaignStorySprites.EightDirection(face),attackColumn);
+            }
+            else if(!acting&&!IsJumping&&_actions?.IsDrinking!=true&&_actions?.IsSeated!=true)
+            {
+                int walkColumn=_actor.IsMoving&&!_actor.IsInputLocked?(int)(Time.time*7f)%4:0;
+                pose=StoryFrame(directionalName,CampaignStorySprites.EightDirection(face),walkColumn);
+            }
             if(pose!=null)
             {
                 if(_actions!=null&&_actions.IsSeated&&face.y>.5f&&GetComponent<CampaignSeatingLayers>()?.IsOfficeSeat==true)
