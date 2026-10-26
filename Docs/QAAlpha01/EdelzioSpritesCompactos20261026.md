@@ -26,6 +26,14 @@ As folhas originais e as 24 capturas geradas foram abertas/revisadas em escala a
 
 O log do Unity registrou falhas de inicialização de D3D12/licenciamento no batchmode, mas o runner completou a suíte, reportou `Passed`, e as 24 imagens de renderização esperadas foram criadas e revisadas. O teste é PlayMode no Editor; não foi executado um build do jogo. Os limites de recorte e UVs são validados para cada sprite. A contagem menor refere-se aos quadros da caminhada, não ao número de direções.
 
+### Build e teste Standalone (26/10/2026)
+
+- Build Windows x64 `0.4.8-beta`, Unity `6000.6.0f1`: `Succeeded`, 19 cenas, 0 erros, 2 avisos, 413.535.138 bytes, 127,56 s. O executável temporário foi gerado em `%TEMP%/varginha-master-qa-20261023-120709/Builds/Varginha_0.4.8-beta_2026-10-23/SegredoDeVarginha.exe`; a build existente no projeto não foi sobrescrita.
+- Os dois avisos de build são `CS0618` em `CampaignRenanTeacher.cs:21`, pelo uso obsoleto de `FindFirstObjectByType`; não apontam para os arquivos do Edelzio.
+- Player Standalone `CharacterFrameRenderingTests`: **5 passaram, 0 falharam, 0 ignorados**, incluindo a validação dos quadros e renderer: `output/revisao-final-2026-10-26/edelzio-player-3frames-20261026.xml`.
+- Smoke test do executável real: processo permaneceu aberto por 10 segundos e carregou o runtime. D3D12 falhou na inicialização e houve fallback para Direct3D 11 na NVIDIA GeForce G210; o log também registra `GpuFence` indisponível. O processo foi encerrado ao fim da observação. Log: `output/revisao-final-2026-10-26/edelzio-build-smoke.log`.
+- A cena jogável não foi percorrida visualmente no executável. As capturas quadro a quadro foram revistas no teste PlayMode do Editor; o player Standalone passou os testes de renderização/geometry. Isso confirma compilação e inicialização, sem afirmar uma revisão manual de gameplay.
+
 ## Contrato atual
 
-O personagem continua com quatro orientações artísticas, não oito; não foram inventadas poses diagonais. A caminhada com mochila usa a folha cinza aprovada. A arte e os metadados de importação das folhas-fonte não foram modificados. A alteração foi integrada e validada no teste PlayMode descrito acima; build de jogador/plataforma não foi executado.
+O personagem continua com quatro orientações artísticas, não oito; não foram inventadas poses diagonais. A caminhada com mochila usa a folha cinza aprovada. A arte e os metadados de importação das folhas-fonte não foram modificados. A alteração foi integrada, passou no PlayMode do Editor e no teste player Standalone, e foi incluída na build temporária Windows x64; a ressalva da inspeção manual da cena está descrita acima.
