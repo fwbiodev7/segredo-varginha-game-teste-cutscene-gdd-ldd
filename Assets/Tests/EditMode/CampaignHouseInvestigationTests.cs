@@ -79,7 +79,7 @@ namespace Game.Tests.EditMode
         }
         [Test] public void CompletedPuzzleAndMigrationPreserveLaterChapters()
         {
-            var s=new CampaignStory{phase=4,boxFound=true,pagesSolved=true,renanMet=true,buildingSolved=true,codeSolved=true};s.Repair();
+            var s=new CampaignStory{version=3,phase=4,boxFound=true,pagesSolved=true,renanMet=true,buildingSolved=true,codeSolved=true};s.Repair();
             Assert.That(s.house.Complete&&s.codeSolved,Is.True);
             Assert.That(s.phase,Is.EqualTo(4));
         }

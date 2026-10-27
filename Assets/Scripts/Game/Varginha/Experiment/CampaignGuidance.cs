@@ -20,11 +20,7 @@ namespace Game.Varginha.Experiment
             {
                 case 1:return "Examine a TV. Quando a energia falhar, siga a luz pela porta do quintal.";
                 case 2:return story.house.Objective(story.routine);
-                case 4:case 5:return !story.renanMet?"Converse com Renan junto ao quadro branco."
-                    :!story.buildingSolved?"Abra o notebook do professor e procure a diferença na fotografia."
-                    :!story.codeSolved?"Reabra o notebook: compare os dois grupos na margem para descobrir o horário."
-                    :!story.renanConfirmed?"Mostre o horário descoberto a Renan."
-                    :"Investigação concluída. Converse com Renan para seguir à biblioteca.";
+                case 4:case 5:return story.school.Objective;
                 case 6:return (e.visited&1)==0?"Examine o livro aberto: ele guarda o terceiro fragmento e uma pista sobre a passagem."
                     :(e.visited&2)==0?"Agora examine o globo para orientar a travessia do rio."
                     :(e.visited&4)==0?"Consulte o painel para localizar a entrada da capela."
@@ -84,7 +80,7 @@ namespace Game.Varginha.Experiment
             switch(phase)
             {
                 case 2:return s.house.Target(s.routine);
-                case 4:case 5:return !s.renanMet||s.codeSolved?"renan":"notebook";
+                case 4:case 5:return s.school.stage==3&&!s.school.noticeRead?"mural":"notebook";
                 case 6:return (e.visited&1)==0?"archive":(e.visited&2)==0?"school":(e.visited&4)==0?"square":e.mapSolved?"exit":"map";
                 case 7:return e.forestSigns<3?"sign"+e.forestSigns:e.fabioMet?"exit":"fabio";
                 case 8:return e.anchorFound?"exit":"anchor";

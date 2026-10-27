@@ -30,7 +30,7 @@ namespace Game.Tests.EditMode
             var s=new CampaignStory{version=1,phase=before,positionPhase=before,x=4,y=2};
             s.continuation.clues[before>=11?before-11:0]=7;
             s.Repair();Assert.That(s.phase,Is.EqualTo(after));Assert.That(s.positionPhase,Is.Zero);
-            Assert.That(s.version,Is.EqualTo(3));string first=JsonUtility.ToJson(s);s.Repair();Assert.That(JsonUtility.ToJson(s),Is.EqualTo(first));
+            Assert.That(s.version,Is.EqualTo(CampaignSequence.SaveVersion));string first=JsonUtility.ToJson(s);s.Repair();Assert.That(JsonUtility.ToJson(s),Is.EqualTo(first));
         }
 
         [Test] public void MigrationPreservesEvidencePuzzlesEquipmentVictoryAndCrossing()
@@ -97,7 +97,7 @@ namespace Game.Tests.EditMode
             {
                 CampaignStorySave.Write(new CampaignStory{version=1,phase=3,positionPhase=3,boxFound=true,pagesSolved=true});
                 var migrated=CampaignStorySave.Load();Assert.That(migrated.phase,Is.EqualTo(4));Assert.That(migrated.pagesSolved,Is.True);
-                var disk=JsonUtility.FromJson<CampaignStory>(System.IO.File.ReadAllText(CampaignStorySave.Path));Assert.That(disk.version,Is.EqualTo(3));Assert.That(disk.positionPhase,Is.Zero);
+                var disk=JsonUtility.FromJson<CampaignStory>(System.IO.File.ReadAllText(CampaignStorySave.Path));Assert.That(disk.version,Is.EqualTo(CampaignSequence.SaveVersion));Assert.That(disk.positionPhase,Is.Zero);
                 System.IO.File.SetLastWriteTimeUtc(CampaignStorySave.Path,new System.DateTime(2020,1,1,0,0,0,System.DateTimeKind.Utc));
                 var stamp=System.IO.File.GetLastWriteTimeUtc(CampaignStorySave.Path);
                 Assert.That(CampaignStorySave.Load().phase,Is.EqualTo(4));Assert.That(System.IO.File.GetLastWriteTimeUtc(CampaignStorySave.Path),Is.EqualTo(stamp));

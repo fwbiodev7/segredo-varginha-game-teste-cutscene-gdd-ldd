@@ -37,7 +37,6 @@ namespace Game.Varginha.Experiment
         private string _guideTarget;
         private bool _forestCaught,_chaseStarted;
         private float _chaseGrace,_heartbeat;
-        private int _presenceDirection=-1,_presenceFrame=-1;
         public bool ForestCaught=>_forestCaught;
         public float PursuitPressure{get;private set;}
         private bool Blocked => _forestCaught || VarginhaGameHUD.Instance?.IsGameOver==true || _paused || _title < 2.5f || _message != null || _panel != null || VarginhaGameHUD.Instance?.IsInventoryOpen == true || _actor?.GetComponent<VarginhaPlayerActionAnimation>()?.IsActing == true;
@@ -99,7 +98,7 @@ namespace Game.Varginha.Experiment
                 bool churchScale=CampaignCharacterProportions.IsChurch(phase);
                 var directionalPriest=churchScale?null:CampaignStorySprites.Frame("Directional20261026/PadreFabio",0,0);
                 var priest=CreateNPC("Padre Fábio",directionalPriest??CampaignCharacterProportions.Priest(VarginhaReferenceSprites.PadreFabio(),phase),position);
-                if(!churchScale)priest.AddComponent<CampaignDirectionalNpc>().Configure("Directional20261026/PadreFabio",_actor.transform);
+                // The forest dialogue NPC stays in his front pose; he does not track the player.
             }
             if (phase == 9) CreateNPC("Ouzana", CampaignOuzanaVisual.Idle(Vector2.down),Plan.points.Find(p=>p.id=="ouzana").position+new Vector2(.9f,.6f)).AddComponent<CampaignOuzanaBiologist>();
             GameManager.Instance?.StartGame(); Save(); Lock();
@@ -125,7 +124,7 @@ namespace Game.Varginha.Experiment
         {
             var go = new GameObject("Manifestação não combatível"); go.transform.SetParent(transform); go.transform.position = Plan.spawn;
             _entity = go.AddComponent<SpriteRenderer>();
-            _entity.sprite = CampaignStorySprites.Frame("ForestPresenceHybridV1",0,0);
+            _entity.sprite = CampaignStorySprites.Frame(CampaignForestPresence.Atlas,0,0);
             go.transform.localScale=Vector3.one*.9f;
             _entity.color = new Color(.86f,.93f,.86f,.95f); VarginhaWorldDepth.Ensure(_entity, true);
             go.AddComponent<CampaignForestPresence>();go.SetActive(false);
@@ -222,7 +221,7 @@ namespace Game.Varginha.Experiment
             else if (phase == 6)
             {
                 if (id == "map") Open("map");
-                else if (id == "archive") { State.visited |= 1; Say("O livro guarda o terceiro fragmento. O carimbo de 23:23 corresponde à diocese.\nO levantamento começa na árvore: um tronco caído impede uma das passagens. O registro ficou ao lado do mapa."); }
+                else if (id == "archive") { State.visited |= 1; Say("Coleção C-96: o original indicado nos meus recortes.\nO livro guarda o terceiro fragmento. O carimbo de 23:23 corresponde à diocese.\nO levantamento começa na árvore: um tronco caído impede uma das passagens. O registro ficou ao lado do mapa."); }
                 else if (id == "school") { State.visited |= 2; Say("O levantamento junto ao globo mostra o rio entre a árvore e a capela. A ponte é a travessia registrada. Compare a água e os caminhos no mapa."); }
                 else if (id == "square") { State.visited |= 4; Say("O painel conserva o relato de 1996. A entrada da capela fica junto ao portão; o muro bloqueia o outro acesso. Trace uma rota que respeite os três registros na mesa central."); }
                 else if (id.StartsWith("library_shelf")) Say("Estantes da biblioteca da Industrial. Livros de história local, atlas e registros escolares. Os documentos da investigação estão no livro aberto, junto ao globo e no painel de avisos.");
@@ -349,11 +348,8 @@ namespace Game.Varginha.Experiment
         }
         private void SetForestPresencePose(Vector2 facing)
         {
-            int direction=CampaignStorySprites.EightDirection(facing);
             int frame=(int)(Time.time*6f)%3;
-            if(direction==_presenceDirection&&frame==_presenceFrame)return;
-            _presenceDirection=direction;_presenceFrame=frame;
-            _entity.sprite=CampaignStorySprites.Frame("ForestPresenceHybridV1",direction,CampaignStorySprites.WalkColumn(frame));
+            _entity.GetComponent<CampaignForestPresence>().Present(facing,frame);
         }
         private void SetForestCheckpoint(Vector2 point)
         {

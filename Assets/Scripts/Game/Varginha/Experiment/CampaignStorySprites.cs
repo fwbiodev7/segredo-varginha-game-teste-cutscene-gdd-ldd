@@ -60,7 +60,7 @@ namespace Game.Varginha.Experiment
             || name == "WalkGray" || name == "Life" || name == "LifeGray"
             || name == "Punch" || name == "Seated" || name == "SeatedGray" || name == "SeatedDeskNorth" || name == "Driving";
         private static bool IsAnimationAtlas(string name) => name.StartsWith("Directional20261026/",StringComparison.Ordinal)
-            || name == "OuzanaWalkV2" || name == "OuzanaAttackV2" || name == "ForestPresenceHybridV1";
+            || name == "OuzanaWalkV2" || name == "OuzanaAttackV2" || name == "ForestPresenceHybridV1" || name == CampaignForestPresence.Atlas;
         public static int WalkColumn(int frame) => frame switch { 0 => 0, 1 => 1, _ => 3 };
         public static int AttackColumn(int frame) => frame switch { 0 => 4, 1 => 5, _ => 7 };
         public static int EightDirection(Vector2 face)

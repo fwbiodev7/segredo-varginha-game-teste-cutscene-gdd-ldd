@@ -26,14 +26,28 @@ Shader "Varginha/IllustratedMorning"
                 float2 p=float2(i.uv.x*1889,(1-i.uv.y)*833);
                 if(_OfficeFloor>.5)
                 {
-                    // Remove the old chair silhouette with a rounded edge while
-                    // retaining enough margin to cover its legs and floor shadow.
-                    float distance=roundedBoxDistance(p,float2(85,530),float2(32,38),18.0);
-                    float coverage=1-smoothstep(-4.0,20.0,distance);
-                    // Sample from nearby uncovered floor so its plank lighting blends
-                    // with the repaired seat area instead of importing a distant patch.
-                    fixed4 floor=tex2D(_MainTex,i.uv+float2(80.0/1889,0))*i.color;
-                    c=lerp(c,floor,coverage);
+                    // Reconstruct each horizontal plank from its two uncovered ends.
+                    // A translated rectangle imports unrelated grain, joints and light.
+                    float distance=roundedBoxDistance(p,float2(86,532),float2(30,38),4.0);
+                    // The original wider desk also left a detached shadow east
+                    // of the replacement. Its floor is part of the same repair.
+                    distance=min(distance,roundedBoxDistance(p,float2(153,505),float2(13,30),3.0));
+                    float coverage=1-smoothstep(-1.0,5.0,distance);
+                    if(coverage>0)
+                    {
+                        float y=i.uv.y;
+                        fixed4 left=(tex2D(_MainTex,float2(42.5/1889,y))
+                            +tex2D(_MainTex,float2(46.5/1889,y)))*.5;
+                        fixed4 right=(tex2D(_MainTex,float2(178.5/1889,y))
+                            +tex2D(_MainTex,float2(182.5/1889,y)))*.5;
+                        float across=saturate((p.x-44.5)/136.0);
+                        fixed4 grain=tex2D(_MainTex,i.uv+float2(128.0/1889,0));
+                        fixed4 grainLeft=tex2D(_MainTex,float2(172.5/1889,y));
+                        fixed4 grainRight=tex2D(_MainTex,float2(308.5/1889,y));
+                        fixed4 floor=(lerp(left,right,across)
+                            +(grain-lerp(grainLeft,grainRight,across))*.7)*i.color;
+                        c=lerp(c,floor,coverage);
+                    }
                 }
                 bool yard=p.x>960;
                 bool plant=p.x>25&&p.x<110&&p.y>280&&p.y<337;

@@ -14,7 +14,7 @@ namespace Game.Varginha.Experiment
         public static VarginhaCampaignStage Active { get; private set; }
         public static bool IsModalOpen => Active != null && Active.IsBlocked;
         private bool IsBlocked => !_ready || _titleTime < 3 || _paused || _busy || _dialogue != null || _view != View.World || VarginhaGameHUD.Instance?.IsInventoryOpen == true;
-        private enum View { World, Pages, Photo, Code, Notebook, Hint, Cutscene, Complete, Deduction }
+        private enum View { World, Pages, Notebook, Hint, Cutscene, Complete, Deduction, School, Document }
         private View _view;
         private Vector2 _journalScroll;
         private CampaignStory _progress;
@@ -140,14 +140,16 @@ namespace Game.Varginha.Experiment
             var renanFeet=renan.AddComponent<CircleCollider2D>();renanFeet.radius=.24f;renanFeet.offset=Vector2.down*.58f;
             VarginhaWorldDepth.Ensure(renderer,ground:renanFeet);
             _points.Add(new Point("renan", "RENAN • QUADRO BRANCO", renan.transform.position, renan.transform));
-            _points.Add(new Point("notebook", "NOTEBOOK DO PROFESSOR • FOTOGRAFIA", new(.75f,3.8f)));
+            _points.Add(new Point("notebook", "MESA DE INVESTIGAÇÃO • MEUS DOCUMENTOS", new(.75f,3.8f)));
             var layoutSchool=CampaignIllustratedMaps.Get(phase);
             if(layoutSchool!=null)_points.Find(point=>point.id=="notebook").position=layoutSchool.Objective("notebook")+Vector2.up*.58f;
+            _points.Add(new Point("mural","MURAL • CONSULTA AO ACERVO",layoutSchool!=null?layoutSchool.Position(1080,105)+Vector2.up*.58f:new Vector2(7.5f,-4.55f)));
         }
         private int _hintLevel;
         public bool OpenHints()
         {
             if (!_ready || _busy || _paused || _dialogue != null || _view == View.Cutscene || _view == View.Complete || VarginhaGameHUD.Instance?.IsInventoryOpen == true) return false;
+            if(phase>=4)_hintLevel=_progress.school.hintLevel;
             Show(View.Hint); return true;
         }
         private void Update()
@@ -160,6 +162,8 @@ namespace Game.Varginha.Experiment
             if ((VarginhaInputActions.PausePressed || VarginhaInputActions.CancelPressed && (_paused || _dialogue!=null || _view!=View.World)))
             {
                 if (_dialogue != null && !_carContext) CloseDialogue();
+                else if(_view==View.School&&_schoolHints)_schoolHints=false;
+                else if(_view==View.Document)CloseSchoolDocument();
                 else if (_view != View.World && _view != View.Cutscene && _view != View.Complete) Show(View.World);
                 else TogglePause();
             }
@@ -237,8 +241,9 @@ namespace Game.Varginha.Experiment
                     if (!_progress.boxFound)
                     {
                         _progress.boxFound = true;
+                        _progress.school.RecoverDocuments();
                         _progress.house.step = 4;
-                        Cutscene("TRINTA ANOS NA MESMA CAIXA", "Entre os carrinhos estão a chave, uma fotografia e páginas do caderno.\nA letra infantil para no meio. A anotação seguinte parece ter sido feita ontem.", View.Pages);
+                        Cutscene("TRINTA ANOS NA MESMA CAIXA", "Entre os carrinhos estão a chave, uma fotografia, recortes de jornal e anotações de criança.\nOs documentos ficaram guardados no caderno. A anotação seguinte parece ter sido feita ontem.", View.Pages);
                     }
                     else Show(View.Pages);
                     break;
@@ -253,23 +258,10 @@ namespace Game.Varginha.Experiment
             if(id=="renan")
             {
                 _progress.renanMet=true;
-                if(phase>=4&&_progress.codeSolved)
-                {
-                    _progress.renanConfirmed=true;
-                    Cutscene("UM HORÁRIO QUE SE REPETE", "23:23. Essa anotação também aparece nos registros da cidade.\nLeve a fotografia à biblioteca; pode haver outra parte dessa história lá.", View.Complete,"Renan");
-                }
-                else Say("Renan",phase==4
-                    ?"Edelzio, encontrei uma fotografia antiga ligada ao caso de 1996. Pode abrir meu notebook na mesa. Observe o portão: há algo estranho nela."
-                    :"Reabra a mesma fotografia no meu notebook. Dois grupos iguais de números aparecem na margem, separados por dois pontos.");
+                Say("Renan","Bom dia, Edelzio! Estou terminando a atividade da turma. Pode usar a mesa para organizar seu material enquanto isso. Depois me conta como foi o caminho.");
             }
-            else if(id=="notebook")
-            {
-                if(!_progress.renanMet){Say("Edelzio","Deixa eu falar com o Renan antes de mexer no notebook dele.");return;}
-                if(!_progress.buildingSolved){_progress.photoOpened=true;Show(View.Photo);}
-
-                else if(_progress.codeSolved)Say("Edelzio","É esse o horário... O Renan precisa ver isso.");
-                else{_progress.timeOpened=true;Show(View.Code);}
-            }
+            else if(id=="notebook") OpenSchoolInvestigation();
+            else if(id=="mural") OpenSchoolDocument(6,View.World);
         }
         private IEnumerator RoutineAction(string id)
         {
@@ -319,20 +311,11 @@ namespace Game.Varginha.Experiment
         {
             if (index < 0 || index >= _students.Count) return;
             var student = _students[index]; student.Greet(); _progress.studentsTalked |= 1 << index;
-            string[] first = {
-                "A fotografia que Renan encontrou é de 1996.",
-                "O notebook do professor está na mesa junto ao quadro.",
-                "Tem alguém naquelo portão? É difícil distinguir o rosto.",
-                "O portão me chamou atenção antes de qualquer outra coisa.",
-                "Uma imagem pode guardar uma história inteira.",
-                "A sombra não parece combinar com a luz da fotografia.",
-                "Os dois grupos na margem da foto são iguais.",
-                "O projetor piscou com o cabo conectado. Renan também viu.",
-                "Renan está mostrando documentos antigos à turma."
-            };
-            Say(student.StudentName, phase >= 4 && _progress.codeSolved
-                ? "23:23... Guarde a foto original. Precisamos comparar se ela mudar de novo."
-                : ("Estou " + student.Activity + ". ") + first[index]);
+            string[] first = {"Hoje estamos organizando dados por data.","Deixamos a mesa do professor livre para você.",
+                "Já salvei a versão do nosso trabalho.","Vou terminar estas anotações antes do intervalo.",
+                "O prazo do projeto é na próxima aula.","Precisamos conferir as fontes da pesquisa.",
+                "Uma legenda clara ajuda a entender os dados.","Trouxe o material que faltava para a aula.","Daqui a pouco a turma vai fazer uma pausa."};
+            Say(student.StudentName,("Estou " + student.Activity + ". ") + first[index]);
         }
         private void LateUpdate() { if (_ready) Lock(); }
         public bool OpenBackpack()
@@ -358,28 +341,17 @@ namespace Game.Varginha.Experiment
             _sound?.Play("Success");
             Cutscene("ELA AINDA ESTÁ AQUI", "Casa à esquerda. Árvore no centro. Figura à direita.\nAo alinhar as páginas, surge uma escrita recente: ELA AINDA ESTÁ AQUI.\nOs registros foram guardados no caderno.", View.World); return true;
         }
-        public bool SubmitPhotoClue(int choice)
-        {
-            if (!_progress.SubmitPhotoClue(choice)) { _feedback = "Observe o portão: o que parece estar fora do lugar?"; return false; }
-            Save();_sound?.Play("Success");
-            Cutscene("ALGUÉM NO PORTÃO", "Há um vulto no portão da fotografia de 1996. Edelzio salva uma cópia no caderno.\nNa margem, duas anotações iguais parecem formar um horário.", View.World); return true;
-        }
-        public bool SubmitCode()
-        {
-            if (!_progress.SubmitCode()) { _feedback = "Compare os dois grupos da anotação: os dois pontos separam horas e minutos. As pistas permanecem no notebook."; return false; }
-            Save();RestoreInventory();_sound?.Play("Success");
-            Cutscene("23:23", "Os dois grupos formam 23:23. Ao ampliar o documento, aparece outro fragmento do mapa.\nA anotação menciona registros da cidade. Mostre a descoberta a Renan.", View.World); return true;
-        }
+        // Retained for callers compiled against the previous chapter API; no removed answer can unlock progress.
+        public bool SubmitPhotoClue(int choice)=>false;
+        public bool SubmitCode()=>false;
         private string Objective()
         {
             if (phase == 2) return _progress.house.Objective(_progress.routine);
-            if (!_progress.renanMet) return "Entre na sala e converse com Renan junto ao quadro branco.";
-            if (!_progress.buildingSolved) return "Abra a fotografia no notebook do professor e observe o portão.";
-            return !_progress.codeSolved ? "Reabra a fotografia no notebook e descubra o horário na margem." : "Mostre a descoberta das 23:23 a Renan junto ao quadro branco.";
+            return _progress.school.Objective;
         }
         private void OnGUI()
         {
-            VarginhaGamepadUI.Begin("house-school:"+GetEntityId()+":"+_view+":"+_paused+":"+(_dialogue!=null),_view!=View.World||_dialogue!=null||_paused,50);
+            VarginhaGamepadUI.Begin("house-school:"+GetEntityId()+":"+_view+":"+_progress?.school.stage+":"+_schoolHints+":"+_paused+":"+(_dialogue!=null),_view!=View.World||_dialogue!=null||_paused,50);
             if (!_ready) return;
             if (VarginhaGameHUD.Instance?.IsInventoryOpen == true) return;
             ExperimentGUI.Init(); GUI.depth = -3100;
@@ -406,7 +378,7 @@ namespace Game.Varginha.Experiment
                     int near=Nearest();
                     ExperimentGUI.ContextPrompt(near<0?null:"["+(_points[near].id=="car"?VarginhaInputActions.CarLabel:VarginhaInputActions.InteractLabel)+"] "+_points[near].label);
                 }
-                if (_view != View.World) DrawInvestigation();
+                if (_view != View.World){bool before=GUI.enabled;GUI.enabled=before&&!_paused;DrawInvestigation();GUI.enabled=before;}
             }
             DrawRadioInterference();
             if (_dialogue != null && !_paused)
@@ -414,9 +386,9 @@ namespace Game.Varginha.Experiment
                 if (_speaker == "Renan")
                 {
                     float y = CampaignMessageBox.Bounds(_textMessage).y - 40;
-                    if (ExperimentGUI.Button(new Rect(195,y,270,30), "FOTOGRAFIA")) DiscussWithRenan(0);
-                    if (ExperimentGUI.Button(new Rect(505,y,270,30), "ANOTAÇÕES")) DiscussWithRenan(1);
-                    if (ExperimentGUI.Button(new Rect(815,y,270,30), "PESQUISA")) DiscussWithRenan(2);
+                    if (ExperimentGUI.Button(new Rect(195,y,270,30), "AULA")) DiscussWithRenan(0);
+                    if (ExperimentGUI.Button(new Rect(505,y,270,30), "TURMA")) DiscussWithRenan(1);
+                    if (ExperimentGUI.Button(new Rect(815,y,270,30), "CAMINHO")) DiscussWithRenan(2);
                 }
                 bool dialogueEnabled = GUI.enabled; GUI.enabled = dialogueEnabled && !_schoolTransition;
                 if (CampaignMessageBox.Draw(_textMessage,_carContext)) AdvanceDialogue();
@@ -459,12 +431,14 @@ namespace Game.Varginha.Experiment
         public void DiscussWithRenan(int topic)
         {
             _sound?.Play("UI");
-            Say("Renan", topic == 0 ? "Observe a pessoa no portão. Não há registro de ninguém ali no momento da fotografia."
-                : topic == 1 ? "As duas anotações na margem são iguais: 23 e 23. Com os dois pontos entre elas, parecem um horário."
-                : "Os registros da biblioteca podem ajudar a entender a origem dessa imagem. Guarde a cópia no seu caderno.");
+            Say("Renan", topic == 0 ? "Hoje a atividade é ordenar, comparar e filtrar informações. A turma está terminando os exercícios."
+                : topic == 1 ? "O pessoal já dividiu as tarefas do projeto. Depois a gente confere o que cada grupo preparou."
+                : "Deu tudo certo para chegar? O trânsito estava tranquilo quando passei pela entrada.");
         }
         private void DrawInvestigation()
         {
+            if(_view==View.School){DrawSchoolInvestigation();return;}
+            if(_view==View.Document){DrawSchoolDocument();return;}
             ExperimentGUI.Box(new Rect(0, 0, 1280, 720), new Color(0, 0, 0, .83f));
             ExperimentGUI.Panel(new Rect(105, 120, 1070, 525));
             if (_view == View.Deduction) DrawKeyDeduction();
@@ -482,16 +456,11 @@ namespace Game.Varginha.Experiment
                 DrawTornPages();
                 if (ExperimentGUI.Button(new Rect(800, 550, 325, 45), "CONFERIR PÁGINAS")) SubmitPages();
             }
-            else if (_view == View.Photo || _view == View.Code)
+            else if (_view == View.Hint)
             {
-                ExperimentGUI.Label(new Rect(140,143,995,55),_view==View.Photo?"NOTEBOOK • FOTOGRAFIA DE 1996":"NOTEBOOK • UM HORÁRIO NA MARGEM",true);
-                CampaignSchoolEvidence.Draw(new Rect(150,212,540,300),_view==View.Code);
-                ExperimentGUI.Label(new Rect(730,220,390,95),_view==View.Photo?"Renan: observe o portão. Qual detalhe parece estranho?":"Dois grupos iguais: 23 e 23. Qual horário eles formam?",small:true);
-                string[] choices=_view==View.Photo?new[]{"PLACA DA ESCOLA","VULTO NO PORTÃO","COR DO MURO"}:new[]{"22:32","23:23","23:32"};
-                for(int i=0;i<3;i++)if(ExperimentGUI.Button(new Rect(730,331+i*60,390,48),choices[i]))
-                {if(_view==View.Photo)SubmitPhotoClue(i);else{_progress.schoolTimeChoice=i;SubmitCode();}}
+                int before=_hintLevel;CampaignHints.Draw(_progress,phase,ref _hintLevel);
+                if(phase>=4&&before!=_hintLevel){_progress.school.hintLevel=_hintLevel;Save();}
             }
-            else if (_view == View.Hint) CampaignHints.Draw(_progress,phase,ref _hintLevel);
             else DrawNotebook();
             if (!string.IsNullOrEmpty(_feedback)) ExperimentGUI.Label(new Rect(145, 506, 955, 42), _feedback, small: true);
             if (ExperimentGUI.Button(new Rect(145, 578, 270, 50), "VOLTAR")) { Save(); Show(View.World); }
@@ -537,18 +506,20 @@ namespace Game.Varginha.Experiment
             ExperimentGUI.Panel(new Rect(220, 185, 840, 380));
             if (phase == 2 && _progress.pagesSolved)
                 GUI.DrawTextureWithTexCoords(new Rect(250, 203, 210, 145), VarginhaExperimentArt.Map(), VarginhaExperimentArt.MapUV(2));
-            if (phase >= 4 && _progress.codeSolved) ExperimentGUI.Label(new Rect(480, 207, 500, 55), "23 : 23", true);
             ExperimentGUI.Caption(new Rect(250, 353, 780, 202), _cutText, VarginhaGameSettings.Current.subtitleSize);
             if (ExperimentGUI.Button(new Rect(890, 615, 275, 44), "CONTINUAR")) FinishCutscene();
         }
         private void DrawComplete()
         {
+            ExperimentGUI.Panel(new Rect(180,180,920,320));
+            ExperimentGUI.Label(new Rect(215,215,850,90),"INVESTIGAR O ACERVO DA BIBLIOTECA",true);
+            ExperimentGUI.Label(new Rect(215,335,850,110),"Coleção C-96 • Acervo Municipal\nOs jornais e as anotações permanecem no caderno. A biblioteca conserva os originais para a próxima investigação.");
             if(ExperimentGUI.ContinueChapterButton())ContinueChapter();
         }
         private bool _chapterAdvancing;
         public bool ContinueChapter()
         {
-            if(_progress==null||_chapterAdvancing||_paused||_view!=View.Complete||!_progress.renanConfirmed||CampaignCinematics.IsTransitioning)return false;
+            if(_progress==null||_chapterAdvancing||_paused||_view!=View.Complete||!_progress.school.completed||CampaignCinematics.IsTransitioning)return false;
             _chapterAdvancing=true;Save();CampaignStorySave.GoTo(6);return true;
         }
         public void Save()

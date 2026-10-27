@@ -113,8 +113,8 @@ namespace Game.Tests.PlayMode
             CampaignRenanTeacher.DeskItems(stage.transform,CampaignIllustratedMaps.Get(4));Assert.That(items.childCount,Is.EqualTo(3),"No duplicate desk props.");
             Assert.That(collider.bounds,Is.EqualTo(collisionBefore));
             Focus(CampaignIllustratedMaps.Get(4).Position(714,80),2.1f);yield return null;yield return Capture("renan-desktop");
-            stage.Progress.renanMet=true;stage.Interact("notebook");
-            Assert.That(stage.Progress.photoOpened,Is.True,"The teacher notebook still opens the investigation photograph.");
+            stage.Progress.school.RecoverDocuments();stage.Interact("notebook");
+            Assert.That(stage.SchoolInvestigationOpen,Is.True,"The existing desk opens the owned-document investigation without requiring Renan.");
             yield return Capture("renan-notebook-interaction");
         }
         [UnityTest,Timeout(40000)]public IEnumerator AdultWindowsDoNotCutThePlayerAndStillCoverTheOldNight()

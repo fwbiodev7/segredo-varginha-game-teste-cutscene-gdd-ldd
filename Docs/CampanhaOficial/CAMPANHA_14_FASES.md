@@ -1,12 +1,12 @@
 # Campanha experimental — 14 fases em 5 atos
 
-Atualização de 7 de outubro de 2026. Esta é a sequência vigente; os planos e relatórios anteriores registram a campanha de 21 fases.
+Atualização de 27 de outubro de 2026. Esta é a sequência vigente; os planos e relatórios anteriores registram a campanha de 21 fases.
 
 | Ato | Fase | Objetivo principal | IDs internos preservados |
 | --- | --- | --- | --- |
 | 1 — A lembrança volta | 1. O Caso de Varginha | Abertura, casa infantil, brilho, explosão e perda de memória | 1 |
-| 1 | 2. A Caixa Esquecida | Investigar caixa, fotografia e páginas; obter primeiro fragmento | 2 |
-| 1 | 3. Entre Aulas e Pistas | Comparar foto, vulto e horário no notebook de Renan; segundo fragmento | 4; viagem antiga 3 vira transição curta e código antigo 5 ocorre na mesma sala |
+| 1 | 2. A Caixa Esquecida | Investigar a chave e a caixa; recuperar jornais, anotações e páginas; obter primeiro fragmento | 2 |
+| 1 | 3. Entre Aulas e Pistas | Padrões Ocultos: ordenar datas, destacar repetições, ligar anotações aos jornais e deduzir o acervo da biblioteca; segundo fragmento | 4; viagem antiga 3 é transição e o código antigo 5 foi substituído |
 | 2 — O caminho da capela | 4. Fragmentos | Reunir documentos e terceiro fragmento na biblioteca da Industrial; montar mapa | 6 |
 | 2 | 5. A Mata | Seguir mapa, sobreviver à perseguição e encontrar Fábio | 7 |
 | 2 | 6. A Âncora | Livro do Tombo, compartimento e registro de Edelzio | 8 |
@@ -21,7 +21,9 @@ Atualização de 7 de outubro de 2026. Esta é a sequência vigente; os planos e
 
 ## Alterações no percurso
 
-Atualização aprovada em 20/10: a abertura adulta passou a ensinar as mecânicas durante pia, café, preparação do notebook e busca da mochila. A chave é deixada no balcão, desaparece e exige investigação ambiental antes de abrir a caixa; as páginas continuam a investigação de 1996. Saves que já adquiriram essas evidências não repetem a preparação. A viagem conserva Fusca, pane e fala legendada no rádio, com tomadas cinematográficas e sem três inspeções obrigatórias. Fotografia, vulto, código e confirmação de Renan continuam no mesmo mapa. Detalhes: [A chave desaparecida](CHAVE_DESAPARECIDA.md).
+Atualização aprovada em 20/10: a abertura adulta ensina as mecânicas durante pia, café, preparação do notebook e busca da mochila. A chave é deixada no balcão, desaparece e exige investigação ambiental antes de abrir a caixa; as páginas continuam a investigação de 1996. Saves que já adquiriram essas evidências não repetem a preparação. A viagem conserva Fusca, pane e fala legendada no rádio, com tomadas cinematográficas e sem três inspeções obrigatórias. Detalhes: [A chave desaparecida](CHAVE_DESAPARECIDA.md).
+
+Redesign aprovado em 27/10: jornais e anotações são recuperados uma única vez na caixa e consultados na escola. Renan começa com diálogos cotidianos. A mesa oferece análise visual em quatro etapas, com correção, desfazer, dicas e progresso salvo. O mural permite conferir a origem C-96 e deduzir a biblioteca da Industrial. Fotografia/vulto/horário e confirmação de Renan deixaram de ser os gates escolares. Os documentos completos permanecem no caderno nos capítulos posteriores; as revelações da biblioteca, mata e arquivo continuam em seus próprios capítulos. [Plano aprovado](PLANO_ESCOLA_PADROES_OCULTOS_2026-10-27.md).
 
 Ouzana apresenta a comparação do controle e resíduo num diálogo curto. O reagente revela as três marcas com uma carga; a ordenação de amostras, segunda ordenação das marcas e pista de teste deixam de bloquear a saída. O estacionamento e a partida cinematográfica do Fusca continuam. Na fase do casarão, a passagem revelada e a chave permitem descer diretamente do térreo ao porão; a escada permite voltar. A biblioteca, mapa, perseguição e checkpoint da mata foram conservados.
 
@@ -37,7 +39,7 @@ A equipe mantém três alunos e um apoio entre Renan, Ouzana e Fábio, habilidad
 
 `CampaignSequence` separa a fase exibida dos IDs serializados. Campos `phase`, `positionPhase`, índices `phase - 11`, mapas, arrays de documentos/puzzles, nomes de cenas e referências do combate conservam seus IDs anteriores. São 14 capítulos e várias áreas; a quantidade de cenas habilitadas pode ser maior que 14.
 
-O save `CampaignStory2026.json` migra das versões 1/2 para 3 uma única vez, gravando atomicamente. IDs removidos 3/5 passam a 4, 16/17/19 a 18. Apenas posições das cenas substituídas são descartadas; os demais controles de posição e checkpoint continuam válidos. Documentos, fragmentos, puzzles, reagente, cargas, equipe, vitória e etapas do retorno permanecem. Conclusões antigas restauram suas evidências necessárias, evitando que a retirada de tarefas apague progresso.
+O save `CampaignStory2026.json` migra das versões 1/2/3 para 4 uma única vez, gravando atomicamente e criando antes uma cópia `.vN.bak` do formato anterior quando ela ainda não existe. IDs removidos 3/5 passam a 4, 16/17/19 a 18. Apenas posições das cenas substituídas são descartadas; os demais controles de posição e checkpoint continuam válidos. Documentos, fragmentos, puzzles, reagente, cargas, equipe, vitória e etapas do retorno permanecem. Quem já concluiu a escola conserva a conclusão. O save escolar parcial recupera os documentos e inicia a nova análise, sem completar automaticamente partidas novas. A cópia anterior permite recuperar o formato antigo ao retornar a uma build anterior; o formato v4 é usado pela candidata nova.
 
 Saves antigos que já iniciaram a travessia conservam autorização e etapa, com reguladores normalizados para a configuração estável; uma calibração antiga é reconhecida quando a vitória e o registro de calibração ou conclusão do painel estão salvos, normalizando os reguladores antigos. Isso vale apenas durante a migração de saves da versão 1. Uma vitória sem calibração verificável exige calibrar, sem repetir o combate. Girar um regulador invalida a confirmação anterior. O acordo fundido conserva os puzzles antigos concluídos e exige concluir o procedimento ainda pendente. A área retomada é limitada às áreas existentes na fase. O caderno reúne evidências dos capítulos atuais; os slots antigos continuam no save para compatibilidade.
 

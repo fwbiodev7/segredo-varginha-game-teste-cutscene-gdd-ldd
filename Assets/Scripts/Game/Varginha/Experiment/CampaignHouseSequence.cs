@@ -182,9 +182,9 @@ namespace Game.Varginha.Experiment
             var action=_player.GetComponent<VarginhaPlayerActionAnimation>();
             if(action!=null)yield return action.CrouchRoutine(.9f);
             _sound.PlayAt("Paper",point);
-            _progress.boxFound=true;_progress.house.step=4;Save();RestoreInventory();
+            _progress.boxFound=true;_progress.school.RecoverDocuments();_progress.house.step=4;Save();RestoreInventory();
             yield return MissionWait(1.6f);CompleteMissionEvent();EndMissionShot();_busy=false;
-            Cutscene("EU SEI QUE VI ALGUMA COISA", "A chave está dentro da caixa que estava fechada. Ao lado dela, o caderno de 1996.\nNa primeira página: Eu sei que vi alguma coisa.\nO desenho foi rasgado. Há tinta recente sobre os pedaços.",View.Pages);
+            Cutscene("EU SEI QUE VI ALGUMA COISA", "A chave está na caixa. Ao lado, o caderno de 1996, três recortes de jornal e minhas anotações de criança.\nGuardei os documentos no caderno. Eu sei que vi alguma coisa.\nO desenho foi rasgado. Há tinta recente sobre os pedaços.",View.Pages);
         }
         private void BeginMissionShot(string shot,string title,string caption,int panel=0)
         { _cinematicShot=shot; _cinemaTitle=title; _cinemaCaption=caption; _cinemaPanel=panel; _cinemaClock=Time.time; }

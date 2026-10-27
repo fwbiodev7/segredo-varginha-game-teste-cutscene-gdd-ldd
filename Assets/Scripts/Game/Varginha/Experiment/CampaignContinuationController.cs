@@ -503,10 +503,13 @@ namespace Game.Varginha.Experiment
                     var health=Actor.GetComponent<HealthSystem>();
                     if(health!=null)
                     {
-                        ExperimentGUI.Panel(new Rect(hudLeft,hudTop,270,84));
-                        ExperimentGUI.Label(new Rect(hudLeft+20,hudTop+12,230,25),"EDELZIO",small:true);
-                        ExperimentGUI.Label(new Rect(hudLeft+20,hudTop+36,230,20),"VIDA "+Mathf.CeilToInt(health.CurrentHealth)+" / "+Mathf.CeilToInt(health.MaxHealth),small:true);
-                        ExperimentGUI.Box(new Rect(hudLeft+20,hudTop+62,230,12),new Color(.15f,.08f,.12f));ExperimentGUI.Box(new Rect(hudLeft+20,hudTop+62,230*health.HealthPercent,12),new Color(.23f,.74f,.51f));
+                        // Exploration still shows the chapter objective at y=24..130.
+                        // Reserve that ribbon until the battle replaces it with combat UI.
+                        float healthTop=_boss==null||State.manifestationDispelled?Mathf.Max(hudTop,144):hudTop;
+                        ExperimentGUI.Panel(new Rect(hudLeft,healthTop,270,84));
+                        ExperimentGUI.Label(new Rect(hudLeft+20,healthTop+12,230,25),"EDELZIO",small:true);
+                        ExperimentGUI.Label(new Rect(hudLeft+20,healthTop+36,230,20),"VIDA "+Mathf.CeilToInt(health.CurrentHealth)+" / "+Mathf.CeilToInt(health.MaxHealth),small:true);
+                        ExperimentGUI.Box(new Rect(hudLeft+20,healthTop+62,230,12),new Color(.15f,.08f,.12f));ExperimentGUI.Box(new Rect(hudLeft+20,healthTop+62,230*health.HealthPercent,12),new Color(.23f,.74f,.51f));
                     }
                 }
                 if(!Modal&&VarginhaGameSettings.Current.interactionHints){var point=Nearest();if(point!=null){string label=phase==21&&area==0&&(point.id=="procedure"||point.id=="exit")?new[]{"ABRIR PASSAGEM DE RETORNO","AGUARDAR A TRAVESSIA","ENCERRAR O SELO","O ACORDO TERMINOU","VOLTAR À INDUSTRIAL"}[State.finalStep]:point.label;ExperimentGUI.ContextPrompt("["+(point.id=="car"?VarginhaInputActions.CarLabel:VarginhaInputActions.InteractLabel)+"] "+label);}}

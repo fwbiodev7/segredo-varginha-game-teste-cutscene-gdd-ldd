@@ -255,10 +255,12 @@ namespace Game.Tests.PlayMode
             stage.Interact("student:0"); stage.CloseDialogue();
             Assert.That(stage.Progress.studentsTalked, Is.EqualTo(1));
             stage.Interact("renan"); stage.CloseDialogue(); stage.Interact("notebook");
-            Assert.That(stage.SubmitPhotoClue(0), Is.False); Assert.That(stage.SubmitPhotoClue(1), Is.True); stage.FinishCutscene();
-            stage.Interact("notebook");
-            Assert.That(stage.SubmitCode(), Is.False); stage.Progress.schoolTimeChoice = 1;
-            Assert.That(stage.SubmitCode(), Is.True); stage.FinishCutscene(); stage.Interact("renan"); stage.FinishCutscene();
+            Assert.That(stage.Progress.school.documentsRecovered,Is.True,"The documents must travel from the house box, without being collected again at school.");
+            for(int id=0;id<6;id++){Assert.That(stage.OpenSchoolDocument(id),Is.True);stage.CloseSchoolDocument();}
+            stage.SwapSchoolDocuments(0,1);stage.SwapSchoolDocuments(1,2);Assert.That(stage.SubmitSchoolStep(),Is.True);
+            foreach(int id in new[]{0,1,3,4,6,7})stage.HighlightSchoolPassage(id);Assert.That(stage.SubmitSchoolStep(),Is.True);
+            for(int id=0;id<3;id++)stage.LinkSchoolNote(id,id);Assert.That(stage.SubmitSchoolStep(),Is.True);
+            stage.OpenSchoolDocument(6);stage.CloseSchoolDocument();stage.ChooseSchoolDestination(1);Assert.That(stage.SubmitSchoolStep(),Is.True);
             Assert.That(stage.Progress.renanConfirmed, Is.True); stage.Save();
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
             VarginhaCampaignPhase1.StartCampaign(true); yield return new WaitForSeconds(3.2f);

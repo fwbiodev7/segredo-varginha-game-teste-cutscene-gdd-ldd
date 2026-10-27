@@ -5,8 +5,25 @@ namespace Game.Varginha.Experiment
     [DefaultExecutionOrder(12000)]
     public sealed class CampaignForestPresence:MonoBehaviour
     {
+        public const string Atlas="ForestPresenceSix20261027";
+        int _view,_frame=-1;
+        bool _flip;
         SpriteRenderer _renderer;MaterialPropertyBlock _block;
         void Awake(){_renderer=GetComponent<SpriteRenderer>();_block=new MaterialPropertyBlock();}
+        public void Present(Vector2 facing,int frame)
+        {
+            if(_renderer==null)return;
+            int view=_view;
+            if(facing.sqrMagnitude>.000001f)
+            {
+                var direction=facing.normalized;
+                if(direction.y>.12f)view=1;else if(direction.y<-.12f)view=0;
+                if(Mathf.Abs(direction.x)>.12f)_flip=direction.x>0;
+            }
+            frame=((frame%3)+3)%3;
+            if(view!=_view||frame!=_frame)_renderer.sprite=CampaignStorySprites.Frame(Atlas,view,frame);
+            _view=view;_frame=frame;_renderer.flipX=_flip;
+        }
         void LateUpdate()
         {
             if(_renderer==null)return;

@@ -19,3 +19,7 @@ O item 04, recuperação após glitch, foi concluído: `visual-fixed.xml` aprovo
 Para o item 11, ampliei `CompactContinueUsesControllerAndCannotSkipTwoChapters` para capturar a chegada à próxima fase após a transição real 6→7. `compact-continue-transition-player.xml` passou 1/1; comparei `compact-continue-next-chapter.png`. O controle e a chegada estão claros nesse caso, mas ainda falta verificar as transições próprias dos demais capítulos, por isso a pendência continua Parcial.
 
 Também acrescentei uma regressão Player para a continuidade na fase 14: salva a conclusão, abre o painel CONTINUAR, confirma que uma segunda ativação não agenda avanço duplo e verifica a chegada à fase salva 15. `continuation-continue-transition-player.xml` passou 1/1. Inspecionei `continuation-chapter-complete.png` e `continuation-next-chapter.png`; o painel de conclusão e a cena seguinte estão legíveis. A captura da nova cena identifica Ato 4, fase 11 (fase de campanha 15). O item 11 permanece Parcial porque ainda faltam as transições dos demais capítulos.
+
+## Fechamento posterior em 27/10/2026
+
+As pendências deste registro foram encerradas na entrega 0.4.9-beta. Consulte [a entrega de 27/10](ENTREGA_2026-10-27.md) para estado atual, evidências, arquivos e limitações. Este texto conserva o histórico do trabalho de 26/10.

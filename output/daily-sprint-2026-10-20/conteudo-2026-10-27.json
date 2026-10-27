@@ -1,0 +1,56 @@
+[
+  {
+    "kind":"cover","tag":"DAILY 27/10/2026","title":"O SEGREDO\nDE VARGINHA","sub":"Fechamento da revisão e build atualizada","lead":"Windows 0.4.9-beta e preparação para 30/10",
+    "notes":"30 segundos. Esta daily mostra o fechamento da revisão iniciada em 23/10 e continuada em 26/10. A candidata Windows é a 0.4.9-beta de 27/10. A build anterior de QA havia sido gerada às 11h16 de 26/10 e não continha as correções posteriores daquele dia. O histórico e os arquivos originais permanecem preservados."
+  },
+  {
+    "kind":"timeline","tag":"ESTADO DA ENTREGA","title":"O que entrou nesta revisão",
+    "rows":[["CAMPANHA","14 capítulos","19 cenas, incluindo menu e áreas conectadas"],["VISUAL","Personagens e piso","Quadros completos e encaixe do notebook"],["FLUXO","Saídas revisadas","Conclusão, próxima cena e save preservado"],["ENTREGA","0.4.9-beta","Pacote Windows separado das builds anteriores"]],
+    "notes":"45 segundos. O projeto conserva 14 capítulos para o jogador, com IDs antigos e áreas internas mantidos para compatibilidade. As 19 cenas da build incluem o menu, portanto a contagem não significa 19 capítulos. Esta revisão consolida os sprites e papéis corrigidos em 26/10, fecha o acabamento do notebook e amplia a verificação das saídas. A build é local; esta apresentação não anuncia uma publicação nova em lojas ou uma nova Release no GitHub."
+  },
+  {
+    "kind":"duo","tag":"NOTEBOOK E CADEIRA","title":"O piso acompanha as tábuas do cenário",
+    "figures":[["officeBefore","26/10","O recorte importava outra faixa de piso"],["officeAfter","27/10","Textura e iluminação acompanham a área vizinha"]],
+    "bottom":"Sprites, posição da cadeira e colisão preservados",
+    "notes":"50 segundos. O defeito restante vinha da composição do piso, que copiava uma faixa distante e criava uma emenda. O shader agora recompõe cada linha a partir do piso descoberto e conserva a variação da madeira. Também limpa a sombra que sobrava da mesa antiga. A revisão compara aproximação, uso do notebook e retorno do personagem. A interação continua retirando o notebook da mesa somente após concluir a ação."
+  },
+  {
+    "kind":"photo","tag":"PERSONAGENS E INVESTIGAÇÃO","title":"Quadros inteiros e pistas separadas","image":"house","caption":"Player Windows de 27/10, após a chegada à casa adulta",
+    "items":[["PERSONAGENS","Animações mantêm o retângulo completo de cada pose"],["FASE 2","Fragmentos têm escala e posições independentes"],["ARTE","Desenhos e texturas originais preservados"]],
+    "notes":"45 segundos. Os ajustes de 26/10 chegaram à nova build. Os 15 atlas direcionais usam retângulos completos, e a caminhada e o ataque usam três poses selecionadas por ciclo. Ouzana e a entidade da floresta também receberam a revisão. Os papéis da fase 2 deixam de herdar a escala do papel principal e aparecem separados quando a pista está ativa. A captura vem de um save preparado para o teste da transição, sem representar uma partida completa manual."
+  },
+  {
+    "kind":"duo","tag":"PUZZLES PRESERVADOS","title":"Escolhas e pistas registradas",
+    "figures":[["trail","TRILHAS","Seleção direta em cada trecho"],["book","LIVRO DO TOMBO","Fragmentos ligados às evidências"]],
+    "bottom":"Capturas de 26/10. Regras e soluções mantidas nesta entrega",
+    "notes":"45 segundos. O mapa permite mudar uma bifurcação sem apagar as outras escolhas. O Tombo exige reconstruir e relacionar evidências, sem um atalho numérico que pule a investigação. Essas capturas são registros de 26/10 e continuam identificadas como históricas. O fechamento atual preserva os puzzles e os saves. Não somamos recortes repetidos de testes como se fossem casos novos."
+  },
+  {
+    "kind":"duo","tag":"CONTINUIDADE","title":"Uma confirmação leva à próxima cena",
+    "figures":[["exitComplete","CONCLUSÃO","CONTINUAR discreto após a investigação"],["exitArrival","CHEGADA","Cena seguinte e objetivo disponíveis"]],
+    "bottom":"Prólogo, escola, oficina, casarão e epílogo incluídos na revisão",
+    "notes":"50 segundos. Os testes usam os manipuladores reais de saída e carregam a próxima cena. Uma segunda ativação é recusada para evitar avanço duplo. O prólogo recebeu essa mesma proteção. Os fixtures concluem o capítulo de origem e seus pré-requisitos, deixando o objetivo do destino pendente. O casarão conserva a porta de serviço e o porão como áreas próprias, e o epílogo apresenta os créditos antes de voltar ao menu. As telas narrativas e de calibração final permanecem."
+  },
+  {
+    "kind":"photo","tag":"VIAGEM E ÁUDIO","title":"Viagem completa do Fusca","image":"fusca","caption":"Player Windows de 27/10: verificação da viagem e da chegada à escola",
+    "items":[["VIAGEM","Pane, rádio e desembarque no percurso previsto"],["CONTROLE","Pausa e retorno ao personagem verificados"],["ÁUDIO","Menu e igreja usam os arquivos recebidos"]],
+    "notes":"45 segundos. A viagem completa continua coberta por regressão no Player, incluindo pausa e devolução do controle na Industrial. A física da oficina, da pista opcional e da estrada de diagnóstico tem casos próprios. A música do menu e o ambiente da igreja recebidos em 23/10 permanecem integrados. Os sons de café e higiene seguem o contato da animação. O roteiro de gravação e o canal de voz não comprovam que toda a dublagem humana tenha sido entregue."
+  },
+  {
+    "kind":"quality","tag":"EVIDÊNCIAS DE 27/10","title":"Resultados dos recortes executados",
+    "rows":[["SUÍTE EDITOR","A CONFERIR","Regras, recursos e compatibilidade"],["REGRESSÃO PLAYER","A CONFERIR","Sprites, chave, cadeira, Fusca e física"],["SAÍDAS DE CAPÍTULO","A CONFERIR","Conclusão, chegada e retorno ao menu"],["BUILD WINDOWS","0.4.9","19 cenas incluídas no executável"]],
+    "bottom":"Recortes distintos. Testes automáticos não substituem feedback de jogadores",
+    "notes":"45 segundos. As contagens desta tela são preenchidas diretamente pelos resumos verificados de 27/10. Cada recorte precisa ter testes executados, todos aprovados, sem falhas ou ignorados. As suítes se sobrepõem em parte, por isso não mostramos uma soma como número de casos únicos. Os testes não certificam a duração da campanha, hardware mínimo ou ausência de bugs em todas as máquinas."
+  },
+  {
+    "kind":"daily","tag":"APRESENTAÇÃO DE 30/10","title":"Roteiro completo preparado",
+    "rows":[["ABERTURA","Ideia regional, personagem e proposta do jogo"],["EVOLUÇÃO","Protótipo de setembro e campanha de 14 capítulos"],["DEMO","Uma interação e um puzzle em até dois minutos"],["FECHAMENTO","Resultados, dificuldades e próximos passos"]],
+    "bottom":"Fala natural, tempo sugerido e perguntas prováveis em Markdown e PDF",
+    "notes":"40 segundos. O roteiro para 30/10 apresenta o projeto completo desde o primeiro registro disponível, de 11/09. Há dez blocos de fala, uma demo curta, preparação e respostas para perguntas prováveis. O tempo sugerido é de 12 a 15 minutos. O material distingue a conclusão implementada das ideias de finais alternativos e não apresenta a dublagem como completa. Esta daily continua sendo o resumo da entrega recente."
+  },
+  {
+    "kind":"close","tag":"PRÓXIMO PLAYTEST","title":"A candidata está pronta para revisão manual",
+    "items":[["VERSÃO","Extrair todo o pacote 0.4.9-beta e abrir o executável"],["RETORNO","Anotar fase, ação e captura de qualquer problema"],["APRESENTAÇÃO","Ensaiar a demo no computador que será usado"]],
+    "notes":"30 segundos. A revisão interna fecha as pendências técnicas e de material desta rodada. Continuam necessários o teste do autor, feedback de jogadores e execução em outros computadores. A candidata local preserva os saves e as versões anteriores. Antes da apresentação, a equipe deve conferir áudio e resolução, escolher o trecho da demo e ter capturas disponíveis como apoio."
+  }
+]

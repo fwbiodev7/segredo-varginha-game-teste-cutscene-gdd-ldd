@@ -18,11 +18,7 @@ namespace Game.Tests.EditMode
         {
             var state = new CampaignStory { phase = 5, routine = 15, boxFound = true, pages = new[] { 0, 1, 2 }, renanMet = true, photoOpened = true };
             Assert.That(state.SubmitPages(), Is.True);
-            Assert.That(state.SubmitPhotoClue(0), Is.False);
-            Assert.That(state.SubmitPhotoClue(1), Is.True);
-            state.timeOpened = true; state.schoolTimeChoice = 1;
-            Assert.That(state.SubmitCode(), Is.True);
-            state.renanConfirmed = true;
+            CampaignSchoolInvestigationTests.Advance(state.school,4);state.SyncSchoolCompletion();
             var restored = JsonUtility.FromJson<CampaignStory>(JsonUtility.ToJson(state)); restored.Repair();
             Assert.That(restored.phase, Is.EqualTo(5));
             Assert.That(restored.MapFragments, Is.EqualTo(2));
@@ -39,19 +35,19 @@ namespace Game.Tests.EditMode
             Assert.That(state.driveDistance, Is.Zero);
             Assert.That(state.pages, Is.EqualTo(new[] { 2, 0, 1 }));
         }
-        [Test] public void SchoolUsesOnlyPhotoThenOneTimePuzzleAndKeepsLegacyCompletions()
+        [Test] public void SchoolRequiresDocumentInvestigationAndKeepsLegacyCompletions()
         {
             var state=new CampaignStory {renanMet=true};
             Assert.That(state.SubmitPhotoClue(1),Is.False,"The notebook must actually be opened.");
-            state.photoOpened=true;Assert.That(state.SubmitPhotoClue(1),Is.True);
-            Assert.That(state.MapFragments,Is.Zero,"The new fragment is revealed by the time puzzle.");
+            state.photoOpened=true;Assert.That(state.SubmitPhotoClue(1),Is.False);
+            Assert.That(state.MapFragments,Is.Zero,"The new fragment requires the completed document investigation.");
             state.schoolTimeChoice=1;Assert.That(state.SubmitCode(),Is.False);
-            state.timeOpened=true;Assert.That(state.SubmitCode(),Is.True);
-            var legacy=new CampaignStory {phase=6,renanMet=true,buildingSolved=true,codeSolved=true,renanConfirmed=true};
+            state.timeOpened=true;Assert.That(state.SubmitCode(),Is.False);
+            var legacy=new CampaignStory {version=3,phase=6,renanMet=true,buildingSolved=true,codeSolved=true,renanConfirmed=true};
             legacy.Repair();Assert.That(legacy.codeSolved&&legacy.renanConfirmed,Is.True);
             Assert.That(legacy.MapFragments,Is.EqualTo(1));
             foreach(var point in CampaignMapPlan.Create(4).points)
-                Assert.That(point.id,Is.EqualTo("renan").Or.EqualTo("notebook"),"Only existing teacher targets are required.");
+                Assert.That(point.id,Is.EqualTo("renan").Or.EqualTo("notebook").Or.EqualTo("mural"),"Reuse the teacher's area and school notice.");
         }
     }
 }

@@ -9,24 +9,26 @@ namespace Game.Editor.Testing
     // A separate candidate preserves previous deliveries and restores the project's version.
     public static class VarginhaDailyBuild
     {
-        public const string Version = "0.4.8-beta";
-        public const string Folder = "Builds/Varginha_0.4.8-beta_2026-10-23";
+        public const string Version = "0.5.2-beta";
+        public const string Folder = "Builds/Varginha_0.5.2-beta_2026-10-27";
 
-        [MenuItem("Varginha/Build/Daily 23-10 Windows x64")]
+        [MenuItem("Varginha/Build/Escola 27-10 Windows x64")]
         public static void Build()
         {
             if (Application.isPlaying) throw new InvalidOperationException("Encerre o Play antes da build.");
-            if (Directory.Exists(Folder)) throw new IOException("A entrega já existe: " + Folder);
+            string root=Environment.GetEnvironmentVariable("VARGINHA_FINAL_BUILD_ROOT")??Directory.GetCurrentDirectory();
+            string folder=Path.GetFullPath(Path.Combine(root,Folder));
+            if (Directory.Exists(folder)) throw new IOException("A entrega já existe: " + folder);
             foreach (string scene in VarginhaAlphaBuild.Scenes)
                 if (!File.Exists(scene)) throw new FileNotFoundException("Cena necessária à campanha.", scene);
             string previousVersion = PlayerSettings.bundleVersion;
             try
             {
                 PlayerSettings.bundleVersion = Version;
-                Directory.CreateDirectory(Folder);
+                Directory.CreateDirectory(folder);
                 var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
                     scenes = VarginhaAlphaBuild.Scenes,
-                    locationPathName = Path.GetFullPath(Path.Combine(Folder, "SegredoDeVarginha.exe")),
+                    locationPathName = Path.Combine(folder, "SegredoDeVarginha.exe"),
                     target = BuildTarget.StandaloneWindows64,
                     options = BuildOptions.CompressWithLz4HC | BuildOptions.DetailedBuildReport
                 });
@@ -35,7 +37,7 @@ namespace Game.Editor.Testing
                     bytes = s.totalSize, seconds = s.totalTime.TotalSeconds, errors = s.totalErrors,
                     warnings = s.totalWarnings, scenes = VarginhaAlphaBuild.Scenes,
                     unity = Application.unityVersion, version = Version };
-                string evidence=Environment.GetEnvironmentVariable("VARGINHA_CINEMA_QA")??"output/house-interactions-2026-10-22";
+                string evidence=Environment.GetEnvironmentVariable("VARGINHA_CINEMA_QA")??"output/completion-2026-10-27";
                 Directory.CreateDirectory(evidence);
                 File.WriteAllText(Path.Combine(evidence,"windows-build.json"), JsonUtility.ToJson(result, true));
                 if (s.result != BuildResult.Succeeded) throw new InvalidOperationException("Build falhou: " + s.result);

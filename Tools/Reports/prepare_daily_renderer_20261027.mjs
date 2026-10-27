@@ -1,0 +1,11 @@
+import fs from 'node:fs/promises';
+const folder='output/daily-sprint-2026-10-20/';
+const destination=folder+'build-2026-10-27.mjs';
+const text=await fs.readFile(destination,'utf8');
+const original=await fs.readFile(folder+'.build/before-2026-10-27/build.mjs','utf8');
+const start=original.indexOf('const dataImages={};');
+if(start<0)throw new Error('Renderer original não encontrado.');
+const renderer=original.slice(start).replaceAll('23/10/2026','27/10/2026');
+const prefix=text.split('// RENDERER_20261027')[0];
+await fs.writeFile(destination,prefix+'// RENDERER_20261027\n'+renderer);
+console.log('Renderer da daily preservado para 27/10.');

@@ -1,41 +1,41 @@
-# Daily de 23/10/2026
+# Daily de 27/10/2026
 
 ## 1. O SEGREDO DE VARGINHA
 
-30 segundos. Esta daily de 23/10 apresenta a entrega de 22/10 e o estado encontrado no projeto. O último commit é a2946be, de 22/10 às 13h51. A build empacotada é a 0.4.7-beta. Há alterações locais posteriores ao commit, que aparecem separadas. Não há evidência de uma nova entrega ou de gravações concluídas em 23/10. As capturas continuam identificadas como registros de 22/10.
+30 segundos. Esta daily mostra o fechamento da revisão iniciada em 23/10 e continuada em 26/10. A candidata Windows é a 0.4.9-beta de 27/10. A build anterior de QA havia sido gerada às 11h16 de 26/10 e não continha as correções posteriores daquele dia. O histórico e os arquivos originais permanecem preservados.
 
-## 2. O que chega à daily de hoje
+## 2. O que entrou nesta revisão
 
-45 segundos. As entregas de 22/10 abrangem a rotina adulta, os móveis, as camadas do Fusca, a chegada à escola, a chave na mesa do café, os avisos e as legendas. Após o playtest do autor, janelas e mesa do Renan foram corrigidas. O pacote de efeitos do Edelzio entrou no último commit. A documentação confirma o ZIP 0.4.7-beta, com zero erros de build e um aviso preexistente. A dublagem estava prevista para 23/10 por indisponibilidade do microfone em 22/10. Essa previsão não comprova que a gravação aconteceu.
+45 segundos. O projeto conserva 14 capítulos para o jogador, com IDs antigos e áreas internas mantidos para compatibilidade. As 19 cenas da build incluem o menu, portanto a contagem não significa 19 capítulos. Esta revisão consolida os sprites e papéis corrigidos em 26/10, fecha o acabamento do notebook e amplia a verificação das saídas. A build é local; esta apresentação não anuncia uma publicação nova em lojas ou uma nova Release no GitHub.
 
-## 3. As ações mudam os objetos da casa
+## 3. O piso acompanha as tábuas do cenário
 
-45 segundos. Beber o café e concluir o notebook alteram seus objetos apenas ao terminar a ação. Interrupções não concluem a tarefa nem consomem o café. A lavagem segue o mesmo contrato de conclusão. A chave maior usa a mesa do café, com pistas, marcador e caderno coerentes. O save restaura os estados. A investigação mantém sua solução. As vistas traseiras dos móveis e a escala visual das poses foram corrigidas sem mudar as colisões aprovadas.
+50 segundos. O defeito restante vinha da composição do piso, que copiava uma faixa distante e criava uma emenda. O shader agora recompõe cada linha a partir do piso descoberto e conserva a variação da madeira. Também limpa a sombra que sobrava da mesa antiga. A revisão compara aproximação, uso do notebook e retorno do personagem. A interação continua retirando o notebook da mesa somente após concluir a ação.
 
-## 4. Janelas e mesa do Renan revisadas
+## 4. Quadros inteiros e pistas separadas
 
-45 segundos. O autor apontou os problemas no playtest da 0.4.5-beta em 22/10. Os vidros agora seguem a profundidade da parede. A mesa mantém arte e colisão originais, com notebook de costas, mochila e três pincéis separados por transparência. O notebook continua abrindo a fotografia e os objetos não se duplicam. A revisão teve 398/398 EditMode e 3/3 testes direcionados no Player Windows. Esses três casos não devem ser somados aos 16 casos históricos da entrega anterior. Feedback externo continua pendente.
+45 segundos. Os ajustes de 26/10 chegaram à nova build. Os 15 atlas direcionais usam retângulos completos, e a caminhada e o ataque usam três poses selecionadas por ciclo. Ouzana e a entidade da floresta também receberam a revisão. Os papéis da fase 2 deixam de herdar a escala do papel principal e aparecem separados quando a pista está ativa. A captura vem de um save preparado para o teste da transição, sem representar uma partida completa manual.
 
-## 5. Avisos menores e falas progressivas
+## 5. Escolhas e pistas registradas
 
-45 segundos. Os avisos de coleta e ações usam o fundo pixel art original em tamanho menor e desaparecem após o tempo de leitura. Documentos, pistas e escolhas essenciais continuam em painéis próprios ou no caderno. As legendas respeitam o tamanho escolhido nas configurações. A confirmação revela primeiro e avança depois. A voz tem canal separado e acompanha a pausa. A infraestrutura está pronta para receber takes humanos por IDs estáveis, mas isso não significa que a dublagem já foi recebida.
+45 segundos. O mapa permite mudar uma bifurcação sem apagar as outras escolhas. O Tombo exige reconstruir e relacionar evidências, sem um atalho numérico que pule a investigação. Essas capturas são registros de 26/10 e continuam identificadas como históricas. O fechamento atual preserva os puzzles e os saves. Não somamos recortes repetidos de testes como se fossem casos novos.
 
-## 6. Ajustes presentes no projeto
+## 6. Uma confirmação leva à próxima cena
 
-1 minuto. Estes ajustes estão no working tree, fora do commit a2946be. A ação do Fusca usa GUI.Button e conserva os atalhos. Os seis frames dos golpes passam de aproximadamente 0,26 s para 0,38 s, mantendo o contato na pose 3. Os puzzles de associação de provas, comparação de arquivos e lembrança usam cabeçalhos e cartões mais claros, sem mudar as respostas. O laboratório prioriza LabAmbience e a fase de retorno dispara PortalOpen e PortalClose. Há ainda uma proteção técnica para a captura de pausa em testes sem renderização, sem mudar a pausa interativa. Os testes direcionados de áudio e combate passaram em 22/10. Não foi localizada uma validação final bem-sucedida do portal nem comprovação de que esses ajustes estejam no ZIP 0.4.7-beta. Retestar clique, puzzles, portal e a build final continua necessário.
+50 segundos. Os testes usam os manipuladores reais de saída e carregam a próxima cena. Uma segunda ativação é recusada para evitar avanço duplo. O prólogo recebeu essa mesma proteção. Os fixtures concluem o capítulo de origem e seus pré-requisitos, deixando o objetivo do destino pendente. O casarão conserva a porta de serviço e o porão como áreas próprias, e o epílogo apresenta os créditos antes de voltar ao menu. As telas narrativas e de calibração final permanecem.
 
-## 7. 16 gravações do Edelzio no catálogo
+## 7. Viagem completa do Fusca
 
-45 segundos. O pacote de 16 arquivos contém efeitos e ambientes, sem falas de dublagem textual. O último commit integra os eventos de rotina, arranhões, chave, queda de energia, porta e Fusca. Portal, laboratório, progresso, saída noturna e efeito vocal também estão no catálogo. O working tree complementa os gatilhos de portal e o ambiente do laboratório. EdelzioFear é um efeito vocal, não uma fala legendada. As pendências incluem ouvir a mixagem em fones e caixas, conferir os gatilhos e completar o pedido da equipe. O pedido de efeitos reúne 28 famílias, sem significar 28 famílias recebidas ou concluídas.
+45 segundos. A viagem completa continua coberta por regressão no Player, incluindo pausa e devolução do controle na Industrial. A física da oficina, da pista opcional e da estrada de diagnóstico tem casos próprios. A música do menu e o ambiente da igreja recebidos em 23/10 permanecem integrados. Os sons de café e higiene seguem o contato da animação. O roteiro de gravação e o canal de voz não comprovam que toda a dublagem humana tenha sido entregue.
 
-## 8. Testes com data e escopo definidos
+## 8. Resultados dos recortes executados
 
-1 minuto. A suíte completa da revisão visual tem 398 testes aprovados. A rodada do Player Windows tem três casos aprovados. O XML mais recente de EditMode tem somente 12 testes direcionados de áudio, todos aprovados às 15h02 de 22/10, no horário de Brasília. O XML mais recente de PlayMode tem três casos de animação e combate aprovados às 15h14 de 22/10. O arquivo de progresso iniciado com 399 não comprova uma suíte completa de 399 casos. Não somar rodadas nem apresentar os testes de combate como testes no Player distribuído. O manifesto de build comprova 0.4.7-beta gerada em Unity 6000.6.0f1, zero erros e um aviso preexistente, e o manifesto do pacote confirma o ZIP. Nenhuma nova suíte do jogo foi executada para editar esta daily.
+45 segundos. As contagens desta tela são preenchidas diretamente pelos resumos verificados de 27/10. Cada recorte precisa ter testes executados, todos aprovados, sem falhas ou ignorados. As suítes se sobrepõem em parte, por isso não mostramos uma soma como número de casos únicos. Os testes não certificam a duração da campanha, hardware mínimo ou ausência de bugs em todas as máquinas.
 
-## 9. Dublagem, revisão e próximo playtest
+## 9. Roteiro completo preparado
 
-1 minuto. A dublagem foi adiada de 22 para 23/10 porque o microfone estava indisponível. Os roteiros estão separados em PDF, Word e textos por personagem. São 153 entradas: 47 falas existentes, 98 propostas para cenas atuais e oito esforços vocais. O roteiro do Edelzio adulto e criança soma 78 entradas. As propostas precisam de revisão antes de gravar ou integrar novas formulações. Depois de receber os takes, selecionar, editar, associar aos IDs e conferir níveis e sincronismo. O playtest externo, a mixagem em fones e caixas e o desempenho em outro PC seguem pendentes nos registros. Testar os ajustes locais e produzir uma nova validação da build antes de tratá-los como parte da entrega.
+40 segundos. O roteiro para 30/10 apresenta o projeto completo desde o primeiro registro disponível, de 11/09. Há dez blocos de fala, uma demo curta, preparação e respostas para perguntas prováveis. O tempo sugerido é de 12 a 15 minutos. O material distingue a conclusão implementada das ideias de finais alternativos e não apresenta a dublagem como completa. Esta daily continua sendo o resumo da entrega recente.
 
-## 10. Dúvidas, opiniões e feedbacks
+## 10. A candidata está pronta para revisão manual
 
-Reservar o final para ouvir a equipe. Registrar a versão testada, a cena, os passos e o resultado observado. Confirmar o estado real da gravação e combinar o próximo playtest. Não antecipar feedbacks nem declarar como concluídas atividades ainda sem evidência.
+30 segundos. A revisão interna fecha as pendências técnicas e de material desta rodada. Continuam necessários o teste do autor, feedback de jogadores e execução em outros computadores. A candidata local preserva os saves e as versões anteriores. Antes da apresentação, a equipe deve conferir áudio e resolução, escolher o trecho da demo e ter capturas disponíveis como apoio.

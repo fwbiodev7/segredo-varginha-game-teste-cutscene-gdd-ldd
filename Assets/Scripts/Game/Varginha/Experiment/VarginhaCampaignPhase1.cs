@@ -294,6 +294,12 @@ namespace Game.Varginha.Experiment
             _player.SetInputLocked(_paused || _stage != Stage.Explore || _dialogue != null);
             if (_paused) { _voice.Pause(); _ambience.Pause(); } else { _voice.UnPause(); _ambience.UnPause(); }
         }
+        private bool _chapterAdvancing;
+        public bool ContinueChapter()
+        {
+            if(_memory==null||!_memory.complete||_stage!=Stage.Complete||_paused||_chapterAdvancing||CampaignCinematics.IsTransitioning)return false;
+            _chapterAdvancing=true;Save();CampaignStorySave.GoTo(2);return true;
+        }
         private void Save() { _memory.x = _player.transform.position.x; _memory.y = _player.transform.position.y; CampaignMemorySave.Write(_memory); }
         private void OnApplicationPause(bool paused) { if (paused && _memory != null) Save(); }
         private void OnGUI()
@@ -349,7 +355,7 @@ namespace Game.Varginha.Experiment
                 ExperimentGUI.Label(new Rect(275, 210, 760, 60), "A LEMBRANÇA SE INTERROMPE", true);
                 ExperimentGUI.Label(new Rect(275, 300, 760, 100), "Edelzio desperta sem lembrar do clarão ou da queda.\n\nTrinta anos depois, a caixa esquecida devolve a primeira pista.");
                 ExperimentGUI.Label(new Rect(275, 445, 760, 70), "Trinta anos depois, uma chave desaparecida traz essa noite de volta.", small: true);
-                if (ExperimentGUI.Button(new Rect(430, 550, 420, 50), "CONTINUAR • FASE 2")) CampaignStorySave.GoTo(2);
+                if (ExperimentGUI.Button(new Rect(430, 550, 420, 50), "CONTINUAR • FASE 2")) ContinueChapter();
             }
             if (_dialogue != null && !_paused)
             {

@@ -46,7 +46,7 @@ namespace Game.Varginha.Experiment
                 VarginhaWorldDepth.Ensure(sr,supportingObject:desk,offset:3+i);
             }
             var board=new GameObject("Anotações_no_quadro_do_Renan");board.transform.SetParent(owner,false);board.transform.position=layout.Position(990,38);
-            var text=board.AddComponent<TextMesh>();text.text="1996\n2026";text.font=Resources.Load<Font>("Fonts/PressStart2P-Regular");text.fontSize=24;text.characterSize=.06f;text.color=new Color(.16f,.23f,.27f);
+            var text=board.AddComponent<TextMesh>();text.text="ORDENAR\nCOMPARAR";text.font=Resources.Load<Font>("Fonts/PressStart2P-Regular");text.fontSize=24;text.characterSize=.04f;text.color=new Color(.16f,.23f,.27f);
             text.anchor=TextAnchor.UpperLeft;text.alignment=TextAlignment.Left;
             var mesh=board.GetComponent<MeshRenderer>();mesh.sharedMaterial=text.font.material;mesh.sortingOrder=22000;
         }

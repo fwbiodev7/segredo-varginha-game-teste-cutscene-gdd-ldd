@@ -99,6 +99,12 @@ namespace Game.Varginha.Experiment
                 if(existing==null){existing=new CampaignMapPlan.Point(target.id,target.id.ToUpperInvariant(),0,0);plan.points.Add(existing);}
                 existing.position=data.Position(target.pixel);
             }
+            if(plan.phase==4||plan.phase==5)
+            {
+                var notice=plan.points.Find(p=>p.id=="mural");
+                if(notice==null){notice=new CampaignMapPlan.Point("mural","MURAL • CONSULTA AO ACERVO",0,0);plan.points.Add(notice);}
+                notice.position=data.Position(1080,105);
+            }
             if(plan.phase==3)
             {
                 plan.points.Find(p=>p.id=="start").position=plan.spawn;

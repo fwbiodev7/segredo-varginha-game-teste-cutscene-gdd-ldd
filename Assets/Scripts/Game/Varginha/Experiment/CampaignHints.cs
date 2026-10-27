@@ -12,10 +12,7 @@ namespace Game.Varginha.Experiment
                 case 1:tips=new[]{"Observe a luz e a televisão.","Quando a energia falhar, siga a luz pela porta à direita.","Examine a TV e alcance o quintal para concluir a lembrança."};break;
                 case 2:return s.house.Hint(s.routine,Mathf.Clamp(level,0,2));
                 case 3:case 4:case 5:
-                    tips=!s.renanMet?new[]{"Renan preservou uma pista.","Procure Renan junto ao quadro branco.","Converse com Renan e abra o notebook do professor."}
-                        :!s.buildingSolved?new[]{"Algo na fotografia não pertence ao portão.","Observe a figura junto ao portão no notebook de Renan.","Escolha a resposta sobre o VULTO NO PORTÃO, a segunda alternativa."}
-                        :!s.codeSolved?new[]{"As duas anotações parecem formar uma única informação.","Reabra o notebook e compare os dois grupos separados por dois pontos.","O horário é 23:23. Mostre a descoberta a Renan para seguir à biblioteca."}
-                        :new[]{"A ampliação revelou um fragmento.","Renan pode confirmar o horário.","Fale com Renan e continue para Fragmentos."};break;
+                    return s.school.Hint(level);
                 case 6:return CampaignTrailPuzzle.Hint(s.expansion,Mathf.Clamp(level,0,2));
                 case 7:tips=new[]{"O caminho repete os símbolos do mapa.","Siga as marcas e use o esconderijo quando a presença se aproximar.","Examine ÁRVORE → RIO → CAPELA e converse com Fábio. O rio registra o checkpoint."};break;
                 case 8:tips=new[]{"O registro de Edelzio pertence à noite do acidente.","Cruze o índice, a inscrição do compartimento e o número da ficha.","Use 1996 • ÂNCORA • REGISTRO 23 no Livro do Tombo."};break;

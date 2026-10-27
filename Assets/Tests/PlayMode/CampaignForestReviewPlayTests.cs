@@ -31,6 +31,11 @@ namespace Game.Tests.PlayMode
         {
             yield return Load(7);var stage=CampaignExpansionController.Active;var data=CampaignIllustratedMaps.Get(7);
             var priest=GameObject.Find("Padre Fábio").GetComponent<SpriteRenderer>();var feet=priest.GetComponent<CircleCollider2D>();
+            var originalPose=priest.sprite;var originalPosition=priest.transform.position;
+            Assert.That(priest.GetComponent<CampaignDirectionalNpc>(),Is.Null);
+            var playerBody=Object.FindAnyObjectByType<EdelzioTopDownController>().GetComponent<Rigidbody2D>();
+            foreach(var offset in new[]{Vector2.left,Vector2.right,Vector2.up,Vector2.down})
+            {playerBody.position=(Vector2)originalPosition+offset*2;yield return null;Assert.That(priest.sprite,Is.SameAs(originalPose));Assert.That(priest.transform.position,Is.EqualTo(originalPosition));}
             Assert.That(priest.sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.StandingHeight).Within(.08f));
             Assert.That(stage.Plan.IsClear(feet.bounds.center,.24f),Is.True);
             Assert.That(Vector2.Distance(feet.bounds.center,data.Position(1405,335)),Is.LessThan(.04f));
@@ -54,7 +59,7 @@ namespace Game.Tests.PlayMode
             yield return null;
             var entity=GameObject.Find("Manifestação não combatível").GetComponent<SpriteRenderer>();
             Assert.That(entity.color.a,Is.GreaterThan(.9f));
-            Assert.That(entity.sprite.name,Does.Contain("ForestPresenceHybridV1"));
+            Assert.That(entity.sprite.name,Does.Contain(CampaignForestPresence.Atlas));
             Assert.That(entity.bounds.size.y,Is.GreaterThan(.8f).And.LessThan(CampaignTeamEdelzio.StandingHeight),"The fused ET should remain readable and clearly smaller than Edelzio.");
             stage.Interact("sign2");stage.ClosePanel();
             typeof(CampaignExpansionController).GetField("_chaseGrace",Fields).SetValue(stage,0f);
@@ -83,6 +88,26 @@ namespace Game.Tests.PlayMode
             Capture(Camera.main,Vector2.Lerp(start,body.position,.5f),4.3f,"forest-pursuit-visible");
             Time.timeScale=0;yield return new WaitForSecondsRealtime(.2f);Assert.That((Vector2)entity.transform.position,Is.EqualTo(start));Time.timeScale=1;
             yield return new WaitForSeconds(1.8f);Assert.That(Vector2.Distance(entity.transform.position,(Vector2)body.position-Vector2.up*.58f),Is.LessThan(distance));
+        }
+        [UnityTest,Timeout(90000)] public IEnumerator SixNativeFramesStayRegisteredWhileViewsAndMirrorsChange()
+        {
+            yield return Load(7);var stage=CampaignExpansionController.Active;
+            typeof(CampaignExpansionController).GetField("_paused",Fields).SetValue(stage,true);Time.timeScale=0;
+            var entity=stage.transform.Find("Manifestação não combatível").GetComponent<SpriteRenderer>();entity.gameObject.SetActive(true);
+            var presence=entity.GetComponent<CampaignForestPresence>();var origin=entity.transform.position;
+            foreach(var direction in new[]{new Vector2(-1,-1),new Vector2(1,-1),new Vector2(-1,1),new Vector2(1,1)})
+            {
+                for(int frame=0;frame<3;frame++)
+                {
+                    presence.Present(direction,frame);yield return null;
+                    Assert.That(entity.transform.position,Is.EqualTo(origin));Assert.That(entity.bounds.center.x,Is.EqualTo(origin.x).Within(.001));
+                    Assert.That(entity.flipX,Is.EqualTo(direction.x>0));Assert.That(entity.sprite.pivot,Is.EqualTo(new Vector2(80,74)));
+                    Assert.That(entity.sprite.name,Does.EndWith("_"+(direction.y>0?1:0)+"_"+frame));
+                    Capture(Camera.main,entity.bounds.center,1.35f,"et-six-"+(direction.y>0?"back":"front")+"-"+(direction.x>0?"right":"left")+"-"+frame);
+                }
+            }
+            presence.Present(new Vector2(1,-.01f),0);Assert.That(entity.sprite.name,Does.EndWith("_1_0"),"Small vertical path corrections must not flicker between views.");
+            Time.timeScale=1;
         }
         static void Capture(Camera camera,Vector2 centre,float size,string name)
         {

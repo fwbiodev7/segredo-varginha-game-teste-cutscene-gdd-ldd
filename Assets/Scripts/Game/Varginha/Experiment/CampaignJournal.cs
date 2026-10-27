@@ -15,13 +15,18 @@ namespace Game.Varginha.Experiment
             if((story.house.clues&2)!=0)entries.Add("SAÍDA • Trinco fechado por dentro. Não abri a porta desde que acordei.");
             if((story.house.clues&4)!=0)entries.Add("QUARTO • Papel envelhecido com traço azul preso junto à passagem.");
             if(story.house.deduced)entries.Add("HIPÓTESE • A saída fechada e o papel indicam investigar os objetos antigos dentro da casa.");
-            if(story.boxFound)entries.Add("CAIXA ESQUECIDA • Fotografia e páginas do caderno de 1996 encontradas sob a cama.");
+            if(story.boxFound)entries.Add("CAIXA ESQUECIDA • Chave, fotografia, páginas do caderno, três recortes de jornal e anotações infantis recuperados uma única vez sob a cama.");
+            if(story.school.documentsRecovered)
+                for(int id=0;id<6;id++)entries.Add(CampaignSchoolDocuments.Text(id));
+            if(story.school.noticeRead)entries.Add(CampaignSchoolDocuments.Text(6));
             if(story.pagesSolved)entries.Add("PRIMEIRO FRAGMENTO • Casa à esquerda, árvore ao centro, figura à direita. ELA AINDA ESTÁ AQUI.");
             if(story.arrival)entries.Add("CAMINHO À INDUSTRIAL • O Fusca perdeu força perto da escola. Pelo rádio: NÃO DEIXA ELA SAIR.");
-            if(story.buildingSolved)entries.Add("FOTOGRAFIA • O vulto no portão de 1996 não deveria estar ali.");
-            if(story.codeSolved)entries.Add("SEGUNDO FRAGMENTO • As duas anotações na fotografia formam 23:23.");
+            if(story.school.stage>=1)entries.Add("CRONOLOGIA • Recortes organizados: 14/01, 20/01 e 26/01/1996.");
+            if(story.school.stage>=2)entries.Add("PADRÕES • Rua das Acácias e clarão azul se repetem nos três jornais.");
+            if(story.school.stage>=3)entries.Add("CRUZAMENTO • Poste, três batidas e árvore junto ao córrego: as anotações coincidem com os relatos publicados.");
+            if(story.school.completed)entries.Add("SEGUNDO FRAGMENTO • Referência de origem preservada: coleção C-96, Acervo de História Local. Consultar originais na Biblioteca da Industrial, setor de memória local.");
             var e=story.expansion;
-            if((e.visited&1)!=0)entries.Add("TERCEIRO FRAGMENTO • O livro da biblioteca conserva ÁRVORE, margem oeste, com carimbo de 23:23 da diocese.");
+            if((e.visited&1)!=0)entries.Add("COLEÇÃO C-96 • ORIGINAL CONSULTADO. O livro da biblioteca conserva o terceiro fragmento: ÁRVORE, margem oeste, com carimbo de 23:23 da diocese.");
             if((e.visited&2)!=0)entries.Add("BIBLIOTECA • O rio atravessa o centro entre a árvore e a capela.");
             if((e.visited&4)!=0)entries.Add("RELATO DE 1996 • A capela fica a leste. O mapa segue ÁRVORE → RIO → CAPELA.");
             if((e.visited&1)!=0)entries.Add("LIVRO • A trilha começa na árvore; contorne o tronco caído.");
@@ -50,9 +55,19 @@ namespace Game.Varginha.Experiment
             ExperimentGUI.Ribbon(new Rect(bounds.x,bounds.y,bounds.width,64));
             ExperimentGUI.Label(new Rect(bounds.x+12,bounds.y+8,bounds.width-24,50),"AGORA • "+CampaignGuidance.Next(story,story.phase,story.continuation.area),small:true);
             bounds=new Rect(bounds.x,bounds.y+72,bounds.width,bounds.height-72);
+            Rect previous=new(bounds.x,bounds.yMax-36,180,32),next=new(bounds.xMax-180,bounds.yMax-36,180,32);
+            bounds.height-=44;
+            float maximum=Mathf.Max(0,entries.Count*190-bounds.height);
+            float scrollStep=Mathf.Min(190,Mathf.Max(32,bounds.height-16));
             scroll=VarginhaGamepadUI.BeginScrollView(bounds,scroll,new Rect(0,0,bounds.width-25,Mathf.Max(bounds.height,entries.Count*190)));
             for(int i=0;i<entries.Count;i++)ExperimentGUI.Label(new Rect(10,i*190+5,bounds.width-55,180),entries[i],small:true);
             VarginhaGamepadUI.EndScrollView();
+            // Explicit controls keep long evidence catalogs reachable with controller and keyboard.
+            bool enabled=GUI.enabled;GUI.enabled=enabled&&scroll.y>0;
+            if(ExperimentGUI.Button(previous,"ANTERIOR"))scroll.y=Mathf.Max(0,scroll.y-scrollStep);
+            GUI.enabled=enabled&&scroll.y<maximum;
+            if(ExperimentGUI.Button(next,"PRÓXIMO"))scroll.y=Mathf.Min(maximum,scroll.y+scrollStep);
+            GUI.enabled=enabled;
         }
     }
 }

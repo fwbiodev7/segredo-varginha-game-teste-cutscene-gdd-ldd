@@ -1,0 +1,74 @@
+{
+  "source": "Assets\\Resources\\Varginha\\StoryCharacters\\ForestPresenceHybridV1.png",
+  "sourceSha256": "8d75ef752f9bcca031e6e11335b2c0b606b1b3ecb4274fc2a5cfe8dc67484487",
+  "width": 480,
+  "height": 320,
+  "columns": 3,
+  "rows": 2,
+  "pixelsPerUnit": [
+    100,
+    100
+  ],
+  "frames": [
+    {
+      "rect": [
+        0,
+        0,
+        160,
+        160
+      ],
+      "anchorX": 80,
+      "lift": -0.16
+    },
+    {
+      "rect": [
+        160,
+        0,
+        160,
+        160
+      ],
+      "anchorX": 240,
+      "lift": -0.16
+    },
+    {
+      "rect": [
+        320,
+        0,
+        160,
+        160
+      ],
+      "anchorX": 400,
+      "lift": -0.16
+    },
+    {
+      "rect": [
+        0,
+        160,
+        160,
+        160
+      ],
+      "anchorX": 80,
+      "lift": -0.16
+    },
+    {
+      "rect": [
+        160,
+        160,
+        160,
+        160
+      ],
+      "anchorX": 240,
+      "lift": -0.16
+    },
+    {
+      "rect": [
+        320,
+        160,
+        160,
+        160
+      ],
+      "anchorX": 400,
+      "lift": -0.16
+    }
+  ]
+}

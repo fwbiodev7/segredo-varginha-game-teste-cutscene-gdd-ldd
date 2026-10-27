@@ -107,13 +107,13 @@ namespace Game.Tests.EditMode
             story.continuation.serviceKey=true;Assert.That(CampaignGuidance.Target(story,12,1),Is.EqualTo("service"));
         }
         [TestCase(4)][TestCase(5)]
-        [Category("HudPuzzles")] public void CompletedSchoolGuidanceUsesRenanToReachTheLibrary(int phase)
+        [Category("HudPuzzles")] public void CompletedSchoolGuidanceUsesTheInvestigationDeskToReachTheLibrary(int phase)
         {
             var story=new CampaignStory{phase=phase,renanMet=true,photoOpened=true,buildingSolved=true,
                 timeOpened=true,schoolTimeChoice=1,codeSolved=true,renanConfirmed=true};
-            story.Repair();
-            Assert.That(CampaignGuidance.Target(story,phase),Is.EqualTo("renan"));
-            Assert.That(CampaignGuidance.Next(story,phase),Does.Contain("Renan"));
+            story.school.MigrateCompleted();story.Repair();
+            Assert.That(CampaignGuidance.Target(story,phase),Is.EqualTo("notebook"));
+            Assert.That(CampaignGuidance.Next(story,phase),Does.Contain("mesa"));
             Assert.That(CampaignGuidance.Next(story,phase),Does.Contain("biblioteca").IgnoreCase);
             Assert.That(CampaignGuidance.Next(story,phase),Does.Not.Contain("saída").IgnoreCase);
         }

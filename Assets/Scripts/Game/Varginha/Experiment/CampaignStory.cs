@@ -23,6 +23,7 @@ namespace Game.Varginha.Experiment
         public CampaignContinuationState continuation = new();
         public CampaignPuzzleProgress puzzles = new();
         public CampaignHouseInvestigation house = new();
+        public CampaignSchoolInvestigation school = new();
         public int MapFragments => (pagesSolved ? 1 : 0) + (codeSolved ? 1 : 0) + ((expansion.visited & 1) != 0 ? 1 : 0);
         public bool CanLeaveHouse => pagesSolved && house.Complete;
         public string RemainingHouseTasks
@@ -37,7 +38,7 @@ namespace Game.Varginha.Experiment
                 return string.Join(", ",pending);
             }
         }
-        // Old save fields above remain readable; the school now uses only the teacher's notebook.
+        // Legacy photo/time fields remain readable; v4 uses the owned-document investigation.
         public bool photoOpened, timeOpened;
         public int schoolTimeChoice;
         public bool CanAnalyzePhoto => renanMet && photoOpened;
@@ -50,11 +51,13 @@ namespace Game.Varginha.Experiment
         }
         public bool SubmitPhotoClue(int choice)
         {
+            if (version >= 4) return false; // Removed quiz cannot bypass the document investigation.
             if (!CanAnalyzePhoto || choice != 1) return false;
             buildingSolved = true; return true;
         }
         public bool SubmitCode()
         {
+            if (version >= 4) return false;
             if (!CanDecode || schoolTimeChoice != 1) return false;
             codeSolved = true; return true;
         }
@@ -69,6 +72,7 @@ namespace Game.Varginha.Experiment
             phase = Mathf.Clamp(phase, 1, 21); routine &= 15; inspection &= 7; cinematicsSeen &= 15;
             continuation ??= new CampaignContinuationState(); continuation.Repair();
             CampaignSequence.Migrate(this);
+            school ??= new CampaignSchoolInvestigation(); school.Repair();
             house ??= new CampaignHouseInvestigation();
             house.Repair(boxFound, pagesSolved && boxFound);
             if(house.KeyOnCounter&&(routine&8)!=0){house.RememberBag();house.TakeBag();}
@@ -84,12 +88,14 @@ namespace Game.Varginha.Experiment
             driveDistance = Mathf.Clamp(driveDistance, 0, 120);
             if (float.IsNaN(x) || float.IsInfinity(x) || float.IsNaN(y) || float.IsInfinity(y)) positionPhase = 0;
             if (!boxFound) pagesSolved = false;
-            // Completed legacy chapters migrate without making the player repeat removed puzzles.
-            if (buildingSolved && renanMet) photoOpened = true;
-            if (codeSolved && buildingSolved) { timeOpened = true; schoolTimeChoice = 1; }
-            if (!CanAnalyzePhoto) buildingSolved = false;
-            if (!CanDecode) codeSolved = false;
-            if (!codeSolved) renanConfirmed = false;
+            SyncSchoolCompletion();
+        }
+        public void SyncSchoolCompletion()
+        {
+            // Old flags remain a bridge for inventory/map systems in later chapters.
+            buildingSolved=codeSolved=renanConfirmed=school.completed;
+            photoOpened=timeOpened=school.completed;
+            schoolTimeChoice=school.completed?1:0;
         }
         private static bool IsPermutation(int[] a)
             => a[0] >= 0 && a[0] < 3 && a[1] >= 0 && a[1] < 3 && a[2] >= 0 && a[2] < 3 && a[0] != a[1] && a[0] != a[2] && a[1] != a[2];
@@ -103,7 +109,19 @@ namespace Game.Varginha.Experiment
             try
             {
                 var data = File.Exists(Path) ? JsonUtility.FromJson<CampaignStory>(File.ReadAllText(Path)) : null;
-                if (data != null && data.version >= 1 && data.version <= CampaignSequence.SaveVersion) { int previousVersion=data.version; data.Repair(); if(previousVersion!=data.version)Write(data); return data; }
+                if (data != null && data.version >= 1 && data.version <= CampaignSequence.SaveVersion)
+                {
+                    int previousVersion=data.version;data.Repair();
+                    if(previousVersion!=data.version)
+                    {
+                        string backup=Path+".v"+previousVersion+".bak";
+                        try{if(!File.Exists(backup))File.Copy(Path,backup);}
+                        catch(Exception e) when(e is IOException||e is UnauthorizedAccessException)
+                        {Debug.LogWarning("Não foi possível criar a cópia anterior à migração: "+e.GetType().Name);}
+                        Write(data);
+                    }
+                    return data;
+                }
             }
             catch (Exception e) when (e is IOException || e is ArgumentException || e is UnauthorizedAccessException)
             { Debug.LogWarning("Progresso da campanha recuperado: " + e.GetType().Name); }

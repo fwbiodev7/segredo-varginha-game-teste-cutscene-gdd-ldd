@@ -5,7 +5,7 @@ namespace Game.Varginha.Experiment
     // Serialized phase IDs and scene names stay stable. Chapters are player-facing.
     public static class CampaignSequence
     {
-        public const int SaveVersion = 3;
+        public const int SaveVersion = 4;
         public const int Count = 14;
         public static readonly int[] Entries = { 1, 2, 4, 6, 7, 8, 9, 11, 12, 14, 15, 18, 20, 21 };
         private static readonly int[] Chapters = { 1, 2, 3, 3, 3, 4, 5, 6, 7, 7, 8, 9, 9, 10, 11, 12, 12, 12, 12, 13, 14 };
@@ -26,29 +26,36 @@ namespace Game.Varginha.Experiment
         public static void Migrate(CampaignStory story)
         {
             if (story.version >= SaveVersion) return;
-            bool legacy = story.version < 2;
-            int oldPhase = story.phase;
-            story.phase = Resume(Mathf.Clamp(oldPhase, 1, 21));
-            if (story.phase != oldPhase) story.positionPhase = 0;
-            // Removed gates never invalidate previously acquired evidence.
-            if (story.pagesSolved) story.boxFound = true;
-            if (story.codeSolved) { story.renanMet = story.photoOpened = story.buildingSolved = story.timeOpened = true; story.schoolTimeChoice = 1; }
-            var e=story.expansion ??= new CampaignExpansionState();
-            if(e.testDriven || e.stabilized || e.sprayed==7){e.sprayed=7;e.stabilized=true;}
-            if(e.sprayed!=0 || e.reagentUnlocked)e.anchorFound=e.evidencePresented=e.reagentUnlocked=true;
-            if(e.anchorFound){e.anchorClues=7;e.anchorYear=1996;e.anchorSymbol=1;e.anchorRecord=23;}
-            if(e.fabioMet){e.visited=7;e.mapSolved=true;e.forestSigns=3;}
-            if(e.mapSolved)e.visited=7;
-            var state = story.continuation;
-            if(state.finished)state.finalStep=4;
-            if (legacy && (state.finalStep > 0 || state.finished))
-            { state.manifestationDispelled = true; state.chambersPrepared = 7; state.finalRegulators=new[]{1,0,1}; state.finalSealActive=state.finalStep<4; state.finalCalibrated = true; }
-            else if (legacy && state.manifestationDispelled && (state.finalCalibrated || state.solved[9]))
-            {state.finalCalibrated=true;state.finalRegulators=new[]{1,0,1};state.finalSealActive=true;state.chambersPrepared=7;}
-            // The removed descent is completed, but its documents remain in their old slots.
-            state.solved[5] = true;
-            // Slot 6 remains serialized only to retain compatibility with old saves.
-            state.solved[6] = true;
+            int previousVersion=story.version;
+            if(previousVersion<3)
+            {
+                bool legacy = story.version < 2;
+                int oldPhase = story.phase;
+                story.phase = Resume(Mathf.Clamp(oldPhase, 1, 21));
+                if (story.phase != oldPhase) story.positionPhase = 0;
+                // Removed gates never invalidate previously acquired evidence.
+                if (story.pagesSolved) story.boxFound = true;
+                if (story.codeSolved) { story.renanMet = story.photoOpened = story.buildingSolved = story.timeOpened = true; story.schoolTimeChoice = 1; }
+                var e=story.expansion ??= new CampaignExpansionState();
+                if(e.testDriven || e.stabilized || e.sprayed==7){e.sprayed=7;e.stabilized=true;}
+                if(e.sprayed!=0 || e.reagentUnlocked)e.anchorFound=e.evidencePresented=e.reagentUnlocked=true;
+                if(e.anchorFound){e.anchorClues=7;e.anchorYear=1996;e.anchorSymbol=1;e.anchorRecord=23;}
+                if(e.fabioMet){e.visited=7;e.mapSolved=true;e.forestSigns=3;}
+                if(e.mapSolved)e.visited=7;
+                var state = story.continuation;
+                if(state.finished)state.finalStep=4;
+                if (legacy && (state.finalStep > 0 || state.finished))
+                { state.manifestationDispelled = true; state.chambersPrepared = 7; state.finalRegulators=new[]{1,0,1}; state.finalSealActive=state.finalStep<4; state.finalCalibrated = true; }
+                else if (legacy && state.manifestationDispelled && (state.finalCalibrated || state.solved[9]))
+                {state.finalCalibrated=true;state.finalRegulators=new[]{1,0,1};state.finalSealActive=true;state.chambersPrepared=7;}
+                // The removed descent is completed, but its documents remain in their old slots.
+                state.solved[5] = true;
+                // Slot 6 remains serialized only to retain compatibility with old saves.
+                state.solved[6] = true;
+            }
+            story.school ??= new CampaignSchoolInvestigation();
+            if(story.boxFound||story.pagesSolved||story.phase>=4)story.school.RecoverDocuments();
+            if(story.phase>=6||story.codeSolved||story.renanConfirmed)story.school.MigrateCompleted();
             story.version = SaveVersion;
         }
     }

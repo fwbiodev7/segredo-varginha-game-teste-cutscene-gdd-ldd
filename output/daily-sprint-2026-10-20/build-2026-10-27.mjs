@@ -1,0 +1,78 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+const require=createRequire('C:/Users/Usuario/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/package.json');
+const sharp=require('sharp');
+const root=process.cwd(),out=path.join(root,'output/daily-sprint-2026-10-20'),priv=path.join(out,'.build');
+const doc=p=>path.join(root,p);
+await fs.mkdir(priv,{recursive:true});
+const source=(...p)=>p.map(doc).join('\n');
+const ev='output/completion-2026-10-27';
+const readSummary=async name=>{
+ const r=JSON.parse(await fs.readFile(doc(`${ev}/${name}-summary.json`),'utf8'));
+ if(!r.success||r.runResult!=='Passed'||r.tests.total<=0||r.tests.passed!==r.tests.total||r.tests.failed||r.tests.skipped)throw new Error(`Recorte incompleto: ${name}`);
+ return r;
+};
+const editor=await readSummary('final-editmode');
+const player=await readSummary('final-player-regression');
+const exits=await readSummary('chapter-exits-final');
+const returnAndHud=await readSummary('final-return-and-hud');
+const delivered=JSON.parse(await fs.readFile(doc(`${ev}/windows-build.json`),'utf8'));
+if(delivered.result!=='Succeeded'||delivered.version!=='0.4.9-beta'||delivered.errors!==0||delivered.scenes.length!==19)throw new Error('Build final não comprovada.');
+const slides=JSON.parse(await fs.readFile(path.join(out,'conteudo-2026-10-27.json'),'utf8'));
+if(slides.length!==10||slides[7].kind!=='quality')throw new Error('Preservar dez slides e a posição das evidências.');
+for(const [index,result]of [editor,player,exits].entries())slides[7].rows[index][1]=`${result.tests.passed}/${result.tests.total}`;
+slides[7].rows.splice(3,0,['RETORNO E HUD',`${returnAndHud.tests.passed}/${returnAndHud.tests.total}`,'Travessia, reload, epílogo e objetivo legível']);
+slides[7].rows[4][2]=`${delivered.scenes.length} cenas, ${delivered.errors} erros, ${delivered.warnings} avisos`;
+await fs.writeFile(path.join(priv,'evidencias-2026-10-27.json'),JSON.stringify({daily:'2026-10-27',editor,player,exits,returnAndHud,build:delivered},null,2));
+const img={
+ cover:doc('Assets/Resources/Varginha/MenuBackgroundFuscaAzul.png'),
+ officeBefore:doc('output/revisao-final-2026-10-26/world-review/office-notebook-seated.png'),
+ officeAfter:doc(`${ev}/world-review/office-notebook-seated.png`),
+ house:doc(`${ev}/chapter-exits/01-to-02-arrival.png`),
+ trail:doc('output/revisao-final-2026-10-26/captures/trail-puzzle.png'),
+ book:doc('output/revisao-final-2026-10-26/captures/book-reconstructed.png'),
+ exitComplete:doc(`${ev}/chapter-exits/13-to-14-complete.png`),
+ exitArrival:doc(`${ev}/chapter-exits/13-to-14-arrival.png`),
+ fusca:doc(`${ev}/captures/driving-pose-0.png`)
+};
+for(const[key,file]of Object.entries(img)){
+ const target=path.join(priv,`27-${key}.jpg`);
+ await sharp(file).flatten({background:'#071018'}).resize({width:1600,withoutEnlargement:true}).jpeg({quality:92}).toFile(target);img[key]=target;
+}
+const font=await fs.readFile(doc('Assets/Resources/Fonts/PressStart2P-Regular.ttf'));
+await fs.writeFile(path.join(priv,'slides.json'),JSON.stringify(slides,null,2));
+await fs.writeFile(path.join(priv,'images.json'),JSON.stringify(img,null,2));
+// RENDERER_20261027
+const dataImages={};for(const[k,p]of Object.entries(img))dataImages[k]='data:image/jpeg;base64,'+(await fs.readFile(p)).toString('base64');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const figure=(key,caption)=>`<figure><img src="${dataImages[key]}" alt="${esc(caption)}"><figcaption>${esc(caption)}</figcaption></figure>`;
+const items=a=>`<div class="items">${a.map(([label,text])=>`<div><h3>${esc(label)}</h3><p>${esc(text)}</p></div>`).join('')}</div>`;
+const table=a=>`<table><tbody>${a.map(r=>`<tr>${r.map((v,i)=>`<${i===0?'th':'td'}>${esc(v)}</${i===0?'th':'td'}>`).join('')}</tr>`).join('')}</tbody></table>`;
+const particlesMarkup='<div id="particles" aria-hidden="true">'+Array.from({length:18},(_,i)=>'<i style="--x:'+(57+(i*13)%42)+'%;--y:'+(32+(i*17)%64)+'%;--duration:'+(7+i%5)+'s;--delay:-'+(i%8)+'s"></i>').join('')+'</div>';
+const body=s=>{
+ if(s.kind==='cover')return `<div class="coverimg" style="background-image:url('${dataImages.cover}')"></div><div class="covertext"><h1>${esc(s.title).replaceAll('\n','<br>')}</h1><h2>${esc(s.sub)}</h2><p>${esc(s.lead)}</p></div>${particlesMarkup}`;
+ if(s.kind==='photo')return `<div class="widephoto">${figure(s.image,s.caption)}</div>${items(s.items)}`;
+ if(s.kind==='split')return `<div class="split"><div><p class="lead">${esc(s.lead)}</p>${items(s.items)}</div>${figure(s.image,s.caption)}</div>`;
+ if(s.kind==='duo')return `<div class="duo">${s.figures.map(([key,l,t])=>`<div>${figure(key,l)}<h3>${esc(l)}</h3><p>${esc(t)}</p></div>`).join('')}</div>`;
+ if(s.rows)return `${s.lead?`<p class="lead">${esc(s.lead)}</p>`:''}${table(s.rows)}`;
+ return `<p class="lead">${esc(s.lead||'')}</p>${items(s.items)}`;
+};
+const motionCSS=await fs.readFile(path.join(out,'motion.css'),'utf8');
+const motionJS=await fs.readFile(path.join(out,'motion.js'),'utf8');
+const fxMarkup='<div id="transition-fx" aria-hidden="true"><div class="shutter">'+Array.from({length:144},()=>'<i></i>').join('')+'</div><div class="signal-band"></div><div class="signal-band"></div><div class="signal-band"></div><div class="sweep"></div><div class="aura"></div><div class="door left"></div><div class="door right"></div><div class="crt-line"></div><div class="film-edge left"></div><div class="film-edge right"></div></div><div id="crt" aria-hidden="true"></div><div id="progress" aria-hidden="true"></div>';
+const html=`<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Daily 27/10/2026 • O Segredo de Varginha</title><style>
+@font-face{font-family:Pixel;src:url(data:font/ttf;base64,${font.toString('base64')}) format('truetype');font-display:block}
+:root{--ink:#071018;--paper:#eee9d2;--muted:#a8b9bb;--cyan:#73d6da;--amber:#ffb96c;--line:#344d55}*{box-sizing:border-box}body{margin:0;background:#020608;color:var(--paper);font-family:Consolas,'Courier New',monospace;overflow:hidden}button{font:inherit;color:inherit;background:transparent;border:1px solid var(--line);cursor:pointer;padding:8px 13px}button:hover,button:focus-visible{border-color:var(--cyan);color:var(--cyan)}#stage{position:absolute;width:1280px;height:720px;left:50%;top:50%;transform:translate(-50%,-50%) scale(var(--scale,1));transform-origin:center}.slide{position:absolute;inset:0;padding:58px 64px 72px;background:var(--ink);display:none;overflow:hidden}.slide.on{display:block}.slide:not(.on){display:none!important}.tag{font-family:Pixel,monospace;font-size:11px;color:var(--cyan);letter-spacing:1px;margin-bottom:28px}h1,h2,h3{margin:0}h1,h2{font-family:Pixel,monospace;font-weight:400}h1{font-size:48px;line-height:1.4}h2{font-size:30px;line-height:1.45;max-width:1140px}h3{font-family:Pixel,monospace;font-size:12px;line-height:1.8;color:var(--amber);font-weight:400}.lead{font-size:25px;line-height:1.35;color:var(--muted);margin:24px 0 30px;max-width:950px}p{font-size:23px;line-height:1.42;margin:8px 0 0}figure{margin:0;min-width:0}figure img{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated}figcaption{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.4}.split{display:grid;grid-template-columns:435px 1fr;gap:40px;margin-top:25px;align-items:center}.split .lead{font-size:24px;margin:0 0 28px}.split figure img{height:352px}.items{display:grid;gap:25px}.items p{font-size:22px}.bottom{position:absolute;left:64px;right:64px;bottom:66px;color:var(--cyan);font-size:19px;line-height:1.4}.footer{position:absolute;left:64px;right:64px;bottom:25px;display:flex;justify-content:space-between;font-size:12px;color:#7f999e;letter-spacing:1px}.footer:before{content:'';position:absolute;top:-13px;width:100%;height:1px;background:var(--line)}table{width:100%;border-collapse:collapse;margin-top:34px;text-align:left}td,th{border-bottom:1px solid var(--line);padding:21px 20px 21px 0;vertical-align:middle;font-weight:400;font-size:22px;line-height:1.35}th{color:var(--cyan);width:27%}.timeline td:nth-child(2){color:var(--amber);width:17%}.quality th{width:36%}.quality td:nth-child(2){font-family:Pixel;font-size:20px;color:var(--amber);width:15%}.quality td{font-size:20px}.daily th{width:17%;color:var(--amber)}.priorities th{width:14%;color:var(--amber)}.priorities td{font-size:21px}.priorities td:nth-child(2){width:35%}.duo{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:32px}.duo figure img{height:294px}.duo figcaption{display:none}.duo h3{margin-top:21px}.duo p{font-size:22px}.widephoto{margin-top:24px;width:780px}.widephoto figure img{height:438px}.photo .items{position:absolute;left:886px;top:206px;width:320px;gap:27px}.photo .items p{font-size:21px}.photo figcaption{font-size:12px}.voices .items,.close .items{margin-top:40px;gap:28px;max-width:1000px}.voices .items>div,.close .items>div{display:grid;grid-template-columns:220px 1fr;gap:25px}.voices .items p,.close .items p{margin:0;font-size:24px}.feedback .items{margin-top:37px;gap:29px}.feedback .items>div{display:grid;grid-template-columns:420px 1fr;gap:32px}.feedback h3{font-family:Consolas,monospace;color:var(--amber);font-size:24px}.feedback p{margin:0;font-size:22px}.feedback .lead:empty{display:none}.cover{padding:0}.cover .tag{position:absolute;left:64px;top:56px;z-index:2}.coverimg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.6}.coverimg:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#02070bf5,#02070bc9 48%,#02070b00 82%)}.covertext{position:absolute;left:64px;top:179px}.covertext h2{font-size:24px;margin-top:31px;color:var(--cyan)}.covertext p{font-size:22px;margin-top:25px}.cover .footer{z-index:2}.close h2{font-size:35px;line-height:1.5}.close .lead{margin-top:20px}#nav{position:fixed;bottom:8px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;opacity:.35;transition:opacity .2s;font-size:12px;z-index:5}#nav:hover,#nav:focus-within{opacity:1}#note{position:fixed;inset:12% 12%;padding:34px;background:#101f27;border:2px solid var(--cyan);z-index:9;overflow:auto;white-space:pre-wrap;font:18px/1.6 Consolas,monospace}#note[hidden]{display:none}#help{font-size:12px;color:var(--muted)}
+.slide:nth-of-type(15) .split .lead{margin-bottom:18px;font-size:22px}.slide:nth-of-type(15) .items{gap:16px}.slide:nth-of-type(15) .items p{font-size:20px;line-height:1.3}.slide:nth-of-type(15) .items h3{font-size:11px}@media print{@page{size:13.333in 7.5in;margin:0}body{overflow:visible;background:var(--ink);print-color-adjust:exact;-webkit-print-color-adjust:exact}#stage{position:static;transform:none;width:1280px;height:auto}.slide{display:block!important;position:relative;width:1280px;height:720px;break-after:page}#nav,#note{display:none!important}}
+${motionCSS}</style></head><body><main id="stage">${slides.map((s,i)=>`<section class="slide ${s.kind} ${i===0?'on':''}" aria-label="${i+1}. ${esc(s.title.replaceAll('\n',' '))}"><div class="tag">${esc(s.tag)}</div>${s.kind==='cover'?'':`<h2>${esc(s.title).replaceAll('\n','<br>')}</h2>`}${body(s)}${s.bottom?`<p class="bottom">${esc(s.bottom)}</p>`:''}<div class="footer"><span>O SEGREDO DE VARGINHA • SPRINT FINAL</span><span>${String(i+1).padStart(2,'0')} / ${slides.length}</span></div></section>`).join('')}${fxMarkup}</main><nav id="nav" aria-label="Navegação"><button id="prev" aria-label="Slide anterior">←</button><span id="count">1 / ${slides.length}</span><button id="next" aria-label="Próximo slide">→</button><button id="full">Tela cheia</button><button id="notes">Notas</button><button id="motion" aria-pressed="true" title="Atalho M">Efeitos: ligados</button><span id="help">← → / Espaço • F tela cheia • N notas • M efeitos</span></nav><aside id="note" hidden></aside><script>
+const notes=${JSON.stringify(slides.map(s=>s.notes)).replaceAll('<','\\u003c')};
+${motionJS}
+</script></body></html>`;
+// Chromium otherwise fragments grid slides and pushes their footer to an extra page.
+// The duo class belongs both to a section and its inner grid. Its grid margin
+// must not shift the entire slide below its page boundary.
+const printFix='.slide.duo{margin-top:0}@media print{@page{size:1280px 720px;margin:0}html,body{margin:0!important;padding:0!important}.slide{margin:0!important;break-inside:avoid!important;page-break-inside:avoid!important;break-after:page!important}.slide:last-of-type{break-after:auto!important}}';
+await fs.writeFile(path.join(out,'A_Sprint_Final_Varginha.html'),html.replace('</style>',printFix+'</style>'));
+await fs.writeFile(path.join(out,'Roteiro_da_daily.md'),'# Daily de 27/10/2026\n\n'+slides.map((s,i)=>`## ${i+1}. ${s.title.replaceAll('\n',' ')}\n\n${s.notes}`).join('\n\n'));
+console.log(JSON.stringify({slides:slides.length,html:path.join(out,'A_Sprint_Final_Varginha.html'),images:img}));

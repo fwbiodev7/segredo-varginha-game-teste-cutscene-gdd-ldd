@@ -600,6 +600,7 @@ namespace Game.Varginha.Experiment
             foreach(float x in new[]{-10,10.3f})Prop("Jardineira "+x,"Shrub",x,-6.7f,1.6f,1.3f,.7f,.45f);
             PointAt("notebook","NOTEBOOK DO PROFESSOR",.8f,3.8f);
             PointAt("renan","RENAN • QUADRO BRANCO",6.55f,4.1f);
+            PointAt("mural","MURAL • CONSULTA AO ACERVO",7.5f,-4.55f);
         }
         private void Road()
         {

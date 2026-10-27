@@ -4,9 +4,15 @@
 
 Trinta anos depois de uma noite esquecida, Edelzio encontra uma caixa que devolve perguntas sobre seu passado. Explore casas, a Escola Industrial, trilhas e laboratórios; converse com Renan, Padre Fábio e Ouzana; reúna pistas e conte com seus aliados quando a investigação se transformar em combate.
 
-**Em desenvolvimento · 14 capítulos · candidata Windows 0.4.4-beta · atualização: 21/10/2026.**
+**Em desenvolvimento · 14 capítulos · candidata local Windows 0.5.1-beta · atualização: 27/10/2026.**
 
-Revisão atual: [integração dos sons recebidos](Docs/CampanhaOficial/INTEGRACAO_AUDIO_2026-10-21.md), [artes e correções dos apoios](Docs/CampanhaOficial/AUDITORIA_APOIOS_2026-10-21.md), com pulso cyber do Renan, frasco da Ouzana e escudo transparente do Padre. [Relatório, testes e prints](output/audio-integration-2026-10-21/RELATORIO.md); [daily atualizada](output/daily-sprint-2026-10-20/A_Sprint_Final_Varginha.html). Pacote local: `Builds/Varginha_0.4.4-beta_2026-10-21_Windows_x64.zip`. As entregas abaixo permanecem históricas.
+Ajuste de 27/10: [duas colunas embaralhadas e disposição salva](Docs/CampanhaOficial/EMBARALHAMENTO_ESCOLA_2026-10-27.md). Pacote local: `Builds/Varginha_0.5.1-beta_2026-10-27_Windows_x64.zip`.
+
+Redesign escolar de 27/10: [Padrões Ocultos, testes, arquivos e cenas](Docs/CampanhaOficial/ENTREGA_ESCOLA_2026-10-27.md). Recortes e anotações são recuperados uma vez na casa, analisados em quatro etapas na escola e mantidos no caderno. Pacote local: `Builds/Varginha_0.5.0-beta_2026-10-27_Windows_x64.zip`. A validação com pessoa leiga e mouse está registrada separadamente.
+
+Fechamento anterior — Entrega local de 27/10: [fechamento da revisão, testes e build](Docs/CampanhaOficial/ENTREGA_2026-10-27.md), [daily atualizada](output/daily-sprint-2026-10-20/A_Sprint_Final_Varginha.html) e [roteiro para 30/10](Docs/Apresentacao/ROTEIRO_COMPLETO_30-10-2026.md). Pacote: `Builds/Varginha_0.4.9-beta_2026-10-27_Windows_x64.zip`. As versões públicas e os registros abaixo são históricos.
+
+Revisão histórica de 21/10: [integração dos sons recebidos](Docs/CampanhaOficial/INTEGRACAO_AUDIO_2026-10-21.md), [artes e correções dos apoios](Docs/CampanhaOficial/AUDITORIA_APOIOS_2026-10-21.md), com pulso cyber do Renan, frasco da Ouzana e escudo transparente do Padre. [Relatório, testes e prints](output/audio-integration-2026-10-21/RELATORIO.md); [daily atualizada](output/daily-sprint-2026-10-20/A_Sprint_Final_Varginha.html). Pacote local: `Builds/Varginha_0.4.4-beta_2026-10-21_Windows_x64.zip`. As entregas abaixo permanecem históricas.
 
 [**Baixar beta 0.4.4 no GitHub**](https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/releases/tag/v0.4.4-beta) — build Windows, HTML da daily e relatório. É uma pré-release; a mixagem, o balanceamento com pessoas e o teste em outro PC continuam na [lista de pendências](Docs/CampanhaOficial/PENDENCIAS_2026-10-21.md).
 
@@ -65,7 +71,7 @@ Comece pelo menu para configurar corretamente os sistemas. Cenas com nomes antig
 - **Explora:** atravessa áreas conectadas e usa o Fusca nos momentos previstos pela história.
 - **Combate:** encadeia golpes, esquiva de ataques sinalizados e usa alunos e apoios com recargas próprias.
 
-A infância começa sem combate. Conversas e documentos adicionais ampliam a história. Rotinas domésticas, inspeções repetidas da viagem e uma pista de teste da oficina deixaram de ser obrigatórias. Os close-ups da caixa e da fotografia esperam você confirmar **Continuar**.
+A infância começa sem combate. Conversas e documentos adicionais ampliam a história. Rotinas domésticas, inspeções repetidas da viagem e uma pista de teste da oficina deixaram de ser obrigatórias. O close-up da caixa espera **Continuar**. Na escola, os documentos podem ser reabertos e as escolhas corrigidas; a dedução libera o acervo da biblioteca.
 
 Os mapas ilustrados e personagens atuais mantêm sua identidade. A luz local ajusta as cores e o volume dos sprites; lanterna e faróis participam da iluminação, e as sombras acompanham a fonte predominante. A arte continua com filtro de pontos.
 
