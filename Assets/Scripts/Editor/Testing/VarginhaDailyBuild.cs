@@ -9,10 +9,11 @@ namespace Game.Editor.Testing
     // A separate candidate preserves previous deliveries and restores the project's version.
     public static class VarginhaDailyBuild
     {
-        public const string Version = "0.5.2-beta";
-        public const string Folder = "Builds/Varginha_0.5.2-beta_2026-10-27";
+        public const string Version = "0.5.3-beta";
+        public const string Folder = "Builds/Oizlede_0.5.3-beta_2026-10-28";
+        public const string Executable = "Oizlede - Segredo de Varginha.exe";
 
-        [MenuItem("Varginha/Build/Escola 27-10 Windows x64")]
+        [MenuItem("Varginha/Build/Revisão 28-10 Windows x64")]
         public static void Build()
         {
             if (Application.isPlaying) throw new InvalidOperationException("Encerre o Play antes da build.");
@@ -28,7 +29,7 @@ namespace Game.Editor.Testing
                 Directory.CreateDirectory(folder);
                 var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
                     scenes = VarginhaAlphaBuild.Scenes,
-                    locationPathName = Path.Combine(folder, "SegredoDeVarginha.exe"),
+                    locationPathName = Path.Combine(folder, Executable),
                     target = BuildTarget.StandaloneWindows64,
                     options = BuildOptions.CompressWithLz4HC | BuildOptions.DetailedBuildReport
                 });

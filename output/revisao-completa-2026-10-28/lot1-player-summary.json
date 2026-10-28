@@ -1,0 +1,23 @@
+{
+  "source": "output\\revisao-completa-2026-10-28\\lot1-player.xml",
+  "runResult": "Failed(Child)",
+  "tests": {
+    "total": 15,
+    "passed": 13,
+    "failed": 2,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.MenuCinematicPlayTests.BackpackHoverPreservesSpritesClicksAndDisabledButtonsWhilePaused",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.MenuCinematicPlayTests+<BackpackHoverPreservesSpritesClicksAndDisabledButtonsWhilePaused>d__27.MoveNext () [0x000ba] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\MenuCinematicPlayTests.cs:249\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.MenuCinematicPlayTests.ExistingHudAndPauseRegressionStillPassesWithTheAnimatedMenu",
+      "message": "  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaMenuAndDeathTests+<PersistentHudCannotDrawOrPauseOverMenu>d__4.MoveNext () [0x00043] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\VarginhaMenuAndDeathTests.cs:53\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    }
+  ],
+  "success": false
+}

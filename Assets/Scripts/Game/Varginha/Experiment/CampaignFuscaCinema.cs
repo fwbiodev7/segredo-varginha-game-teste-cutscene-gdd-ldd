@@ -163,6 +163,13 @@ namespace Game.Varginha.Experiment
             var sprite=CampaignOriginalFusca.Top(CampaignWorkshopVehicle.Facing.North);
             float fit=Mathf.Min(carRect.width/sprite.rect.width,carRect.height/sprite.rect.height);
             DrawSprite(new Rect(carRect.center.x-sprite.rect.width*fit/2,carRect.center.y-sprite.rect.height*fit/2,sprite.rect.width*fit,sprite.rect.height*fit),sprite);
+            if(time>=CampaignSchoolMusicCar.StartTime&&time<=CampaignSchoolMusicCar.EndTime)
+            {
+                var passing=CampaignOriginalFusca.Side;var point=ScreenPoint(CampaignSchoolMusicCar.CarPixel(time));
+                float width=140*scale,height=width*passing.rect.height/passing.rect.width;
+                var previous=GUI.color;GUI.color=new Color(.65f,.59f,.52f,1);
+                DrawSprite(new Rect(point.x-width/2,point.y-height/2,width,height),passing);GUI.color=previous;
+            }
         }
         public static IReadOnlyList<Vector2> SchoolArrivalRoute {get{EnsureArrivalRoute();return ArrivalRoute;}}
         private static void EnsureArrivalRoute()

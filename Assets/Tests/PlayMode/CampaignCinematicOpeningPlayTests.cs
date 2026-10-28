@@ -71,10 +71,29 @@ namespace Game.Tests.PlayMode
             Assert.That(stage.TrySkipMissionCinema(),Is.False,"A first viewing cannot be skipped.");
             var visited=new List<string>();var sounds=new HashSet<string>();int soundSerial=-1;float deadline=Time.realtimeSinceStartup+65;bool paused=false,released=false,withdrawn=false,exit=false,gate=false,signal=false;
             var driverCaptured=new bool[4];
+            bool musicApproach=false,musicNear=false,musicAway=false;
             while(VarginhaCampaignStage.Active==stage&&Time.realtimeSinceStartup<deadline)
             {
                 var sound=stage.GetComponent<CampaignSoundscape>();if(sound.EventSerial!=soundSerial){sounds.Add(sound.LastEvent??"");soundSerial=sound.EventSerial;}
                 string title=Title(stage);
+                if(title=="INDUSTRIAL")
+                {
+                    var car=stage.GetComponentInChildren<CampaignSchoolMusicCar>();Assert.That(car,Is.Not.Null);
+                    var source=car.Source;
+                    if(Clock(stage)<CampaignSchoolMusicCar.EndTime-.1f)Assert.That(source.clip,Is.SameAs(Resources.Load<AudioClip>(CampaignSchoolMusicCar.MusicResource)));
+                    float distance=Vector3.Distance(source.transform.position,Camera.main.transform.position);
+                    if(Clock(stage)>1&&Clock(stage)<1.4f){musicApproach=true;Assert.That(distance,Is.GreaterThan(9));}
+                    if(Clock(stage)>2.65f&&Clock(stage)<2.9f&&!musicNear)
+                    {
+                        musicNear=true;Assert.That(distance,Is.LessThan(4));Assert.That(source.spatialBlend,Is.EqualTo(1));
+                        Assert.That(source.dopplerLevel,Is.GreaterThan(0).And.LessThan(.3f));Assert.That(source.isPlaying,Is.True);
+                        float old=VarginhaGameSettings.Current.music;VarginhaGameSettings.Current.music=0;yield return null;
+                        Assert.That(source.volume,Is.Zero);VarginhaGameSettings.Current.music=old;
+                        stage.TogglePause();yield return new WaitForSecondsRealtime(.2f);Assert.That(source.isPlaying,Is.False);stage.TogglePause();
+                        yield return Capture("school-passing-music-car");
+                    }
+                    if(Clock(stage)>4.2f&&Clock(stage)<4.6f){musicAway=true;Assert.That(distance,Is.GreaterThan(9));}
+                }
                 if(title=="VARGINHA • 2026"&&Clock(stage)>2.2f)
                 {
                     int frame=CampaignFuscaCinema.DriverFrame(Clock(stage),true,false);
@@ -104,6 +123,7 @@ namespace Game.Tests.PlayMode
             Assert.That(paused,Is.True);Assert.That(CampaignStorySave.Load().cinematicsSeen&8,Is.EqualTo(8));
             Assert.That(released&&withdrawn,Is.True,"All ignition poses must be reached before spontaneous restart.");
             Assert.That(exit&&gate,Is.True,"Disembarkation and the walk to the gameplay spawn must finish.");
+            Assert.That(musicApproach&&musicNear&&musicAway,Is.True,"The music vehicle approaches, passes and recedes in the school arrival shot.");
             yield return new WaitForSeconds(3.4f);
             Assert.That(VarginhaCampaignStage.Active.phase,Is.EqualTo(4));Assert.That(VarginhaCampaignStage.Active.Progress.arrival,Is.True);
             var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();

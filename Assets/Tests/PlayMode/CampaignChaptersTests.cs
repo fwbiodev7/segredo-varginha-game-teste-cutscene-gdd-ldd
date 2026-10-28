@@ -46,6 +46,23 @@ namespace Game.Tests.PlayMode
             if (_previousStory != null) File.WriteAllText(CampaignStorySave.Path, _previousStory); else if (File.Exists(CampaignStorySave.Path)) File.Delete(CampaignStorySave.Path);
             if (_previousMemory != null) File.WriteAllText(CampaignMemorySave.Path, _previousMemory); else if (File.Exists(CampaignMemorySave.Path)) File.Delete(CampaignMemorySave.Path);
         }
+        [UnityTest,Timeout(60000)] public IEnumerator ChildhoodLightReactionKeepsMovementAndScalesSoundWithApproachOncePerSave()
+        {
+            CampaignMemorySave.Write(new CampaignMemory{openingSeen=true,powerFailed=true,x=9,y=0});
+            yield return SceneManager.LoadSceneAsync(VarginhaCampaignPhase1.SceneName);yield return new WaitForSeconds(.5f);
+            var phase=VarginhaCampaignPhase1.Active;var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
+            var glow=Object.FindAnyObjectByType<CampaignPreFlashGlow>();var sound=glow.GetComponent<AudioSource>();
+            Assert.That(phase.Memory.lightNoticed,Is.False);Assert.That(actor.IsInputLocked,Is.False);
+            float before=sound.volume;var keyboard=InputSystem.AddDevice<Keyboard>();
+            yield return HoldKey(keyboard,Key.D,.55f);
+            Assert.That(phase.Memory.lightNoticed,Is.True);Assert.That(actor.IsInputLocked,Is.False,"The reaction is a caption, not a modal scene.");
+            Assert.That(actor.transform.position.x,Is.GreaterThan(10.2f).And.LessThan(13.5f));
+            Assert.That(sound.volume,Is.GreaterThan(before));Assert.That(sound.isPlaying,Is.True);
+            Assert.That(CampaignMemorySave.Load().lightNoticed,Is.True);
+            yield return SceneManager.LoadSceneAsync(VarginhaCampaignPhase1.SceneName);yield return new WaitForSeconds(.5f);
+            Assert.That(VarginhaCampaignPhase1.Active.Memory.lightNoticed,Is.True);Assert.That(Object.FindObjectsByType<CampaignPreFlashGlow>().Length,Is.EqualTo(1));
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
         [UnityTest] public IEnumerator ChildhoodFeetRespectWallsAndPassThroughTheExistingDoor()
         {
             float eastWall=CampaignIllustratedMaps.Get(1).Position(880,0).x;
@@ -183,6 +200,8 @@ namespace Game.Tests.PlayMode
             var layout=CampaignIllustratedMaps.Get(2);
             actor.transform.position=layout.Position(749,600)+Vector2.up*.58f;Physics2D.SyncTransforms();
             stage.Interact("counter");
+            stage.CloseDialogue();Assert.That(stage.Progress.house.HasInitialKey,Is.True);
+            stage.Interact("car");stage.CloseDialogue();stage.Interact("counter");
             yield return new WaitForSeconds(.8f);
             stage.TogglePause();float px=actor.transform.position.x;
             yield return new WaitForSecondsRealtime(.15f);
@@ -198,11 +217,9 @@ namespace Game.Tests.PlayMode
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.3f);
             stage=VarginhaCampaignStage.Active;actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
             Assert.That(stage.Progress.house.KeyOnCounter,Is.True,"Reload restores the key on the counter.");
-            stage.Interact("bag");Assert.That(stage.IsActing,Is.False,"Bag pickup starts only after the door reminder.");
             Assert.That(stage.Progress.house.Missing,Is.False);
-            stage.Interact("exitclue");stage.CloseDialogue();
             Assert.That(stage.Progress.house.bagReminder,Is.True);
-            Assert.That(stage.transform.Find("Porta_Saida_Condicional").GetComponent<BoxCollider2D>().enabled,Is.True);
+            Assert.That(stage.transform.Find("Porta_Saida_Condicional"),Is.Null,"The reminder no longer creates an invisible gate.");
             At("bag");stage.Interact("bag");deadline=Time.realtimeSinceStartup+9;
             while(stage.IsActing&&Time.realtimeSinceStartup<deadline)yield return null;
             stage.CloseDialogue();
@@ -258,7 +275,7 @@ namespace Game.Tests.PlayMode
             Assert.That(stage.Progress.school.documentsRecovered,Is.True,"The documents must travel from the house box, without being collected again at school.");
             for(int id=0;id<6;id++){Assert.That(stage.OpenSchoolDocument(id),Is.True);stage.CloseSchoolDocument();}
             stage.SwapSchoolDocuments(0,1);stage.SwapSchoolDocuments(1,2);Assert.That(stage.SubmitSchoolStep(),Is.True);
-            foreach(int id in new[]{0,1,3,4,6,7})stage.HighlightSchoolPassage(id);Assert.That(stage.SubmitSchoolStep(),Is.True);
+            stage.ChooseSchoolComparison(2);Assert.That(stage.SubmitSchoolStep(),Is.True);
             for(int id=0;id<3;id++)stage.LinkSchoolNote(id,id);Assert.That(stage.SubmitSchoolStep(),Is.True);
             stage.OpenSchoolDocument(6);stage.CloseSchoolDocument();stage.ChooseSchoolDestination(1);Assert.That(stage.SubmitSchoolStep(),Is.True);
             Assert.That(stage.Progress.renanConfirmed, Is.True); stage.Save();

@@ -88,7 +88,7 @@ namespace Game.Varginha
         private GUIStyle _healthStyle;
         private static readonly Color PanelColor = new(.042f, .056f, .068f, .97f);
         private static readonly Color PanelBorder = new(.28f, .40f, .44f, .98f);
-        private static readonly Color PaperColor = new(.92f, .91f, .82f);
+        private static readonly Color PaperColor = PixelMenuTheme.Paper;
         private static readonly Color FocusColor = new(.96f, .78f, .34f);
         private readonly Sprite[] _hotbarIcons = new Sprite[6];
         private readonly bool[] _hotbarOwned = new bool[6];

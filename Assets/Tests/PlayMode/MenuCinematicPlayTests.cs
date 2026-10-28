@@ -46,8 +46,47 @@ namespace Game.Tests.PlayMode
         {
             SceneManager.LoadScene(MenuScene);yield return null;yield return new WaitForSecondsRealtime(.35f);
             Assert.That(VarginhaMainMenu.Active,Is.Not.Null);
+            if(!Application.isEditor)
+            {
+                yield return new WaitForEndOfFrame();
+                var capture=ScreenCapture.CaptureScreenshotAsTexture();
+                Directory.CreateDirectory(CinemaQaEvidence.Folder);
+                File.WriteAllBytes(Path.Combine(CinemaQaEvidence.Folder,"menu-oizlede.png"),capture.EncodeToPNG());
+                Object.Destroy(capture);
+            }
         }
         private static string Panel => typeof(VarginhaMainMenu).GetField("panel",Private).GetValue(VarginhaMainMenu.Active).ToString();
+        [UnityTest,Timeout(60000)]
+        public IEnumerator LogoIsMutedWithoutChangingItsSilhouetteAndCaptionsChangeOnReentry()
+        {
+            yield return LoadMenu();
+            var menu=VarginhaMainMenu.Active;
+            var graded=(RenderTexture)typeof(VarginhaMainMenu).GetField("_logoFrame",Private).GetValue(menu);
+            Assert.That(graded,Is.Not.Null,"The imported logo must use its night color grade.");
+            Assert.That(graded.filterMode,Is.EqualTo(FilterMode.Point));
+            var source=Resources.Load<Texture2D>("Varginha/MenuLogoOizlede");
+            Assert.That(graded.width,Is.EqualTo(source.width));Assert.That(graded.height,Is.EqualTo(source.height));
+            var reference=RenderTexture.GetTemporary(source.width,source.height,0,RenderTextureFormat.ARGB32);
+            try
+            {
+                Graphics.Blit(source,reference);var original=Read(reference);var muted=Read(graded);
+                double before=0,after=0;int alphaError=0;
+                for(int i=0;i<original.Length;i++)
+                {
+                    alphaError=Mathf.Max(alphaError,Mathf.Abs(original[i].a-muted[i].a));
+                    before+=(Mathf.Max(original[i].r,Mathf.Max(original[i].g,original[i].b))-Mathf.Min(original[i].r,Mathf.Min(original[i].g,original[i].b)))*original[i].a;
+                    after+=(Mathf.Max(muted[i].r,Mathf.Max(muted[i].g,muted[i].b))-Mathf.Min(muted[i].r,Mathf.Min(muted[i].g,muted[i].b)))*muted[i].a;
+                }
+                Assert.That(alphaError,Is.LessThanOrEqualTo(1),"Color grading must preserve every transparent gap and pixel edge.");
+                Assert.That(after,Is.LessThan(before*.55),"The logo must lose saturation, not only brightness.");
+            }
+            finally{RenderTexture.ReleaseTemporary(reference);}
+            string first=(string)typeof(VarginhaMainMenu).GetField("_menuCaption",Private).GetValue(menu);
+            Assert.That(first,Is.Not.Empty);
+            yield return LoadMenu();
+            string second=(string)typeof(VarginhaMainMenu).GetField("_menuCaption",Private).GetValue(VarginhaMainMenu.Active);
+            Assert.That(second,Is.Not.EqualTo(first),"The saved last caption must be skipped when entering the menu again.");
+        }
         [UnityTest] public IEnumerator ReceivedMenuMusicLoopsRespectsVolumeAndStopsWhenDisabled()
         {
             yield return LoadMenu();
@@ -77,10 +116,12 @@ namespace Game.Tests.PlayMode
             var keyboard=InputSystem.AddDevice<Keyboard>();var pad=InputSystem.AddDevice<Gamepad>();
             yield return LoadMenu();
             yield return KeyPress(keyboard,Key.DownArrow);yield return new WaitForSecondsRealtime(.25f);
+            string firstCaption=(string)typeof(VarginhaMainMenu).GetField("_menuCaption",Private).GetValue(VarginhaMainMenu.Active);
             var motions=(MenuButtonMotion[])typeof(VarginhaMainMenu).GetField("_buttonMotion",Private).GetValue(VarginhaMainMenu.Active);
             Assert.That(motions[1].Amount,Is.GreaterThan(.9f),"Keyboard focus gets the cyan animation");
             yield return KeyPress(keyboard,Key.Enter);Assert.That(Panel,Is.EqualTo("Play"));
             yield return KeyPress(keyboard,Key.Escape);Assert.That(Panel,Is.EqualTo("None"));
+            Assert.That((string)typeof(VarginhaMainMenu).GetField("_menuCaption",Private).GetValue(VarginhaMainMenu.Active),Is.Not.EqualTo(firstCaption),"Returning from a menu panel also rotates its caption.");
             yield return KeyPress(keyboard,Key.DownArrow);yield return KeyPress(keyboard,Key.Enter);
             Assert.That(Panel,Is.EqualTo("Settings"));
             yield return KeyPress(keyboard,Key.Escape);Assert.That(Panel,Is.EqualTo("None"));
@@ -190,6 +231,10 @@ namespace Game.Tests.PlayMode
             // Reuse the original regression body; a real menu must hide the gameplay HUD.
             var active=VarginhaMainMenu.Active;
             Object.Destroy(active.gameObject);yield return null;
+            // The component regression needs its own HUD, rather than a campaign
+            // HUD retained by a previously executed scene in the Player runner.
+            if(VarginhaGameHUD.Instance!=null)Object.DestroyImmediate(VarginhaGameHUD.Instance.gameObject);
+            IsolatedPlayModeTests.ResetScene();
             var regression=new VarginhaMenuAndDeathTests();
             try{yield return regression.PersistentHudCannotDrawOrPauseOverMenu();}
             finally{regression.Cleanup();}
@@ -199,6 +244,11 @@ namespace Game.Tests.PlayMode
         public IEnumerator BackpackHoverPreservesSpritesClicksAndDisabledButtonsWhilePaused()
         {
             yield return LoadMenu();
+            // Inventory correctly rejects gameplay input while a menu HUD is open.
+            // Exercise hover in a gameplay sandbox, with the real menu checked above.
+            IsolatedPlayModeTests.ResetScene();
+            if(VarginhaGameHUD.Instance!=null)Object.DestroyImmediate(VarginhaGameHUD.Instance.gameObject);
+            yield return null;
             var root=new GameObject("BackpackHoverTest");
             try
             {

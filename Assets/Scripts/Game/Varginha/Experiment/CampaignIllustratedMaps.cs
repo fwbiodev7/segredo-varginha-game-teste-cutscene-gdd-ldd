@@ -111,6 +111,8 @@ namespace Game.Varginha.Experiment
                 plan.points.Find(p=>p.id=="breakdown").position=new Vector2(plan.spawn.x,55);
                 plan.points.Find(p=>p.id=="arrival").position=new Vector2(plan.spawn.x,120);
             }
+            if(plan.phase==7)CampaignAncientChurch.Apply(plan,data);
+            CampaignPhysicalEvidence.ApplyPoints(plan,data);
             return true;
         }
         public static Transform Build(Transform owner,CampaignMapPlan plan,bool furnished)
@@ -175,6 +177,8 @@ namespace Game.Varginha.Experiment
             }
             if(furnished)Furnish(map,plan);
             if(furnished&&plan.phase==6)BuildSchoolGlobe(map,data);
+            if(plan.phase==7)CampaignAncientChurch.Build(map,data);
+            CampaignPhysicalEvidence.Build(map,plan,data);
             CampaignAdultMorning.Build(map,data);
             CampaignStainedGlassLighting.Build(map,data);
             var lighting=map.gameObject.AddComponent<CampaignIllustratedLighting>();lighting.Configure(data);

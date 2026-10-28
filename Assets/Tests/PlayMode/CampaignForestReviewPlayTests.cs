@@ -27,25 +27,20 @@ namespace Game.Tests.PlayMode
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(phase));yield return new WaitForSeconds(3.4f);
             CampaignExpansionController.Active.ClosePanel();
         }
-        [UnityTest,Timeout(90000)] public IEnumerator PriestIsCompleteOnFreeForestPavingAndKeepsHisOriginalChurchScale()
+        [UnityTest,Timeout(90000)] public IEnumerator IntactChurchReplacesTheRuinAndThePriestAppearsOnlyInside()
         {
             yield return Load(7);var stage=CampaignExpansionController.Active;var data=CampaignIllustratedMaps.Get(7);
-            var priest=GameObject.Find("Padre Fábio").GetComponent<SpriteRenderer>();var feet=priest.GetComponent<CircleCollider2D>();
-            var originalPose=priest.sprite;var originalPosition=priest.transform.position;
-            Assert.That(priest.GetComponent<CampaignDirectionalNpc>(),Is.Null);
-            var playerBody=Object.FindAnyObjectByType<EdelzioTopDownController>().GetComponent<Rigidbody2D>();
-            foreach(var offset in new[]{Vector2.left,Vector2.right,Vector2.up,Vector2.down})
-            {playerBody.position=(Vector2)originalPosition+offset*2;yield return null;Assert.That(priest.sprite,Is.SameAs(originalPose));Assert.That(priest.transform.position,Is.EqualTo(originalPosition));}
-            Assert.That(priest.sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.StandingHeight).Within(.08f));
-            Assert.That(stage.Plan.IsClear(feet.bounds.center,.24f),Is.True);
-            Assert.That(Vector2.Distance(feet.bounds.center,data.Position(1405,335)),Is.LessThan(.04f));
-            var bell=stage.transform.Find("Mapa_Campanha/02_Mobilia_Colisoes/Sino do santuário").GetComponent<SpriteRenderer>();
-            Assert.That(priest.bounds.Intersects(bell.bounds),Is.False,"The full enlarged priest must clear the foreground bell.");
-            Capture(Camera.main,priest.bounds.center,2.3f,"forest-priest");
+            Assert.That(GameObject.Find("Padre Fábio"),Is.Null);
+            var exterior=stage.transform.Find("Mapa_Campanha/Igreja_antiga_inteira").GetComponent<SpriteRenderer>();
+            Assert.That(stage.transform.Find("Mapa_Campanha/02_Mobilia_Colisoes/Sino do santuário"),Is.Null);
+            Assert.That(stage.Plan.IsClear(stage.Plan.points.Find(p=>p.id=="fabio").position,.24f),Is.True);
+            Capture(Camera.main,exterior.bounds.center,3.6f,"forest-intact-church");
             stage.Interact("sign0");stage.ClosePanel();stage.Interact("sign1");stage.ClosePanel();stage.Interact("sign2");stage.ClosePanel();
-            stage.Interact("fabio");Assert.That(stage.Progress.expansion.fabioMet,Is.True,"Moving the character must keep the conversation and exit progression.");stage.ClosePanel();
-            yield return Load(8);priest=GameObject.Find("Padre Fábio").GetComponent<SpriteRenderer>();
+            stage.Interact("fabio");Assert.That(stage.Progress.expansion.fabioMet,Is.True);stage.ClosePanel();
+            yield return new WaitUntil(()=>SceneManager.GetActiveScene().name==CampaignStorySave.Scene(8));yield return new WaitForSeconds(3.4f);
+            var priest=GameObject.Find("Padre Fábio").GetComponent<SpriteRenderer>();
             Assert.That(priest.sprite,Is.SameAs(VarginhaReferenceSprites.PadreFabio()),"The church preserves the original frame/PPU.");
+            Assert.That(Object.FindObjectsByType<CampaignForestPresence>().Length,Is.Zero);
             Capture(Camera.main,priest.bounds.center,1.8f,"church-priest-original");
         }
         [UnityTest,Timeout(90000)] public IEnumerator CaptureShowsGameOverAndRetryReloadsTheSavedRiverCheckpoint()

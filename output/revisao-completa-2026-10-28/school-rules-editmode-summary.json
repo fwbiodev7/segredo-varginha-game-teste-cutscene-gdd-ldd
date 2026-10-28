@@ -1,0 +1,12 @@
+{
+  "source": "output\\revisao-completa-2026-10-28\\school-rules-editmode.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 47,
+    "passed": 47,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

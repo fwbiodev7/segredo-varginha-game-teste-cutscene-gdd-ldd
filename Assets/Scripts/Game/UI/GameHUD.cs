@@ -53,7 +53,7 @@ namespace Game.UI
                 fontStyle = FontStyle.Bold,
                 alignment = TextAnchor.MiddleCenter
             };
-            _titleStyle.normal.textColor = Color.yellow;
+            _titleStyle.normal.textColor = PixelMenuTheme.Paper;
 
             _subStyle = new GUIStyle(GUI.skin.label)
             {

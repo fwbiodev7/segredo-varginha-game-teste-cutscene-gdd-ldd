@@ -1,0 +1,12 @@
+{
+  "source": "output\\revisao-completa-2026-10-28\\integrated-editmode.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 455,
+    "passed": 455,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

@@ -7,6 +7,19 @@ namespace Game.Varginha.Experiment
     public sealed class CampaignPuzzleProgress
     {
         public int archiveMarks;
+        public int[] archiveOrder;
+        public int archiveAttempt;
+        public bool EnsureArchiveOrder(bool nextAttempt=false,System.Random random=null)
+        {
+            bool valid=archiveOrder?.Length==6;
+            if(valid)for(int i=0;i<6;i++)if(archiveOrder[i]<0||archiveOrder[i]>=6||Array.IndexOf(archiveOrder,archiveOrder[i])!=i){valid=false;break;}
+            if(valid&&!nextAttempt)return false;
+            var previous=archiveOrder;archiveOrder=new[]{0,1,2,3,4,5};random??=new System.Random(Guid.NewGuid().GetHashCode());
+            for(int i=5;i>0;i--){int j=random.Next(i+1);(archiveOrder[i],archiveOrder[j])=(archiveOrder[j],archiveOrder[i]);}
+            if(valid&&CampaignStory.Sequence(previous,archiveOrder))
+                (archiveOrder[0],archiveOrder[1])=(archiveOrder[1],archiveOrder[0]);
+            if(nextAttempt)archiveAttempt++;return true;
+        }
         public int selected = -1;
         public int[] causes = { -1, -1, -1, -1 };
         public int[] dates = { -1, -1, -1 };
@@ -16,6 +29,7 @@ namespace Game.Varginha.Experiment
         public void Repair(CampaignContinuationState completed)
         {
             archiveMarks &= 63; selected = Mathf.Clamp(selected, -1, 3);
+            EnsureArchiveOrder();archiveAttempt=Mathf.Max(0,archiveAttempt);
             RepairLinks(ref causes, 4); RepairLinks(ref dates, 3); RepairLinks(ref hypotheses, 3);
             if (memory == null || memory.Length > 4) memory = Array.Empty<int>();
             for (int i = 0; i < memory.Length; i++)
@@ -75,8 +89,8 @@ namespace Game.Varginha.Experiment
                 string[] proofs, claims; int[] links; string title, instruction;
                 if (phase == 13)
                 {
-                    title="RECONSTRUIR CAUSAS E CONSEQUÊNCIAS";
-                    instruction="Associe cada vestígio ao acontecimento que ele comprova. Os documentos explicam por que o grupo passou da descoberta à contenção.";
+                    title="RECONSTRUA O QUE ACONTECEU";
+                    instruction="Cada documento revela uma parte da história. Selecione uma prova e relacione-a ao acontecimento que ela ajuda a explicar.";
                     proofs=new[]{"PÁGINA • mecanismo encontrado","FOTOGRAFIA • testes do grupo","SALA • danos da ruptura","INSTRUMENTOS • ligação a pessoas"};
                     claims=new[]{"1 • A DESCOBERTA", "2 • AS EXPERIÊNCIAS", "3 • A RUPTURA", "4 • A RESPOSTA: CONTENÇÃO"}; links=state.causes;
                 }
@@ -94,22 +108,24 @@ namespace Game.Varginha.Experiment
                     proofs=new[]{"REGISTROS • o selo protege a ruptura","FERIMENTOS • marcas da contenção","REAGENTE • circuitos externos/internos"};
                     claims=new[]{"A contenção feriu a criatura","O circuito externo abre o retorno","O selo dura até a travessia terminar"}; links=state.hypotheses;
                 }
-                BoardHeader(title,instruction);
+                AssociationHeader(phase,title,instruction);
                 int linked=0;for(int i=0;i<links.Length;i++)if(links[i]>=0)linked++;
-                ExperimentGUI.Label(new Rect(145,331,650,20),state.selected<0?"Escolha um cartão de prova e toque no destino.":"PROVA SELECIONADA • "+proofs[state.selected],small:true);
-                ExperimentGUI.Label(new Rect(875,331,240,20),"VÍNCULOS "+linked+"/"+links.Length,small:true);
+                ExperimentGUI.Label(new Rect(145,213,715,24),state.selected<0?"Escolha uma prova à esquerda e um destino à direita.":"PROVA SELECIONADA • "+proofs[state.selected],small:true);
+                ExperimentGUI.Label(new Rect(890,213,225,24),"VÍNCULOS "+linked+"/"+links.Length,small:true);
                 // The evidence rack changes order; the first button is not always the answer.
                 for (int row=0;row<proofs.Length;row++)
                 {
                     int proof=(row+1)%proofs.Length;
-                    Rect proofRect=new Rect(145,352+row*43,425,39);
+                    Rect proofRect=new Rect(145,240+row*70,425,64);
                     if(CardButton(proofRect,"PROVA "+(proof+1),proofs[proof],"",state.selected==proof,false))state.selected=proof;
-                    string assigned=links[row]<0?"— escolher prova —":proofs[links[row]];
-                    if(CardButton(new Rect(600,352+row*43,515,39),"DESTINO "+(row+1),claims[row],assigned,links[row]>=0,true)&&state.selected>=0)
+                    string assigned=links[row]<0?"— escolher prova —":"VÍNCULO • PROVA "+(links[row]+1);
+                    if(CardButton(new Rect(600,240+row*70,415,64),"DESTINO "+(row+1),claims[row],assigned,links[row]>=0,true)&&state.selected>=0)
                     {
                         int previous=Array.IndexOf(links,state.selected);if(previous>=0)links[previous]=-1;
                         links[row]=state.selected;state.selected=-1;save();
                     }
+                    if(UndoLinkButton(new Rect(1025,258+row*70,90,30),links[row]>=0))
+                    {links[row]=-1;save();}
                 }
                 if(ExperimentGUI.Button(new Rect(145,530,360,32),"LIMPAR ASSOCIAÇÕES")){Array.Fill(links,-1);state.selected=-1;save();}
                 if(ExperimentGUI.Button(new Rect(755,530,360,32),"CONFERIR AS PROVAS"))submit(-1,links);
@@ -120,9 +136,13 @@ namespace Game.Varginha.Experiment
             BoardHeader("ARQUIVOS • ENCONTRAR O QUE FOI APAGADO","Compare os dois cartões de planta. Marque os detalhes que mudaram e registre somente as diferenças.");
             Blueprint(new Rect(145,340,325,178),false);Blueprint(new Rect(490,340,325,178),true);
             string[] areas={"ACESSO LATERAL","DATA DO REGISTRO","PORTA PRINCIPAL","JARDIM","ASSINATURA","ESCADA INTERNA"};
+            if(state.EnsureArchiveOrder())save();
             for(int i=0;i<areas.Length;i++)
-                if(ExperimentGUI.Button(new Rect(840,336+i*30,275,27),((state.archiveMarks&(1<<i))!=0?"[X] ":"[ ] ")+areas[i]))
-                {state.archiveMarks^=1<<i;save();}
+            {
+                int id=state.archiveOrder[i];
+                if(ExperimentGUI.Button(new Rect(840,336+i*30,275,27),((state.archiveMarks&(1<<id))!=0?"[X] ":"[ ] ")+areas[id]))
+                {state.archiveMarks^=1<<id;save();}
+            }
             if(ExperimentGUI.Button(new Rect(755,530,360,32),"REGISTRAR ALTERAÇÕES"))submit(state.archiveMarks,null);
         }
         private static void Blueprint(Rect r, bool altered)
@@ -166,15 +186,32 @@ namespace Game.Varginha.Experiment
             ExperimentGUI.Label(new Rect(165,245,950,38),title,true);
             ExperimentGUI.Label(new Rect(165,287,950,32),instruction,small:true);
         }
+        private static void AssociationHeader(int phase,string title,string instruction)
+        {
+            // Associations need four readable rows; the caller's compact board remains
+            // suitable for the other puzzles, whose controls keep their existing layout.
+            ExperimentGUI.Panel(new Rect(100,80,1080,560));
+            Game.UI.PixelMenuTheme.Label(new Rect(145,98,970,30),CampaignSequence.Title(phase).ToUpperInvariant(),20,ExperimentGUI.Paper);
+            Game.UI.PixelMenuTheme.Label(new Rect(145,139,970,28),title,17,ExperimentGUI.Paper);
+            ExperimentGUI.Label(new Rect(145,173,970,38),instruction,small:true);
+        }
+        private static bool UndoLinkButton(Rect rect,bool linked)
+        {
+            bool enabled=GUI.enabled;GUI.enabled=enabled&&linked;
+            bool clicked=ExperimentGUI.Button(rect,"");
+            Game.UI.PixelMenuTheme.Label(new Rect(rect.x+6,rect.y+3,rect.width-12,rect.height-6),"DESFAZER",8,ExperimentGUI.Muted,TextAnchor.MiddleCenter);
+            GUI.enabled=enabled;
+            return clicked;
+        }
         private static bool CardButton(Rect rect,string kicker,string title,string detail,bool selected,bool destination)
         {
             bool clicked=ExperimentGUI.Button(rect,"");
             var fill=selected?new Color(.12f,.25f,.27f):destination&&detail!="— escolher prova —"?new Color(.065f,.17f,.19f):new Color(.035f,.105f,.13f);
             ExperimentGUI.Box(new Rect(rect.x+2,rect.y+2,rect.width-4,rect.height-4),fill);
             ExperimentGUI.Box(new Rect(rect.x+2,rect.y+2,4,rect.height-4),selected?ExperimentGUI.Paper:destination?ExperimentGUI.Accent:ExperimentGUI.Muted);
-            ExperimentGUI.Label(new Rect(rect.x+17,rect.y+4,rect.width-27,14),kicker,small:true);
-            ExperimentGUI.Label(new Rect(rect.x+17,rect.y+16,rect.width-27,18),title,small:true);
-            if(!string.IsNullOrEmpty(detail))ExperimentGUI.Label(new Rect(rect.x+17,rect.y+27,rect.width-27,11),detail,small:true);
+            Game.UI.PixelMenuTheme.Label(new Rect(rect.x+17,rect.y+4,rect.width-32,14),kicker,8,ExperimentGUI.Muted);
+            ExperimentGUI.Label(new Rect(rect.x+17,rect.y+20,rect.width-32,22),title,small:true);
+            if(!string.IsNullOrEmpty(detail))Game.UI.PixelMenuTheme.Label(new Rect(rect.x+17,rect.y+44,rect.width-32,16),detail,9,ExperimentGUI.Muted);
             if(selected)ExperimentGUI.Box(new Rect(rect.x+rect.width-10,rect.y+7,3,rect.height-14),ExperimentGUI.Paper);
             return clicked;
         }

@@ -29,6 +29,8 @@ namespace Game.Varginha.Experiment
         public bool OpenSchoolDocument(int id)=>OpenSchoolDocument(id,View.School);
         bool OpenSchoolDocument(int id,View returnTo)
         {
+            var school=_progress.school;
+            if(returnTo==View.School&&!school.completed&&(school.stage==1||school.stage==3&&id!=6))return false;
             if(!_ready||_busy||_paused||!_progress.school.Examine(id))return false;
             _documentReturn=returnTo;Show(View.Document);Save();return true;
         }
@@ -36,6 +38,7 @@ namespace Game.Varginha.Experiment
         public void CloseSchoolInvestigation(){if(_view==View.School){Save();Show(View.World);}}
         public bool SwapSchoolDocuments(int a,int b){bool ok=_progress.school.Swap(a,b);if(ok)Save();return ok;}
         public bool HighlightSchoolPassage(int passage){bool ok=_progress.school.ToggleHighlight(passage);if(ok)Save();return ok;}
+        public bool ChooseSchoolComparison(int value){bool ok=_progress.school.ChooseComparison(value);if(ok)Save();return ok;}
         public bool LinkSchoolNote(int note,int passage){bool ok=_progress.school.Link(note,passage);if(ok)Save();return ok;}
         public bool ChooseSchoolDestination(int destination){bool ok=_progress.school.ChooseDestination(destination);if(ok)Save();return ok;}
         public bool SubmitSchoolStep()
@@ -65,7 +68,7 @@ namespace Game.Varginha.Experiment
             bool enabled=GUI.enabled;GUI.enabled=enabled&&!_schoolHints;
             if(s.completed)DrawSchoolConclusion();
             else if(s.stage==0)DrawSchoolOrder();
-            else if(s.stage==1)DrawSchoolHighlights();
+            else if(s.stage==1)DrawSchoolComparison();
             else if(s.stage==2)DrawSchoolLinks();
             else DrawSchoolDestination();
             if(!string.IsNullOrEmpty(_feedback))ExperimentGUI.Label(new Rect(75,548,1125,40),_feedback,small:true);
@@ -98,20 +101,14 @@ namespace Game.Varginha.Experiment
                 {if(_selected<0)_selected=i;else{SwapSchoolDocuments(_selected,i);_selected=-1;}}
             }
         }
-        void DrawSchoolHighlights()
+        void DrawSchoolComparison()
         {
             var s=_progress.school;
-            ExperimentGUI.Label(new Rect(75,174,1125,50),"Destaque somente os fatos repetidos em mais de um recorte. Clique de novo para retirar um destaque.");
+            ExperimentGUI.Label(new Rect(75,174,1125,60),"Qual destes acontecimentos não se repetiu nos registros?");
+            ExperimentGUI.Label(new Rect(75,236,1125,28),"Escolha uma alternativa com base nos recortes que você leu.",small:true);
             for(int i=0;i<3;i++)
             {
-                float x=75+i*380;
-                ExperimentGUI.Panel(new Rect(x,240,365,285));
-                if(SchoolCard(new Rect(x+14,252,337,58),CampaignSchoolDocuments.Titles[i]+" • LER"))OpenSchoolDocument(i);
-                for(int j=0;j<3;j++)
-                {
-                    int id=i*3+j;bool selected=(_progress.school.highlights&(1<<id))!=0;
-                    if(SchoolCard(new Rect(x+14,325+j*62,337,54),CampaignSchoolDocuments.Passages[i][j],selected))HighlightSchoolPassage(id);
-                }
+                if(SchoolCard(new Rect(155,285+i*76,970,62),CampaignSchoolDocuments.ComparisonChoices[i],s.comparisonChoice==i))ChooseSchoolComparison(i);
             }
         }
         void DrawSchoolLinks()
@@ -141,12 +138,11 @@ namespace Game.Varginha.Experiment
         }
         void DrawSchoolDestination()
         {
-            ExperimentGUI.Label(new Rect(75,174,1125,45),"Os relatos se cruzam. Onde consultar os originais? Compare a origem com o registro do mural.");
+            ExperimentGUI.Label(new Rect(75,174,1125,45),"Onde Edelzio deve consultar os documentos originais?");
             ExperimentGUI.Panel(new Rect(75,235,540,290));
-            ExperimentGUI.Label(new Rect(95,253,500,105),CampaignSchoolDocuments.Source);
-            if(ExperimentGUI.Button(new Rect(95,370,500,45),"LER RECORTES / ORIGEM"))OpenSchoolDocument(2);
+            ExperimentGUI.Label(new Rect(95,253,500,145),"Os recortes vieram de um acervo. Use o que você já descobriu para escolher o próximo lugar a investigar.\n\nSe precisar, consulte os serviços indicados no mural.");
             if(ExperimentGUI.Button(new Rect(95,435,500,60),"CONSULTAR MURAL DA SALA"))OpenSchoolDocument(6);
-            string[] choices={"SECRETARIA DA ESCOLA • projetos da turma","BIBLIOTECA DA INDUSTRIAL • coleção C-96","COMPANHIA ELÉTRICA • pedidos atuais"};
+            string[] choices={"SECRETARIA DA ESCOLA","BIBLIOTECA DA INDUSTRIAL","COMPANHIA ELÉTRICA"};
             for(int i=0;i<3;i++)if(SchoolCard(new Rect(655,252+i*88,545,70),choices[i],_progress.school.destination==i))ChooseSchoolDestination(i);
         }
         void DrawSchoolConclusion()

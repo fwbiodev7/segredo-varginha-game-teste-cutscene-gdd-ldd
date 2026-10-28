@@ -1,0 +1,23 @@
+{
+  "source": "output\\revisao-completa-2026-10-28\\physical-evidence-music-player-r2-native.xml",
+  "runResult": "Failed",
+  "tests": {
+    "total": 7,
+    "passed": 5,
+    "failed": 2,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.ForestCluesLeadThroughTheBridgeToOnePriestInsideTheIntactChurch",
+      "message": "Timeout value of 180000 ms was exceeded. If this is intended, increase the timeout value using a TimeoutAttribute.",
+      "stack": ""
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignMessagePlayTests.HouseKeyCarReturnAndBackpackCanBeReachedWithoutTeleporting",
+      "message": "  Physical route to (5.27, -3.56)\n  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.CampaignExpansionPlayTests+<WalkLibrary>d__12.MoveNext () [0x00052] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignExpansionPlayTests.cs:236\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    }
+  ],
+  "success": false
+}

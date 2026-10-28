@@ -1,0 +1,12 @@
+{
+  "tool": "image_gen built-in",
+  "prompt": "Use case: stylized-concept. Asset type: one square 2x2 atlas of FOUR static physical evidence props for a top-down 2D pixel-art investigation game. Input image 1 (CasaraoProps) and input image 2 (HouseEvidence) are STYLE REFERENCES only; do not copy their layout or existing modern car key. New atlas with four separate objects, one centered in each quadrant, generous fully transparent gutters and outer margins. Top-left: a large recognizable antique brass skeleton key, ornate circular bow, long shaft and two rectangular teeth, lying diagonally, NO plastic car key fob. Top-right: small worn sepia rectangular group photograph showing three indistinct late-19th-century adult figures, lying flat at a slight top-down angle, no lettering. Bottom-left: a compact cluster of a brass ring, short copper conductors, two small dark mechanical pieces, used apparatus components, no glass bottle or scientific modern screen. Bottom-right: a small weathered stone/bronze inscription plaque with one clearly recognizable anchor symbol only, no writing. Keep crisp 16-bit pixel clusters, dark brown outlines, limited muted gold/aged-paper/blue-gray palette, mild upper-left light, restrained contact shadows inside each prop. Perspective consistent with the reference top-down furniture artwork. Each prop isolated, no furniture, no ground, no scenery, no labels, no UI frames, no logos, no watermark. Background must be ACTUAL alpha transparency, not black or painted checkerboard. Square 1024x1024 composition with exactly four objects in a regular 2x2 grid.",
+  "generatedImage": "Assets/Resources/Varginha/Revision20261028/InvestigationEvidencePropsV1.png",
+  "generatorOutput": "C:/Users/Usuario/.codex/generated_images/01a1829d-43e8-7730-ba49-17929979e34c/exec-beb794f8-98ae-47a8-aa80-9f6f35378336.png",
+  "references": [
+    "Assets/Resources/Varginha/IllustratedMaps/CasaraoProps.png",
+    "Assets/Resources/Varginha/KeyInvestigation/HouseEvidence.png"
+  ],
+  "preserved": "All existing raster sources unchanged; native Sprite.Create source rectangles only. Generated prop atlas copied without pixel editing/resizing.",
+  "review": "Four static props visually inspected; actual alpha present; source rects measured from alpha>=100 with two-pixel padding per quadrant. Not tested in Unity by this agent."
+}

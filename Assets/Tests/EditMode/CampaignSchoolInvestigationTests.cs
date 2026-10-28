@@ -11,7 +11,7 @@ namespace Game.Tests.EditMode
         {
             s.RecoverDocuments();for(int i=0;i<6;i++)s.Examine(i);
             if(stage>0){s.Swap(0,1);s.Swap(1,2);Assert.That(s.Submit(out _),Is.True);}
-            if(stage>1){foreach(int i in new[]{0,1,3,4,6,7})s.ToggleHighlight(i);Assert.That(s.Submit(out _),Is.True);}
+            if(stage>1){s.ChooseComparison(CampaignSchoolDocuments.UniqueEvent);Assert.That(s.Submit(out _),Is.True);}
             if(stage>2){for(int i=0;i<3;i++)s.Link(i,i);Assert.That(s.Submit(out _),Is.True);}
             if(stage>3){s.Examine(6);s.ChooseDestination(1);Assert.That(s.Submit(out _),Is.True);}
         }
@@ -45,14 +45,28 @@ namespace Game.Tests.EditMode
             var s=new CampaignSchoolInvestigation();Advance(s,2);
             s.Link(0,0);s.Link(1,2);s.Link(2,2);Assert.That(s.Submit(out _),Is.False);
             s.Link(1,-1);Assert.That(s.links,Is.EqualTo(new[]{0,-1,2}));s.Link(1,1);
-            Assert.That(s.Submit(out _),Is.True);s.ChooseDestination(1);Assert.That(s.Submit(out _),Is.False,"The mural must actually be read.");
+            Assert.That(s.Submit(out _),Is.True);
             s.Examine(6);s.ChooseDestination(0);Assert.That(s.Submit(out _),Is.False);s.ChooseDestination(1);Assert.That(s.Submit(out _),Is.True);
         }
-        [Test]public void HighlightingEveryPassageIsRejectedAndCanBeCorrected()
+        [Test]public void ComparisonAcceptsOnlyOneUniqueEventAndKeepsTheLastSelection()
         {
             var s=new CampaignSchoolInvestigation();Advance(s,1);
-            for(int i=0;i<9;i++)s.ToggleHighlight(i);Assert.That(s.Submit(out _),Is.False);
-            foreach(int i in new[]{2,5,8})s.ToggleHighlight(i);Assert.That(s.Submit(out _),Is.True);
+            Assert.That(s.Submit(out _),Is.False);
+            Assert.That(s.ChooseComparison(0),Is.True);Assert.That(s.Submit(out _),Is.False);
+            Assert.That(s.ChooseComparison(1),Is.True);Assert.That(s.comparisonChoice,Is.EqualTo(1));
+            Assert.That(s.ChooseComparison(2),Is.True);Assert.That(s.Submit(out _),Is.True);
+            Assert.That(s.ChooseComparison(0),Is.False,"A completed stage cannot be changed.");
+        }
+        [Test]public void LaterStagesDoNotRequireNewReadingsAndPreserveLegacyProgress()
+        {
+            var s=new CampaignSchoolInvestigation();s.RecoverDocuments();for(int i=0;i<3;i++)s.Examine(i);
+            s.order=new[]{0,1,2};Assert.That(s.Submit(out _),Is.True);
+            s.ChooseComparison(2);Assert.That(s.Submit(out _),Is.True);
+            for(int i=0;i<3;i++)s.Link(i,i);Assert.That(s.Submit(out _),Is.True,"Reading the displayed notes is sufficient.");
+            Assert.That(s.examined&56,Is.Zero);Assert.That(s.noticeRead,Is.False);
+            s.ChooseDestination(1);Assert.That(s.Submit(out _),Is.True,"The mural is optional context.");
+            s.comparisonMigrated=false;s.comparisonChoice=-1;s.Repair();
+            Assert.That(s.completed,Is.True);Assert.That(s.comparisonChoice,Is.EqualTo(2));
         }
         [TestCase(1)][TestCase(2)][TestCase(3)]
         public void LegacyCompletedSchoolMigratesWithoutReplayingOrChangingLaterEvidence(int version)

@@ -84,7 +84,8 @@ namespace Game.Varginha.Experiment
         private void RestoreInventory()
         {
             _player.HasBackpack = phase > 2 || _progress.boxFound || (_progress.routine & 8) != 0;
-            _player.HasFuscaKey = _player.HasResearchNotebook = phase > 2 || _progress.pagesSolved;
+            _player.HasFuscaKey = phase > 2 || _progress.pagesSolved || _progress.house.HasInitialKey;
+            _player.HasResearchNotebook = phase > 2 || _progress.pagesSolved;
             _player.HasDecodedData = phase > 2 || _progress.boxFound || (_progress.routine & 4) != 0;
             _routineItems?.Restore(_progress.routine);
             if(_progress.boxFound)GameObject.Find("Backpack_Prop")?.SetActive(false);
@@ -156,7 +157,7 @@ namespace Game.Varginha.Experiment
         {
             if (CampaignCinematics.IsTransitioning) return;
             if (!_ready) return;
-            if(_houseExitGate!=null)_houseExitGate.enabled=!_progress.CanLeaveHouse;
+            if(phase==2)RefreshKeyEvidence();
             if (VarginhaGameHUD.Instance?.IsInventoryOpen == true) return;
             if(_paused&&_settings&&VarginhaInputActions.CancelPressed&&!VarginhaInputActions.PausePressed){_settings=false;return;}
             if ((VarginhaInputActions.PausePressed || VarginhaInputActions.CancelPressed && (_paused || _dialogue!=null || _view!=View.World)))
@@ -185,12 +186,6 @@ namespace Game.Varginha.Experiment
             if (_view == View.Cutscene)
             { _cutTime += Time.unscaledDeltaTime; if (VarginhaInputBindings.WasPressedThisFrame(VarginhaInputAction.Interact)) { if (!_cutIsSpeech || _textMessage.Advance()) FinishCutscene(); } return; }
             if (IsBlocked) return;
-            if(phase==2&&_progress.house.KeyOnCounter&&!_progress.house.bagReminder)
-            {
-                var exit=_points.Find(p=>p.id=="exitclue");
-                if(exit!=null&&Vector2.Distance(_player.transform.position,exit.Position)<1.1f)
-                {HandleKeyInteraction("exitclue");return;}
-            }
             CampaignHud.For(phase).Tick(Time.unscaledDeltaTime,true,CampaignGuidance.Next(_progress,phase));
             if (Keyboard.current?.f1Key.wasPressedThisFrame == true) { OpenHints(); return; }
             if (VarginhaInputActions.InventoryPressed) { OpenBackpack(); return; }
@@ -525,7 +520,7 @@ namespace Game.Varginha.Experiment
         public void Save()
         {
             if (_progress == null || _player == null) return;
-            if(_houseExitGate!=null)_houseExitGate.enabled=!_progress.CanLeaveHouse;
+            if(phase==2)RefreshKeyEvidence();
             _progress.positionPhase = phase; _progress.x = _player.transform.position.x; _progress.y = _player.transform.position.y; CampaignStorySave.Write(_progress);
         }
         private void Menu() { Save(); Time.timeScale = 1; CampaignCinematics.Load("Menu_MisterioDeVarginha"); }

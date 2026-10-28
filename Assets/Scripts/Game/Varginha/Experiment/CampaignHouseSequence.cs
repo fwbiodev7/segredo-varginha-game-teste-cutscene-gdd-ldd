@@ -7,7 +7,7 @@ namespace Game.Varginha.Experiment
     {
         private SpriteRenderer _counterKey;
         private Vector3 _keyRest;
-        private BoxCollider2D _houseExitGate;
+        private readonly System.Collections.Generic.List<GameObject> _keyPaperTrail = new();
         private string _cinematicShot, _cinemaTitle, _cinemaCaption;
         private int _cinemaPanel;
         private float _cinemaClock;
@@ -29,7 +29,9 @@ namespace Game.Varginha.Experiment
             var layout = CampaignIllustratedMaps.Get(2);
             Vector2 Position(float x, float y, Vector2 fallback) => layout != null ? layout.Position(x,y) + Vector2.up*.58f : fallback;
             // These are walkable approach points, independent from the tabletop artwork.
-            AddEvidencePoint("counter", "MESA DO CAFÉ • CHAVE DO FUSCA", Position(749,600,new Vector2(4.6f,-2.05f)));
+            // Leave room beneath the table: the former point snapped into its
+            // solid footprint on the navigation grid, making the key route fail.
+            AddEvidencePoint("counter", "MESA DO CAFÉ • CHAVE DO FUSCA", Position(749,620,new Vector2(4.6f,-2.05f)));
             AddEvidencePoint("exitclue", "SAÍDA • PORTA DA SALA", Position(894,424,new Vector2(8,0)));
             AddEvidencePoint("paperclue", "PAPEL PRESO JUNTO AO QUARTO", Position(407,325,new Vector2(-1,1)));
             foreach(var objective in _guidancePlan.points)
@@ -42,8 +44,9 @@ namespace Game.Varginha.Experiment
             key.transform.localScale = Vector3.one * .9f; _counterKey.sortingOrder = 30;
             var support=GameObject.Find("Mapa_Campanha/02_Mobilia_Colisoes/CoffeeTable_Kitchen")??GameObject.Find("CoffeeTable_Kitchen");
             VarginhaWorldDepth.Ensure(_counterKey,supportingObject:support!=null?support.transform:null,offset:2);
-            _counterKey.enabled = _progress.house.KeyOnCounter;
+            _counterKey.enabled = _progress.house.KeyVisibleOnTable(_progress.routine);
             var paper = new GameObject("Vestigio_Papel_Quarto"); paper.transform.SetParent(transform);
+            _keyPaperTrail.Add(paper);
             paper.transform.position = (Vector3)(Position(407,325,new Vector2(-1,1)) - Vector2.up*.5f);
             var scrap=paper.AddComponent<SpriteRenderer>();
             scrap.sprite=CampaignHouseArt.Frame(2);
@@ -60,20 +63,21 @@ namespace Game.Varginha.Experiment
                     // Keep every scrap in world scale: inheriting the main clue's
                     // scale made the trail tiny and visually merge into one mark.
                     var piece=new GameObject("Papel_Rastro_"+i);piece.transform.SetParent(transform);
+                    _keyPaperTrail.Add(piece);
                     piece.transform.position=layout.Position(trail[i].x,trail[i].y);
                     piece.transform.localScale=Vector3.one*scales[i];
                     piece.transform.rotation=Quaternion.Euler(0,0,rotations[i]);
                     var art=piece.AddComponent<SpriteRenderer>();art.sprite=scrap.sprite;art.sortingOrder=5+i;VarginhaWorldDepth.Ensure(art);
                 }
             }
-            paper.SetActive(_progress.house.Missing);
-            var gate=new GameObject("Porta_Saida_Condicional");gate.transform.SetParent(transform);
-            var area=layout!=null?layout.Area(new[]{929f,312f,30f,173f}):new Rect(8.8f,-1.4f,.4f,2.8f);
-            gate.transform.position=area.center;_houseExitGate=gate.AddComponent<BoxCollider2D>();_houseExitGate.size=area.size;
-            _houseExitGate.enabled=!_progress.CanLeaveHouse;
-            // A legacy save in the yard must retain access to its unfinished investigation.
-            if(_houseExitGate.enabled&&_player.transform.position.x>area.xMin)
-                _player.transform.position=Position(894,424,new Vector2(8,0));
+            RefreshKeyEvidence();
+        }
+        private void RefreshKeyEvidence()
+        {
+            if(_busy)return;
+            if(_counterKey!=null)_counterKey.enabled=_progress.house.KeyVisibleOnTable(_progress.routine);
+            bool showPaper=_progress.house.Missing&&!_progress.house.Complete;
+            foreach(var piece in _keyPaperTrail)if(piece!=null&&piece.activeSelf!=showPaper)piece.SetActive(showPaper);
         }
         private void AddEvidencePoint(string id, string label, Vector2 position)
         {
@@ -90,13 +94,21 @@ namespace Game.Varginha.Experiment
         private bool HandleKeyInteraction(string id)
         {
             var h = _progress.house;
+            if(id=="car"&&!h.Complete)
+            {
+                if(h.RememberBag()){Save();Say("Edelzio","Opa, a mochila! Ficou no quarto. Vou voltar pra buscar.");}
+                else CampaignPickupNotice.Show(h.Objective(_progress.routine));
+                return true;
+            }
             if (id == "counter")
             {
                 if (h.step == 0)
                 {
                     if ((_progress.routine & 7) != 7) CampaignPickupNotice.Show(h.Objective(_progress.routine));
-                    else StartCoroutine(PlaceKey());
+                    else if(h.TakeInitialKey(_progress.routine)){RestoreInventory();RefreshKeyEvidence();Save();Say("Edelzio","Chave no bolso. Bora pro Fusca.");}
                 }
+                else if(h.State==CampaignHouseState.ReturningForBag)StartCoroutine(PlaceKey());
+                else if(h.State==CampaignHouseState.KeyInPocket)CampaignPickupNotice.Show(h.Objective(_progress.routine));
                 else if (h.KeyOnCounter) Say("Edelzio","A chave tá aqui. Só falta a mochila.");
                 else if (!h.Complete) ObserveKeyClue(0,"Ué... cadê a chave? Nem no chão ela tá.");
                 else Say("Edelzio","Dessa vez, essa chave fica comigo.");
@@ -104,8 +116,7 @@ namespace Game.Varginha.Experiment
             }
             if(id=="exitclue"&&!h.Missing)
             {
-                if(h.RememberBag()){Save();Say("Edelzio","Opa, a mochila! Ficou no quarto. Melhor pegar antes de sair.");}
-                else CampaignPickupNotice.Show(h.Objective(_progress.routine));
+                CampaignPickupNotice.Show(h.Objective(_progress.routine));
                 return true;
             }
             if(id=="exitclue"&&h.Complete){CampaignPickupNotice.Show("Tudo guardado. Pode seguir até o Fusca.");return true;}
@@ -117,7 +128,7 @@ namespace Game.Varginha.Experiment
                     : "Tem uns pedacinhos de papel pelo chão... continuam até debaixo da cama.");
                 return true;
             }
-            if (id == "bag" && (h.step == 0 || h.KeyOnCounter&&!h.bagReminder)) { CampaignPickupNotice.Show(h.Objective(_progress.routine)); return true; }
+            if (id == "bag" && !h.KeyOnCounter&&!h.Missing) { CampaignPickupNotice.Show(h.Objective(_progress.routine)); return true; }
             if (id == "box" && h.CanOpenBox && !_progress.boxFound) { StartCoroutine(OpenKeyBox()); return true; }
             if (id == "box" && !h.CanOpenBox)
             {
@@ -157,7 +168,7 @@ namespace Game.Varginha.Experiment
             for (float t=0;t<.75f&&!_cinemaSkipRequested;t+=Time.deltaTime)
             {float p=Mathf.SmoothStep(0,1,t/.75f);_counterKey.transform.position=Vector3.Lerp(hand,_keyRest,p)+Vector3.up*Mathf.Sin(p*Mathf.PI)*.13f; yield return null; }
             _counterKey.transform.position = _keyRest; _counterKey.sprite=CampaignHouseArt.Frame(0); _sound.PlayAt("Key",_keyRest);
-            _progress.house.PlaceKey(_progress.routine); Save();
+            _progress.house.PlaceKey(_progress.routine); RestoreInventory(); Save();
             yield return MissionWait(1.65f);
             while(action!=null&&action.IsActing)yield return null;
             CompleteMissionEvent();EndMissionShot(); _busy = false; Lock();
@@ -166,7 +177,7 @@ namespace Game.Varginha.Experiment
         {
             // Commit while the player is in the bedroom: reloading cannot duplicate the key.
             BeginMissionEvent(2);_progress.house.TakeBag(); _counterKey.enabled = false; Save();
-            transform.Find("Vestigio_Papel_Quarto")?.gameObject.SetActive(true);
+            foreach(var piece in _keyPaperTrail)if(piece!=null)piece.SetActive(true);
             BeginMissionShot("world","UM RUÍDO FORA DO QUARTO","[Um toque metálico na cozinha. Depois, papel raspando.]");
             _sound.PlayAt("Key",_keyRest); yield return MissionWait(.6f);
             CampaignCameraDirector.Reveal(_keyRest,2.8f);
@@ -186,16 +197,25 @@ namespace Game.Varginha.Experiment
             yield return MissionWait(1.6f);CompleteMissionEvent();EndMissionShot();_busy=false;
             Cutscene("EU SEI QUE VI ALGUMA COISA", "A chave está na caixa. Ao lado, o caderno de 1996, três recortes de jornal e minhas anotações de criança.\nGuardei os documentos no caderno. Eu sei que vi alguma coisa.\nO desenho foi rasgado. Há tinta recente sobre os pedaços.",View.Pages);
         }
+        CampaignSchoolMusicCar _schoolMusicCar;
         private void BeginMissionShot(string shot,string title,string caption,int panel=0)
-        { _cinematicShot=shot; _cinemaTitle=title; _cinemaCaption=caption; _cinemaPanel=panel; _cinemaClock=Time.time; }
-        private void EndMissionShot() { _cinematicShot=null; _sound.CinematicDucking(0); }
+        {
+            _schoolMusicCar?.Stop();
+            _cinematicShot=shot; _cinemaTitle=title; _cinemaCaption=caption; _cinemaPanel=panel; _cinemaClock=Time.time;
+            if(shot=="arrival"&&!_cinemaSkipRequested)
+            {
+                if(_schoolMusicCar==null){var car=new GameObject("Carro_passando_O_Edelzio");car.transform.SetParent(transform,false);_schoolMusicCar=car.AddComponent<CampaignSchoolMusicCar>();}
+                _schoolMusicCar.Begin();
+            }
+        }
+        private void EndMissionShot() { _schoolMusicCar?.Stop();_cinematicShot=null; _sound.CinematicDucking(0); }
         private IEnumerator FuscaSequence()
         {
             _schoolTransition=_busy=true;_textMessage.Close();_dialogue=null;Lock();BeginMissionEvent(8);
             var visuals=_player.GetComponentsInChildren<Renderer>(true);
             var visibility=new bool[visuals.Length];for(int i=0;i<visuals.Length;i++)visibility[i]=visuals[i].enabled;
             var body=_player.GetComponent<Rigidbody2D>();bool simulated=body!=null&&body.simulated;
-            bool complete=false;FuscaDoorMotion door=null;
+            bool complete=false;
             try
             {
                 BeginMissionShot("world","O CAMINHO DA INDUSTRIAL","Chave no bolso. Mochila pronta. Ainda é possível chegar à aula.");
@@ -203,15 +223,11 @@ namespace Game.Varginha.Experiment
                 if(car!=null&&car.TryGetComponent<SpriteRenderer>(out var renderer))
                 {
                     CampaignCameraDirector.Reveal(car.transform.position,4);
-                    door=car.GetComponent<FuscaDoorMotion>()??car.AddComponent<FuscaDoorMotion>();
+                    car.GetComponent<FuscaDoorMotion>()?.SetOpenAmount(0);
                     if(body!=null){body.linearVelocity=Vector2.zero;body.simulated=false;}
-                    Vector3 start=_player.transform.position;_sound.Play("DoorOpen");
-                    for(float t=0;t<.7f&&!_cinemaSkipRequested;t+=Time.deltaTime)
-                    {door.SetOpenAmount(t/.7f);_player.transform.position=Vector3.Lerp(start,door.EntryPosition,Mathf.SmoothStep(0,1,t/.7f));yield return null;}
                     _player.SetCarriedItemsVisible(false);
                     foreach(var visual in visuals)visual.enabled=false;
-                    for(float t=0;t<.4f&&!_cinemaSkipRequested;t+=Time.deltaTime){door.SetOpenAmount(1-t/.4f);yield return null;}
-                    door.SetOpenAmount(0);_sound.Play("DoorClose");_sound.Play("Starter");
+                    _sound.Play("Starter");
                     var departure=car.GetComponent<FuscaDepartureAnimation>()??car.AddComponent<FuscaDepartureAnimation>();
                     departure.Configure(new[]{renderer.sprite});departure.Depart(null,1.3f);
                     yield return MissionWait(1.5f);
@@ -241,7 +257,6 @@ namespace Game.Varginha.Experiment
             }
             finally
             {
-                if(door!=null)door.SetOpenAmount(0);
                 if(body!=null){body.simulated=simulated;body.linearVelocity=Vector2.zero;}
                 for(int i=0;i<visuals.Length;i++)if(visuals[i]!=null)visuals[i].enabled=visibility[i];
                 if(_player!=null){_player.SetCarriedItemsVisible(true);RestoreInventory();}

@@ -8,6 +8,18 @@ namespace Game.Tests.EditMode
 {
     public class CampaignPuzzleDesignTests
     {
+        [Test] public void ArchiveAttemptsShuffleRowsWhileStableIdsAndSavedSelectionsKeepTheirMeaning()
+        {
+            var state=new CampaignPuzzleProgress{archiveMarks=1};state.EnsureArchiveOrder(false,new System.Random(17));
+            var first=(int[])state.archiveOrder.Clone();
+            Assert.That(state.EnsureArchiveOrder(),Is.False,"Reopening preserves the attempt.");
+            var restored=JsonUtility.FromJson<CampaignPuzzleProgress>(JsonUtility.ToJson(state));restored.Repair(new CampaignContinuationState());
+            Assert.That(restored.archiveOrder,Is.EqualTo(first));Assert.That(restored.archiveMarks,Is.EqualTo(1));
+            Assert.That(restored.EnsureArchiveOrder(true,new System.Random(17)),Is.True);
+            Assert.That(restored.archiveOrder,Is.Not.EqualTo(first));Assert.That(restored.archiveAttempt,Is.EqualTo(1));
+            var unique=new HashSet<int>(restored.archiveOrder);Assert.That(unique.SetEquals(new[]{0,1,2,3,4,5}),Is.True);
+            Assert.That(restored.archiveMarks,Is.EqualTo(1),"The lateral-access ID stays selected regardless of its row.");
+        }
         [Test] [Category("HudPuzzles")] public void AlteredArchiveRejectsTheOldFirstChoiceAndUnchangedDetails()
         {
             Assert.That(CampaignPuzzleDesign.Correct(11,0,null),Is.False);

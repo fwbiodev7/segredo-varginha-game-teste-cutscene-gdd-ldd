@@ -1,0 +1,14 @@
+{
+  "church_scale": 1.3,
+  "door": [
+    1334,
+    522
+  ],
+  "sign2": [
+    1205,
+    535
+  ],
+  "door_clear_against_authored_rectangles": true,
+  "sign2_clear_against_authored_rectangles": true,
+  "scope": "static rectangle sanity only; physical Player QA pending"
+}

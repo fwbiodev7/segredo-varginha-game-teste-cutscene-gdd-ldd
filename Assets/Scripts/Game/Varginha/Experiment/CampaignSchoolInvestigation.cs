@@ -21,7 +21,9 @@ namespace Game.Varginha.Experiment
             "Contei três batidas no portão. Escrevi aqui para não esquecer quantas foram.",
             "Desenhei a árvore que fica ao lado do córrego. Guardei uma cópia junto dos recortes." };
         public const string Source = "Origem: coleção C-96 • Acervo de História Local. Cópia para consulta; o original permanece no acervo.";
-        public const string Notice = "CONSULTA A DOCUMENTOS\nColeção C-96 / Acervo de História Local → Biblioteca da Industrial, setor de memória local.\nProjetos escolares / notas da turma → Secretaria da escola.\nManutenção de energia / pedidos atuais → Atendimento da companhia elétrica.\nLeve a referência da coleção para consultar os originais.";
+        public const string Notice = "SERVIÇOS DE CONSULTA\nBiblioteca da Industrial: acervos de história local e originais de jornais.\nSecretaria da escola: projetos escolares e notas da turma.\nCompanhia elétrica: manutenção da rede e pedidos atuais.\nPara pesquisar um documento, leve sua referência de origem.";
+        public static readonly string[] ComparisonChoices={"O local: Rua das Acácias.","A descrição de um clarão azul.","Três batidas ouvidas no portão."};
+        public const int UniqueEvent=2;
         public static string Text(int id)
         {
             if(id<0||id>=Titles.Length)return "";
@@ -35,6 +37,8 @@ namespace Game.Varginha.Experiment
     {
         public bool documentsRecovered, noticeRead, completed;
         public int examined, stage, highlights, hintLevel, destination=-1, selectedDocument;
+        public int comparisonChoice=-1;
+        public bool comparisonMigrated;
         public int[] order={2,0,1}, links={-1,-1,-1};
         // Display rows are separate from document IDs: saved associations retain their meaning.
         public int[] noteOrder, passageOrder;
@@ -76,9 +80,11 @@ namespace Game.Varginha.Experiment
         }
         public bool ToggleHighlight(int passage)
         {
-            if(!documentsRecovered||stage!=1||passage<0||passage>8)return false;
-            highlights^=1<<passage;return true;
+            // Old save bits are retained for migration; the revised puzzle uses one answer.
+            return false;
         }
+        public bool ChooseComparison(int value)
+        {if(!documentsRecovered||stage!=1||value<0||value>=CampaignSchoolDocuments.ComparisonChoices.Length)return false;comparisonChoice=value;return true;}
         public bool Link(int note,int passage)
         {
             if(!documentsRecovered||stage!=2||note<0||note>2||passage< -1||passage>2)return false;
@@ -98,29 +104,28 @@ namespace Game.Varginha.Experiment
                     if(!CampaignStory.Sequence(order,new[]{0,1,2})){feedback="Compare dia, mês e ano. Coloque o recorte mais antigo à esquerda.";return false;}
                     break;
                 case 1:
-                    if(highlights!=219){feedback="Marque apenas os fatos que aparecem em mais de um recorte. Confira também se faltou destacar alguma repetição.";return false;}
+                    if(comparisonChoice!=CampaignSchoolDocuments.UniqueEvent){feedback="Lembre os fatos presentes nos três registros e procure o acontecimento mencionado em apenas um deles.";return false;}
+                    highlights=219;comparisonMigrated=true;
                     break;
                 case 2:
-                    if((examined&56)!=56){feedback="Leia as três anotações antes de comparar os relatos.";return false;}
                     if(!CampaignStory.Sequence(links,new[]{0,1,2})){feedback="Compare cada lembrança com o trecho que descreve o mesmo fato. Você pode corrigir ou desfazer uma ligação.";return false;}
                     break;
                 case 3:
-                    if(!noticeRead){feedback="Consulte o mural: ele relaciona as coleções aos locais de consulta.";return false;}
-                    if(destination!=1){feedback="Compare a origem C-96 no rodapé dos recortes com a referência de coleção no mural.";return false;}
+                    if(destination!=1){feedback="Pense no tipo de acervo que conserva os originais. O mural pode ajudar a comparar os serviços de consulta.";return false;}
                     completed=true;break;
                 default:return false;
             }
             stage++;hintLevel=0;feedback=completed?"INVESTIGAR O ACERVO DA BIBLIOTECA":"Relação registrada. Continue a análise.";return true;
         }
         public string Objective => completed?"Investigar o acervo da biblioteca. Retome a mesa para partir.":
-            new[]{"Na mesa do professor, organize seus recortes pelas datas.","Compare os recortes e destaque os fatos que se repetem.","Ligue cada anotação infantil ao trecho que a sustenta.","Compare a origem dos recortes com o mural e decida onde consultar os originais."}[Mathf.Clamp(stage,0,3)];
+            new[]{"Na mesa do professor, organize seus recortes pelas datas.","Lembre os recortes e identifique o acontecimento que não se repetiu.","Ligue cada anotação infantil ao trecho que a sustenta.","Decida onde consultar os originais; o mural pode ajudar."}[Mathf.Clamp(stage,0,3)];
         public string Hint(int level)
         {
             string[][] tips={
                 new[]{"O cabeçalho traz a data completa.","Compare o dia: os três recortes são de janeiro de 1996.","A ordem é 14/01 → 20/01 → 26/01. Abra cada recorte e troque os cartões."},
-                new[]{"Repetição exige o mesmo fato em mais de um documento.","Compare local e descrição da luz; os outros detalhes são diferentes.","Destaque Rua das Acácias e clarão azul nos três recortes. Deixe os detalhes únicos sem destaque."},
+                new[]{"Relembre o que os três relatos tinham em comum.","O mesmo local e a mesma luz aparecem mais de uma vez.","As três batidas no portão aparecem em apenas um dos recortes."},
                 new[]{"A lembrança e o jornal descrevem o mesmo acontecimento.","Compare poste/horário, número de batidas e posição da árvore.","Poste → falha de energia; portão → três batidas; árvore → desenho junto ao córrego."},
-                new[]{"O rodapé registra a origem, não apenas o assunto da notícia.","Procure C-96 tanto no rodapé quanto no mural.","A coleção C-96 fica na Biblioteca da Industrial, no setor de memória local."}};
+                new[]{"O tipo de acervo importa mais que o assunto da notícia.","Onde se conservam registros de história local e jornais antigos?", "A Biblioteca da Industrial guarda esse acervo."}};
             return completed?"A referência da coleção ficou registrada no caderno. Siga para a biblioteca.":tips[Mathf.Clamp(stage,0,3)][Mathf.Clamp(level,0,2)];
         }
         public void Repair()
@@ -131,11 +136,17 @@ namespace Game.Varginha.Experiment
             if(links==null||links.Length!=3)links=new[]{-1,-1,-1};
             for(int i=0;i<3;i++)links[i]=Mathf.Clamp(links[i],-1,2);
             destination=Mathf.Clamp(destination,-1,2);
-            if(!documentsRecovered){stage=0;completed=false;examined&=64;highlights=0;links=new[]{-1,-1,-1};}
+            comparisonChoice=Mathf.Clamp(comparisonChoice,-1,2);
+            if(!comparisonMigrated)
+            {
+                if(stage>=2&&highlights==219)comparisonChoice=CampaignSchoolDocuments.UniqueEvent;
+                comparisonMigrated=true;
+            }
+            if(!documentsRecovered){stage=0;completed=false;examined&=64;highlights=0;comparisonChoice=-1;links=new[]{-1,-1,-1};}
             // Reconstruct the highest stage supported by its evidence. Corrupt saves cannot skip steps.
             int valid=0;
             if(documentsRecovered&&(examined&7)==7&&CampaignStory.Sequence(order,new[]{0,1,2}))
-            {valid=1;if(highlights==219){valid=2;if((examined&56)==56&&CampaignStory.Sequence(links,new[]{0,1,2})){valid=3;if(noticeRead&&destination==1)valid=4;}}}
+            {valid=1;if(comparisonChoice==CampaignSchoolDocuments.UniqueEvent){valid=2;if(CampaignStory.Sequence(links,new[]{0,1,2})){valid=3;if(destination==1)valid=4;}}}
             if(completed&&valid==4&&stage>=4)stage=4;
             else{stage=Mathf.Clamp(stage,0,Mathf.Min(valid,3));completed=false;}
         }
@@ -144,6 +155,7 @@ namespace Game.Varginha.Experiment
             EnsureLinkLayout();
             documentsRecovered=noticeRead=completed=true;examined=127;stage=4;
             order=new[]{0,1,2};highlights=219;links=new[]{0,1,2};destination=1;
+            comparisonChoice=CampaignSchoolDocuments.UniqueEvent;comparisonMigrated=true;
         }
         static bool Permutation(int[] a)=>a[0]>=0&&a[0]<3&&a[1]>=0&&a[1]<3&&a[2]>=0&&a[2]<3&&a[0]!=a[1]&&a[1]!=a[2]&&a[0]!=a[2];
     }

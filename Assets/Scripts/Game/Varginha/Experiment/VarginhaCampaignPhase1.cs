@@ -14,6 +14,7 @@ namespace Game.Varginha.Experiment
     {
         public int version = 1, evidence;
         public bool openingSeen, powerFailed, complete,headHit,memoryLost;
+        public bool lightNoticed;
         public float x = 6.15f, y = 2.8f;
     }
     public static class CampaignMemorySave
@@ -102,6 +103,7 @@ namespace Game.Varginha.Experiment
             _preFlashGlow=glow.AddComponent<CampaignPreFlashGlow>();
             _player = FindAnyObjectByType<EdelzioTopDownController>();
             if (_player == null) throw new InvalidOperationException("Mapa da casa sem controlador do jogador.");
+            _preFlashGlow.Configure(_player);
             QuietHouse();
             _player.HasBackpack = _player.HasResearchNotebook = _player.HasFuscaKey = false;
             _player.SetCombatLocked(false); _player.CanDodge = false;
@@ -238,6 +240,8 @@ namespace Game.Varginha.Experiment
                 {
                     int closest = NearestEvidence(); if (closest >= 0) Examine(closest);
                 }
+                if(_memory.powerFailed&&!_memory.lightNoticed&&_player.transform.position.x>10.2f)
+                {_memory.lightNoticed=true;_lightReactionUntil=Time.time+3.2f;Save();}
                 if (_memory.powerFailed && _player.transform.position.x > 13.5f) SetStage(Stage.Encounter);
                 _saveTime += Time.deltaTime; if (_saveTime > 5) { _saveTime = 0; Save(); }
             }
@@ -286,6 +290,7 @@ namespace Game.Varginha.Experiment
         }
         private readonly CampaignMessagePresentation _textMessage = new();
         private readonly CampaignTimedSubtitle _openingSubtitle = new();
+        private float _lightReactionUntil;
         private void CloseDialogue() { _textMessage.Close(); _dialogue = null; _player.SetInputLocked(_paused || _stage != Stage.Explore); }
         public void TogglePause()
         {
@@ -340,6 +345,8 @@ namespace Game.Varginha.Experiment
                     int nearby = NearestEvidence();
                     ExperimentGUI.ContextPrompt(nearby<0?null:"["+VarginhaInputActions.InteractLabel+"] "+_names[nearby],VarginhaInputActions.MoveLabel+" • ANDAR    "+VarginhaInputActions.InteractLabel+" • EXAMINAR",CampaignHud.For(1));
                 }
+                if(settings.subtitles&&!_paused&&Time.time<_lightReactionUntil)
+                    ExperimentGUI.Caption(new Rect(265,610,750,58),"Edelzio: Ué... que luz é aquela?",settings.subtitleSize);
             }
             else if (_stage == Stage.Encounter)
             {

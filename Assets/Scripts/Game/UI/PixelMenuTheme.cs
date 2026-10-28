@@ -7,8 +7,8 @@ namespace Game.UI
     {
         public static readonly Color Background = new(.042f, .056f, .068f, .97f);
         public static readonly Color Border = new(.28f, .40f, .44f, .98f);
-        public static readonly Color Paper = new(.92f, .91f, .82f);
-        public static readonly Color Muted = new(.64f, .73f, .75f);
+        public static readonly Color Paper = new(.86f, .87f, .88f);
+        public static readonly Color Muted = new(.65f, .67f, .69f);
         private static GUIStyle _text;
 
         public static void Panel(Rect rect) => PixelHUDFrame.Draw(rect, Texture2D.whiteTexture, Background, Border);

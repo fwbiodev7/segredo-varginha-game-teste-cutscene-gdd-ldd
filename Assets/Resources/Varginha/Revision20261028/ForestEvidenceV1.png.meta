@@ -1,0 +1,140 @@
+fileFormatVersion: 2
+guid: f884186749a44bbe98e82f0ddc888c8b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: sign0_bark
+  - first:
+      213: 21300002
+    second: sign1_tracks
+  - first:
+      213: 21300004
+    second: sign2_residue
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+  isReadable: 0
+  streamingMipmaps: 0
+  textureFormat: 1
+  maxTextureSize: 4096
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 0
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  spriteMode: 2
+  spriteExtrude: 0
+  spriteMeshType: 1
+  spriteGenerateFallbackPhysicsShape: 0
+  spritePixelsToUnits: 384
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  textureShape: 1
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 100
+    crunchedCompression: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sign0_bark
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 724
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0133cfaec6814afb83c3adbc5b5943e1
+      internalID: 21300000
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign1_tracks
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 0
+        width: 724
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fe6b7711233416ba7317f178def4532
+      internalID: 21300002
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sign2_residue
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 0
+        width: 724
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData:
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39cda90ea2bd45bcb045a76c06f54728
+      internalID: 21300004
+      vertices: []
+      indices:
+      edges: []
+      weights: []
+    outline: []
+    customData:
+    physicsShape: []
+    bones: []
+    spriteID:
+    internalID: 0
+    vertices: []
+    indices:
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sign0_bark: 21300000
+      sign1_tracks: 21300002
+      sign2_residue: 21300004
+  userData: Three static forest clues generated with image_gen 2026-10-28. See ForestEvidenceV1.json and artes-mata provenance.
+  assetBundleName:
+  assetBundleVariant:

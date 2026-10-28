@@ -73,6 +73,11 @@ namespace Game.Tests.PlayMode
         IEnumerator CompleteWithUI(bool keys)
         {
             _keys=keys;yield return LoadSchool(true);var stage=VarginhaCampaignStage.Active;
+            if(!Application.isEditor)
+            {
+                Directory.CreateDirectory(CinemaQaEvidence.Folder);
+                File.Copy(CampaignStorySave.Path,Path.Combine(CinemaQaEvidence.Folder,"school-mouse-start.json"),true);
+            }
             stage.Interact("notebook");Assert.That(stage.SchoolInvestigationOpen,Is.True);Assert.That(stage.Progress.renanMet,Is.False);
             yield return Capture("01-chronology");Assert.That(stage.SubmitSchoolStep(),Is.False);
             yield return Click(new Rect(473,416,329,36));Assert.That(stage.SchoolDocumentOpen,Is.True);yield return Capture("document");
@@ -82,10 +87,9 @@ namespace Game.Tests.PlayMode
             yield return Click(new Rect(93,465,329,36));yield return Click(new Rect(473,465,329,36));
             yield return Click(new Rect(473,465,329,36));yield return Click(new Rect(853,465,329,36));
             yield return Click(new Rect(910,610,290,42));Assert.That(stage.Progress.school.stage,Is.EqualTo(1));
-            // Wrong unique detail, then remove it; all other marks persist.
-            yield return Click(new Rect(89,449,337,54));Assert.That(stage.SubmitSchoolStep(),Is.False);
-            yield return Click(new Rect(89,449,337,54));
-            for(int i=0;i<3;i++)for(int j=0;j<2;j++)yield return Click(new Rect(89+i*380,325+j*62,337,54));
+            Assert.That(stage.OpenSchoolDocument(0),Is.False,"Comparison is a memory question, without a document reader.");
+            yield return Click(new Rect(155,285,970,62));Assert.That(stage.SubmitSchoolStep(),Is.False);
+            yield return Click(new Rect(155,437,970,62));Assert.That(stage.Progress.school.comparisonChoice,Is.EqualTo(2));
             yield return Capture("02-patterns");yield return Click(new Rect(910,610,290,42));Assert.That(stage.Progress.school.stage,Is.EqualTo(2));
             yield return Capture("03-shuffled-empty");
             var school=stage.Progress.school;
@@ -105,6 +109,7 @@ namespace Game.Tests.PlayMode
             yield return Click(new Rect(75,237+undoRow*97,390,80));yield return Click(new Rect(755,237+targetRow*97,445,80));
             yield return Capture("03-crossing");
             yield return Click(new Rect(910,610,290,42));Assert.That(stage.Progress.school.stage,Is.EqualTo(3));
+            Assert.That(stage.OpenSchoolDocument(2),Is.False,"Conclude must not reopen the recortes or reveal their origin.");
             yield return Click(new Rect(95,435,500,60));Assert.That(stage.Progress.school.noticeRead,Is.True);yield return Capture("notice");
             yield return Click(new Rect(155,570,300,45));yield return Click(new Rect(655,340,545,70));
             yield return Capture("04-origin");yield return Click(new Rect(910,610,290,42));Assert.That(stage.Progress.school.completed,Is.True);
@@ -123,7 +128,7 @@ namespace Game.Tests.PlayMode
             yield return LoadSchool(true);var stage=VarginhaCampaignStage.Active;stage.Interact("notebook");
             for(int i=0;i<6;i++){stage.OpenSchoolDocument(i);stage.CloseSchoolDocument();}
             stage.SwapSchoolDocuments(0,1);stage.SwapSchoolDocuments(1,2);Assert.That(stage.SubmitSchoolStep(),Is.True);
-            foreach(int i in new[]{0,1,3,4,6,7})stage.HighlightSchoolPassage(i);Assert.That(stage.SubmitSchoolStep(),Is.True);
+            stage.ChooseSchoolComparison(2);Assert.That(stage.SubmitSchoolStep(),Is.True);
             stage.LinkSchoolNote(0,0);stage.LinkSchoolNote(1,2);
             int[] leftBefore=(int[])stage.Progress.school.noteOrder.Clone(),rightBefore=(int[])stage.Progress.school.passageOrder.Clone();
             yield return Click(new Rect(290,610,195,42));yield return Click(new Rect(650,475,475,45));

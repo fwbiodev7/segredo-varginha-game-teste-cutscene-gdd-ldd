@@ -28,9 +28,16 @@ namespace Game.Varginha
             Game.Managers.GameManager.Instance?.ReturnToMenu();
             _resumeAvailable = Experiment.CampaignStorySave.Exists;
             _resumePhase = _resumeAvailable ? Experiment.CampaignStorySave.Load().phase : 1;
+            _menuCaption = MenuCaptionRotation.EnterMenu();
+            _wasShowingPanel = false;
         }
         private void OnDisable() { IsOpen = false; if(Active==this)Active=null; }
-        private void OnDestroy() { if (pixel != null) Destroy(pixel); }
+        private void OnDestroy()
+        {
+            if (pixel != null) Destroy(pixel);
+            if (_logoFrame != null) { _logoFrame.Release(); Destroy(_logoFrame); }
+            if (_logoMaterial != null) Destroy(_logoMaterial);
+        }
 
         private enum Panel { None, Play, Settings, Controls, Credits, Difficulty, Keybinds }
         private Panel panel;
@@ -41,6 +48,11 @@ namespace Game.Varginha
         private Key _padBinding=Key.E;
         private int _rebindArmedFrame = -1;
         private Texture2D pixel;
+        private Texture2D _logo;
+        private RenderTexture _logoFrame;
+        private Material _logoMaterial;
+        private string _menuCaption;
+        private bool _wasShowingPanel;
         private GUIStyle titleStyle;
         private GUIStyle subtitleStyle;
         private GUIStyle buttonStyle;
@@ -67,6 +79,16 @@ namespace Game.Varginha
             pixel = new Texture2D(1, 1);
             pixel.SetPixel(0, 0, Color.white);
             pixel.Apply();
+            _logo = Resources.Load<Texture2D>("Varginha/MenuLogoOizlede");
+            var logoShader = Resources.Load<Shader>("Varginha/MenuLogoGrade");
+            if (_logo != null && logoShader != null && logoShader.isSupported)
+            {
+                _logoMaterial = new Material(logoShader) { hideFlags = HideFlags.DontSave };
+                _logoFrame = new RenderTexture(_logo.width, _logo.height, 0, RenderTextureFormat.ARGB32)
+                    { filterMode = FilterMode.Point, wrapMode = TextureWrapMode.Clamp, name = "Menu logo — muted night colors" };
+                _logoFrame.Create();
+                Graphics.Blit(_logo, _logoFrame, _logoMaterial);
+            }
             _atmosphere=GetComponent<MenuCinematicAtmosphere>()??gameObject.AddComponent<MenuCinematicAtmosphere>();
         }
         private void Update()
@@ -93,6 +115,7 @@ namespace Game.Varginha
 
             if (panel != Panel.None)
             {
+                _wasShowingPanel = true;
                 if (panel == Panel.Play) DrawCampaignSelection();
                 else if (panel == Panel.Settings)
                 {
@@ -104,13 +127,35 @@ namespace Game.Varginha
                 return;
             }
 
+            if (_wasShowingPanel)
+            {
+                _menuCaption = MenuCaptionRotation.EnterMenu();
+                _wasShowingPanel = false;
+            }
             var previous = Experiment.ExperimentGUI.BeginCanvas();
             PixelMenuTheme.Label(new Rect(72, 94, 490, 24), "96.4 MHz • VARGINHA / MG", 10, PixelMenuTheme.Muted);
             PixelMenuTheme.Separator(new Rect(72, 133, 96, 3));
             float titleShift=_atmosphere.TitleGlitch?1:0;
-            PixelMenuTheme.Label(new Rect(72+titleShift, 164, 530, 49), "O SEGREDO", 38, PixelMenuTheme.Paper);
-            PixelMenuTheme.Label(new Rect(72-titleShift, 220, 530, 49), "DE VARGINHA", 38, PixelMenuTheme.Paper);
-            PixelMenuTheme.Label(new Rect(72, 285, 500, 23), "1996 / 2026 • UMA LEMBRANÇA INCOMPLETA", 9, PixelMenuTheme.Muted);
+            if (_logo != null)
+            {
+                // Match the button column; grade colors without changing the source image.
+                // The received 724px image's brand ends at row 576. Its case footer stays
+                // in the original asset but is outside this presentation crop.
+                const float brandFraction = 576f / 724f;
+                var beforeLogo = GUI.color;
+                GUI.color = _logoFrame != null ? new Color(1, 1, 1, .95f) : new Color(.70f, .81f, .84f, .92f);
+                float brandHeight = Mathf.Round(470f * _logo.height / _logo.width * brandFraction);
+                GUI.DrawTextureWithTexCoords(new Rect(72+titleShift, 155, 470, brandHeight),
+                    _logoFrame != null ? (Texture)_logoFrame : _logo, new Rect(0, 1-brandFraction, 1, brandFraction), true);
+                GUI.color = beforeLogo;
+            }
+            else
+            {
+                PixelMenuTheme.Label(new Rect(72+titleShift, 164, 530, 49), "OIZLEDE", 38, PixelMenuTheme.Paper);
+                PixelMenuTheme.Label(new Rect(72-titleShift, 220, 530, 49), "FRAGMENTO PERDIDO", 22, PixelMenuTheme.Paper);
+            }
+            PixelMenuTheme.Label(new Rect(72, 294, 470, 24), _menuCaption, 10,
+                new Color(.71f, .73f, .75f, .98f), TextAnchor.MiddleCenter);
             bool reduced=Experiment.VarginhaGameSettings.Current.reducedMotion;
             bool enabled = GUI.enabled; GUI.enabled = enabled&&_resumeAvailable;
             if (_buttonMotion[0].Draw(new Rect(72, 340, 470, 88), "",_atmosphere,reduced)) Experiment.VarginhaCampaignPhase1.StartCampaign(true);

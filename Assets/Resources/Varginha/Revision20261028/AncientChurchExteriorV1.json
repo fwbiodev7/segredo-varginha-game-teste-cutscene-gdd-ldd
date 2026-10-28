@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "name": "AncientChurchExteriorV1",
+  "resource": "Varginha/Revision20261028/AncientChurchExteriorV1",
+  "image": "AncientChurchExteriorV1.png",
+  "size": [
+    1254,
+    1254
+  ],
+  "coordinateOrigin": "top-left",
+  "sourceRectTopLeft": [
+    258,
+    20,
+    738,
+    1134
+  ],
+  "sourceRectUnityBottomLeft": [
+    258,
+    100,
+    738,
+    1134
+  ],
+  "alphaCutoffRecommendation": 0.8627450980392157,
+  "filter": "Point",
+  "mipmaps": false,
+  "compression": "None",
+  "nPOTScale": "None",
+  "suggestedMap": {
+    "phase": 7,
+    "context": "Forest.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "rectTopLeft": [
+      1172.5,
+      10,
+      325,
+      499.39024
+    ],
+    "doorApproachPixel": [
+      1334,
+      522
+    ],
+    "approximateDoorSourcePixel": [
+      625,
+      1148
+    ],
+    "uniformScale": 0.44037940379403795,
+    "worldSize": [
+      5.078125,
+      7.8029725
+    ]
+  },
+  "integrationStatus": "Integrated by CampaignAncientChurch; enlarged 30% at user request after initial Player QA. New footprint/door requires repeated physical Player QA.",
+  "limitations": [
+    "Partial alpha values 1..7 exist outside the useful silhouette. Crop to the recommended rect and use the existing crisp alpha-cutout shader for sharp edges.",
+    "The generated foundation is shaped around the facade/steps, not a complete rectangular clean plate. Inspect coverage over the old baked bell/altar/tombstone at runtime and use a matching stone underlay if remnants remain.",
+    "Suggested bounds and door are placement guidance, not a verified navigable route or collider authoring."
+  ],
+  "generation": {
+    "tool": "image_gen built-in",
+    "date": "2026-10-28",
+    "mode": "Single generation; architecture adapted to axis-aligned RPG projection",
+    "prompt": "Use case: precise-object-edit.\nAsset type: one transparent church exterior overlay sprite for an existing 2D top-down pixel-art investigation game.\nInput images: Image 1 Forest.png is the existing edit target/context; replace ONLY the little ruined sanctuary in its northeast corner. Image 2 is an ARCHITECTURAL reference only. Image 3 Church.png is the canonical palette/interior identity reference.\nPrimary request: deliver ONLY a new intact old church exterior as one isolated transparent PNG, not the whole forest/map. Adapt the ruined sanctuary into a recognizable intact ancient church that can shelter the player. Keep the roof complete, stone walls aged but standing, tall blue-violet stained-glass windows, a cross, dark wooden south-facing double doors, and a very small worn stone doorstep/foundation. Sparse moss, subtle warm amber light near the door, muted night teal/purple-gray stone compatible with the supplied forest and canonical church interior.\nCamera constraint: the SAME classic top-down RPG / high-overhead 2D game projection as Forest.png and Church.png. The building footprint is AXIS-ALIGNED, with screen-horizontal front facade and screen-vertical sides; north is straight up; south/front door is straight down. NO isometric diamond, NO diagonally rotated church, NO perspective vanishing point, NO horizon. Show the roof from above and a modest front-wall height at the bottom, like a playable top-down RPG building.\nComposition: compact rectangular village chapel, centered, taller than wide, one complete building fitting inside a square transparent canvas with small clear margins. The south entrance and short doorstep must be clearly identifiable and unobstructed; do not add walls/fences/trees blocking access. Include a solid muted stone foundation pad under the structure to cover the old sanctuary below it when composited. The pad is only slightly wider than the chapel, with a straight accessible south edge.\nStyle: crisp detailed pixel art, restrained palette, hard pixel clusters, dark outlines matching the supplied game. Avoid glossy 3D, vector art, painterly blur, antialiasing halos, giant cathedrals, roof collapse, rubble piles, graves, extra buildings, vegetation background, characters, NPCs, vehicles, text, logos, labels or UI.\nOutput: single isolated church overlay on GENUINE alpha transparency outside the church and its small foundation. Do not draw a checkerboard background. Do not include the original forest or the isometric reference image.",
+    "references": [
+      "Assets/Resources/Varginha/IllustratedMaps/Forest.png",
+      "C:/Users/Usuario/Downloads/Gemini_Generated_Image_b8246ub8246ub824.jpg",
+      "Assets/Resources/Varginha/IllustratedMaps/Church.png"
+    ]
+  },
+  "latestUserAdjustment": {
+    "scaleVsFirstIntegration": 1.3,
+    "solidRectTopLeft": [
+      1172.5,
+      51.6,
+      325,
+      418.6
+    ],
+    "groundPixel": [
+      1334,
+      470.2
+    ],
+    "sign2Pixel": [
+      1205,
+      535
+    ],
+    "physicalQa": "pending after enlargement; previous 3/3 Player results covered the smaller placement"
+  }
+}

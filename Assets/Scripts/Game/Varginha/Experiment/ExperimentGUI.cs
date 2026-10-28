@@ -12,8 +12,8 @@ namespace Game.Varginha.Experiment
             return Button(ContinueChapterRect,"CONTINUAR");
         }
         public static readonly Color Ink = new(.025f, .045f, .065f);
-        public static readonly Color Paper = new(.91f, .87f, .73f);
-        public static readonly Color Muted = new(.57f, .68f, .66f);
+        public static readonly Color Paper = PixelMenuTheme.Paper;
+        public static readonly Color Muted = PixelMenuTheme.Muted;
         public static readonly Color Accent = new(.43f, .77f, .67f);
         private static Texture2D _pixel;
         private static GUIStyle _title, _text, _small, _button;

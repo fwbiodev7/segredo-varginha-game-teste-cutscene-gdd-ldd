@@ -6,6 +6,7 @@ using Game.Varginha.Experiment;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 
@@ -77,7 +78,8 @@ namespace Game.Tests.PlayMode
             var items=stage.GetComponent<CampaignHouseRoutineItems>();
             Assert.That(items.Coffee.gameObject.activeSelf,Is.False);Assert.That(items.Notebook.gameObject.activeSelf,Is.False);
             yield return Capture("routine-items-consumed");
-            body.position=data.Position(749,600)+Vector2.up*.58f;yield return new WaitForFixedUpdate();stage.Interact("counter");yield return WaitAction(stage);
+            body.position=data.Position(749,600)+Vector2.up*.58f;yield return new WaitForFixedUpdate();stage.Interact("counter");stage.CloseDialogue();
+            Assert.That(stage.Progress.house.HasInitialKey,Is.True);stage.Interact("car");stage.CloseDialogue();stage.Interact("counter");yield return WaitAction(stage);
             Assert.That(stage.Progress.house.KeyOnCounter,Is.True);
             var key=stage.transform.Find("Chave_Fusca_Balcao");Assert.That(Vector3.Distance(key.position,data.Position(733,531)),Is.LessThan(.001f));
             Assert.That(key.localScale.x,Is.EqualTo(.9f).Within(.001));yield return Capture("key-coffee-table-larger");
@@ -140,17 +142,45 @@ namespace Game.Tests.PlayMode
             yield return Capture("pickup-small-original-panel");
             yield return new WaitForSeconds(7.3f);Assert.That(notice.CurrentText,Is.Null,"No input required to dismiss a pickup.");
         }
+        [UnityTest,Timeout(180000)] public IEnumerator HouseKeyCarReturnAndBackpackCanBeReachedWithoutTeleporting()
+        {
+            CampaignStorySave.Write(new CampaignStory{phase=2,routine=7});
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.4f);
+            var stage=VarginhaCampaignStage.Active;var body=Object.FindAnyObjectByType<EdelzioTopDownController>().GetComponent<Rigidbody2D>();
+            var plan=(CampaignMapPlan)typeof(VarginhaCampaignStage).GetField("_guidancePlan",Hidden).GetValue(stage);
+            var keyboard=InputSystem.AddDevice<Keyboard>();VarginhaInputActions.Rebuild();
+            foreach(string id in new[]{"counter","car","counter","bag"})
+            {
+                var target=plan.points.Find(p=>p.id==id).position;
+                yield return CampaignExpansionPlayTests.WalkLibrary(plan,body,keyboard,target,false,id=="car"?()=>stage.Progress.house.bagReminder:null);
+                var key=id=="car"?Key.W:VarginhaInputBindings.GetKeyboard(VarginhaInputAction.Interact);
+                InputSystem.QueueStateEvent(keyboard,new KeyboardState(key));yield return null;yield return null;
+                InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return null;
+                yield return WaitAction(stage);stage.CloseDialogue();
+                if(id=="car")Assert.That(stage.Progress.house.State,Is.EqualTo(CampaignHouseState.ReturningForBag));
+            }
+            Assert.That(stage.Progress.house.Missing,Is.True);Assert.That(stage.Progress.routine&8,Is.EqualTo(8));
+            Assert.That(stage.transform.Find("Vestigio_Papel_Quarto").gameObject.activeSelf,Is.True);
+            stage.Save();yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.4f);
+            Assert.That(VarginhaCampaignStage.Active.Progress.house.Missing,Is.True);
+        }
         [UnityTest,Timeout(60000)] public IEnumerator DoorBagAndKeyFollowTheRequiredOrderAndReleaseTheExit()
         {
-            var story=new CampaignStory{phase=2,routine=7};story.house.step=1;CampaignStorySave.Write(story);
+            var story=new CampaignStory{phase=2,routine=7};CampaignStorySave.Write(story);
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.3f);
             var stage=VarginhaCampaignStage.Active;var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
-            var gate=stage.transform.Find("Porta_Saida_Condicional").GetComponent<BoxCollider2D>();
-            Assert.That(gate.enabled,Is.True);stage.Interact("bag");Assert.That(stage.IsActing,Is.False);
+            Assert.That(stage.transform.Find("Porta_Saida_Condicional"),Is.Null,"Narrative requirements cannot wall off the first car visit.");
+            Assert.That(stage.transform.Find("Vestigio_Papel_Quarto").gameObject.activeSelf,Is.False);
+            for(int i=0;i<3;i++)Assert.That(stage.transform.Find("Papel_Rastro_"+i).gameObject.activeSelf,Is.False);
+            stage.Interact("bag");Assert.That(stage.IsActing,Is.False);
             Assert.That(stage.Progress.house.Missing,Is.False);stage.Interact("counter");stage.CloseDialogue();
+            Assert.That(actor.HasFuscaKey,Is.True);Assert.That(stage.Progress.house.Target(7),Is.EqualTo("car"));
             Assert.That(stage.Progress.house.clues,Is.Zero,"Key search cannot begin before pickup.");
-            stage.Interact("exitclue");stage.CloseDialogue();Assert.That(stage.Progress.house.bagReminder,Is.True);
+            stage.Interact("exitclue");Assert.That(stage.Progress.house.bagReminder,Is.False,"Only reaching the car reveals the forgotten bag.");
+            stage.Interact("car");stage.CloseDialogue();Assert.That(stage.Progress.house.bagReminder,Is.True);
             Assert.That(CampaignStorySave.Load().house.bagReminder,Is.True);
+            stage.Interact("counter");yield return WaitAction(stage);stage.CloseDialogue();
+            Assert.That(stage.Progress.house.KeyOnCounter,Is.True);Assert.That(actor.HasFuscaKey,Is.False);
             actor.GetComponent<Rigidbody2D>().position=CampaignIllustratedMaps.Get(2).Objective("bag")+Vector2.up*.58f;
             yield return new WaitForFixedUpdate();stage.Interact("bag");yield return WaitAction(stage);
             Assert.That(stage.Progress.house.Missing,Is.True);Assert.That(stage.Progress.routine&8,Is.EqualTo(8));
@@ -172,7 +202,7 @@ namespace Game.Tests.PlayMode
             Assert.That(stage.SubmitKeyConclusion(1),Is.True);stage.CloseDialogue();stage.Interact("box");yield return WaitAction(stage);
             Assert.That(stage.Progress.boxFound,Is.True);stage.FinishCutscene();
             stage.Progress.pages=new[]{0,1,2};Assert.That(stage.SubmitPages(),Is.True);
-            Assert.That(stage.Progress.CanLeaveHouse,Is.True);Assert.That(gate.enabled,Is.False);
+            Assert.That(stage.Progress.CanLeaveHouse,Is.True);
         }
         [UnityTest,Timeout(60000)] public IEnumerator RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly()
         {

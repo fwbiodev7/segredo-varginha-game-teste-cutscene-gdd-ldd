@@ -7,6 +7,37 @@ namespace Game.Varginha.Experiment
     public static class CampaignGuidance
     {
         private static readonly Dictionary<int,CampaignContinuationDefinition> Definitions=new();
+        private static Texture2D _objectiveMarker;
+        private static Texture2D ObjectiveMarker
+        {
+            get
+            {
+                if(_objectiveMarker!=null)return _objectiveMarker;
+                const int size=15;
+                var shape=new bool[size*size];
+                for(int x=6;x<=8;x++)
+                {
+                    for(int y=6;y<=12;y++)shape[y*size+x]=true;
+                    for(int y=2;y<=3;y++)shape[y*size+x]=true;
+                }
+                var pixels=new Color32[size*size];
+                for(int y=0;y<size;y++)for(int x=0;x<size;x++)
+                {
+                    if(shape[y*size+x]){pixels[y*size+x]=new Color32(255,211,66,255);continue;}
+                    bool outline=false;
+                    for(int dy=-1;dy<=1&&!outline;dy++)for(int dx=-1;dx<=1;dx++)
+                    {
+                        int nearX=x+dx,nearY=y+dy;
+                        if(nearX>=0&&nearX<size&&nearY>=0&&nearY<size&&shape[nearY*size+nearX]){outline=true;break;}
+                    }
+                    if(outline)pixels[y*size+x]=new Color32(15,18,24,255);
+                }
+                _objectiveMarker=new Texture2D(size,size,TextureFormat.RGBA32,false)
+                    {name="Objective_Exclamation_15px",filterMode=FilterMode.Point,wrapMode=TextureWrapMode.Clamp,hideFlags=HideFlags.HideAndDontSave};
+                _objectiveMarker.SetPixels32(pixels);_objectiveMarker.Apply(false,true);
+                return _objectiveMarker;
+            }
+        }
         public static string Destination(int phase) => phase switch {
             2=>"INDUSTRIAL", 4 or 5=>"BIBLIOTECA", 6=>"MATA", 7=>"ARQUIVO DE FÁBIO",
             8=>"CASA DE OUZANA", 9=>"OFICINA", 10=>"INDUSTRIAL", 11=>"CASARÃO",
@@ -114,8 +145,7 @@ namespace Game.Varginha.Experiment
             string direction=!outside?"PRÓXIMO":Mathf.Abs(canvas.x-640)>Mathf.Abs(canvas.y-360)
                 ?canvas.x<640?"À ESQUERDA":"À DIREITA":canvas.y<360?"ACIMA":"ABAIXO";
             float x=Mathf.Clamp(canvas.x,40,1240),y=Mathf.Clamp(canvas.y-28,100,598);
-            var accent=ExperimentGUI.Accent;
-            ExperimentGUI.Box(new Rect(x-3,y-3,6,6),accent);
+            GUI.DrawTexture(new Rect(Mathf.Round(x-7.5f),Mathf.Round(y-7.5f),15,15),ObjectiveMarker,ScaleMode.StretchToFill,true);
             if(outside||waypoint!=null)
             {
                 string arrow=direction=="À ESQUERDA"?"←":direction=="À DIREITA"?"→":direction=="ACIMA"?"↑":"↓";

@@ -23,11 +23,16 @@ namespace Game.Tests.EditMode
             var h=new CampaignHouseInvestigation();
             Assert.That(h.TakeBag(),Is.False);
             Assert.That(h.PlaceKey(3),Is.False);
+            Assert.That(h.TakeInitialKey(3),Is.False);
+            Assert.That(h.TakeInitialKey(7),Is.True);
+            Assert.That(h.HasInitialKey,Is.True);Assert.That(h.Missing,Is.False);
+            Assert.That(h.PlaceKey(7),Is.False,"The first visit to the Fusca precedes leaving the key.");
+            Assert.That(h.TakeBag(),Is.False);
+            Assert.That(h.RememberBag(),Is.True);Assert.That(h.RememberBag(),Is.False,"The first car visit emits its reminder once.");
             Assert.That(h.PlaceKey(7),Is.True);
             Assert.That(h.KeyOnCounter,Is.True);
             Assert.That(h.PlaceKey(7),Is.False);
-            Assert.That(h.TakeBag(),Is.False,"A new game must try the exit before retrieving the bag.");
-            Assert.That(h.RememberBag(),Is.True);Assert.That(h.RememberBag(),Is.False,"Reminder is emitted once.");
+            Assert.That(h.HasInitialKey,Is.False,"The key is physically on the table now.");
             Assert.That(h.TakeBag(),Is.True);
             Assert.That(h.KeyOnCounter,Is.False);
             Assert.That(h.Missing,Is.True);
@@ -37,7 +42,7 @@ namespace Game.Tests.EditMode
         {
             var h=new CampaignHouseInvestigation();
             Assert.That(h.Observe(0),Is.False);
-            h.PlaceKey(7);h.RememberBag();h.TakeBag();
+            h.TakeInitialKey(7);h.RememberBag();h.PlaceKey(7);h.TakeBag();
             Assert.That(h.Deduce(1),Is.False);
             for(int i=0;i<3;i++)Assert.That(h.Observe(i),Is.True);
             Assert.That(h.CanOpenBox,Is.False);
@@ -49,8 +54,8 @@ namespace Game.Tests.EditMode
         [TestCase(1)] [TestCase(2)] [TestCase(3)]
         public void InvestigationReloadPreservesMilestones(int step)
         {
-            var s=new CampaignStory{phase=2,routine=7};s.house.PlaceKey(7);
-            if(step>=2){s.house.RememberBag();s.house.TakeBag();}
+            var s=new CampaignStory{phase=2,routine=7};s.house.TakeInitialKey(7);s.house.RememberBag();s.house.PlaceKey(7);
+            if(step>=2)s.house.TakeBag();
             if(step>=3){for(int i=0;i<3;i++)s.house.Observe(i);s.house.Deduce(1);}
             var restored=JsonUtility.FromJson<CampaignStory>(JsonUtility.ToJson(s));restored.Repair();
             Assert.That(restored.house.step,Is.EqualTo(step));
@@ -59,12 +64,24 @@ namespace Game.Tests.EditMode
         }
         [Test] public void DoorReminderAndBagSearchHaveExclusiveObjectivesAndSurviveReload()
         {
-            var h=new CampaignHouseInvestigation();h.PlaceKey(7);
-            Assert.That(h.Target(7),Is.EqualTo("exitclue"));
+            var h=new CampaignHouseInvestigation();h.TakeInitialKey(7);
+            Assert.That(h.Target(7),Is.EqualTo("car"));
             Assert.That(h.Observe(0),Is.False);h.RememberBag();
             var restored=JsonUtility.FromJson<CampaignHouseInvestigation>(JsonUtility.ToJson(h));restored.Repair(false,false);
+            Assert.That(restored.Target(7),Is.EqualTo("counter"));Assert.That(restored.PlaceKey(7),Is.True);
             Assert.That(restored.Target(7),Is.EqualTo("bag"));Assert.That(restored.TakeBag(),Is.True);
             Assert.That(restored.Observe(0),Is.True);Assert.That(restored.Missing,Is.True);
+        }
+        [TestCase(false)] [TestCase(true)]
+        public void NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox(bool visitedCar)
+        {
+            var story=new CampaignStory{phase=2,routine=7};story.house.TakeInitialKey(7);
+            if(visitedCar)story.house.RememberBag();
+            var restored=JsonUtility.FromJson<CampaignStory>(JsonUtility.ToJson(story));restored.Repair();
+            Assert.That(restored.house.HasInitialKey,Is.True);
+            Assert.That(restored.house.State,Is.EqualTo(visitedCar?CampaignHouseState.ReturningForBag:CampaignHouseState.KeyInPocket));
+            Assert.That(restored.house.Missing||restored.house.CanOpenBox||restored.CanLeaveHouse,Is.False);
+            Assert.That(restored.house.Target(7),Is.EqualTo(visitedCar?"counter":"car"));
         }
         [Test] public void LegacyBagAlreadyCollectedDoesNotGetStuckBehindReminder()
         {

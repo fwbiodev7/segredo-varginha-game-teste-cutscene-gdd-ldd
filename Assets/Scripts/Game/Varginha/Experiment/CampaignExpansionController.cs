@@ -83,7 +83,7 @@ namespace Game.Varginha.Experiment
                 if(_parking){Camera.main.GetComponent<Game.Level.CameraFollow2D>().Target=car;_sound.Engine(true);}
                 for (int i = 0; i < 3; i++) if ((State.sprayed & (1 << i)) != 0) RevealMark(i);
             }
-            if (phase == 7 || phase == 8)
+            if (phase == 8)
             {
                 var target=Plan.points.Find(p=>p.id==(phase==7?"fabio":"trust"));
                 Vector2 position=target.position+new Vector2(.55f,.6f);
@@ -235,14 +235,20 @@ namespace Game.Varginha.Experiment
                     if (!State.mapSolved) Say("É preciso alinhar o mapa antes de seguir os símbolos.");
                     else if (sign == State.forestSigns) { State.forestSigns++; if (sign == 1) SetForestCheckpoint(Plan.points.Find(p=>p.id=="sign1").position); Say(sign == 0 ? "A marca da árvore aponta para a clareira. O ruído acompanha seus passos."
                         : sign == 1 ? "A marca do rio aponta para a ponte. Há algo se movendo entre as árvores. Use o esconderijo ou siga até a capela."
-                        : "A marca da capela confirma o caminho. Fábio espera dentro da ruína."); }
+                        : "A marca junto à igreja confirma o caminho. A porta parece oferecer abrigo."); }
                     else Say(sign < State.forestSigns ? "Este símbolo já está no caderno." : "A direção não corresponde ao mapa. Procure o símbolo anterior.");
                 }
                 else if (id == "hide") { _hidden = !_hidden; Say(_hidden ? "Você se abriga e recupera o fôlego. A presença perde seu rastro enquanto você permanece aqui." : "Você sai do abrigo."); }
                 else if (id == "fabio")
                 {
-                    if (State.forestSigns < 3) Speak("Padre Fábio","siga as marcas para entender por que veio até aqui.");
-                    else { State.fabioMet = true; Speak("Padre Fábio","eu esperava que você se lembrasse. Venha ao arquivo; há um registro com seu nome."); }
+                    if (State.forestSigns < 3) Say("Ainda preciso conferir as marcas do caminho antes de entrar.");
+                    else
+                    {
+                        // Keep the legacy flag/ID for saves; the meeting happens inside.
+                        State.fabioMet=true;_hidden=false;_chasePath.Clear();PursuitPressure=0;
+                        _entity.gameObject.SetActive(false);_sound.Suspend(true);
+                        _panel="complete";Lock();ContinueChapter();
+                    }
                 }
             }
             else if (phase == 8)

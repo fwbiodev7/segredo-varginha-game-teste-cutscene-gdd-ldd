@@ -81,6 +81,21 @@ namespace Game.Tests.PlayMode
             var image=ScreenCapture.CaptureScreenshotAsTexture();
             File.WriteAllBytes(folder+"/"+name+".png",image.EncodeToPNG());Object.Destroy(image);
         }
+        [UnityTest,Timeout(120000)] public IEnumerator MenuAndAssociationCardsRenderAt720pAnd1080p()
+        {
+            foreach(var size in new[]{new Vector2Int(1280,720),new Vector2Int(1920,1080)})
+            {
+                Screen.SetResolution(size.x,size.y,false);yield return new WaitForSecondsRealtime(.5f);
+                if(!Application.isEditor){Assert.That(Screen.width,Is.EqualTo(size.x));Assert.That(Screen.height,Is.EqualTo(size.y));}
+                yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");yield return new WaitForSecondsRealtime(.5f);
+                yield return Capture("revision-menu-"+size.x);
+                var story=new CampaignStory{phase=14};story.continuation.clues[3]=7;CampaignStorySave.Write(story);
+                yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(14));yield return new WaitForSeconds(3.3f);
+                var c=CampaignContinuationController.Active;c.CloseMessage();c.OpenPuzzle();yield return null;
+                Assert.That(c.Modal,Is.True);yield return Capture("revision-associations-"+size.x);
+            }
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
         [UnityTest,Timeout(180000)]
         [Category("HudPuzzles")] public IEnumerator TrailMapSelectsSavesAndCorrectsAnySegmentWithController()
         {
@@ -199,7 +214,7 @@ namespace Game.Tests.PlayMode
                 c.CloseMessage();
                 if(phase==11)
                 {
-                    yield return Click(new Rect(840,336,275,27));yield return Click(new Rect(840,366,275,27));
+                    for(int id=0;id<2;id++)yield return Click(new Rect(840,336+System.Array.IndexOf(c.Progress.puzzles.archiveOrder,id)*30,275,27));
                     yield return Capture("02_Arquivos_Comparacao");
                     yield return Click(new Rect(755,530,360,32));
                 }
@@ -215,10 +230,14 @@ namespace Game.Tests.PlayMode
                     for(int row=0;row<solution.Length;row++)
                     {
                         int evidenceRow=(solution[row]+solution.Length-1)%solution.Length;
-                        yield return Click(new Rect(145,352+evidenceRow*43,425,39));
-                        yield return Click(new Rect(600,352+row*43,515,39));
+                        yield return Click(new Rect(145,240+evidenceRow*70,425,64));
+                        yield return Click(new Rect(600,240+row*70,415,64));
                         if(phase==13&&row==0)
                         {
+                            yield return Click(new Rect(1025,258,90,30));
+                            Assert.That(c.Progress.puzzles.causes[0],Is.EqualTo(-1),"Undo clears only the chosen destination.");
+                            yield return Click(new Rect(145,240+evidenceRow*70,425,64));
+                            yield return Click(new Rect(600,240,415,64));
                             var saved=CampaignStorySave.Load();Assert.That(saved.puzzles.causes[0],Is.EqualTo(0));
                             Assert.That(saved.puzzles.causes[1],Is.EqualTo(-1));
                             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(phase));yield return new WaitForSeconds(3.2f);

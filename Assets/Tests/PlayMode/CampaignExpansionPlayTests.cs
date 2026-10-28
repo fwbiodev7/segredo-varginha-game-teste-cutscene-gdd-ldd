@@ -33,7 +33,8 @@ namespace Game.Tests.PlayMode
                 yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(phase)); yield return null; yield return new WaitForSeconds(.15f);
                 var stage=CampaignExpansionController.Active; Assert.That(stage,Is.Not.Null);
                 Assert.That(stage.phase,Is.EqualTo(phase));
-                var map=GameObject.Find("Mapa_Campanha"); Assert.That(map.GetComponentsInChildren<Collider2D>().Length,Is.EqualTo(stage.Plan.walls.Count+stage.Plan.furniture.FindAll(p=>p.footprint.width>0&&p.footprint.height>0).Count));
+                var map=GameObject.Find("Mapa_Campanha");int solid=System.Array.FindAll(map.GetComponentsInChildren<Collider2D>(),c=>!c.isTrigger).Length;
+                Assert.That(solid,Is.EqualTo(stage.Plan.walls.Count+stage.Plan.furniture.FindAll(p=>p.footprint.width>0&&p.footprint.height>0).Count));
                 var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
                 Assert.That(actor.GetComponent<CampaignTeamEdelzio>(),Is.Not.Null);
                 Assert.That(actor.GetComponent<SpriteRenderer>().sprite.name,Does.StartWith("Team_"));
@@ -47,6 +48,8 @@ namespace Game.Tests.PlayMode
                     foreach(string point in new[]{"sign0","sign1","sign2"}){stage.Interact(point);stage.ClosePanel();}
                     stage.ReturnToCheckpoint(); stage.ClosePanel(); Assert.That(stage.Progress.expansion.forestSigns,Is.EqualTo(3));
                     stage.Interact("fabio");stage.ClosePanel();
+                    yield return new WaitUntil(()=>SceneManager.GetActiveScene().name==CampaignStorySave.Scene(8));
+                    yield return new WaitForSeconds(3.2f);continue;
                 }
                 if(phase==8)
                 {
@@ -180,7 +183,52 @@ namespace Game.Tests.PlayMode
             Assert.That(actor.IsInputLocked,Is.True,"The reached exit opens the completion panel.");
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
-        private static IEnumerator WalkLibrary(CampaignMapPlan plan,Rigidbody2D body,Keyboard keyboard,Vector2 target)
+        [UnityTest,Timeout(180000)] public IEnumerator ChurchEvidenceCanBeReachedAndReadWithRealMovementAndSurvivesReload()
+        {
+            CampaignStorySave.Write(new CampaignStory{phase=8});yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(8));yield return new WaitForSeconds(3.4f);
+            var stage=CampaignExpansionController.Active;var body=Object.FindAnyObjectByType<EdelzioTopDownController>().GetComponent<Rigidbody2D>();
+            var keyboard=InputSystem.AddDevice<Keyboard>();
+            foreach(string id in new[]{"index","record","symbol"})
+            {
+                yield return WalkLibrary(stage.Plan,body,keyboard,stage.Plan.points.Find(p=>p.id==id).position);
+                yield return HoldKey(keyboard,Key.E,.1f);stage.ClosePanel();yield return null;
+            }
+            Assert.That(stage.Progress.expansion.anchorClues,Is.EqualTo(7));stage.Save();
+            foreach(string id in new[]{"record","symbol"})
+            {
+                var evidence=stage.transform.Find("Mapa_Campanha/Evidencias_fisicas/Evidencia_"+id);
+                Assert.That(evidence.GetComponent<SpriteRenderer>().enabled,Is.True);Assert.That(evidence.GetComponent<Collider2D>().isTrigger,Is.True);
+            }
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(8));yield return new WaitForSeconds(3.4f);
+            Assert.That(CampaignExpansionController.Active.Progress.expansion.anchorClues,Is.EqualTo(7));
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
+        [UnityTest,Timeout(180000)] public IEnumerator ForestCluesLeadThroughTheBridgeToOnePriestInsideTheIntactChurch()
+        {
+            var story=new CampaignStory{phase=7};story.expansion.visited=7;story.expansion.mapSolved=true;story.expansion.trailChoices=new[]{1,0,1};CampaignStorySave.Write(story);
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(7));yield return new WaitForSeconds(3.4f);
+            var stage=CampaignExpansionController.Active;var body=Object.FindAnyObjectByType<EdelzioTopDownController>().GetComponent<Rigidbody2D>();
+            var keyboard=InputSystem.AddDevice<Keyboard>();
+            Assert.That(GameObject.Find("Padre Fábio"),Is.Null,"The meeting is inside the church.");
+            Assert.That(stage.transform.Find("Mapa_Campanha/Igreja_antiga_inteira"),Is.Not.Null);
+            foreach(string id in new[]{"sign0","sign1","sign2"})
+            {
+                yield return WalkLibrary(stage.Plan,body,keyboard,stage.Plan.points.Find(p=>p.id==id).position,true);
+                yield return HoldKey(keyboard,Key.E,.1f);stage.ClosePanel();yield return null;
+            }
+            Assert.That(stage.Progress.expansion.forestSigns,Is.EqualTo(3));
+            yield return WalkLibrary(stage.Plan,body,keyboard,stage.Plan.points.Find(p=>p.id=="fabio").position,true);
+            yield return HoldKey(keyboard,Key.E,.1f);
+            float deadline=Time.realtimeSinceStartup+15;
+            while(SceneManager.GetActiveScene().name!=CampaignStorySave.Scene(8)&&Time.realtimeSinceStartup<deadline)yield return null;
+            Assert.That(SceneManager.GetActiveScene().name,Is.EqualTo(CampaignStorySave.Scene(8)));
+            yield return new WaitForSeconds(3.4f);
+            Assert.That(CampaignStorySave.Load().expansion.fabioMet,Is.True);
+            Assert.That(GameObject.Find("Padre Fábio"),Is.Not.Null);
+            Assert.That(Object.FindObjectsByType<CampaignForestPresence>().Length,Is.Zero,"No pursuit may survive safe entry.");
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
+        internal static IEnumerator WalkLibrary(CampaignMapPlan plan,Rigidbody2D body,Keyboard keyboard,Vector2 target,bool run=false,System.Func<bool> arrived=null)
         {
             // Rendering load must not cause several movement steps between key updates.
             float capture = Time.captureDeltaTime;
@@ -195,12 +243,16 @@ namespace Game.Tests.PlayMode
             corners.Add(target);
             foreach(var corner in corners)
             {
+                Debug.Log("QA_WALK "+plan.phase+" corner="+corner+" target="+target);
                 float deadline=Time.time+8;
                 while(Vector2.Distance(body.position-Vector2.up*.58f,corner)>.10f&&Time.time<deadline)
                 {
+                    Assert.That(VarginhaGameHUD.Instance?.IsGameOver!=true,Is.True,"Game over on physical route at "+body.position+" target="+target);
+                    if(arrived?.Invoke()==true){InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield break;}
                     var delta=corner-(body.position-Vector2.up*.58f);var keys=new System.Collections.Generic.List<Key>();
                     if(Mathf.Abs(delta.x)>.065f)keys.Add(delta.x>0?Key.D:Key.A);
                     if(Mathf.Abs(delta.y)>.065f)keys.Add(delta.y>0?Key.W:Key.S);
+                    if(run)keys.Add(Key.LeftShift);
                     InputSystem.QueueStateEvent(keyboard,new KeyboardState(keys.ToArray()));yield return null;
                 }
                 InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return null;

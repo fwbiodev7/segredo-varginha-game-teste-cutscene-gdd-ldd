@@ -1,0 +1,12 @@
+{
+  "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\revisao-completa-2026-10-28\\house-order-editmode-r2.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 24,
+    "passed": 24,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

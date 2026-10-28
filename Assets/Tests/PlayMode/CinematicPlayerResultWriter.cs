@@ -10,9 +10,17 @@ namespace Game.Tests.PlayMode
     // This does not reinterpret failures or count an unfinished run as passed.
     public sealed class CinematicPlayerResultWriter:ITestRunCallback
     {
-        public void RunStarted(ITest testsToRun){}
-        public void TestStarted(ITest test){}
-        public void TestFinished(ITestResult result){if(!Application.isEditor&&result.Test.IsSuite==false)Debug.Log("NATIVE_TEST "+result.ResultState+" "+result.FullName);}
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        static void KeepQaRunning(){if(!Application.isEditor)Application.runInBackground=true;}
+        public void RunStarted(ITest testsToRun)=>KeepQaRunning();
+        public void TestStarted(ITest test)=>KeepQaRunning();
+        public void TestFinished(ITestResult result)
+        {
+            if(Application.isEditor||result.Test.IsSuite)return;
+            string folder=Path.Combine(Path.GetFullPath(CinemaQaEvidence.Folder),"per-case");Directory.CreateDirectory(folder);
+            File.WriteAllText(Path.Combine(folder,result.FullName+".xml"),result.ToXml(true).OuterXml);
+            Debug.Log("NATIVE_TEST "+result.ResultState+" "+result.FullName+(result.ResultState.Status==TestStatus.Failed?"\n"+result.Message+"\n"+result.StackTrace:""));
+        }
         public void RunFinished(ITestResult result)
         {
             if(Application.isEditor||result.Test.Parent!=null)return;

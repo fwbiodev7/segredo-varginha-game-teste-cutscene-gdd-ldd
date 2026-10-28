@@ -336,7 +336,11 @@ namespace Game.Varginha.Experiment
         {
             bool correct=State.HasAll(phase,_definition.required)&&(CampaignPuzzleDesign.Redesigned(phase)
                 ?CampaignPuzzleDesign.Correct(phase,choice,order):_definition.choice?choice==0:CampaignStory.Sequence(order,_identity()));
-            if(!correct){Say(!State.HasAll(phase,_definition.required)?CampaignGuidance.Next(Progress,phase,area):CampaignPuzzleDesign.Redesigned(phase)?CampaignPuzzleDesign.Feedback(phase,choice,order):"A combinação não corresponde aos registros. As pistas continuam no caderno.");return false;}
+            if(!correct)
+            {
+                if(phase==11&&State.HasAll(phase,_definition.required)){Progress.puzzles.EnsureArchiveOrder(true);Save();}
+                Say(!State.HasAll(phase,_definition.required)?CampaignGuidance.Next(Progress,phase,area):CampaignPuzzleDesign.Redesigned(phase)?CampaignPuzzleDesign.Feedback(phase,choice,order):"A combinação não corresponde aos registros. As pistas continuam no caderno.");return false;
+            }
             State.solved[phase-11]=true;_panel=null;
             if(phase==18) { State.solved[8]=true; State.clues[8]|=15; }
             Save();

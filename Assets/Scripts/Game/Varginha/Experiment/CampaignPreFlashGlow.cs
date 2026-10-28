@@ -7,6 +7,11 @@ namespace Game.Varginha.Experiment
     {
         private static Sprite _coreArt;
         private SpriteRenderer _core,_halo;
+        private AudioSource _hum;
+        private CampaignDynamicLight _reflection;
+        private EdelzioTopDownController _actor;
+        private bool _paused;
+        public void Configure(EdelzioTopDownController actor)=>_actor=actor;
         private void Awake()
         {
             transform.position=new Vector3(17.2f,0);
@@ -21,6 +26,9 @@ namespace Game.Varginha.Experiment
             _core=Create("Nucleo",_coreArt,22001);
             _core.sharedMaterial=CampaignFlashArt.Material;
             _core.transform.localScale=Vector3.one*(.13f/_core.sprite.bounds.size.y);
+            _reflection=gameObject.AddComponent<CampaignDynamicLight>();_reflection.color=new Color(.48f,.76f,1);_reflection.reach=6.5f;_reflection.halfAngle=180;_reflection.intensity=.1f;
+            _hum=gameObject.AddComponent<AudioSource>();_hum.playOnAwake=false;_hum.loop=true;_hum.clip=CampaignSoundscape.Clip("RadioInterference");
+            _hum.spatialBlend=.35f;_hum.dopplerLevel=0;_hum.minDistance=4;_hum.maxDistance=22;
             gameObject.SetActive(false);
         }
         private SpriteRenderer Create(string label,Sprite sprite,int order)
@@ -31,9 +39,19 @@ namespace Game.Varginha.Experiment
         }
         private void Update()
         {
+            bool paused=Time.timeScale<=0;
+            if(paused!=_paused){_paused=paused;if(paused)_hum.Pause();else _hum.UnPause();}
+            if(paused)return;
+            float distance=_actor!=null?Vector2.Distance(_actor.transform.position,transform.position):20;
+            float near=Mathf.InverseLerp(16,3,distance);
+            _hum.volume=Mathf.Lerp(.015f,.18f,near)*VarginhaGameSettings.Current.effects;
             float pulse=VarginhaGameSettings.Current.reducedMotion ? .5f : .5f+.5f*Mathf.Sin(Time.time*2.2f);
             _core.color=new Color(.78f,.94f,1,.7f+pulse*.15f);
             _halo.color=new Color(.48f,.76f,1,.38f+pulse*.12f);
+            _halo.transform.localScale=Vector3.one*Mathf.Lerp(1.3f,3.2f,near);
+            _reflection.intensity=Mathf.Lerp(.08f,.34f,near)*(.85f+pulse*.15f);
         }
+        private void OnEnable(){_paused=false;if(_hum!=null){_hum.volume=0;_hum.Play();}}
+        private void OnDisable(){if(_hum!=null)_hum.Stop();}
     }
 }

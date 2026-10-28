@@ -1,0 +1,979 @@
+{
+  "schemaVersion": 1,
+  "name": "InvestigationEvidenceCatalogV1",
+  "status": "prepared-for-root-integration-not-runtime-validated",
+  "coordinateOrigin": "source top-left; rectUnity bottom-left",
+  "placementCoordinateSystem": "Layouts.json logical pixels, not raw base PNG pixels. Casarao base PNGs are 512x512 while their logical layouts are 1254x1254.",
+  "filter": "Point",
+  "mipmaps": false,
+  "compression": "None",
+  "uniformScale": true,
+  "defaultPivot": [
+    0.5,
+    0.5
+  ],
+  "alphaCutoffRecommendation": 0.8627450980392157,
+  "rootIntegrationNotes": [
+    "mode existing-region is a baked-art binding/reference: never render its opaque rectangular crop as a new sprite.",
+    "mode existing-object binds the already created canonical globe, not an additional object.",
+    "Keep narrative rules in campaign state/controllers. Catalog describes presentation only.",
+    "Use support depth; floor papers remain under actor feet. No colliders are requested for small evidence overlays.",
+    "Only the antique key is a physical pickup that disappears; inspected documents remain available and persist in the existing journal/state.",
+    "Resolve misplaced interaction points marked placementRequiresInteractionCorrection before claiming the prop is integrated.",
+    "Availability and focus follow the current objective and existing prerequisites. A physical prop should not require a marker to be recognizable."
+  ],
+  "sources": [
+    {
+      "id": "generated",
+      "resource": "Varginha/Revision20261028/InvestigationEvidencePropsV1",
+      "image": "Assets/Resources/Varginha/Revision20261028/InvestigationEvidencePropsV1.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "alpha": true
+    },
+    {
+      "id": "casarao",
+      "resource": "Varginha/IllustratedMaps/CasaraoProps",
+      "image": "Assets/Resources/Varginha/IllustratedMaps/CasaraoProps.png",
+      "size": [
+        1536,
+        1536
+      ],
+      "alpha": true
+    },
+    {
+      "id": "library",
+      "resource": "Varginha/IllustratedMaps/IndustrialLibrary",
+      "image": "Assets/Resources/Varginha/IllustratedMaps/IndustrialLibrary.png",
+      "size": [
+        1000,
+        788
+      ],
+      "alpha": false
+    },
+    {
+      "id": "church",
+      "resource": "Varginha/IllustratedMaps/Church",
+      "image": "Assets/Resources/Varginha/IllustratedMaps/Church.png",
+      "size": [
+        1484,
+        1060
+      ],
+      "alpha": false
+    },
+    {
+      "id": "globe",
+      "resource": "Varginha/SchoolGlobe/Globe",
+      "image": "Assets/Resources/Varginha/SchoolGlobe/Globe.png",
+      "size": [
+        44,
+        64
+      ],
+      "alpha": true
+    }
+  ],
+  "sprites": [
+    {
+      "id": "antique_key",
+      "resource": "Varginha/Revision20261028/InvestigationEvidencePropsV1",
+      "source": "generated",
+      "rectTopLeft": [
+        101,
+        144,
+        489,
+        412
+      ],
+      "rectUnity": [
+        101,
+        698,
+        489,
+        412
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "notes": "New antique skeleton key; intentionally distinct from the modern blue-fob house/car key."
+    },
+    {
+      "id": "sepia_group_photo",
+      "resource": "Varginha/Revision20261028/InvestigationEvidencePropsV1",
+      "source": "generated",
+      "rectTopLeft": [
+        690,
+        174,
+        506,
+        415
+      ],
+      "rectUnity": [
+        690,
+        665,
+        506,
+        415
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "notes": "Illustrative historical group photograph, not a claim about real people; investigation facts remain in the reader."
+    },
+    {
+      "id": "mechanism_components",
+      "resource": "Varginha/Revision20261028/InvestigationEvidencePropsV1",
+      "source": "generated",
+      "rectTopLeft": [
+        94,
+        740,
+        517,
+        372
+      ],
+      "rectUnity": [
+        94,
+        142,
+        517,
+        372
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "notes": "Mechanical pieces, ring and conductors; independent of the static laboratory furniture."
+    },
+    {
+      "id": "anchor_inscription",
+      "resource": "Varginha/Revision20261028/InvestigationEvidencePropsV1",
+      "source": "generated",
+      "rectTopLeft": [
+        765,
+        740,
+        431,
+        410
+      ],
+      "rectUnity": [
+        765,
+        104,
+        431,
+        410
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "notes": "Recognizable anchor symbol; no numbers/dates added to the art."
+    },
+    {
+      "id": "archive_books",
+      "resource": "Varginha/IllustratedMaps/CasaraoProps",
+      "source": "casarao",
+      "rectTopLeft": [
+        588,
+        1083,
+        104,
+        152
+      ],
+      "rectUnity": [
+        588,
+        301,
+        104,
+        152
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "notes": "Crop excludes the disconnected red runner fragment above the original book stack."
+    },
+    {
+      "id": "paper_bundle",
+      "resource": "Varginha/IllustratedMaps/CasaraoProps",
+      "source": "casarao",
+      "rectTopLeft": [
+        1064,
+        1336,
+        176,
+        143
+      ],
+      "rectUnity": [
+        1064,
+        57,
+        176,
+        143
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "notes": ""
+    },
+    {
+      "id": "single_parchment",
+      "resource": "Varginha/IllustratedMaps/CasaraoProps",
+      "source": "casarao",
+      "rectTopLeft": [
+        1153,
+        1336,
+        68,
+        72
+      ],
+      "rectUnity": [
+        1153,
+        128,
+        68,
+        72
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "notes": ""
+    },
+    {
+      "id": "mechanism_drawing",
+      "resource": "Varginha/IllustratedMaps/CasaraoProps",
+      "source": "casarao",
+      "rectTopLeft": [
+        1159,
+        1410,
+        81,
+        68
+      ],
+      "rectUnity": [
+        1159,
+        58,
+        81,
+        68
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "notes": ""
+    },
+    {
+      "id": "library_open_book_region",
+      "resource": "Varginha/IllustratedMaps/IndustrialLibrary",
+      "source": "library",
+      "rectTopLeft": [
+        165,
+        153,
+        51,
+        35
+      ],
+      "rectUnity": [
+        165,
+        600,
+        51,
+        35
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "notes": "Baked opaque region: reference/highlight only; NEVER instantiate as a rectangular wood-backed overlay."
+    },
+    {
+      "id": "library_notice_region",
+      "resource": "Varginha/IllustratedMaps/IndustrialLibrary",
+      "source": "library",
+      "rectTopLeft": [
+        748,
+        99,
+        119,
+        83
+      ],
+      "rectUnity": [
+        748,
+        606,
+        119,
+        83
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "notes": "Baked opaque region: highlight existing noticeboard only, not every shelf."
+    },
+    {
+      "id": "library_map_region",
+      "resource": "Varginha/IllustratedMaps/IndustrialLibrary",
+      "source": "library",
+      "rectTopLeft": [
+        550,
+        381,
+        28,
+        32
+      ],
+      "rectUnity": [
+        550,
+        375,
+        28,
+        32
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "notes": "Baked paper on central table: localized highlight only; do not tint table/plant."
+    },
+    {
+      "id": "library_globe",
+      "resource": "Varginha/SchoolGlobe/Globe",
+      "source": "globe",
+      "rectTopLeft": [
+        0,
+        0,
+        44,
+        64
+      ],
+      "rectUnity": [
+        0,
+        0,
+        44,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0
+      ],
+      "notes": "Already instantiated as Globo_Esferico_Arquivo by CampaignIllustratedMaps.BuildSchoolGlobe; bind existing object."
+    },
+    {
+      "id": "church_index_book_region",
+      "resource": "Varginha/IllustratedMaps/Church",
+      "source": "church",
+      "rectTopLeft": [
+        272,
+        195,
+        57,
+        39
+      ],
+      "rectUnity": [
+        272,
+        826,
+        57,
+        39
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "notes": "Book already painted on the lectern: reference/highlight existing book; no new lectern or opaque overlay."
+    }
+  ],
+  "entries": [
+    {
+      "phase": 6,
+      "area": 0,
+      "id": "archive",
+      "layoutId": 6,
+      "spriteId": "library_open_book_region",
+      "mode": "existing-region",
+      "visualPixel": [
+        190.5,
+        170.5
+      ],
+      "visualWorld": [
+        -6.19,
+        4.47
+      ],
+      "worldSize": [
+        1.02,
+        0.7
+      ],
+      "interactionPixel": [
+        194,
+        277
+      ],
+      "interactionWorld": [
+        -6.12,
+        2.34
+      ],
+      "support": {
+        "kind": "furniture",
+        "name": "Mesa de leitura oeste",
+        "depthOffset": 2
+      },
+      "persistence": {
+        "state": "expansion.visited",
+        "bit": 1,
+        "afterRead": "remain; reread allowed"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": "The book already exists. Improve only its recognizable outline/contrast; do not generate duplicate books."
+    },
+    {
+      "phase": 6,
+      "area": 0,
+      "id": "school",
+      "layoutId": 6,
+      "spriteId": "library_globe",
+      "mode": "existing-object",
+      "visualPixel": [
+        896,
+        190
+      ],
+      "visualWorld": [
+        7.92,
+        4.08
+      ],
+      "worldSize": [
+        0.88,
+        1.28
+      ],
+      "interactionPixel": [
+        859,
+        195
+      ],
+      "interactionWorld": [
+        7.18,
+        3.98
+      ],
+      "support": {
+        "kind": "existingObject",
+        "name": "Globo_Esferico_Arquivo",
+        "parent": "Armario do globo",
+        "depthOffset": 2
+      },
+      "persistence": {
+        "state": "expansion.visited",
+        "bit": 2,
+        "afterRead": "remain; reread allowed"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": "Preserve the canonical 44x64 sprite, PPU50 and bottom-center pivot."
+    },
+    {
+      "phase": 6,
+      "area": 0,
+      "id": "square",
+      "layoutId": 6,
+      "spriteId": "library_notice_region",
+      "mode": "existing-region",
+      "visualPixel": [
+        807.5,
+        140.5
+      ],
+      "visualWorld": [
+        6.15,
+        5.07
+      ],
+      "worldSize": [
+        2.38,
+        1.66
+      ],
+      "interactionPixel": [
+        767,
+        195
+      ],
+      "interactionWorld": [
+        5.34,
+        3.98
+      ],
+      "support": {
+        "kind": "furniture",
+        "name": "Painel de avisos",
+        "depthOffset": 2
+      },
+      "persistence": {
+        "state": "expansion.visited",
+        "bit": 4,
+        "afterRead": "remain; reread allowed"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": ""
+    },
+    {
+      "phase": 6,
+      "area": 0,
+      "id": "map",
+      "layoutId": 6,
+      "spriteId": "library_map_region",
+      "mode": "existing-region",
+      "visualPixel": [
+        564,
+        397
+      ],
+      "visualWorld": [
+        1.28,
+        -0.06
+      ],
+      "worldSize": [
+        0.56,
+        0.64
+      ],
+      "interactionPixel": [
+        510,
+        507
+      ],
+      "interactionWorld": [
+        0.2,
+        -2.26
+      ],
+      "support": {
+        "kind": "furniture",
+        "name": "Mesa central de fragmentos",
+        "depthOffset": 2
+      },
+      "persistence": {
+        "state": "expansion.mapSolved",
+        "afterRead": "remain; no new collectible"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": "Highlight the actual paper, not all books, chairs or the plant."
+    },
+    {
+      "phase": 8,
+      "area": 0,
+      "id": "index",
+      "layoutId": 8,
+      "spriteId": "church_index_book_region",
+      "mode": "existing-region",
+      "visualPixel": [
+        300.5,
+        214.5
+      ],
+      "visualWorld": [
+        -4.16509,
+        2.97642
+      ],
+      "worldSize": [
+        0.53774,
+        0.36793
+      ],
+      "interactionPixel": [
+        298,
+        344
+      ],
+      "interactionWorld": [
+        -4.18868,
+        1.75472
+      ],
+      "support": {
+        "kind": "furniture",
+        "name": "Livro do Tombo",
+        "depthOffset": 3
+      },
+      "persistence": {
+        "state": "expansion.anchorClues",
+        "bit": 1,
+        "afterRead": "remain; reread allowed"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": ""
+    },
+    {
+      "phase": 8,
+      "area": 0,
+      "id": "record",
+      "layoutId": 8,
+      "spriteId": "single_parchment",
+      "mode": "overlay",
+      "visualPixel": [
+        204,
+        236
+      ],
+      "visualWorld": [
+        -5.07547,
+        2.77358
+      ],
+      "worldSize": [
+        0.44,
+        0.46588
+      ],
+      "interactionPixel": [
+        204,
+        320
+      ],
+      "interactionWorld": [
+        -5.07547,
+        1.98113
+      ],
+      "support": {
+        "kind": "furnitureFront",
+        "name": "Estante de registros",
+        "depthOffset": 3
+      },
+      "persistence": {
+        "state": "expansion.anchorClues",
+        "bit": 4,
+        "afterRead": "remain; reread allowed"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": "A filing sheet on the cabinet front, below the shelf books. Text/number23 belongs to the reader, not invented image lettering."
+    },
+    {
+      "phase": 8,
+      "area": 0,
+      "id": "symbol",
+      "layoutId": 8,
+      "spriteId": "anchor_inscription",
+      "mode": "overlay",
+      "visualPixel": [
+        792,
+        257
+      ],
+      "visualWorld": [
+        0.4717,
+        2.57547
+      ],
+      "worldSize": [
+        0.45,
+        0.42807
+      ],
+      "interactionPixel": [
+        859,
+        323
+      ],
+      "interactionWorld": [
+        1.10377,
+        1.95283
+      ],
+      "support": {
+        "kind": "furnitureFront",
+        "name": "Altar da âncora",
+        "depthOffset": 3
+      },
+      "persistence": {
+        "state": "expansion.anchorClues",
+        "bit": 2,
+        "afterRead": "remain; reread allowed"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": "Small anchor plaque on the altar front, not on top of the cross or candles."
+    },
+    {
+      "phase": 12,
+      "area": 0,
+      "id": "plan",
+      "layoutId": 12,
+      "spriteId": "paper_bundle",
+      "mode": "overlay",
+      "visualPixel": [
+        430,
+        673
+      ],
+      "visualWorld": [
+        -2.82775,
+        -0.66029
+      ],
+      "worldSize": [
+        0.65,
+        0.52813
+      ],
+      "interactionPixel": [
+        430,
+        765
+      ],
+      "interactionWorld": [
+        -2.82775,
+        -1.98086
+      ],
+      "support": {
+        "kind": "furnitureTop",
+        "name": "Banco do jardim",
+        "depthOffset": 3
+      },
+      "persistence": {
+        "state": "continuation.clues[1]",
+        "bit": 1,
+        "afterRead": "remain; preserve acquired document; do not award duplicate copies"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": "Physical preserved plan on the garden bench. The reader supplies the actual floor-plan information."
+    },
+    {
+      "phase": 12,
+      "area": 1,
+      "id": "plan",
+      "layoutId": 112,
+      "spriteId": "paper_bundle",
+      "mode": "overlay",
+      "visualPixel": [
+        1000,
+        945
+      ],
+      "visualWorld": [
+        5.35407,
+        -4.56459
+      ],
+      "worldSize": [
+        0.58,
+        0.47125
+      ],
+      "interactionPixel": [
+        625,
+        793
+      ],
+      "interactionWorld": [
+        -0.02871,
+        -2.38278
+      ],
+      "support": {
+        "kind": "furnitureTop",
+        "name": "Mesa de serviço",
+        "depthOffset": 3
+      },
+      "persistence": {
+        "state": "continuation.clues[1]",
+        "bit": 1,
+        "afterRead": "same document ID as exterior; never duplicate inventory"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": "Alternative indoor copy if an unseen plan must be accessible after entering. Original center-hall trigger is displaced; root must bind the approach to this table or omit the duplicate location.",
+      "suggestedInteractionPixel": [
+        1000,
+        1020
+      ],
+      "placementRequiresInteractionCorrection": true,
+      "optionalAlternative": true
+    },
+    {
+      "phase": 12,
+      "area": 1,
+      "id": "key",
+      "layoutId": 112,
+      "spriteId": "antique_key",
+      "mode": "overlay",
+      "visualPixel": [
+        1082,
+        582
+      ],
+      "visualWorld": [
+        6.5311,
+        0.64593
+      ],
+      "worldSize": [
+        0.6,
+        0.50552
+      ],
+      "interactionPixel": [
+        1082,
+        655
+      ],
+      "interactionWorld": [
+        6.5311,
+        -0.40191
+      ],
+      "support": {
+        "kind": "furnitureFront",
+        "name": "Gaveteiro do escritório",
+        "depthOffset": 4
+      },
+      "persistence": {
+        "state": "continuation.serviceKey",
+        "afterRead": "collect once; hide physical key permanently when true; preserve key in story state"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": "Recognizable key on the drawer front, not the modern car-key sprite. Existing approach point remains close to this drawer."
+    },
+    {
+      "phase": 12,
+      "area": 1,
+      "id": "photo",
+      "layoutId": 112,
+      "spriteId": "sepia_group_photo",
+      "mode": "overlay",
+      "visualPixel": [
+        925,
+        616
+      ],
+      "visualWorld": [
+        4.27751,
+        0.15789
+      ],
+      "worldSize": [
+        0.75,
+        0.61512
+      ],
+      "interactionPixel": [
+        998,
+        704
+      ],
+      "interactionWorld": [
+        5.32536,
+        -1.10526
+      ],
+      "support": {
+        "kind": "furnitureTop",
+        "name": "Mesa do escritório",
+        "depthOffset": 3
+      },
+      "persistence": {
+        "state": "continuation.clues[1]",
+        "bit": 8,
+        "afterRead": "remain; optional document remains accessible"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": "Place on the office desk without covering the ink bottle. Existing male wall portrait remains decorative; do not treat that portrait as a photograph of the group.",
+      "suggestedInteractionPixel": [
+        925,
+        706
+      ],
+      "placementRequiresInteractionCorrection": true,
+      "optional": true
+    },
+    {
+      "phase": 13,
+      "area": 0,
+      "id": "pages",
+      "layoutId": 13,
+      "spriteId": "paper_bundle",
+      "mode": "overlay",
+      "visualPixel": [
+        232,
+        535
+      ],
+      "visualWorld": [
+        -5.66986,
+        1.32057
+      ],
+      "worldSize": [
+        0.85,
+        0.69062
+      ],
+      "interactionPixel": [
+        232,
+        670
+      ],
+      "interactionWorld": [
+        -5.66986,
+        -0.61722
+      ],
+      "support": {
+        "kind": "furnitureTop",
+        "name": "Mesa dos registros",
+        "depthOffset": 3
+      },
+      "persistence": {
+        "state": "continuation.clues[2]",
+        "bit": 1,
+        "afterRead": "remain; acquired pages available in journal"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": "Place a clear stack of readable sheets on the table surface. Root must validate the physical approach around the table; visual point and approach are intentionally separate."
+    },
+    {
+      "phase": 13,
+      "area": 0,
+      "id": "photos",
+      "layoutId": 13,
+      "spriteId": "sepia_group_photo",
+      "mode": "overlay",
+      "visualPixel": [
+        389,
+        661
+      ],
+      "visualWorld": [
+        -3.41627,
+        -0.48804
+      ],
+      "worldSize": [
+        0.75,
+        0.61512
+      ],
+      "interactionPixel": [
+        395,
+        713
+      ],
+      "interactionWorld": [
+        -3.33014,
+        -1.23445
+      ],
+      "support": {
+        "kind": "floor",
+        "name": "Papéis da pesquisa",
+        "depthOffset": 1
+      },
+      "persistence": {
+        "state": "continuation.clues[2]",
+        "bit": 2,
+        "afterRead": "remain; photographs available in journal"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": "The photo lies with the existing research papers. Do not cover the whole floor patch."
+    },
+    {
+      "phase": 13,
+      "area": 0,
+      "id": "materials",
+      "layoutId": 13,
+      "spriteId": "mechanism_components",
+      "mode": "overlay",
+      "visualPixel": [
+        945,
+        595
+      ],
+      "visualWorld": [
+        4.56459,
+        0.45933
+      ],
+      "worldSize": [
+        0.8,
+        0.57563
+      ],
+      "interactionPixel": [
+        945,
+        624
+      ],
+      "interactionWorld": [
+        4.56459,
+        0.04306
+      ],
+      "support": {
+        "kind": "floor",
+        "name": "Caixa dos materiais",
+        "depthOffset": 1
+      },
+      "persistence": {
+        "state": "continuation.clues[2]",
+        "bit": 4,
+        "afterRead": "remain; inspection is not a consumable pickup"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": "Lay the separated pieces immediately in front of the materials crate, on clear floor. No new collider should block the route."
+    },
+    {
+      "phase": 13,
+      "area": 0,
+      "id": "optional",
+      "layoutId": 13,
+      "spriteId": "single_parchment",
+      "mode": "overlay",
+      "visualPixel": [
+        1063,
+        532
+      ],
+      "visualWorld": [
+        6.25837,
+        1.36364
+      ],
+      "worldSize": [
+        0.48,
+        0.50824
+      ],
+      "interactionPixel": [
+        1063,
+        622
+      ],
+      "interactionWorld": [
+        6.25837,
+        0.07177
+      ],
+      "support": {
+        "kind": "furnitureFront",
+        "name": "Estante de frascos",
+        "depthOffset": 3
+      },
+      "persistence": {
+        "state": "continuation.clues[2]",
+        "bit": 8,
+        "afterRead": "remain; optional note; never require it for exit"
+      },
+      "highlight": "active-investigation-only; subdued after first inspection",
+      "notes": "A visible pinned annotation on the cabinet front; preserve optional status.",
+      "optional": true
+    }
+  ]
+}
