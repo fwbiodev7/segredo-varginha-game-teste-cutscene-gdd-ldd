@@ -77,7 +77,10 @@ namespace Game.Varginha
             try
             {
                 if(Experiment.VarginhaCampaignStage.Active?.phase==2)
+                {
                     yield return MoveToPosition(Experiment.CampaignAdultHouse.WashApproach,.28f);
+                    if(Vector2.Distance(transform.position,Experiment.CampaignAdultHouse.WashApproach)>Experiment.CampaignAdultHouse.RoutineArrivalTolerance)yield break;
+                }
                 _spriteAnimation?.SetActionPose("Edelzio_WashFace");
                 bool waterStarted=false;
                 for(float elapsed=0;elapsed<1.65f;elapsed+=Time.deltaTime)
@@ -164,7 +167,8 @@ namespace Game.Varginha
                 if(seating!=null&&seating.IsOfficeSeat)seatPosition=seating.OfficeSeatPosition;
                 else if (Experiment.VarginhaCampaignStage.Active != null) seatPosition += Vector3.up * .77f;
                 yield return MoveToPosition(seatPosition, .34f);
-                if (Vector2.Distance(transform.position, seatPosition) > .4f)
+                float seatTolerance=Experiment.VarginhaCampaignStage.Active?.phase==2?Experiment.CampaignAdultHouse.RoutineArrivalTolerance:.4f;
+                if (Vector2.Distance(transform.position, seatPosition) > seatTolerance)
                 {
                     RestoreSeatCollision();
                     _notebookSession = false;
@@ -219,7 +223,13 @@ namespace Game.Varginha
         private IEnumerator CoffeeRoutine(Transform coffee, Action onComplete)
         {
             BeginAction();
-            yield return MoveCloseTo(coffee, .25f, .55f);
+            if(Experiment.VarginhaCampaignStage.Active?.phase==2)
+            {
+                var approach=Experiment.CampaignAdultHouse.RoutineApproach("food");
+                yield return MoveToPosition(approach,.25f);
+                if(Vector2.Distance(transform.position,approach)>Experiment.CampaignAdultHouse.RoutineArrivalTolerance){EndAction();yield break;}
+            }
+            else yield return MoveCloseTo(coffee, .25f, .55f);
             var worldCup = coffee != null ? coffee.GetComponent<SpriteRenderer>() : null;
             _worldCup = worldCup;
             _worldCupWasVisible = worldCup != null && worldCup.enabled;

@@ -198,12 +198,18 @@ namespace Game.Varginha.Experiment
         {
             int best = -1; float distance = 1.5f;
             for (int i = 0; i < _points.Count; i++)
-            { if (!PointAvailable(_points[i].id)) continue; float d = Vector2.Distance(_player.transform.position, _points[i].Position); if (d < distance) { distance = d; best = i; } }
+            {
+                string id=_points[i].id;
+                if (!PointAvailable(id)||phase==2&&CampaignAdultHouse.IsCloseRoutine(id)&&!CampaignAdultHouse.CanUseRoutine(_player,id)) continue;
+                float d = Vector2.Distance(_player.transform.position, _points[i].Position);
+                if (d < distance) { distance = d; best = i; }
+            }
             return best;
         }
         public void Interact(string id)
         {
             if (!_ready || _busy) return;
+            if(phase==2&&CampaignAdultHouse.IsCloseRoutine(id)&&!CampaignAdultHouse.CanUseRoutine(_player,id))return;
             if (phase == 2 && HandleKeyInteraction(id)) return;
             _carContext=id=="car";
             if (id == "car" && phase == 2 && _progress.CanLeaveHouse) { DepartForSchool(); return; }
@@ -279,7 +285,7 @@ namespace Game.Varginha.Experiment
             else if (id == "food" && action != null)
             {
                 bool finished = false; action.PlayDrinkCoffee(GameObject.Find("Coffee_Cup")?.transform, () => { finished = true; _player.RestoreOneHeart(); });
-                float time = 0; while (!finished && time < 5) { time += Time.deltaTime; yield return null; }
+                float time = 0; while (!finished && action.IsActing && time < 5) { time += Time.deltaTime; yield return null; }
                 if(finished)_progress.routine |= 2;
             }
             else if (id == "work" && action != null)

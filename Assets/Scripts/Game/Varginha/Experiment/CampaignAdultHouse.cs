@@ -6,7 +6,28 @@ namespace Game.Varginha.Experiment
     // Runtime visual corrections requested after testing; the adult scene and wall colliders stay authored.
     public static class CampaignAdultHouse
     {
-        public static Vector2 WashApproach=>CampaignIllustratedMaps.Get(2)?.Objective("wash")+Vector2.up*.58f??new Vector2(4.6f,-4.15f);
+        public const float RoutineInteractionRange=.65f;
+        public const float RoutineArrivalTolerance=.12f;
+        public static bool IsCloseRoutine(string id)=>id=="wash"||id=="food"||id=="work";
+        public static Vector2 RoutineApproach(string id)
+        {
+            var layout=CampaignIllustratedMaps.Get(2);
+            if(layout!=null)return layout.Objective(id)+Vector2.up*.58f;
+            return id=="wash"?new Vector2(4.6f,-4.15f):id=="food"?new Vector2(4.6f,-2.05f):new Vector2(-5,-2.3f);
+        }
+        public static Vector2 WashApproach=>RoutineApproach("wash");
+        public static bool CanUseRoutine(EdelzioTopDownController actor,string id)
+        {
+            if(actor==null)return false;
+            Vector2 destination=RoutineApproach(id);
+            if(Vector2.Distance(actor.transform.position,destination)>RoutineInteractionRange)return false;
+            var feet=actor.GetComponent<CircleCollider2D>();
+            Vector2 offset=feet!=null?(Vector2)feet.bounds.center-(Vector2)actor.transform.position:Vector2.down*.58f;
+            foreach(var hit in Physics2D.LinecastAll((Vector2)actor.transform.position+offset,destination+offset))
+                if(hit.collider!=null&&!hit.collider.isTrigger&&!hit.transform.IsChildOf(actor.transform)&&hit.transform!=actor.transform)
+                    return false;
+            return true;
+        }
         private static readonly Dictionary<string,Sprite> Sprites=new();
         public static void Apply()
         {
