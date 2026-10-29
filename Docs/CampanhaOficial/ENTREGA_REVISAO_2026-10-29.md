@@ -36,7 +36,7 @@ Extraia a pasta completa do ZIP e execute **Oizlede - Segredo de Varginha.exe**.
 - Cobertura consolidada Player: **342 casos distintos aprovados em seus resultados mais recentes, sem falhas pendentes**, conforme `player-consolidated.json`. Esse total reúne execuções e retestes; não representa uma única execução completa verde. O último ajuste de apoio visual dos documentos foi revalidado em Player: **1/1 aprovado** (`final-props-29.xml`), incluindo coleta, interações e reload no casarão/porão.
 - Resoluções: capturas1280×720 e1920×1080; resolução principal1920×1080. Conferência visual documentada nos relatórios de QA.
 - Build Windows: **Succeeded, zero erros, dois avisos** de API Unity obsoleta em código existente. Preservadas19 cenas e14 capítulos. Menu do executável final iniciou; três JSONs de save permaneceram idênticos por SHA256.
-- Conferência final com mouse: **pendente de fechar aviso de firewall do Windows para playerwithtests**, que cobre a janela. A ferramenta não alterou a permissão de rede. Testes automatizados do menu e configurações foram aprovados.
+- Conferência final com mouse: **aprovada após o usuário fechar o aviso do Windows**. Configurações abriu ao clique, Voltar retornou ao menu e a referência cinza mudou de “BORA PROGRAMAR!” para “VOU MANDAR O DIALETO!”. Nenhuma nova história foi iniciada e os saves permaneceram preservados. A ferramenta não alterou a permissão de rede. Retomada automática desta pendência removida.
 - ZIP gerado pelo empacotador com manifestos SHA256 e verificação CRC; resultado e hash em `windows-package.json`.
 
 ## Roteiro para dublagem

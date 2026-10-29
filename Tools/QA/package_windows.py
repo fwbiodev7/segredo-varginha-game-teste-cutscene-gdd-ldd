@@ -16,14 +16,17 @@ def sha(path):
     return h.hexdigest()
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--qa',type=Path,default=QA);args=parser.parse_args()
+    parser=argparse.ArgumentParser();parser.add_argument('--qa',type=Path,default=QA)
+    parser.add_argument('--archive-suffix',default='');args=parser.parse_args()
+    if any(c not in 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_-' for c in args.archive_suffix):
+        raise ValueError('Archive suffix must be a simple filename suffix.')
     qa=args.qa.resolve()
     if not qa.is_relative_to(ROOT/'output'):raise ValueError('QA evidence must stay in the project output folder.')
     report=json.loads((qa/'windows-build.json').read_text(encoding='utf-8'))
     if report['result']!='Succeeded' or report['errors']!=0:raise ValueError('No successful Windows build.')
     exe=Path(report['output']).resolve();folder=exe.parent
     if not folder.is_relative_to(ROOT/'Builds') or not exe.is_file():raise ValueError('Unexpected/missing build output.')
-    archive=folder.parent/(folder.name+'_Windows_x64.zip')
+    archive=folder.parent/(folder.name+'_Windows_x64'+args.archive_suffix+'.zip')
     if archive.exists():raise FileExistsError(archive)
     guide=ROOT/'Docs/CampanhaOficial/ENTREGA_REVISAO_2026-10-29.md' if report['version']=='0.5.3-beta' else ROOT/'Docs/CampanhaOficial/PLAYTEST_2026-10-21.md'
     shutil.copyfile(guide,folder/'LEIA-ME_PLAYTEST.md')

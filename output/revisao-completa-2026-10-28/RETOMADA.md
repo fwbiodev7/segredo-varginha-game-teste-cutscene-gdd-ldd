@@ -1,3 +1,10 @@
+# CONFERÊNCIA FINAL ENCERRADA —29/10/2026
+
+Usuário fechou o aviso. Build0.5.3-beta conferida com mouse: Configurações abriu, Voltar retornou ao menu e referência cinza rotativa mudou. Três saves JSON permaneceram idênticos por SHA256. Não foi iniciada nova história. Automação retomar-revis-o-oizlede-ap-s-renova-o REMOVIDA após concluir essa pendência. Não há trabalho a executar automaticamente às11:56:59. Relatório de entrega e native-smoke.json atualizados. ZIP com LEIA-ME atualizado recebe sufixo_QA-final, preservando ZIP anterior. Roteiro para dublador já entregue; vozes aguardam gravação. Limitações de QA permanecem expressas no relatório, sem afirmar jogada humana integral.
+
+O restante deste arquivo é histórico; não retomar suas instruções antigas.
+
+---
 # Retomada — estado atualizado em29/10/2026
 
 Saldo final:15% restantes; nenhum lote pesado novo. A MESMA automação foi atualizada para29/10/2026 às11:56:59 (Brasília), um minuto após reset real11:55:59. Commit da entrega:58b3aff. ZIP323227116bytes, SHA25636024b1da133c64553dfea213af25fc1d0aa98a88ffb64fd6ba46e9926d2db95.

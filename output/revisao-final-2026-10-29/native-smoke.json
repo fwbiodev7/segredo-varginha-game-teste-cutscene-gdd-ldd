@@ -2,5 +2,10 @@
   "same": true,
   "files": 3,
   "menuStarted": true,
-  "mouseCheck": "blocked by Windows firewall prompt for playerwithtests"
+  "mouseCheck": "Passed: Configuracoes opened by mouse; Voltar returned to menu",
+  "rotatingPhrase": "BORA PROGRAMAR! -> VOU MANDAR O DIALETO!",
+  "newCampaignStarted": false,
+  "firewall": "Closed manually by user; no network permission changed by agent",
+  "window": "Final0.5.3-beta executable",
+  "checkedAt": "2026-10-29T08:26:29.0686096-03:00"
 }
