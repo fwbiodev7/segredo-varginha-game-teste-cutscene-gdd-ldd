@@ -1,6 +1,6 @@
 # PRÓXIMA RETOMADA —29/10 às16:58:25 (Brasília)
 
-Última instrução humana: APENAS COMMIT/PUSH; usuário fará build manualmente. Build em execução interrompida, pasta parcial preservada com sufixo_interrompida quando aplicável. Não gerar build/ZIP na próxima rodada sem nova solicitação.
+Última instrução humana: APENAS COMMIT/PUSH; usuário fará build manualmente. Ao conferir o encerramento, a build iniciada ANTES do cancelamento já havia concluído com sucesso. Ela não foi aberta, empacotada nem entregue. Preservada em Builds/Oizlede_0.5.4-beta_2026-10-29; resultado em windows-build.json. Não gerar outra build ou sobrescrever essa pasta: usuário fará a build manualmente. Não gerar build/ZIP na próxima rodada sem nova solicitação.
 
 HEAD de implementação e2bf91b já enviado a origin/codex/campanha-15-fases-e-site. Casa em b8e55ad,3/3Player; Toro branca maior (218px), rodas8fases/bob/sombra e interior azul integrados. EditMode final33/33 e GPU de alpha/cabine1/1. Último E2E de cutscene ainda pendente: capturas inicialmente pegaram pausa/maçaneta; teste corrigido para porta e fases observadas de distância. Última tentativa não executou por DXGI_ERROR_DEVICE_REMOVED0x887a0005 durante buildPlayer. Não anunciar reteste final como aprovado. Nenhuma alteração de boss/hitbox entrou em runtime.
 
