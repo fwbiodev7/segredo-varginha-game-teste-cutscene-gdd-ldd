@@ -1,0 +1,24 @@
+{
+  "allowSemiTransparency": true,
+  "lockPivot": true,
+  "maxTextureSize": 2048,
+  "requiredClips": [
+    "walk_s",
+    "idle_s",
+    "walk_sw",
+    "idle_sw",
+    "walk_w",
+    "idle_w",
+    "walk_nw",
+    "idle_nw",
+    "walk_n",
+    "idle_n",
+    "walk_ne",
+    "idle_ne",
+    "walk_e",
+    "idle_e",
+    "walk_se",
+    "idle_se"
+  ],
+  "areaRatioWarning": 1.8
+}

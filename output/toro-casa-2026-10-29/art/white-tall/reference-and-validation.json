@@ -1,0 +1,30 @@
+{
+  "referenceSha256Before": "048dfd8c37a00d2fc84407871ea931f81927efd71bc69d50c733a549292f7344",
+  "referenceSha256After": "048dfd8c37a00d2fc84407871ea931f81927efd71bc69d50c733a549292f7344",
+  "blueSha256Before": "11246ad49a0e379634e3ffb2d54b39a531423fc8341f50abb9a3c3f9e064f4df",
+  "blueSha256After": "11246ad49a0e379634e3ffb2d54b39a531423fc8341f50abb9a3c3f9e064f4df",
+  "whiteFileSha256": "6683abc02d58700ea63842496074a99dad66dc3cd62bd7ba7aaedfef2a492832",
+  "whitePixelsSha256": "184d6ddd2e6a12ca2eecc636ba5cb78f48c11a4613581594a2b3b99b56c117ed",
+  "dimensions": [
+    128,
+    72
+  ],
+  "bounds": [
+    2,
+    9,
+    125,
+    61
+  ],
+  "visibleHeight": 52,
+  "blueVisibleHeight": 43,
+  "heightIncreasePercent": 20.93,
+  "alphaValues": [
+    0,
+    255
+  ],
+  "colors": 14,
+  "visiblePixels": 4101,
+  "noCanvasEdgeContact": true,
+  "nativeResampling": "Nearest; uniform fit with integer size rounding",
+  "pillowVersion": "10.4.0"
+}

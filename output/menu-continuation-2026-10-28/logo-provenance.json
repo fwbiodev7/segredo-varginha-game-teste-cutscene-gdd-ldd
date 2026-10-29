@@ -1,0 +1,26 @@
+{
+  "tool": "image_gen (built-in)",
+  "prompt": "Use case: background-extraction. Edit target: attached logo sprite reference. Prepare the single LARGE TOP logo as a game menu transparent PNG. Extract ONLY the main upper OIZLEDE logo with the red FRAGMENTO PERDIDO banner and teal CASO VARGINHA 1996 footer. Remove the four small bottom logo variants and all their yellow slogans. Remove ALL gray checkerboard background including inside letter gaps, replacing it with true alpha transparency, NOT a painted checkerboard. Crop close to the large logo with a small transparent margin, wide landscape aspect ratio. Preserve the existing pixel art, lettering, silhouette, colors, details and edges as faithfully as possible; do not redesign, smooth, add text or invent any new element. Exact text: OIZLEDE / FRAGMENTO PERDIDO / CASO VARGINHA 1996. Output just the extracted large logo on genuine transparent background.",
+  "original": "C:/Users/Usuario/Downloads/Logo Pixel Art Oizlede_ Fragmento Perdido.png",
+  "output": "Assets/Resources/Varginha/MenuLogoOizlede.png",
+  "date": "2026-10-28",
+  "note": "Original preserved; generated extraction inspected visually, not claimed pixel-identical.",
+  "original_sha256": "f11034446601421b3f95a81c30d4d99e334d0911b4f800d942b68ed4ca81159b",
+  "output_sha256": "8600f48151eb1071d67ef2a18c089b27f808958a02b1e810f0e13499b8fe2014",
+  "runtime_presentation": {
+    "shader": "Assets/Resources/Varginha/MenuLogoGrade.shader",
+    "saturation": 0.22,
+    "tint": [
+      0.76,
+      0.84,
+      0.84
+    ],
+    "canvas_rect": [
+      72,
+      155,
+      470,
+      157
+    ],
+    "captions": "Separate gray text; changed on menu entry without immediate repetition"
+  }
+}

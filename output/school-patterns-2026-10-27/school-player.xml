@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="10" result="Failed(Child)" total="10" passed="8" failed="2" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="0001-01-01 00:00:00Z" end-time="0001-01-01 00:00:00Z" duration="158,8894241">
+  <test-suite type="TestSuite" id="1000" name="Varginha_Completion_QA_20261027" fullname="Varginha_Completion_QA_20261027" runstate="Runnable" testcasecount="331" result="Failed" site="Child" start-time="2026-10-27 14:39:34Z" end-time="2026-10-27 14:42:13Z" duration="158.889424" total="10" passed="8" failed="2" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.AdultWindowsDoNotCutThePlayerAndStillCoverTheOldNight
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.ClassroomDesktopStaysSupportedAndNotebookInteractionWorks
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.GlobeKeepsItsNativeScaleCabinetContactAndInvestigation
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+One or more child tests had errors  The real UI must be reachable with controller
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithController
+  The real UI must be reachable with keyboard
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithKeyboard
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.NoSchoolInteractionCollectsTheDocumentsAgainOrBypassesTheGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.PartialWrongLinksAndHintsSurviveReopenAndReload
+<properties><property name="platform" value="PlayMode"></property></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="Assembly" id="1384" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Temp/UnityTempFile-5257065cf4518bf48be012152211038e/PlayerWithTests/PlayerWithTests_Data/Managed/GamePlayModeTests.dll" runstate="Runnable" testcasecount="331" result="Failed" site="Child" start-time="2026-10-27 14:39:34Z" end-time="2026-10-27 14:42:13Z" duration="158.840154" total="10" passed="8" failed="2" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.AdultWindowsDoNotCutThePlayerAndStillCoverTheOldNight
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.ClassroomDesktopStaysSupportedAndNotebookInteractionWorks
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.GlobeKeepsItsNativeScaleCabinetContactAndInvestigation
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+One or more child tests had errors  The real UI must be reachable with controller
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithController
+  The real UI must be reachable with keyboard
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithKeyboard
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.NoSchoolInteractionCollectsTheDocumentsAgainOrBypassesTheGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.PartialWrongLinksAndHintsSurviveReopenAndReload
+<properties><property name="_PID" value="29576"></property><property name="_APPDOMAIN" value="Unity Root Domain"></property><property name="platform" value="PlayMode"></property><property name="EditorOnly" value="False"></property></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1385" name="Game" fullname="Game" runstate="Runnable" testcasecount="331" result="Failed" site="Child" start-time="2026-10-27 14:39:34Z" end-time="2026-10-27 14:42:13Z" duration="158.799898" total="10" passed="8" failed="2" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.AdultWindowsDoNotCutThePlayerAndStillCoverTheOldNight
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.ClassroomDesktopStaysSupportedAndNotebookInteractionWorks
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.GlobeKeepsItsNativeScaleCabinetContactAndInvestigation
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+One or more child tests had errors  The real UI must be reachable with controller
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithController
+  The real UI must be reachable with keyboard
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithKeyboard
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.NoSchoolInteractionCollectsTheDocumentsAgainOrBypassesTheGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.PartialWrongLinksAndHintsSurviveReopenAndReload
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1386" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="331" result="Failed" site="Child" start-time="2026-10-27 14:39:34Z" end-time="2026-10-27 14:42:13Z" duration="158.735877" total="10" passed="8" failed="2" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.AdultWindowsDoNotCutThePlayerAndStillCoverTheOldNight
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.ClassroomDesktopStaysSupportedAndNotebookInteractionWorks
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.GlobeKeepsItsNativeScaleCabinetContactAndInvestigation
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+One or more child tests had errors  The real UI must be reachable with controller
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithController
+  The real UI must be reachable with keyboard
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithKeyboard
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.NoSchoolInteractionCollectsTheDocumentsAgainOrBypassesTheGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.PartialWrongLinksAndHintsSurviveReopenAndReload
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1387" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="331" result="Failed" site="Child" start-time="2026-10-27 14:39:34Z" end-time="2026-10-27 14:42:13Z" duration="158.674947" total="10" passed="8" failed="2" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.AdultWindowsDoNotCutThePlayerAndStillCoverTheOldNight
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.ClassroomDesktopStaysSupportedAndNotebookInteractionWorks
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.GlobeKeepsItsNativeScaleCabinetContactAndInvestigation
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+One or more child tests had errors  The real UI must be reachable with controller
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithController
+  The real UI must be reachable with keyboard
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithKeyboard
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.NoSchoolInteractionCollectsTheDocumentsAgainOrBypassesTheGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.PartialWrongLinksAndHintsSurviveReopenAndReload
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestFixture" id="1009" name="CampaignChapterExitReviewTests" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" testcasecount="15" result="Passed" start-time="2026-10-27 14:39:34Z" end-time="2026-10-27 14:39:43Z" duration="9.344335" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+<properties></properties><test-case id="1010" name="SchoolToLibrary" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary" methodname="SchoolToLibrary" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="884425281" result="Passed" start-time="2026-10-27 14:39:34Z" end-time="2026-10-27 14:39:43Z" duration="9.322989" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+</output></test-case></test-suite><test-suite type="TestFixture" id="1025" name="CampaignChaptersTests" fullname="Game.Tests.PlayMode.CampaignChaptersTests" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-27 14:39:43Z" end-time="2026-10-27 14:40:55Z" duration="71.091725" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+<properties></properties><test-case id="1031" name="HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" fullname="Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" methodname="HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="1310334339" result="Passed" start-time="2026-10-27 14:39:43Z" end-time="2026-10-27 14:40:54Z" duration="71.018908" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Category" value="HudPuzzles"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+</output></test-case></test-suite><test-suite type="TestFixture" id="1130" name="CampaignSchoolDeskPlayTests" fullname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" classname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-27 14:40:55Z" end-time="2026-10-27 14:41:17Z" duration="22.857106" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.AdultWindowsDoNotCutThePlayerAndStillCoverTheOldNight
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.ClassroomDesktopStaysSupportedAndNotebookInteractionWorks
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.GlobeKeepsItsNativeScaleCabinetContactAndInvestigation
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+<properties></properties><test-case id="1134" name="AdultWindowsDoNotCutThePlayerAndStillCoverTheOldNight" fullname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.AdultWindowsDoNotCutThePlayerAndStillCoverTheOldNight" methodname="AdultWindowsDoNotCutThePlayerAndStillCoverTheOldNight" classname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" runstate="Runnable" seed="892451948" result="Passed" start-time="2026-10-27 14:40:55Z" end-time="2026-10-27 14:41:00Z" duration="5.894947" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.AdultWindowsDoNotCutThePlayerAndStillCoverTheOldNight
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="40000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.AdultWindowsDoNotCutThePlayerAndStillCoverTheOldNight
+</output></test-case><test-case id="1133" name="ClassroomDesktopStaysSupportedAndNotebookInteractionWorks" fullname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.ClassroomDesktopStaysSupportedAndNotebookInteractionWorks" methodname="ClassroomDesktopStaysSupportedAndNotebookInteractionWorks" classname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" runstate="Runnable" seed="671218534" result="Passed" start-time="2026-10-27 14:41:00Z" end-time="2026-10-27 14:41:05Z" duration="4.838089" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.ClassroomDesktopStaysSupportedAndNotebookInteractionWorks
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="40000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.ClassroomDesktopStaysSupportedAndNotebookInteractionWorks
+</output></test-case><test-case id="1131" name="GlobeKeepsItsNativeScaleCabinetContactAndInvestigation" fullname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.GlobeKeepsItsNativeScaleCabinetContactAndInvestigation" methodname="GlobeKeepsItsNativeScaleCabinetContactAndInvestigation" classname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" runstate="Runnable" seed="903049552" result="Passed" start-time="2026-10-27 14:41:05Z" end-time="2026-10-27 14:41:10Z" duration="4.521252" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.GlobeKeepsItsNativeScaleCabinetContactAndInvestigation
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="40000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.GlobeKeepsItsNativeScaleCabinetContactAndInvestigation
+</output></test-case><test-case id="1132" name="OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach" fullname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach" methodname="OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach" classname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" runstate="Runnable" seed="448604928" result="Passed" start-time="2026-10-27 14:41:10Z" end-time="2026-10-27 14:41:17Z" duration="7.591628" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="40000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+</output></test-case></test-suite><test-suite type="TestFixture" id="1135" name="CampaignSchoolPatternsPlayTests" fullname="Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests" classname="Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-27 14:41:17Z" end-time="2026-10-27 14:42:13Z" duration="55.303340" total="4" passed="2" failed="2" inconclusive="0" skipped="0" asserts="0">One or more child tests had errors  The real UI must be reachable with controller
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithController
+  The real UI must be reachable with keyboard
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithKeyboard
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.NoSchoolInteractionCollectsTheDocumentsAgainOrBypassesTheGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.PartialWrongLinksAndHintsSurviveReopenAndReload
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-case id="1137" name="FourStepsPlayableWithController" fullname="Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithController" methodname="FourStepsPlayableWithController" classname="Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests" runstate="Runnable" seed="347025719" result="Failed" start-time="2026-10-27 14:41:17Z" end-time="2026-10-27 14:41:36Z" duration="18.978081" asserts="0">  The real UI must be reachable with controller
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithController
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="120000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>  The real UI must be reachable with controller
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+<message>  The real UI must be reachable with controller
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+</message><stack-trace>at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+</stack-trace></failure><output>NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithController
+</output></test-case><test-case id="1136" name="FourStepsPlayableWithKeyboard" fullname="Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithKeyboard" methodname="FourStepsPlayableWithKeyboard" classname="Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests" runstate="Runnable" seed="1041470715" result="Failed" start-time="2026-10-27 14:41:36Z" end-time="2026-10-27 14:41:56Z" duration="19.813077" asserts="0">  The real UI must be reachable with keyboard
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithKeyboard
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="120000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>  The real UI must be reachable with keyboard
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+<message>  The real UI must be reachable with keyboard
+  Expected: (x:905.00, y:570.00, width:220.00, height:45.00)
+  But was:  (x:155.00, y:570.00, width:300.00, height:45.00)
+</message><stack-trace>at Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests+&lt;Click&gt;d__14.MoveNext () [0x0010f] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignSchoolPatternsPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+</stack-trace></failure><output>NATIVE_TEST Failed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.FourStepsPlayableWithKeyboard
+</output></test-case><test-case id="1139" name="NoSchoolInteractionCollectsTheDocumentsAgainOrBypassesTheGate" fullname="Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.NoSchoolInteractionCollectsTheDocumentsAgainOrBypassesTheGate" methodname="NoSchoolInteractionCollectsTheDocumentsAgainOrBypassesTheGate" classname="Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests" runstate="Runnable" seed="1812315865" result="Passed" start-time="2026-10-27 14:41:56Z" end-time="2026-10-27 14:42:00Z" duration="4.193496" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.NoSchoolInteractionCollectsTheDocumentsAgainOrBypassesTheGate
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="40000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.NoSchoolInteractionCollectsTheDocumentsAgainOrBypassesTheGate
+</output></test-case><test-case id="1138" name="PartialWrongLinksAndHintsSurviveReopenAndReload" fullname="Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.PartialWrongLinksAndHintsSurviveReopenAndReload" methodname="PartialWrongLinksAndHintsSurviveReopenAndReload" classname="Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests" runstate="Runnable" seed="12749662" result="Passed" start-time="2026-10-27 14:42:00Z" end-time="2026-10-27 14:42:13Z" duration="12.222495" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.PartialWrongLinksAndHintsSurviveReopenAndReload
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignSchoolPatternsPlayTests.PartialWrongLinksAndHintsSurviveReopenAndReload
+</output></test-case></test-suite></test-suite></test-suite></test-suite></test-suite></test-suite>
+</test-run>

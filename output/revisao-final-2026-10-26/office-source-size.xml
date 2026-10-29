@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Passed" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-26 10:59:45Z" end-time="2026-10-26 10:59:52Z" duration="7,3826145">
+  <test-suite type="TestSuite" id="1361" name="Varginha_Final_QA_20261026" fullname="Varginha_Final_QA_20261026" runstate="Runnable" testcasecount="305" result="Passed" start-time="2026-10-26 10:59:45Z" end-time="2026-10-26 10:59:52Z" duration="7.382615" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1715" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="305" result="Passed" start-time="2026-10-26 10:59:45Z" end-time="2026-10-26 10:59:52Z" duration="7.362170" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="37844" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1716" name="Game" fullname="Game" runstate="Runnable" testcasecount="305" result="Passed" start-time="2026-10-26 10:59:45Z" end-time="2026-10-26 10:59:52Z" duration="7.354364" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1717" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="305" result="Passed" start-time="2026-10-26 10:59:45Z" end-time="2026-10-26 10:59:52Z" duration="7.336161" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1718" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="305" result="Passed" start-time="2026-10-26 10:59:45Z" end-time="2026-10-26 10:59:52Z" duration="7.303396" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1471" name="CampaignSchoolDeskPlayTests" fullname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" classname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-26 10:59:45Z" end-time="2026-10-26 10:59:52Z" duration="7.290987" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1473" name="OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach" fullname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach" methodname="OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach" classname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" runstate="Runnable" seed="439484963" result="Passed" start-time="2026-10-26 10:59:45Z" end-time="2026-10-26 10:59:52Z" duration="7.263817" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="40000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+QA test: Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+Shader 'Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling' is not supported or has been stripped from the build (in 'Blit FSR Upscaling'). PostProcessing render passes will not execute.
+Shader 'Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling' is not supported or has been stripped from the build (in 'Blit FSR Upscaling'). PostProcessing render passes will not execute.
+QA result: Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+QA result: Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Final_QA_20261026\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Final_QA_20261026\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-26 14:12:03Z" end-time="2026-10-26 14:12:15Z" duration="12,1212136">
+  <test-suite type="TestSuite" id="1369" name="Varginha_Final_QA_20261026" fullname="Varginha_Final_QA_20261026" runstate="Runnable" testcasecount="311" result="Passed" start-time="2026-10-26 14:12:03Z" end-time="2026-10-26 14:12:15Z" duration="12.121214" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1731" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="311" result="Passed" start-time="2026-10-26 14:12:03Z" end-time="2026-10-26 14:12:15Z" duration="12.108603" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="14252" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1732" name="Game" fullname="Game" runstate="Runnable" testcasecount="311" result="Passed" start-time="2026-10-26 14:12:03Z" end-time="2026-10-26 14:12:15Z" duration="12.097085" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1733" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="311" result="Passed" start-time="2026-10-26 14:12:03Z" end-time="2026-10-26 14:12:15Z" duration="12.080346" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1734" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="311" result="Passed" start-time="2026-10-26 14:12:03Z" end-time="2026-10-26 14:12:15Z" duration="12.063601" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1499" name="CharacterFrameRenderingTests" fullname="Game.Tests.PlayMode.CharacterFrameRenderingTests" classname="Game.Tests.PlayMode.CharacterFrameRenderingTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-26 14:12:03Z" end-time="2026-10-26 14:12:15Z" duration="12.040952" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties>
+                <property name="Category" value="CharacterFrames" />
+              </properties>
+              <test-case id="1501" name="AllStoryDirectionsActionsPortraitsAndEquipmentHaveValidMeshes" fullname="Game.Tests.PlayMode.CharacterFrameRenderingTests.AllStoryDirectionsActionsPortraitsAndEquipmentHaveValidMeshes" methodname="AllStoryDirectionsActionsPortraitsAndEquipmentHaveValidMeshes" classname="Game.Tests.PlayMode.CharacterFrameRenderingTests" runstate="Runnable" seed="147886354" result="Passed" start-time="2026-10-26 14:12:03Z" end-time="2026-10-26 14:12:07Z" duration="3.715881" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CharacterFrameRenderingTests.AllStoryDirectionsActionsPortraitsAndEquipmentHaveValidMeshes
+QA test: Game.Tests.PlayMode.CharacterFrameRenderingTests.AllStoryDirectionsActionsPortraitsAndEquipmentHaveValidMeshes
+Shader 'Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling' is not supported or has been stripped from the build (in 'Blit FSR Upscaling'). PostProcessing render passes will not execute.
+Shader 'Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling' is not supported or has been stripped from the build (in 'Blit FSR Upscaling'). PostProcessing render passes will not execute.
+QA result: Passed Game.Tests.PlayMode.CharacterFrameRenderingTests.AllStoryDirectionsActionsPortraitsAndEquipmentHaveValidMeshes
+QA result: Passed Game.Tests.PlayMode.CharacterFrameRenderingTests.AllStoryDirectionsActionsPortraitsAndEquipmentHaveValidMeshes
+]]></output>
+              </test-case>
+              <test-case id="1500" name="ChildFramesExcludeNeighbourHeadsAndKeepFeetAnchored" fullname="Game.Tests.PlayMode.CharacterFrameRenderingTests.ChildFramesExcludeNeighbourHeadsAndKeepFeetAnchored" methodname="ChildFramesExcludeNeighbourHeadsAndKeepFeetAnchored" classname="Game.Tests.PlayMode.CharacterFrameRenderingTests" runstate="Runnable" seed="1392969407" result="Passed" start-time="2026-10-26 14:12:07Z" end-time="2026-10-26 14:12:07Z" duration="0.346183" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CharacterFrameRenderingTests.ChildFramesExcludeNeighbourHeadsAndKeepFeetAnchored
+QA test: Game.Tests.PlayMode.CharacterFrameRenderingTests.ChildFramesExcludeNeighbourHeadsAndKeepFeetAnchored
+QA result: Passed Game.Tests.PlayMode.CharacterFrameRenderingTests.ChildFramesExcludeNeighbourHeadsAndKeepFeetAnchored
+QA result: Passed Game.Tests.PlayMode.CharacterFrameRenderingTests.ChildFramesExcludeNeighbourHeadsAndKeepFeetAnchored
+]]></output>
+              </test-case>
+              <test-case id="1503" name="EdelzioCompactOriginalWalkAndPunchFramesRenderWhole" fullname="Game.Tests.PlayMode.CharacterFrameRenderingTests.EdelzioCompactOriginalWalkAndPunchFramesRenderWhole" methodname="EdelzioCompactOriginalWalkAndPunchFramesRenderWhole" classname="Game.Tests.PlayMode.CharacterFrameRenderingTests" runstate="Runnable" seed="1020826462" result="Passed" start-time="2026-10-26 14:12:07Z" end-time="2026-10-26 14:12:08Z" duration="1.035785" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CharacterFrameRenderingTests.EdelzioCompactOriginalWalkAndPunchFramesRenderWhole
+QA test: Game.Tests.PlayMode.CharacterFrameRenderingTests.EdelzioCompactOriginalWalkAndPunchFramesRenderWhole
+QA result: Passed Game.Tests.PlayMode.CharacterFrameRenderingTests.EdelzioCompactOriginalWalkAndPunchFramesRenderWhole
+QA result: Passed Game.Tests.PlayMode.CharacterFrameRenderingTests.EdelzioCompactOriginalWalkAndPunchFramesRenderWhole
+]]></output>
+              </test-case>
+              <test-case id="1504" name="RendersEveryDirectional20261026FrameThroughUnitySpriteRenderer" fullname="Game.Tests.PlayMode.CharacterFrameRenderingTests.RendersEveryDirectional20261026FrameThroughUnitySpriteRenderer" methodname="RendersEveryDirectional20261026FrameThroughUnitySpriteRenderer" classname="Game.Tests.PlayMode.CharacterFrameRenderingTests" runstate="Runnable" seed="1532640882" result="Passed" start-time="2026-10-26 14:12:08Z" end-time="2026-10-26 14:12:11Z" duration="3.102548" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="180000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CharacterFrameRenderingTests.RendersEveryDirectional20261026FrameThroughUnitySpriteRenderer
+QA test: Game.Tests.PlayMode.CharacterFrameRenderingTests.RendersEveryDirectional20261026FrameThroughUnitySpriteRenderer
+QA result: Passed Game.Tests.PlayMode.CharacterFrameRenderingTests.RendersEveryDirectional20261026FrameThroughUnitySpriteRenderer
+QA result: Passed Game.Tests.PlayMode.CharacterFrameRenderingTests.RendersEveryDirectional20261026FrameThroughUnitySpriteRenderer
+]]></output>
+              </test-case>
+              <test-case id="1502" name="StudentAndLegacyPlayerCyclesKeepGeometryAndShareAtlases" fullname="Game.Tests.PlayMode.CharacterFrameRenderingTests.StudentAndLegacyPlayerCyclesKeepGeometryAndShareAtlases" methodname="StudentAndLegacyPlayerCyclesKeepGeometryAndShareAtlases" classname="Game.Tests.PlayMode.CharacterFrameRenderingTests" runstate="Runnable" seed="743812589" result="Passed" start-time="2026-10-26 14:12:11Z" end-time="2026-10-26 14:12:15Z" duration="3.819988" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CharacterFrameRenderingTests.StudentAndLegacyPlayerCyclesKeepGeometryAndShareAtlases
+QA test: Game.Tests.PlayMode.CharacterFrameRenderingTests.StudentAndLegacyPlayerCyclesKeepGeometryAndShareAtlases
+QA result: Passed Game.Tests.PlayMode.CharacterFrameRenderingTests.StudentAndLegacyPlayerCyclesKeepGeometryAndShareAtlases
+QA result: Passed Game.Tests.PlayMode.CharacterFrameRenderingTests.StudentAndLegacyPlayerCyclesKeepGeometryAndShareAtlases
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Final_QA_20261026\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Final_QA_20261026\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

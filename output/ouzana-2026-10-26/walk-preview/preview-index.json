@@ -1,0 +1,421 @@
+{
+  "clips": [
+    {
+      "clip": "walk_s",
+      "file": "clip_000.png",
+      "loop": true,
+      "sequence": [
+        "walk_s_0",
+        "walk_s_1",
+        "walk_s_2",
+        "walk_s_3",
+        "walk_s_4",
+        "walk_s_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 660,
+      "overlayPairs": [
+        [
+          "walk_s_0",
+          "walk_s_1"
+        ],
+        [
+          "walk_s_1",
+          "walk_s_2"
+        ],
+        [
+          "walk_s_2",
+          "walk_s_3"
+        ],
+        [
+          "walk_s_3",
+          "walk_s_4"
+        ],
+        [
+          "walk_s_4",
+          "walk_s_5"
+        ],
+        [
+          "walk_s_5",
+          "walk_s_0"
+        ]
+      ]
+    },
+    {
+      "clip": "idle_s",
+      "file": "clip_001.png",
+      "loop": true,
+      "sequence": [
+        "walk_s_2"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 110,
+      "overlayPairs": []
+    },
+    {
+      "clip": "walk_sw",
+      "file": "clip_002.png",
+      "loop": true,
+      "sequence": [
+        "walk_sw_0",
+        "walk_sw_1",
+        "walk_sw_2",
+        "walk_sw_3",
+        "walk_sw_4",
+        "walk_sw_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 660,
+      "overlayPairs": [
+        [
+          "walk_sw_0",
+          "walk_sw_1"
+        ],
+        [
+          "walk_sw_1",
+          "walk_sw_2"
+        ],
+        [
+          "walk_sw_2",
+          "walk_sw_3"
+        ],
+        [
+          "walk_sw_3",
+          "walk_sw_4"
+        ],
+        [
+          "walk_sw_4",
+          "walk_sw_5"
+        ],
+        [
+          "walk_sw_5",
+          "walk_sw_0"
+        ]
+      ]
+    },
+    {
+      "clip": "idle_sw",
+      "file": "clip_003.png",
+      "loop": true,
+      "sequence": [
+        "walk_sw_2"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 110,
+      "overlayPairs": []
+    },
+    {
+      "clip": "walk_w",
+      "file": "clip_004.png",
+      "loop": true,
+      "sequence": [
+        "walk_w_0",
+        "walk_w_1",
+        "walk_w_2",
+        "walk_w_3",
+        "walk_w_4",
+        "walk_w_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 660,
+      "overlayPairs": [
+        [
+          "walk_w_0",
+          "walk_w_1"
+        ],
+        [
+          "walk_w_1",
+          "walk_w_2"
+        ],
+        [
+          "walk_w_2",
+          "walk_w_3"
+        ],
+        [
+          "walk_w_3",
+          "walk_w_4"
+        ],
+        [
+          "walk_w_4",
+          "walk_w_5"
+        ],
+        [
+          "walk_w_5",
+          "walk_w_0"
+        ]
+      ]
+    },
+    {
+      "clip": "idle_w",
+      "file": "clip_005.png",
+      "loop": true,
+      "sequence": [
+        "walk_w_2"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 110,
+      "overlayPairs": []
+    },
+    {
+      "clip": "walk_nw",
+      "file": "clip_006.png",
+      "loop": true,
+      "sequence": [
+        "walk_nw_0",
+        "walk_nw_1",
+        "walk_nw_2",
+        "walk_nw_3",
+        "walk_nw_4",
+        "walk_nw_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 660,
+      "overlayPairs": [
+        [
+          "walk_nw_0",
+          "walk_nw_1"
+        ],
+        [
+          "walk_nw_1",
+          "walk_nw_2"
+        ],
+        [
+          "walk_nw_2",
+          "walk_nw_3"
+        ],
+        [
+          "walk_nw_3",
+          "walk_nw_4"
+        ],
+        [
+          "walk_nw_4",
+          "walk_nw_5"
+        ],
+        [
+          "walk_nw_5",
+          "walk_nw_0"
+        ]
+      ]
+    },
+    {
+      "clip": "idle_nw",
+      "file": "clip_007.png",
+      "loop": true,
+      "sequence": [
+        "walk_nw_2"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 110,
+      "overlayPairs": []
+    },
+    {
+      "clip": "walk_n",
+      "file": "clip_008.png",
+      "loop": true,
+      "sequence": [
+        "walk_n_0",
+        "walk_n_1",
+        "walk_n_2",
+        "walk_n_3",
+        "walk_n_4",
+        "walk_n_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 660,
+      "overlayPairs": [
+        [
+          "walk_n_0",
+          "walk_n_1"
+        ],
+        [
+          "walk_n_1",
+          "walk_n_2"
+        ],
+        [
+          "walk_n_2",
+          "walk_n_3"
+        ],
+        [
+          "walk_n_3",
+          "walk_n_4"
+        ],
+        [
+          "walk_n_4",
+          "walk_n_5"
+        ],
+        [
+          "walk_n_5",
+          "walk_n_0"
+        ]
+      ]
+    },
+    {
+      "clip": "idle_n",
+      "file": "clip_009.png",
+      "loop": true,
+      "sequence": [
+        "walk_n_2"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 110,
+      "overlayPairs": []
+    },
+    {
+      "clip": "walk_ne",
+      "file": "clip_010.png",
+      "loop": true,
+      "sequence": [
+        "walk_ne_0",
+        "walk_ne_1",
+        "walk_ne_2",
+        "walk_ne_3",
+        "walk_ne_4",
+        "walk_ne_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 660,
+      "overlayPairs": [
+        [
+          "walk_ne_0",
+          "walk_ne_1"
+        ],
+        [
+          "walk_ne_1",
+          "walk_ne_2"
+        ],
+        [
+          "walk_ne_2",
+          "walk_ne_3"
+        ],
+        [
+          "walk_ne_3",
+          "walk_ne_4"
+        ],
+        [
+          "walk_ne_4",
+          "walk_ne_5"
+        ],
+        [
+          "walk_ne_5",
+          "walk_ne_0"
+        ]
+      ]
+    },
+    {
+      "clip": "idle_ne",
+      "file": "clip_011.png",
+      "loop": true,
+      "sequence": [
+        "walk_ne_2"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 110,
+      "overlayPairs": []
+    },
+    {
+      "clip": "walk_e",
+      "file": "clip_012.png",
+      "loop": true,
+      "sequence": [
+        "walk_e_0",
+        "walk_e_1",
+        "walk_e_2",
+        "walk_e_3",
+        "walk_e_4",
+        "walk_e_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 660,
+      "overlayPairs": [
+        [
+          "walk_e_0",
+          "walk_e_1"
+        ],
+        [
+          "walk_e_1",
+          "walk_e_2"
+        ],
+        [
+          "walk_e_2",
+          "walk_e_3"
+        ],
+        [
+          "walk_e_3",
+          "walk_e_4"
+        ],
+        [
+          "walk_e_4",
+          "walk_e_5"
+        ],
+        [
+          "walk_e_5",
+          "walk_e_0"
+        ]
+      ]
+    },
+    {
+      "clip": "idle_e",
+      "file": "clip_013.png",
+      "loop": true,
+      "sequence": [
+        "walk_e_2"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 110,
+      "overlayPairs": []
+    },
+    {
+      "clip": "walk_se",
+      "file": "clip_014.png",
+      "loop": true,
+      "sequence": [
+        "walk_se_0",
+        "walk_se_1",
+        "walk_se_2",
+        "walk_se_3",
+        "walk_se_4",
+        "walk_se_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 660,
+      "overlayPairs": [
+        [
+          "walk_se_0",
+          "walk_se_1"
+        ],
+        [
+          "walk_se_1",
+          "walk_se_2"
+        ],
+        [
+          "walk_se_2",
+          "walk_se_3"
+        ],
+        [
+          "walk_se_3",
+          "walk_se_4"
+        ],
+        [
+          "walk_se_4",
+          "walk_se_5"
+        ],
+        [
+          "walk_se_5",
+          "walk_se_0"
+        ]
+      ]
+    },
+    {
+      "clip": "idle_se",
+      "file": "clip_015.png",
+      "loop": true,
+      "sequence": [
+        "walk_se_2"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 110,
+      "overlayPairs": []
+    }
+  ],
+  "visualReviewCompleted": false
+}

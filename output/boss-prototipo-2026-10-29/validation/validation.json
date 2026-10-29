@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "status": "structural_pass",
+  "errors": [],
+  "warnings": [],
+  "frames": [
+    {
+      "id": "prototype_front_threat",
+      "bbox": [
+        8,
+        9,
+        119,
+        119
+      ],
+      "visiblePixels": 4277,
+      "colors": 22,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "65466faec26f512e4fbd3c6220220df9a45e6e8451d6d7d46a38d86df75dca32"
+    }
+  ],
+  "paletteColors": 22,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\boss-prototipo-2026-10-29\\prototype-metadata.json",
+  "metadataSha256": "1747b49f5566eeec9cb025884771e91ea1bd92d705192a9681dd279da277b548"
+}

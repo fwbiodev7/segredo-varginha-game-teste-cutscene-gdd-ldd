@@ -1,0 +1,12 @@
+{
+  "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\revisao-final-2026-10-26\\directional-characters-final-player-2026-10-26.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

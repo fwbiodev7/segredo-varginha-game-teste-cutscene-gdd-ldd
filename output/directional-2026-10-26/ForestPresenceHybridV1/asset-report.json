@@ -1,0 +1,12 @@
+{
+  "sourceSha256": "8d50fad3e2d9aff1443a395ae19e422f5777ed4e517656e334b39384313b9f2b",
+  "sourceSize": [
+    1536,
+    1024
+  ],
+  "alphaCutoff": 250,
+  "componentMinPixels": 1000,
+  "frameCount": 32,
+  "frameHeightMin": 102,
+  "frameHeightMax": 116
+}

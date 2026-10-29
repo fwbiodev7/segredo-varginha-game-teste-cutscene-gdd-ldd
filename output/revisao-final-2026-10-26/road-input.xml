@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-26 10:48:12Z" end-time="2026-10-26 10:48:16Z" duration="4,9532615">
+  <test-suite type="TestSuite" id="1359" name="Varginha_Final_QA_20261026" fullname="Varginha_Final_QA_20261026" runstate="Runnable" testcasecount="304" result="Failed" site="Child" start-time="2026-10-26 10:48:12Z" end-time="2026-10-26 10:48:16Z" duration="4.953262" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1711" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="304" result="Failed" site="Child" start-time="2026-10-26 10:48:12Z" end-time="2026-10-26 10:48:16Z" duration="4.940227" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="20856" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1712" name="Game" fullname="Game" runstate="Runnable" testcasecount="304" result="Failed" site="Child" start-time="2026-10-26 10:48:12Z" end-time="2026-10-26 10:48:16Z" duration="4.928527" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1713" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="304" result="Failed" site="Child" start-time="2026-10-26 10:48:12Z" end-time="2026-10-26 10:48:16Z" duration="4.911777" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1714" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="304" result="Failed" site="Child" start-time="2026-10-26 10:48:12Z" end-time="2026-10-26 10:48:16Z" duration="4.892044" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1472" name="CampaignVehicleContactTests" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2026-10-26 10:48:12Z" end-time="2026-10-26 10:48:16Z" duration="4.883128" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1473" name="LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit" methodname="LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" seed="2139927285" result="Failed" start-time="2026-10-26 10:48:12Z" end-time="2026-10-26 10:48:16Z" duration="4.853471" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: greater than 0.200000003f
+  But was:  0.0f
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.CampaignVehicleContactTests+<LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit>d__4.MoveNext () [0x0032e] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignVehicleContactTests.cs:58
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+ROAD_HELD DownArrow raw=True input=(0.00, -1.00) speed=-0,09999996 position=(0.01, 0.00, 0.00) transitioning=False
+ROAD_HELD DownArrow raw=True input=(0.00, -1.00) speed=-0,09999996 position=(0.01, 0.00, 0.00) transitioning=False
+ROAD_HELD UpArrow raw=True input=(0.00, 1.00) speed=0 position=(0.01, 0.00, 0.00) transitioning=False
+ROAD_HELD UpArrow raw=True input=(0.00, 1.00) speed=0 position=(0.01, 0.00, 0.00) transitioning=False
+ROAD_DIAGNOSTIC _state=Drive
+ROAD_DIAGNOSTIC _state=Drive
+ROAD_DIAGNOSTIC _titleTime=3,00184
+ROAD_DIAGNOSTIC _titleTime=3,00184
+ROAD_DIAGNOSTIC _paused=False
+ROAD_DIAGNOSTIC _paused=False
+ROAD_DIAGNOSTIC _inspect=False
+ROAD_DIAGNOSTIC _inspect=False
+ROAD_DIAGNOSTIC _input=(0.00, 0.00)
+ROAD_DIAGNOSTIC _input=(0.00, 0.00)
+ROAD_DIAGNOSTIC _speed=0
+ROAD_DIAGNOSTIC _speed=0
+ROAD_DIAGNOSTIC _velocity=(0.00, 0.00)
+ROAD_DIAGNOSTIC _velocity=(0.00, 0.00)
+QA result: Failed Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+QA result: Failed Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Final_QA_20261026\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Final_QA_20261026\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

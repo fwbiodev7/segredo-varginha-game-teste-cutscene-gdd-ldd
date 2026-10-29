@@ -1,0 +1,28 @@
+{
+  "allowedColors": [
+    "#45B3E6",
+    "#B0C7D1",
+    "#3189CC",
+    "#000000",
+    "#18698F",
+    "#C8F2F7",
+    "#2E373B",
+    "#59D2F7",
+    "#7D9199",
+    "#5A686E",
+    "#272C2E",
+    "#B4CCD6",
+    "#0B3142",
+    "#FFE5B8",
+    "#FFF8EB",
+    "#F6F7F7",
+    "#D4DFE4"
+  ],
+  "allowSemiTransparency": false,
+  "maxColors": 17,
+  "requiredClips": [
+    "toro_side_right"
+  ],
+  "lockPivot": true,
+  "maxTextureSize": 128
+}

@@ -1,0 +1,57 @@
+{
+  "clips": [
+    {
+      "clip": "run_front_side",
+      "file": "clip_000.png",
+      "loop": true,
+      "sequence": [
+        "front_side_0",
+        "front_side_1",
+        "front_side_2"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 500,
+      "overlayPairs": [
+        [
+          "front_side_0",
+          "front_side_1"
+        ],
+        [
+          "front_side_1",
+          "front_side_2"
+        ],
+        [
+          "front_side_2",
+          "front_side_0"
+        ]
+      ]
+    },
+    {
+      "clip": "run_back_side",
+      "file": "clip_001.png",
+      "loop": true,
+      "sequence": [
+        "back_side_0",
+        "back_side_1",
+        "back_side_2"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 500,
+      "overlayPairs": [
+        [
+          "back_side_0",
+          "back_side_1"
+        ],
+        [
+          "back_side_1",
+          "back_side_2"
+        ],
+        [
+          "back_side_2",
+          "back_side_0"
+        ]
+      ]
+    }
+  ],
+  "visualReviewCompleted": false
+}

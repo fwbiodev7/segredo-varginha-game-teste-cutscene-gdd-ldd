@@ -1,0 +1,16 @@
+{
+  "allowSemiTransparency": true,
+  "lockPivot": true,
+  "maxTextureSize": 2048,
+  "requiredClips": [
+    "attack_s",
+    "attack_sw",
+    "attack_w",
+    "attack_nw",
+    "attack_n",
+    "attack_ne",
+    "attack_e",
+    "attack_se"
+  ],
+  "areaRatioWarning": 1.8
+}

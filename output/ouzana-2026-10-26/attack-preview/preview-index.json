@@ -1,0 +1,301 @@
+{
+  "clips": [
+    {
+      "clip": "attack_s",
+      "file": "clip_000.png",
+      "loop": false,
+      "sequence": [
+        "attack_s_0",
+        "attack_s_1",
+        "attack_s_2",
+        "attack_s_3",
+        "attack_s_4",
+        "attack_s_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 640,
+      "overlayPairs": [
+        [
+          "attack_s_0",
+          "attack_s_1"
+        ],
+        [
+          "attack_s_1",
+          "attack_s_2"
+        ],
+        [
+          "attack_s_2",
+          "attack_s_3"
+        ],
+        [
+          "attack_s_3",
+          "attack_s_4"
+        ],
+        [
+          "attack_s_4",
+          "attack_s_5"
+        ]
+      ]
+    },
+    {
+      "clip": "attack_sw",
+      "file": "clip_001.png",
+      "loop": false,
+      "sequence": [
+        "attack_sw_0",
+        "attack_sw_1",
+        "attack_sw_2",
+        "attack_sw_3",
+        "attack_sw_4",
+        "attack_sw_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 640,
+      "overlayPairs": [
+        [
+          "attack_sw_0",
+          "attack_sw_1"
+        ],
+        [
+          "attack_sw_1",
+          "attack_sw_2"
+        ],
+        [
+          "attack_sw_2",
+          "attack_sw_3"
+        ],
+        [
+          "attack_sw_3",
+          "attack_sw_4"
+        ],
+        [
+          "attack_sw_4",
+          "attack_sw_5"
+        ]
+      ]
+    },
+    {
+      "clip": "attack_w",
+      "file": "clip_002.png",
+      "loop": false,
+      "sequence": [
+        "attack_w_0",
+        "attack_w_1",
+        "attack_w_2",
+        "attack_w_3",
+        "attack_w_4",
+        "attack_w_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 640,
+      "overlayPairs": [
+        [
+          "attack_w_0",
+          "attack_w_1"
+        ],
+        [
+          "attack_w_1",
+          "attack_w_2"
+        ],
+        [
+          "attack_w_2",
+          "attack_w_3"
+        ],
+        [
+          "attack_w_3",
+          "attack_w_4"
+        ],
+        [
+          "attack_w_4",
+          "attack_w_5"
+        ]
+      ]
+    },
+    {
+      "clip": "attack_nw",
+      "file": "clip_003.png",
+      "loop": false,
+      "sequence": [
+        "attack_nw_0",
+        "attack_nw_1",
+        "attack_nw_2",
+        "attack_nw_3",
+        "attack_nw_4",
+        "attack_nw_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 640,
+      "overlayPairs": [
+        [
+          "attack_nw_0",
+          "attack_nw_1"
+        ],
+        [
+          "attack_nw_1",
+          "attack_nw_2"
+        ],
+        [
+          "attack_nw_2",
+          "attack_nw_3"
+        ],
+        [
+          "attack_nw_3",
+          "attack_nw_4"
+        ],
+        [
+          "attack_nw_4",
+          "attack_nw_5"
+        ]
+      ]
+    },
+    {
+      "clip": "attack_n",
+      "file": "clip_004.png",
+      "loop": false,
+      "sequence": [
+        "attack_n_0",
+        "attack_n_1",
+        "attack_n_2",
+        "attack_n_3",
+        "attack_n_4",
+        "attack_n_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 640,
+      "overlayPairs": [
+        [
+          "attack_n_0",
+          "attack_n_1"
+        ],
+        [
+          "attack_n_1",
+          "attack_n_2"
+        ],
+        [
+          "attack_n_2",
+          "attack_n_3"
+        ],
+        [
+          "attack_n_3",
+          "attack_n_4"
+        ],
+        [
+          "attack_n_4",
+          "attack_n_5"
+        ]
+      ]
+    },
+    {
+      "clip": "attack_ne",
+      "file": "clip_005.png",
+      "loop": false,
+      "sequence": [
+        "attack_ne_0",
+        "attack_ne_1",
+        "attack_ne_2",
+        "attack_ne_3",
+        "attack_ne_4",
+        "attack_ne_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 640,
+      "overlayPairs": [
+        [
+          "attack_ne_0",
+          "attack_ne_1"
+        ],
+        [
+          "attack_ne_1",
+          "attack_ne_2"
+        ],
+        [
+          "attack_ne_2",
+          "attack_ne_3"
+        ],
+        [
+          "attack_ne_3",
+          "attack_ne_4"
+        ],
+        [
+          "attack_ne_4",
+          "attack_ne_5"
+        ]
+      ]
+    },
+    {
+      "clip": "attack_e",
+      "file": "clip_006.png",
+      "loop": false,
+      "sequence": [
+        "attack_e_0",
+        "attack_e_1",
+        "attack_e_2",
+        "attack_e_3",
+        "attack_e_4",
+        "attack_e_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 640,
+      "overlayPairs": [
+        [
+          "attack_e_0",
+          "attack_e_1"
+        ],
+        [
+          "attack_e_1",
+          "attack_e_2"
+        ],
+        [
+          "attack_e_2",
+          "attack_e_3"
+        ],
+        [
+          "attack_e_3",
+          "attack_e_4"
+        ],
+        [
+          "attack_e_4",
+          "attack_e_5"
+        ]
+      ]
+    },
+    {
+      "clip": "attack_se",
+      "file": "clip_007.png",
+      "loop": false,
+      "sequence": [
+        "attack_se_0",
+        "attack_se_1",
+        "attack_se_2",
+        "attack_se_3",
+        "attack_se_4",
+        "attack_se_5"
+      ],
+      "registration": "pivot_aligned",
+      "durationMs": 640,
+      "overlayPairs": [
+        [
+          "attack_se_0",
+          "attack_se_1"
+        ],
+        [
+          "attack_se_1",
+          "attack_se_2"
+        ],
+        [
+          "attack_se_2",
+          "attack_se_3"
+        ],
+        [
+          "attack_se_3",
+          "attack_se_4"
+        ],
+        [
+          "attack_se_4",
+          "attack_se_5"
+        ]
+      ]
+    }
+  ],
+  "visualReviewCompleted": false
+}

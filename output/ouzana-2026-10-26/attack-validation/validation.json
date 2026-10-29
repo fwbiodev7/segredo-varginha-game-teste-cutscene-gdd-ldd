@@ -1,0 +1,637 @@
+{
+  "success": true,
+  "status": "structural_pass",
+  "errors": [],
+  "warnings": [],
+  "frames": [
+    {
+      "id": "attack_s_0",
+      "bbox": [
+        54,
+        48,
+        170,
+        205
+      ],
+      "visiblePixels": 15166,
+      "colors": 7549,
+      "semiTransparentPixels": 15159,
+      "pixelsSha256": "66e8e8d4ad5683fc05637311b044ba87446cff92e6d1ca63a45ce03c02334e34"
+    },
+    {
+      "id": "attack_s_1",
+      "bbox": [
+        50,
+        48,
+        173,
+        205
+      ],
+      "visiblePixels": 15343,
+      "colors": 7735,
+      "semiTransparentPixels": 15327,
+      "pixelsSha256": "2a7325ef34468f9f799399f742c5220d8bea4e2fb4196c6144e2ed65b4542dae"
+    },
+    {
+      "id": "attack_s_2",
+      "bbox": [
+        54,
+        48,
+        171,
+        205
+      ],
+      "visiblePixels": 15241,
+      "colors": 7687,
+      "semiTransparentPixels": 15219,
+      "pixelsSha256": "0199de2c3056c488917f7727b0db14b708bcc46c5df73d16ae599a919cc4d44b"
+    },
+    {
+      "id": "attack_s_3",
+      "bbox": [
+        60,
+        48,
+        163,
+        205
+      ],
+      "visiblePixels": 14134,
+      "colors": 6700,
+      "semiTransparentPixels": 14119,
+      "pixelsSha256": "ee857866367b9183a6e5bd0ff9da1e8b324e24411569b0b752e8bf35ed7a7ccc"
+    },
+    {
+      "id": "attack_s_4",
+      "bbox": [
+        60,
+        48,
+        168,
+        205
+      ],
+      "visiblePixels": 14125,
+      "colors": 6321,
+      "semiTransparentPixels": 14104,
+      "pixelsSha256": "061fd8a0976db2115a53a5c0b225dc6eea95481122a8b7597efccdf5cfcb65a3"
+    },
+    {
+      "id": "attack_s_5",
+      "bbox": [
+        61,
+        48,
+        162,
+        205
+      ],
+      "visiblePixels": 13837,
+      "colors": 6992,
+      "semiTransparentPixels": 13816,
+      "pixelsSha256": "f32b2f6269eace525c8b0e20151b0436f0dd8fe0a6dd20f68b9e4dace9bd5fac"
+    },
+    {
+      "id": "attack_sw_0",
+      "bbox": [
+        56,
+        51,
+        169,
+        205
+      ],
+      "visiblePixels": 15084,
+      "colors": 7581,
+      "semiTransparentPixels": 15068,
+      "pixelsSha256": "a641c6bb7b6f055531ad2ab69c6c79a7fd57ba6e88f20a16393a973d7d2a0e93"
+    },
+    {
+      "id": "attack_sw_1",
+      "bbox": [
+        51,
+        51,
+        173,
+        205
+      ],
+      "visiblePixels": 14598,
+      "colors": 7565,
+      "semiTransparentPixels": 14567,
+      "pixelsSha256": "c84e1eee130b96583f7a06a00a85d46c558478e8af2b13c2c17b1c442bb42f72"
+    },
+    {
+      "id": "attack_sw_2",
+      "bbox": [
+        55,
+        50,
+        170,
+        204
+      ],
+      "visiblePixels": 14877,
+      "colors": 7708,
+      "semiTransparentPixels": 14870,
+      "pixelsSha256": "adbbbaf811b58f435f160186374dce67d22660c71bd58be4771f83db18f342f7"
+    },
+    {
+      "id": "attack_sw_3",
+      "bbox": [
+        55,
+        51,
+        169,
+        205
+      ],
+      "visiblePixels": 14576,
+      "colors": 7128,
+      "semiTransparentPixels": 14569,
+      "pixelsSha256": "1ebfa1a03459dacf144e3e5cd5bc12a772a2a8e3f5a5669deefe6628a3f8ff4b"
+    },
+    {
+      "id": "attack_sw_4",
+      "bbox": [
+        56,
+        51,
+        166,
+        205
+      ],
+      "visiblePixels": 13735,
+      "colors": 6684,
+      "semiTransparentPixels": 13703,
+      "pixelsSha256": "7fc3d5933bcaa178be28a882832938e4973e9d92644a6b9b293b2a45b2981c7b"
+    },
+    {
+      "id": "attack_sw_5",
+      "bbox": [
+        64,
+        51,
+        161,
+        205
+      ],
+      "visiblePixels": 13281,
+      "colors": 6711,
+      "semiTransparentPixels": 13263,
+      "pixelsSha256": "7705e4686a116d2aaf79426d28d5258b480b7743d50cb763e873cf0f43e222aa"
+    },
+    {
+      "id": "attack_w_0",
+      "bbox": [
+        60,
+        49,
+        163,
+        205
+      ],
+      "visiblePixels": 13391,
+      "colors": 6515,
+      "semiTransparentPixels": 13382,
+      "pixelsSha256": "d4d8843bbc5c091ed32ff9b8545bb91ca6f866b3391ef5e9978ef7369b5b3126"
+    },
+    {
+      "id": "attack_w_1",
+      "bbox": [
+        54,
+        49,
+        170,
+        205
+      ],
+      "visiblePixels": 13530,
+      "colors": 6728,
+      "semiTransparentPixels": 13515,
+      "pixelsSha256": "1afe78488151ef9450ede40bbddae4da738ca292ee1cd5e79698362c67e85c9e"
+    },
+    {
+      "id": "attack_w_2",
+      "bbox": [
+        54,
+        49,
+        166,
+        205
+      ],
+      "visiblePixels": 14193,
+      "colors": 6891,
+      "semiTransparentPixels": 14177,
+      "pixelsSha256": "94300363b0852b2fce868571410012fc0ca081238e3c442f9387594a8777f9f4"
+    },
+    {
+      "id": "attack_w_3",
+      "bbox": [
+        50,
+        49,
+        174,
+        205
+      ],
+      "visiblePixels": 13777,
+      "colors": 5823,
+      "semiTransparentPixels": 13759,
+      "pixelsSha256": "c32c93da201dc3924543f3a05fec992d11f509ac0b5b21351687938a299c04dd"
+    },
+    {
+      "id": "attack_w_4",
+      "bbox": [
+        56,
+        50,
+        167,
+        206
+      ],
+      "visiblePixels": 12999,
+      "colors": 5682,
+      "semiTransparentPixels": 12978,
+      "pixelsSha256": "4a133354e2af2ec2c91e6973cd828486f7cdf17e3de7c306dda4933baa362d70"
+    },
+    {
+      "id": "attack_w_5",
+      "bbox": [
+        66,
+        51,
+        158,
+        207
+      ],
+      "visiblePixels": 12923,
+      "colors": 5894,
+      "semiTransparentPixels": 12908,
+      "pixelsSha256": "78e649600ae15cd90d50626837f5b8e67a19df217e784a7477c9ccfe088e0b48"
+    },
+    {
+      "id": "attack_nw_0",
+      "bbox": [
+        56,
+        48,
+        168,
+        206
+      ],
+      "visiblePixels": 15380,
+      "colors": 5539,
+      "semiTransparentPixels": 15380,
+      "pixelsSha256": "f50ac1d0fb2b286f7fcc910f95a272d5ce5b386b0ebdb8bad33e767b517e0903"
+    },
+    {
+      "id": "attack_nw_1",
+      "bbox": [
+        49,
+        47,
+        175,
+        205
+      ],
+      "visiblePixels": 15230,
+      "colors": 5461,
+      "semiTransparentPixels": 15211,
+      "pixelsSha256": "eda8b60591080d829363fbb84d9097b6d3cf735134742e33c9661489160d8b1e"
+    },
+    {
+      "id": "attack_nw_2",
+      "bbox": [
+        62,
+        47,
+        165,
+        205
+      ],
+      "visiblePixels": 14918,
+      "colors": 5587,
+      "semiTransparentPixels": 14899,
+      "pixelsSha256": "989fcd5ecdd214f2023fc5ac01e3dea3653320c8555db504376f4ab8b69efb6b"
+    },
+    {
+      "id": "attack_nw_3",
+      "bbox": [
+        47,
+        45,
+        178,
+        203
+      ],
+      "visiblePixels": 15315,
+      "colors": 4935,
+      "semiTransparentPixels": 15310,
+      "pixelsSha256": "db54bc3733ab0b31ec87ddb04f3edd34fad0ed0de3b1e9d591bbfa8cfc8906e8"
+    },
+    {
+      "id": "attack_nw_4",
+      "bbox": [
+        49,
+        48,
+        172,
+        206
+      ],
+      "visiblePixels": 15133,
+      "colors": 4813,
+      "semiTransparentPixels": 15129,
+      "pixelsSha256": "eebb4fe1a21b888bb42ec609aec31ea17ae2284b7f5656bcbff6faef92572904"
+    },
+    {
+      "id": "attack_nw_5",
+      "bbox": [
+        67,
+        48,
+        158,
+        206
+      ],
+      "visiblePixels": 13141,
+      "colors": 4729,
+      "semiTransparentPixels": 13128,
+      "pixelsSha256": "eb5f2ed2b8d70aed50002380acedcd2577d14f6c8dfd6392aa0aae0abd060b72"
+    },
+    {
+      "id": "attack_n_0",
+      "bbox": [
+        56,
+        44,
+        168,
+        205
+      ],
+      "visiblePixels": 14733,
+      "colors": 4721,
+      "semiTransparentPixels": 14722,
+      "pixelsSha256": "66c1d6bf30ab6c75167bde80500f825f0a926ef49384de37518139675cc6c849"
+    },
+    {
+      "id": "attack_n_1",
+      "bbox": [
+        52,
+        44,
+        173,
+        205
+      ],
+      "visiblePixels": 16843,
+      "colors": 5031,
+      "semiTransparentPixels": 16826,
+      "pixelsSha256": "b1b1af842054d9ffff8fea2df9b891ec88b736b341a9ebfe1f121bc63cfdce4d"
+    },
+    {
+      "id": "attack_n_2",
+      "bbox": [
+        56,
+        45,
+        168,
+        206
+      ],
+      "visiblePixels": 16034,
+      "colors": 5220,
+      "semiTransparentPixels": 16006,
+      "pixelsSha256": "02174d6f4bbcb69657cae8b0612c3a6f97a7199002bc167976a4c9e94af767ac"
+    },
+    {
+      "id": "attack_n_3",
+      "bbox": [
+        62,
+        44,
+        159,
+        205
+      ],
+      "visiblePixels": 14097,
+      "colors": 4190,
+      "semiTransparentPixels": 14077,
+      "pixelsSha256": "19da5572483df53d3ab8d86b6c7244890d059840fbcc6b303067cac474ee3b24"
+    },
+    {
+      "id": "attack_n_4",
+      "bbox": [
+        62,
+        44,
+        160,
+        205
+      ],
+      "visiblePixels": 14332,
+      "colors": 4099,
+      "semiTransparentPixels": 14303,
+      "pixelsSha256": "15d243866da32dbae2504b9e5659630b984e4904cbe13b4b782d0877accb75ee"
+    },
+    {
+      "id": "attack_n_5",
+      "bbox": [
+        64,
+        44,
+        158,
+        205
+      ],
+      "visiblePixels": 13617,
+      "colors": 4143,
+      "semiTransparentPixels": 13579,
+      "pixelsSha256": "e757afcba610271de74d035b4d02ffd2d969e9510eb7aacfae0afd05045e8d60"
+    },
+    {
+      "id": "attack_ne_0",
+      "bbox": [
+        56,
+        48,
+        168,
+        206
+      ],
+      "visiblePixels": 15380,
+      "colors": 5539,
+      "semiTransparentPixels": 15380,
+      "pixelsSha256": "64b77dcd7ce84c20adc8c06c5c48fc2622fead8e098712afefbc35bbf84ea099"
+    },
+    {
+      "id": "attack_ne_1",
+      "bbox": [
+        49,
+        47,
+        175,
+        205
+      ],
+      "visiblePixels": 15230,
+      "colors": 5461,
+      "semiTransparentPixels": 15211,
+      "pixelsSha256": "14c7569495440592eb3912dc90a48ee9eb49b28fa2d73db03e0fd5eb084d8f73"
+    },
+    {
+      "id": "attack_ne_2",
+      "bbox": [
+        59,
+        47,
+        162,
+        205
+      ],
+      "visiblePixels": 14918,
+      "colors": 5587,
+      "semiTransparentPixels": 14899,
+      "pixelsSha256": "e7052a4351144e95fb6c2cd55434b9f596bd7b1e5d8ed797e6c66ba78ec9b72b"
+    },
+    {
+      "id": "attack_ne_3",
+      "bbox": [
+        46,
+        45,
+        177,
+        203
+      ],
+      "visiblePixels": 15315,
+      "colors": 4935,
+      "semiTransparentPixels": 15310,
+      "pixelsSha256": "bedc8eefdbf43741e60a1e11787cffe0796ddc741692c4f2995962ee0cb289cf"
+    },
+    {
+      "id": "attack_ne_4",
+      "bbox": [
+        52,
+        48,
+        175,
+        206
+      ],
+      "visiblePixels": 15133,
+      "colors": 4813,
+      "semiTransparentPixels": 15129,
+      "pixelsSha256": "2ff8d2ed39709ea54de7c160fb5b8c5d806d2f07ec3e8c7c001e06526b440c9b"
+    },
+    {
+      "id": "attack_ne_5",
+      "bbox": [
+        66,
+        48,
+        157,
+        206
+      ],
+      "visiblePixels": 13141,
+      "colors": 4729,
+      "semiTransparentPixels": 13128,
+      "pixelsSha256": "c03079de82586f3321cfe61b4091a86aaf4270278b4b0bd465678c6501b4d131"
+    },
+    {
+      "id": "attack_e_0",
+      "bbox": [
+        58,
+        44,
+        166,
+        207
+      ],
+      "visiblePixels": 15005,
+      "colors": 6366,
+      "semiTransparentPixels": 14972,
+      "pixelsSha256": "02d866ed8810092aa650c0a941ba546ab6d093bc23a750bd3ffd51e75891def5"
+    },
+    {
+      "id": "attack_e_1",
+      "bbox": [
+        52,
+        45,
+        170,
+        206
+      ],
+      "visiblePixels": 15661,
+      "colors": 6766,
+      "semiTransparentPixels": 15628,
+      "pixelsSha256": "db5abd1772a1fad20cf8fb60298df1b84d444a6c15676cd70f04463068d243fa"
+    },
+    {
+      "id": "attack_e_2",
+      "bbox": [
+        60,
+        44,
+        163,
+        207
+      ],
+      "visiblePixels": 15202,
+      "colors": 7138,
+      "semiTransparentPixels": 15170,
+      "pixelsSha256": "2092a8f85e585d007286e8953e2715b00d8c2f95dc38489bcfa01d82a0457009"
+    },
+    {
+      "id": "attack_e_3",
+      "bbox": [
+        53,
+        42,
+        171,
+        205
+      ],
+      "visiblePixels": 15616,
+      "colors": 6200,
+      "semiTransparentPixels": 15615,
+      "pixelsSha256": "72a7de5913cff60cdef495c69e3edbbcf739d9f29ec885d6c0c4bcad6d1cce4c"
+    },
+    {
+      "id": "attack_e_4",
+      "bbox": [
+        60,
+        42,
+        165,
+        205
+      ],
+      "visiblePixels": 14819,
+      "colors": 5893,
+      "semiTransparentPixels": 14809,
+      "pixelsSha256": "f21fa15613476ff6b6d6c89ceaf6864509a9f7626c6825da950fabbfbf45123d"
+    },
+    {
+      "id": "attack_e_5",
+      "bbox": [
+        64,
+        43,
+        160,
+        206
+      ],
+      "visiblePixels": 13858,
+      "colors": 6512,
+      "semiTransparentPixels": 13845,
+      "pixelsSha256": "d2a96b5bc9995c6c9c097f58be4acecdc4900c78de2f2e3fea6dae63728c5a09"
+    },
+    {
+      "id": "attack_se_0",
+      "bbox": [
+        58,
+        47,
+        166,
+        207
+      ],
+      "visiblePixels": 15083,
+      "colors": 6820,
+      "semiTransparentPixels": 15054,
+      "pixelsSha256": "c1d743224fe87e624b20fd4220f14efc4f54654fb80318b4d21c0ddab422171b"
+    },
+    {
+      "id": "attack_se_1",
+      "bbox": [
+        57,
+        47,
+        168,
+        206
+      ],
+      "visiblePixels": 15183,
+      "colors": 6664,
+      "semiTransparentPixels": 15170,
+      "pixelsSha256": "7c28749b73df80203a7fd7c4893c51854c2189b0d1ea05e6f0810120b59ca566"
+    },
+    {
+      "id": "attack_se_2",
+      "bbox": [
+        57,
+        45,
+        170,
+        205
+      ],
+      "visiblePixels": 15819,
+      "colors": 7634,
+      "semiTransparentPixels": 15782,
+      "pixelsSha256": "bf315565b1dc33d703b5ac73d03d0dd4b082576f2dc825e6917ab7ee438eeeff"
+    },
+    {
+      "id": "attack_se_3",
+      "bbox": [
+        55,
+        45,
+        170,
+        205
+      ],
+      "visiblePixels": 15705,
+      "colors": 6320,
+      "semiTransparentPixels": 15669,
+      "pixelsSha256": "5e456251c37ba85fe110317c572b4b0704b83496902ad51c44c87f202292818d"
+    },
+    {
+      "id": "attack_se_4",
+      "bbox": [
+        50,
+        45,
+        173,
+        205
+      ],
+      "visiblePixels": 15365,
+      "colors": 6395,
+      "semiTransparentPixels": 15346,
+      "pixelsSha256": "247cfd9dc8dcd9b53a8ec8e03630e24be275bb225a798e37f66defaacf0645cb"
+    },
+    {
+      "id": "attack_se_5",
+      "bbox": [
+        62,
+        45,
+        165,
+        205
+      ],
+      "visiblePixels": 13796,
+      "colors": 6812,
+      "semiTransparentPixels": 13760,
+      "pixelsSha256": "68788b015f53c52d7f1f08b1f2987abb7f27c52f7637bb55e8174c6c2f7f504a"
+    }
+  ],
+  "paletteColors": 95896,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\attack-export-v2\\atlas.json",
+  "metadataSha256": "445b02666a773baa25ba8202efa65e4b1ad68f824f15059a43f5da4543d991f9"
+}

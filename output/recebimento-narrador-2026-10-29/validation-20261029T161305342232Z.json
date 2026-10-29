@@ -1,0 +1,62 @@
+{
+  "generated_utc": "2026-10-29T16:13:05.341569+00:00",
+  "input_dir": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\recebimento-narrador-2026-10-29\\entrada",
+  "expected_ids": [
+    "REP_01",
+    "REP_02",
+    "NAR_01",
+    "NAR_02",
+    "NAR_03",
+    "NAR_04",
+    "NAR_05",
+    "NAR_06",
+    "NAR_07",
+    "NAR_08",
+    "NAR_09",
+    "NAR_10",
+    "NAR_11",
+    "NAR_12",
+    "NAR_13"
+  ],
+  "ffprobe": null,
+  "files": [],
+  "errors": [
+    "IDs faltantes: REP_01, REP_02, NAR_01, NAR_02, NAR_03, NAR_04, NAR_05, NAR_06, NAR_07, NAR_08, NAR_09, NAR_10, NAR_11, NAR_12, NAR_13"
+  ],
+  "warnings": [
+    "ffprobe ausente; isso não reprova sozinho o lote. A inspeção de áudio permanece limitada."
+  ],
+  "missing_ids": [
+    "REP_01",
+    "REP_02",
+    "NAR_01",
+    "NAR_02",
+    "NAR_03",
+    "NAR_04",
+    "NAR_05",
+    "NAR_06",
+    "NAR_07",
+    "NAR_08",
+    "NAR_09",
+    "NAR_10",
+    "NAR_11",
+    "NAR_12",
+    "NAR_13"
+  ],
+  "duplicate_ids": {},
+  "ignored_files": [
+    "README.md"
+  ],
+  "audio_received_confirmed": false,
+  "scope": "Inventário, integridade e metadados. Escuta, texto, mix e sincronização exigem revisão humana; nenhuma importação foi executada.",
+  "success": false,
+  "status": "pendente_corrigir_lote",
+  "summary": {
+    "expected": 15,
+    "files": 0,
+    "missing": 15,
+    "duplicates": 0,
+    "errors": 1,
+    "ffprobe_metadata_verified": 0
+  }
+}

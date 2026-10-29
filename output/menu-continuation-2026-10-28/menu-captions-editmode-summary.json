@@ -1,0 +1,12 @@
+{
+  "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\menu-continuation-2026-10-28\\menu-captions-editmode.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 448,
+    "passed": 448,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

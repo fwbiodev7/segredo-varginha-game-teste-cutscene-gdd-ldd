@@ -1,0 +1,52 @@
+phase,area,actor,texture,height,width,ppu
+2,0,Edelzio_Protagonist,EdelzioWalkV2,1.5000,0.6429,200.6667
+4,0,Refem_Luis_Miguel_Messias,LuisMiguelMessias,1.0758,0.6961,47.4074
+4,0,Refem_Fabio,Fabio,1.1602,0.7172,47.4074
+4,0,Refem_Anna_Sabia,AnnaSabia,1.1602,0.7805,47.4074
+4,0,Renan_Industrial_Campanha,Directional20261026_Renan,1.5638,1.0638,94.0000
+4,0,Refem_Luis_Martins,LuisMartins,1.1602,0.6961,47.4074
+4,0,Refem_Pedro,Pedro,1.0758,0.7805,47.4074
+4,0,Refem_Yasmin,Yasmin,1.1602,0.8016,47.4074
+4,0,Refem_Ana_Tavares,AnaTavares,1.1602,0.7805,47.4074
+4,0,Refem_Matias,Matias,1.1602,0.7172,47.4074
+4,0,Edelzio_Protagonist,WalkGray,1.5356,0.7169,196.6667
+4,0,Refem_Marcos,Marcos,1.1391,0.6117,47.4074
+6,0,Edelzio_Protagonist,WalkGray,1.5356,0.7169,196.6667
+7,0,Edelzio_Protagonist,WalkGray,1.5356,0.7169,196.6667
+8,0,Edelzio_Protagonist,WalkGray,0.9772,0.4562,309.0476
+9,0,Ouzana,OuzanaAttackV2,1.3889,0.8056,108.0000
+9,0,Edelzio_Protagonist,WalkGray,1.5356,0.7169,196.6667
+11,0,Luis Martins,LuisMartins,1.1602,0.6961,47.4074
+11,0,Ana Tavares,AnaTavares,1.1602,0.7805,47.4074
+11,0,Edelzio_Protagonist,WalkGray,1.5356,0.7169,196.6667
+11,0,Marcos,Marcos,1.1391,0.6117,47.4074
+11,0,Yasmin,Yasmin,1.1602,0.8016,47.4074
+11,0,Fabio,Fabio,1.1602,0.7172,47.4074
+11,0,Luis Miguel Messias,LuisMiguelMessias,1.0758,0.6961,47.4074
+11,0,Matias,Matias,1.1602,0.7172,47.4074
+11,0,Renan,Directional20261026_Renan,1.5638,1.0638,94.0000
+11,0,Anna Sabia,AnnaSabia,1.1602,0.7805,47.4074
+11,0,Pedro,Pedro,1.0758,0.7805,47.4074
+12,0,Edelzio_Protagonist,WalkGray,1.5356,0.7169,196.6667
+14,0,Padre Fábio,PadreFabioV1,0.9545,0.5455,44.0000
+14,0,Edelzio_Protagonist,WalkGray,0.9772,0.4562,309.0476
+18,0,Edelzio_Protagonist,WalkGray,1.5356,0.7169,196.6667
+18,0,Ouzana,OuzanaAttackV2,1.4352,0.8519,108.0000
+20,0,Edelzio_Protagonist,WalkGray,1.5356,0.7169,196.6667
+21,0,Ouzana,OuzanaAttackV2,1.3981,0.8889,108.0000
+21,0,Edelzio_Protagonist,WalkGray,1.5356,0.7169,196.6667
+21,0,Renan,Directional20261026_Renan,1.5638,1.0638,94.0000
+10,0,Edelzio_Protagonist,WalkGray,1.5356,0.7169,196.6667
+12,1,Edelzio_Protagonist,WalkGray,1.5356,0.7169,196.6667
+13,0,Edelzio_Protagonist,WalkGray,1.5356,0.7169,196.6667
+21,1,Anna Sabia,AnnaSabia,1.1602,0.7805,47.4074
+21,1,Edelzio_Protagonist,WalkGray,1.5356,0.7169,196.6667
+21,1,Marcos,Marcos,1.1391,0.6117,47.4074
+21,1,Matias,Matias,1.1602,0.7172,47.4074
+21,1,Yasmin,Yasmin,1.1602,0.8016,47.4074
+21,1,Luis Miguel Messias,LuisMiguelMessias,1.0758,0.6961,47.4074
+21,1,Luis Martins,LuisMartins,1.1602,0.6961,47.4074
+21,1,Ana Tavares,AnaTavares,1.1602,0.7805,47.4074
+21,1,Pedro,Pedro,1.0758,0.7805,47.4074
+21,1,Fabio,Fabio,1.1602,0.7172,47.4074
+21,1,Renan,RenanTeaching,1.5963,1.2977,184.1772

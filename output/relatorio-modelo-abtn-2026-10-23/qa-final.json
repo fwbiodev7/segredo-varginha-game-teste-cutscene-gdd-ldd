@@ -1,0 +1,76 @@
+{
+  "pages": 35,
+  "A4": true,
+  "no_blank_pages": true,
+  "numbering_correct": true,
+  "no_broken_fields": true,
+  "main_section_pages": {
+    "1 INTRODUÇÃO": 6,
+    "2 REFERENCIAL TEÓRICO": 8,
+    "3 PROCEDIMENTOS METODOLÓGICOS": 9,
+    "4 RESULTADOS ESPERADOS": 32,
+    "5 REFERÊNCIAS BIBLIOGRÁFICAS": 34
+  },
+  "template_order_preserved": true,
+  "body_font_names": [
+    "TimesNewRomanPS-BoldMT",
+    "TimesNewRomanPSMT"
+  ],
+  "docx_integrity": true,
+  "native_tables": 5,
+  "images": 3,
+  "visual_review": {
+    "reviewed_page_pngs": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35
+    ],
+    "zoom": "Original individual PNGs at 100 percent",
+    "remaining_issues": []
+  },
+  "game_files_modified": false,
+  "artifacts": [
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\relatorio-modelo-abtn-2026-10-23\\relatorio_desenvolvimento_varginha_modelo_abtn.pdf",
+      "bytes": 851762,
+      "sha256": "efb0b7eb0c920d949273ceb0a7d17b8558af778c408f14a9252ee2c2077d920e"
+    },
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\relatorio-modelo-abtn-2026-10-23\\relatorio_desenvolvimento_varginha_modelo_abtn.docx",
+      "bytes": 5803144,
+      "sha256": "fe7690198a0669d1ed34672ba17fd11bf87c83218f3aa1c1f973bb76ff023529"
+    }
+  ]
+}

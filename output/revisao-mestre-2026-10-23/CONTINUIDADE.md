@@ -108,3 +108,66 @@ checkpoint-playmode.xml: 5 casos, 4 passaram; recuperação repetida de glitch, 
 road-checkpoint.xml terminou com 1/1 falha: mesmo com spawn central, y ficou 0 ao acelerar após ré. Portanto a alteração do spawn NÃO resolveu o bloqueio da estrada. Próximo diagnóstico: registrar state/title/input/Speed e contatos do BoxCast na posição inicial; distinguir ausência de input/estado e colisão. Não reduzir a asserção nem declarar item 12/13 completo. Oficina e pista continuam aprovadas nos recortes anteriores. Não há teste em execução a manter no Unity do usuário.
 
 Publicação solicitada é checkpoint parcial. Entregas finais ainda pendentes: acabamento simples e sem emendas no canto do notebook (pedido mais recente), auditoria dos contatos de móveis, revisão visual de recuperação de glitch, Livro/trilhas/CONTINUAR no Player, física da estrada e build/regressão final. Depois produzir roteiro completo de apresentação para 30/10/26. Relatório compacto PDF/DOCX de 12 páginas concluído. Lista detalhada em PENDENCIAS.md. Não desativar a automação enquanto houver pendências. Limite consultado antes de publicar: 6% restante; parar perto dos 5% conforme usuário.
+
+## Retomada de 26/10/2026 — execução das 11h59 de Brasília
+
+O limite foi consultado no começo da retomada e durante o trabalho. Na última leitura atualizada, a janela de cinco horas estava com 73% consumidos (27% restantes); sem créditos de reset. O usuário pediu para parar quando restarem aproximadamente 5%, preservando este checkpoint. A automação permanece ativa porque existem itens pendentes.
+
+### Notebook/cadeira
+
+Após comparar `office-notebook-seated.png` com a captura anterior, confirmei que o shader aplicava uma substituição retangular de piso na silhueta antiga da cadeira. Corrigi somente `Assets/Resources/Varginha/CinemaOpening/IllustratedMorning.shader`: distância assinada de uma caixa arredondada, transição de cobertura suave e área suficiente para pernas/sombra. Não alterei texturas/sprites aprovados nem mexi em cenas/saves. O primeiro teste com uma máscara de silhueta segmentada deixou pés fantasma; descartei essa candidata e mantive a caixa arredondada maior, que limpa a silhueta.
+
+Validação final em projeto QA isolado: `office-rounded-cutout-player.xml` aprovado, 1/1, para `OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach` (StandaloneWindows64). A captura real é `output/revisao-final-2026-10-26/world-review/office-notebook-seated.png`. Ela confirma o fluxo e oclusão do personagem; ainda resta uma transição de piso visível em tamanho de jogo. Portanto item 02 segue Parcial, sem alegar acabamento final. Não houve alteração de cena.
+
+Runner usado: `Tools/QA/run_master_review.ps1`, no clone `C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709`, com `Library` separada; Unity original do usuário não foi tocado. A execução Player final foi envolvida por `Tools/AgentOutput/compact.mjs`. Resultados tentativos de outras máscaras também passaram o assert, mas suas capturas tinham artefatos visuais e não devem ser contados como versão aceita.
+
+### Apresentação e publicação
+
+O usuário pediu abrir a apresentação atualizada. O caminho conhecido é `output/daily-sprint-2026-10-20/A_Sprint_Final_Varginha.html`, cujo conteúdo ainda só resume até 23/10. `cua_repl` identificou o navegador integrado vazio e a política bloqueou a abertura de `file://`, permitindo apenas `http:` e `https:` e proibindo contornar por outro navegador, servidor ou superfície. Não foi aberta. Item 20 permanece Bloqueado; nenhuma alternativa foi tentada.
+
+Os commits de 26/10 até `43e6e3e` estão sincronizados com `origin/codex/campanha-15-fases-e-site`. O pedido explícito de publicar a atualização do dia permanece válido. O shader original e a lista/report da revisão foram enviados em `8f60fbf`/`216b2d9`; a auditoria global e seu estado foram enviados em `8a82861`; amostra de piso em `2ea8725`; conclusão do item 04 em `2677bc9`; captura da transição, conclusão do item 01 e feather do shader em `5f64ec6`, `1640b3a` e `43e6e3e`. O checkpoint desta pasta `output` continua local. Temporários, outputs de QA, `InitTestScene`, recovery e URP temporário ficaram de fora.
+
+### Pedidos que continuam abertos
+
+- Pendências atuais: itens 01, 02, 04 e 11 seguem parciais; item 10 foi concluído após Player/inspeção visual, 12 e 13 foram concluídos após `vehicle-fixed.xml` 3/3.
+- Item 19: após finalizar e validar os serviços, criar roteiro natural da apresentação de 30/10/2026 baseado em registros e evidências, sem inventar fatos.
+- A lista completa foi atualizada em `output/revisao-mestre-2026-10-23/PENDENCIAS.md`, incluindo item 20 e estado Parcial atualizado do notebook.
+- Próximos passos: continuar os itens 01, 02 e 04, revisar transições restantes do item 11, executar regressões finais e preparar o roteiro quando concluir. A apresentação diária precisa receber dados posteriores a 23/10 e a abertura do HTML está bloqueada pela política `file://`.
+
+### Regressão adicional de 26/10 — puzzles e veículos
+
+Depois do commit `8f60fbf`, executei recortes Player adicionais na mesma cópia QA. `puzzle-design-player.xml` terminou Passed: 8/8, zero falhas e ignorados. Inclui `BookCanBeReassembledLinkedSavedAndCorrectedWithController`, `TrailMapSelectsSavesAndCorrectsAnySegmentWithController`, `CompactContinueUsesControllerAndCannotSkipTwoChapters`, navegação por memória e caminhos internos do casarão. Revisei visualmente `book-start.png`, `book-wrong-reference.png`, `book-reconstructed.png`, `trail-puzzle.png` e `compact-continue-library.png`. O Livro está legível/corrigível; CONTINUAR está no canto inferior direito e o avanço duplo permanece bloqueado. Item 10 atualizado para Concluído; item 11 segue Parcial até revisar as outras transições.
+
+`vehicle-fixed.xml` terminou Passed: 3/3 em StandaloneWindows64. `LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit`, `OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection` e `InitialContactWithTheBottomWallDoesNotTrapForwardMotion` passaram. Isso ocorreu depois do diagnóstico falho `road-input.xml` (07:48 Brasília); o teste Player final de 07:51, já com a implementação corrente, conseguiu mover e reverter na estrada e vale como evidência mais recente. Itens 12 e 13 agora são Concluídos. `full-editmode.xml`/`final-editmode-r4.xml`: 420/420 no recorte que antecede as últimas alterações visuais.
+
+Lista local e rastreável atualizada: `output/revisao-mestre-2026-10-23/PENDENCIAS.md`; cópia rastreável e atualização diária foram publicadas no commit `216b2d9`. Branch remoto está até `216b2d9`; o working tree mantém arquivos preexistentes de QA e URP temporário fora dos commits.
+
+### Auditoria global de colisões e proporções — 26/10
+
+O teste Player `CampaignWorldAuditPlayTests.AllGameplayAreasAuditHumanProportionsAndRealFurnitureContacts` terminou Passed (1/1) em `world-contact-audit-player-final4.xml`, após percorrer 18 ambientes, 302 móveis e 1.018 aproximações. CSV: 51 silhuetas visíveis, altura de 0,9545 a 1,5963 m e largura de 0,4562 a 1,2977 m. Quatro móveis não tiveram nenhum lado livre para o probe — mesa redonda da fase 6, lampiões oeste/leste da fase 12 e torneira central da fase 18 — pois estão atrás de outros colliders e fora dos percursos caminháveis. Revisei visualmente as 18 capturas e não encontrei falha aparente de profundidade/encaixe; item 01 passa a Concluído com essas limitações registradas.
+
+Corrigi o teste para medir as regiões opacas dos sprites (não o quadro transparente completo), evitar retratos de interface e tratar Padre Fábio como ator somente nas fases em que ele aparece na cena. Tentativas anteriores falharam em assertivas de medição, não em runtime do jogo; a execução final completa passou. Os CSVs de proporção/contatos, resumo JSON e capturas estão em `output/revisao-final-2026-10-26/`. A lista detalhada foi atualizada tanto em `output/revisao-mestre-2026-10-23/PENDENCIAS.md` quanto em `Docs/CampanhaOficial/PENDENCIAS_REVISAO_MESTRE_2026-10-26.md`, ainda a publicar.
+
+O teste e os registros foram commitados e enviados como `8a82861` (`test: audit world proportions and furniture contacts`). Depois, refinei em `IllustratedMorning.shader` o deslocamento da amostra do piso (160→80 px para usar uma área mais próxima). A validação correta foi `office-nearby-floor-player-valid.xml`, 1/1 Passed; a primeira chamada do filtro selecionou zero testes e não foi contada. Inspecionei a captura nova: a diferença do recorte diminuiu, porém a borda do piso continua aparente, então item 02 permanece Parcial. Shader e registro desta etapa foram enviados em `2ea8725`.
+
+Na sequência, ampliei a faixa de feather da máscara de 12 px para 24 px. `office-feathered-floor-player.xml` passou 1/1 no Player. Inspecionei novamente a captura; o recorte está mais suave, sem revelar as pernas antigas, mas ainda se percebe a variação da textura. Item 02 segue Parcial; shader/estado publicados em `43e6e3e`.
+
+Correção da recuperação do glitch passou por nova inspeção visual. `visual-fixed.xml` aprovou `RepeatedGlitchesReturnToTheSameReadableSceneAfterRecovery` (1/1), que aplica três repetições e exige luminância da imagem recuperada dentro de 0,025 da cena-base; comparei as capturas `04_glitch_before.png`, `04_glitch_peak.png` e `04_glitch_recovered_2.png` no clone QA. Combinado com o recorte `vehicle-glitch-playmode.xml` (reconfiguração/repetição/cancelamento), item 04 muda para Concluído. A lista detalhada e o registro diário foram publicados em `2677bc9`.
+
+Para item 11, ampliei `CompactContinueUsesControllerAndCannotSkipTwoChapters` com uma captura após a transição real da fase 6 à 7. `compact-continue-transition-player.xml` passou 1/1. Inspecionei `compact-continue-next-chapter.png`; a cena seguinte aparece com sua orientação inicial e HUD legível. Lista/atualização diária agora registra que essa amostra foi revisada, mas outros capítulos ainda faltam. Teste/documentação publicados em `5f64ec6`.
+
+### Atualização 26/10 — transição adicional da fase 14
+
+`ContinuationContinueOpensAndAdvancesToTheNextChapter` foi acrescentado a `Assets/Tests/PlayMode/CampaignPuzzleDesignPlayTests.cs` e executado em Player StandaloneWindows64. Resultado: `continuation-continue-transition-player.xml`, 1/1 Passed, zero falhas/ignorados. O caso salva a conclusão da fase 14, abre CONTINUAR, aceita apenas o primeiro comando, confirma a fase salva 15 e captura a próxima cena. Inspecionei `continuation-chapter-complete.png` e `continuation-next-chapter.png`: menu de conclusão e HUD/cena seguinte legíveis; a fase salva 15 aparece como Ato 4, fase 11. Item 11 continua Parcial até revisar transições de outros capítulos.
+
+Os arquivos rastreáveis `Docs/CampanhaOficial/ATUALIZACAO_2026-10-26.md` e `PENDENCIAS_REVISAO_MESTRE_2026-10-26.md`, além desta lista local, receberam essa evidência. Nenhuma cena ou mecânica de jogo foi modificada nesta etapa. A captura visual do notebook ainda mostra transição de piso, portanto item 02 permanece Parcial. A daily HTML ainda tem dados antigos e a abertura de `file://` continua bloqueada pela política do navegador. Itens 19 (roteiro de apresentação) e 20 (abrir daily) continuam em aberto/bloqueado. Nenhuma automação foi desativada.
+
+### Tentativa visual exploratória — 26/10
+
+Testei somente no workspace local uma faixa de feather mais ampla (`smoothstep(-12,44)`) para reduzir a leitura do remendo. A primeira chamada usou filtro incorreto e selecionou zero testes, portanto não vale como aprovação. A repetição com `CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach` no Player isolado não recebeu atividade do Player e terminou com timeout de 180 s (`office-wide-feather-valid.log`); não houve resultado/captura utilizável. Reverti a linha para a versão validada de 24 px (`smoothstep(-4,20)`) e deixei item 02 Parcial. O clone QA usado foi encerrado; o Unity do projeto do usuário não foi iniciado nem alterado nesta tentativa. Não publicar a variação de teste.
+
+O filtro correto do teste de notebook no Player terminou em timeout sem atividade do Player; o processo batch Unity da cópia QA permaneceu listado após o timeout e bloqueou o runner subsequente. A chamada subsequente de PlayMode Editor foi recusada antes de sincronizar/iniciar o teste, porque a cópia estava ocupada. Não atribuir aprovação a nenhuma dessas chamadas. A variação do shader foi revertida; nenhuma mudança de shader pendente. Um teste exploratório 10→11 foi retirado antes de ser validado. Reabrir QA somente depois de confirmar que o processo da cópia encerrou; não iniciar outra Unity sobre esse clone em paralelo.
+
+## Fechamento verificado - 27/10/2026
+
+Pedido atual: concluir as pendências e criar build atualizada. Itens 02, 11, 19 e 20 fechados; candidata 0.4.9-beta no diretório Builds do workspace. EditMode 420/420; regressão Player 15/15; saídas 15/15; HUD/travessia 3/3. Daily HTML/PDF de dez slides e roteiro completo de seis páginas concluídos. Consultar Docs/CampanhaOficial/ENTREGA_2026-10-27.md antes de retomar: diagnósticos antigos parciais não são a situação atual. Não repetir testes nem alterar jogo sem novo motivo. Preservados arquivos locais anteriores, cenas, texturas e saves. Não houve publicação externa nesta rodada.

@@ -1,0 +1,62 @@
+ M Assets/Scripts/Editor/Testing/VarginhaDailyBuild.cs
+ M Assets/Scripts/Game/UI/GameHUD.cs
+ M Assets/Scripts/Game/UI/PixelMenuTheme.cs
+ M Assets/Scripts/Game/Varginha/Experiment/ExperimentGUI.cs
+ M Assets/Scripts/Game/Varginha/VarginhaGameHUD.cs
+ M Assets/Scripts/Game/Varginha/VarginhaMainMenu.cs
+ M Assets/Tests/PlayMode/CampaignSchoolPatternsPlayTests.cs
+ M Assets/Tests/PlayMode/MenuCinematicPlayTests.cs
+ M Assets/UniversalRenderPipelineGlobalSettings.asset
+ M Docs/QAAlpha01/EditModeProgress.txt
+ M Docs/QAAlpha01/EditModeResults.xml
+ M Docs/QAAlpha01/PlayModeProgress.txt
+ M Docs/QAAlpha01/PlayModeResults.xml
+ M ProjectSettings/ProjectSettings.asset
+ M Tools/QA/package_school_20261027.py
+ M output/revisao-mestre-2026-10-23/CONTINUIDADE.md
+ M output/revisao-mestre-2026-10-23/PENDENCIAS.md
+?? Assets/InitTestScenec949a572-ec01-4fd6-a057-43d89b5f2d69.unity
+?? Assets/InitTestScenec949a572-ec01-4fd6-a057-43d89b5f2d69.unity.meta
+?? Assets/Resources/Varginha/MenuLogoGrade.shader
+?? Assets/Resources/Varginha/MenuLogoGrade.shader.meta
+?? Assets/Resources/Varginha/MenuLogoOizlede.png
+?? Assets/Resources/Varginha/MenuLogoOizlede.png.meta
+?? Assets/Scripts/Editor/Testing/CampaignDirectionalReferences.cs.meta
+?? Assets/Scripts/Game/Varginha/Experiment/CampaignCharacterProportions.cs.meta
+?? Assets/Scripts/Game/Varginha/Experiment/CampaignForestPresence.cs.meta
+?? Assets/Scripts/Game/Varginha/MenuCaptionRotation.cs
+?? Assets/Scripts/Game/Varginha/MenuCaptionRotation.cs.meta
+?? Assets/Tests/EditMode/CampaignOuzanaVisualTests.cs.meta
+?? Assets/Tests/EditMode/MenuCaptionRotationTests.cs
+?? Assets/Tests/EditMode/MenuCaptionRotationTests.cs.meta
+?? Assets/Tests/PlayMode/CampaignForestReviewPlayTests.cs.meta
+?? Assets/Tests/PlayMode/CampaignOuzanaVisualPlayTests.cs.meta
+?? Assets/Tests/PlayMode/CampaignWorldAuditPlayTests.cs.meta
+?? "Assets/_Recovery/0 (5).unity"
+?? "Assets/_Recovery/0 (5).unity.meta"
+?? "Assets/_Recovery/0 (6).unity"
+?? "Assets/_Recovery/0 (6).unity.meta"
+?? "Assets/_Recovery/0 (7).unity"
+?? "Assets/_Recovery/0 (7).unity.meta"
+?? Docs/CampanhaOficial/ENTREGA_MENU_2026-10-28.md
+?? Docs/QAAlpha01/RunnerError.txt
+?? Tools/QA/menu_mouse_state_20261028.py
+?? output/completion-2026-10-27/
+?? output/directional-2026-10-26/
+?? output/forest-request-2026-10-27/
+?? output/forest-six-2026-10-27/
+?? output/menu-continuation-2026-10-28/
+?? output/ouzana-2026-10-26/
+?? output/pdf/Diario_Desenvolvimento_Varginha_09_a_22_10_2026.pdf
+?? output/pdf/EDELZIO_PROPOSTAS_PARA_REVISAO_23-10-2026.pdf
+?? output/pdf/ROTEIRO_EDELZIO_DESCONTRAIDO_23-10-2026.pdf
+?? output/pdf/ROTEIRO_EDELZIO_SIMPLES_23-10-2026.pdf
+?? output/pdf/diario-09-a-22-10-2026/
+?? output/relatorio-desenvolvimento-2026-10-23/
+?? output/relatorio-modelo-abtn-2026-10-23/
+?? output/revisao-completa-2026-10-28/
+?? output/revisao-final-2026-10-26/
+?? output/school-patterns-2026-10-27/
+?? output/school-shuffle-2026-10-27/
+?? output/tests/
+?? tmp/

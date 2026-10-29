@@ -1,0 +1,90 @@
+{
+  "docx_zip_integrity": true,
+  "native_tables": 5,
+  "native_images": 3,
+  "no_paragraph_borders": true,
+  "page_margins_cm": {
+    "top": 3,
+    "left": 3,
+    "bottom": 2,
+    "right": 2
+  },
+  "pages": 46,
+  "numbering_correct": true,
+  "no_blank_pages": true,
+  "primary_sections_found": true,
+  "no_broken_fields": true,
+  "reference_entries": 12,
+  "embedded_font_names": [
+    "Cambria",
+    "Cambria-Bold",
+    "TimesNewRomanPS-BoldMT",
+    "TimesNewRomanPSMT"
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "method": "All final page images reviewed in page contact sheets; full-size inspection of contents, campaign table, tests table, references and final appendix.",
+    "issues_remaining": []
+  },
+  "game_tests_executed_for_report": false,
+  "game_files_edited_for_report": false,
+  "artifacts": [
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\relatorio-desenvolvimento-2026-10-23\\relatorio_desenvolvimento_o_segredo_de_varginha_23-10-2026.pdf",
+      "bytes": 938055,
+      "sha256": "25b18303796b63f6a98ed8035acea412c7818237232556c2efffd0ff4ff0ab6b"
+    },
+    {
+      "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\relatorio-desenvolvimento-2026-10-23\\relatorio_desenvolvimento_o_segredo_de_varginha_23-10-2026.docx",
+      "bytes": 5812290,
+      "sha256": "3dccbe3eb8d70c56e3ad042b65bcb8058a77ec4f049f7334fd0d331b98a2af84"
+    }
+  ]
+}

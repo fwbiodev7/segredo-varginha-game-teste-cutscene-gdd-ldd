@@ -1,0 +1,303 @@
+phase,area,prop,accessible_sides,contacts
+1,0,Cama infantil,2,2
+1,0,Brinquedos,2,2
+1,0,Mesa de desenho,2,2
+1,0,Fogão,2,2
+1,0,Lavatório,3,3
+1,0,Geladeira,2,2
+1,0,Mesa da cozinha,3,3
+1,0,TV CRT,4,4
+1,0,Mesa do jornal,4,4
+1,0,Sofá,4,4
+1,0,Vaso sanitário,3,3
+1,0,Box do banheiro,3,3
+1,0,Pia do banheiro,3,3
+1,0,Árvore do clarão,4,4
+1,0,Árvore sul,4,4
+2,0,Bed_Edelzio,2,2
+2,0,Nightstand_Bedroom,4,4
+2,0,Caixa sob a cama,2,2
+2,0,Bookshelf_Bedroom,3,3
+2,0,Dresser_Bedroom,2,2
+2,0,Desk_Office,2,2
+2,0,Bookshelf_Office,2,2
+2,0,TV_StaticNoise,4,4
+2,0,Sofa_LivingRoom,4,4
+2,0,CoffeeTable_Kitchen,1,1
+2,0,Stove_Kitchen,1,1
+2,0,Kitchen_Cabinet,2,2
+2,0,Fridge_Kitchen,2,2
+2,0,Fusca,4,4
+2,0,Árvore quintal norte,4,4
+2,0,Árvore quintal nordeste,4,4
+2,0,Árvore quintal sul,4,4
+2,0,Office_Chair,3,3
+2,0,Kitchen_Chair_Left,3,3
+2,0,Kitchen_Chair_Right,3,3
+2,0,Kitchen_Chair_Center,3,3
+4,0,Carteira original 0,4,4
+4,0,Cadeira azul 0,4,4
+4,0,Carteira original 1,4,4
+4,0,Cadeira azul 1,4,4
+4,0,Carteira original 2,4,4
+4,0,Cadeira azul 2,4,4
+4,0,Carteira original 3,4,4
+4,0,Cadeira azul 3,4,4
+4,0,Carteira original 4,4,4
+4,0,Cadeira azul 4,4,4
+4,0,Carteira original 5,4,4
+4,0,Cadeira azul 5,4,4
+4,0,Carteira original 6,4,4
+4,0,Cadeira azul 6,4,4
+4,0,Carteira original 7,4,4
+4,0,Cadeira azul 7,4,4
+4,0,Carteira original 8,4,4
+4,0,Cadeira azul 8,4,4
+4,0,Carteira original 9,4,4
+4,0,Cadeira azul 9,4,4
+4,0,Carteira original 10,4,4
+4,0,Cadeira azul 10,4,4
+4,0,Carteira original 11,4,4
+4,0,Cadeira azul 11,4,4
+4,0,Mesa do professor,4,4
+4,0,Fusca,4,4
+4,0,Banco do jardim,4,4
+4,0,Árvore jardim oeste,4,4
+4,0,Árvore jardim leste,4,4
+6,0,Estante norte oeste,2,2
+6,0,Estante norte central,3,3
+6,0,Estante norte leste,3,3
+6,0,Estante sudoeste,3,3
+6,0,Estante sudeste,3,3
+6,0,Escada da estante,3,3
+6,0,Mesa de leitura oeste,3,3
+6,0,Cadeira leitura oeste,3,3
+6,0,Cadeira leitura leste,1,1
+6,0,Painel de avisos,3,3
+6,0,Armario do globo,3,3
+6,0,Mesa redonda,0,0
+6,0,Cadeira redonda norte,3,3
+6,0,Cadeira redonda sul,3,3
+6,0,Cadeira redonda oeste,1,1
+6,0,Cadeira redonda leste,2,2
+6,0,Cadeira redonda sudeste,2,2
+6,0,Mesa central de fragmentos,4,4
+6,0,Cadeira central norte oeste,3,3
+6,0,Cadeira central norte leste,3,3
+6,0,Cadeira central sul oeste,4,4
+6,0,Cadeira central sul meio,4,4
+6,0,Cadeira central sul leste,4,4
+6,0,Mesa dos recortes,1,1
+6,0,Cadeira recortes norte,2,2
+6,0,Cadeira recortes oeste,3,3
+6,0,Cadeira recortes leste,2,2
+6,0,Planta oeste,3,3
+6,0,Planta leste,3,3
+6,0,Planta entrada oeste,3,3
+6,0,Planta entrada leste,3,3
+7,0,Altar em ruínas,4,4
+7,0,Pedra memorial,4,4
+7,0,Sino do santuário,4,4
+7,0,Árvore oeste,4,4
+7,0,Árvore norte,4,4
+7,0,Árvore bifurcação,4,4
+7,0,Árvore clareira,4,4
+7,0,Árvore esconderijo,4,4
+7,0,Árvore margem,4,4
+7,0,Árvore sul,3,3
+8,0,Altar da âncora,4,4
+8,0,Livro do Tombo,3,3
+8,0,Estante de registros,4,4
+8,0,Arquivo de 1898,4,4
+8,0,Coluna oeste,3,3
+8,0,Coluna leste,4,4
+8,0,Órgão da capela,4,4
+8,0,Pia batismal,4,4
+8,0,Banco oeste 0,4,4
+8,0,Banco leste 0,4,4
+8,0,Banco oeste 1,4,4
+8,0,Banco leste 1,4,4
+8,0,Banco oeste 2,4,4
+8,0,Banco leste 2,4,4
+9,0,Cama botânica,4,4
+9,0,Herbário doméstico,4,4
+9,0,Sofá verde,4,4
+9,0,Mesa de chá,4,4
+9,0,Cozinha de botânica,3,3
+9,0,Samambaia,4,4
+9,0,Geladeira de amostras,4,4
+9,0,Bancada de pesquisa,4,4
+9,0,Arquivo científico,4,4
+9,0,Terrário doméstico,4,4
+9,0,Samambaia laboratório,4,4
+9,0,Espécime luminoso,4,4
+9,0,Bancada de cultura,4,4
+9,0,Carrinho de cultivo,4,4
+9,0,Pia de higienização,4,4
+11,0,Carteira original 0,4,4
+11,0,Cadeira azul 0,4,4
+11,0,Carteira original 1,4,4
+11,0,Cadeira azul 1,4,4
+11,0,Carteira original 2,4,4
+11,0,Cadeira azul 2,4,4
+11,0,Carteira original 3,4,4
+11,0,Cadeira azul 3,4,4
+11,0,Carteira original 4,4,4
+11,0,Cadeira azul 4,4,4
+11,0,Carteira original 5,4,4
+11,0,Cadeira azul 5,4,4
+11,0,Carteira original 6,4,4
+11,0,Cadeira azul 6,4,4
+11,0,Carteira original 7,4,4
+11,0,Cadeira azul 7,4,4
+11,0,Carteira original 8,4,4
+11,0,Cadeira azul 8,4,4
+11,0,Carteira original 9,4,4
+11,0,Cadeira azul 9,4,4
+11,0,Carteira original 10,4,4
+11,0,Cadeira azul 10,4,4
+11,0,Carteira original 11,4,4
+11,0,Cadeira azul 11,4,4
+11,0,Mesa do professor,4,4
+11,0,Fusca,4,4
+11,0,Banco do jardim,4,4
+11,0,Árvore jardim oeste,4,4
+11,0,Árvore jardim leste,4,4
+12,0,Poço antigo,4,4
+12,0,Banco do jardim,4,4
+12,0,Carroça abandonada,3,3
+12,0,Árvore oeste,4,4
+12,0,Árvore leste,4,4
+12,0,Arbusto oeste,3,3
+12,0,Arbusto leste,3,3
+12,0,Jardineira oeste,4,4
+12,0,Jardineira leste,4,4
+12,0,Lampião oeste,0,0
+12,0,Lampião leste,0,0
+12,0,Barril da reforma,4,4
+14,0,Altar da âncora,4,4
+14,0,Livro do Tombo,3,3
+14,0,Estante de registros,4,4
+14,0,Arquivo de 1898,4,4
+14,0,Coluna oeste,3,3
+14,0,Coluna leste,4,4
+14,0,Órgão da capela,4,4
+14,0,Pia batismal,4,4
+14,0,Banco oeste 0,4,4
+14,0,Banco leste 0,4,4
+14,0,Banco oeste 1,4,4
+14,0,Banco leste 1,4,4
+14,0,Banco oeste 2,4,4
+14,0,Banco leste 2,4,4
+15,0,Cama infantil,2,2
+15,0,Brinquedos,2,2
+15,0,Mesa de desenho,2,2
+15,0,Fogão,2,2
+15,0,Lavatório,3,3
+15,0,Geladeira,2,2
+15,0,Mesa da cozinha,3,3
+15,0,TV CRT,4,4
+15,0,Mesa do jornal,4,4
+15,0,Sofá,4,4
+15,0,Vaso sanitário,3,3
+15,0,Box do banheiro,3,3
+15,0,Pia do banheiro,3,3
+15,0,Árvore do clarão,4,4
+15,0,Árvore sul,4,4
+18,0,Freezer de amostras,1,1
+18,0,Bancada de microscópios,1,1
+18,0,Banqueta dos microscópios,1,1
+18,0,Incubadora — ET de 1996 congelado,3,3
+18,0,Console de contenção e retorno,1,1
+18,0,Cadeira do console,1,1
+18,0,Arquivo científico,1,1
+18,0,Pia de descontaminação,1,1
+18,0,Lixeira de laboratório,2,2
+18,0,Armário de equipamentos,2,2
+18,0,Módulos técnicos da parede,1,1
+18,0,Carrinho de amostras,3,3
+18,0,Bancada central de estudos,2,2
+18,0,Cadeira norte esquerda,1,1
+18,0,Cadeira norte central,1,1
+18,0,Cadeira norte direita,1,1
+18,0,Torneira da bancada central,0,0
+18,0,Banqueta central esquerda,1,1
+18,0,Banqueta central direita,1,1
+18,0,Scanner — leituras de Ouzana,1,1
+18,0,Banqueta do scanner,2,2
+20,0,Máquina oeste,1,1
+20,0,Máquina leste,1,1
+21,0,Máquina oeste,1,1
+21,0,Máquina leste,1,1
+10,0,Bancada do estabilizador,4,4
+10,0,Armário de ferramentas,3,3
+10,0,Peças e ferramentas,4,4
+10,0,Reserva do reagente,3,3
+10,0,Caixas leste,3,3
+10,0,Lona e pneus,3,3
+10,0,Fusca,4,4
+12,1,Sofá coberto,4,4
+12,1,Poltrona da sala,4,4
+12,1,Mesa redonda,4,4
+12,1,Estante da sala,4,4
+12,1,Planta da sala,3,3
+12,1,Estante do arquivo,4,4
+12,1,Armário do arquivo,3,3
+12,1,Globo do arquivo,3,3
+12,1,Mesa da cozinha,4,4
+12,1,Barril da cozinha,4,4
+12,1,Prateleira de frascos,4,4
+12,1,Cadeira da cozinha,4,4
+12,1,Segunda cadeira da cozinha,4,4
+12,1,Mesa do escritório,4,4
+12,1,Gaveteiro do escritório,4,4
+12,1,Cadeira do escritório,4,4
+12,1,Estante do depósito,4,4
+12,1,Baú do depósito,4,4
+12,1,Móvel coberto do depósito,4,4
+12,1,Relógio do corredor,4,4
+12,1,Armário de serviço,4,4
+12,1,Mesa de serviço,4,4
+12,1,Planta do hall,4,4
+13,0,Estante dos registros,4,4
+13,0,Móvel coberto dos registros,4,4
+13,0,Barril dos registros,3,3
+13,0,Estante dos instrumentos,3,3
+13,0,Mesa dos instrumentos,4,4
+13,0,Estante de frascos,4,4
+13,0,Caixa dos materiais,4,4
+13,0,Mesa dos registros,4,4
+13,0,Caixotes do arquivo,4,4
+13,0,Mesa de análise,4,4
+13,0,Caixotes do depósito,4,4
+13,0,Baú dos registros,4,4
+13,0,Barril do depósito,4,4
+21,1,Carteira original 0,4,4
+21,1,Cadeira azul 0,4,4
+21,1,Carteira original 1,4,4
+21,1,Cadeira azul 1,4,4
+21,1,Carteira original 2,4,4
+21,1,Cadeira azul 2,4,4
+21,1,Carteira original 3,4,4
+21,1,Cadeira azul 3,4,4
+21,1,Carteira original 4,4,4
+21,1,Cadeira azul 4,4,4
+21,1,Carteira original 5,4,4
+21,1,Cadeira azul 5,4,4
+21,1,Carteira original 6,4,4
+21,1,Cadeira azul 6,4,4
+21,1,Carteira original 7,4,4
+21,1,Cadeira azul 7,4,4
+21,1,Carteira original 8,4,4
+21,1,Cadeira azul 8,4,4
+21,1,Carteira original 9,4,4
+21,1,Cadeira azul 9,4,4
+21,1,Carteira original 10,4,4
+21,1,Cadeira azul 10,4,4
+21,1,Carteira original 11,4,4
+21,1,Cadeira azul 11,4,4
+21,1,Mesa do professor,4,4
+21,1,Fusca,4,4
+21,1,Banco do jardim,4,4
+21,1,Árvore jardim oeste,4,4
+21,1,Árvore jardim leste,4,4

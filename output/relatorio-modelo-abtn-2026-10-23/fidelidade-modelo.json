@@ -1,0 +1,23 @@
+{
+  "reference": "C:/Users/Usuario/Documents/Modelo ABTN.pdf",
+  "structure": [
+    "Capa",
+    "Folha de rosto",
+    "Lista de ilustrações",
+    "Lista de tabelas",
+    "Sumário",
+    "1 INTRODUÇÃO",
+    "2 REFERENCIAL TEÓRICO",
+    "3 PROCEDIMENTOS METODOLÓGICOS",
+    "4 RESULTADOS ESPERADOS",
+    "5 REFERÊNCIAS BIBLIOGRÁFICAS"
+  ],
+  "retained": "Conteúdo de desenvolvimento integral organizado em subseções; dados e evidências mantidos",
+  "intentional_adaptations": [
+    "Campos genéricos preenchidos com os dados fornecidos",
+    "Placeholder de logomarca omitido por ausência de logomarca institucional fornecida",
+    "Instruções vermelhas e exemplos do modelo não reproduzidos como conteúdo",
+    "Referências reais e atuais preservadas; resultados obtidos distinguidos das expectativas",
+    "Sem resumos em idiomas e apêndices adicionais, ausentes no modelo"
+  ]
+}

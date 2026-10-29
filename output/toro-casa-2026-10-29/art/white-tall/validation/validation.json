@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "status": "structural_pass",
+  "errors": [],
+  "warnings": [],
+  "frames": [
+    {
+      "id": "toro_side_right",
+      "bbox": [
+        2,
+        9,
+        125,
+        61
+      ],
+      "visiblePixels": 4101,
+      "colors": 14,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "184d6ddd2e6a12ca2eecc636ba5cb78f48c11a4613581594a2b3b99b56c117ed"
+    }
+  ],
+  "paletteColors": 14,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\toro-casa-2026-10-29\\art\\white-tall\\FiatToroSide.json",
+  "metadataSha256": "9cc7ae382ba5ae199306178681bb7f990798021d2af398d6c084768fbaf79d3d"
+}

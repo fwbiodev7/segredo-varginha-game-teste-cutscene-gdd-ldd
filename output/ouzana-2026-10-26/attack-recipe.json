@@ -1,0 +1,1024 @@
+{
+  "cell": [
+    224,
+    224
+  ],
+  "columns": 6,
+  "padding": 1,
+  "pixelsPerUnit": 108,
+  "pivot": [
+    112,
+    202
+  ],
+  "durationMs": 110,
+  "frames": [
+    {
+      "id": "attack_s_0",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        67,
+        20,
+        116,
+        157
+      ],
+      "anchor": [
+        58,
+        154
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "attack_s_1",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        241,
+        20,
+        123,
+        157
+      ],
+      "anchor": [
+        62,
+        154
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110
+    },
+    {
+      "id": "attack_s_2",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        412,
+        20,
+        117,
+        157
+      ],
+      "anchor": [
+        58,
+        154
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110
+    },
+    {
+      "id": "attack_s_3",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        604,
+        20,
+        103,
+        157
+      ],
+      "anchor": [
+        52,
+        154
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 90
+    },
+    {
+      "id": "attack_s_4",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        778,
+        20,
+        108,
+        157
+      ],
+      "anchor": [
+        52,
+        154
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "attack_s_5",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        946,
+        20,
+        101,
+        157
+      ],
+      "anchor": [
+        51,
+        154
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "attack_sw_0",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        57,
+        194,
+        113,
+        154
+      ],
+      "anchor": [
+        56,
+        151
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "attack_sw_1",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        239,
+        194,
+        122,
+        154
+      ],
+      "anchor": [
+        61,
+        151
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110
+    },
+    {
+      "id": "attack_sw_2",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        414,
+        194,
+        115,
+        154
+      ],
+      "anchor": [
+        57,
+        152
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110
+    },
+    {
+      "id": "attack_sw_3",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        588,
+        194,
+        114,
+        154
+      ],
+      "anchor": [
+        57,
+        151
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 90
+    },
+    {
+      "id": "attack_sw_4",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        771,
+        194,
+        110,
+        154
+      ],
+      "anchor": [
+        56,
+        151
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "attack_sw_5",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        948,
+        194,
+        97,
+        154
+      ],
+      "anchor": [
+        48,
+        151
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "attack_w_0",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        55,
+        364,
+        103,
+        156
+      ],
+      "anchor": [
+        52,
+        153
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "attack_w_1",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        241,
+        364,
+        116,
+        156
+      ],
+      "anchor": [
+        58,
+        153
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110
+    },
+    {
+      "id": "attack_w_2",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        409,
+        364,
+        112,
+        156
+      ],
+      "anchor": [
+        58,
+        153
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110
+    },
+    {
+      "id": "attack_w_3",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        577,
+        364,
+        124,
+        156
+      ],
+      "anchor": [
+        62,
+        153
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 90
+    },
+    {
+      "id": "attack_w_4",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        767,
+        364,
+        111,
+        156
+      ],
+      "anchor": [
+        56,
+        152
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "attack_w_5",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        946,
+        364,
+        92,
+        156
+      ],
+      "anchor": [
+        46,
+        151
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "attack_nw_0",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        66,
+        876,
+        112,
+        158
+      ],
+      "anchor": [
+        56,
+        154
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100,
+      "mirrorX": true
+    },
+    {
+      "id": "attack_nw_1",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        252,
+        876,
+        126,
+        158
+      ],
+      "anchor": [
+        63,
+        155
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110,
+      "mirrorX": true
+    },
+    {
+      "id": "attack_nw_2",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        421,
+        876,
+        103,
+        158
+      ],
+      "anchor": [
+        50,
+        155
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110,
+      "mirrorX": true
+    },
+    {
+      "id": "attack_nw_3",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        601,
+        876,
+        131,
+        158
+      ],
+      "anchor": [
+        65,
+        157
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 90,
+      "mirrorX": true
+    },
+    {
+      "id": "attack_nw_4",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        778,
+        876,
+        123,
+        158
+      ],
+      "anchor": [
+        63,
+        154
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100,
+      "mirrorX": true
+    },
+    {
+      "id": "attack_nw_5",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        949,
+        876,
+        91,
+        158
+      ],
+      "anchor": [
+        45,
+        154
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 130,
+      "mirrorX": true
+    },
+    {
+      "id": "attack_n_0",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        70,
+        700,
+        112,
+        161
+      ],
+      "anchor": [
+        56,
+        158
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "attack_n_1",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        254,
+        700,
+        121,
+        161
+      ],
+      "anchor": [
+        60,
+        158
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110
+    },
+    {
+      "id": "attack_n_2",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        424,
+        700,
+        112,
+        161
+      ],
+      "anchor": [
+        56,
+        157
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110
+    },
+    {
+      "id": "attack_n_3",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        598,
+        700,
+        97,
+        161
+      ],
+      "anchor": [
+        50,
+        158
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 90
+    },
+    {
+      "id": "attack_n_4",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        777,
+        700,
+        98,
+        161
+      ],
+      "anchor": [
+        50,
+        158
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "attack_n_5",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        944,
+        700,
+        94,
+        161
+      ],
+      "anchor": [
+        48,
+        158
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "attack_ne_0",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        66,
+        876,
+        112,
+        158
+      ],
+      "anchor": [
+        56,
+        154
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "attack_ne_1",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        252,
+        876,
+        126,
+        158
+      ],
+      "anchor": [
+        63,
+        155
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110
+    },
+    {
+      "id": "attack_ne_2",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        421,
+        876,
+        103,
+        158
+      ],
+      "anchor": [
+        53,
+        155
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110
+    },
+    {
+      "id": "attack_ne_3",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        601,
+        876,
+        131,
+        158
+      ],
+      "anchor": [
+        66,
+        157
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 90
+    },
+    {
+      "id": "attack_ne_4",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        778,
+        876,
+        123,
+        158
+      ],
+      "anchor": [
+        60,
+        154
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "attack_ne_5",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        949,
+        876,
+        91,
+        158
+      ],
+      "anchor": [
+        46,
+        154
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "attack_e_0",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        64,
+        1048,
+        108,
+        163
+      ],
+      "anchor": [
+        54,
+        158
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "attack_e_1",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        255,
+        1048,
+        118,
+        163
+      ],
+      "anchor": [
+        60,
+        157
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110
+    },
+    {
+      "id": "attack_e_2",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        421,
+        1048,
+        103,
+        163
+      ],
+      "anchor": [
+        52,
+        158
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110
+    },
+    {
+      "id": "attack_e_3",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        603,
+        1048,
+        118,
+        163
+      ],
+      "anchor": [
+        59,
+        160
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 90
+    },
+    {
+      "id": "attack_e_4",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        781,
+        1048,
+        105,
+        163
+      ],
+      "anchor": [
+        52,
+        160
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "attack_e_5",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        944,
+        1048,
+        96,
+        163
+      ],
+      "anchor": [
+        48,
+        159
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 130
+    },
+    {
+      "id": "attack_se_0",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        70,
+        1227,
+        108,
+        160
+      ],
+      "anchor": [
+        54,
+        155
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "attack_se_1",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        258,
+        1227,
+        111,
+        160
+      ],
+      "anchor": [
+        55,
+        155
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110
+    },
+    {
+      "id": "attack_se_2",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        427,
+        1227,
+        113,
+        160
+      ],
+      "anchor": [
+        55,
+        157
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 110
+    },
+    {
+      "id": "attack_se_3",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        599,
+        1227,
+        115,
+        160
+      ],
+      "anchor": [
+        57,
+        157
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 90
+    },
+    {
+      "id": "attack_se_4",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        768,
+        1227,
+        123,
+        160
+      ],
+      "anchor": [
+        62,
+        157
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 100
+    },
+    {
+      "id": "attack_se_5",
+      "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\ouzana-2026-10-26\\source\\attack-generated.png",
+      "crop": [
+        948,
+        1227,
+        103,
+        160
+      ],
+      "anchor": [
+        50,
+        157
+      ],
+      "targetAnchor": [
+        112,
+        202
+      ],
+      "durationMs": 130
+    }
+  ],
+  "clips": {
+    "attack_s": {
+      "frames": [
+        "attack_s_0",
+        "attack_s_1",
+        "attack_s_2",
+        "attack_s_3",
+        "attack_s_4",
+        "attack_s_5"
+      ],
+      "loop": false
+    },
+    "attack_sw": {
+      "frames": [
+        "attack_sw_0",
+        "attack_sw_1",
+        "attack_sw_2",
+        "attack_sw_3",
+        "attack_sw_4",
+        "attack_sw_5"
+      ],
+      "loop": false
+    },
+    "attack_w": {
+      "frames": [
+        "attack_w_0",
+        "attack_w_1",
+        "attack_w_2",
+        "attack_w_3",
+        "attack_w_4",
+        "attack_w_5"
+      ],
+      "loop": false
+    },
+    "attack_nw": {
+      "frames": [
+        "attack_nw_0",
+        "attack_nw_1",
+        "attack_nw_2",
+        "attack_nw_3",
+        "attack_nw_4",
+        "attack_nw_5"
+      ],
+      "loop": false
+    },
+    "attack_n": {
+      "frames": [
+        "attack_n_0",
+        "attack_n_1",
+        "attack_n_2",
+        "attack_n_3",
+        "attack_n_4",
+        "attack_n_5"
+      ],
+      "loop": false
+    },
+    "attack_ne": {
+      "frames": [
+        "attack_ne_0",
+        "attack_ne_1",
+        "attack_ne_2",
+        "attack_ne_3",
+        "attack_ne_4",
+        "attack_ne_5"
+      ],
+      "loop": false
+    },
+    "attack_e": {
+      "frames": [
+        "attack_e_0",
+        "attack_e_1",
+        "attack_e_2",
+        "attack_e_3",
+        "attack_e_4",
+        "attack_e_5"
+      ],
+      "loop": false
+    },
+    "attack_se": {
+      "frames": [
+        "attack_se_0",
+        "attack_se_1",
+        "attack_se_2",
+        "attack_se_3",
+        "attack_se_4",
+        "attack_se_5"
+      ],
+      "loop": false
+    }
+  }
+}

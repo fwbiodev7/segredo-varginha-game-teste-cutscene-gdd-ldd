@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="15" result="Passed" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="0001-01-01 00:00:00Z" end-time="0001-01-01 00:00:00Z" duration="136,9147975">
+  <test-suite type="TestSuite" id="1000" name="Varginha_Completion_QA_20261027" fullname="Varginha_Completion_QA_20261027" runstate="Runnable" testcasecount="327" result="Passed" start-time="2026-10-27 13:50:21Z" end-time="2026-10-27 13:52:38Z" duration="136.914798" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ArchivesToHouse
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.BasementToFabio
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChildhoodToAdultCannotAdvanceTwice
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChurchToOuzana
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.CreatureToManifestation
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.EpilogueCreditsReturnToMenuWithTheCompletedSave
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.FabioToMemory
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ForestToChurch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.HouseServiceDoorOpensTheBasement
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.LibraryToForest
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ManifestationToReturn
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.MemoryToCreature
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.OuzanaToWorkshop
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.WorkshopToArchives
+<properties><property name="platform" value="PlayMode"></property></properties><test-suite type="Assembly" id="1379" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Temp/UnityTempFile-d52bca5fc077fd54791210b745f01900/PlayerWithTests/PlayerWithTests_Data/Managed/GamePlayModeTests.dll" runstate="Runnable" testcasecount="327" result="Passed" start-time="2026-10-27 13:50:21Z" end-time="2026-10-27 13:52:38Z" duration="136.872069" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ArchivesToHouse
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.BasementToFabio
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChildhoodToAdultCannotAdvanceTwice
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChurchToOuzana
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.CreatureToManifestation
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.EpilogueCreditsReturnToMenuWithTheCompletedSave
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.FabioToMemory
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ForestToChurch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.HouseServiceDoorOpensTheBasement
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.LibraryToForest
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ManifestationToReturn
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.MemoryToCreature
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.OuzanaToWorkshop
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.WorkshopToArchives
+<properties><property name="_PID" value="8964"></property><property name="_APPDOMAIN" value="Unity Root Domain"></property><property name="platform" value="PlayMode"></property><property name="EditorOnly" value="False"></property></properties><test-suite type="TestSuite" id="1380" name="Game" fullname="Game" runstate="Runnable" testcasecount="327" result="Passed" start-time="2026-10-27 13:50:21Z" end-time="2026-10-27 13:52:38Z" duration="136.845331" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ArchivesToHouse
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.BasementToFabio
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChildhoodToAdultCannotAdvanceTwice
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChurchToOuzana
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.CreatureToManifestation
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.EpilogueCreditsReturnToMenuWithTheCompletedSave
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.FabioToMemory
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ForestToChurch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.HouseServiceDoorOpensTheBasement
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.LibraryToForest
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ManifestationToReturn
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.MemoryToCreature
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.OuzanaToWorkshop
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.WorkshopToArchives
+<properties></properties><test-suite type="TestSuite" id="1381" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="327" result="Passed" start-time="2026-10-27 13:50:21Z" end-time="2026-10-27 13:52:38Z" duration="136.804748" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ArchivesToHouse
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.BasementToFabio
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChildhoodToAdultCannotAdvanceTwice
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChurchToOuzana
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.CreatureToManifestation
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.EpilogueCreditsReturnToMenuWithTheCompletedSave
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.FabioToMemory
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ForestToChurch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.HouseServiceDoorOpensTheBasement
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.LibraryToForest
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ManifestationToReturn
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.MemoryToCreature
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.OuzanaToWorkshop
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.WorkshopToArchives
+<properties></properties><test-suite type="TestSuite" id="1382" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="327" result="Passed" start-time="2026-10-27 13:50:21Z" end-time="2026-10-27 13:52:38Z" duration="136.759055" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ArchivesToHouse
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.BasementToFabio
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChildhoodToAdultCannotAdvanceTwice
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChurchToOuzana
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.CreatureToManifestation
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.EpilogueCreditsReturnToMenuWithTheCompletedSave
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.FabioToMemory
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ForestToChurch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.HouseServiceDoorOpensTheBasement
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.LibraryToForest
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ManifestationToReturn
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.MemoryToCreature
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.OuzanaToWorkshop
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.WorkshopToArchives
+<properties></properties><test-suite type="TestFixture" id="1009" name="CampaignChapterExitReviewTests" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" testcasecount="15" result="Passed" start-time="2026-10-27 13:50:21Z" end-time="2026-10-27 13:52:38Z" duration="136.702660" total="15" passed="15" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ArchivesToHouse
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.BasementToFabio
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChildhoodToAdultCannotAdvanceTwice
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChurchToOuzana
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.CreatureToManifestation
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.EpilogueCreditsReturnToMenuWithTheCompletedSave
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.FabioToMemory
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ForestToChurch
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.HouseServiceDoorOpensTheBasement
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.LibraryToForest
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ManifestationToReturn
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.MemoryToCreature
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.OuzanaToWorkshop
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.WorkshopToArchives
+<properties></properties><test-case id="1016" name="ArchivesToHouse" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.ArchivesToHouse" methodname="ArchivesToHouse" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="38224980" result="Passed" start-time="2026-10-27 13:50:21Z" end-time="2026-10-27 13:50:30Z" duration="9.060534" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ArchivesToHouse
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ArchivesToHouse
+</output></test-case><test-case id="1017" name="BasementToFabio" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.BasementToFabio" methodname="BasementToFabio" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="1080603840" result="Passed" start-time="2026-10-27 13:50:30Z" end-time="2026-10-27 13:50:39Z" duration="9.040739" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.BasementToFabio
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.BasementToFabio
+</output></test-case><test-case id="1022" name="ChildhoodToAdultCannotAdvanceTwice" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChildhoodToAdultCannotAdvanceTwice" methodname="ChildhoodToAdultCannotAdvanceTwice" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="483382634" result="Passed" start-time="2026-10-27 13:50:39Z" end-time="2026-10-27 13:50:49Z" duration="9.847779" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChildhoodToAdultCannotAdvanceTwice
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChildhoodToAdultCannotAdvanceTwice
+</output></test-case><test-case id="1013" name="ChurchToOuzana" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChurchToOuzana" methodname="ChurchToOuzana" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="1296564846" result="Passed" start-time="2026-10-27 13:50:49Z" end-time="2026-10-27 13:50:58Z" duration="9.137829" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChurchToOuzana
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ChurchToOuzana
+</output></test-case><test-case id="1020" name="CreatureToManifestation" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.CreatureToManifestation" methodname="CreatureToManifestation" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="528703149" result="Passed" start-time="2026-10-27 13:50:58Z" end-time="2026-10-27 13:51:07Z" duration="8.943763" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.CreatureToManifestation
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.CreatureToManifestation
+</output></test-case><test-case id="1024" name="EpilogueCreditsReturnToMenuWithTheCompletedSave" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.EpilogueCreditsReturnToMenuWithTheCompletedSave" methodname="EpilogueCreditsReturnToMenuWithTheCompletedSave" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="2146448954" result="Passed" start-time="2026-10-27 13:51:07Z" end-time="2026-10-27 13:51:17Z" duration="9.879204" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.EpilogueCreditsReturnToMenuWithTheCompletedSave
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.EpilogueCreditsReturnToMenuWithTheCompletedSave
+</output></test-case><test-case id="1018" name="FabioToMemory" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.FabioToMemory" methodname="FabioToMemory" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="1600352273" result="Passed" start-time="2026-10-27 13:51:17Z" end-time="2026-10-27 13:51:26Z" duration="9.203348" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.FabioToMemory
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.FabioToMemory
+</output></test-case><test-case id="1012" name="ForestToChurch" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.ForestToChurch" methodname="ForestToChurch" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="259368835" result="Passed" start-time="2026-10-27 13:51:26Z" end-time="2026-10-27 13:51:35Z" duration="8.915663" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ForestToChurch
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ForestToChurch
+</output></test-case><test-case id="1023" name="HouseServiceDoorOpensTheBasement" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.HouseServiceDoorOpensTheBasement" methodname="HouseServiceDoorOpensTheBasement" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="1283831685" result="Passed" start-time="2026-10-27 13:51:35Z" end-time="2026-10-27 13:51:44Z" duration="8.874026" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.HouseServiceDoorOpensTheBasement
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.HouseServiceDoorOpensTheBasement
+</output></test-case><test-case id="1011" name="LibraryToForest" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.LibraryToForest" methodname="LibraryToForest" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="2133608032" result="Passed" start-time="2026-10-27 13:51:44Z" end-time="2026-10-27 13:51:53Z" duration="8.997113" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.LibraryToForest
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.LibraryToForest
+</output></test-case><test-case id="1021" name="ManifestationToReturn" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.ManifestationToReturn" methodname="ManifestationToReturn" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="1325378332" result="Passed" start-time="2026-10-27 13:51:53Z" end-time="2026-10-27 13:52:02Z" duration="8.971241" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ManifestationToReturn
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.ManifestationToReturn
+</output></test-case><test-case id="1019" name="MemoryToCreature" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.MemoryToCreature" methodname="MemoryToCreature" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="1180780807" result="Passed" start-time="2026-10-27 13:52:02Z" end-time="2026-10-27 13:52:11Z" duration="8.724628" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.MemoryToCreature
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.MemoryToCreature
+</output></test-case><test-case id="1014" name="OuzanaToWorkshop" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.OuzanaToWorkshop" methodname="OuzanaToWorkshop" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="1754240494" result="Passed" start-time="2026-10-27 13:52:11Z" end-time="2026-10-27 13:52:20Z" duration="8.861820" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.OuzanaToWorkshop
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.OuzanaToWorkshop
+</output></test-case><test-case id="1010" name="SchoolToLibrary" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary" methodname="SchoolToLibrary" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="1869387135" result="Passed" start-time="2026-10-27 13:52:20Z" end-time="2026-10-27 13:52:29Z" duration="9.073304" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.SchoolToLibrary
+</output></test-case><test-case id="1015" name="WorkshopToArchives" fullname="Game.Tests.PlayMode.CampaignChapterExitReviewTests.WorkshopToArchives" methodname="WorkshopToArchives" classname="Game.Tests.PlayMode.CampaignChapterExitReviewTests" runstate="Runnable" seed="1975749034" result="Passed" start-time="2026-10-27 13:52:29Z" end-time="2026-10-27 13:52:38Z" duration="9.138353" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.WorkshopToArchives
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChapterExitReviewTests.WorkshopToArchives
+</output></test-case></test-suite></test-suite></test-suite></test-suite></test-suite></test-suite>
+</test-run>

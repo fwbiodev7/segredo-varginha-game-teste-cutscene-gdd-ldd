@@ -1,0 +1,959 @@
+diff --git a/Assets/Scripts/Editor/Testing/VarginhaDailyBuild.cs b/Assets/Scripts/Editor/Testing/VarginhaDailyBuild.cs
+index 21e29ea..8e6493d 100644
+--- a/Assets/Scripts/Editor/Testing/VarginhaDailyBuild.cs
++++ b/Assets/Scripts/Editor/Testing/VarginhaDailyBuild.cs
+@@ -10,9 +10,9 @@ namespace Game.Editor.Testing
+     public static class VarginhaDailyBuild
+     {
+         public const string Version = "0.5.2-beta";
+-        public const string Folder = "Builds/Varginha_0.5.2-beta_2026-10-27";
++        public const string Folder = "Builds/Varginha_0.5.2-beta_2026-10-28";
+ 
+-        [MenuItem("Varginha/Build/Escola 27-10 Windows x64")]
++        [MenuItem("Varginha/Build/Menu e floresta 28-10 Windows x64")]
+         public static void Build()
+         {
+             if (Application.isPlaying) throw new InvalidOperationException("Encerre o Play antes da build.");
+diff --git a/Assets/Scripts/Game/UI/GameHUD.cs b/Assets/Scripts/Game/UI/GameHUD.cs
+index cb158ce..27ec8f7 100644
+--- a/Assets/Scripts/Game/UI/GameHUD.cs
++++ b/Assets/Scripts/Game/UI/GameHUD.cs
+@@ -53,7 +53,7 @@ namespace Game.UI
+                 fontStyle = FontStyle.Bold,
+                 alignment = TextAnchor.MiddleCenter
+             };
+-            _titleStyle.normal.textColor = Color.yellow;
++            _titleStyle.normal.textColor = PixelMenuTheme.Paper;
+ 
+             _subStyle = new GUIStyle(GUI.skin.label)
+             {
+diff --git a/Assets/Scripts/Game/UI/PixelMenuTheme.cs b/Assets/Scripts/Game/UI/PixelMenuTheme.cs
+index 429464b..b6a5854 100644
+--- a/Assets/Scripts/Game/UI/PixelMenuTheme.cs
++++ b/Assets/Scripts/Game/UI/PixelMenuTheme.cs
+@@ -7,8 +7,8 @@ namespace Game.UI
+     {
+         public static readonly Color Background = new(.042f, .056f, .068f, .97f);
+         public static readonly Color Border = new(.28f, .40f, .44f, .98f);
+-        public static readonly Color Paper = new(.92f, .91f, .82f);
+-        public static readonly Color Muted = new(.64f, .73f, .75f);
++        public static readonly Color Paper = new(.86f, .87f, .88f);
++        public static readonly Color Muted = new(.65f, .67f, .69f);
+         private static GUIStyle _text;
+ 
+         public static void Panel(Rect rect) => PixelHUDFrame.Draw(rect, Texture2D.whiteTexture, Background, Border);
+diff --git a/Assets/Scripts/Game/Varginha/Experiment/ExperimentGUI.cs b/Assets/Scripts/Game/Varginha/Experiment/ExperimentGUI.cs
+index 4f907dd..268245b 100644
+--- a/Assets/Scripts/Game/Varginha/Experiment/ExperimentGUI.cs
++++ b/Assets/Scripts/Game/Varginha/Experiment/ExperimentGUI.cs
+@@ -12,8 +12,8 @@ namespace Game.Varginha.Experiment
+             return Button(ContinueChapterRect,"CONTINUAR");
+         }
+         public static readonly Color Ink = new(.025f, .045f, .065f);
+-        public static readonly Color Paper = new(.91f, .87f, .73f);
+-        public static readonly Color Muted = new(.57f, .68f, .66f);
++        public static readonly Color Paper = PixelMenuTheme.Paper;
++        public static readonly Color Muted = PixelMenuTheme.Muted;
+         public static readonly Color Accent = new(.43f, .77f, .67f);
+         private static Texture2D _pixel;
+         private static GUIStyle _title, _text, _small, _button;
+diff --git a/Assets/Scripts/Game/Varginha/VarginhaGameHUD.cs b/Assets/Scripts/Game/Varginha/VarginhaGameHUD.cs
+index b2ff7bf..f1c6177 100644
+--- a/Assets/Scripts/Game/Varginha/VarginhaGameHUD.cs
++++ b/Assets/Scripts/Game/Varginha/VarginhaGameHUD.cs
+@@ -88,7 +88,7 @@ namespace Game.Varginha
+         private GUIStyle _healthStyle;
+         private static readonly Color PanelColor = new(.042f, .056f, .068f, .97f);
+         private static readonly Color PanelBorder = new(.28f, .40f, .44f, .98f);
+-        private static readonly Color PaperColor = new(.92f, .91f, .82f);
++        private static readonly Color PaperColor = PixelMenuTheme.Paper;
+         private static readonly Color FocusColor = new(.96f, .78f, .34f);
+         private readonly Sprite[] _hotbarIcons = new Sprite[6];
+         private readonly bool[] _hotbarOwned = new bool[6];
+diff --git a/Assets/Scripts/Game/Varginha/VarginhaMainMenu.cs b/Assets/Scripts/Game/Varginha/VarginhaMainMenu.cs
+index ce562c2..dea2b03 100644
+--- a/Assets/Scripts/Game/Varginha/VarginhaMainMenu.cs
++++ b/Assets/Scripts/Game/Varginha/VarginhaMainMenu.cs
+@@ -28,9 +28,16 @@ namespace Game.Varginha
+             Game.Managers.GameManager.Instance?.ReturnToMenu();
+             _resumeAvailable = Experiment.CampaignStorySave.Exists;
+             _resumePhase = _resumeAvailable ? Experiment.CampaignStorySave.Load().phase : 1;
++            _menuCaption = MenuCaptionRotation.EnterMenu();
++            _wasShowingPanel = false;
+         }
+         private void OnDisable() { IsOpen = false; if(Active==this)Active=null; }
+-        private void OnDestroy() { if (pixel != null) Destroy(pixel); }
++        private void OnDestroy()
++        {
++            if (pixel != null) Destroy(pixel);
++            if (_logoFrame != null) { _logoFrame.Release(); Destroy(_logoFrame); }
++            if (_logoMaterial != null) Destroy(_logoMaterial);
++        }
+ 
+         private enum Panel { None, Play, Settings, Controls, Credits, Difficulty, Keybinds }
+         private Panel panel;
+@@ -41,6 +48,11 @@ namespace Game.Varginha
+         private Key _padBinding=Key.E;
+         private int _rebindArmedFrame = -1;
+         private Texture2D pixel;
++        private Texture2D _logo;
++        private RenderTexture _logoFrame;
++        private Material _logoMaterial;
++        private string _menuCaption;
++        private bool _wasShowingPanel;
+         private GUIStyle titleStyle;
+         private GUIStyle subtitleStyle;
+         private GUIStyle buttonStyle;
+@@ -67,6 +79,16 @@ namespace Game.Varginha
+             pixel = new Texture2D(1, 1);
+             pixel.SetPixel(0, 0, Color.white);
+             pixel.Apply();
++            _logo = Resources.Load<Texture2D>("Varginha/MenuLogoOizlede");
++            var logoShader = Resources.Load<Shader>("Varginha/MenuLogoGrade");
++            if (_logo != null && logoShader != null && logoShader.isSupported)
++            {
++                _logoMaterial = new Material(logoShader) { hideFlags = HideFlags.DontSave };
++                _logoFrame = new RenderTexture(_logo.width, _logo.height, 0, RenderTextureFormat.ARGB32)
++                    { filterMode = FilterMode.Point, wrapMode = TextureWrapMode.Clamp, name = "Menu logo — muted night colors" };
++                _logoFrame.Create();
++                Graphics.Blit(_logo, _logoFrame, _logoMaterial);
++            }
+             _atmosphere=GetComponent<MenuCinematicAtmosphere>()??gameObject.AddComponent<MenuCinematicAtmosphere>();
+         }
+         private void Update()
+@@ -93,6 +115,7 @@ namespace Game.Varginha
+ 
+             if (panel != Panel.None)
+             {
++                _wasShowingPanel = true;
+                 if (panel == Panel.Play) DrawCampaignSelection();
+                 else if (panel == Panel.Settings)
+                 {
+@@ -104,13 +127,30 @@ namespace Game.Varginha
+                 return;
+             }
+ 
++            if (_wasShowingPanel)
++            {
++                _menuCaption = MenuCaptionRotation.EnterMenu();
++                _wasShowingPanel = false;
++            }
+             var previous = Experiment.ExperimentGUI.BeginCanvas();
+             PixelMenuTheme.Label(new Rect(72, 94, 490, 24), "96.4 MHz • VARGINHA / MG", 10, PixelMenuTheme.Muted);
+             PixelMenuTheme.Separator(new Rect(72, 133, 96, 3));
+             float titleShift=_atmosphere.TitleGlitch?1:0;
+-            PixelMenuTheme.Label(new Rect(72+titleShift, 164, 530, 49), "O SEGREDO", 38, PixelMenuTheme.Paper);
+-            PixelMenuTheme.Label(new Rect(72-titleShift, 220, 530, 49), "DE VARGINHA", 38, PixelMenuTheme.Paper);
+-            PixelMenuTheme.Label(new Rect(72, 285, 500, 23), "1996 / 2026 • UMA LEMBRANÇA INCOMPLETA", 9, PixelMenuTheme.Muted);
++            if (_logo != null)
++            {
++                // Match the button column; grade colors without changing the source image.
++                var beforeLogo = GUI.color;
++                GUI.color = _logoFrame != null ? new Color(1, 1, 1, .95f) : new Color(.70f, .81f, .84f, .92f);
++                GUI.DrawTexture(new Rect(72+titleShift, 155, 470, 157), _logoFrame != null ? (Texture)_logoFrame : _logo, ScaleMode.ScaleToFit, true);
++                GUI.color = beforeLogo;
++            }
++            else
++            {
++                PixelMenuTheme.Label(new Rect(72+titleShift, 164, 530, 49), "OIZLEDE", 38, PixelMenuTheme.Paper);
++                PixelMenuTheme.Label(new Rect(72-titleShift, 220, 530, 49), "FRAGMENTO PERDIDO", 22, PixelMenuTheme.Paper);
++            }
++            PixelMenuTheme.Label(new Rect(72, 314, 470, 18), _menuCaption, 8,
++                new Color(.60f, .62f, .64f, .85f), TextAnchor.MiddleCenter);
+             bool reduced=Experiment.VarginhaGameSettings.Current.reducedMotion;
+             bool enabled = GUI.enabled; GUI.enabled = enabled&&_resumeAvailable;
+             if (_buttonMotion[0].Draw(new Rect(72, 340, 470, 88), "",_atmosphere,reduced)) Experiment.VarginhaCampaignPhase1.StartCampaign(true);
+diff --git a/Assets/Tests/PlayMode/CampaignSchoolPatternsPlayTests.cs b/Assets/Tests/PlayMode/CampaignSchoolPatternsPlayTests.cs
+index 1df017f..03ed336 100644
+--- a/Assets/Tests/PlayMode/CampaignSchoolPatternsPlayTests.cs
++++ b/Assets/Tests/PlayMode/CampaignSchoolPatternsPlayTests.cs
+@@ -73,6 +73,11 @@ namespace Game.Tests.PlayMode
+         IEnumerator CompleteWithUI(bool keys)
+         {
+             _keys=keys;yield return LoadSchool(true);var stage=VarginhaCampaignStage.Active;
++            if(!Application.isEditor)
++            {
++                Directory.CreateDirectory(CinemaQaEvidence.Folder);
++                File.Copy(CampaignStorySave.Path,Path.Combine(CinemaQaEvidence.Folder,"school-mouse-start.json"),true);
++            }
+             stage.Interact("notebook");Assert.That(stage.SchoolInvestigationOpen,Is.True);Assert.That(stage.Progress.renanMet,Is.False);
+             yield return Capture("01-chronology");Assert.That(stage.SubmitSchoolStep(),Is.False);
+             yield return Click(new Rect(473,416,329,36));Assert.That(stage.SchoolDocumentOpen,Is.True);yield return Capture("document");
+diff --git a/Assets/Tests/PlayMode/MenuCinematicPlayTests.cs b/Assets/Tests/PlayMode/MenuCinematicPlayTests.cs
+index 2cf4af1..fc26337 100644
+--- a/Assets/Tests/PlayMode/MenuCinematicPlayTests.cs
++++ b/Assets/Tests/PlayMode/MenuCinematicPlayTests.cs
+@@ -46,8 +46,47 @@ namespace Game.Tests.PlayMode
+         {
+             SceneManager.LoadScene(MenuScene);yield return null;yield return new WaitForSecondsRealtime(.35f);
+             Assert.That(VarginhaMainMenu.Active,Is.Not.Null);
++            if(!Application.isEditor)
++            {
++                yield return new WaitForEndOfFrame();
++                var capture=ScreenCapture.CaptureScreenshotAsTexture();
++                Directory.CreateDirectory(CinemaQaEvidence.Folder);
++                File.WriteAllBytes(Path.Combine(CinemaQaEvidence.Folder,"menu-oizlede.png"),capture.EncodeToPNG());
++                Object.Destroy(capture);
++            }
+         }
+         private static string Panel => typeof(VarginhaMainMenu).GetField("panel",Private).GetValue(VarginhaMainMenu.Active).ToString();
++        [UnityTest,Timeout(60000)]
++        public IEnumerator LogoIsMutedWithoutChangingItsSilhouetteAndCaptionsChangeOnReentry()
++        {
++            yield return LoadMenu();
++            var menu=VarginhaMainMenu.Active;
++            var graded=(RenderTexture)typeof(VarginhaMainMenu).GetField("_logoFrame",Private).GetValue(menu);
++            Assert.That(graded,Is.Not.Null,"The imported logo must use its night color grade.");
++            Assert.That(graded.filterMode,Is.EqualTo(FilterMode.Point));
++            var source=Resources.Load<Texture2D>("Varginha/MenuLogoOizlede");
++            Assert.That(graded.width,Is.EqualTo(source.width));Assert.That(graded.height,Is.EqualTo(source.height));
++            var reference=RenderTexture.GetTemporary(source.width,source.height,0,RenderTextureFormat.ARGB32);
++            try
++            {
++                Graphics.Blit(source,reference);var original=Read(reference);var muted=Read(graded);
++                double before=0,after=0;int alphaError=0;
++                for(int i=0;i<original.Length;i++)
++                {
++                    alphaError=Mathf.Max(alphaError,Mathf.Abs(original[i].a-muted[i].a));
++                    before+=(Mathf.Max(original[i].r,Mathf.Max(original[i].g,original[i].b))-Mathf.Min(original[i].r,Mathf.Min(original[i].g,original[i].b)))*original[i].a;
++                    after+=(Mathf.Max(muted[i].r,Mathf.Max(muted[i].g,muted[i].b))-Mathf.Min(muted[i].r,Mathf.Min(muted[i].g,muted[i].b)))*muted[i].a;
++                }
++                Assert.That(alphaError,Is.LessThanOrEqualTo(1),"Color grading must preserve every transparent gap and pixel edge.");
++                Assert.That(after,Is.LessThan(before*.55),"The logo must lose saturation, not only brightness.");
++            }
++            finally{RenderTexture.ReleaseTemporary(reference);}
++            string first=(string)typeof(VarginhaMainMenu).GetField("_menuCaption",Private).GetValue(menu);
++            Assert.That(first,Is.Not.Empty);
++            yield return LoadMenu();
++            string second=(string)typeof(VarginhaMainMenu).GetField("_menuCaption",Private).GetValue(VarginhaMainMenu.Active);
++            Assert.That(second,Is.Not.EqualTo(first),"The saved last caption must be skipped when entering the menu again.");
++        }
+         [UnityTest] public IEnumerator ReceivedMenuMusicLoopsRespectsVolumeAndStopsWhenDisabled()
+         {
+             yield return LoadMenu();
+@@ -77,10 +116,12 @@ namespace Game.Tests.PlayMode
+             var keyboard=InputSystem.AddDevice<Keyboard>();var pad=InputSystem.AddDevice<Gamepad>();
+             yield return LoadMenu();
+             yield return KeyPress(keyboard,Key.DownArrow);yield return new WaitForSecondsRealtime(.25f);
++            string firstCaption=(string)typeof(VarginhaMainMenu).GetField("_menuCaption",Private).GetValue(VarginhaMainMenu.Active);
+             var motions=(MenuButtonMotion[])typeof(VarginhaMainMenu).GetField("_buttonMotion",Private).GetValue(VarginhaMainMenu.Active);
+             Assert.That(motions[1].Amount,Is.GreaterThan(.9f),"Keyboard focus gets the cyan animation");
+             yield return KeyPress(keyboard,Key.Enter);Assert.That(Panel,Is.EqualTo("Play"));
+             yield return KeyPress(keyboard,Key.Escape);Assert.That(Panel,Is.EqualTo("None"));
++            Assert.That((string)typeof(VarginhaMainMenu).GetField("_menuCaption",Private).GetValue(VarginhaMainMenu.Active),Is.Not.EqualTo(firstCaption),"Returning from a menu panel also rotates its caption.");
+             yield return KeyPress(keyboard,Key.DownArrow);yield return KeyPress(keyboard,Key.Enter);
+             Assert.That(Panel,Is.EqualTo("Settings"));
+             yield return KeyPress(keyboard,Key.Escape);Assert.That(Panel,Is.EqualTo("None"));
+diff --git a/Assets/UniversalRenderPipelineGlobalSettings.asset b/Assets/UniversalRenderPipelineGlobalSettings.asset
+index 509adb6..d88339b 100644
+--- a/Assets/UniversalRenderPipelineGlobalSettings.asset
++++ b/Assets/UniversalRenderPipelineGlobalSettings.asset
+@@ -72,22 +72,7 @@ MonoBehaviour:
+       - rid: 4257035436469780518
+       - rid: 4257035436469780519
+     m_RuntimeSettings:
+-      m_List:
+-      - rid: 4257035436469780484
+-      - rid: 4257035436469780487
+-      - rid: 4257035436469780489
+-      - rid: 4257035436469780493
+-      - rid: 4257035436469780495
+-      - rid: 4257035436469780497
+-      - rid: 4257035436469780499
+-      - rid: 4257035436469780503
+-      - rid: 4257035436469780504
+-      - rid: 4257035436469780506
+-      - rid: 4257035436469780508
+-      - rid: 4257035436469780513
+-      - rid: 4257035436469780514
+-      - rid: 4257035436469780515
+-      - rid: 4257035436469780516
++      m_List: []
+   m_AssetVersion: 11
+   m_ObsoleteDefaultVolumeProfile: {fileID: 0}
+   m_RenderingLayerNames:
+diff --git a/Docs/QAAlpha01/EditModeProgress.txt b/Docs/QAAlpha01/EditModeProgress.txt
+index 1d96f71..a9950e6 100644
+--- a/Docs/QAAlpha01/EditModeProgress.txt
++++ b/Docs/QAAlpha01/EditModeProgress.txt
+@@ -1 +1,25 @@
+-Started 0
++Started 399
++RUN Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("RenanPulse","wayofx-glitch_hit_variation1")
++Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("RenanPulse","wayofx-glitch_hit_variation1") 
++RUN Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("OuzanaGlass","magiaz-vidro-quebrando")
++Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("OuzanaGlass","magiaz-vidro-quebrando") 
++RUN Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChildExplosion","soundreality-explosion-fx")
++Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChildExplosion","soundreality-explosion-fx") 
++RUN Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("FabioShield","dragon-studio-angelical-synth-pad")
++Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("FabioShield","dragon-studio-angelical-synth-pad") 
++RUN Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChurchBell","alex_jauk-old-town-church-bells")
++Passed Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity("ChurchBell","alex_jauk-old-town-church-bells") 
++RUN Game.Tests.EditMode.CampaignRecordedAudioTests.BedsStreamAndShortEffectsPreloadWithoutLossyCompression
++Passed Game.Tests.EditMode.CampaignRecordedAudioTests.BedsStreamAndShortEffectsPreloadWithoutLossyCompression 
++RUN Game.Tests.EditMode.CampaignRecordedAudioTests.EveryCatalogEntryResolvesToAnImportedClip
++Passed Game.Tests.EditMode.CampaignRecordedAudioTests.EveryCatalogEntryResolvesToAnImportedClip 
++RUN Game.Tests.EditMode.CampaignRecordedAudioTests.FootstepsVaryWithoutConsumingGameplayRandomness
++Passed Game.Tests.EditMode.CampaignRecordedAudioTests.FootstepsVaryWithoutConsumingGameplayRandomness 
++RUN Game.Tests.EditMode.CampaignRecordedAudioTests.LaboratoryUsesTheReceivedLoopingBed
++Passed Game.Tests.EditMode.CampaignRecordedAudioTests.LaboratoryUsesTheReceivedLoopingBed 
++RUN Game.Tests.EditMode.CampaignRecordedAudioTests.NightNatureAndCrowdedSchoolDoNotLeakIntoMorningOrInvadedSchool
++Passed Game.Tests.EditMode.CampaignRecordedAudioTests.NightNatureAndCrowdedSchoolDoNotLeakIntoMorningOrInvadedSchool 
++RUN Game.Tests.EditMode.CampaignRecordedAudioTests.RecordedBossAliasesDoNotReuseTheChildExplosion
++Passed Game.Tests.EditMode.CampaignRecordedAudioTests.RecordedBossAliasesDoNotReuseTheChildExplosion 
++RUN Game.Tests.EditMode.CampaignRecordedAudioTests.RuntimeSupportFramesMatchTheExportedArtSlicing
++Passed Game.Tests.EditMode.CampaignRecordedAudioTests.RuntimeSupportFramesMatchTheExportedArtSlicing 
+diff --git a/Docs/QAAlpha01/EditModeResults.xml b/Docs/QAAlpha01/EditModeResults.xml
+index 1443c1a..41d9d7a 100644
+--- a/Docs/QAAlpha01/EditModeResults.xml
++++ b/Docs/QAAlpha01/EditModeResults.xml
+@@ -1,8 +1,105 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<test-run id="2" testcasecount="0" result="Passed" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-09 11:14:17Z" end-time="2026-10-09 11:14:17Z" duration="2,83E-05">
+-  <test-suite type="TestSuite" id="2163" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="0" result="Passed" start-time="2026-10-09 11:14:17Z" end-time="2026-10-09 11:14:17Z" duration="0.000028" total="0" passed="0" failed="0" inconclusive="0" skipped="0" asserts="0">
++<test-run id="2" testcasecount="12" result="Passed" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0,273658">
++  <test-suite type="TestSuite" id="1000" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="399" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.273658" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+     <properties>
+-      <property name="platform" value="0" />
++      <property name="platform" value="EditMode" />
+     </properties>
++    <test-suite type="Assembly" id="1469" name="GameEditModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Library/ScriptAssemblies/GameEditModeTests.dll" runstate="Runnable" testcasecount="399" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.259976" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
++      <properties>
++        <property name="_PID" value="11948" />
++        <property name="_APPDOMAIN" value="Unity Child Domain" />
++        <property name="platform" value="EditMode" />
++        <property name="EditorOnly" value="True" />
++      </properties>
++      <test-suite type="TestSuite" id="1470" name="Game" fullname="Game" runstate="Runnable" testcasecount="399" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.255713" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
++        <properties />
++        <test-suite type="TestSuite" id="1471" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="399" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.252006" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
++          <properties />
++          <test-suite type="TestSuite" id="1472" name="EditMode" fullname="Game.Tests.EditMode" runstate="Runnable" testcasecount="399" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.247889" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
++            <properties />
++            <test-suite type="TestFixture" id="1215" name="CampaignRecordedAudioTests" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.246137" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
++              <properties />
++              <test-suite type="ParameterizedMethod" id="1223" name="AuthoredAssignmentsKeepTheirSourceIdentity" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.060429" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
++                <properties />
++                <test-case id="1218" name="AuthoredAssignmentsKeepTheirSourceIdentity(&quot;RenanPulse&quot;,&quot;wayofx-glitch_hit_variation1&quot;)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity(&quot;RenanPulse&quot;,&quot;wayofx-glitch_hit_variation1&quot;)" methodname="AuthoredAssignmentsKeepTheirSourceIdentity" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="900151074" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.039462" asserts="0">
++                  <properties>
++                    <property name="retryIteration" value="0" />
++                    <property name="repeatIteration" value="0" />
++                  </properties>
++                </test-case>
++                <test-case id="1219" name="AuthoredAssignmentsKeepTheirSourceIdentity(&quot;OuzanaGlass&quot;,&quot;magiaz-vidro-quebrando&quot;)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity(&quot;OuzanaGlass&quot;,&quot;magiaz-vidro-quebrando&quot;)" methodname="AuthoredAssignmentsKeepTheirSourceIdentity" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="1448129214" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.000204" asserts="0">
++                  <properties>
++                    <property name="retryIteration" value="0" />
++                    <property name="repeatIteration" value="0" />
++                  </properties>
++                </test-case>
++                <test-case id="1220" name="AuthoredAssignmentsKeepTheirSourceIdentity(&quot;ChildExplosion&quot;,&quot;soundreality-explosion-fx&quot;)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity(&quot;ChildExplosion&quot;,&quot;soundreality-explosion-fx&quot;)" methodname="AuthoredAssignmentsKeepTheirSourceIdentity" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="895856870" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.000436" asserts="0">
++                  <properties>
++                    <property name="retryIteration" value="0" />
++                    <property name="repeatIteration" value="0" />
++                  </properties>
++                </test-case>
++                <test-case id="1221" name="AuthoredAssignmentsKeepTheirSourceIdentity(&quot;FabioShield&quot;,&quot;dragon-studio-angelical-synth-pad&quot;)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity(&quot;FabioShield&quot;,&quot;dragon-studio-angelical-synth-pad&quot;)" methodname="AuthoredAssignmentsKeepTheirSourceIdentity" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="143559549" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.000231" asserts="0">
++                  <properties>
++                    <property name="retryIteration" value="0" />
++                    <property name="repeatIteration" value="0" />
++                  </properties>
++                </test-case>
++                <test-case id="1222" name="AuthoredAssignmentsKeepTheirSourceIdentity(&quot;ChurchBell&quot;,&quot;alex_jauk-old-town-church-bells&quot;)" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.AuthoredAssignmentsKeepTheirSourceIdentity(&quot;ChurchBell&quot;,&quot;alex_jauk-old-town-church-bells&quot;)" methodname="AuthoredAssignmentsKeepTheirSourceIdentity" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="1026320567" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.000181" asserts="0">
++                  <properties>
++                    <property name="retryIteration" value="0" />
++                    <property name="repeatIteration" value="0" />
++                  </properties>
++                </test-case>
++              </test-suite>
++              <test-case id="1225" name="BedsStreamAndShortEffectsPreloadWithoutLossyCompression" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.BedsStreamAndShortEffectsPreloadWithoutLossyCompression" methodname="BedsStreamAndShortEffectsPreloadWithoutLossyCompression" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="2075032561" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.056169" asserts="0">
++                <properties>
++                  <property name="retryIteration" value="0" />
++                  <property name="repeatIteration" value="0" />
++                </properties>
++              </test-case>
++              <test-case id="1217" name="EveryCatalogEntryResolvesToAnImportedClip" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.EveryCatalogEntryResolvesToAnImportedClip" methodname="EveryCatalogEntryResolvesToAnImportedClip" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="1481477608" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.012802" asserts="0">
++                <properties>
++                  <property name="retryIteration" value="0" />
++                  <property name="repeatIteration" value="0" />
++                </properties>
++              </test-case>
++              <test-case id="1228" name="FootstepsVaryWithoutConsumingGameplayRandomness" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.FootstepsVaryWithoutConsumingGameplayRandomness" methodname="FootstepsVaryWithoutConsumingGameplayRandomness" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="241043232" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.003080" asserts="0">
++                <properties>
++                  <property name="retryIteration" value="0" />
++                  <property name="repeatIteration" value="0" />
++                </properties>
++              </test-case>
++              <test-case id="1227" name="LaboratoryUsesTheReceivedLoopingBed" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.LaboratoryUsesTheReceivedLoopingBed" methodname="LaboratoryUsesTheReceivedLoopingBed" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="1646714015" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.000836" asserts="0">
++                <properties>
++                  <property name="retryIteration" value="0" />
++                  <property name="repeatIteration" value="0" />
++                </properties>
++              </test-case>
++              <test-case id="1226" name="NightNatureAndCrowdedSchoolDoNotLeakIntoMorningOrInvadedSchool" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.NightNatureAndCrowdedSchoolDoNotLeakIntoMorningOrInvadedSchool" methodname="NightNatureAndCrowdedSchoolDoNotLeakIntoMorningOrInvadedSchool" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="890398127" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.000450" asserts="0">
++                <properties>
++                  <property name="retryIteration" value="0" />
++                  <property name="repeatIteration" value="0" />
++                </properties>
++              </test-case>
++              <test-case id="1224" name="RecordedBossAliasesDoNotReuseTheChildExplosion" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.RecordedBossAliasesDoNotReuseTheChildExplosion" methodname="RecordedBossAliasesDoNotReuseTheChildExplosion" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="80881108" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.007147" asserts="0">
++                <properties>
++                  <property name="retryIteration" value="0" />
++                  <property name="repeatIteration" value="0" />
++                </properties>
++              </test-case>
++              <test-case id="1216" name="RuntimeSupportFramesMatchTheExportedArtSlicing" fullname="Game.Tests.EditMode.CampaignRecordedAudioTests.RuntimeSupportFramesMatchTheExportedArtSlicing" methodname="RuntimeSupportFramesMatchTheExportedArtSlicing" classname="Game.Tests.EditMode.CampaignRecordedAudioTests" runstate="Runnable" seed="372515536" result="Passed" start-time="2026-10-22 18:02:53Z" end-time="2026-10-22 18:02:53Z" duration="0.083611" asserts="0">
++                <properties>
++                  <property name="retryIteration" value="0" />
++                  <property name="repeatIteration" value="0" />
++                </properties>
++                <output><![CDATA[Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
++]]></output>
++              </test-case>
++            </test-suite>
++          </test-suite>
++        </test-suite>
++      </test-suite>
++    </test-suite>
+   </test-suite>
+ </test-run>
+\ No newline at end of file
+diff --git a/Docs/QAAlpha01/PlayModeProgress.txt b/Docs/QAAlpha01/PlayModeProgress.txt
+index e945cbd..3830db5 100644
+--- a/Docs/QAAlpha01/PlayModeProgress.txt
++++ b/Docs/QAAlpha01/PlayModeProgress.txt
+@@ -1,34 +1,7 @@
+-Started 245
+-RUN Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload
+-Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload 
+-RUN Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload
+-Failed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload   Vehicle stopped inside the bay: body=(-0.20, 1.09), rendered=(-0.20, 1.09, 0.00), bay=(0.17, 1.00), body distance=0,3820209, heading=North, speed=0
+-  Expected: True
+-  But was:  False
+-
+-RUN Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt
+-Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt 
+-RUN Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent
+-Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent 
+-RUN Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.BasementStairsKeepTheNextChapterSeparateFromReturningUpstairs
+-Passed Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.BasementStairsKeepTheNextChapterSeparateFromReturningUpstairs 
+-RUN Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.CoveredOfficeSofaBlocksRealMovementFromEveryAccessibleSide
+-Passed Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.CoveredOfficeSofaBlocksRealMovementFromEveryAccessibleSide 
+-RUN Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.FiveDifferentPuzzleInterfacesAcceptControllerAnswersAndPreservePartialProgress
+-Passed Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.FiveDifferentPuzzleInterfacesAcceptControllerAnswersAndPreservePartialProgress 
+-RUN Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.MansionDoorsConnectTheHallLivingRoomOfficeAndServicePassageWithRealMovement
+-Passed Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.MansionDoorsConnectTheHallLivingRoomOfficeAndServicePassageWithRealMovement 
+-RUN Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.SpatialMapCanBePlacedRotatedAndConfirmedUsingTheController
+-Passed Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.SpatialMapCanBePlacedRotatedAndConfirmedUsingTheController 
+-RUN Game.Tests.PlayMode.VarginhaRequestedGameplayTests.ChurchHasDarknessAltarPriestAndClearFlashlightCone
+-Failed Game.Tests.PlayMode.VarginhaRequestedGameplayTests.ChurchHasDarknessAltarPriestAndClearFlashlightCone   Expected: greater than 0.0f
+-  But was:  0.0f
+-
+-RUN Game.Tests.PlayMode.VarginhaRequestedGameplayTests.FuscaBoardsImmediatelyWithoutDoorAndKeepsRequirements
+-Passed Game.Tests.PlayMode.VarginhaRequestedGameplayTests.FuscaBoardsImmediatelyWithoutDoorAndKeepsRequirements 
+-RUN Game.Tests.PlayMode.VarginhaRequestedGameplayTests.HouseFurnitureResizesOnceAndSurgesIncludeRecovery
+-Failed:Error Game.Tests.PlayMode.VarginhaRequestedGameplayTests.HouseFurnitureResizesOnceAndSurgesIncludeRecovery System.NullReferenceException : Object reference not set to an instance of an object
+-RUN Game.Tests.PlayMode.VarginhaRequestedGameplayTests.PewStopsWalkingAndSeatRestoresCollisionWhenInterrupted
+-Failed Game.Tests.PlayMode.VarginhaRequestedGameplayTests.PewStopsWalkingAndSeatRestoresCollisionWhenInterrupted   Expected: True
+-  But was:  False
+-
++Started 287
++RUN Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
++Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets 
++RUN Game.Tests.PlayMode.VarginhaCombatTests.AllThreeComboContactsDealDamage
++Passed Game.Tests.PlayMode.VarginhaCombatTests.AllThreeComboContactsDealDamage 
++RUN Game.Tests.PlayMode.VarginhaCombatTests.EarlyQueuedClickChainsExactlyOnePunch
++Passed Game.Tests.PlayMode.VarginhaCombatTests.EarlyQueuedClickChainsExactlyOnePunch 
+diff --git a/Docs/QAAlpha01/PlayModeResults.xml b/Docs/QAAlpha01/PlayModeResults.xml
+index b391195..2e34e9a 100644
+--- a/Docs/QAAlpha01/PlayModeResults.xml
++++ b/Docs/QAAlpha01/PlayModeResults.xml
+@@ -1,73 +1,25 @@
+ <?xml version="1.0" encoding="utf-8"?>
+-<test-run id="2" testcasecount="13" result="Failed(Child)" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-09 16:56:12Z" end-time="2026-10-09 17:01:24Z" duration="311,721338">
+-  <test-suite type="TestSuite" id="1665" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="245" result="Failed" site="Child" start-time="2026-10-09 16:56:12Z" end-time="2026-10-09 17:01:24Z" duration="311.721338" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0">
++<test-run id="2" testcasecount="3" result="Passed" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-22 18:14:18Z" end-time="2026-10-22 18:14:26Z" duration="7,1126804">
++  <test-suite type="TestSuite" id="1341" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="287" result="Passed" start-time="2026-10-22 18:14:18Z" end-time="2026-10-22 18:14:26Z" duration="7.112680" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+     <properties>
+       <property name="platform" value="PlayMode" />
+     </properties>
+-    <failure>
+-      <message><![CDATA[One or more child tests had errors]]></message>
+-    </failure>
+-    <test-suite type="Assembly" id="1948" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="245" result="Failed" site="Child" start-time="2026-10-09 16:56:12Z" end-time="2026-10-09 17:01:24Z" duration="311.704177" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0">
++    <test-suite type="Assembly" id="1675" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="287" result="Passed" start-time="2026-10-22 18:14:18Z" end-time="2026-10-22 18:14:26Z" duration="7.101967" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+       <properties>
+-        <property name="_PID" value="17772" />
++        <property name="_PID" value="23724" />
+         <property name="_APPDOMAIN" value="Unity Child Domain" />
+         <property name="platform" value="PlayMode" />
+         <property name="EditorOnly" value="False" />
+       </properties>
+-      <failure>
+-        <message><![CDATA[One or more child tests had errors]]></message>
+-      </failure>
+-      <test-suite type="TestSuite" id="1949" name="Game" fullname="Game" runstate="Runnable" testcasecount="245" result="Failed" site="Child" start-time="2026-10-09 16:56:12Z" end-time="2026-10-09 17:01:24Z" duration="311.328680" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0">
++      <test-suite type="TestSuite" id="1676" name="Game" fullname="Game" runstate="Runnable" testcasecount="287" result="Passed" start-time="2026-10-22 18:14:18Z" end-time="2026-10-22 18:14:26Z" duration="7.086616" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+         <properties />
+-        <failure>
+-          <message><![CDATA[One or more child tests had errors]]></message>
+-        </failure>
+-        <test-suite type="TestSuite" id="1950" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="245" result="Failed" site="Child" start-time="2026-10-09 16:56:12Z" end-time="2026-10-09 17:01:24Z" duration="311.323851" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0">
++        <test-suite type="TestSuite" id="1677" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="287" result="Passed" start-time="2026-10-22 18:14:18Z" end-time="2026-10-22 18:14:26Z" duration="7.072233" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+           <properties />
+-          <failure>
+-            <message><![CDATA[One or more child tests had errors]]></message>
+-          </failure>
+-          <test-suite type="TestSuite" id="1951" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="245" result="Failed" site="Child" start-time="2026-10-09 16:56:13Z" end-time="2026-10-09 17:01:24Z" duration="311.197274" total="13" passed="9" failed="4" inconclusive="0" skipped="0" asserts="0">
++          <test-suite type="TestSuite" id="1678" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="287" result="Passed" start-time="2026-10-22 18:14:18Z" end-time="2026-10-22 18:14:26Z" duration="7.055455" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+             <properties />
+-            <failure>
+-              <message><![CDATA[One or more child tests had errors]]></message>
+-            </failure>
+-            <test-suite type="TestFixture" id="1710" name="CampaignLabWorkshopAuditTests" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-09 16:56:13Z" end-time="2026-10-09 16:58:05Z" duration="111.852966" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">
++            <test-suite type="TestFixture" id="1384" name="CampaignExpansionPlayTests" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" testcasecount="8" result="Passed" start-time="2026-10-22 18:14:18Z" end-time="2026-10-22 18:14:23Z" duration="4.774031" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+               <properties />
+-              <failure>
+-                <message><![CDATA[One or more child tests had errors]]></message>
+-              </failure>
+-              <test-case id="1711" name="LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload" methodname="LaboratoryShortComparisonKeepsEvidenceAndSurvivesReload" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="566520743" result="Passed" start-time="2026-10-09 16:56:13Z" end-time="2026-10-09 16:56:41Z" duration="28.109304" asserts="0">
+-                <properties>
+-                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+-                  <property name="retryIteration" value="0" />
+-                  <property name="repeatIteration" value="0" />
+-                </properties>
+-              </test-case>
+-              <test-case id="1714" name="PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload" methodname="PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="826309457" result="Failed" start-time="2026-10-09 16:56:41Z" end-time="2026-10-09 16:57:01Z" duration="19.890284" asserts="0">
+-                <properties>
+-                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+-                  <property name="retryIteration" value="0" />
+-                  <property name="repeatIteration" value="0" />
+-                </properties>
+-                <failure>
+-                  <message><![CDATA[  Vehicle stopped inside the bay: body=(-0.20, 1.09), rendered=(-0.20, 1.09, 0.00), bay=(0.17, 1.00), body distance=0,3820209, heading=North, speed=0
+-  Expected: True
+-  But was:  False
+-]]></message>
+-                  <stack-trace><![CDATA[at Game.Tests.PlayMode.CampaignLabWorkshopAuditTests+<PlayerParksTheFuscaBeforeAnalyzingItAndArrivalSurvivesReload>d__18.MoveNext () [0x004da] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\Assets\Tests\PlayMode\CampaignLabWorkshopAuditTests.cs:174
+-at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+-]]></stack-trace>
+-                </failure>
+-              </test-case>
+-              <test-case id="1713" name="PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt" methodname="PreFlashGlowAppearsBeforeEncounterAndDoesNotPersistAfterIt" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="1990089581" result="Passed" start-time="2026-10-09 16:57:01Z" end-time="2026-10-09 16:57:03Z" duration="1.701691" asserts="0">
+-                <properties>
+-                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+-                  <property name="retryIteration" value="0" />
+-                  <property name="repeatIteration" value="0" />
+-                </properties>
+-              </test-case>
+-              <test-case id="1712" name="WorkshopSingleApplicationReloadAndDepartureRemainConsistent" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent" methodname="WorkshopSingleApplicationReloadAndDepartureRemainConsistent" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="1749026225" result="Passed" start-time="2026-10-09 16:57:03Z" end-time="2026-10-09 16:58:05Z" duration="62.029861" asserts="0">
++              <test-case id="1391" name="CharacterActionsAndPunchUseNewTransparentAnimationSheets" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets" methodname="CharacterActionsAndPunchUseNewTransparentAnimationSheets" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="13985873" result="Passed" start-time="2026-10-22 18:14:19Z" end-time="2026-10-22 18:14:23Z" duration="4.748360" asserts="0">
+                 <properties>
+                   <property name="_JOINTYPE" value="UnityCombinatorial" />
+                   <property name="retryIteration" value="0" />
+@@ -75,226 +27,21 @@ at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .
+                 </properties>
+               </test-case>
+             </test-suite>
+-            <test-suite type="TestFixture" id="1715" name="CampaignPuzzleDesignPlayTests" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-09 16:58:05Z" end-time="2026-10-09 17:01:17Z" duration="192.692994" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
++            <test-suite type="TestFixture" id="1578" name="VarginhaCombatTests" fullname="Game.Tests.PlayMode.VarginhaCombatTests" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-22 18:14:23Z" end-time="2026-10-22 18:14:26Z" duration="2.265695" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+               <properties />
+-              <test-case id="1719" name="BasementStairsKeepTheNextChapterSeparateFromReturningUpstairs" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.BasementStairsKeepTheNextChapterSeparateFromReturningUpstairs" methodname="BasementStairsKeepTheNextChapterSeparateFromReturningUpstairs" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" seed="654913201" result="Passed" start-time="2026-10-09 16:58:05Z" end-time="2026-10-09 16:58:17Z" duration="12.174971" asserts="0">
+-                <properties>
+-                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+-                  <property name="Timeout" value="120000" />
+-                  <property name="retryIteration" value="0" />
+-                  <property name="repeatIteration" value="0" />
+-                </properties>
+-              </test-case>
+-              <test-case id="1720" name="CoveredOfficeSofaBlocksRealMovementFromEveryAccessibleSide" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.CoveredOfficeSofaBlocksRealMovementFromEveryAccessibleSide" methodname="CoveredOfficeSofaBlocksRealMovementFromEveryAccessibleSide" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" seed="1317445047" result="Passed" start-time="2026-10-09 16:58:17Z" end-time="2026-10-09 16:58:26Z" duration="9.081154" asserts="0">
++              <test-case id="1582" name="AllThreeComboContactsDealDamage" fullname="Game.Tests.PlayMode.VarginhaCombatTests.AllThreeComboContactsDealDamage" methodname="AllThreeComboContactsDealDamage" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="1133523546" result="Passed" start-time="2026-10-22 18:14:23Z" end-time="2026-10-22 18:14:25Z" duration="1.384445" asserts="0">
+                 <properties>
+                   <property name="_JOINTYPE" value="UnityCombinatorial" />
+-                  <property name="Timeout" value="120000" />
+-                  <property name="retryIteration" value="0" />
+-                  <property name="repeatIteration" value="0" />
+-                </properties>
+-              </test-case>
+-              <test-case id="1717" name="FiveDifferentPuzzleInterfacesAcceptControllerAnswersAndPreservePartialProgress" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.FiveDifferentPuzzleInterfacesAcceptControllerAnswersAndPreservePartialProgress" methodname="FiveDifferentPuzzleInterfacesAcceptControllerAnswersAndPreservePartialProgress" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" seed="21503819" result="Passed" start-time="2026-10-09 16:58:26Z" end-time="2026-10-09 17:00:01Z" duration="94.785116" asserts="0">
+-                <properties>
+-                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+-                  <property name="Timeout" value="240000" />
+-                  <property name="retryIteration" value="0" />
+-                  <property name="repeatIteration" value="0" />
+-                </properties>
+-              </test-case>
+-              <test-case id="1718" name="MansionDoorsConnectTheHallLivingRoomOfficeAndServicePassageWithRealMovement" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.MansionDoorsConnectTheHallLivingRoomOfficeAndServicePassageWithRealMovement" methodname="MansionDoorsConnectTheHallLivingRoomOfficeAndServicePassageWithRealMovement" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" seed="1442788256" result="Passed" start-time="2026-10-09 17:00:01Z" end-time="2026-10-09 17:01:01Z" duration="60.663059" asserts="0">
+-                <properties>
+-                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+-                  <property name="Timeout" value="180000" />
+-                  <property name="retryIteration" value="0" />
+-                  <property name="repeatIteration" value="0" />
+-                </properties>
+-              </test-case>
+-              <test-case id="1716" name="SpatialMapCanBePlacedRotatedAndConfirmedUsingTheController" fullname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests.SpatialMapCanBePlacedRotatedAndConfirmedUsingTheController" methodname="SpatialMapCanBePlacedRotatedAndConfirmedUsingTheController" classname="Game.Tests.PlayMode.CampaignPuzzleDesignPlayTests" runstate="Runnable" seed="2115822153" result="Passed" start-time="2026-10-09 17:01:01Z" end-time="2026-10-09 17:01:17Z" duration="15.766145" asserts="0">
+-                <properties>
+-                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+-                  <property name="Timeout" value="180000" />
+-                  <property name="retryIteration" value="0" />
+-                  <property name="repeatIteration" value="0" />
+-                </properties>
+-              </test-case>
+-            </test-suite>
+-            <test-suite type="TestFixture" id="1922" name="VarginhaRequestedGameplayTests" fullname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" classname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" runstate="Runnable" testcasecount="4" result="Failed" site="Child" start-time="2026-10-09 17:01:17Z" end-time="2026-10-09 17:01:24Z" duration="6.556703" total="4" passed="1" failed="3" inconclusive="0" skipped="0" asserts="0">
+-              <properties />
+-              <failure>
+-                <message><![CDATA[One or more child tests had errors]]></message>
+-              </failure>
+-              <test-case id="1925" name="ChurchHasDarknessAltarPriestAndClearFlashlightCone" fullname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests.ChurchHasDarknessAltarPriestAndClearFlashlightCone" methodname="ChurchHasDarknessAltarPriestAndClearFlashlightCone" classname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" runstate="Runnable" seed="1495951993" result="Failed" start-time="2026-10-09 17:01:18Z" end-time="2026-10-09 17:01:21Z" duration="3.123260" asserts="0">
+-                <properties>
+-                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+-                  <property name="retryIteration" value="0" />
+-                  <property name="repeatIteration" value="0" />
+-                </properties>
+-                <failure>
+-                  <message><![CDATA[  Expected: greater than 0.0f
+-  But was:  0.0f
+-]]></message>
+-                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaRequestedGameplayTests+<ChurchHasDarknessAltarPriestAndClearFlashlightCone>d__7.MoveNext () [0x00096] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\Assets\Tests\PlayMode\VarginhaRequestedGameplayTests.cs:112
+-at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+-]]></stack-trace>
+-                </failure>
+-                <output><![CDATA[There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-There are 2 audio listeners in the scene. Please ensure there is always exactly one audio listener in the scene.
+-]]></output>
+-              </test-case>
+-              <test-case id="1924" name="FuscaBoardsImmediatelyWithoutDoorAndKeepsRequirements" fullname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests.FuscaBoardsImmediatelyWithoutDoorAndKeepsRequirements" methodname="FuscaBoardsImmediatelyWithoutDoorAndKeepsRequirements" classname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" runstate="Runnable" seed="866771389" result="Passed" start-time="2026-10-09 17:01:21Z" end-time="2026-10-09 17:01:21Z" duration="0.542021" asserts="0">
+-                <properties>
+-                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+-                  <property name="retryIteration" value="0" />
+-                  <property name="repeatIteration" value="0" />
+-                </properties>
+-                <output><![CDATA[[Fusca] Edelzio deu a partida e acelerou pela noite de Varginha.
+-]]></output>
+-              </test-case>
+-              <test-case id="1926" name="HouseFurnitureResizesOnceAndSurgesIncludeRecovery" fullname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests.HouseFurnitureResizesOnceAndSurgesIncludeRecovery" methodname="HouseFurnitureResizesOnceAndSurgesIncludeRecovery" classname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" runstate="Runnable" seed="1807953988" result="Failed" label="Error" start-time="2026-10-09 17:01:21Z" end-time="2026-10-09 17:01:21Z" duration="0.203947" asserts="0">
+-                <properties>
+                   <property name="retryIteration" value="0" />
+                   <property name="repeatIteration" value="0" />
+                 </properties>
+-                <failure>
+-                  <message><![CDATA[System.NullReferenceException : Object reference not set to an instance of an object]]></message>
+-                  <stack-trace><![CDATA[  at Game.Tests.PlayMode.VarginhaRequestedGameplayTests.HouseFurnitureResizesOnceAndSurgesIncludeRecovery () [0x0012d] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\Assets\Tests\PlayMode\VarginhaRequestedGameplayTests.cs:182 
+-  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)
+-  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 ]]></stack-trace>
+-                </failure>
+               </test-case>
+-              <test-case id="1923" name="PewStopsWalkingAndSeatRestoresCollisionWhenInterrupted" fullname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests.PewStopsWalkingAndSeatRestoresCollisionWhenInterrupted" methodname="PewStopsWalkingAndSeatRestoresCollisionWhenInterrupted" classname="Game.Tests.PlayMode.VarginhaRequestedGameplayTests" runstate="Runnable" seed="213631225" result="Failed" start-time="2026-10-09 17:01:21Z" end-time="2026-10-09 17:01:24Z" duration="2.371863" asserts="0">
++              <test-case id="1583" name="EarlyQueuedClickChainsExactlyOnePunch" fullname="Game.Tests.PlayMode.VarginhaCombatTests.EarlyQueuedClickChainsExactlyOnePunch" methodname="EarlyQueuedClickChainsExactlyOnePunch" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="1763709447" result="Passed" start-time="2026-10-22 18:14:25Z" end-time="2026-10-22 18:14:26Z" duration="0.847913" asserts="0">
+                 <properties>
+                   <property name="_JOINTYPE" value="UnityCombinatorial" />
+                   <property name="retryIteration" value="0" />
+                   <property name="repeatIteration" value="0" />
+                 </properties>
+-                <failure>
+-                  <message><![CDATA[  Expected: True
+-  But was:  False
+-]]></message>
+-                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaRequestedGameplayTests+<PewStopsWalkingAndSeatRestoresCollisionWhenInterrupted>d__5.MoveNext () [0x0026b] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-09-07-16-28\Assets\Tests\PlayMode\VarginhaRequestedGameplayTests.cs:74
+-at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+-]]></stack-trace>
+-                </failure>
+                 <output><![CDATA[Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+ ]]></output>
+               </test-case>
+diff --git a/Tools/QA/package_school_20261027.py b/Tools/QA/package_school_20261027.py
+index 2bc87d1..186791f 100644
+--- a/Tools/QA/package_school_20261027.py
++++ b/Tools/QA/package_school_20261027.py
+@@ -10,6 +10,7 @@ import argparse
+ 
+ parser=argparse.ArgumentParser()
+ parser.add_argument('--version',default='0.5.0-beta')
++parser.add_argument('--date',default='2026-10-27')
+ parser.add_argument('--evidence',default='output/school-patterns-2026-10-27')
+ parser.add_argument('--tests',nargs='+',default=['school-editmode-release','school-player-final','school-player-readable','school-journal-controller'])
+ args=parser.parse_args()
+@@ -17,7 +18,7 @@ args=parser.parse_args()
+ ROOT=Path(__file__).resolve().parents[2]
+ QA=Path.home()/'AppData/Local/Temp/varginha-master-qa-20261023-120709'
+ EVIDENCE=ROOT/args.evidence
+-BUILD=ROOT/f'Builds/Varginha_{args.version}_2026-10-27'
++BUILD=ROOT/f'Builds/Varginha_{args.version}_{args.date}'
+ archive=BUILD.with_name(BUILD.name+'_Windows_x64.zip')
+ assert not archive.exists(), f'Existing package preserved: {archive}'
+ def sha(path):
+@@ -42,6 +43,8 @@ sources=list((ROOT/'Assets/Scripts').rglob('*.cs'))+list((ROOT/'Assets/Tests').r
+ sources += [ROOT/scene for scene in report['scenes']]
+ sources += [ROOT/'Assets/Resources/Varginha/IllustratedMaps/Layouts.json']
+ sources += list((ROOT/'Assets/Resources/Varginha/StoryCharacters/Directional20261026').glob('*.json'))
++sources += [ROOT/'Assets/Resources/Varginha/MenuLogoOizlede.png',ROOT/'Assets/Resources/Varginha/MenuLogoOizlede.png.meta']
++sources += list((ROOT/'Assets/Resources/Varginha/StoryCharacters').rglob('ForestPresenceSix20261027.*'))
+ checked=[]
+ for source in sorted(set(sources)):
+     relative=source.relative_to(ROOT);actual=QA/relative
+@@ -62,7 +65,9 @@ manifest={'version':report['version'],'created_utc':datetime.now(timezone.utc).i
+ (BUILD/'source-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
+ shutil.copy2(EVIDENCE/'windows-build.json',BUILD/'windows-build.json')
+ update_note='Cruzamento: as duas colunas são embaralhadas, com disposição salva e pares corretos em linhas diferentes.\n' if args.version=='0.5.1-beta' else ''
+-(BUILD/'LEIA-ME.txt').write_text(f'''O SEGREDO DE VARGINHA - {args.version} - Windows x64 - 27/10/2026
++display_date=datetime.strptime(args.date,'%Y-%m-%d').strftime('%d/%m/%Y')
++current_note='Logo Oizlede dessaturada no menu; frases rotativas em cinza; ET de seis quadros e padre fixo na floresta.\n' if args.version=='0.5.2-beta' else ''
++(BUILD/'LEIA-ME.txt').write_text(f'''OIZLEDE: FRAGMENTO PERDIDO - {args.version} - Windows x64 - {display_date}
+ 
+ Extraia TODO o ZIP e abra SegredoDeVarginha.exe.
+ Mantenha a pasta SegredoDeVarginha_Data, MonoBleedingEdge e as bibliotecas junto do executável.
+@@ -75,7 +80,7 @@ Esta candidata inclui o fechamento de 26/10 e o redesign escolar aprovado em 27/
+ jornais e anotações recuperados uma vez na casa, análise visual em quatro etapas,
+ Renan inicialmente alheio ao mistério e referência verificável ao acervo da biblioteca.
+ O progresso e as dicas são salvos; documentos completos continuam no caderno.
+-{update_note}
++{update_note}{current_note}
+ Saves anteriores são migrados para o formato v4. A cópia .vN.bak conserva o formato anterior.
+ São 14 capítulos e 19 cenas, incluindo menu e áreas internas.
+ 
+diff --git a/output/revisao-mestre-2026-10-23/CONTINUIDADE.md b/output/revisao-mestre-2026-10-23/CONTINUIDADE.md
+index 8084f37..bafc4f5 100644
+--- a/output/revisao-mestre-2026-10-23/CONTINUIDADE.md
++++ b/output/revisao-mestre-2026-10-23/CONTINUIDADE.md
+@@ -108,3 +108,66 @@ checkpoint-playmode.xml: 5 casos, 4 passaram; recuperação repetida de glitch,
+ road-checkpoint.xml terminou com 1/1 falha: mesmo com spawn central, y ficou 0 ao acelerar após ré. Portanto a alteração do spawn NÃO resolveu o bloqueio da estrada. Próximo diagnóstico: registrar state/title/input/Speed e contatos do BoxCast na posição inicial; distinguir ausência de input/estado e colisão. Não reduzir a asserção nem declarar item 12/13 completo. Oficina e pista continuam aprovadas nos recortes anteriores. Não há teste em execução a manter no Unity do usuário.
+ 
+ Publicação solicitada é checkpoint parcial. Entregas finais ainda pendentes: acabamento simples e sem emendas no canto do notebook (pedido mais recente), auditoria dos contatos de móveis, revisão visual de recuperação de glitch, Livro/trilhas/CONTINUAR no Player, física da estrada e build/regressão final. Depois produzir roteiro completo de apresentação para 30/10/26. Relatório compacto PDF/DOCX de 12 páginas concluído. Lista detalhada em PENDENCIAS.md. Não desativar a automação enquanto houver pendências. Limite consultado antes de publicar: 6% restante; parar perto dos 5% conforme usuário.
++
++## Retomada de 26/10/2026 — execução das 11h59 de Brasília
++
++O limite foi consultado no começo da retomada e durante o trabalho. Na última leitura atualizada, a janela de cinco horas estava com 73% consumidos (27% restantes); sem créditos de reset. O usuário pediu para parar quando restarem aproximadamente 5%, preservando este checkpoint. A automação permanece ativa porque existem itens pendentes.
++
++### Notebook/cadeira
++
++Após comparar `office-notebook-seated.png` com a captura anterior, confirmei que o shader aplicava uma substituição retangular de piso na silhueta antiga da cadeira. Corrigi somente `Assets/Resources/Varginha/CinemaOpening/IllustratedMorning.shader`: distância assinada de uma caixa arredondada, transição de cobertura suave e área suficiente para pernas/sombra. Não alterei texturas/sprites aprovados nem mexi em cenas/saves. O primeiro teste com uma máscara de silhueta segmentada deixou pés fantasma; descartei essa candidata e mantive a caixa arredondada maior, que limpa a silhueta.
++
++Validação final em projeto QA isolado: `office-rounded-cutout-player.xml` aprovado, 1/1, para `OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach` (StandaloneWindows64). A captura real é `output/revisao-final-2026-10-26/world-review/office-notebook-seated.png`. Ela confirma o fluxo e oclusão do personagem; ainda resta uma transição de piso visível em tamanho de jogo. Portanto item 02 segue Parcial, sem alegar acabamento final. Não houve alteração de cena.
++
++Runner usado: `Tools/QA/run_master_review.ps1`, no clone `C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709`, com `Library` separada; Unity original do usuário não foi tocado. A execução Player final foi envolvida por `Tools/AgentOutput/compact.mjs`. Resultados tentativos de outras máscaras também passaram o assert, mas suas capturas tinham artefatos visuais e não devem ser contados como versão aceita.
++
++### Apresentação e publicação
++
++O usuário pediu abrir a apresentação atualizada. O caminho conhecido é `output/daily-sprint-2026-10-20/A_Sprint_Final_Varginha.html`, cujo conteúdo ainda só resume até 23/10. `cua_repl` identificou o navegador integrado vazio e a política bloqueou a abertura de `file://`, permitindo apenas `http:` e `https:` e proibindo contornar por outro navegador, servidor ou superfície. Não foi aberta. Item 20 permanece Bloqueado; nenhuma alternativa foi tentada.
++
++Os commits de 26/10 até `43e6e3e` estão sincronizados com `origin/codex/campanha-15-fases-e-site`. O pedido explícito de publicar a atualização do dia permanece válido. O shader original e a lista/report da revisão foram enviados em `8f60fbf`/`216b2d9`; a auditoria global e seu estado foram enviados em `8a82861`; amostra de piso em `2ea8725`; conclusão do item 04 em `2677bc9`; captura da transição, conclusão do item 01 e feather do shader em `5f64ec6`, `1640b3a` e `43e6e3e`. O checkpoint desta pasta `output` continua local. Temporários, outputs de QA, `InitTestScene`, recovery e URP temporário ficaram de fora.
++
++### Pedidos que continuam abertos
++
++- Pendências atuais: itens 01, 02, 04 e 11 seguem parciais; item 10 foi concluído após Player/inspeção visual, 12 e 13 foram concluídos após `vehicle-fixed.xml` 3/3.
++- Item 19: após finalizar e validar os serviços, criar roteiro natural da apresentação de 30/10/2026 baseado em registros e evidências, sem inventar fatos.
++- A lista completa foi atualizada em `output/revisao-mestre-2026-10-23/PENDENCIAS.md`, incluindo item 20 e estado Parcial atualizado do notebook.
++- Próximos passos: continuar os itens 01, 02 e 04, revisar transições restantes do item 11, executar regressões finais e preparar o roteiro quando concluir. A apresentação diária precisa receber dados posteriores a 23/10 e a abertura do HTML está bloqueada pela política `file://`.
++
++### Regressão adicional de 26/10 — puzzles e veículos
++
++Depois do commit `8f60fbf`, executei recortes Player adicionais na mesma cópia QA. `puzzle-design-player.xml` terminou Passed: 8/8, zero falhas e ignorados. Inclui `BookCanBeReassembledLinkedSavedAndCorrectedWithController`, `TrailMapSelectsSavesAndCorrectsAnySegmentWithController`, `CompactContinueUsesControllerAndCannotSkipTwoChapters`, navegação por memória e caminhos internos do casarão. Revisei visualmente `book-start.png`, `book-wrong-reference.png`, `book-reconstructed.png`, `trail-puzzle.png` e `compact-continue-library.png`. O Livro está legível/corrigível; CONTINUAR está no canto inferior direito e o avanço duplo permanece bloqueado. Item 10 atualizado para Concluído; item 11 segue Parcial até revisar as outras transições.
++
++`vehicle-fixed.xml` terminou Passed: 3/3 em StandaloneWindows64. `LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit`, `OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection` e `InitialContactWithTheBottomWallDoesNotTrapForwardMotion` passaram. Isso ocorreu depois do diagnóstico falho `road-input.xml` (07:48 Brasília); o teste Player final de 07:51, já com a implementação corrente, conseguiu mover e reverter na estrada e vale como evidência mais recente. Itens 12 e 13 agora são Concluídos. `full-editmode.xml`/`final-editmode-r4.xml`: 420/420 no recorte que antecede as últimas alterações visuais.
++
++Lista local e rastreável atualizada: `output/revisao-mestre-2026-10-23/PENDENCIAS.md`; cópia rastreável e atualização diária foram publicadas no commit `216b2d9`. Branch remoto está até `216b2d9`; o working tree mantém arquivos preexistentes de QA e URP temporário fora dos commits.
++
++### Auditoria global de colisões e proporções — 26/10
++
++O teste Player `CampaignWorldAuditPlayTests.AllGameplayAreasAuditHumanProportionsAndRealFurnitureContacts` terminou Passed (1/1) em `world-contact-audit-player-final4.xml`, após percorrer 18 ambientes, 302 móveis e 1.018 aproximações. CSV: 51 silhuetas visíveis, altura de 0,9545 a 1,5963 m e largura de 0,4562 a 1,2977 m. Quatro móveis não tiveram nenhum lado livre para o probe — mesa redonda da fase 6, lampiões oeste/leste da fase 12 e torneira central da fase 18 — pois estão atrás de outros colliders e fora dos percursos caminháveis. Revisei visualmente as 18 capturas e não encontrei falha aparente de profundidade/encaixe; item 01 passa a Concluído com essas limitações registradas.
++
++Corrigi o teste para medir as regiões opacas dos sprites (não o quadro transparente completo), evitar retratos de interface e tratar Padre Fábio como ator somente nas fases em que ele aparece na cena. Tentativas anteriores falharam em assertivas de medição, não em runtime do jogo; a execução final completa passou. Os CSVs de proporção/contatos, resumo JSON e capturas estão em `output/revisao-final-2026-10-26/`. A lista detalhada foi atualizada tanto em `output/revisao-mestre-2026-10-23/PENDENCIAS.md` quanto em `Docs/CampanhaOficial/PENDENCIAS_REVISAO_MESTRE_2026-10-26.md`, ainda a publicar.
++
++O teste e os registros foram commitados e enviados como `8a82861` (`test: audit world proportions and furniture contacts`). Depois, refinei em `IllustratedMorning.shader` o deslocamento da amostra do piso (160→80 px para usar uma área mais próxima). A validação correta foi `office-nearby-floor-player-valid.xml`, 1/1 Passed; a primeira chamada do filtro selecionou zero testes e não foi contada. Inspecionei a captura nova: a diferença do recorte diminuiu, porém a borda do piso continua aparente, então item 02 permanece Parcial. Shader e registro desta etapa foram enviados em `2ea8725`.
++
++Na sequência, ampliei a faixa de feather da máscara de 12 px para 24 px. `office-feathered-floor-player.xml` passou 1/1 no Player. Inspecionei novamente a captura; o recorte está mais suave, sem revelar as pernas antigas, mas ainda se percebe a variação da textura. Item 02 segue Parcial; shader/estado publicados em `43e6e3e`.
++
++Correção da recuperação do glitch passou por nova inspeção visual. `visual-fixed.xml` aprovou `RepeatedGlitchesReturnToTheSameReadableSceneAfterRecovery` (1/1), que aplica três repetições e exige luminância da imagem recuperada dentro de 0,025 da cena-base; comparei as capturas `04_glitch_before.png`, `04_glitch_peak.png` e `04_glitch_recovered_2.png` no clone QA. Combinado com o recorte `vehicle-glitch-playmode.xml` (reconfiguração/repetição/cancelamento), item 04 muda para Concluído. A lista detalhada e o registro diário foram publicados em `2677bc9`.
++
++Para item 11, ampliei `CompactContinueUsesControllerAndCannotSkipTwoChapters` com uma captura após a transição real da fase 6 à 7. `compact-continue-transition-player.xml` passou 1/1. Inspecionei `compact-continue-next-chapter.png`; a cena seguinte aparece com sua orientação inicial e HUD legível. Lista/atualização diária agora registra que essa amostra foi revisada, mas outros capítulos ainda faltam. Teste/documentação publicados em `5f64ec6`.
++
++### Atualização 26/10 — transição adicional da fase 14
++
++`ContinuationContinueOpensAndAdvancesToTheNextChapter` foi acrescentado a `Assets/Tests/PlayMode/CampaignPuzzleDesignPlayTests.cs` e executado em Player StandaloneWindows64. Resultado: `continuation-continue-transition-player.xml`, 1/1 Passed, zero falhas/ignorados. O caso salva a conclusão da fase 14, abre CONTINUAR, aceita apenas o primeiro comando, confirma a fase salva 15 e captura a próxima cena. Inspecionei `continuation-chapter-complete.png` e `continuation-next-chapter.png`: menu de conclusão e HUD/cena seguinte legíveis; a fase salva 15 aparece como Ato 4, fase 11. Item 11 continua Parcial até revisar transições de outros capítulos.
++
++Os arquivos rastreáveis `Docs/CampanhaOficial/ATUALIZACAO_2026-10-26.md` e `PENDENCIAS_REVISAO_MESTRE_2026-10-26.md`, além desta lista local, receberam essa evidência. Nenhuma cena ou mecânica de jogo foi modificada nesta etapa. A captura visual do notebook ainda mostra transição de piso, portanto item 02 permanece Parcial. A daily HTML ainda tem dados antigos e a abertura de `file://` continua bloqueada pela política do navegador. Itens 19 (roteiro de apresentação) e 20 (abrir daily) continuam em aberto/bloqueado. Nenhuma automação foi desativada.
++
++### Tentativa visual exploratória — 26/10
++
++Testei somente no workspace local uma faixa de feather mais ampla (`smoothstep(-12,44)`) para reduzir a leitura do remendo. A primeira chamada usou filtro incorreto e selecionou zero testes, portanto não vale como aprovação. A repetição com `CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach` no Player isolado não recebeu atividade do Player e terminou com timeout de 180 s (`office-wide-feather-valid.log`); não houve resultado/captura utilizável. Reverti a linha para a versão validada de 24 px (`smoothstep(-4,20)`) e deixei item 02 Parcial. O clone QA usado foi encerrado; o Unity do projeto do usuário não foi iniciado nem alterado nesta tentativa. Não publicar a variação de teste.
++
++O filtro correto do teste de notebook no Player terminou em timeout sem atividade do Player; o processo batch Unity da cópia QA permaneceu listado após o timeout e bloqueou o runner subsequente. A chamada subsequente de PlayMode Editor foi recusada antes de sincronizar/iniciar o teste, porque a cópia estava ocupada. Não atribuir aprovação a nenhuma dessas chamadas. A variação do shader foi revertida; nenhuma mudança de shader pendente. Um teste exploratório 10→11 foi retirado antes de ser validado. Reabrir QA somente depois de confirmar que o processo da cópia encerrou; não iniciar outra Unity sobre esse clone em paralelo.
++
++## Fechamento verificado - 27/10/2026
++
++Pedido atual: concluir as pendências e criar build atualizada. Itens 02, 11, 19 e 20 fechados; candidata 0.4.9-beta no diretório Builds do workspace. EditMode 420/420; regressão Player 15/15; saídas 15/15; HUD/travessia 3/3. Daily HTML/PDF de dez slides e roteiro completo de seis páginas concluídos. Consultar Docs/CampanhaOficial/ENTREGA_2026-10-27.md antes de retomar: diagnósticos antigos parciais não são a situação atual. Não repetir testes nem alterar jogo sem novo motivo. Preservados arquivos locais anteriores, cenas, texturas e saves. Não houve publicação externa nesta rodada.
+diff --git a/output/revisao-mestre-2026-10-23/PENDENCIAS.md b/output/revisao-mestre-2026-10-23/PENDENCIAS.md
+index 05f8910..07b0bbf 100644
+--- a/output/revisao-mestre-2026-10-23/PENDENCIAS.md
++++ b/output/revisao-mestre-2026-10-23/PENDENCIAS.md
+@@ -4,25 +4,26 @@ Estados permitidos: Concluído, Parcial, Bloqueado ou Não iniciado. A leitura d
+ 
+ | Item | Solicitação | Estado | Solução proposta e validação |
+ | --- | --- | --- | --- |
+-| 01 | Colisões, recortes e profundidade globais | Parcial | Regressão geométrica dos mapas iniciais passou no recorte de 121 EditMode; footprint e registro da cadeira corrigidos juntos. Falta concluir auditoria visual dos 19 ambientes e demais contatos específicos. |
+-| 02 | Notebook, cadeira e escrivaninha | Parcial | Cadeira avançada 16 pixels sem alterar os pixels do sprite; piso antigo removido em cópia aditiva; collider acompanha o desenho e o corpo usa o assento real. Primeiras capturas expuseram pés residuais e emenda retangular no piso. Resíduo removido; usuário pediu recortes mais suaves e simples. Acabamento ainda pendente. Candidato de oclusão das pernas está em teste, sem aprovação visual. |
++| 01 | Colisões, recortes e profundidade globais | Concluído | Auditoria Player em 18 ambientes aprovada (1/1): 302 móveis, 1.018 aproximações sem penetração e 51 silhuetas visíveis dentro das faixas dimensionais. Revisei as 18 capturas e não encontrei falhas aparentes de profundidade/encaixe. Quatro props sem lado livre para o probe ficam atrás de outros colliders e não integram os percursos caminháveis: mesa redonda da fase 6, lampiões da fase 12 e torneira central da fase 18. Evidências: `world-contact-audit-player-final4.xml`, `world-audit-counts.json`, `furniture-contacts.csv`, `character-proportions.csv` e `world-audit/` em `output/revisao-final-2026-10-26/`. |
++| 02 | Notebook, cadeira e escrivaninha | Concluído | Fechado em 27/10: piso reconstruído por linha com textura e iluminação locais, sombra antiga da mesa removida. Aproximação, uso e retorno aprovados no Player e inspecionados em `output/completion-2026-10-27/world-review/`. Sprites e colisores originais preservados. |
+ | 03 | Globo escolar dos fragmentos | Concluído | Novo globo esférico azul/dourado em placa localizada 44×64; original da biblioteca preservado, integração aditiva na fase 6. Pipeline sem erros e aviso esperado de placa opaca na borda. Escala, filtro, suporte, investigação e captura real aprovados; imagem world-review/globe-library.png inspecionada. |
+-| 04 | Sombra após glitch | Parcial | Reconfiguração agora libera volume/poeira/áudio anteriores; desativação zera pulsos e restaura máscara/post da câmera; transição cancelada limpa overlays e relógio. Testes de repetição e cancelamento aprovados no recorte 7/7. Aparência exata da ocorrência original ainda requer comparação visual. |
++| 04 | Sombra após glitch | Concluído | Limpeza de volume/poeira/áudio ao reconfigurar; desativação zera pulsos e restaura máscara e pós-processamento; transição cancelada limpa overlays e relógio. `visual-fixed.xml` passou a repetição de três glitches e recuperação (1/1); captura de antes/pico/recuperação foi comparada visualmente, e luma recuperada ficou dentro de 0,025 da cena-base. `vehicle-glitch-playmode.xml` também aprovou reconfiguração/repetição/cancelamento. Sem resíduo após recuperação. |
+ | 05 | Edelzio dirigindo e volante | Concluído | Compositor atual auditado no Player nas quatro poses. Mãos acompanham o volante, painel preservado e coluna conectada. Não foi necessário redesenhar a arte já alinhada. Capturas driving-pose-0 a 3 e teste do cinema aprovados. |
+ | 06 | Trajeto pavimentado da escola | Concluído | Caminho de chegada usa a calçada inferior e o acesso central medidos no mapa. Amostragem de todo o caminho verifica piso pavimentado e passagem livre; aprovada em book-graphics-editmode.xml (121/121). Sequência completa aprovada no Player; school-arrival-gate.png inspecionada, trajeto pelo piso pavimentado. |
+ | 07 | Ordem mochila → chave → saída | Concluído | Lembrança única, mochila condicionada, porta física bloqueada até a investigação e migração de saves. Regras e fluxo completo porta→mochila→pistas→caixa→páginas→saída aprovados, incluindo casa→escola. |
+ | 08 | Investigação intuitiva da chave | Concluído | Rastro local de papel até a cama, falas/dicas/dedução sem inferir idade nem antecipar a história. Inspeções são revisáveis; abertura e recompensa aprovadas no teste de cena e save. |
+ | 09 | Seleção direta das trilhas | Concluído | A/B imediato em qualquer trecho, contador, conferência única e correção sem apagar escolhas. Regras/save e navegação real por controle, edição, erro e reload aprovados. |
+-| 10 | Livro do Tombo visual e investigativo | Parcial | Três fragmentos reorganizáveis e associação a evidências realmente adquiridas, sem combinação numérica que pule o puzzle. Save, dicas, correções e recompensa com Ouzana aprovados por regra/controle/cena. Falta revisão visual do painel no Player. |
+-| 11 | Conclusão discreta das fases | Parcial | Painéis redundantes substituídos por CONTINUAR no canto inferior; ligação narrativa, calibração final e encerramento preservados. Controle e bloqueio de avanço duplicado aprovados (6→7); falta revisar apresentação e demais transições no Player. |
+-| 12 | Física fluida do Fusca | Parcial | Oficina usa aceleração, inércia, freio/ré, volante progressivo/retorno, aderência, collider fixo rotativo, BoxCast e yaw salvo. Estacionamento/manobra/reload aprovados. Falta unificar estrada legada e pista opcional, ainda com controladores próprios. |
+-| 13 | Fusca preso no limite inferior | Parcial | Reproduzido no código anterior: contato inicial impedia afastamento. O mesmo teste passa com filtro de contatos separantes e sem troca de collider ao dar ré. Limite sólido e manobra/estacionamento aprovados na oficina; falta conferir as outras áreas dirigíveis do item 12. |
++| 10 | Livro do Tombo visual e investigativo | Concluído | Três fragmentos reorganizáveis e associação às evidências adquiridas, sem combinação numérica que pule o puzzle. Regras, save, dicas, correções e recompensa com Ouzana aprovados; revisão visual real do Player passou nos estados inicial, resposta incorreta e reconstrução. `puzzle-design-player.xml`: 8/8 no recorte que também cobre trilhas, retorno e navegação.
++| 11 | Conclusão discreta das fases | Concluído | Fechado em 27/10: 15/15 saídas/epílogo no Player, 31 capturas revisadas, próxima investigação pendente e confirmação dupla rejeitada. Viagem casa-escola aprovada; HUD da batalha e travessia final passaram no recorte adicional 3/3. Evidências em `output/completion-2026-10-27/`. |
++| 12 | Física fluida do Fusca | Concluído | A oficina, a estrada legada e a pista opcional usam aceleração, frenagem/ré e resposta física em passos fixos. Testes reais no Player cobrem aceleração/coast/ré/volante na estrada e aceleração/coast/frenagem na pista; `vehicle-fixed.xml`: 3/3 aprovados.
++| 13 | Fusca preso no limite inferior | Concluído | Contato separante permite afastar-se da parede inferior sem trocar collider nem reduzir a asserção. A regressão real `InitialContactWithTheBottomWallDoesNotTrapForwardMotion` passou junto dos testes da estrada/pista em `vehicle-fixed.xml` (3/3). Falhas de fixtures/dignóstico anteriores foram superadas por este recorte final.
+ | 14 | Áudio de higiene e café | Concluído | Café começa com a xícara na boca; higiene começa na fase de contato da animação. Fonte própria respeita efeitos/pausa/fim/cancelamento; regressão final aprovada em visual-actions-playmode.xml (16/16, inclui outros sistemas). |
+ | 15 | Soco com cliques rápidos | Concluído | Reproduzido salto de 6 para 4 poses a 10 FPS e dessincronia da camada visual da campanha. Duração mínima por pose e CombatFrame compartilhado corrigem ambos; buffer e dano único preservados. Núcleo e camada visual real aprovados, incluindo spam a 10 FPS, ciclo completo, buffer limitado, dano único e retorno ao idle (visual-actions-playmode.xml: 16/16 no recorte). |
+ | 16 | Reduzir bastante o relatório ABNT | Concluído | Nova versão de 12 páginas em output/relatorio-resumido-abnt-2026-10-23, PDF e DOCX. Mantidos cinco seções, capa, folha de rosto, listas e sumário; Times New Roman 12, 1,5 e margens 3/3/2/2. Todas as páginas renderizadas e inspecionadas, sem overflow nem campos pendentes. Versões longas preservadas. |
+ | 17 | Música recebida para o menu inicial | Concluído | MP3 original preservado e copiado sem conversão. Importação, streaming, repetição, canal musical, volume, fade de partida e parada ao desativar aprovados em EditMode/PlayMode. |
+ | 18 | Ambiente sombrio recebido para a igreja | Concluído | MP3 original preservado e copiado sem conversão. Igreja usa o novo ambiente nas três bandas, com sino separado; streaming/repetição/transição e parada ao voltar ao menu aprovados. |
+-| 19 | Roteiro da apresentação completa em 30/10/2026 | Não iniciado | Pedido acrescentado em 23/10: criar ao terminar a revisão, com linguagem natural para falar, trajetória desde a ideia/protótipo, evolução, narrativa, tecnologias, sistemas, arte/áudio, testes, resultados, dificuldades e próximos passos. Incluir indicações de slides/demo e tempo sugerido; usar o estado final verificado, sem inventar entregas futuras. |
++| 19 | Roteiro da apresentação completa em 30/10/2026 | Concluído | Roteiro completo em `Docs/Apresentacao/ROTEIRO_COMPLETO_30-10-2026.md` e PDF de seis páginas. Fala de 12 a 15 minutos, histórico desde setembro, narrativa, sistemas, arte/áudio, dificuldades, demo e perguntas prováveis. |
++| 20 | Abrir a apresentação atualizada nesta sessão | Concluído | Daily de 27/10 atualizada e verificada em dez slides, com HTML e PDF local. A versão PDF permite leitura no painel de arquivos sem navegar para `file://`. A restrição histórica do navegador integrado não foi contornada. |
+ 
+ ## Plano de execução
+ 
+@@ -32,7 +33,7 @@ Estados permitidos: Concluído, Parcial, Bloqueado ou Não iniciado. A leitura d
+ 4. Revisar profundidade, mesa, globo, glitch e cinematografia.
+ 5. Integrar transições e sincronização de áudio.
+ 6. Rodar testes dirigidos e regressões adequadas; compilar candidata isolada; realizar inspeção visual real dos trechos modificados.
+-7. Entregar relatório de estados com causas, arquivos/cenas, testes e limitações. Nenhum push ou publicação está incluído automaticamente.
++7. Entregar relatório de estados com causas, arquivos/cenas, testes e limitações. Em 26/10 o usuário pediu commit e publicação no GitHub da atualização do dia; commits existentes até `43e6e3e` estão sincronizados com `origin/codex/campanha-15-fases-e-site`. Nesta retomada, itens 01 e 04 foram concluídos e publicados; o shader do notebook e registros atualizados também foram enviados. Restam itens 02 e 11, atualização visual da daily e roteiro de apresentação. Manter de fora temporários, logs brutos, URP runtime temporário e arquivos de recuperação.
+ 
+ ## Aprovação
+ 
+@@ -41,3 +42,7 @@ Estados permitidos: Concluído, Parcial, Bloqueado ou Não iniciado. A leitura d
+ ## Evidências atuais
+ 
+ Retomada em 23/10 após renovação dos limites. Primeiro recorte novo: 26/26 EditMode aprovados, zero falhas e zero ignorados, em cópia isolada do projeto, produto Varginha_Master_QA_20261023. Evidência: editmode.xml e editmode.log neste diretório. Abrange importação/atribuição/configuração dos áudios e regras/save das trilhas; não comprova audição, gameplay completo nem as alterações posteriores de chave. Unity do usuário preservado. Resultados históricos permanecem válidos somente para seus recortes e versões anteriores.
++
++## Fechamento de 27/10/2026
++
++Os itens restantes desta revisão foram concluídos. Estado final, arquivos, testes, build e limites em `Docs/CampanhaOficial/ENTREGA_2026-10-27.md`. As entradas de 23 e 26/10 acima permanecem como histórico.

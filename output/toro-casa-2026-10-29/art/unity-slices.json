@@ -1,0 +1,25 @@
+{
+  "image": "FiatToroSide.png",
+  "spriteMode": "Single",
+  "rectUnityBottomLeft": [
+    0,
+    0,
+    128,
+    64
+  ],
+  "pivotTopLeftPixels": [
+    64,
+    56
+  ],
+  "pivotNormalizedUnity": [
+    0.5,
+    0.125
+  ],
+  "pixelsPerUnit": 100,
+  "filterMode": "Point",
+  "mipMaps": false,
+  "textureCompression": "None",
+  "wrapMode": "Clamp",
+  "meshType": "FullRect",
+  "integrationStatus": "not imported or run by art agent"
+}

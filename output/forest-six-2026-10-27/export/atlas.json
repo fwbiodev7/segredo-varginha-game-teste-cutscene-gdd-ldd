@@ -1,0 +1,263 @@
+{
+  "schema": "pixel-art-sprite-sheet/v1",
+  "image": "sheet.png",
+  "imageSize": [
+    480,
+    320
+  ],
+  "pixelsPerUnit": 100,
+  "frames": [
+    {
+      "id": "front_side_0",
+      "rect": [
+        0,
+        0,
+        160,
+        160
+      ],
+      "sourceSize": [
+        160,
+        160
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        80,
+        86
+      ],
+      "durationMs": 167,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\StoryCharacters\\ForestPresenceHybridV1.png",
+        "fileSha256": "8d75ef752f9bcca031e6e11335b2c0b606b1b3ecb4274fc2a5cfe8dc67484487",
+        "crop": [
+          51,
+          329,
+          121,
+          111
+        ],
+        "offset": [
+          20,
+          33
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "front_side_1",
+      "rect": [
+        160,
+        0,
+        160,
+        160
+      ],
+      "sourceSize": [
+        160,
+        160
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        80,
+        86
+      ],
+      "durationMs": 167,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\StoryCharacters\\ForestPresenceHybridV1.png",
+        "fileSha256": "8d75ef752f9bcca031e6e11335b2c0b606b1b3ecb4274fc2a5cfe8dc67484487",
+        "crop": [
+          280,
+          332,
+          112,
+          108
+        ],
+        "offset": [
+          24,
+          36
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "front_side_2",
+      "rect": [
+        320,
+        0,
+        160,
+        160
+      ],
+      "sourceSize": [
+        160,
+        160
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        80,
+        86
+      ],
+      "durationMs": 166,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\StoryCharacters\\ForestPresenceHybridV1.png",
+        "fileSha256": "8d75ef752f9bcca031e6e11335b2c0b606b1b3ecb4274fc2a5cfe8dc67484487",
+        "crop": [
+          733,
+          327,
+          102,
+          113
+        ],
+        "offset": [
+          29,
+          31
+        ],
+        "mirrorX": false,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "back_side_0",
+      "rect": [
+        0,
+        160,
+        160,
+        160
+      ],
+      "sourceSize": [
+        160,
+        160
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        80,
+        86
+      ],
+      "durationMs": 167,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\StoryCharacters\\ForestPresenceHybridV1.png",
+        "fileSha256": "8d75ef752f9bcca031e6e11335b2c0b606b1b3ecb4274fc2a5cfe8dc67484487",
+        "crop": [
+          53,
+          1228,
+          118,
+          108
+        ],
+        "offset": [
+          21,
+          36
+        ],
+        "mirrorX": true,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "back_side_1",
+      "rect": [
+        160,
+        160,
+        160,
+        160
+      ],
+      "sourceSize": [
+        160,
+        160
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        80,
+        86
+      ],
+      "durationMs": 167,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\StoryCharacters\\ForestPresenceHybridV1.png",
+        "fileSha256": "8d75ef752f9bcca031e6e11335b2c0b606b1b3ecb4274fc2a5cfe8dc67484487",
+        "crop": [
+          270,
+          1228,
+          131,
+          108
+        ],
+        "offset": [
+          14,
+          36
+        ],
+        "mirrorX": true,
+        "recolor": {}
+      }
+    },
+    {
+      "id": "back_side_2",
+      "rect": [
+        320,
+        160,
+        160,
+        160
+      ],
+      "sourceSize": [
+        160,
+        160
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        80,
+        86
+      ],
+      "durationMs": 166,
+      "allowEmpty": false,
+      "source": {
+        "path": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\Assets\\Resources\\Varginha\\StoryCharacters\\ForestPresenceHybridV1.png",
+        "fileSha256": "8d75ef752f9bcca031e6e11335b2c0b606b1b3ecb4274fc2a5cfe8dc67484487",
+        "crop": [
+          724,
+          1230,
+          119,
+          106
+        ],
+        "offset": [
+          20,
+          38
+        ],
+        "mirrorX": true,
+        "recolor": {}
+      }
+    }
+  ],
+  "clips": {
+    "run_front_side": {
+      "frames": [
+        "front_side_0",
+        "front_side_1",
+        "front_side_2"
+      ],
+      "loop": true
+    },
+    "run_back_side": {
+      "frames": [
+        "back_side_0",
+        "back_side_1",
+        "back_side_2"
+      ],
+      "loop": true
+    }
+  }
+}

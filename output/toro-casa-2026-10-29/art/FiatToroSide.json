@@ -1,0 +1,80 @@
+{
+  "schema": "pixel-art-sprite-sheet/v1",
+  "image": "FiatToroSide.png",
+  "imageSize": [
+    128,
+    64
+  ],
+  "pixelsPerUnit": 100,
+  "frames": [
+    {
+      "id": "toro_side_right",
+      "rect": [
+        0,
+        0,
+        128,
+        64
+      ],
+      "sourceSize": [
+        128,
+        64
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        64,
+        56
+      ],
+      "durationMs": 120
+    }
+  ],
+  "clips": {
+    "toro_side_right": {
+      "frames": [
+        "toro_side_right"
+      ],
+      "loop": false
+    }
+  },
+  "provenance": {
+    "generator": "built-in image_gen",
+    "approval": "candidate; requires visual acceptance in game",
+    "sourceImage": "toro-imagegen-source.png",
+    "sourceSha256": "9ed911dd04c2cc7dd9e84bcbb3f5156ba3cfd3a7c83e6df20809d17f4cd324ad",
+    "referenceImage": "Assets/Resources/Varginha/StoryEffects/FuscaOriginal.png",
+    "referenceSha256": "048dfd8c37a00d2fc84407871ea931f81927efd71bc69d50c733a549292f7344",
+    "referenceUnityRect": [
+      1,
+      35,
+      99,
+      53
+    ],
+    "referencePillowRect": [
+      1,
+      12,
+      99,
+      53
+    ],
+    "referenceCropPixelSha256": "04e285812d62187e72a7074f4670e7ca8aca3ac05b6d771a6dd4ab99d4204461",
+    "normalization": "Nearest sample generated candidate1774x887 onto128x64; alpha threshold128; nearest reference RGB palette; no geometry redrawn.",
+    "referencePixelsModified": false,
+    "promptFile": "generation-prompt.txt"
+  },
+  "measuredBounds": [
+    4,
+    13,
+    125,
+    56
+  ],
+  "wheelContactYTopLeft": 55,
+  "expectedUnityImport": {
+    "filterMode": "Point",
+    "mipMaps": false,
+    "compression": "None",
+    "wrap": "Clamp",
+    "spriteMeshType": "FullRect",
+    "pixelsPerUnit": 100
+  }
+}

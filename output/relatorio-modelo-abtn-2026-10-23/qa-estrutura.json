@@ -1,0 +1,463 @@
+{
+  "backend": "Native Microsoft Word PDF; canonical render_docx.py rasterize with task-local conversion adapter; Poppler",
+  "page_count": 35,
+  "pages": [
+    {
+      "page": 1,
+      "words": 25,
+      "first": [
+        "ESCOLA ESTADUAL DEPUTADO DOMINGOS DE FIGUEIREDO",
+        "TURMA DO 3º ANO DE DESENVOLVIMENTO DE SISTEMAS"
+      ],
+      "last": [
+        "Relatório do desenvolvimento do projeto",
+        "VARGINHA, 2026"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 2,
+      "words": 46,
+      "first": [
+        "TURMA DO 3º ANO DE DESENVOLVIMENTO DE SISTEMAS",
+        "O SEGREDO DE VARGINHA"
+      ],
+      "last": [
+        "Professores: Renan e Alex.",
+        "VARGINHA, 2026"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 3,
+      "words": 71,
+      "first": [
+        "LISTA DE ILUSTRAÇÕES",
+        "Figura 1 – Escola Industrial no acervo da remasterização ...................................................... 13"
+      ],
+      "last": [
+        "Quadro 2 – Riscos e medidas recomendadas........................................................................... 29",
+        "Quadro 3 – Situação dos principais aspectos do projeto ......................................................... 30"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 4,
+      "words": 23,
+      "first": [
+        "LISTA DE TABELAS",
+        "Tabela 1 – Dimensão estática do acervo consultado ............................................................... 17"
+      ],
+      "last": [
+        "Tabela 1 – Dimensão estática do acervo consultado ............................................................... 17",
+        "Tabela 2 – Verificações selecionadas das versões recentes .................................................... 25"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 5,
+      "words": 149,
+      "first": [
+        "SUMÁRIO",
+        "1 INTRODUÇÃO .......................................................................................................... 5"
+      ],
+      "last": [
+        "4.2 Síntese conclusiva ............................................................................................... 31",
+        "5 REFERÊNCIAS BIBLIOGRÁFICAS ................................................................... 33"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 6,
+      "words": 336,
+      "first": [
+        "5",
+        "1 INTRODUÇÃO"
+      ],
+      "last": [
+        "A relevância educacional está na aplicação prática de lógica, orientação a objetos,",
+        "tratamento de estados, organização de arquivos, controle de versão e validação de software. A"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 7,
+      "words": 146,
+      "first": [
+        "6",
+        "ambientação regional também permite trabalhar identidade cultural e comunicação. Trata-se"
+      ],
+      "last": [
+        "Renan e Alex. A autoria foi identificada coletivamente conforme os dados fornecidos. Não",
+        "foram atribuídas tarefas individuais a estudantes sem registro correspondente."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 8,
+      "words": 292,
+      "first": [
+        "7",
+        "2 REFERENCIAL TEÓRICO"
+      ],
+      "last": [
+        "ou persistência. Compilar com sucesso, por sua vez, comprova a geração do programa, mas",
+        "não demonstra a conclusão manual de toda a campanha."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 9,
+      "words": 273,
+      "first": [
+        "8",
+        "3 PROCEDIMENTOS METODOLÓGICOS"
+      ],
+      "last": [
+        "entrelinhas de 1,5 e títulos principais centralizados em tamanho 16. As referências identificam",
+        "as fontes consultadas (Universidade Federal do Espírito Santo, 2026)."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 10,
+      "words": 349,
+      "first": [
+        "9",
+        "3.2 Concepção narrativa e evolução do escopo"
+      ],
+      "last": [
+        "Fotografia, vulto, horário e confirmação de Renan passaram a compor um mesmo percurso",
+        "escolar. Laboratório e oficina integram um capítulo; jardim, térreo e porão formam o percurso"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 11,
+      "words": 337,
+      "first": [
+        "10",
+        "do casarão. As antigas Câmaras do Selo foram retiradas, e a investigação da criatura"
+      ],
+      "last": [
+        "O commit 8dd459a, de 11 de setembro, registra um protótipo com jogabilidade e",
+        "identidade em pixel art. O registro seguinte, em 12 de setembro, acrescenta testes de fases e"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 12,
+      "words": 395,
+      "first": [
+        "11",
+        "de aliados. Em 14 de setembro aparecem ajustes de entrada, apresentação dos pixels, cenário e"
+      ],
+      "last": [
+        "passou a precisar de origem, registro, condição de uso e retomada após salvar. A presença de",
+        "mais ambientes também elevou o risco de trajetos longos e repetição de inspeções. A revisão"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 13,
+      "words": 307,
+      "first": [
+        "12",
+        "posterior do percurso responde a esse crescimento, reunindo ações que podiam ocorrer no"
+      ],
+      "last": [
+        "acervo da remasterização. Ela é uma evidência histórica da composição, não uma captura",
+        "produzida especificamente da build 0.4.8."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 14,
+      "words": 242,
+      "first": [
+        "13",
+        "Figura 1 – Escola Industrial no acervo da remasterização"
+      ],
+      "last": [
+        "apresentação posterior utiliza a mesa do café. Essa mudança visual precisou ser acompanhada",
+        "por testes e por instruções consistentes. Saves que já obtiveram as evidências não devem"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 15,
+      "words": 245,
+      "first": [
+        "14",
+        "obrigar o jogador a repetir toda a preparação (Projeto O Segredo de Varginha, 2026b, 2026i,"
+      ],
+      "last": [
+        "Figura 2 – Diálogo escolar registrado na revisão de 23 de outubro",
+        "Fonte: Projeto O Segredo de Varginha (2026k), captura da revisão de falas."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 16,
+      "words": 321,
+      "first": [
+        "15",
+        "O resultado técnico dessa rodada inclui 29 testes EditMode direcionados, três casos no"
+      ],
+      "last": [
+        "Fonte: elaboração para este relatório a partir de Projeto O Segredo de Varginha (2026b, 2026c). As áreas",
+        "complementares não estão individualizadas nesta síntese."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 17,
+      "words": 326,
+      "first": [
+        "16",
+        "A progressão parte de memórias e objetos cotidianos, passa por comparação de"
+      ],
+      "last": [
+        "percurso final conserva calibração, travessia e encerramento como ações distintas, porque",
+        "cada uma possui significado narrativo e estado próprio."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 18,
+      "words": 274,
+      "first": [
+        "17",
+        "3.5 Arquitetura e tecnologias"
+      ],
+      "last": [
+        "concentra no diretório Experiment. CampaignSequence define a relação entre capítulos e IDs;",
+        "CampaignHouseSequence conduz a rotina e as pistas da casa; VarginhaCampaignStage"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 19,
+      "words": 266,
+      "first": [
+        "18",
+        "coordena estados de etapas; CampaignContinuationController organiza a continuidade"
+      ],
+      "last": [
+        "relatórios. AgentOutput preserva os logs completos para rastrear falhas; seus resumos não",
+        "substituem as evidências originais."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 20,
+      "words": 321,
+      "first": [
+        "19",
+        "3.6 Mecânicas e sistemas de jogo"
+      ],
+      "last": [
+        "três golpes de Edelzio foi desenvolvida com hitbox por ataque, efeitos de impacto e janela de",
+        "continuidade. Os inimigos apresentam avisos e intervalos de recuperação para permitir reação."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 21,
+      "words": 328,
+      "first": [
+        "20",
+        "Vida, dano e sanidade são sistemas relacionados no projeto; os relatórios de implementação"
+      ],
+      "last": [
+        "pequena, distinção entre planos e preservação da aparência aprovada. Os recursos originais de",
+        "Edelzio, escola, mochila e Fusca foram reaproveitados em diferentes momentos."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 22,
+      "words": 231,
+      "first": [
+        "21",
+        "As animações de caminhada, interação, sentar, dirigir e atacar precisam manter"
+      ],
+      "last": [
+        "O acervo registra que as reportagens e imagens de 1996 são ficcionais. A voz sintética",
+        "foi retirada e não houve clonagem de voz pessoal. O uso de ferramentas de geração não"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 23,
+      "words": 336,
+      "first": [
+        "22",
+        "elimina a necessidade de curadoria: imagens precisam de recorte, importação, validação de"
+      ],
+      "last": [
+        "Os créditos preservam a identificação fornecida e não inventam autores ou permissões. A",
+        "documentação de origem e os comprovantes de autorização precisam acompanhar a"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 24,
+      "words": 303,
+      "first": [
+        "23",
+        "preparação de uma publicação ampla. Essa pendência documental é distinta do funcionamento"
+      ],
+      "last": [
+        "resultado da ação. Caderno e dicas reduzem a dependência de memorizar falas. As mensagens",
+        "devem orientar sem entregar toda a solução."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 25,
+      "words": 311,
+      "first": [
+        "24",
+        "3.8.2 Teclado mouse e controle"
+      ],
+      "last": [
+        "cada caso a partir da suíte e de repetições de grupos afetados. O próprio resumo informa que",
+        "não houve uma única execução integral limpa correspondente a esse total. Já os quatro casos"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 26,
+      "words": 292,
+      "first": [
+        "25",
+        "no Player foram distribuídos em duas execuções nativas. Essa distinção foi mantida neste"
+      ],
+      "last": [
+        "preferências foram isolados em um produto de testes para preservar o estado do jogo do",
+        "usuário."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 27,
+      "words": 348,
+      "first": [
+        "26",
+        "3.9.3 Falhas observadas e correções verificadas"
+      ],
+      "last": [
+        "uma partida inteira. A rodada humana completa, o teste com iniciantes e a comparação em",
+        "outro hardware permanecem necessários."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 28,
+      "words": 346,
+      "first": [
+        "27",
+        "3.10 Entregas documentação e gestão"
+      ],
+      "last": [
+        "O roteiro definitivo de Edelzio é um artefato operacional específico: ajuda a gravar o",
+        "lote aprovado. Os arquivos de mapeamento ligam códigos de ator e nomes esperados pelo"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 29,
+      "words": 201,
+      "first": [
+        "28",
+        "jogo. Mantê-los junto da versão textual evita receber gravações de frases já substituídas e"
+      ],
+      "last": [
+        "relatórios. Essa análise deriva dos artefatos entregues, sem substituir avaliação individual de",
+        "aprendizagem feita pelos professores."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 30,
+      "words": 235,
+      "first": [
+        "29",
+        "3.10.4 Riscos e cuidados de continuidade"
+      ],
+      "last": [
+        "plano e autorização conforme o fluxo de colaboração do projeto. O presente relatório não",
+        "modificou o jogo, suas cenas ou seus recursos."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 31,
+      "words": 277,
+      "first": [
+        "30",
+        "3.11 Resultados obtidos e estágio atual"
+      ],
+      "last": [
+        "disponíveis apresentada.",
+        "Fonte: síntese deste relatório a partir de Projeto O Segredo de Varginha (2026b, 2026f, 2026i, 2026j, 2026k)."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 32,
+      "words": 303,
+      "first": [
+        "31",
+        "4 RESULTADOS ESPERADOS"
+      ],
+      "last": [
+        "O desenvolvimento de O Segredo de Varginha demonstra a transformação de uma",
+        "proposta ampla de terror e investigação em uma campanha com percurso definido e build"
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 33,
+      "words": 213,
+      "first": [
+        "32",
+        "Windows verificável. Entre o primeiro estado disponível de setembro e a revisão de 23 de"
+      ],
+      "last": [
+        "ser identificável e verificável. A continuidade do projeto deve apoiar-se nessa relação,",
+        "preservando os recursos aprovados e priorizando a experiência completa do jogador."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 34,
+      "words": 288,
+      "first": [
+        "33",
+        "5 REFERÊNCIAS BIBLIOGRÁFICAS"
+      ],
+      "last": [
+        "21.md; CREDITOS_AUDIO_EDELZIO_2026-10-22.md; AUDITORIA_APOIOS_2026-10-",
+        "21.md. Diretório: Docs/CampanhaOficial. Consulta em: 23 out. 2026."
+      ],
+      "outside_expected_print_area": []
+    },
+    {
+      "page": 35,
+      "words": 253,
+      "first": [
+        "34",
+        "PROJETO O SEGREDO DE VARGINHA. Relatórios de campanha remasterização alpha"
+      ],
+      "last": [
+        "Normalização. Vitória: UFES, 2026. Atualizado em 10 jul. 2026. Disponível em:",
+        "https://biblioteca.ufes.br/normalizacao. Acesso em: 23 out. 2026."
+      ],
+      "outside_expected_print_area": []
+    }
+  ],
+  "pdf_A4": true,
+  "unresolved_fields": []
+}

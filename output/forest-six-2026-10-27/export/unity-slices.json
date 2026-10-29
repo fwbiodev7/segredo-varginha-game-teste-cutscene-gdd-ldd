@@ -1,0 +1,125 @@
+{
+  "schema": "unity-slice-plan/v1",
+  "origin": "bottom-left",
+  "image": "sheet.png",
+  "pixelsPerUnit": 100,
+  "sprites": [
+    {
+      "name": "front_side_0",
+      "rect": [
+        0,
+        160,
+        160,
+        160
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.4625
+      ],
+      "alignment": "Custom",
+      "durationMs": 167
+    },
+    {
+      "name": "front_side_1",
+      "rect": [
+        160,
+        160,
+        160,
+        160
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.4625
+      ],
+      "alignment": "Custom",
+      "durationMs": 167
+    },
+    {
+      "name": "front_side_2",
+      "rect": [
+        320,
+        160,
+        160,
+        160
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.4625
+      ],
+      "alignment": "Custom",
+      "durationMs": 166
+    },
+    {
+      "name": "back_side_0",
+      "rect": [
+        0,
+        0,
+        160,
+        160
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.4625
+      ],
+      "alignment": "Custom",
+      "durationMs": 167
+    },
+    {
+      "name": "back_side_1",
+      "rect": [
+        160,
+        0,
+        160,
+        160
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.4625
+      ],
+      "alignment": "Custom",
+      "durationMs": 167
+    },
+    {
+      "name": "back_side_2",
+      "rect": [
+        320,
+        0,
+        160,
+        160
+      ],
+      "pivotNormalized": [
+        0.5,
+        0.4625
+      ],
+      "alignment": "Custom",
+      "durationMs": 166
+    }
+  ],
+  "clips": {
+    "run_front_side": {
+      "frames": [
+        "front_side_0",
+        "front_side_1",
+        "front_side_2"
+      ],
+      "loop": true
+    },
+    "run_back_side": {
+      "frames": [
+        "back_side_0",
+        "back_side_1",
+        "back_side_2"
+      ],
+      "loop": true
+    }
+  },
+  "importSettings": {
+    "textureType": "Sprite",
+    "spriteMode": "Multiple",
+    "filterMode": "Point",
+    "mipmaps": false,
+    "compression": "Uncompressed",
+    "wrapMode": "Clamp"
+  },
+  "note": "Import plan only; Unity does not import this JSON automatically. Preserve existing sprite IDs."
+}

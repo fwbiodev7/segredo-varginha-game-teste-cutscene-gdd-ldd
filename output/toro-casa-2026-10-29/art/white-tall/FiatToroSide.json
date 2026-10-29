@@ -1,0 +1,87 @@
+{
+  "schema": "pixel-art-sprite-sheet/v1",
+  "image": "FiatToroSide.png",
+  "imageSize": [
+    128,
+    72
+  ],
+  "pixelsPerUnit": 100,
+  "frames": [
+    {
+      "id": "toro_side_right",
+      "rect": [
+        0,
+        0,
+        128,
+        72
+      ],
+      "sourceSize": [
+        128,
+        72
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        64,
+        61
+      ],
+      "durationMs": 120
+    }
+  ],
+  "clips": {
+    "toro_side_right": {
+      "frames": [
+        "toro_side_right"
+      ],
+      "loop": false
+    }
+  },
+  "variant": "white-tall",
+  "measuredBoundsTopLeftExclusive": [
+    2,
+    9,
+    125,
+    61
+  ],
+  "wheelContactYTopLeft": 60,
+  "heightIncreaseAgainstBluePercent": 20.93,
+  "provenance": {
+    "generator": "built-in image_gen edits",
+    "source": "toro-white-tall-imagegen-source.png",
+    "sourceSha256": "31f66fd3399add3cd6a64a5d7d03b1c3b0dbb1b9576f22895251ff429cd3207d",
+    "rawAlpha128Bounds": [
+      42,
+      129,
+      1631,
+      802
+    ],
+    "rawDimensions": [
+      1672,
+      941
+    ],
+    "originalBlue": "../FiatToroSide.png",
+    "originalBlueSha256": "11246ad49a0e379634e3ffb2d54b39a531423fc8341f50abb9a3c3f9e064f4df",
+    "styleReference": "Assets/Resources/Varginha/StoryEffects/FuscaOriginal.png",
+    "styleReferenceSha256": "048dfd8c37a00d2fc84407871ea931f81927efd71bc69d50c733a549292f7344",
+    "styleReferenceUnityRect": [
+      1,
+      35,
+      99,
+      53
+    ],
+    "artChanges": "ImageGen recolored body white and redrew raised suspension/clearance; wheels kept round.",
+    "export": "Alpha128 trim; uniform nearest fit to52pxhigh with widthrounded123; palette17colors; padding(2,9). No body geometry drawn or nonuniform stretch in export.",
+    "promptFile": "generation-prompts.txt",
+    "humanApproval": "Requested white and taller; final in-game acceptance pending"
+  },
+  "expectedUnityImport": {
+    "filterMode": "Point",
+    "mipMaps": false,
+    "compression": "None",
+    "wrap": "Clamp",
+    "spriteMeshType": "FullRect",
+    "pixelsPerUnit": 100
+  }
+}

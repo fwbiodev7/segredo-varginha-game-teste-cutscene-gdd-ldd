@@ -1,0 +1,35 @@
+{
+  "allowedColors": [
+    "#080606",
+    "#1A1110",
+    "#261712",
+    "#2F1E18",
+    "#3E271C",
+    "#4D3022",
+    "#5B3927",
+    "#6B442E",
+    "#7A5136",
+    "#8C6240",
+    "#9D7248",
+    "#AD8250",
+    "#C0935A",
+    "#D4AA6C",
+    "#3A0508",
+    "#600710",
+    "#870A12",
+    "#B90D18",
+    "#DE131E",
+    "#F52228",
+    "#FF151F",
+    "#FF4338",
+    "#FF6352",
+    "#FFB787"
+  ],
+  "allowSemiTransparency": false,
+  "maxColors": 24,
+  "requiredClips": [
+    "prototype_front_threat"
+  ],
+  "lockPivot": true,
+  "maxTextureSize": 128
+}

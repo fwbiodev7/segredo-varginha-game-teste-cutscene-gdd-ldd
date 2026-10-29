@@ -1,0 +1,33 @@
+{
+  "referenceFileSha256Before": "048dfd8c37a00d2fc84407871ea931f81927efd71bc69d50c733a549292f7344",
+  "referenceFileSha256After": "048dfd8c37a00d2fc84407871ea931f81927efd71bc69d50c733a549292f7344",
+  "referenceFullImagePixelsSha256": "e7cb379d7be35769dccbde847ebcd07854f2199628564b4a4190f92bb30dd62b",
+  "referenceCropPixelsSha256": "04e285812d62187e72a7074f4670e7ca8aca3ac05b6d771a6dd4ab99d4204461",
+  "toroFileSha256": "11246ad49a0e379634e3ffb2d54b39a531423fc8341f50abb9a3c3f9e064f4df",
+  "toroPixelsSha256": "2814b99bd50c48124d4dc81c92e5220f49da76c82099760df255df67a1cecce4",
+  "sourceGeneratedDimensions": [
+    1774,
+    887
+  ],
+  "canonicalDimensions": [
+    128,
+    64
+  ],
+  "alphaValues": [
+    0,
+    255
+  ],
+  "opaqueColors": 15,
+  "bboxTopLeftExclusive": [
+    4,
+    13,
+    125,
+    56
+  ],
+  "allVisiblePixelsWithinReferencePalette": true,
+  "noCanvasEdgeContact": true,
+  "wheelContactYTopLeft": 55,
+  "expectedFilter": "Point/nearest-neighbor",
+  "pythonVersion": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+  "pillowVersion": "10.4.0"
+}

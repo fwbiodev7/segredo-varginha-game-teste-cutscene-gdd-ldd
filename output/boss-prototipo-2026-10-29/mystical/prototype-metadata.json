@@ -1,0 +1,113 @@
+{
+  "schema": "pixel-art-sprite-sheet/v1",
+  "image": "ManifestationBoss-prototype.png",
+  "imageSize": [
+    160,
+    144
+  ],
+  "pixelsPerUnit": 23.586956521739133,
+  "frames": [
+    {
+      "id": "mystical_front_threat",
+      "rect": [
+        0,
+        0,
+        160,
+        144
+      ],
+      "sourceSize": [
+        160,
+        144
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        80,
+        127
+      ],
+      "durationMs": 120
+    }
+  ],
+  "clips": {
+    "mystical_front_threat": {
+      "frames": [
+        "mystical_front_threat"
+      ],
+      "loop": false
+    }
+  },
+  "displayName": "Ser místico — manifestação do submundo",
+  "status": "PROTOTYPE ONLY — PENDING HUMAN APPROVAL; no integration",
+  "identity": {
+    "role": "final underworld manifestation; narrative unchanged",
+    "presence": "large, broad and heavy, same110px visible height as canonical boss",
+    "anatomy": "organic brown/umber skin, embedded root-like folds, broad shoulders, heavy long arms, bent supporting legs",
+    "head": "broad cranium integrated into shoulders with low rounded organic ridges",
+    "eyes": "strong vivid red, crimson socket rims, tiny contained highlights",
+    "tone": "mysterious, ancient, sober and inscrutable; no religious iconography",
+    "exclusions": "no horns, crown, gore, clothing, cyan cracks or modern equipment"
+  },
+  "boundsTopLeftExclusive": [
+    13,
+    17,
+    146,
+    127
+  ],
+  "visualFootPivotTopLeft": [
+    80,
+    127
+  ],
+  "pivotNote": "visual proposal contact only, not an approved runtime anchor",
+  "scaleComparison": {
+    "currentVisibleSize": [
+      129,
+      110
+    ],
+    "proposalVisibleSize": [
+      133,
+      110
+    ],
+    "heightPercentVsCurrent": 100,
+    "widthPercentVsCurrent": 103.1
+  },
+  "sourceReference": {
+    "atlas": "Assets\\Resources\\Varginha\\StoryCharacters\\Directional20261026\\ManifestationBoss.png",
+    "sha256": "07dc608f84a5db7720d3614b58cc43df535d8e176918a13904d2f6594b21948f",
+    "manifestSha256": "b30be0c18a91c04a9fa314a79d85ff148686070c7fd0ed806dd5817c35253972",
+    "frameRowColumn": [
+      0,
+      0
+    ],
+    "rectTopLeft": [
+      63,
+      138,
+      129,
+      110
+    ]
+  },
+  "trace": {
+    "previousNarrowProposal": "../ManifestationBoss-prototype.png",
+    "previousSha256": "99923541fda35b4c3a42433254fa7bcdd6524d9db6bdbfe8b7f10fea57ccf833",
+    "note": "previous proposal retained for trace; current human direction supersedes it"
+  },
+  "generation": {
+    "tool": "built-in image_gen",
+    "source": "imagegen-source.png",
+    "sourceSha256": "295253668a72496c9734424acfda4adeb74cdeef1d349f7aa79e977ac001b07d",
+    "prompt": "generation-prompt.txt",
+    "rawDimensions": [
+      1358,
+      1158
+    ],
+    "rawAlpha128Bounds": [
+      9,
+      21,
+      1356,
+      1135
+    ],
+    "export": "uniform nearest fit to110pxheight, widthrounded133;24-color palette,alpha128threshold,paddingonly"
+  },
+  "limitations": "one static front pose; no animation, no runtime, pending concept approval"
+}

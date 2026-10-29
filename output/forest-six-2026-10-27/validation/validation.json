@@ -1,0 +1,91 @@
+{
+  "success": true,
+  "status": "structural_pass",
+  "errors": [],
+  "warnings": [],
+  "frames": [
+    {
+      "id": "front_side_0",
+      "bbox": [
+        20,
+        33,
+        141,
+        144
+      ],
+      "visiblePixels": 6976,
+      "colors": 6635,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "f5fe188f98ce30225912a42065d28d36514eeea75d5cb99df9a414e33b0226d0"
+    },
+    {
+      "id": "front_side_1",
+      "bbox": [
+        24,
+        36,
+        136,
+        144
+      ],
+      "visiblePixels": 6736,
+      "colors": 6410,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "44ae01befce899531c63566b12b2bfee666de78f88071c88d1b9b76acdf47f88"
+    },
+    {
+      "id": "front_side_2",
+      "bbox": [
+        29,
+        31,
+        131,
+        144
+      ],
+      "visiblePixels": 6821,
+      "colors": 6493,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "31082ed6b4e546e9fda4931e5a9a4c0bb13c00ffa09e2da7d7c6bee5ff3b6988"
+    },
+    {
+      "id": "back_side_0",
+      "bbox": [
+        21,
+        36,
+        139,
+        144
+      ],
+      "visiblePixels": 7525,
+      "colors": 7154,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "8dfe6934a500525d38cdc4efabfdee9f69b5310f180675fb4ed33d081130b744"
+    },
+    {
+      "id": "back_side_1",
+      "bbox": [
+        14,
+        36,
+        145,
+        144
+      ],
+      "visiblePixels": 7064,
+      "colors": 6745,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "fae5b3502cbd6c9dd584ddcca1456500c8a06910f2e4797d532c889608fa77b4"
+    },
+    {
+      "id": "back_side_2",
+      "bbox": [
+        20,
+        38,
+        139,
+        144
+      ],
+      "visiblePixels": 6561,
+      "colors": 6310,
+      "semiTransparentPixels": 0,
+      "pixelsSha256": "9acd9920ff3545760530896e6f1d171bc6df708d49f896bd525aac0f7b5230b9"
+    }
+  ],
+  "paletteColors": 34848,
+  "unityEditorTested": false,
+  "visualReviewCompleted": false,
+  "input": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\forest-six-2026-10-27\\export\\atlas.json",
+  "metadataSha256": "ed378ffb2f4a0ee85d81c982b0e0cba235680167bf10644e16f916f14b60e278"
+}

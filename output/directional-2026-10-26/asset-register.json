@@ -1,0 +1,182 @@
+[
+  {
+    "id": "Edelzio",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-c8879d14-9b7b-4a54-be10-6d63c849ebef.png",
+    "sha256": "1fd4bb842d70c083bb3bd616ebf68036df596f5e2eb534cf61b215b0af65e7ec",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "ppu": 95.667,
+    "targetHeight": 1.5,
+    "frameCount": 64
+  },
+  {
+    "id": "Renan",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-2f988367-0ccf-497e-b7c1-ae14360487f4.png",
+    "sha256": "13467be91e0381ec9f420eb0ff9781d72d3b6265d7ada2550fe95513e788c2eb",
+    "sourceSize": [
+      1263,
+      1246
+    ],
+    "ppu": 94.0,
+    "targetHeight": 1.5,
+    "frameCount": 64
+  },
+  {
+    "id": "PadreFabio",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-a8a291ce-da00-4251-97b8-d11f56980b41.png",
+    "sha256": "bd9f5f687dbcc8ca3905e495dc68434933aa1658355ba3de342ea016b16317c6",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "ppu": 76.0,
+    "targetHeight": 1.5,
+    "frameCount": 64
+  },
+  {
+    "id": "Yasmin",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-9a41d1f1-ce06-494f-a0b8-4c5691ce586e.png",
+    "sha256": "0f46400c79479bfa066ae7cbfd34b8d57b5e30957ff353c2320ab97d99fda415",
+    "sourceSize": [
+      1269,
+      1240
+    ],
+    "ppu": 108.929,
+    "targetHeight": 1.12,
+    "frameCount": 64
+  },
+  {
+    "id": "Pedro",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-179d4aa9-5236-4614-8b11-38a8965686a6.png",
+    "sha256": "10b8e8ccad54c443dd533bfbe28bf494985f6203c2e8abfed775841e4537518c",
+    "sourceSize": [
+      1294,
+      1216
+    ],
+    "ppu": 108.929,
+    "targetHeight": 1.12,
+    "frameCount": 64
+  },
+  {
+    "id": "Matias",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-18b03e5a-b620-49c1-9c16-7b20d2cf7edc.png",
+    "sha256": "8dd8c0e7e5214aa24b1987eac1720f12ae7e9eff724e53e77972ddd514e9c6ae",
+    "sourceSize": [
+      1272,
+      1236
+    ],
+    "ppu": 115.179,
+    "targetHeight": 1.12,
+    "frameCount": 64
+  },
+  {
+    "id": "AnaTavares",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-e2406161-7221-4bd4-9eb5-fe31cee33736.png",
+    "sha256": "7b74e76451c0eba2bffbd0de1f636d1f5d1a4a62bc4a3cf694962f7ffa8c524d",
+    "sourceSize": [
+      1262,
+      1246
+    ],
+    "ppu": 125.0,
+    "targetHeight": 1.12,
+    "frameCount": 64
+  },
+  {
+    "id": "AnnaSabia",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-8b6576fa-97eb-4bb9-ba29-ac6cb944625a.png",
+    "sha256": "6b5fc26c70feb3d2d0217d4445fc9f38d18f67bbd2b24b318797716b8c43e693",
+    "sourceSize": [
+      1265,
+      1243
+    ],
+    "ppu": 117.857,
+    "targetHeight": 1.12,
+    "frameCount": 64
+  },
+  {
+    "id": "Marcos",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-ccde4c4c-e4e1-46f1-bdd7-6fe6e6e61198.png",
+    "sha256": "61d8db54fd50925ea64323c5d7bcf465aa6d861e49147cbe5d5f860ad2cdf4f0",
+    "sourceSize": [
+      1262,
+      1246
+    ],
+    "ppu": 127.679,
+    "targetHeight": 1.12,
+    "frameCount": 64
+  },
+  {
+    "id": "LuisMartins",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-62eedc22-5d18-4c61-8335-60c79ac571f4.png",
+    "sha256": "d3f7e56835c4271b8f1aef8f89d91f51b3ef6222923ded9ca84043196bdbdf34",
+    "sourceSize": [
+      1402,
+      1122
+    ],
+    "ppu": 101.786,
+    "targetHeight": 1.12,
+    "frameCount": 64
+  },
+  {
+    "id": "LuisMiguelMessias",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-801bb125-5381-471a-8d97-f7a428da162f.png",
+    "sha256": "b8a74e509a2b34fdc8e09fa9fada8dd8d584ad35f0f9c13a6feeb02ac69c7ace",
+    "sourceSize": [
+      1225,
+      1284
+    ],
+    "ppu": 119.196,
+    "targetHeight": 1.12,
+    "frameCount": 64
+  },
+  {
+    "id": "Fabio",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-a38faa5f-d6e7-418d-8c20-2cc4eaf46373.png",
+    "sha256": "e8e677a082954808b5fe5154f1cde532b551df86c3cde2fb3ee4be96dc711c2d",
+    "sourceSize": [
+      1278,
+      1230
+    ],
+    "ppu": 101.786,
+    "targetHeight": 1.12,
+    "frameCount": 64
+  },
+  {
+    "id": "EdelzioNoBag",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-726068b6-8f2c-4225-b0e4-dd12abfd6acd.png",
+    "sha256": "2d8f03e1dfbf88d46e7af55a9174d432e85ab0ccada2e16d7b58e0d621805cc1",
+    "sourceSize": [
+      1332,
+      1181
+    ],
+    "ppu": 85.667,
+    "targetHeight": 1.5,
+    "frameCount": 64
+  },
+  {
+    "id": "EdelzioChild",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-ba513fbd-32c9-45db-ba4d-909fa3a34f3f.png",
+    "sha256": "f54c14354b1310fd919e930a90b4115e38b7fd88e3a3a20c190f36bcbac5afb4",
+    "sourceSize": [
+      1222,
+      1287
+    ],
+    "ppu": 125.0,
+    "targetHeight": 1.08,
+    "frameCount": 64
+  },
+  {
+    "id": "ManifestationBoss",
+    "source": "C:\\Users\\Usuario\\.codex\\generated_images\\01a177ca-2f99-77b0-b3c1-4d64ba42385a\\exec-592229dc-0448-4011-8701-589cbcdc064b.png",
+    "sha256": "d1856ecf8ddcb477ae1a11dc466d0a296dfe58cca2f65f107ac8765f0e8fb1cc",
+    "sourceSize": [
+      1262,
+      1246
+    ],
+    "ppu": 23.587,
+    "targetHeight": 4.6,
+    "frameCount": 64
+  }
+]

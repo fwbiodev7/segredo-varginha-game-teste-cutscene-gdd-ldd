@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-26 11:19:59Z" end-time="2026-10-26 11:20:28Z" duration="28,5389094">
+  <test-suite type="TestSuite" id="1367" name="Varginha_Final_QA_20261026" fullname="Varginha_Final_QA_20261026" runstate="Runnable" testcasecount="309" result="Passed" start-time="2026-10-26 11:19:59Z" end-time="2026-10-26 11:20:28Z" duration="28.538909" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1727" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="309" result="Passed" start-time="2026-10-26 11:19:59Z" end-time="2026-10-26 11:20:28Z" duration="28.526652" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="21100" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1728" name="Game" fullname="Game" runstate="Runnable" testcasecount="309" result="Passed" start-time="2026-10-26 11:19:59Z" end-time="2026-10-26 11:20:28Z" duration="28.514764" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1729" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="309" result="Passed" start-time="2026-10-26 11:19:59Z" end-time="2026-10-26 11:20:28Z" duration="28.497923" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1730" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="309" result="Passed" start-time="2026-10-26 11:19:59Z" end-time="2026-10-26 11:20:28Z" duration="28.477143" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1427" name="CampaignForestReviewPlayTests" fullname="Game.Tests.PlayMode.CampaignForestReviewPlayTests" classname="Game.Tests.PlayMode.CampaignForestReviewPlayTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-26 11:19:59Z" end-time="2026-10-26 11:20:21Z" duration="21.782483" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1429" name="CaptureShowsGameOverAndRetryReloadsTheSavedRiverCheckpoint" fullname="Game.Tests.PlayMode.CampaignForestReviewPlayTests.CaptureShowsGameOverAndRetryReloadsTheSavedRiverCheckpoint" methodname="CaptureShowsGameOverAndRetryReloadsTheSavedRiverCheckpoint" classname="Game.Tests.PlayMode.CampaignForestReviewPlayTests" runstate="Runnable" seed="816424518" result="Passed" start-time="2026-10-26 11:19:59Z" end-time="2026-10-26 11:20:08Z" duration="8.168039" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignForestReviewPlayTests.CaptureShowsGameOverAndRetryReloadsTheSavedRiverCheckpoint
+QA test: Game.Tests.PlayMode.CampaignForestReviewPlayTests.CaptureShowsGameOverAndRetryReloadsTheSavedRiverCheckpoint
+QA result: Passed Game.Tests.PlayMode.CampaignForestReviewPlayTests.CaptureShowsGameOverAndRetryReloadsTheSavedRiverCheckpoint
+QA result: Passed Game.Tests.PlayMode.CampaignForestReviewPlayTests.CaptureShowsGameOverAndRetryReloadsTheSavedRiverCheckpoint
+]]></output>
+              </test-case>
+              <test-case id="1428" name="PriestIsCompleteOnFreeForestPavingAndKeepsHisOriginalChurchScale" fullname="Game.Tests.PlayMode.CampaignForestReviewPlayTests.PriestIsCompleteOnFreeForestPavingAndKeepsHisOriginalChurchScale" methodname="PriestIsCompleteOnFreeForestPavingAndKeepsHisOriginalChurchScale" classname="Game.Tests.PlayMode.CampaignForestReviewPlayTests" runstate="Runnable" seed="1071153005" result="Passed" start-time="2026-10-26 11:20:08Z" end-time="2026-10-26 11:20:15Z" duration="7.731304" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignForestReviewPlayTests.PriestIsCompleteOnFreeForestPavingAndKeepsHisOriginalChurchScale
+QA test: Game.Tests.PlayMode.CampaignForestReviewPlayTests.PriestIsCompleteOnFreeForestPavingAndKeepsHisOriginalChurchScale
+Shader 'Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling' is not supported or has been stripped from the build (in 'Blit FSR Upscaling'). PostProcessing render passes will not execute.
+Shader 'Hidden/Universal Render Pipeline/Edge Adaptive Spatial Upsampling' is not supported or has been stripped from the build (in 'Blit FSR Upscaling'). PostProcessing render passes will not execute.
+QA result: Passed Game.Tests.PlayMode.CampaignForestReviewPlayTests.PriestIsCompleteOnFreeForestPavingAndKeepsHisOriginalChurchScale
+QA result: Passed Game.Tests.PlayMode.CampaignForestReviewPlayTests.PriestIsCompleteOnFreeForestPavingAndKeepsHisOriginalChurchScale
+]]></output>
+              </test-case>
+              <test-case id="1430" name="PursuerIsVisibleUsesWalkableRoutesAndFreezesWithThePause" fullname="Game.Tests.PlayMode.CampaignForestReviewPlayTests.PursuerIsVisibleUsesWalkableRoutesAndFreezesWithThePause" methodname="PursuerIsVisibleUsesWalkableRoutesAndFreezesWithThePause" classname="Game.Tests.PlayMode.CampaignForestReviewPlayTests" runstate="Runnable" seed="1226141686" result="Passed" start-time="2026-10-26 11:20:15Z" end-time="2026-10-26 11:20:21Z" duration="5.862661" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="90000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignForestReviewPlayTests.PursuerIsVisibleUsesWalkableRoutesAndFreezesWithThePause
+QA test: Game.Tests.PlayMode.CampaignForestReviewPlayTests.PursuerIsVisibleUsesWalkableRoutesAndFreezesWithThePause
+QA result: Passed Game.Tests.PlayMode.CampaignForestReviewPlayTests.PursuerIsVisibleUsesWalkableRoutesAndFreezesWithThePause
+QA result: Passed Game.Tests.PlayMode.CampaignForestReviewPlayTests.PursuerIsVisibleUsesWalkableRoutesAndFreezesWithThePause
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1481" name="CampaignSchoolDeskPlayTests" fullname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" classname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-26 11:20:21Z" end-time="2026-10-26 11:20:28Z" duration="6.678052" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1483" name="OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach" fullname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach" methodname="OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach" classname="Game.Tests.PlayMode.CampaignSchoolDeskPlayTests" runstate="Runnable" seed="1680869998" result="Passed" start-time="2026-10-26 11:20:21Z" end-time="2026-10-26 11:20:28Z" duration="6.644822" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="40000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+QA test: Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+QA result: Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+QA result: Passed Game.Tests.PlayMode.CampaignSchoolDeskPlayTests.OfficeSeatAlignsWithTheCushionAndReturnsToItsClearApproach
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Final_QA_20261026\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Final_QA_20261026\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -10,6 +10,7 @@ import argparse
 
 parser=argparse.ArgumentParser()
 parser.add_argument('--version',default='0.5.0-beta')
+parser.add_argument('--date',default='2026-10-27')
 parser.add_argument('--evidence',default='output/school-patterns-2026-10-27')
 parser.add_argument('--tests',nargs='+',default=['school-editmode-release','school-player-final','school-player-readable','school-journal-controller'])
 args=parser.parse_args()
@@ -17,7 +18,7 @@ args=parser.parse_args()
 ROOT=Path(__file__).resolve().parents[2]
 QA=Path.home()/'AppData/Local/Temp/varginha-master-qa-20261023-120709'
 EVIDENCE=ROOT/args.evidence
-BUILD=ROOT/f'Builds/Varginha_{args.version}_2026-10-27'
+BUILD=ROOT/f'Builds/Varginha_{args.version}_{args.date}'
 archive=BUILD.with_name(BUILD.name+'_Windows_x64.zip')
 assert not archive.exists(), f'Existing package preserved: {archive}'
 def sha(path):
@@ -42,6 +43,8 @@ sources=list((ROOT/'Assets/Scripts').rglob('*.cs'))+list((ROOT/'Assets/Tests').r
 sources += [ROOT/scene for scene in report['scenes']]
 sources += [ROOT/'Assets/Resources/Varginha/IllustratedMaps/Layouts.json']
 sources += list((ROOT/'Assets/Resources/Varginha/StoryCharacters/Directional20261026').glob('*.json'))
+sources += [ROOT/'Assets/Resources/Varginha/MenuLogoOizlede.png',ROOT/'Assets/Resources/Varginha/MenuLogoOizlede.png.meta']
+sources += list((ROOT/'Assets/Resources/Varginha/StoryCharacters').rglob('ForestPresenceSix20261027.*'))
 checked=[]
 for source in sorted(set(sources)):
     relative=source.relative_to(ROOT);actual=QA/relative
@@ -62,7 +65,9 @@ manifest={'version':report['version'],'created_utc':datetime.now(timezone.utc).i
 (BUILD/'source-manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2),encoding='utf-8')
 shutil.copy2(EVIDENCE/'windows-build.json',BUILD/'windows-build.json')
 update_note='Cruzamento: as duas colunas são embaralhadas, com disposição salva e pares corretos em linhas diferentes.\n' if args.version=='0.5.1-beta' else ''
-(BUILD/'LEIA-ME.txt').write_text(f'''O SEGREDO DE VARGINHA - {args.version} - Windows x64 - 27/10/2026
+display_date=datetime.strptime(args.date,'%Y-%m-%d').strftime('%d/%m/%Y')
+current_note='Logo Oizlede dessaturada no menu; frases rotativas em cinza; ET de seis quadros e padre fixo na floresta.\n' if args.version=='0.5.2-beta' else ''
+(BUILD/'LEIA-ME.txt').write_text(f'''OIZLEDE: FRAGMENTO PERDIDO - {args.version} - Windows x64 - {display_date}
 
 Extraia TODO o ZIP e abra SegredoDeVarginha.exe.
 Mantenha a pasta SegredoDeVarginha_Data, MonoBleedingEdge e as bibliotecas junto do executável.
@@ -75,7 +80,7 @@ Esta candidata inclui o fechamento de 26/10 e o redesign escolar aprovado em 27/
 jornais e anotações recuperados uma vez na casa, análise visual em quatro etapas,
 Renan inicialmente alheio ao mistério e referência verificável ao acervo da biblioteca.
 O progresso e as dicas são salvos; documentos completos continuam no caderno.
-{update_note}
+{update_note}{current_note}
 Saves anteriores são migrados para o formato v4. A cópia .vN.bak conserva o formato anterior.
 São 14 capítulos e 19 cenas, incluindo menu e áreas internas.
 

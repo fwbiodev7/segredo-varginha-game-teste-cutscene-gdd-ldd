@@ -109,3 +109,28 @@ Desktop.ini
 /output/relatorio-resumido-abnt-2026-10-23/render/
 /output/dialogue-casual-2026-10-23/*.log
 /output/dialogue-casual-2026-10-23/captures/
+
+# Ephemeral runtime, test runner and crash recovery artifacts
+/tmp/
+/Assets/InitTestScene*
+/Assets/_Recovery/
+/Docs/QAAlpha01/RunnerError.txt
+
+# Bulk test outputs across revisions: omit raw logs and frame capture sequences
+/output/**/*.log
+/output/**/captures/
+/output/**/film/
+/output/**/opening-film/
+/output/**/runtime-layers/
+/output/**/close-routines/
+/output/**/per-case/
+/output/**/chapter-exits/
+/output/**/world-audit/
+/output/**/world-review/
+/output/**/directional-unity-render/
+/output/**/ouzana-runtime/
+/output/**/artes-evidencias/
+/output/**/artes-igreja/
+/output/**/artes-mata/
+/output/pdf/diario-09-a-22-10-2026/
+

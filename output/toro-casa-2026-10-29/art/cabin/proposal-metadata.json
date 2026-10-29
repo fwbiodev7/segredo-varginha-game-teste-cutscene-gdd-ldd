@@ -1,0 +1,112 @@
+{
+  "status": "proposal-only; no Assets, scripts or scenes edited",
+  "generator": "built-in image_gen",
+  "styleReference": "Assets/Resources/Varginha/StoryEffects/FuscaOriginal.png",
+  "styleReferenceSha256": "048dfd8c37a00d2fc84407871ea931f81927efd71bc69d50c733a549292f7344",
+  "promptFile": "generation-prompts.txt",
+  "layers": [
+    {
+      "image": "FuscaCabinCartoon.png",
+      "imageSize": [
+        1672,
+        941
+      ],
+      "rectTopLeft": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "status": "proposal-only; not integrated",
+      "source": "Assets\\Resources\\Varginha\\CinemaOpening\\FuscaCabinCartoon.png",
+      "sourceSha256Before": "047a80e1670b333a450dfccbb6079bc72e4a1007db3d60ceadd7bada711ebce5",
+      "sourceSha256After": "047a80e1670b333a450dfccbb6079bc72e4a1007db3d60ceadd7bada711ebce5",
+      "generatedSource": "FuscaCabinCartoon-imagegen-source.png",
+      "generatedSourceSha256": "bd3da45a8f670d7e2ccfff2f53c6ed069abe962e343588bedb293d534bb7c989",
+      "outputSha256": "2853a4c765b82fd0ac1abd283c042848b2563e3fa55109768605700c86c6aadc",
+      "alphaSha256": "e52109043fa00f9d4cb06b93b799ee9b259dd48110e5d160e468050ae19023d8",
+      "alphaExactlyPreserved": true,
+      "nonPaintPixelsExactlyPreserved": true,
+      "paintRegionPixels": 286641,
+      "changedPixels": 286641,
+      "paintPalette": [
+        "#45B3E6",
+        "#3189CC",
+        "#18698F",
+        "#59D2F7"
+      ],
+      "operations": "ImageGen material edit; blue paint palette-normalized on4pxgrid using only blue generated samples, isolated palette specks removed by neighborhood majority; composite only under source blue/wood material mask; source alpha and all nonpaint pixels reused without resampling."
+    },
+    {
+      "image": "FuscaDashboardCartoon.png",
+      "imageSize": [
+        2172,
+        724
+      ],
+      "rectTopLeft": [
+        0,
+        0,
+        2172,
+        724
+      ],
+      "status": "proposal-only; not integrated",
+      "source": "Assets\\Resources\\Varginha\\CinemaOpening\\FuscaDashboardCartoon.png",
+      "sourceSha256Before": "b5c27e22d888ee9cd5d9b1f3e0a91e47433bb4817ccb5601475a9e9e065e13ad",
+      "sourceSha256After": "b5c27e22d888ee9cd5d9b1f3e0a91e47433bb4817ccb5601475a9e9e065e13ad",
+      "generatedSource": "FuscaDashboardCartoon-imagegen-source.png",
+      "generatedSourceSha256": "3c60a20a2908358c908f4df71160c2b4f0d84b93cf7d3f024cfdb7c6af208882",
+      "outputSha256": "87b593092f8c54f7557ad3f1a6e114f086c55a433db814982b731e047f2ea6e2",
+      "alphaSha256": "df3a0a2165263ab6cd22c86a8f914937ec763bda8fdb2f43ce80a1d9fe8912b6",
+      "alphaExactlyPreserved": true,
+      "nonPaintPixelsExactlyPreserved": true,
+      "paintRegionPixels": 494510,
+      "changedPixels": 494510,
+      "paintPalette": [
+        "#45B3E6",
+        "#3189CC",
+        "#18698F",
+        "#59D2F7"
+      ],
+      "operations": "ImageGen material edit; blue paint palette-normalized on4pxgrid using only blue generated samples, isolated palette specks removed by neighborhood majority; composite only under source blue/wood material mask; source alpha and all nonpaint pixels reused without resampling.",
+      "runtimeGaugeOverlayCentreTopLeft": [
+        392.6307692307692,
+        303.5230769230769
+      ],
+      "runtimeGaugeCentrePixelRGBA": [
+        29,
+        33,
+        41,
+        253
+      ],
+      "gaugeFaceHasNoPaintedTicksOrNeedle": true,
+      "runtimeRadioApertureTopLeft": [
+        793.6153846153846,
+        353.6461538461538
+      ],
+      "runtimeRadioApertureSize": [
+        161.74468085106383,
+        43.94888178913738
+      ]
+    }
+  ],
+  "verification": {
+    "dimensionsMatch": true,
+    "alphaChannelMatchesByteForByte": true,
+    "allNonpaintSourcePixelsMatchByteForByte": true,
+    "originalFilesUnchanged": true,
+    "unityTested": false,
+    "visuallyReviewedAfterExport": true,
+    "openedPreviews": [
+      "comparison-original-proposal.png",
+      "proposal-layer-registration.png"
+    ],
+    "gaugeInnerFaceROIUnchanged": true,
+    "gaugeInnerFaceROITopLeft": [
+      337,
+      241,
+      448,
+      365
+    ],
+    "pngFilesFrozen": true
+  }
+}

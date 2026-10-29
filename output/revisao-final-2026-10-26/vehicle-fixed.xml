@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="3" result="Passed" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-26 10:51:18Z" end-time="2026-10-26 10:51:35Z" duration="17,007117">
+  <test-suite type="TestSuite" id="1359" name="Varginha_Final_QA_20261026" fullname="Varginha_Final_QA_20261026" runstate="Runnable" testcasecount="304" result="Passed" start-time="2026-10-26 10:51:18Z" end-time="2026-10-26 10:51:35Z" duration="17.007117" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1711" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="304" result="Passed" start-time="2026-10-26 10:51:18Z" end-time="2026-10-26 10:51:35Z" duration="16.994945" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="37768" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1712" name="Game" fullname="Game" runstate="Runnable" testcasecount="304" result="Passed" start-time="2026-10-26 10:51:18Z" end-time="2026-10-26 10:51:35Z" duration="16.982867" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1713" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="304" result="Passed" start-time="2026-10-26 10:51:18Z" end-time="2026-10-26 10:51:35Z" duration="16.966176" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1714" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="304" result="Passed" start-time="2026-10-26 10:51:18Z" end-time="2026-10-26 10:51:35Z" duration="16.949501" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1472" name="CampaignVehicleContactTests" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-26 10:51:18Z" end-time="2026-10-26 10:51:35Z" duration="16.926870" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1475" name="InitialContactWithTheBottomWallDoesNotTrapForwardMotion" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion" methodname="InitialContactWithTheBottomWallDoesNotTrapForwardMotion" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" seed="513674691" result="Passed" start-time="2026-10-26 10:51:18Z" end-time="2026-10-26 10:51:24Z" duration="5.728887" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+QA result: Passed Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+QA result: Passed Game.Tests.PlayMode.CampaignVehicleContactTests.InitialContactWithTheBottomWallDoesNotTrapForwardMotion
+]]></output>
+              </test-case>
+              <test-case id="1473" name="LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit" methodname="LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" seed="1254471158" result="Passed" start-time="2026-10-26 10:51:24Z" end-time="2026-10-26 10:51:30Z" duration="6.222824" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+QA result: Passed Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+QA result: Passed Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+]]></output>
+              </test-case>
+              <test-case id="1474" name="OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests.OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection" methodname="OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" seed="1926230476" result="Passed" start-time="2026-10-26 10:51:30Z" end-time="2026-10-26 10:51:35Z" duration="4.947619" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="Timeout" value="60000" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection
+QA test: Game.Tests.PlayMode.CampaignVehicleContactTests.OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection
+QA result: Passed Game.Tests.PlayMode.CampaignVehicleContactTests.OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection
+QA result: Passed Game.Tests.PlayMode.CampaignVehicleContactTests.OptionalTrackUsesFixedStepAccelerationCoastAndBrakeBeforeChangingDirection
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Final_QA_20261026\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Final_QA_20261026\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

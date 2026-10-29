@@ -1,0 +1,192 @@
+{
+    "version": 3,
+    "phase": 4,
+    "routine": 15,
+    "inspection": 7,
+    "boxFound": true,
+    "pagesSolved": true,
+    "arrival": true,
+    "renanMet": true,
+    "lesson": false,
+    "archive": false,
+    "buildingSolved": false,
+    "symbolsFound": false,
+    "legendFound": false,
+    "codeSolved": false,
+    "renanConfirmed": false,
+    "studentsTalked": 0,
+    "cinematicsSeen": 13,
+    "ouzanaNote": false,
+    "pages": [
+        0,
+        1,
+        2
+    ],
+    "symbols": [
+        1,
+        0,
+        1,
+        0
+    ],
+    "circle": 1,
+    "triangle": 1,
+    "driveDistance": 120.0,
+    "x": 3.371779441833496,
+    "y": 4.857969284057617,
+    "positionPhase": 4,
+    "expansion": {
+        "visited": 0,
+        "truthClues": 0,
+        "forestSigns": 0,
+        "anchorClues": 0,
+        "labClues": 0,
+        "sprayed": 0,
+        "reagentCharges": 6,
+        "trust": 0,
+        "anchorYear": 1898,
+        "anchorSymbol": 0,
+        "anchorRecord": 1,
+        "mapSolved": false,
+        "fabioMet": false,
+        "anchorFound": false,
+        "evidencePresented": false,
+        "reagentUnlocked": false,
+        "stabilized": false,
+        "testDriven": false,
+        "workshopParked": false,
+        "workshopDeparted": false,
+        "workshopHasCarPosition": false,
+        "workshopCarX": 0.0,
+        "workshopCarY": 0.0,
+        "workshopHeading": 0,
+        "workshopHasYaw": false,
+        "workshopYaw": 0.0,
+        "forestHasCheckpoint": false,
+        "forestCheckpointX": 0.0,
+        "forestCheckpointY": 0.0,
+        "forestCheckpointSigns": 0,
+        "mapOrder": [
+            2,
+            0,
+            1
+        ],
+        "sampleOrder": [
+            2,
+            1,
+            0
+        ],
+        "sealOrder": [
+            2,
+            0,
+            1
+        ],
+        "mapDirections": [
+            0,
+            2,
+            1
+        ],
+        "trailChoices": [
+            -1,
+            -1,
+            -1
+        ],
+        "trailHints": 0,
+        "trailFeedback": 0,
+        "bookOrder": [
+            2,
+            0,
+            1
+        ],
+        "bookLinks": [
+            -1,
+            -1,
+            -1
+        ],
+        "bookHints": 0,
+        "bookFeedback": 0
+    },
+    "continuation": {
+        "clues": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "solved": [
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false
+        ],
+        "area": 0,
+        "chambersPrepared": 0,
+        "finalStep": 0,
+        "serviceRevealed": false,
+        "serviceKey": false,
+        "manifestationDispelled": false,
+        "finished": false,
+        "chamberValues": [
+            0,
+            0,
+            0
+        ],
+        "battleStudents": [
+            -1,
+            -1,
+            -1
+        ],
+        "battleSupport": -1,
+        "finalRegulators": [
+            0,
+            0,
+            0
+        ],
+        "finalSealActive": true,
+        "finalCalibrated": false
+    },
+    "puzzles": {
+        "archiveMarks": 0,
+        "selected": -1,
+        "causes": [
+            -1,
+            -1,
+            -1,
+            -1
+        ],
+        "dates": [
+            -1,
+            -1,
+            -1
+        ],
+        "memory": [],
+        "hypotheses": [
+            -1,
+            -1,
+            -1
+        ]
+    },
+    "house": {
+        "step": 5,
+        "clues": 7,
+        "tutorial": 1,
+        "deduced": true,
+        "bagReminder": true
+    },
+    "photoOpened": false,
+    "timeOpened": false,
+    "schoolTimeChoice": 0
+}

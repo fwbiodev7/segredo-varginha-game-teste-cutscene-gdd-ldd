@@ -1,0 +1,27 @@
+{
+  "dimensions": [
+    128,
+    128
+  ],
+  "bounds": [
+    34,
+    9,
+    93,
+    119
+  ],
+  "visibleSize": [
+    59,
+    110
+  ],
+  "visiblePixels": 2235,
+  "colors": 23,
+  "alphaValues": [
+    0,
+    255
+  ],
+  "sourceAtlasUnchanged": true,
+  "sourceManifestUnchanged": true,
+  "pngSha256": "06e7f2c1f2fd5ba83522d27c85023a62c893889a7c77b05f5ea6c22fd18673da",
+  "unityTested": false,
+  "approval": "pending"
+}

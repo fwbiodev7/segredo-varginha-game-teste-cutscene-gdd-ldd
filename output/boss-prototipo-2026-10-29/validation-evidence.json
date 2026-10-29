@@ -1,0 +1,33 @@
+{
+  "dimensions": [
+    128,
+    128
+  ],
+  "bounds": [
+    8,
+    9,
+    119,
+    119
+  ],
+  "visibleHeight": 110,
+  "visiblePixels": 4277,
+  "colors": 22,
+  "alphaValues": [
+    0,
+    255
+  ],
+  "redEyePixels": 41,
+  "redEyeBounds": [
+    53,
+    32,
+    73,
+    38
+  ],
+  "pngSha256": "99923541fda35b4c3a42433254fa7bcdd6524d9db6bdbfe8b7f10fea57ccf833",
+  "sourceAtlasBefore": "07dc608f84a5db7720d3614b58cc43df535d8e176918a13904d2f6594b21948f",
+  "sourceAtlasAfter": "07dc608f84a5db7720d3614b58cc43df535d8e176918a13904d2f6594b21948f",
+  "sourceManifestBefore": "b30be0c18a91c04a9fa314a79d85ff148686070c7fd0ed806dd5817c35253972",
+  "sourceManifestAfter": "b30be0c18a91c04a9fa314a79d85ff148686070c7fd0ed806dd5817c35253972",
+  "unityTested": false,
+  "humanApproval": "pending"
+}

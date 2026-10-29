@@ -1,0 +1,102 @@
+{
+  "schema": "pixel-art-sprite-sheet/v1",
+  "image": "ManifestationBoss-prototype.png",
+  "imageSize": [
+    128,
+    128
+  ],
+  "pixelsPerUnit": 23.586956521739133,
+  "frames": [
+    {
+      "id": "prototype_front_threat",
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "sourceSize": [
+        128,
+        128
+      ],
+      "trimOffset": [
+        0,
+        0
+      ],
+      "pivot": [
+        64,
+        119
+      ],
+      "durationMs": 120
+    }
+  ],
+  "clips": {
+    "prototype_front_threat": {
+      "frames": [
+        "prototype_front_threat"
+      ],
+      "loop": false
+    }
+  },
+  "status": "PROTOTYPE ONLY — PENDING HUMAN VISUAL APPROVAL; not integrated",
+  "identity": {
+    "entity": "final manifestation; separate from injured creature narrative",
+    "skin": "dark brown/ochre; organic folds; narrow ribs and torso",
+    "head": "elongated; three rounded organic cranial protrusions",
+    "eyes": "large vivid red almond shapes, crimson rim, tiny controlled warm highlights",
+    "pose": "frontal threat, hunched torso, long thin arms, bent knees",
+    "removed": "cyan cracks, rocky armor, bulky bodybuilder silhouette",
+    "preservedScope": "no dialogue, attacks, hurtboxes, canonical atlas or gameplay changes"
+  },
+  "boundsTopLeftExclusive": [
+    8,
+    9,
+    119,
+    119
+  ],
+  "visualFootPivotTopLeft": [
+    64,
+    119
+  ],
+  "pivotNote": "visual prototype contact only; runtime anchor must be reviewed after approval",
+  "sourceReference": {
+    "atlas": "Assets\\Resources\\Varginha\\StoryCharacters\\Directional20261026\\ManifestationBoss.png",
+    "sha256": "07dc608f84a5db7720d3614b58cc43df535d8e176918a13904d2f6594b21948f",
+    "manifestSha256": "b30be0c18a91c04a9fa314a79d85ff148686070c7fd0ed806dd5817c35253972",
+    "frameRowColumn": [
+      0,
+      0
+    ],
+    "rectTopLeft": [
+      63,
+      138,
+      129,
+      110
+    ],
+    "nativeVisibleHeight": 110,
+    "sourcePPU": 23.586956521739133
+  },
+  "generation": {
+    "tool": "built-in image_gen",
+    "source": "imagegen-source.png",
+    "sha256": "7a41bd7910bca4b7a980fd3a1a2d35ed637decd5a84deaf1a6fd858c6a450397",
+    "prompt": "generation-prompt.txt",
+    "rawDimensions": [
+      1254,
+      1254
+    ],
+    "rawAlpha128Bounds": [
+      17,
+      21,
+      1245,
+      1235
+    ],
+    "export": "uniform nearest fit to110px high (width rounded),24color nearest palette,alpha128threshold,padding only"
+  },
+  "expectedImportIfApproved": {
+    "filter": "Point",
+    "mipmaps": false,
+    "compression": "None"
+  },
+  "limitations": "one still pose, no directional/attack animation, no Unity/runtime validation, pending approval"
+}
