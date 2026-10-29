@@ -1,3 +1,21 @@
+# ESTADO ATUAL: APENAS COMMIT, SEM BUILD
+
+Retomada29/10 às16:58:25(Brasília). Leia output/toro-casa-2026-10-29/RETOMADA.md; contém referência definitiva do boss enviada pelo usuário, hitbox pendente, narrador e QA. Usuário fará a build manualmente. Texto abaixo histórico.
+
+---
+# RETOMADA AUTOMÁTICA DAS NOVAS PENDÊNCIAS —29/10/2026
+
+Usuário solicitou iniciar automaticamente as quatro pendências depois da renovação dos tokens. Nova automação ATIVA criada e confirmada: retomar-oizlede-toro-e-intera-es-da-casa, neste mesmo chat. Reset real da janela de cinco horas informado pela conta:29/10/2026 às11:55:59, horário de Brasília. Retomada agendada para11:56:59, exatamente um minuto depois. A automação anterior da conferência final foi removida; não há duplicata ativa dessa tarefa.
+
+Escopo: Docs/CampanhaOficial/PENDENCIAS_2026-10-29.md — Fiat Toro no estilo integral do Fusca original na passagem musical, aproximação da pia/lavar rosto, área de interação do café mais próxima e área de interação do notebook da casa mais próxima. Os quatro itens ainda não foram implementados. Retomar desse escopo; a build0.5.3 e seu QA já estão concluídos. Verificar saldo real antes de iniciar, usar subagente para arte e preservar alterações documentais ainda não commitadas. Não começar trabalho pesado agora (saldo consultado9% restante). Nenhum reset forçado ou crédito extra.
+
+---
+# NOVOS PEDIDOS REGISTRADOS —29/10/2026
+
+Após a entrega, o usuário pediu registrar quatro pendências: Fiat Toro na passagem com música, fiel ao estilo do Fusca original; aproximar Edelzio da pia ao lavar o rosto; aproximar as áreas de interação do café e do notebook. Lista atual: `Docs/CampanhaOficial/PENDENCIAS_2026-10-29.md`. Os quatro itens estão **Não iniciado**; não foram alterados scripts, assets ou build. Não há nova automação agendada. A conferência encerrada abaixo pertence à build anterior a esses pedidos.
+
+---
+
 # CONFERÊNCIA FINAL ENCERRADA —29/10/2026
 
 Usuário fechou o aviso. Build0.5.3-beta conferida com mouse: Configurações abriu, Voltar retornou ao menu e referência cinza rotativa mudou. Três saves JSON permaneceram idênticos por SHA256. Não foi iniciada nova história. Automação retomar-revis-o-oizlede-ap-s-renova-o REMOVIDA após concluir essa pendência. Não há trabalho a executar automaticamente às11:56:59. Relatório de entrega e native-smoke.json atualizados. ZIP com LEIA-ME atualizado recebe sufixo_QA-final, preservando ZIP anterior. Roteiro para dublador já entregue; vozes aguardam gravação. Limitações de QA permanecem expressas no relatório, sem afirmar jogada humana integral.

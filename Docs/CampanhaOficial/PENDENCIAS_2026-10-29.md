@@ -48,3 +48,6 @@ Para café e notebook, inspecionar os pontos de rotina `food`/`work`, seus objet
 Captura fornecida pelo usuário: `C:/Users/Usuario/AppData/Local/Temp/codex-clipboard-fa35393c-d356-4b3c-a0b6-1a9faac3bd63.png`.
 
 `toro-house-player-1.xml`:5/5 aprovados, incluindo percurso real da rotina, consumo/reload, gates e cutscene nas duas resoluções com a primeira Toro azul. `house-close-cancel-2.xml`:3/3 aprovados com a correção final de cancelamento, em Player. `QA-CASA.md` registra a conferência das três capturas. Commit doméstico `b8e55ad`. A variante branca/mais alta ainda deve passar na cutscene e nas verificações de arte; build0.5.4 pendente.
+
+## Últimas decisões humanas
+Boss: referência definitiva em output/boss-prototipo-2026-10-29/referencia-aprovada/BossFinal_Aprovado_20261029.png. Criar sprites após renovação; manter alto/magro/olhos e fissuras vermelhas; corrigir hurtbox antiga menor que o sprite. Narrador preparado,15arquivos aguardando. QA final de cutscene pendente após falha gráfica. Usuário pediu APENAS commit/push; build será manual. Retomada16:58:25 de29/10(Brasília).
