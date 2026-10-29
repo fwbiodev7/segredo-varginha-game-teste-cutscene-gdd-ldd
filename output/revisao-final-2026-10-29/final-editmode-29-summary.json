@@ -1,0 +1,12 @@
+{
+  "source": "output\\revisao-final-2026-10-29\\final-editmode-29.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 455,
+    "passed": 455,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

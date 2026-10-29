@@ -12,6 +12,7 @@ namespace Game.Varginha.Experiment
         private static Texture _morning,_frame,_dashboard,_ignition,_column;
         public static readonly Vector2 SteeringHub=new(540,462);
         public static readonly Rect DashboardBounds=new(390,300,940,313);
+        public static readonly Rect ArrivalViewport=new(80,86,1120,499);
         // Measured wheel hubs in the untouched 1254px Driving source atlas, top-left origin.
         private static readonly Vector2[] WheelSource={new(273,812),new(559,810),new(853,812),new(1146,810)};
         private static readonly List<Vector2> ArrivalRoute=new();
@@ -165,11 +166,19 @@ namespace Game.Varginha.Experiment
             DrawSprite(new Rect(carRect.center.x-sprite.rect.width*fit/2,carRect.center.y-sprite.rect.height*fit/2,sprite.rect.width*fit,sprite.rect.height*fit),sprite);
             if(time>=CampaignSchoolMusicCar.StartTime&&time<=CampaignSchoolMusicCar.EndTime)
             {
-                var passing=CampaignOriginalFusca.Side;var point=ScreenPoint(CampaignSchoolMusicCar.CarPixel(time));
-                float width=140*scale,height=width*passing.rect.height/passing.rect.width;
+                var passing=CampaignOriginalFusca.Side;var crossing=PassingCarRect(time);
                 var previous=GUI.color;GUI.color=new Color(.65f,.59f,.52f,1);
-                DrawSprite(new Rect(point.x-width/2,point.y-height/2,width,height),passing);GUI.color=previous;
+                GUI.BeginGroup(ArrivalViewport);
+                crossing.position-=ArrivalViewport.position;DrawSprite(crossing,passing);
+                GUI.EndGroup();GUI.color=previous;
             }
+        }
+        public static Rect PassingCarRect(float time)
+        {
+            EnsureArrivalRoute();float scale=1120f/_schoolLayout.width;
+            var point=CampaignSchoolMusicCar.CarPixel(time);var sprite=CampaignOriginalFusca.Side;
+            float width=140*scale,height=width*sprite.rect.height/sprite.rect.width;
+            return new Rect(80+point.x*scale-width/2,86+(point.y-490)*scale-height/2,width,height);
         }
         public static IReadOnlyList<Vector2> SchoolArrivalRoute {get{EnsureArrivalRoute();return ArrivalRoute;}}
         private static void EnsureArrivalRoute()

@@ -176,7 +176,8 @@ namespace Game.Tests.PlayMode
                 var poses=new System.Collections.Generic.HashSet<string>();float deadline=Time.time+6;
                 while(!warning.enabled&&Time.time<deadline){poses.Add(enemy.GetComponent<SpriteRenderer>().sprite.name);yield return null;}
                 Assert.That(warning.enabled,Is.True,"The floor warning precedes the attack.");
-                float before=health.CurrentHealth;yield return new WaitForSeconds(.55f);
+                float before=health.CurrentHealth,prepareUntil=Time.time+.55f;
+                while(Time.time<prepareUntil){poses.Add(enemy.GetComponent<SpriteRenderer>().sprite.name);yield return null;}
                 Assert.That(health.CurrentHealth,Is.EqualTo(before),"Preparation never deals contact damage.");
                 Assert.That(enemy.CanReceiveHit,Is.EqualTo(minor),"The boss is protected while preparing; children remain vulnerable.");
                 deadline=Time.time+2;
@@ -186,7 +187,8 @@ namespace Game.Tests.PlayMode
                 Assert.That(health.CurrentHealth,Is.EqualTo(before-(minor?10:24)),"Remaining close during recovery adds no hits.");
                 Assert.That(enemy.CanReceiveHit,Is.True,"Recovery opens the boss to the player's counterattack.");
                 Assert.That(warning.enabled,Is.False);
-                Assert.That(poses.Any(p=>p.StartsWith(minor?"EchoFlow_":"BossFlow_")),Is.True,"The live attack uses intermediate poses.");
+                Assert.That(poses.Any(p=>minor?p.StartsWith("EchoCombat_"):p.Contains("Directional20261026/ManifestationBoss")),Is.True,"The live attack keeps its approved authored atlas.");
+                Assert.That(poses.Count,Is.GreaterThanOrEqualTo(3),"The live attack uses distinct intermediate poses: "+string.Join(",",poses));
                 var body=enemy.GetComponent<Rigidbody2D>();Vector2 recovered=body.position;
                 yield return new WaitForSeconds(.2f);Assert.That(Vector2.Distance(recovered,body.position),Is.LessThan(.001f),"Recovery does not retain the dash.");
                 Object.Destroy(enemy.gameObject);yield return null;yield return null;

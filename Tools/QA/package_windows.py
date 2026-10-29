@@ -25,9 +25,15 @@ def main():
     if not folder.is_relative_to(ROOT/'Builds') or not exe.is_file():raise ValueError('Unexpected/missing build output.')
     archive=folder.parent/(folder.name+'_Windows_x64.zip')
     if archive.exists():raise FileExistsError(archive)
-    shutil.copyfile(ROOT/'Docs/CampanhaOficial/PLAYTEST_2026-10-21.md',folder/'LEIA-ME_PLAYTEST.md')
+    guide=ROOT/'Docs/CampanhaOficial/ENTREGA_REVISAO_2026-10-29.md' if report['version']=='0.5.3-beta' else ROOT/'Docs/CampanhaOficial/PLAYTEST_2026-10-21.md'
+    shutil.copyfile(guide,folder/'LEIA-ME_PLAYTEST.md')
+    if report['version']=='0.5.3-beta' and exe.name!='Oizlede - Segredo de Varginha.exe':
+        raise ValueError('Unexpected executable name for the Oizlede revision.')
+    if not (folder/(exe.stem+'_Data')).is_dir():raise ValueError('Missing matching Unity data folder.')
     if report['version']=='0.4.4-beta':
         shutil.copyfile(ROOT/'Docs/CampanhaOficial/CREDITOS_AUDIO_RECEBIDO_2026-10-21.md',folder/'CREDITOS_AUDIO.md')
+    elif report['version']=='0.5.3-beta':
+        shutil.copyfile(ROOT/'Docs/CampanhaOficial/CREDITOS_AUDIO_REVISAO_2026-10-29.md',folder/'CREDITOS_AUDIO.md')
     def ship(p):
         return not any(part.endswith(('_BackUpThisFolder_ButDontShipItWithYourGame','_BurstDebugInformation_DoNotShip')) for part in p.relative_to(folder).parts)
     files=[p for p in sorted(folder.rglob('*')) if p.is_file() and p.name!='MANIFEST_SHA256.json' and ship(p)]

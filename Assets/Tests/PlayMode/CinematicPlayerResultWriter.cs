@@ -18,7 +18,10 @@ namespace Game.Tests.PlayMode
         {
             if(Application.isEditor||result.Test.IsSuite)return;
             string folder=Path.Combine(Path.GetFullPath(CinemaQaEvidence.Folder),"per-case");Directory.CreateDirectory(folder);
-            File.WriteAllText(Path.Combine(folder,result.FullName+".xml"),result.ToXml(true).OuterXml);
+            string name=result.FullName;
+            foreach(char invalid in Path.GetInvalidFileNameChars())name=name.Replace(invalid,'_');
+            if(name.Length>180)name=name.Substring(0,180)+"_"+result.Test.Id;
+            File.WriteAllText(Path.Combine(folder,name+".xml"),result.ToXml(true).OuterXml);
             Debug.Log("NATIVE_TEST "+result.ResultState+" "+result.FullName+(result.ResultState.Status==TestStatus.Failed?"\n"+result.Message+"\n"+result.StackTrace:""));
         }
         public void RunFinished(ITestResult result)

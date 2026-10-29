@@ -1,3 +1,18 @@
+# Retomada — estado atualizado em29/10/2026
+
+O texto de28/10 abaixo é histórico. A revisão de código e a build de hoje já foram concluídas. NÃO repetir lotes antigos nem regenerar artes.
+
+- Branch codex/campanha-15-fases-e-site. Checkpoint de ontem b29ef8d; commit de hoje registrado na entrega/Git.
+- EditMode final458/458. Player consolidado342 casos distintos aprovados após retestes; não foi uma única execução verde. Último apoio de documentos revalidado1/1. Fontes e limitações em Docs/CampanhaOficial/ENTREGA_REVISAO_2026-10-29.md e output/revisao-final-2026-10-29.
+- Igreja ampliada30% testada com percurso real e Fábio somente dentro. Casa até escola, colisões, puzzles, investigação e veículo com saída física/retry validados. Não há falhas automatizadas pendentes.
+- Build0.5.3-beta: Builds/Oizlede_0.5.3-beta_2026-10-29/Oizlede - Segredo de Varginha.exe. Zero erros,2 avisos de API obsoleta. ZIP/hash/CRC em windows-package.json. Saves reais: três JSONs idênticos após abertura.
+- Pedido humano novo atendido: Docs/CampanhaOficial/ROTEIRO_PARA_DUBLADOR_2026-10-29.txt, duas falas de repórter e13 de narração; gravar antes de integrar voz. Não adicionar voz sintética ou alterar diálogos existentes.
+- Pendência de QA manual: o jogo final abriu e exibiu menu, mas um aviso de firewall do Windows para playerwithtests cobre a janela. Foi pedida intervenção ao usuário para Cancelar. NÃO automatizar esse aviso nem mudar permissões de rede. Assim que fechado, usar skill computer-use/sky para clicar Configurações e voltar, sem iniciar nova história/sobrescrever saves. Conferir native-smoke.json, atualizar relatório e LEIA-ME do ZIP (novo manifesto/CRC se mudar), depois remover automação obsoleta.
+- Ressalva visual documentada: ator encobre planta do banco no enquadramento; interação e posição no assento aprovadas, captura desobstruída ainda não conferida. Chave e páginas com apoios corretos confirmados pelo subagente.
+- Nenhum runner Unity ativo ao iniciar a build final; subagentes de arte concluídos. Preserve apps/processos do usuário. Jogo final aberto pelo agente para conferência pode continuar no menu.
+- Não houve push. Preservar dirty pré-existente de URP/ProjectSettings/DocsQA/Tools package_school/output antigo e cenas de recuperação. Não usar reset/clean.
+
+---
 # Retomada da revisão completa de Oizlede — 28/10/2026
 
 ## PARADA ATUAL — lote2 salvo; retomada16:59:20

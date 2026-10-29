@@ -1,0 +1,33 @@
+{
+  "source": "output\\revisao-final-2026-10-29\\regression-fixes-29.xml",
+  "runResult": "Failed(Child)",
+  "tests": {
+    "total": 18,
+    "passed": 14,
+    "failed": 4,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions",
+      "message": "  Reachable 12/1 plan\n  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.CampaignContinuationPlayTests+<InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions>d__14.MoveNext () [0x00173] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignContinuationPlayTests.cs:258\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward",
+      "message": "  Use the approved native idle pose, including its authored visible height.\n  Expected: same as <Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)>\n  But was:  <Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)>\n",
+      "stack": "at Game.Tests.PlayMode.CampaignExpansionPlayTests+<ReconstructedChurchRecordKeepsTheOuzanaReward>d__6.MoveNext () [0x002df] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignExpansionPlayTests.cs:100\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture",
+      "message": "  Expected: String containing \"Directional20261026/Renan\"\n  But was:  \"Team_V4_RenanTeaching_3_1\"\n",
+      "stack": "at Game.Tests.PlayMode.CampaignExpansionPlayTests+<SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture>d__14.MoveNext () [0x00462] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignExpansionPlayTests.cs:316\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload",
+      "message": "  Physical route to (6.50, -5.47)\n  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.CampaignExpansionPlayTests+<WalkLibrary>d__12.MoveNext () [0x00052] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignExpansionPlayTests.cs:240\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    }
+  ],
+  "success": false
+}

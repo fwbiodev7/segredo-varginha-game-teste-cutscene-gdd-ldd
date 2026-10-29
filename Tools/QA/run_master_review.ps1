@@ -38,9 +38,9 @@ else{
     $platform=if($Mode -eq 'Player'){'StandaloneWindows64'}else{$Mode}
     $argsUnity+=@('-runTests','-testPlatform',$platform,'-testResults',(Join-Path $evidence ($Name+'.xml')))
     if($Filter){$argsUnity+=@('-testFilter',$Filter)}
-    # Some real-controller routes have a 180s NUnit deadline. Keep the connection
-    # alive long enough for that assertion/timeout to be reported by the Player.
-    if($Mode -eq 'Player'){$argsUnity+=@('-playerHeartbeatTimeout','360')}
+    # The full world audit has a 600s NUnit deadline. Keep the connection alive
+    # until NUnit can report its own result; do not replace it with a socket timeout.
+    if($Mode -eq 'Player'){$argsUnity+=@('-playerHeartbeatTimeout','720')}
 }
 & node (Join-Path $projectPath 'Tools/AgentOutput/compact.mjs') --question 'A revisão final compilou e executou todos os testes selecionados ou a build? Informe falhas e contagens.' -- $unity @argsUnity
 $reviewExit=$LASTEXITCODE

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Failed(Child)" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="0001-01-01 00:00:00Z" end-time="0001-01-01 00:00:00Z" duration="109,324937">
+  <test-suite type="TestSuite" id="1000" name="Varginha_Completion_QA_20261027" fullname="Varginha_Completion_QA_20261027" runstate="Runnable" testcasecount="339" result="Failed" site="Child" start-time="2026-10-29 09:59:05Z" end-time="2026-10-29 10:00:54Z" duration="109.324937" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+One or more child tests had errors  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA_WALK 7 corner=(-9.25, -4.25) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-9.25, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.11, -1.03) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(1.02, -0.53)
+QA_WALK 7 corner=(-8.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.02, -0.53) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(6.83, -0.36)
+QA_WALK 7 corner=(1.00, 1.00) target=(6.83, -0.36)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ForestCluesLeadThroughTheBridgeToOnePriestInsideTheIntactChurch
+  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignForestReviewPlayTests.IntactChurchReplacesTheRuinAndThePriestAppearsOnlyInside
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties><property name="platform" value="PlayMode"></property></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="Assembly" id="1392" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Temp/UnityTempFile-8dc91d5f583965947941cbe2cd7fedd9/PlayerWithTests/PlayerWithTests_Data/Managed/GamePlayModeTests.dll" runstate="Runnable" testcasecount="339" result="Failed" site="Child" start-time="2026-10-29 09:59:05Z" end-time="2026-10-29 10:00:54Z" duration="109.269742" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+One or more child tests had errors  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA_WALK 7 corner=(-9.25, -4.25) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-9.25, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.11, -1.03) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(1.02, -0.53)
+QA_WALK 7 corner=(-8.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.02, -0.53) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(6.83, -0.36)
+QA_WALK 7 corner=(1.00, 1.00) target=(6.83, -0.36)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ForestCluesLeadThroughTheBridgeToOnePriestInsideTheIntactChurch
+  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignForestReviewPlayTests.IntactChurchReplacesTheRuinAndThePriestAppearsOnlyInside
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties><property name="_PID" value="16620"></property><property name="_APPDOMAIN" value="Unity Root Domain"></property><property name="platform" value="PlayMode"></property><property name="EditorOnly" value="False"></property></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1393" name="Game" fullname="Game" runstate="Runnable" testcasecount="339" result="Failed" site="Child" start-time="2026-10-29 09:59:05Z" end-time="2026-10-29 10:00:54Z" duration="109.228744" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+One or more child tests had errors  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA_WALK 7 corner=(-9.25, -4.25) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-9.25, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.11, -1.03) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(1.02, -0.53)
+QA_WALK 7 corner=(-8.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.02, -0.53) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(6.83, -0.36)
+QA_WALK 7 corner=(1.00, 1.00) target=(6.83, -0.36)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ForestCluesLeadThroughTheBridgeToOnePriestInsideTheIntactChurch
+  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignForestReviewPlayTests.IntactChurchReplacesTheRuinAndThePriestAppearsOnlyInside
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1394" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="339" result="Failed" site="Child" start-time="2026-10-29 09:59:05Z" end-time="2026-10-29 10:00:54Z" duration="109.195755" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+One or more child tests had errors  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA_WALK 7 corner=(-9.25, -4.25) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-9.25, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.11, -1.03) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(1.02, -0.53)
+QA_WALK 7 corner=(-8.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.02, -0.53) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(6.83, -0.36)
+QA_WALK 7 corner=(1.00, 1.00) target=(6.83, -0.36)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ForestCluesLeadThroughTheBridgeToOnePriestInsideTheIntactChurch
+  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignForestReviewPlayTests.IntactChurchReplacesTheRuinAndThePriestAppearsOnlyInside
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1395" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="339" result="Failed" site="Child" start-time="2026-10-29 09:59:05Z" end-time="2026-10-29 10:00:54Z" duration="109.163780" total="4" passed="3" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+One or more child tests had errors  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA_WALK 7 corner=(-9.25, -4.25) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-9.25, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.11, -1.03) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(1.02, -0.53)
+QA_WALK 7 corner=(-8.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.02, -0.53) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(6.83, -0.36)
+QA_WALK 7 corner=(1.00, 1.00) target=(6.83, -0.36)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ForestCluesLeadThroughTheBridgeToOnePriestInsideTheIntactChurch
+  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignForestReviewPlayTests.IntactChurchReplacesTheRuinAndThePriestAppearsOnlyInside
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestFixture" id="1025" name="CampaignChaptersTests" fullname="Game.Tests.PlayMode.CampaignChaptersTests" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-29 09:59:05Z" end-time="2026-10-29 10:00:12Z" duration="67.315202" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+<properties></properties><test-case id="1032" name="HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" fullname="Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" methodname="HouseDriveSchoolAndCodeFormAPlayableSavedCampaign" classname="Game.Tests.PlayMode.CampaignChaptersTests" runstate="Runnable" seed="643989337" result="Passed" start-time="2026-10-29 09:59:05Z" end-time="2026-10-29 10:00:12Z" duration="67.253216" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Category" value="HudPuzzles"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignChaptersTests.HouseDriveSchoolAndCodeFormAPlayableSavedCampaign
+</output></test-case></test-suite><test-suite type="TestFixture" id="1063" name="CampaignExpansionPlayTests" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" testcasecount="10" result="Failed" site="Child" start-time="2026-10-29 10:00:12Z" end-time="2026-10-29 10:00:27Z" duration="15.103990" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errors  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA_WALK 7 corner=(-9.25, -4.25) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-9.25, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.11, -1.03) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(1.02, -0.53)
+QA_WALK 7 corner=(-8.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.02, -0.53) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(6.83, -0.36)
+QA_WALK 7 corner=(1.00, 1.00) target=(6.83, -0.36)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ForestCluesLeadThroughTheBridgeToOnePriestInsideTheIntactChurch
+  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-case id="1069" name="ForestCluesLeadThroughTheBridgeToOnePriestInsideTheIntactChurch" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.ForestCluesLeadThroughTheBridgeToOnePriestInsideTheIntactChurch" methodname="ForestCluesLeadThroughTheBridgeToOnePriestInsideTheIntactChurch" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1722494049" result="Failed" start-time="2026-10-29 10:00:12Z" end-time="2026-10-29 10:00:27Z" duration="15.082747" asserts="0">  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA_WALK 7 corner=(-9.25, -4.25) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-9.25, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.11, -1.03) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(1.02, -0.53)
+QA_WALK 7 corner=(-8.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.02, -0.53) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(6.83, -0.36)
+QA_WALK 7 corner=(1.00, 1.00) target=(6.83, -0.36)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ForestCluesLeadThroughTheBridgeToOnePriestInsideTheIntactChurch
+  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="180000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+<message>  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+</message><stack-trace>at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+</stack-trace></failure><output>QA_WALK 7 corner=(-9.25, -4.25) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-9.25, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.11, -1.03) target=(-8.11, -1.03)
+QA_WALK 7 corner=(-8.00, -1.00) target=(1.02, -0.53)
+QA_WALK 7 corner=(-8.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.02, -0.53) target=(1.02, -0.53)
+QA_WALK 7 corner=(1.00, -0.50) target=(6.83, -0.36)
+QA_WALK 7 corner=(1.00, 1.00) target=(6.83, -0.36)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ForestCluesLeadThroughTheBridgeToOnePriestInsideTheIntactChurch
+  Game over on physical route at (0.88, 1.53) target=(6.83, -0.36)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x001ca] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:250
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+</output></test-case></test-suite><test-suite type="TestFixture" id="1078" name="CampaignForestReviewPlayTests" fullname="Game.Tests.PlayMode.CampaignForestReviewPlayTests" classname="Game.Tests.PlayMode.CampaignForestReviewPlayTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-29 10:00:27Z" end-time="2026-10-29 10:00:35Z" duration="7.790240" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignForestReviewPlayTests.IntactChurchReplacesTheRuinAndThePriestAppearsOnlyInside
+<properties></properties><test-case id="1079" name="IntactChurchReplacesTheRuinAndThePriestAppearsOnlyInside" fullname="Game.Tests.PlayMode.CampaignForestReviewPlayTests.IntactChurchReplacesTheRuinAndThePriestAppearsOnlyInside" methodname="IntactChurchReplacesTheRuinAndThePriestAppearsOnlyInside" classname="Game.Tests.PlayMode.CampaignForestReviewPlayTests" runstate="Runnable" seed="1999450232" result="Passed" start-time="2026-10-29 10:00:27Z" end-time="2026-10-29 10:00:35Z" duration="7.772657" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignForestReviewPlayTests.IntactChurchReplacesTheRuinAndThePriestAppearsOnlyInside
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignForestReviewPlayTests.IntactChurchReplacesTheRuinAndThePriestAppearsOnlyInside
+</output></test-case></test-suite><test-suite type="TestFixture" id="1092" name="CampaignMessagePlayTests" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-29 10:00:35Z" end-time="2026-10-29 10:00:54Z" duration="18.906179" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties></properties><test-case id="1093" name="RoutineConsumesRealItemsAndKeepsThemGoneAfterReload" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload" methodname="RoutineConsumesRealItemsAndKeepsThemGoneAfterReload" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="413850259" result="Passed" start-time="2026-10-29 10:00:35Z" end-time="2026-10-29 10:00:54Z" duration="18.883031" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+</output></test-case></test-suite></test-suite></test-suite></test-suite></test-suite></test-suite>
+</test-run>

@@ -12,7 +12,7 @@ namespace Game.Varginha.Experiment
         bool _paused;
         public AudioSource Source=>_source;
         public static float Progress(float time)=>Mathf.Clamp01((time-StartTime)/(EndTime-StartTime));
-        public static Vector2 CarPixel(float time)=>new(Mathf.Lerp(-150,1538,Progress(time)),1040);
+        public static Vector2 CarPixel(float time)=>new(Mathf.Lerp(-150,1538,Progress(time)),1055);
         public void Begin()
         {
             Stop();_started=Time.time;_paused=false;

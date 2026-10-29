@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="4" result="Passed" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="0001-01-01 00:00:00Z" end-time="0001-01-01 00:00:00Z" duration="92,5725923">
+  <test-suite type="TestSuite" id="1000" name="Varginha_Completion_QA_20261027" fullname="Varginha_Completion_QA_20261027" runstate="Runnable" testcasecount="342" result="Passed" start-time="2026-10-29 11:09:13Z" end-time="2026-10-29 11:10:45Z" duration="92.572592" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+QA investigation passed: 12
+QA continuation scene loaded: 13 / 0
+QA continuation ready: 13 / 0
+QA investigation passed: 13
+QA continuation scene loaded: 14 / 0
+QA continuation ready: 14 / 0
+QA investigation passed: 14
+QA continuation scene loaded: 15 / 0
+QA continuation ready: 15 / 0
+QA investigation passed: 15
+QA continuation scene loaded: 18 / 0
+QA continuation ready: 18 / 0
+QA investigation passed: 18
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+QA_WALK 112 corner=(0.00, -6.50) target=(6.00, -4.75)
+QA_WALK 112 corner=(0.00, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(5.75, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.28, -1.13) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.53, -0.40) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(-0.03, 5.07) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.25) target=(-0.03, 6.07)
+QA_WALK 112 corner=(0.00, 6.00) target=(-0.03, 6.07)
+QA_WALK 112 corner=(-0.03, 6.07) target=(-0.03, 6.07)
+QA_WALK 13 corner=(0.00, 4.75) target=(-5.67, -0.62)
+QA_WALK 13 corner=(0.00, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.67, -0.62) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.75) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-5.75, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.33, -1.23) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(-3.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.50, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.56, 0.04) target=(4.56, 0.04)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+<properties><property name="platform" value="PlayMode"></property></properties><test-suite type="Assembly" id="1396" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Temp/UnityTempFile-aaad0ff9033e4fa4bb2209cdbd9655da/PlayerWithTests/PlayerWithTests_Data/Managed/GamePlayModeTests.dll" runstate="Runnable" testcasecount="342" result="Passed" start-time="2026-10-29 11:09:13Z" end-time="2026-10-29 11:10:45Z" duration="92.530655" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+QA investigation passed: 12
+QA continuation scene loaded: 13 / 0
+QA continuation ready: 13 / 0
+QA investigation passed: 13
+QA continuation scene loaded: 14 / 0
+QA continuation ready: 14 / 0
+QA investigation passed: 14
+QA continuation scene loaded: 15 / 0
+QA continuation ready: 15 / 0
+QA investigation passed: 15
+QA continuation scene loaded: 18 / 0
+QA continuation ready: 18 / 0
+QA investigation passed: 18
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+QA_WALK 112 corner=(0.00, -6.50) target=(6.00, -4.75)
+QA_WALK 112 corner=(0.00, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(5.75, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.28, -1.13) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.53, -0.40) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(-0.03, 5.07) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.25) target=(-0.03, 6.07)
+QA_WALK 112 corner=(0.00, 6.00) target=(-0.03, 6.07)
+QA_WALK 112 corner=(-0.03, 6.07) target=(-0.03, 6.07)
+QA_WALK 13 corner=(0.00, 4.75) target=(-5.67, -0.62)
+QA_WALK 13 corner=(0.00, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.67, -0.62) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.75) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-5.75, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.33, -1.23) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(-3.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.50, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.56, 0.04) target=(4.56, 0.04)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+<properties><property name="_PID" value="28620"></property><property name="_APPDOMAIN" value="Unity Root Domain"></property><property name="platform" value="PlayMode"></property><property name="EditorOnly" value="False"></property></properties><test-suite type="TestSuite" id="1397" name="Game" fullname="Game" runstate="Runnable" testcasecount="342" result="Passed" start-time="2026-10-29 11:09:13Z" end-time="2026-10-29 11:10:45Z" duration="92.492864" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+QA investigation passed: 12
+QA continuation scene loaded: 13 / 0
+QA continuation ready: 13 / 0
+QA investigation passed: 13
+QA continuation scene loaded: 14 / 0
+QA continuation ready: 14 / 0
+QA investigation passed: 14
+QA continuation scene loaded: 15 / 0
+QA continuation ready: 15 / 0
+QA investigation passed: 15
+QA continuation scene loaded: 18 / 0
+QA continuation ready: 18 / 0
+QA investigation passed: 18
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+QA_WALK 112 corner=(0.00, -6.50) target=(6.00, -4.75)
+QA_WALK 112 corner=(0.00, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(5.75, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.28, -1.13) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.53, -0.40) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(-0.03, 5.07) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.25) target=(-0.03, 6.07)
+QA_WALK 112 corner=(0.00, 6.00) target=(-0.03, 6.07)
+QA_WALK 112 corner=(-0.03, 6.07) target=(-0.03, 6.07)
+QA_WALK 13 corner=(0.00, 4.75) target=(-5.67, -0.62)
+QA_WALK 13 corner=(0.00, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.67, -0.62) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.75) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-5.75, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.33, -1.23) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(-3.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.50, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.56, 0.04) target=(4.56, 0.04)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+<properties></properties><test-suite type="TestSuite" id="1398" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="342" result="Passed" start-time="2026-10-29 11:09:13Z" end-time="2026-10-29 11:10:45Z" duration="92.465771" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+QA investigation passed: 12
+QA continuation scene loaded: 13 / 0
+QA continuation ready: 13 / 0
+QA investigation passed: 13
+QA continuation scene loaded: 14 / 0
+QA continuation ready: 14 / 0
+QA investigation passed: 14
+QA continuation scene loaded: 15 / 0
+QA continuation ready: 15 / 0
+QA investigation passed: 15
+QA continuation scene loaded: 18 / 0
+QA continuation ready: 18 / 0
+QA investigation passed: 18
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+QA_WALK 112 corner=(0.00, -6.50) target=(6.00, -4.75)
+QA_WALK 112 corner=(0.00, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(5.75, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.28, -1.13) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.53, -0.40) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(-0.03, 5.07) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.25) target=(-0.03, 6.07)
+QA_WALK 112 corner=(0.00, 6.00) target=(-0.03, 6.07)
+QA_WALK 112 corner=(-0.03, 6.07) target=(-0.03, 6.07)
+QA_WALK 13 corner=(0.00, 4.75) target=(-5.67, -0.62)
+QA_WALK 13 corner=(0.00, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.67, -0.62) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.75) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-5.75, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.33, -1.23) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(-3.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.50, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.56, 0.04) target=(4.56, 0.04)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+<properties></properties><test-suite type="TestSuite" id="1399" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="342" result="Passed" start-time="2026-10-29 11:09:13Z" end-time="2026-10-29 11:10:45Z" duration="92.436116" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+QA investigation passed: 12
+QA continuation scene loaded: 13 / 0
+QA continuation ready: 13 / 0
+QA investigation passed: 13
+QA continuation scene loaded: 14 / 0
+QA continuation ready: 14 / 0
+QA investigation passed: 14
+QA continuation scene loaded: 15 / 0
+QA continuation ready: 15 / 0
+QA investigation passed: 15
+QA continuation scene loaded: 18 / 0
+QA continuation ready: 18 / 0
+QA investigation passed: 18
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+QA_WALK 112 corner=(0.00, -6.50) target=(6.00, -4.75)
+QA_WALK 112 corner=(0.00, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(5.75, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.28, -1.13) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.53, -0.40) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(-0.03, 5.07) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.25) target=(-0.03, 6.07)
+QA_WALK 112 corner=(0.00, 6.00) target=(-0.03, 6.07)
+QA_WALK 112 corner=(-0.03, 6.07) target=(-0.03, 6.07)
+QA_WALK 13 corner=(0.00, 4.75) target=(-5.67, -0.62)
+QA_WALK 13 corner=(0.00, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.67, -0.62) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.75) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-5.75, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.33, -1.23) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(-3.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.50, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.56, 0.04) target=(4.56, 0.04)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+<properties></properties><test-suite type="TestFixture" id="1039" name="CampaignContinuationPlayTests" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-29 11:09:13Z" end-time="2026-10-29 11:09:54Z" duration="41.239518" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+QA investigation passed: 12
+QA continuation scene loaded: 13 / 0
+QA continuation ready: 13 / 0
+QA investigation passed: 13
+QA continuation scene loaded: 14 / 0
+QA continuation ready: 14 / 0
+QA investigation passed: 14
+QA continuation scene loaded: 15 / 0
+QA continuation ready: 15 / 0
+QA investigation passed: 15
+QA continuation scene loaded: 18 / 0
+QA continuation ready: 18 / 0
+QA investigation passed: 18
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+<properties></properties><test-case id="1045" name="InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions" methodname="InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="934225108" result="Passed" start-time="2026-10-29 11:09:13Z" end-time="2026-10-29 11:09:54Z" duration="41.194660" asserts="0">QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+QA investigation passed: 12
+QA continuation scene loaded: 13 / 0
+QA continuation ready: 13 / 0
+QA investigation passed: 13
+QA continuation scene loaded: 14 / 0
+QA continuation ready: 14 / 0
+QA investigation passed: 14
+QA continuation scene loaded: 15 / 0
+QA continuation ready: 15 / 0
+QA investigation passed: 15
+QA continuation scene loaded: 18 / 0
+QA continuation ready: 18 / 0
+QA investigation passed: 18
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="180000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+QA investigation passed: 12
+QA continuation scene loaded: 13 / 0
+QA continuation ready: 13 / 0
+QA investigation passed: 13
+QA continuation scene loaded: 14 / 0
+QA continuation ready: 14 / 0
+QA investigation passed: 14
+QA continuation scene loaded: 15 / 0
+QA continuation ready: 15 / 0
+QA investigation passed: 15
+QA continuation scene loaded: 18 / 0
+QA continuation ready: 18 / 0
+QA investigation passed: 18
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+</output></test-case></test-suite><test-suite type="TestFixture" id="1063" name="CampaignExpansionPlayTests" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-29 11:09:54Z" end-time="2026-10-29 11:10:05Z" duration="11.143473" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+<properties></properties><test-case id="1065" name="ReconstructedChurchRecordKeepsTheOuzanaReward" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward" methodname="ReconstructedChurchRecordKeepsTheOuzanaReward" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="136929665" result="Passed" start-time="2026-10-29 11:09:54Z" end-time="2026-10-29 11:09:55Z" duration="1.359132" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+</output></test-case><test-case id="1071" name="SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" methodname="SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1771840669" result="Passed" start-time="2026-10-29 11:09:55Z" end-time="2026-10-29 11:10:05Z" duration="9.755547" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+</output></test-case></test-suite><test-suite type="TestFixture" id="1105" name="CampaignPhysicalEvidencePlayTests" fullname="Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests" classname="Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-29 11:10:05Z" end-time="2026-10-29 11:10:45Z" duration="40.007610" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+QA_WALK 112 corner=(0.00, -6.50) target=(6.00, -4.75)
+QA_WALK 112 corner=(0.00, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(5.75, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.28, -1.13) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.53, -0.40) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(-0.03, 5.07) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.25) target=(-0.03, 6.07)
+QA_WALK 112 corner=(0.00, 6.00) target=(-0.03, 6.07)
+QA_WALK 112 corner=(-0.03, 6.07) target=(-0.03, 6.07)
+QA_WALK 13 corner=(0.00, 4.75) target=(-5.67, -0.62)
+QA_WALK 13 corner=(0.00, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.67, -0.62) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.75) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-5.75, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.33, -1.23) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(-3.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.50, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.56, 0.04) target=(4.56, 0.04)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+<properties></properties><test-case id="1106" name="CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload" fullname="Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload" methodname="CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload" classname="Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests" runstate="Runnable" seed="158500189" result="Passed" start-time="2026-10-29 11:10:05Z" end-time="2026-10-29 11:10:45Z" duration="39.995240" asserts="0">QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+QA_WALK 112 corner=(0.00, -6.50) target=(6.00, -4.75)
+QA_WALK 112 corner=(0.00, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(5.75, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.28, -1.13) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.53, -0.40) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(-0.03, 5.07) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.25) target=(-0.03, 6.07)
+QA_WALK 112 corner=(0.00, 6.00) target=(-0.03, 6.07)
+QA_WALK 112 corner=(-0.03, 6.07) target=(-0.03, 6.07)
+QA_WALK 13 corner=(0.00, 4.75) target=(-5.67, -0.62)
+QA_WALK 13 corner=(0.00, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.67, -0.62) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.75) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-5.75, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.33, -1.23) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(-3.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.50, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.56, 0.04) target=(4.56, 0.04)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="240000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+QA_WALK 112 corner=(0.00, -6.50) target=(6.00, -4.75)
+QA_WALK 112 corner=(0.00, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -5.00) target=(6.00, -4.75)
+QA_WALK 112 corner=(4.25, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(6.00, -4.75) target=(6.00, -4.75)
+QA_WALK 112 corner=(5.75, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -4.75) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -5.00) target=(4.28, -1.13)
+QA_WALK 112 corner=(1.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.25, -1.25) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.28, -1.13) target=(4.28, -1.13)
+QA_WALK 112 corner=(4.50, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -1.25) target=(6.53, -0.40)
+QA_WALK 112 corner=(5.25, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.50) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.53, -0.40) target=(6.53, -0.40)
+QA_WALK 112 corner=(6.50, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.25) target=(-0.03, 5.07)
+QA_WALK 112 corner=(2.75, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, -0.75) target=(-0.03, 5.07)
+QA_WALK 112 corner=(1.25, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.00) target=(-0.03, 5.07)
+QA_WALK 112 corner=(-0.03, 5.07) target=(-0.03, 5.07)
+QA_WALK 112 corner=(0.00, 5.25) target=(-0.03, 6.07)
+QA_WALK 112 corner=(0.00, 6.00) target=(-0.03, 6.07)
+QA_WALK 112 corner=(-0.03, 6.07) target=(-0.03, 6.07)
+QA_WALK 13 corner=(0.00, 4.75) target=(-5.67, -0.62)
+QA_WALK 13 corner=(0.00, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, 0.25) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-1.25, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.50) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.67, -0.62) target=(-5.67, -0.62)
+QA_WALK 13 corner=(-5.75, -0.75) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-5.75, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.25) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.33, -1.23) target=(-3.33, -1.23)
+QA_WALK 13 corner=(-3.25, -1.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(-3.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, -0.75) target=(4.56, 0.04)
+QA_WALK 13 corner=(1.25, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.50, 0.00) target=(4.56, 0.04)
+QA_WALK 13 corner=(4.56, 0.04) target=(4.56, 0.04)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+</output></test-case></test-suite></test-suite></test-suite></test-suite></test-suite></test-suite>
+</test-run>

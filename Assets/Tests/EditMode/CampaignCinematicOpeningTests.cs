@@ -9,6 +9,16 @@ namespace Game.Tests.EditMode
 {
     public sealed class CampaignCinematicOpeningTests
     {
+        [TestCase(1.3f)][TestCase(2.7f)][TestCase(4.2f)]
+        public void PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(float time)
+        {
+            var layout=CampaignIllustratedMaps.Get(4);var parked=System.Array.Find(layout.props,p=>p.name=="Fusca");
+            float scale=1120f/layout.width,parkedBottom=86+(parked.art[1]+parked.art[3]-490)*scale;
+            var car=CampaignFuscaCinema.PassingCarRect(time);
+            Assert.That(car.yMin,Is.GreaterThan(parkedBottom),"Keep a separate traffic lane below the parked car.");
+            Assert.That(car.yMax,Is.LessThan(CampaignFuscaCinema.ArrivalViewport.yMax),"Wheels must not be cut by the subtitle band.");
+            Assert.That(CampaignFuscaCinema.ArrivalViewport.Contains(car.min)&&CampaignFuscaCinema.ArrivalViewport.Contains(car.max),Is.True,"Representative approach/pass/recede frames fit the map viewport.");
+        }
         [Test] public void DigitalTearsHaveReferenceColoursAndStayInsideTheImage()
         {
             var bands=new List<CampaignSignalGlitch.Band>();var colours=new HashSet<Color32>();

@@ -89,7 +89,8 @@ namespace Game.Tests.PlayMode
             Assert.That(((CampaignMapPlan.Point)nearest)?.id,Is.EqualTo(id),"Physical approach chooses the visible target");
             yield return KeyFor(stage.phase==10?Key.W:Key.E,.06f);
             bool departing=(bool)typeof(CampaignExpansionController).GetField("_departing",Private).GetValue(stage);
-            Assert.That(Modal(stage,"_panel")!=null||Modal(stage,"_message")!=null||departing,Is.True,(stage.phase==10?"W":"E")+" interacts with "+id);
+            bool pickup=Object.FindAnyObjectByType<CampaignPickupNotice>()?.CurrentText!=null;
+            Assert.That(Modal(stage,"_panel")!=null||Modal(stage,"_message")!=null||departing||pickup,Is.True,(stage.phase==10?"W":"E")+" interacts with "+id);
             }
             finally { Time.captureDeltaTime = capture; }
         }
@@ -123,9 +124,13 @@ namespace Game.Tests.PlayMode
             var car=GameObject.Find("Fusca");
             for(int i=0;i<3;i++)Assert.That(car.transform.Find("Marca_"+i),Is.Not.Null);
             Assert.That(state.reagentCharges,Is.EqualTo(5));Assert.That(state.testDriven,Is.False);
-            yield return WalkToAndInteract("exit");yield return new WaitForSeconds(3.4f);
+            yield return WalkToAndInteract("exit");
+            var departure=car.GetComponent<CampaignWorkshopVehicle>();float deadline=Time.realtimeSinceStartup+22;
+            while(!departure.DepartureComplete&&Time.realtimeSinceStartup<deadline)yield return null;
+            Assert.That(departure.DepartureComplete,Is.True);yield return null;
             Assert.That(Modal(stage,"_panel"),Is.EqualTo("complete"));Assert.That(state.workshopDeparted,Is.True);
-            Assert.That(car.transform.position.x,Is.GreaterThan(stage.Plan.bounds.xMax));
+            Assert.That(car.transform.position.x,Is.GreaterThan(4).And.LessThan(stage.Plan.bounds.xMax),"Departure reaches the street before the solid boundary, instead of crossing the wall.");
+            Assert.That(car.GetComponent<Rigidbody2D>().simulated,Is.True);
             stage.Save();Assert.That(CampaignStorySave.Load().expansion.workshopDeparted,Is.True);
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }

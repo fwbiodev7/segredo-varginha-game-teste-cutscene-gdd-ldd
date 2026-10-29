@@ -29,6 +29,37 @@ namespace Game.Tests.PlayMode
             }
             InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return null;
         }
+        [UnityTest,Timeout(90000)] public IEnumerator WorkshopDepartureStopsAtObstaclesThenReversesThroughTheGateAndTurnsOnTheStreet()
+        {
+            var story=new CampaignStory{phase=10};var s=story.expansion;
+            s.workshopParked=true;s.visited=7;s.mapSolved=true;s.forestSigns=3;s.fabioMet=true;
+            s.anchorClues=7;s.anchorFound=true;s.evidencePresented=true;s.labClues=7;s.reagentUnlocked=true;s.sprayed=7;s.stabilized=true;
+            CampaignStorySave.Write(story);yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(10));yield return new WaitForSeconds(3.4f);
+            var stage=CampaignExpansionController.Active;var vehicle=Object.FindAnyObjectByType<CampaignWorkshopVehicle>();
+            var body=vehicle.GetComponent<Rigidbody2D>();var box=vehicle.GetComponent<BoxCollider2D>();
+            var obstacle=new GameObject("QA_Obstacle_in_departure");var wall=obstacle.AddComponent<BoxCollider2D>();wall.size=new Vector2(3,.25f);obstacle.transform.position=new Vector2(body.position.x,-2.2f);Physics2D.SyncTransforms();
+            stage.Interact("drive");float deadline=Time.realtimeSinceStartup+12;
+            while(!vehicle.DepartureBlocked&&Time.realtimeSinceStartup<deadline)
+            {Assert.That(body.simulated,Is.True);Assert.That(box.Distance(wall).distance,Is.GreaterThan(-.015f));yield return null;}
+            Assert.That(vehicle.DepartureBlocked,Is.True);Assert.That(stage.Progress.expansion.workshopDeparted,Is.False);
+            yield return null;stage.ClosePanel();Assert.That(Object.FindAnyObjectByType<EdelzioTopDownController>().IsInputLocked,Is.False);
+            Object.Destroy(obstacle);yield return null;stage.Interact("drive");
+            bool reversed=false,turned=false;deadline=Time.realtimeSinceStartup+22;
+            var layout=CampaignIllustratedMaps.Get(10);float gateSouth=layout.Position(0,669).y;
+            while(!vehicle.DepartureComplete&&Time.realtimeSinceStartup<deadline)
+            {
+                Assert.That(body.simulated,Is.True,"Cinematics keep the real body and collision sweeps.");
+                reversed|=vehicle.Speed<-.1f;
+                if(Mathf.Abs(vehicle.Heading)>5){turned=true;Assert.That(box.bounds.max.y,Is.LessThan(gateSouth),"Turn only after the entire car clears the garage.");}
+                foreach(var solid in Object.FindObjectsByType<Collider2D>())
+                    if(!solid.isTrigger&&solid.attachedRigidbody!=body)Assert.That(box.Distance(solid).distance,Is.GreaterThan(-.02f),solid.name);
+                yield return new WaitForFixedUpdate();
+            }
+            Assert.That(reversed&&turned&&vehicle.DepartureComplete,Is.True);yield return null;
+            Assert.That(CampaignStorySave.Load().expansion.workshopDeparted,Is.True);
+            Assert.That(box.bounds.max.x,Is.LessThan(layout.Bounds.xMax),"The next chapter fades from the street before the boundary wall.");
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+        }
         [UnityTest,Timeout(60000)] public IEnumerator LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit()
         {
             var keyboard=InputSystem.AddDevice<Keyboard>();CampaignStorySave.Write(new CampaignStory{phase=3});
@@ -53,7 +84,9 @@ namespace Game.Tests.PlayMode
             Assert.That(road.Speed,Is.InRange(1.5f,4f),"The initial half second must accelerate instead of jumping to full speed.");
             float speed=road.Speed,y=body.position.y;yield return new WaitForSeconds(.1f);
             Assert.That(road.Speed,Is.GreaterThan(0));Assert.That(road.Speed,Is.LessThan(speed));Assert.That(body.position.y,Is.GreaterThan(y));
-            yield return Hold(keyboard,Key.DownArrow,1.2f);Assert.That(road.Speed,Is.LessThan(0));
+            // Observe reverse before this short approach reaches its lower wall.
+            // Holding it for 1.2s had already hit the boundary and correctly stopped.
+            yield return Hold(keyboard,Key.DownArrow,.45f);Assert.That(road.Speed,Is.LessThan(0));
             yield return Hold(keyboard,Key.RightArrow,.1f);Assert.That(Mathf.Abs(road.Steering),Is.LessThan(.7f));
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }

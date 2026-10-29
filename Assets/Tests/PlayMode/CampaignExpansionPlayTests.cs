@@ -97,7 +97,10 @@ namespace Game.Tests.PlayMode
             Assert.That(ouzana.GetComponent<CampaignOuzanaBiologist>(),Is.Not.Null);
             var render=ouzana.GetComponent<SpriteRenderer>();
             Assert.That(render.sprite.texture.name,Is.EqualTo("OuzanaAttackV2"));
-            Assert.That(render.sprite.bounds.size.y,Is.EqualTo(CampaignTeamEdelzio.StandingHeight).Within(.10f));
+            var approvedIdle=new System.Collections.Generic.List<Sprite>();
+            for(int row=0;row<8;row++)approvedIdle.Add(CampaignStorySprites.Frame("OuzanaAttackV2",row,5));
+            Assert.That(approvedIdle,Does.Contain(render.sprite),"Use an approved native idle pose; Ouzana may face the nearby player.");
+            Assert.That(render.transform.localScale,Is.EqualTo(Vector3.one));
             Assert.That(render.sprite.texture.isReadable,Is.False);
             Assert.That(ouzana.GetComponent<CircleCollider2D>(),Is.Not.Null);
             actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
@@ -114,7 +117,7 @@ namespace Game.Tests.PlayMode
             var fridge=map.Find("02_Mobilia_Colisoes/Fridge_Kitchen").GetComponent<SpriteRenderer>();
             Assert.That(actor.GetComponent<SpriteRenderer>().bounds.size.y,Is.LessThan(fridge.bounds.size.y));
             Assert.That(actor.transform.localScale,Is.EqualTo(Vector3.one));
-            Assert.That(map.Find("01_Planta_Paredes_Divisoes/Arte_Integrada_0").GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("AdultEmptyDivisoes"));
+            Assert.That(map.Find("01_Planta_Paredes_Divisoes/Arte_Integrada_0").GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("AdultInteractiveBase"));
             Assert.That(map.Find("02_Mobilia_Colisoes/Sofa_LivingRoom").GetComponent<SpriteRenderer>().sprite.texture.name,Is.EqualTo("Adult2026"));
             var oldDoor=GameObject.Find("Door_Office_Accessible");if(oldDoor!=null){Assert.That(oldDoor.GetComponent<SpriteRenderer>().enabled,Is.False);foreach(var c in oldDoor.GetComponents<Collider2D>())Assert.That(c.enabled,Is.False);}
             Assert.That(actor.GetComponent<SpriteRenderer>().sharedMaterial.shader.name,Is.EqualTo("Varginha/IllustratedActorLighting"));
@@ -245,7 +248,10 @@ namespace Game.Tests.PlayMode
             {
                 Debug.Log("QA_WALK "+plan.phase+" corner="+corner+" target="+target);
                 float deadline=Time.time+8;
-                while(Vector2.Distance(body.position-Vector2.up*.58f,corner)>.10f&&Time.time<deadline)
+                // At 7.5m/s a fixed step moves .15m. Do not make the input
+                // driver oscillate around a .10m target while a pursuer advances.
+                // The independent .28m passage assertion and real E interactions remain.
+                while(Vector2.Distance(body.position-Vector2.up*.58f,corner)>.18f&&Time.time<deadline)
                 {
                     Assert.That(VarginhaGameHUD.Instance?.IsGameOver!=true,Is.True,"Game over on physical route at "+body.position+" target="+target);
                     if(arrived?.Invoke()==true){InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield break;}
@@ -265,10 +271,13 @@ namespace Game.Tests.PlayMode
         [UnityTest] public IEnumerator FuscaDepartsAfterMarksWithoutRequiringTrack()
         {
             var story=new CampaignStory{phase=10};var s=story.expansion;
+            s.workshopParked=true;
             s.visited=7;s.mapSolved=true;s.forestSigns=3;s.fabioMet=true;s.anchorClues=7;s.anchorFound=true;s.evidencePresented=true;s.labClues=7;s.reagentUnlocked=true;s.sprayed=7;s.stabilized=true;
             CampaignStorySave.Write(story);yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(10));yield return new WaitForSeconds(3);
             var stage=CampaignExpansionController.Active;stage.Interact("drive");Assert.That(stage.Progress.expansion.testDriven,Is.False);
-            var keyboard=InputSystem.AddDevice<Keyboard>();Press(keyboard.dKey);yield return new WaitForSeconds(4.2f);Release(keyboard.dKey);
+            var vehicle=Object.FindAnyObjectByType<CampaignWorkshopVehicle>();float deadline=Time.realtimeSinceStartup+22;
+            while(!vehicle.DepartureComplete&&Time.realtimeSinceStartup<deadline)yield return null;
+            Assert.That(vehicle.DepartureComplete,Is.True);yield return null;
             Assert.That(stage.Progress.expansion.Complete(10),Is.True);
             Assert.That(CampaignStorySave.Load().expansion.workshopDeparted,Is.True);
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
@@ -306,7 +315,19 @@ namespace Game.Tests.PlayMode
                 Assert.That(back.GetComponent<UnityEngine.Rendering.SortingGroup>().sortingOrder,Is.GreaterThan(student.GetComponent<UnityEngine.Rendering.SortingGroup>().sortingOrder));
             }
             Assert.That(renan.transform.position.y,Is.GreaterThan(data.Position(945,120).y));
-            Assert.That(renan.GetComponent<SpriteRenderer>().sprite.name,Does.Contain("RenanTeaching"));
+            Assert.That(renan.GetComponent<CampaignRenanTeacher>(),Is.Not.Null);
+            bool writing=false,explaining=false;float teachingDeadline=Time.realtimeSinceStartup+13;
+            var writingPoses=new[]{CampaignStorySprites.Frame("RenanTeaching",3,1),CampaignStorySprites.Frame("RenanTeaching",3,2)};
+            var explainingPoses=new System.Collections.Generic.List<Sprite>();
+            for(int row=0;row<8;row++)explainingPoses.Add(CampaignStorySprites.Frame("Directional20261026/Renan",row,0));
+            while((!writing||!explaining)&&Time.realtimeSinceStartup<teachingDeadline)
+            {
+                var pose=renan.GetComponent<SpriteRenderer>().sprite;
+                bool atBoard=System.Array.IndexOf(writingPoses,pose)>=0,atClass=explainingPoses.Contains(pose);
+                Assert.That(atBoard||atClass,Is.True,"Renan alternates the approved writing and explaining poses.");
+                writing|=atBoard;explaining|=atClass;yield return null;
+            }
+            Assert.That(writing&&explaining,Is.True,"Both parts of the teaching cycle remain visible.");
             Assert.That(GameObject.Find("Notebook_do_Renan"),Is.Not.Null);
             Assert.That(GameObject.Find("Mochila_cinza_do_Renan"),Is.Not.Null);
             Assert.That(GameObject.Find("Notebook_Campanha_Industrial"),Is.Null,"Use the real teacher laptop, without another floating prop.");
@@ -332,8 +353,8 @@ namespace Game.Tests.PlayMode
             actions.ClearActionPose();yield return null;
             var attack=actor.GetComponent<VarginhaPlayerAttack>();Assert.That(attack,Is.Not.Null);
             Assert.That(attack.TryAttack(Vector2.right),Is.True);yield return new WaitForSeconds(.1f);
-            Assert.That(renderer.sprite.name,Does.Contain("Team_V4_Punch"));yield return new WaitForSeconds(.4f);
-            Assert.That(renderer.sprite.name,Does.Not.Contain("Team_V4_Punch"));
+            Assert.That(renderer.sprite.name,Does.Contain("Team_EdelzioPunch"));yield return new WaitForSeconds(.4f);
+            Assert.That(renderer.sprite.name,Does.Not.Contain("Team_EdelzioPunch"));
             yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
         }
         [UnityTest]public IEnumerator DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens()
@@ -341,7 +362,7 @@ namespace Game.Tests.PlayMode
             CampaignStorySave.Write(new CampaignStory{phase=6});
             yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(6));yield return new WaitForSeconds(3);
             var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();var renderer=actor.GetComponent<SpriteRenderer>();
-            Assert.That(renderer.sprite.name,Does.Contain("LifeGray"));Assert.That(renderer.sprite.texture.isReadable,Is.False);
+            Assert.That(renderer.sprite.name,Does.Contain("Team_V4_WalkGray_"));Assert.That(renderer.sprite.texture.isReadable,Is.False);
             var poses=actor.GetComponent<VarginhaPlayerSpriteAnimation>();
             Vector2[] directions={Vector2.down,new(-1,-1),Vector2.left,new(-1,1),Vector2.up,new(1,1),Vector2.right,new(1,-1)};
             for(int i=0;i<directions.Length;i++)

@@ -18,7 +18,13 @@ namespace Game.Tests.PlayMode
             yield return UnityEditor.SceneManagement.EditorSceneManager.LoadSceneAsyncInPlayMode(
                 "Assets/Scenes/"+VarginhaExperimentLab.SceneName+".unity",new LoadSceneParameters(LoadSceneMode.Single));
 #else
-            yield return SceneManager.LoadSceneAsync(VarginhaExperimentLab.SceneName);
+            // The archived scene contains only this bootstrap component. Exercise
+            // that same bootstrap without adding a prototype to the release scenes.
+            yield return SceneManager.LoadSceneAsync("Menu_MisterioDeVarginha");
+            var menu=SceneManager.GetActiveScene();
+            var sandbox=SceneManager.CreateScene("LegacyLab_Integration_QA");SceneManager.SetActiveScene(sandbox);
+            yield return SceneManager.UnloadSceneAsync(menu);
+            new GameObject("LegacyLab_QA").AddComponent<VarginhaExperimentLab>();
 #endif
             yield return null;
             yield return null;

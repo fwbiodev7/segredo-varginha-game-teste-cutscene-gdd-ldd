@@ -164,16 +164,18 @@ namespace Game.Tests.PlayMode
             var visual=_targetObject.GetComponent<VarginhaPlayerSpriteAnimation>();var renderer=_targetObject.GetComponent<SpriteRenderer>();
             yield return null;Assert.That(attack.TryAttack(Vector2.right),Is.True);attack.QueueAttack(Vector2.left);
             var seen=new[]{new System.Collections.Generic.HashSet<int>(),new System.Collections.Generic.HashSet<int>()};
+            var phases=new[]{new System.Collections.Generic.HashSet<int>(),new System.Collections.Generic.HashSet<int>()};
             float deadline=Time.realtimeSinceStartup+5;
             while(attack.IsAttacking&&Time.realtimeSinceStartup<deadline)
             {
                 int step=attack.ComboStep-1,phase=visual.CombatFrame;
                 team.SendMessage("LateUpdate");
-                int pose=phase switch{0=>0,1 or 2=>1,3=>2,4=>3,_=>0};
-                Assert.That(renderer.sprite.name,Is.EqualTo("Team_V4_Punch_"+(step==0?2:1)+"_"+pose),"The renderer follows this punch's phase, not the first punch's clock.");
-                seen[step].Add(pose);yield return null;
+                int pose=phase switch{0=>0,1 or 2=>1,3=>2,_=>0};
+                Assert.That(renderer.sprite,Is.SameAs(Game.Varginha.Experiment.CampaignTeamEdelzio.Frame("EdelzioPunch",step==0?2:1,pose)),"The renderer follows this punch's phase, not the first punch's clock.");
+                seen[step].Add(pose);phases[step].Add(phase);yield return null;
             }
-            Assert.That(attack.IsAttacking,Is.False);Assert.That(seen[0].Count,Is.EqualTo(4));Assert.That(seen[1].Count,Is.EqualTo(4));
+            Assert.That(attack.IsAttacking,Is.False);Assert.That(seen[0].Count,Is.EqualTo(3));Assert.That(seen[1].Count,Is.EqualTo(3));
+            Assert.That(phases[0],Is.EquivalentTo(new[]{0,1,2,3,4,5}));Assert.That(phases[1],Is.EquivalentTo(new[]{0,1,2,3,4,5}));
             Assert.That(visual.HasActionPose,Is.False);Assert.That(visual.CombatFrame,Is.EqualTo(-1));
         }
 

@@ -12,11 +12,15 @@ namespace Game.Varginha.Experiment
         [Serializable]public sealed class Support{public string name;public int depthOffset;}
         [Serializable]public sealed class Entry{public int phase,area,layoutId;public string id,spriteId,mode;public float[] visualPixel,worldSize,suggestedInteractionPixel;public Support support;}
         sealed class Item{public string id;public SpriteRenderer sprite;public Collider2D collider;public Vector2 approach;public Color original;}
+        sealed class Focus{public GameObject root;public Vector2 approach;}
         static Catalog _catalog;
         static readonly Dictionary<string,Sprite> Sprites=new();
         static Material _crisp;
+        static Sprite _focusPixel;
         readonly List<Item> _items=new();
+        readonly List<Focus> _focus=new();
         int _phase;
+        Transform _architecture;
         static Catalog Data=>_catalog??=JsonUtility.FromJson<Catalog>(Resources.Load<TextAsset>("Varginha/Revision20261028/InvestigationEvidenceCatalogV1").text);
         public static void ApplyPoints(CampaignMapPlan plan,CampaignIllustratedMaps.Layout layout)
         {
@@ -28,10 +32,18 @@ namespace Game.Varginha.Experiment
         {
             if(plan.phase!=6&&plan.phase!=7&&plan.phase!=8&&plan.phase!=12&&plan.phase!=112&&plan.phase!=13)return;
             var owner=new GameObject("Evidencias_fisicas");owner.transform.SetParent(map,false);
-            var binder=owner.AddComponent<CampaignPhysicalEvidence>();binder._phase=plan.phase;
+            var binder=owner.AddComponent<CampaignPhysicalEvidence>();binder._phase=plan.phase;binder._architecture=map.Find("01_Planta_Paredes_Divisoes");
             foreach(var e in Data.entries)
             {
-                if(e.layoutId!=plan.phase||e.mode!="overlay")continue; // Already painted book/globe/notice stay canonical.
+                if(e.layoutId!=plan.phase)continue;
+                if(e.mode=="existing-region")
+                {
+                    // Mark only the book/paper/notice region. Do not redraw its
+                    // opaque background or tint the entire supporting furniture.
+                    binder.AddFocus(e.id,layout.Position(e.visualPixel),new Vector2(e.worldSize[0],e.worldSize[1]),plan.points.Find(p=>p.id==e.id).position,layout.Scale);
+                    continue;
+                }
+                if(e.mode!="overlay")continue; // The existing globe stays canonical.
                 var art=Array.Find(Data.sprites,a=>a.id==e.spriteId);
                 if(!Sprites.TryGetValue(art.id,out var sprite))
                 {
@@ -52,6 +64,21 @@ namespace Game.Varginha.Experiment
                     binder.Add(id,sprite,point,Vector2.one*(i==1?1.25f:1.05f),point,null,1);
                 }
             }
+        }
+        void AddFocus(string id,Vector2 centre,Vector2 size,Vector2 approach,float pixel)
+        {
+            var root=new GameObject("Foco_"+id);root.transform.SetParent(transform,false);root.transform.position=centre;
+            _focusPixel??=Sprite.Create(Texture2D.whiteTexture,new Rect(0,0,1,1),Vector2.one/2,1);
+            float stroke=pixel*1.5f,length=Mathf.Min(.2f,Mathf.Min(size.x,size.y)*.3f);
+            foreach(float x in new[]{-1f,1f})foreach(float y in new[]{-1f,1f})
+                for(int axis=0;axis<2;axis++)
+                {
+                    var line=new GameObject("Canto");line.transform.SetParent(root.transform,false);
+                    line.transform.localPosition=new Vector2(x*(size.x/2+(axis==0?-length/2:0)),y*(size.y/2+(axis==1?-length/2:0)));
+                    line.transform.localScale=axis==0?new Vector3(length,stroke,1):new Vector3(stroke,length,1);
+                    var renderer=line.AddComponent<SpriteRenderer>();renderer.sprite=_focusPixel;renderer.color=new Color(.43f,.77f,.67f,.65f);renderer.sortingOrder=22000;
+                }
+            root.SetActive(false);_focus.Add(new Focus{root=root,approach=approach});
         }
         void Add(string id,Sprite sprite,Vector2 position,Vector2 size,Vector2 approach,Transform support,int depth)
         {
@@ -79,10 +106,18 @@ namespace Game.Varginha.Experiment
             {
                 bool visible=!(_phase==112&&item.id=="key"&&story.continuation.serviceKey);
                 item.sprite.enabled=visible;item.collider.enabled=visible;
-                bool available=visible&&!actor.IsInputLocked&&Vector2.Distance(feet,item.approach)<1.45f;
+                bool available=visible&&CanInspect(actor,feet,item.approach);
                 // Only actual evidence receives this small proximity lift, never surrounding scenery.
                 item.sprite.color=available?new Color(1,.96f,.82f):item.original;
             }
+            foreach(var focus in _focus)focus.root.SetActive(CanInspect(actor,feet,focus.approach));
+        }
+        bool CanInspect(EdelzioTopDownController actor,Vector2 feet,Vector2 approach)
+        {
+            if(actor.IsInputLocked||Vector2.Distance(feet,approach)>=1.45f)return false;
+            foreach(var hit in Physics2D.LinecastAll(feet,approach))
+                if(hit.collider!=null&&hit.collider.transform.IsChildOf(_architecture))return false;
+            return true;
         }
     }
 }

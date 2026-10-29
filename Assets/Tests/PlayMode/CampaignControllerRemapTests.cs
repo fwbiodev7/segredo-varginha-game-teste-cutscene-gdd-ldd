@@ -87,7 +87,10 @@ namespace Game.Tests.PlayMode
         }
         [Test] public void FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering()
         {
-            string path=Path.Combine(Application.dataPath,"Resources/Varginha/StoryEffects/FuscaOriginal.png");
+            // In a Player, Resources are packed in .assets; the source-integrity
+            // check uses the explicit QA workspace, not a nonexistent loose file.
+            string root=System.Environment.GetEnvironmentVariable("VARGINHA_FINAL_BUILD_ROOT")??Path.GetDirectoryName(Application.dataPath);
+            string path=Path.Combine(root,"Assets/Resources/Varginha/StoryEffects/FuscaOriginal.png");
             using(var hash=SHA256.Create())Assert.That(System.BitConverter.ToString(hash.ComputeHash(File.ReadAllBytes(path))).Replace("-","").ToLowerInvariant(),Is.EqualTo("048dfd8c37a00d2fc84407871ea931f81927efd71bc69d50c733a549292f7344"));
             var side=CampaignOriginalFusca.Side;Assert.That(side.rect.size,Is.EqualTo(new Vector2(99,53)));Assert.That(side.texture.filterMode,Is.EqualTo(FilterMode.Point));
             foreach(CampaignWorkshopVehicle.Facing direction in System.Enum.GetValues(typeof(CampaignWorkshopVehicle.Facing)))

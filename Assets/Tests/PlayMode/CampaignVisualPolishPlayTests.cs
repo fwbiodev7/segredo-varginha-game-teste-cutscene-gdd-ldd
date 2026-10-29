@@ -85,8 +85,17 @@ namespace Game.Tests.PlayMode
                 yield return new WaitForSeconds(3.3f);
                 var map=GameObject.Find("Mapa_Campanha");Assert.That(map,Is.Not.Null,scene);
                 var data=CampaignIllustratedMaps.Get(phase);
+                if(phase==7)
+                {
+                    var church=map.transform.Find("Igreja_antiga_inteira");
+                    Assert.That(church,Is.Not.Null,"The complete ancient church replaces the ruins.");
+                    Assert.That(church.GetComponent<SpriteRenderer>().sprite.texture.filterMode,Is.EqualTo(FilterMode.Point));
+                    Assert.That(CampaignMapPlan.Create(7).walls.Any(w=>w.Contains(data.Position(1334,250))),Is.True,"The new building has solid ground contact.");
+                }
                 foreach(var prop in data.props)
                 {
+                    if(phase==7&&(prop.name=="Altar em ruínas"||prop.name=="Pedra memorial"||prop.name=="Sino do santuário"))
+                    {Assert.That(map.transform.Find("02_Mobilia_Colisoes/"+prop.name),Is.Null,"Replaced ruin props must stay absent.");continue;}
                     var transform=map.transform.Find("02_Mobilia_Colisoes/"+prop.name);Assert.That(transform,Is.Not.Null,scene+" "+prop.name);
                     var renderer=transform.GetComponent<SpriteRenderer>();
                     Assert.That(renderer.sprite.texture.filterMode,Is.EqualTo(FilterMode.Point),scene+" "+prop.name+" "+renderer.sprite.texture.name);

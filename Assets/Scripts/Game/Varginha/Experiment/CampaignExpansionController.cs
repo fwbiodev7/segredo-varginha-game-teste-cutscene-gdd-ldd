@@ -27,8 +27,6 @@ namespace Game.Varginha.Experiment
         private Vector2 _journalScroll;
         private bool _paused, _settings, _hidden, _driving, _parking, _departing;
         private CampaignWorkshopVehicle _vehicle;
-        private float _departureTime;
-        private Vector2 _departureStart;
         private int _selected = -1, _year = 1898, _symbol, _record = 1;
         private float _title, _saveTimer, _routeTimer, _driveTime;
         private SpriteRenderer _entity;
@@ -405,7 +403,7 @@ namespace Game.Varginha.Experiment
         }
         private void BeginDeparture()
         {
-            _departing=true;_departureTime=0;_departureStart=_vehicle.transform.position;
+            _departing=true;
             _actor.gameObject.SetActive(false);_vehicle.BeginDeparture();
             Camera.main.GetComponent<Game.Level.CameraFollow2D>().enabled=false;
             Camera.main.transform.position=new Vector3(0,-1,-10);
@@ -413,11 +411,13 @@ namespace Game.Varginha.Experiment
         }
         private void Departure()
         {
-            _departureTime+=Time.deltaTime;
-            float duration=VarginhaGameSettings.Current.reducedMotion?2:3.2f;
-            float t=Mathf.Clamp01(_departureTime/duration);
-            _vehicle.transform.position=Vector2.Lerp(_departureStart,new Vector2(Plan.bounds.xMax+4,_departureStart.y),Mathf.SmoothStep(0,1,t));
-            if(t<1)return;
+            if(_vehicle.DepartureBlocked)
+            {
+                _departing=false;_sound.Engine(false);_actor.gameObject.SetActive(true);
+                Camera.main.GetComponent<Game.Level.CameraFollow2D>().enabled=true;
+                Say("A passagem está obstruída. O Fusca parou antes do obstáculo; posso tentar sair novamente.");return;
+            }
+            if(!_vehicle.DepartureComplete)return;
             State.workshopDeparted=true;_departing=false;_sound.Engine(false);_panel="complete";Save();Lock();
         }
         private void Open(string panel) { _panel = panel; _selected = -1; Lock(); }
@@ -485,8 +485,7 @@ namespace Game.Varginha.Experiment
                 var canvas=GUI.matrix;GUI.matrix=matrix;
                 float bar=Screen.height*75/720f;
                 ExperimentGUI.Box(new Rect(0,0,Screen.width,bar),Color.black);ExperimentGUI.Box(new Rect(0,Screen.height-bar,Screen.width,bar),Color.black);
-                float duration=VarginhaGameSettings.Current.reducedMotion?2:3.2f;
-                float fade=Mathf.Clamp01((_departureTime/duration-.78f)/.22f);
+                float fade=Mathf.Clamp01((_vehicle.DepartureProgress-.78f)/.22f);
                 if(fade>0)ExperimentGUI.Box(new Rect(0,0,Screen.width,Screen.height),new Color(.008f,.015f,.025f,fade));
                 GUI.matrix=canvas;
                 ExperimentGUI.Caption(new Rect(200,661,880,45),"As marcas continuam. E a estrada também.",VarginhaGameSettings.Current.subtitleSize);

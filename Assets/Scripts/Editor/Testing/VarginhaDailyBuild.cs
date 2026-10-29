@@ -10,10 +10,10 @@ namespace Game.Editor.Testing
     public static class VarginhaDailyBuild
     {
         public const string Version = "0.5.3-beta";
-        public const string Folder = "Builds/Oizlede_0.5.3-beta_2026-10-28";
+        public const string Folder = "Builds/Oizlede_0.5.3-beta_2026-10-29";
         public const string Executable = "Oizlede - Segredo de Varginha.exe";
 
-        [MenuItem("Varginha/Build/Revisão 28-10 Windows x64")]
+        [MenuItem("Varginha/Build/Revisão 29-10 Windows x64")]
         public static void Build()
         {
             if (Application.isPlaying) throw new InvalidOperationException("Encerre o Play antes da build.");

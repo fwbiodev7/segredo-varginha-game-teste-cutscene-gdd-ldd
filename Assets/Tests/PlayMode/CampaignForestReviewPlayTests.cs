@@ -34,7 +34,11 @@ namespace Game.Tests.PlayMode
             var exterior=stage.transform.Find("Mapa_Campanha/Igreja_antiga_inteira").GetComponent<SpriteRenderer>();
             Assert.That(stage.transform.Find("Mapa_Campanha/02_Mobilia_Colisoes/Sino do santuário"),Is.Null);
             Assert.That(stage.Plan.IsClear(stage.Plan.points.Find(p=>p.id=="fabio").position,.24f),Is.True);
-            Capture(Camera.main,exterior.bounds.center,3.6f,"forest-intact-church");
+            float framing=Mathf.Max(3.6f,exterior.bounds.extents.y+.45f);
+            Vector2 centre=exterior.bounds.center;float horizontal=framing*(960f/540);
+            centre.x=Mathf.Clamp(centre.x,stage.Plan.bounds.xMin+horizontal,stage.Plan.bounds.xMax-horizontal);
+            centre.y=Mathf.Clamp(centre.y,stage.Plan.bounds.yMin+framing,stage.Plan.bounds.yMax-framing);
+            Capture(Camera.main,centre,framing,"forest-intact-church");
             stage.Interact("sign0");stage.ClosePanel();stage.Interact("sign1");stage.ClosePanel();stage.Interact("sign2");stage.ClosePanel();
             stage.Interact("fabio");Assert.That(stage.Progress.expansion.fabioMet,Is.True);stage.ClosePanel();
             yield return new WaitUntil(()=>SceneManager.GetActiveScene().name==CampaignStorySave.Scene(8));yield return new WaitForSeconds(3.4f);

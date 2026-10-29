@@ -287,7 +287,8 @@ namespace Game.Varginha.Experiment
                 CampaignFuscaCinema.DrawArrival(t,reduced);
             }
             ExperimentGUI.Box(new Rect(0,0,1280,86),Color.black);
-            ExperimentGUI.Box(new Rect(0,550,1280,170),Color.black);
+            float bottomBand=_cinematicShot=="arrival"?CampaignFuscaCinema.ArrivalViewport.yMax:550;
+            ExperimentGUI.Box(new Rect(0,bottomBand,1280,720-bottomBand),Color.black);
             ExperimentGUI.Label(new Rect(55,24,1090,46),_cinemaTitle,true);
             if(CanSkipMissionCinema&&GUI.Button(new Rect(850,25,300,38),"PULAR • ["+VarginhaInputActions.InteractLabel+"]"))TrySkipMissionCinema();
             _cinemaSubtitle.Draw(_cinemaCaption,t);

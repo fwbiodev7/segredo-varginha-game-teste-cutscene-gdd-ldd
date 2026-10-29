@@ -1,0 +1,83 @@
+{
+  "source": "output\\revisao-final-2026-10-29\\regression-player-29.xml",
+  "runResult": "Failed(Child)",
+  "tests": {
+    "total": 341,
+    "passed": 327,
+    "failed": 14,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions",
+      "message": "  Reachable 12/1 plan\n  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.CampaignContinuationPlayTests+<InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions>d__14.MoveNext () [0x00173] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignContinuationPlayTests.cs:256\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover",
+      "message": "  The live attack uses intermediate poses.\n  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.CampaignContinuationPlayTests+<NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover>d__12.MoveNext () [0x00473] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignContinuationPlayTests.cs:189\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering",
+      "message": "System.IO.DirectoryNotFoundException : Could not find a part of the path \"C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Temp\\UnityTempFile-7fd08af041791804b87dd4287a687133\\PlayerWithTests\\PlayerWithTests_Data\\Resources\\Varginha\\StoryEffects\\FuscaOriginal.png\".",
+      "stack": "  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x00164] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 \n  at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize) [0x00000] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 \n  at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int)\n  at System.IO.File.ReadAllBytes (System.String path) [0x00000] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 \n  at Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering () [0x00016] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignControllerRemapTests.cs:91 \n  at (wrapper managed-to-native) System.Reflection.RuntimeMethodInfo.InternalInvoke(System.Reflection.RuntimeMethodInfo,object,object[],System.Exception&)\n  at System.Reflection.RuntimeMethodInfo.Invoke (System.Object obj, System.Reflection.BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x0006a] in <c5ae8a4eeb824526b5df2932bc2395e0>:0 "
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate",
+      "message": "  Expected string length 18 but was 20. Strings differ at index 5.\n  Expected: \"AdultEmptyDivisoes\"\n  But was:  \"AdultInteractiveBase\"\n  ----------------^\n",
+      "stack": "at Game.Tests.PlayMode.CampaignExpansionPlayTests+<AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate>d__7.MoveNext () [0x00150] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignExpansionPlayTests.cs:117\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets",
+      "message": "  Expected: String containing \"Team_V4_Punch\"\n  But was:  \"Team_EdelzioPunch2:1_ComMochilaV3\"\n",
+      "stack": "at Game.Tests.PlayMode.CampaignExpansionPlayTests+<CharacterActionsAndPunchUseNewTransparentAnimationSheets>d__15.MoveNext () [0x002d4] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignExpansionPlayTests.cs:341\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens",
+      "message": "  Expected: String containing \"LifeGray\"\n  But was:  \"Team_V4_WalkGray_0_1\"\n",
+      "stack": "at Game.Tests.PlayMode.CampaignExpansionPlayTests+<DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens>d__16.MoveNext () [0x000bc] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignExpansionPlayTests.cs:350\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward",
+      "message": "  Expected: 1.5f +/- 0.100000001f\n  But was:  1.38888884f\n",
+      "stack": "at Game.Tests.PlayMode.CampaignExpansionPlayTests+<ReconstructedChurchRecordKeepsTheOuzanaReward>d__6.MoveNext () [0x002df] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignExpansionPlayTests.cs:100\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture",
+      "message": "  Expected: String containing \"RenanTeaching\"\n  But was:  \"Team_V4_Directional20261026/Renan_1_0\"\n",
+      "stack": "at Game.Tests.PlayMode.CampaignExpansionPlayTests+<SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture>d__14.MoveNext () [0x00462] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignExpansionPlayTests.cs:315\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent",
+      "message": "  W interacts with refill\n  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.CampaignLabWorkshopAuditTests+<WalkToAndInteract>d__14.MoveNext () [0x004e1] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignLabWorkshopAuditTests.cs:92\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignReturnSealPlayTests.ReturnSequenceKeepsTheSealUntilCrossingAndResumesSavedProgress",
+      "message": "Unhandled log message: '[Error] Failed to store screen shot (C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Temp/UnityTempFile-7fd08af041791804b87dd4287a687133/PlayerWithTests/PlayerWithTests_Data/Preview/SeloRetorno20261010/SeloNaFase.png)'. Use UnityEngine.TestTools.LogAssert.Expect",
+      "stack": "\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit",
+      "message": "  Expected: less than 0\n  But was:  0.0f\n",
+      "stack": "at Game.Tests.PlayMode.CampaignVehicleContactTests+<LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit>d__5.MoveNext () [0x00454] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignVehicleContactTests.cs:87\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.CampaignVisualPolishPlayTests.EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders",
+      "message": "  Ato3_Fase7_A_Mata Altar em ruínas\n  Expected: not null\n  But was:  null\n",
+      "stack": "at Game.Tests.PlayMode.CampaignVisualPolishPlayTests+<EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders>d__6.MoveNext () [0x001bc] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignVisualPolishPlayTests.cs:90\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch",
+      "message": "  The renderer follows this punch's phase, not the first punch's clock.\n  Expected string length 17 but was 20. Strings differ at index 5.\n  Expected: \"Team_V4_Punch_2_0\"\n  But was:  \"Team_EdelzioPunch2:0\"\n  ----------------^\n",
+      "stack": "at Game.Tests.PlayMode.VarginhaCombatTests+<CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch>d__10.MoveNext () [0x0013c] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\VarginhaCombatTests.cs:173\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    },
+    {
+      "name": "Game.Tests.PlayMode.VarginhaExperimentIntegrationTests.ExistingSchoolSupportsOpeningInvestigationAndReturn",
+      "message": "Unhandled log message: '[Error] Scene 'Laboratorio_GDD_Cutscene' couldn't be loaded because it has not been added to the active build profile or shared scene list or the AssetBundle has not been loaded.\nTo add a scene to the active build profile or shared scene list use the menu File->Build Profiles'. Use UnityEngine.TestTools.LogAssert.Expect",
+      "stack": "UnityEngine.SceneManagement.SceneManager:LoadSceneAsync (string)\nGame.Tests.PlayMode.VarginhaExperimentIntegrationTests/<ExistingSchoolSupportsOpeningInvestigationAndReturn>d__0:MoveNext () (at C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Assets/Tests/PlayMode/VarginhaExperimentIntegrationTests.cs:21)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n\n"
+    }
+  ],
+  "success": false
+}

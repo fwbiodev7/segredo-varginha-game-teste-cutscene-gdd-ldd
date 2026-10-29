@@ -204,6 +204,34 @@ namespace Game.Tests.PlayMode
             stage.Progress.pages=new[]{0,1,2};Assert.That(stage.SubmitPages(),Is.True);
             Assert.That(stage.Progress.CanLeaveHouse,Is.True);
         }
+        [UnityTest,Timeout(240000)] public IEnumerator HouseCluesBoxAndDepartureRemainReachableAfterReloadAtTheDisappearance()
+        {
+            var story=new CampaignStory{phase=2,routine=15};story.house.step=2;story.house.bagReminder=true;CampaignStorySave.Write(story);
+            yield return SceneManager.LoadSceneAsync(CampaignStorySave.Scene(2));yield return new WaitForSeconds(3.4f);
+            var stage=VarginhaCampaignStage.Active;var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();var body=actor.GetComponent<Rigidbody2D>();
+            var plan=(CampaignMapPlan)typeof(VarginhaCampaignStage).GetField("_guidancePlan",Hidden).GetValue(stage);
+            var keyboard=InputSystem.AddDevice<Keyboard>();VarginhaInputActions.Rebuild();
+            foreach(string id in new[]{"counter","exitclue","paperclue"})
+            {
+                yield return CampaignExpansionPlayTests.WalkLibrary(plan,body,keyboard,plan.points.Find(p=>p.id==id).position);
+                InputSystem.QueueStateEvent(keyboard,new KeyboardState(Key.E));yield return null;yield return null;
+                InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return null;stage.CloseDialogue();
+            }
+            Assert.That(stage.Progress.house.clues,Is.EqualTo(7));Assert.That(stage.SubmitKeyConclusion(0),Is.False);Assert.That(stage.SubmitKeyConclusion(1),Is.True);stage.CloseDialogue();
+            yield return CampaignExpansionPlayTests.WalkLibrary(plan,body,keyboard,plan.points.Find(p=>p.id=="box").position);
+            InputSystem.QueueStateEvent(keyboard,new KeyboardState(Key.E));yield return null;yield return null;
+            InputSystem.QueueStateEvent(keyboard,new KeyboardState());yield return WaitAction(stage);
+            Assert.That(stage.Progress.boxFound&&stage.Progress.school.documentsRecovered,Is.True);stage.FinishCutscene();
+            stage.Progress.pages=new[]{0,1,2};Assert.That(stage.SubmitPages(),Is.True);stage.FinishCutscene();stage.CloseDialogue();
+            Assert.That(stage.Progress.CanLeaveHouse,Is.True);
+            yield return CampaignExpansionPlayTests.WalkLibrary(plan,body,keyboard,plan.points.Find(p=>p.id=="car").position,false,()=>stage.IsActing);
+            InputSystem.QueueStateEvent(keyboard,new KeyboardState(Key.W));yield return null;
+            InputSystem.QueueStateEvent(keyboard,new KeyboardState());
+            float deadline=Time.realtimeSinceStartup+60;
+            while((SceneManager.GetActiveScene().name!=CampaignStorySave.Scene(4)||CampaignCinematics.IsTransitioning)&&Time.realtimeSinceStartup<deadline)yield return null;
+            Assert.That(SceneManager.GetActiveScene().name,Is.EqualTo(CampaignStorySave.Scene(4)));
+            Assert.That(CampaignStorySave.Load().school.documentsRecovered,Is.True);
+        }
         [UnityTest,Timeout(60000)] public IEnumerator RenanSubtitleRevealsByKeyboardAndGamepadWithoutClosingEarly()
         {
             var keyboard=InputSystem.AddDevice<Keyboard>();var pad=InputSystem.AddDevice<Gamepad>();VarginhaInputActions.Rebuild();

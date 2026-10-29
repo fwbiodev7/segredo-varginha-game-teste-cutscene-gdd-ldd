@@ -1,0 +1,1263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="18" result="Failed(Child)" total="18" passed="14" failed="4" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="0001-01-01 00:00:00Z" end-time="0001-01-01 00:00:00Z" duration="280,6304249">
+  <test-suite type="TestSuite" id="1000" name="Varginha_Completion_QA_20261027" fullname="Varginha_Completion_QA_20261027" runstate="Runnable" testcasecount="342" result="Failed" site="Child" start-time="2026-10-29 11:01:46Z" end-time="2026-10-29 11:06:26Z" duration="280.630425" total="18" passed="14" failed="4" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+One or more child tests had errors  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering
+One or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens
+QA_WALK 6 corner=(0.25, -4.63) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -4.63) target=(-6.12, 2.34)
+QA_WALK 6 corner=(0.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.12, 2.34) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.25, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.18, 3.98) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.00, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.34, 3.98) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.62) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.25, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.63) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.25, -6.88) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.20, -6.92) target=(0.20, -6.92)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence
+  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent
+QA_WALK 2 corner=(-3.75, 2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(-3.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.27, -3.94) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.04, -0.21) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, 0.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(8.00, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.24, 1.68) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 2.00) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-1.25, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.87, 2.82) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(-5.75, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.25, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.21, -1.75) target=(23.21, -1.75)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.HouseCluesBoxAndDepartureRemainReachableAfterReloadAtTheDisappearance
+One or more child tests had errors  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignReturnSealPlayTests.ReturnSequenceKeepsTheSealUntilCrossingAndResumesSavedProgress
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVisualPolishPlayTests.EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders
+NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch
+NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaExperimentIntegrationTests.ExistingSchoolSupportsOpeningInvestigationAndReturn
+<properties><property name="platform" value="PlayMode"></property></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="Assembly" id="1396" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Temp/UnityTempFile-0b18266a312610642852ee9b35875886/PlayerWithTests/PlayerWithTests_Data/Managed/GamePlayModeTests.dll" runstate="Runnable" testcasecount="342" result="Failed" site="Child" start-time="2026-10-29 11:01:46Z" end-time="2026-10-29 11:06:26Z" duration="280.585779" total="18" passed="14" failed="4" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+One or more child tests had errors  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering
+One or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens
+QA_WALK 6 corner=(0.25, -4.63) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -4.63) target=(-6.12, 2.34)
+QA_WALK 6 corner=(0.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.12, 2.34) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.25, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.18, 3.98) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.00, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.34, 3.98) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.62) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.25, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.63) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.25, -6.88) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.20, -6.92) target=(0.20, -6.92)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence
+  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent
+QA_WALK 2 corner=(-3.75, 2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(-3.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.27, -3.94) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.04, -0.21) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, 0.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(8.00, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.24, 1.68) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 2.00) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-1.25, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.87, 2.82) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(-5.75, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.25, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.21, -1.75) target=(23.21, -1.75)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.HouseCluesBoxAndDepartureRemainReachableAfterReloadAtTheDisappearance
+One or more child tests had errors  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignReturnSealPlayTests.ReturnSequenceKeepsTheSealUntilCrossingAndResumesSavedProgress
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVisualPolishPlayTests.EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders
+NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch
+NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaExperimentIntegrationTests.ExistingSchoolSupportsOpeningInvestigationAndReturn
+<properties><property name="_PID" value="22400"></property><property name="_APPDOMAIN" value="Unity Root Domain"></property><property name="platform" value="PlayMode"></property><property name="EditorOnly" value="False"></property></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1397" name="Game" fullname="Game" runstate="Runnable" testcasecount="342" result="Failed" site="Child" start-time="2026-10-29 11:01:46Z" end-time="2026-10-29 11:06:26Z" duration="280.556137" total="18" passed="14" failed="4" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+One or more child tests had errors  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering
+One or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens
+QA_WALK 6 corner=(0.25, -4.63) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -4.63) target=(-6.12, 2.34)
+QA_WALK 6 corner=(0.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.12, 2.34) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.25, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.18, 3.98) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.00, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.34, 3.98) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.62) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.25, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.63) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.25, -6.88) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.20, -6.92) target=(0.20, -6.92)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence
+  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent
+QA_WALK 2 corner=(-3.75, 2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(-3.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.27, -3.94) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.04, -0.21) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, 0.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(8.00, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.24, 1.68) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 2.00) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-1.25, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.87, 2.82) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(-5.75, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.25, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.21, -1.75) target=(23.21, -1.75)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.HouseCluesBoxAndDepartureRemainReachableAfterReloadAtTheDisappearance
+One or more child tests had errors  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignReturnSealPlayTests.ReturnSequenceKeepsTheSealUntilCrossingAndResumesSavedProgress
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVisualPolishPlayTests.EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders
+NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch
+NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaExperimentIntegrationTests.ExistingSchoolSupportsOpeningInvestigationAndReturn
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1398" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="342" result="Failed" site="Child" start-time="2026-10-29 11:01:46Z" end-time="2026-10-29 11:06:26Z" duration="280.530538" total="18" passed="14" failed="4" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+One or more child tests had errors  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering
+One or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens
+QA_WALK 6 corner=(0.25, -4.63) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -4.63) target=(-6.12, 2.34)
+QA_WALK 6 corner=(0.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.12, 2.34) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.25, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.18, 3.98) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.00, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.34, 3.98) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.62) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.25, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.63) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.25, -6.88) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.20, -6.92) target=(0.20, -6.92)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence
+  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent
+QA_WALK 2 corner=(-3.75, 2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(-3.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.27, -3.94) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.04, -0.21) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, 0.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(8.00, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.24, 1.68) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 2.00) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-1.25, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.87, 2.82) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(-5.75, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.25, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.21, -1.75) target=(23.21, -1.75)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.HouseCluesBoxAndDepartureRemainReachableAfterReloadAtTheDisappearance
+One or more child tests had errors  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignReturnSealPlayTests.ReturnSequenceKeepsTheSealUntilCrossingAndResumesSavedProgress
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVisualPolishPlayTests.EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders
+NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch
+NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaExperimentIntegrationTests.ExistingSchoolSupportsOpeningInvestigationAndReturn
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1399" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="342" result="Failed" site="Child" start-time="2026-10-29 11:01:46Z" end-time="2026-10-29 11:06:26Z" duration="280.500866" total="18" passed="14" failed="4" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+One or more child tests had errors  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering
+One or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens
+QA_WALK 6 corner=(0.25, -4.63) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -4.63) target=(-6.12, 2.34)
+QA_WALK 6 corner=(0.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.12, 2.34) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.25, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.18, 3.98) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.00, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.34, 3.98) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.62) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.25, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.63) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.25, -6.88) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.20, -6.92) target=(0.20, -6.92)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence
+  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent
+QA_WALK 2 corner=(-3.75, 2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(-3.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.27, -3.94) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.04, -0.21) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, 0.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(8.00, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.24, 1.68) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 2.00) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-1.25, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.87, 2.82) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(-5.75, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.25, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.21, -1.75) target=(23.21, -1.75)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.HouseCluesBoxAndDepartureRemainReachableAfterReloadAtTheDisappearance
+One or more child tests had errors  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignReturnSealPlayTests.ReturnSequenceKeepsTheSealUntilCrossingAndResumesSavedProgress
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVisualPolishPlayTests.EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders
+NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch
+NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaExperimentIntegrationTests.ExistingSchoolSupportsOpeningInvestigationAndReturn
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestFixture" id="1033" name="CampaignCinematicOpeningPlayTests" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-29 11:01:46Z" end-time="2026-10-29 11:02:27Z" duration="40.749552" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+<properties></properties><test-case id="1034" name="AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" methodname="AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" seed="3351823" result="Passed" start-time="2026-10-29 11:01:46Z" end-time="2026-10-29 11:02:27Z" duration="40.700255" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+</output></test-case></test-suite><test-suite type="TestFixture" id="1039" name="CampaignContinuationPlayTests" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" testcasecount="11" result="Failed" site="Child" start-time="2026-10-29 11:02:27Z" end-time="2026-10-29 11:02:52Z" duration="25.486739" total="2" passed="1" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errors  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-case id="1045" name="InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions" methodname="InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="1601122422" result="Failed" start-time="2026-10-29 11:02:27Z" end-time="2026-10-29 11:02:40Z" duration="13.693270" asserts="0">  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="180000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+<message>  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+</message><stack-trace>at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+</stack-trace></failure><output>QA continuation scene loaded: 11 / 0
+QA continuation ready: 11 / 0
+QA investigation passed: 11
+QA continuation scene loaded: 12 / 0
+QA continuation ready: 12 / 0
+QA continuation scene loaded: 12 / 1
+QA continuation ready: 12 / 1
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignContinuationPlayTests.InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions
+  Reachable 12/1 plan
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignContinuationPlayTests+&lt;InvestigationAreasRemainReachableAndPuzzlesPreserveTheirSolutions&gt;d__14.MoveNext () [0x00173] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignContinuationPlayTests.cs:258
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+</output></test-case><test-case id="1043" name="NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover" fullname="Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover" methodname="NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover" classname="Game.Tests.PlayMode.CampaignContinuationPlayTests" runstate="Runnable" seed="1193790125" result="Passed" start-time="2026-10-29 11:02:40Z" end-time="2026-10-29 11:02:52Z" duration="11.760207" asserts="0">QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>QA continuation scene loaded: 20 / 0
+QA continuation ready: 20 / 0
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignContinuationPlayTests.NaturalBossAndChildAttacksWarnThenDealOneHitAndRecover
+</output></test-case></test-suite><test-suite type="TestFixture" id="1051" name="CampaignControllerRemapTests" fullname="Game.Tests.PlayMode.CampaignControllerRemapTests" classname="Game.Tests.PlayMode.CampaignControllerRemapTests" runstate="Runnable" testcasecount="6" result="Passed" start-time="2026-10-29 11:02:52Z" end-time="2026-10-29 11:02:52Z" duration="0.052384" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering
+<properties><property name="Category" value="HudPuzzles"></property></properties><test-case id="1056" name="FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering" fullname="Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering" methodname="FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering" classname="Game.Tests.PlayMode.CampaignControllerRemapTests" runstate="Runnable" seed="830363953" result="Passed" start-time="2026-10-29 11:02:52Z" end-time="2026-10-29 11:02:52Z" duration="0.027362" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering
+<properties><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignControllerRemapTests.FuscaOriginalPixelsAndAspectArePreservedAndViewsHavePointFiltering
+</output></test-case></test-suite><test-suite type="TestFixture" id="1063" name="CampaignExpansionPlayTests" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" testcasecount="10" result="Failed" site="Child" start-time="2026-10-29 11:02:52Z" end-time="2026-10-29 11:03:34Z" duration="41.678841" total="6" passed="4" failed="2" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsNATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens
+QA_WALK 6 corner=(0.25, -4.63) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -4.63) target=(-6.12, 2.34)
+QA_WALK 6 corner=(0.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.12, 2.34) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.25, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.18, 3.98) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.00, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.34, 3.98) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.62) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.25, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.63) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.25, -6.88) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.20, -6.92) target=(0.20, -6.92)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence
+  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-case id="1066" name="AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate" methodname="AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1099668056" result="Passed" start-time="2026-10-29 11:02:52Z" end-time="2026-10-29 11:03:00Z" duration="8.189512" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+</output></test-case><test-case id="1072" name="CharacterActionsAndPunchUseNewTransparentAnimationSheets" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets" methodname="CharacterActionsAndPunchUseNewTransparentAnimationSheets" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="2012951182" result="Passed" start-time="2026-10-29 11:03:00Z" end-time="2026-10-29 11:03:05Z" duration="4.079336" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.CharacterActionsAndPunchUseNewTransparentAnimationSheets
+</output></test-case><test-case id="1073" name="DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens" methodname="DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="777836504" result="Passed" start-time="2026-10-29 11:03:05Z" end-time="2026-10-29 11:03:11Z" duration="6.600987" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.DailyAnimationsKeepEquipmentAndGroundCollisionWhileBackpackStillOpens
+</output></test-case><test-case id="1067" name="IndustrialLibraryHasPhysicalPassagesAndReachableEvidence" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence" methodname="IndustrialLibraryHasPhysicalPassagesAndReachableEvidence" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="375946927" result="Passed" start-time="2026-10-29 11:03:11Z" end-time="2026-10-29 11:03:27Z" duration="15.599693" asserts="0">QA_WALK 6 corner=(0.25, -4.63) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -4.63) target=(-6.12, 2.34)
+QA_WALK 6 corner=(0.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.12, 2.34) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.25, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.18, 3.98) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.00, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.34, 3.98) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.62) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.25, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.63) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.25, -6.88) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.20, -6.92) target=(0.20, -6.92)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>QA_WALK 6 corner=(0.25, -4.63) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -4.63) target=(-6.12, 2.34)
+QA_WALK 6 corner=(0.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -1.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.25, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, -0.88) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-2.50, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.37) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.12, 2.34) target=(-6.12, 2.34)
+QA_WALK 6 corner=(-6.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 2.62) target=(7.18, 3.98)
+QA_WALK 6 corner=(-1.00, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.12) target=(7.18, 3.98)
+QA_WALK 6 corner=(4.75, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.25, 3.87) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.18, 3.98) target=(7.18, 3.98)
+QA_WALK 6 corner=(7.00, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.87) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.34, 3.98) target=(5.34, 3.98)
+QA_WALK 6 corner=(5.25, 3.62) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.25, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 3.37) target=(0.20, -2.26)
+QA_WALK 6 corner=(5.00, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 1.12) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.75, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, 0.87) target=(0.20, -2.26)
+QA_WALK 6 corner=(4.50, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.38) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.20, -2.26) target=(0.20, -2.26)
+QA_WALK 6 corner=(0.25, -2.63) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.25, -6.88) target=(0.20, -6.92)
+QA_WALK 6 corner=(0.20, -6.92) target=(0.20, -6.92)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.IndustrialLibraryHasPhysicalPassagesAndReachableEvidence
+</output></test-case><test-case id="1065" name="ReconstructedChurchRecordKeepsTheOuzanaReward" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward" methodname="ReconstructedChurchRecordKeepsTheOuzanaReward" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1603906927" result="Failed" start-time="2026-10-29 11:03:27Z" end-time="2026-10-29 11:03:28Z" duration="1.527030" asserts="0">  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+<message>  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+</message><stack-trace>at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+</stack-trace></failure><output>NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.ReconstructedChurchRecordKeepsTheOuzanaReward
+  Use the approved native idle pose, including its authored visible height.
+  Expected: same as &lt;Team_V4_OuzanaAttackV2_0_5 (UnityEngine.Sprite)&gt;
+  But was:  &lt;Team_V4_OuzanaAttackV2_3_5 (UnityEngine.Sprite)&gt;
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;ReconstructedChurchRecordKeepsTheOuzanaReward&gt;d__6.MoveNext () [0x002df] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:100
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+</output></test-case><test-case id="1071" name="SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" methodname="SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="2125529547" result="Failed" start-time="2026-10-29 11:03:28Z" end-time="2026-10-29 11:03:34Z" duration="5.639559" asserts="0">  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+<message>  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+</message><stack-trace>at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+</stack-trace></failure><output>NATIVE_TEST Failed Game.Tests.PlayMode.CampaignExpansionPlayTests.SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture
+  Expected: String containing "Directional20261026/Renan"
+  But was:  "Team_V4_RenanTeaching_3_1"
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;SchoolKeepsGateScaleAndStudentsClearOfRenanAndFurniture&gt;d__14.MoveNext () [0x00462] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:316
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+</output></test-case></test-suite><test-suite type="TestFixture" id="1086" name="CampaignLabWorkshopAuditTests" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-29 11:03:34Z" end-time="2026-10-29 11:03:58Z" duration="23.735845" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent
+<properties></properties><test-case id="1088" name="WorkshopSingleApplicationReloadAndDepartureRemainConsistent" fullname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent" methodname="WorkshopSingleApplicationReloadAndDepartureRemainConsistent" classname="Game.Tests.PlayMode.CampaignLabWorkshopAuditTests" runstate="Runnable" seed="1097850247" result="Passed" start-time="2026-10-29 11:03:34Z" end-time="2026-10-29 11:03:58Z" duration="23.720578" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignLabWorkshopAuditTests.WorkshopSingleApplicationReloadAndDepartureRemainConsistent
+</output></test-case></test-suite><test-suite type="TestFixture" id="1092" name="CampaignMessagePlayTests" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-29 11:03:58Z" end-time="2026-10-29 11:04:55Z" duration="57.845532" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">QA_WALK 2 corner=(-3.75, 2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(-3.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.27, -3.94) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.04, -0.21) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, 0.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(8.00, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.24, 1.68) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 2.00) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-1.25, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.87, 2.82) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(-5.75, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.25, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.21, -1.75) target=(23.21, -1.75)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.HouseCluesBoxAndDepartureRemainReachableAfterReloadAtTheDisappearance
+<properties></properties><test-case id="1099" name="HouseCluesBoxAndDepartureRemainReachableAfterReloadAtTheDisappearance" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.HouseCluesBoxAndDepartureRemainReachableAfterReloadAtTheDisappearance" methodname="HouseCluesBoxAndDepartureRemainReachableAfterReloadAtTheDisappearance" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="16872229" result="Passed" start-time="2026-10-29 11:03:58Z" end-time="2026-10-29 11:04:55Z" duration="57.813035" asserts="0">QA_WALK 2 corner=(-3.75, 2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(-3.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.27, -3.94) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.04, -0.21) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, 0.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(8.00, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.24, 1.68) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 2.00) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-1.25, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.87, 2.82) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(-5.75, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.25, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.21, -1.75) target=(23.21, -1.75)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.HouseCluesBoxAndDepartureRemainReachableAfterReloadAtTheDisappearance
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="240000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>QA_WALK 2 corner=(-3.75, 2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(-3.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -2.75) target=(5.27, -3.94)
+QA_WALK 2 corner=(0.75, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.25) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.00, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -4.00) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.27, -3.94) target=(5.27, -3.94)
+QA_WALK 2 corner=(5.25, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.75) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.50, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -3.50) target=(8.04, -0.21)
+QA_WALK 2 corner=(6.75, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, -0.25) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.04, -0.21) target=(8.04, -0.21)
+QA_WALK 2 corner=(8.00, 0.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(8.00, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.00) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-0.75, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 1.75) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.24, 1.68) target=(-1.24, 1.68)
+QA_WALK 2 corner=(-1.25, 2.00) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-1.25, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.75) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.87, 2.82) target=(-5.87, 2.82)
+QA_WALK 2 corner=(-5.75, 2.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(-5.75, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 1.00) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.50, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(0.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.25) target=(23.21, -1.75)
+QA_WALK 2 corner=(9.75, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, 0.50) target=(23.21, -1.75)
+QA_WALK 2 corner=(25.50, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.25, -1.75) target=(23.21, -1.75)
+QA_WALK 2 corner=(23.21, -1.75) target=(23.21, -1.75)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.HouseCluesBoxAndDepartureRemainReachableAfterReloadAtTheDisappearance
+</output></test-case></test-suite><test-suite type="TestFixture" id="1105" name="CampaignPhysicalEvidencePlayTests" fullname="Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests" classname="Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2026-10-29 11:04:55Z" end-time="2026-10-29 11:05:06Z" duration="10.443762" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errors  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-case id="1106" name="CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload" fullname="Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload" methodname="CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload" classname="Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests" runstate="Runnable" seed="459890298" result="Failed" start-time="2026-10-29 11:04:56Z" end-time="2026-10-29 11:05:06Z" duration="10.390068" asserts="0">  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="240000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+<message>  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+</message><stack-trace>at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+</stack-trace></failure><output>QA_WALK 12 corner=(0.00, -5.25) target=(-2.83, -1.98)
+QA_WALK 12 corner=(0.00, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -2.00) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.83, -1.98) target=(-2.83, -1.98)
+QA_WALK 12 corner=(-2.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, -1.75) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.75, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 0.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-1.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(0.00, 1.00) target=(-0.03, 1.02)
+QA_WALK 12 corner=(-0.03, 1.02) target=(-0.03, 1.02)
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignPhysicalEvidencePlayTests.CasaraoKeyDocumentsAndBasementCanBeReachedWithRealMovementAndReload
+  Physical route to (6.50, -5.47)
+  Expected: True
+  But was:  False
+
+at Game.Tests.PlayMode.CampaignExpansionPlayTests+&lt;WalkLibrary&gt;d__12.MoveNext () [0x00052] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignExpansionPlayTests.cs:240
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+</output></test-case></test-suite><test-suite type="TestFixture" id="1135" name="CampaignReturnSealPlayTests" fullname="Game.Tests.PlayMode.CampaignReturnSealPlayTests" classname="Game.Tests.PlayMode.CampaignReturnSealPlayTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-29 11:05:06Z" end-time="2026-10-29 11:05:14Z" duration="8.112567" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignReturnSealPlayTests.ReturnSequenceKeepsTheSealUntilCrossingAndResumesSavedProgress
+<properties></properties><test-case id="1138" name="ReturnSequenceKeepsTheSealUntilCrossingAndResumesSavedProgress" fullname="Game.Tests.PlayMode.CampaignReturnSealPlayTests.ReturnSequenceKeepsTheSealUntilCrossingAndResumesSavedProgress" methodname="ReturnSequenceKeepsTheSealUntilCrossingAndResumesSavedProgress" classname="Game.Tests.PlayMode.CampaignReturnSealPlayTests" runstate="Runnable" seed="1725020436" result="Passed" start-time="2026-10-29 11:05:06Z" end-time="2026-10-29 11:05:14Z" duration="8.096726" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignReturnSealPlayTests.ReturnSequenceKeepsTheSealUntilCrossingAndResumesSavedProgress
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignReturnSealPlayTests.ReturnSequenceKeepsTheSealUntilCrossingAndResumesSavedProgress
+</output></test-case></test-suite><test-suite type="TestFixture" id="1150" name="CampaignVehicleContactTests" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-29 11:05:14Z" end-time="2026-10-29 11:05:20Z" duration="5.477900" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+<properties></properties><test-case id="1152" name="LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit" fullname="Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit" methodname="LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit" classname="Game.Tests.PlayMode.CampaignVehicleContactTests" runstate="Runnable" seed="941606352" result="Passed" start-time="2026-10-29 11:05:14Z" end-time="2026-10-29 11:05:19Z" duration="5.432039" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="60000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVehicleContactTests.LegacyRoadAcceleratesCoastsReversesAndEscapesItsLowerLimit
+</output></test-case></test-suite><test-suite type="TestFixture" id="1155" name="CampaignVisualPolishPlayTests" fullname="Game.Tests.PlayMode.CampaignVisualPolishPlayTests" classname="Game.Tests.PlayMode.CampaignVisualPolishPlayTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-29 11:05:20Z" end-time="2026-10-29 11:06:25Z" duration="65.026164" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVisualPolishPlayTests.EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders
+<properties></properties><test-case id="1157" name="EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders" fullname="Game.Tests.PlayMode.CampaignVisualPolishPlayTests.EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders" methodname="EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders" classname="Game.Tests.PlayMode.CampaignVisualPolishPlayTests" runstate="Runnable" seed="157901676" result="Passed" start-time="2026-10-29 11:05:20Z" end-time="2026-10-29 11:06:25Z" duration="64.984104" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVisualPolishPlayTests.EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignVisualPolishPlayTests.EveryAuthoredCampaignSceneLoadsWithClippedFurnitureAndMatchingColliders
+</output></test-case></test-suite><test-suite type="TestFixture" id="1297" name="VarginhaCombatTests" fullname="Game.Tests.PlayMode.VarginhaCombatTests" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" testcasecount="13" result="Passed" start-time="2026-10-29 11:06:25Z" end-time="2026-10-29 11:06:26Z" duration="1.058479" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch
+<properties></properties><test-case id="1304" name="CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch" fullname="Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch" methodname="CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch" classname="Game.Tests.PlayMode.VarginhaCombatTests" runstate="Runnable" seed="833197100" result="Passed" start-time="2026-10-29 11:06:25Z" end-time="2026-10-29 11:06:26Z" duration="1.021304" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="15000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaCombatTests.CampaignRendererRestartsItsVisibleCycleForEachBufferedPunch
+</output></test-case></test-suite><test-suite type="TestFixture" id="1315" name="VarginhaExperimentIntegrationTests" fullname="Game.Tests.PlayMode.VarginhaExperimentIntegrationTests" classname="Game.Tests.PlayMode.VarginhaExperimentIntegrationTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-29 11:06:26Z" end-time="2026-10-29 11:06:26Z" duration="0.636155" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaExperimentIntegrationTests.ExistingSchoolSupportsOpeningInvestigationAndReturn
+<properties></properties><test-case id="1316" name="ExistingSchoolSupportsOpeningInvestigationAndReturn" fullname="Game.Tests.PlayMode.VarginhaExperimentIntegrationTests.ExistingSchoolSupportsOpeningInvestigationAndReturn" methodname="ExistingSchoolSupportsOpeningInvestigationAndReturn" classname="Game.Tests.PlayMode.VarginhaExperimentIntegrationTests" runstate="Runnable" seed="1779812896" result="Passed" start-time="2026-10-29 11:06:26Z" end-time="2026-10-29 11:06:26Z" duration="0.622359" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaExperimentIntegrationTests.ExistingSchoolSupportsOpeningInvestigationAndReturn
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.VarginhaExperimentIntegrationTests.ExistingSchoolSupportsOpeningInvestigationAndReturn
+</output></test-case></test-suite></test-suite></test-suite></test-suite></test-suite></test-suite>
+</test-run>

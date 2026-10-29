@@ -16,7 +16,13 @@ namespace Game.Varginha.Experiment
         private Rigidbody2D _body;
         private Transform _lights,_bay;
         private Vector2 _input,_velocity;
-        private bool _parking,_track;
+        private bool _parking,_track,_leaving;
+        private Vector2 _departureRoad,_departureEnd;
+        private int _departureLeg;
+        private float _departureBlockedTime;
+        public bool DepartureComplete {get;private set;}
+        public bool DepartureBlocked {get;private set;}
+        public float DepartureProgress=>DepartureComplete?1:_departureLeg<2?0:Mathf.InverseLerp(_departureRoad.x,_departureEnd.x,_body.position.x);
         [SerializeField] private float forwardSpeed=2.65f,reverseSpeed=1.7f,acceleration=3.5f,coastDeceleration=8,brakeDeceleration=12;
         [SerializeField] private float maximumSteerAngle=35,steerResponse=3.5f,steerReturn=4,wheelbase=1.6f,lateralGrip=18;
         private float _speed,_steer,_yaw;
@@ -114,6 +120,7 @@ namespace Game.Varginha.Experiment
         }
         private void FixedUpdate()
         {
+            if(_leaving){TickDeparture();return;}
             if(_track){TickTrack();return;}
             if(!_parking)return;
             float dt=Time.fixedDeltaTime,throttle=_input.y;
@@ -160,6 +167,53 @@ namespace Game.Varginha.Experiment
             state.workshopHasYaw=true;state.workshopYaw=_yaw;
         }
         public void FinishTrack() { _track=false;StopInput();_body.bodyType=RigidbodyType2D.Static;CampaignFuscaLighting.SetEnabled(_lights,false);Physics2D.SyncTransforms(); }
-        public void BeginDeparture() { _track=false;StopInput();SetFacing(Facing.East);_body.simulated=false;CampaignFuscaLighting.SetEnabled(_lights,true); }
+        public void BeginDeparture()
+        {
+            _parking=_track=false;StopInput();DepartureComplete=DepartureBlocked=false;
+            _departureLeg=0;_departureBlockedTime=0;_leaving=true;
+            _body.simulated=true;_body.bodyType=RigidbodyType2D.Kinematic;
+            // Reverse through the same garage opening used on arrival. The turn
+            // happens on the street, and the shot ends before the map boundary.
+            var layout=CampaignIllustratedMaps.Get(10);
+            _departureRoad=new Vector2(_body.position.x,layout.Position(779,860).y);
+            _departureEnd=layout.Position(1280,860);
+            _renderer.sprite=FrameSprite(Facing.North);_box.size=Size(Facing.North);_box.offset=Vector2.zero;
+            _body.rotation=_yaw;_lights.localRotation=Quaternion.identity;
+            CampaignFuscaLighting.SetEnabled(_lights,true);
+        }
+        private void TickDeparture()
+        {
+            float dt=Time.fixedDeltaTime;
+            if(_departureLeg==1)
+            {
+                _speed=Mathf.MoveTowards(_speed,0,brakeDeceleration*dt);
+                if(Mathf.Abs(_speed)>.01f)return;
+                float next=Mathf.MoveTowardsAngle(_yaw,-90,75*dt);
+                if(IsOccupied(_box.size,next)){BlockedDeparture(dt);return;}
+                _departureBlockedTime=0;_yaw=next;_body.MoveRotation(_yaw);UpdateDirection();
+                if(Mathf.Abs(Mathf.DeltaAngle(_yaw,-90))<.1f)_departureLeg=2;
+                return;
+            }
+            Vector2 target=_departureLeg==0?_departureRoad:_departureEnd;
+            if(Vector2.Distance(_body.position,target)<.04f)
+            {
+                if(_departureLeg==0){_departureLeg=1;return;}
+                _leaving=false;DepartureComplete=true;StopInput();_body.bodyType=RigidbodyType2D.Static;
+                CampaignFuscaLighting.SetEnabled(_lights,false);return;
+            }
+            float throttle=_departureLeg==0?-1:1;
+            _speed=CampaignVehiclePhysics.Speed(_speed,throttle,forwardSpeed,reverseSpeed,acceleration,coastDeceleration,brakeDeceleration,dt);
+            Vector2 delta=Vector2.MoveTowards(_body.position,target,Mathf.Abs(_speed)*dt)-_body.position;
+            float clear=CampaignVehiclePhysics.ClearDistance(_body,_box,_yaw,delta,_hits);
+            if(clear<delta.magnitude-.0001f){_speed=0;BlockedDeparture(dt);}else _departureBlockedTime=0;
+            if(clear>0)_body.MovePosition(_body.position+delta.normalized*clear);
+        }
+        private void BlockedDeparture(float dt)
+        {
+            _departureBlockedTime+=dt;
+            if(_departureBlockedTime<1)return;
+            _leaving=false;DepartureBlocked=true;StopInput();_body.bodyType=RigidbodyType2D.Static;
+            CampaignFuscaLighting.SetEnabled(_lights,false);
+        }
     }
 }
