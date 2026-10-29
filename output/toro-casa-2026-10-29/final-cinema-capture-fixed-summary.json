@@ -1,0 +1,18 @@
+{
+  "source": "output\\toro-casa-2026-10-29\\final-cinema-capture-fixed.xml",
+  "runResult": "Failed(Child)",
+  "tests": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl",
+      "message": "  The capture must show the white pickup, not a pause overlay or hidden shot.\n  Expected: greater than 0.449999988f\n  But was:  0.0352941193f\n",
+      "stack": "at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+<Capture>d__13.MoveNext () [0x00106] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignCinematicOpeningPlayTests.cs:57\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    }
+  ],
+  "success": false
+}

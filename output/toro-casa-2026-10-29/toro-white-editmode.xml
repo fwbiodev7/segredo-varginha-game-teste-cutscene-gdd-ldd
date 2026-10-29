@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="54" result="Passed" total="54" passed="54" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:53Z" duration="0,8678676">
+  <test-suite type="TestSuite" id="1000" name="Varginha_Completion_QA_20261027" fullname="Varginha_Completion_QA_20261027" runstate="Runnable" testcasecount="462" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:53Z" duration="0.867868" total="54" passed="54" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1547" name="GameEditModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Library/ScriptAssemblies/GameEditModeTests.dll" runstate="Runnable" testcasecount="462" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:53Z" duration="0.846423" total="54" passed="54" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="22048" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1548" name="Game" fullname="Game" runstate="Runnable" testcasecount="462" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:53Z" duration="0.822060" total="54" passed="54" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1549" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="462" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:53Z" duration="0.808865" total="54" passed="54" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1550" name="EditMode" fullname="Game.Tests.EditMode" runstate="Runnable" testcasecount="462" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:53Z" duration="0.795996" total="54" passed="54" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1013" name="CampaignCinematicOpeningTests" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" testcasecount="26" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:53Z" duration="0.633172" total="26" passed="26" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1042" name="AdultMorningRetainsTheAuthoredLayoutAndOnlyAddsGlassOverlays" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.AdultMorningRetainsTheAuthoredLayoutAndOnlyAddsGlassOverlays" methodname="AdultMorningRetainsTheAuthoredLayoutAndOnlyAddsGlassOverlays" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="1888363260" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.089777" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.AdultMorningRetainsTheAuthoredLayoutAndOnlyAddsGlassOverlays
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.AdultMorningRetainsTheAuthoredLayoutAndOnlyAddsGlassOverlays
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.AdultMorningRetainsTheAuthoredLayoutAndOnlyAddsGlassOverlays
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.AdultMorningRetainsTheAuthoredLayoutAndOnlyAddsGlassOverlays
+]]></output>
+              </test-case>
+              <test-case id="1022" name="CabinInterferenceTravelsAcrossTheImageWithoutBlanketingIt" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.CabinInterferenceTravelsAcrossTheImageWithoutBlanketingIt" methodname="CabinInterferenceTravelsAcrossTheImageWithoutBlanketingIt" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="796233507" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.005128" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.CabinInterferenceTravelsAcrossTheImageWithoutBlanketingIt
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.CabinInterferenceTravelsAcrossTheImageWithoutBlanketingIt
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.CabinInterferenceTravelsAcrossTheImageWithoutBlanketingIt
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.CabinInterferenceTravelsAcrossTheImageWithoutBlanketingIt
+]]></output>
+              </test-case>
+              <test-case id="1040" name="CampaignOpeningKeepsTheFirstMemoryIncompleteAndHasEightChildPoses" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.CampaignOpeningKeepsTheFirstMemoryIncompleteAndHasEightChildPoses" methodname="CampaignOpeningKeepsTheFirstMemoryIncompleteAndHasEightChildPoses" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="1518561789" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.010279" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.CampaignOpeningKeepsTheFirstMemoryIncompleteAndHasEightChildPoses
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.CampaignOpeningKeepsTheFirstMemoryIncompleteAndHasEightChildPoses
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.CampaignOpeningKeepsTheFirstMemoryIncompleteAndHasEightChildPoses
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.CampaignOpeningKeepsTheFirstMemoryIncompleteAndHasEightChildPoses
+]]></output>
+              </test-case>
+              <test-case id="1018" name="DigitalTearsHaveReferenceColoursAndStayInsideTheImage" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.DigitalTearsHaveReferenceColoursAndStayInsideTheImage" methodname="DigitalTearsHaveReferenceColoursAndStayInsideTheImage" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="47385510" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.017924" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.DigitalTearsHaveReferenceColoursAndStayInsideTheImage
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.DigitalTearsHaveReferenceColoursAndStayInsideTheImage
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.DigitalTearsHaveReferenceColoursAndStayInsideTheImage
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.DigitalTearsHaveReferenceColoursAndStayInsideTheImage
+]]></output>
+              </test-case>
+              <test-case id="1023" name="FuscaSequencePreservesGddRevealOrderAndAReadableDuration" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.FuscaSequencePreservesGddRevealOrderAndAReadableDuration" methodname="FuscaSequencePreservesGddRevealOrderAndAReadableDuration" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="432836446" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.003508" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.FuscaSequencePreservesGddRevealOrderAndAReadableDuration
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.FuscaSequencePreservesGddRevealOrderAndAReadableDuration
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.FuscaSequencePreservesGddRevealOrderAndAReadableDuration
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.FuscaSequencePreservesGddRevealOrderAndAReadableDuration
+]]></output>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1039" name="IllustratedTrailAssetsRetainNativeSizeAndPointImports" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.IllustratedTrailAssetsRetainNativeSizeAndPointImports" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.056134" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1037" name="IllustratedTrailAssetsRetainNativeSizeAndPointImports(&quot;Terrain&quot;)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.IllustratedTrailAssetsRetainNativeSizeAndPointImports(&quot;Terrain&quot;)" methodname="IllustratedTrailAssetsRetainNativeSizeAndPointImports" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="1673756641" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.031059" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.IllustratedTrailAssetsRetainNativeSizeAndPointImports("Terrain")
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.IllustratedTrailAssetsRetainNativeSizeAndPointImports("Terrain")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.IllustratedTrailAssetsRetainNativeSizeAndPointImports("Terrain")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.IllustratedTrailAssetsRetainNativeSizeAndPointImports("Terrain")
+]]></output>
+                </test-case>
+                <test-case id="1038" name="IllustratedTrailAssetsRetainNativeSizeAndPointImports(&quot;Landmarks&quot;)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.IllustratedTrailAssetsRetainNativeSizeAndPointImports(&quot;Landmarks&quot;)" methodname="IllustratedTrailAssetsRetainNativeSizeAndPointImports" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="384152555" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.018343" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.IllustratedTrailAssetsRetainNativeSizeAndPointImports("Landmarks")
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.IllustratedTrailAssetsRetainNativeSizeAndPointImports("Landmarks")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.IllustratedTrailAssetsRetainNativeSizeAndPointImports("Landmarks")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.IllustratedTrailAssetsRetainNativeSizeAndPointImports("Landmarks")
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1036" name="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:53Z" duration="0.223486" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1026" name="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;FuscaCabinMorning&quot;)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;FuscaCabinMorning&quot;)" methodname="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="1125673758" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.021082" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaCabinMorning")
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaCabinMorning")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaCabinMorning")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaCabinMorning")
+]]></output>
+                </test-case>
+                <test-case id="1027" name="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;FuscaCabinPhotoShell&quot;)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;FuscaCabinPhotoShell&quot;)" methodname="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="844992341" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.017758" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaCabinPhotoShell")
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaCabinPhotoShell")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaCabinPhotoShell")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaCabinPhotoShell")
+]]></output>
+                </test-case>
+                <test-case id="1028" name="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;FuscaDashboardPhoto&quot;)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;FuscaDashboardPhoto&quot;)" methodname="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="1328081192" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.021069" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaDashboardPhoto")
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaDashboardPhoto")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaDashboardPhoto")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaDashboardPhoto")
+]]></output>
+                </test-case>
+                <test-case id="1029" name="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;IgnitionCloseup&quot;)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;IgnitionCloseup&quot;)" methodname="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="34704195" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.022892" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("IgnitionCloseup")
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("IgnitionCloseup")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("IgnitionCloseup")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("IgnitionCloseup")
+]]></output>
+                </test-case>
+                <test-case id="1030" name="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;FuscaCabinCartoon&quot;)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;FuscaCabinCartoon&quot;)" methodname="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="1311301675" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.018152" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaCabinCartoon")
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaCabinCartoon")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaCabinCartoon")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaCabinCartoon")
+]]></output>
+                </test-case>
+                <test-case id="1031" name="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;FuscaDashboardCartoon&quot;)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;FuscaDashboardCartoon&quot;)" methodname="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="771939223" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.020677" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaDashboardCartoon")
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaDashboardCartoon")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaDashboardCartoon")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("FuscaDashboardCartoon")
+]]></output>
+                </test-case>
+                <test-case id="1032" name="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;ChildRoom1996&quot;)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;ChildRoom1996&quot;)" methodname="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="1465450930" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:52Z" duration="0.034870" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("ChildRoom1996")
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("ChildRoom1996")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("ChildRoom1996")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("ChildRoom1996")
+]]></output>
+                </test-case>
+                <test-case id="1033" name="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;ChildWatchingTV&quot;)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;ChildWatchingTV&quot;)" methodname="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="2101792205" result="Passed" start-time="2026-10-29 15:21:52Z" end-time="2026-10-29 15:21:53Z" duration="0.015922" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("ChildWatchingTV")
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("ChildWatchingTV")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("ChildWatchingTV")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("ChildWatchingTV")
+]]></output>
+                </test-case>
+                <test-case id="1034" name="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;MorningTown&quot;)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;MorningTown&quot;)" methodname="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="38117217" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.012842" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("MorningTown")
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("MorningTown")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("MorningTown")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("MorningTown")
+]]></output>
+                </test-case>
+                <test-case id="1035" name="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;Newspaper1996&quot;)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies(&quot;Newspaper1996&quot;)" methodname="NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="1393138635" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.020977" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("Newspaper1996")
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("Newspaper1996")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("Newspaper1996")
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.NewCinemaAssetsHaveNativePointImportsWithoutCpuCopies("Newspaper1996")
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-case id="1024" name="OldSavesRemainReadableAndWatchedFlagsCannotAddProgress" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.OldSavesRemainReadableAndWatchedFlagsCannotAddProgress" methodname="OldSavesRemainReadableAndWatchedFlagsCannotAddProgress" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="1280622194" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.007233" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.OldSavesRemainReadableAndWatchedFlagsCannotAddProgress
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.OldSavesRemainReadableAndWatchedFlagsCannotAddProgress
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.OldSavesRemainReadableAndWatchedFlagsCannotAddProgress
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.OldSavesRemainReadableAndWatchedFlagsCannotAddProgress
+]]></output>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1017" name="PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.158102" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1014" name="PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(1.3f)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(1.3f)" methodname="PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="561513820" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.145979" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(1.3f)
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(1.3f)
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(1.3f)
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(1.3f)
+]]></output>
+                </test-case>
+                <test-case id="1015" name="PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(2.7f)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(2.7f)" methodname="PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="75374057" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000195" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(2.7f)
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(2.7f)
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(2.7f)
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(2.7f)
+]]></output>
+                </test-case>
+                <test-case id="1016" name="PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(4.2f)" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(4.2f)" methodname="PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="795844559" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000150" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(4.2f)
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(4.2f)
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(4.2f)
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.PassingMusicCarFitsTheVisibleStreetBelowTheParkedFusca(4.2f)
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-case id="1041" name="PeakSignalAddsDenseVerticalDamageButRetainsCalmAndReducedHolds" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.PeakSignalAddsDenseVerticalDamageButRetainsCalmAndReducedHolds" methodname="PeakSignalAddsDenseVerticalDamageButRetainsCalmAndReducedHolds" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="1335767765" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.003425" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.PeakSignalAddsDenseVerticalDamageButRetainsCalmAndReducedHolds
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.PeakSignalAddsDenseVerticalDamageButRetainsCalmAndReducedHolds
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.PeakSignalAddsDenseVerticalDamageButRetainsCalmAndReducedHolds
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.PeakSignalAddsDenseVerticalDamageButRetainsCalmAndReducedHolds
+]]></output>
+              </test-case>
+              <test-case id="1019" name="ReadableHoldsDoNotReplaceTheUnderlyingImage" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.ReadableHoldsDoNotReplaceTheUnderlyingImage" methodname="ReadableHoldsDoNotReplaceTheUnderlyingImage" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="676052037" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.006380" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.ReadableHoldsDoNotReplaceTheUnderlyingImage
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.ReadableHoldsDoNotReplaceTheUnderlyingImage
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.ReadableHoldsDoNotReplaceTheUnderlyingImage
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.ReadableHoldsDoNotReplaceTheUnderlyingImage
+]]></output>
+              </test-case>
+              <test-case id="1020" name="ReducedMotionHasAStableLowAlphaSignature" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.ReducedMotionHasAStableLowAlphaSignature" methodname="ReducedMotionHasAStableLowAlphaSignature" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="1497084748" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.002982" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.ReducedMotionHasAStableLowAlphaSignature
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.ReducedMotionHasAStableLowAlphaSignature
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.ReducedMotionHasAStableLowAlphaSignature
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.ReducedMotionHasAStableLowAlphaSignature
+]]></output>
+              </test-case>
+              <test-case id="1025" name="SchoolExitUsesTheGameplayLayoutAndAConnectedWalkToItsSpawn" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.SchoolExitUsesTheGameplayLayoutAndAConnectedWalkToItsSpawn" methodname="SchoolExitUsesTheGameplayLayoutAndAConnectedWalkToItsSpawn" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="1627933346" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.007613" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.SchoolExitUsesTheGameplayLayoutAndAConnectedWalkToItsSpawn
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.SchoolExitUsesTheGameplayLayoutAndAConnectedWalkToItsSpawn
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.SchoolExitUsesTheGameplayLayoutAndAConnectedWalkToItsSpawn
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.SchoolExitUsesTheGameplayLayoutAndAConnectedWalkToItsSpawn
+]]></output>
+              </test-case>
+              <test-case id="1021" name="SignalAnimationDoesNotConsumeGameplayRandomness" fullname="Game.Tests.EditMode.CampaignCinematicOpeningTests.SignalAnimationDoesNotConsumeGameplayRandomness" methodname="SignalAnimationDoesNotConsumeGameplayRandomness" classname="Game.Tests.EditMode.CampaignCinematicOpeningTests" runstate="Runnable" seed="1259625655" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.001068" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.SignalAnimationDoesNotConsumeGameplayRandomness
+QA test: Game.Tests.EditMode.CampaignCinematicOpeningTests.SignalAnimationDoesNotConsumeGameplayRandomness
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.SignalAnimationDoesNotConsumeGameplayRandomness
+QA result: Passed Game.Tests.EditMode.CampaignCinematicOpeningTests.SignalAnimationDoesNotConsumeGameplayRandomness
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1119" name="CampaignHouseInvestigationTests" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" testcasecount="24" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.071618" total="24" passed="24" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1142" name="CompletedPuzzleAndMigrationPreserveLaterChapters" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.CompletedPuzzleAndMigrationPreserveLaterChapters" methodname="CompletedPuzzleAndMigrationPreserveLaterChapters" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="1717637159" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000593" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.CompletedPuzzleAndMigrationPreserveLaterChapters
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.CompletedPuzzleAndMigrationPreserveLaterChapters
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.CompletedPuzzleAndMigrationPreserveLaterChapters
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.CompletedPuzzleAndMigrationPreserveLaterChapters
+]]></output>
+              </test-case>
+              <test-case id="1136" name="DoorReminderAndBagSearchHaveExclusiveObjectivesAndSurviveReload" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.DoorReminderAndBagSearchHaveExclusiveObjectivesAndSurviveReload" methodname="DoorReminderAndBagSearchHaveExclusiveObjectivesAndSurviveReload" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="1525621981" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000902" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.DoorReminderAndBagSearchHaveExclusiveObjectivesAndSurviveReload
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.DoorReminderAndBagSearchHaveExclusiveObjectivesAndSurviveReload
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.DoorReminderAndBagSearchHaveExclusiveObjectivesAndSurviveReload
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.DoorReminderAndBagSearchHaveExclusiveObjectivesAndSurviveReload
+]]></output>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1129" name="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" testcasecount="9" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.015839" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1120" name="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,0)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,0)" methodname="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="326375884" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.001726" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,0)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,0)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,0)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,0)
+]]></output>
+                </test-case>
+                <test-case id="1121" name="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,1)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,1)" methodname="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="1984138474" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000194" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,1)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,1)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,1)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,1)
+]]></output>
+                </test-case>
+                <test-case id="1122" name="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,3)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,3)" methodname="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="1353470819" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000240" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,3)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,3)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,3)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,3)
+]]></output>
+                </test-case>
+                <test-case id="1123" name="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,7)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,7)" methodname="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="1408310321" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000261" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,7)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,7)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,7)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(0,7)
+]]></output>
+                </test-case>
+                <test-case id="1124" name="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(1,7)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(1,7)" methodname="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="216939218" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000247" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(1,7)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(1,7)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(1,7)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(1,7)
+]]></output>
+                </test-case>
+                <test-case id="1125" name="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(2,7)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(2,7)" methodname="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="1203718898" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000173" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(2,7)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(2,7)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(2,7)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(2,7)
+]]></output>
+                </test-case>
+                <test-case id="1126" name="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(3,7)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(3,7)" methodname="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="1576276324" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000233" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(3,7)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(3,7)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(3,7)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(3,7)
+]]></output>
+                </test-case>
+                <test-case id="1127" name="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(4,7)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(4,7)" methodname="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="651227838" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000194" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(4,7)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(4,7)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(4,7)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(4,7)
+]]></output>
+                </test-case>
+                <test-case id="1128" name="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(5,7)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(5,7)" methodname="EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="731200632" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000141" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(5,7)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(5,7)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(5,7)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EveryOpeningMilestoneHasProgressiveHintsWithoutChangingProgress(5,7)
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1147" name="EvidenceApproachesAreReachableOnTheShippedHouse" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.030527" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1144" name="EvidenceApproachesAreReachableOnTheShippedHouse(620,620)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(620,620)" methodname="EvidenceApproachesAreReachableOnTheShippedHouse" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="1317400398" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.012978" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(620,620)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(620,620)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(620,620)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(620,620)
+]]></output>
+                </test-case>
+                <test-case id="1145" name="EvidenceApproachesAreReachableOnTheShippedHouse(947,424)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(947,424)" methodname="EvidenceApproachesAreReachableOnTheShippedHouse" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="399048826" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.010926" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(947,424)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(947,424)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(947,424)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(947,424)
+]]></output>
+                </test-case>
+                <test-case id="1146" name="EvidenceApproachesAreReachableOnTheShippedHouse(407,325)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(407,325)" methodname="EvidenceApproachesAreReachableOnTheShippedHouse" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="1498719746" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.001998" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(407,325)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(407,325)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(407,325)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.EvidenceApproachesAreReachableOnTheShippedHouse(407,325)
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-case id="1143" name="InvalidFlagsCannotSkipTheInvestigation" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.InvalidFlagsCannotSkipTheInvestigation" methodname="InvalidFlagsCannotSkipTheInvestigation" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="936561545" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000364" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.InvalidFlagsCannotSkipTheInvestigation
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.InvalidFlagsCannotSkipTheInvestigation
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.InvalidFlagsCannotSkipTheInvestigation
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.InvalidFlagsCannotSkipTheInvestigation
+]]></output>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1135" name="InvestigationReloadPreservesMilestones" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.006710" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1132" name="InvestigationReloadPreservesMilestones(1)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(1)" methodname="InvestigationReloadPreservesMilestones" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="1916496542" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.001119" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(1)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(1)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(1)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(1)
+]]></output>
+                </test-case>
+                <test-case id="1133" name="InvestigationReloadPreservesMilestones(2)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(2)" methodname="InvestigationReloadPreservesMilestones" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="75059345" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000277" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(2)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(2)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(2)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(2)
+]]></output>
+                </test-case>
+                <test-case id="1134" name="InvestigationReloadPreservesMilestones(3)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(3)" methodname="InvestigationReloadPreservesMilestones" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="1279683984" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000395" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(3)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(3)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(3)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.InvestigationReloadPreservesMilestones(3)
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-case id="1141" name="LegacyAcquiredEvidenceDoesNotRequireRepeatingPreparation" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.LegacyAcquiredEvidenceDoesNotRequireRepeatingPreparation" methodname="LegacyAcquiredEvidenceDoesNotRequireRepeatingPreparation" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="1389318076" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000320" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.LegacyAcquiredEvidenceDoesNotRequireRepeatingPreparation
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.LegacyAcquiredEvidenceDoesNotRequireRepeatingPreparation
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.LegacyAcquiredEvidenceDoesNotRequireRepeatingPreparation
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.LegacyAcquiredEvidenceDoesNotRequireRepeatingPreparation
+]]></output>
+              </test-case>
+              <test-case id="1140" name="LegacyBagAlreadyCollectedDoesNotGetStuckBehindReminder" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.LegacyBagAlreadyCollectedDoesNotGetStuckBehindReminder" methodname="LegacyBagAlreadyCollectedDoesNotGetStuckBehindReminder" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="1374761865" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000228" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.LegacyBagAlreadyCollectedDoesNotGetStuckBehindReminder
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.LegacyBagAlreadyCollectedDoesNotGetStuckBehindReminder
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.LegacyBagAlreadyCollectedDoesNotGetStuckBehindReminder
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.LegacyBagAlreadyCollectedDoesNotGetStuckBehindReminder
+]]></output>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1139" name="NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.003604" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1137" name="NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox(False)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox(False)" methodname="NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="624627979" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000798" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox(False)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox(False)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox(False)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox(False)
+]]></output>
+                </test-case>
+                <test-case id="1138" name="NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox(True)" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox(True)" methodname="NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="1381835314" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000205" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox(True)
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox(True)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox(True)
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.NewCarDepartureStatesSurviveSaveRepairWithoutUnlockingTheBox(True)
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-case id="1131" name="ObservationAloneDoesNotSolveTheInvestigation" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.ObservationAloneDoesNotSolveTheInvestigation" methodname="ObservationAloneDoesNotSolveTheInvestigation" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="960644270" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000346" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.ObservationAloneDoesNotSolveTheInvestigation
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.ObservationAloneDoesNotSolveTheInvestigation
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.ObservationAloneDoesNotSolveTheInvestigation
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.ObservationAloneDoesNotSolveTheInvestigation
+]]></output>
+              </test-case>
+              <test-case id="1130" name="PreparationAndPlacementPrecedeDisappearance" fullname="Game.Tests.EditMode.CampaignHouseInvestigationTests.PreparationAndPlacementPrecedeDisappearance" methodname="PreparationAndPlacementPrecedeDisappearance" classname="Game.Tests.EditMode.CampaignHouseInvestigationTests" runstate="Runnable" seed="490928110" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.000587" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.PreparationAndPlacementPrecedeDisappearance
+QA test: Game.Tests.EditMode.CampaignHouseInvestigationTests.PreparationAndPlacementPrecedeDisappearance
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.PreparationAndPlacementPrecedeDisappearance
+QA result: Passed Game.Tests.EditMode.CampaignHouseInvestigationTests.PreparationAndPlacementPrecedeDisappearance
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1327" name="CampaignToroRoutineTests" fullname="Game.Tests.EditMode.CampaignToroRoutineTests" classname="Game.Tests.EditMode.CampaignToroRoutineTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.038646" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="ParameterizedMethod" id="1331" name="CloseRoutineAnchorsRemainClearAndConnected" fullname="Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected" classname="Game.Tests.EditMode.CampaignToroRoutineTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.031929" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1328" name="CloseRoutineAnchorsRemainClearAndConnected(&quot;wash&quot;)" fullname="Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected(&quot;wash&quot;)" methodname="CloseRoutineAnchorsRemainClearAndConnected" classname="Game.Tests.EditMode.CampaignToroRoutineTests" runstate="Runnable" seed="2205469" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.013127" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected("wash")
+QA test: Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected("wash")
+QA result: Passed Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected("wash")
+QA result: Passed Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected("wash")
+]]></output>
+                </test-case>
+                <test-case id="1329" name="CloseRoutineAnchorsRemainClearAndConnected(&quot;food&quot;)" fullname="Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected(&quot;food&quot;)" methodname="CloseRoutineAnchorsRemainClearAndConnected" classname="Game.Tests.EditMode.CampaignToroRoutineTests" runstate="Runnable" seed="1016979535" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.009344" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected("food")
+QA test: Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected("food")
+QA result: Passed Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected("food")
+QA result: Passed Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected("food")
+]]></output>
+                </test-case>
+                <test-case id="1330" name="CloseRoutineAnchorsRemainClearAndConnected(&quot;work&quot;)" fullname="Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected(&quot;work&quot;)" methodname="CloseRoutineAnchorsRemainClearAndConnected" classname="Game.Tests.EditMode.CampaignToroRoutineTests" runstate="Runnable" seed="1505755975" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.005467" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected("work")
+QA test: Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected("work")
+QA result: Passed Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected("work")
+QA result: Passed Game.Tests.EditMode.CampaignToroRoutineTests.CloseRoutineAnchorsRemainClearAndConnected("work")
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-case id="1332" name="ToroHasDedicatedNativeArtAndDoesNotReplaceTheFusca" fullname="Game.Tests.EditMode.CampaignToroRoutineTests.ToroHasDedicatedNativeArtAndDoesNotReplaceTheFusca" methodname="ToroHasDedicatedNativeArtAndDoesNotReplaceTheFusca" classname="Game.Tests.EditMode.CampaignToroRoutineTests" runstate="Runnable" seed="1004207005" result="Passed" start-time="2026-10-29 15:21:53Z" end-time="2026-10-29 15:21:53Z" duration="0.004508" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.CampaignToroRoutineTests.ToroHasDedicatedNativeArtAndDoesNotReplaceTheFusca
+QA test: Game.Tests.EditMode.CampaignToroRoutineTests.ToroHasDedicatedNativeArtAndDoesNotReplaceTheFusca
+QA result: Passed Game.Tests.EditMode.CampaignToroRoutineTests.ToroHasDedicatedNativeArtAndDoesNotReplaceTheFusca
+QA result: Passed Game.Tests.EditMode.CampaignToroRoutineTests.ToroHasDedicatedNativeArtAndDoesNotReplaceTheFusca
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Completion_QA_20261027\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Varginha_Completion_QA_20261027\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

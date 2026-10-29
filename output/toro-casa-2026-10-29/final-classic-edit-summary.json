@@ -1,0 +1,12 @@
+{
+  "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23\\output\\toro-casa-2026-10-29\\final-classic-edit.xml",
+  "runResult": "Passed",
+  "tests": {
+    "total": 33,
+    "passed": 33,
+    "failed": 0,
+    "skipped": 0
+  },
+  "failures": [],
+  "success": true
+}

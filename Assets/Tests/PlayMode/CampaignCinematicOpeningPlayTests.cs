@@ -48,6 +48,20 @@ namespace Game.Tests.PlayMode
             // from the actual test Player. Editor still validates state and timing.
             if(Application.isEditor)yield break;
             yield return new WaitForEndOfFrame();var image=ScreenCapture.CaptureScreenshotAsTexture();
+            Directory.CreateDirectory(Output+"/captures");File.WriteAllBytes(Output+"/captures/"+name+".png",image.EncodeToPNG());
+            if(name.StartsWith("school-passing-toro-"))
+            {
+                Assert.That(Title(VarginhaCampaignStage.Active),Is.EqualTo("INDUSTRIAL"));
+                var car=CampaignFuscaCinema.PassingCarRect(Clock(VarginhaCampaignStage.Active));float scale=image.width/1280f;
+                car.y+=CampaignPassingToro.BodyOffsetAt(Clock(VarginhaCampaignStage.Active),false);
+                // Sample the lower door panel, below its dark handle; texture rows
+                // use H-1-y because screenshot pixels have a bottom-left origin.
+                int px=Mathf.RoundToInt(car.center.x*scale),py=Mathf.RoundToInt(image.height-1-(car.yMin+car.height*.60f)*scale);
+                var colour=image.GetPixel(px,py);
+                File.WriteAllText(Output+"/captures/"+name+"-capture.txt",$"clock={Clock(VarginhaCampaignStage.Active):F4} rect={car} image={image.width}x{image.height} scale={scale} pixel={px},{py} colour={colour} timescale={Time.timeScale}");
+                Assert.That(Mathf.Min(colour.r,colour.g,colour.b),Is.GreaterThan(.45f),$"The capture must show the white pickup at ({px},{py}), not a pause overlay or hidden shot. Rect={car}, clock={Clock(VarginhaCampaignStage.Active):F4}");
+                Assert.That(Mathf.Max(colour.r,colour.g,colour.b)-Mathf.Min(colour.r,colour.g,colour.b),Is.LessThan(.2f));
+            }
             if(name.StartsWith("driving-pose-"))
             {
                 var pixels=image.GetPixels32();int visible=0;
@@ -62,11 +76,12 @@ namespace Game.Tests.PlayMode
                     Assert.That(Mathf.Max(pixel.r,pixel.g,pixel.b),Is.LessThan(.025f),"The live house must not leak beside the school illustration.");
                 }
             }
-            Directory.CreateDirectory(Output+"/captures");File.WriteAllBytes(Output+"/captures/"+name+".png",image.EncodeToPNG());Object.Destroy(image);
+            Object.Destroy(image);
         }
         [UnityTest,Timeout(90000)] public IEnumerator AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl()
         {
             yield return House(0,false);var stage=VarginhaCampaignStage.Active;stage.Interact("car");
+            var toroWheelFrames=new HashSet<int>();
             var recorder=new GameObject("QA_Cinema_Recorder").AddComponent<CinemaFrameRecorder>();
             Assert.That(stage.TrySkipMissionCinema(),Is.False,"A first viewing cannot be skipped.");
             var visited=new List<string>();var sounds=new HashSet<string>();int soundSerial=-1;float deadline=Time.realtimeSinceStartup+65;bool paused=false,released=false,withdrawn=false,exit=false,gate=false,signal=false;
@@ -78,21 +93,36 @@ namespace Game.Tests.PlayMode
                 string title=Title(stage);
                 if(title=="INDUSTRIAL")
                 {
+                    toroWheelFrames.Add(CampaignPassingToro.WheelFrameAt(Clock(stage),false));
                     var car=stage.GetComponentInChildren<CampaignSchoolMusicCar>();Assert.That(car,Is.Not.Null);
                     var source=car.Source;
                     if(Clock(stage)<CampaignSchoolMusicCar.EndTime-.1f)Assert.That(source.clip,Is.SameAs(Resources.Load<AudioClip>(CampaignSchoolMusicCar.MusicResource)));
                     float distance=Vector3.Distance(source.transform.position,Camera.main.transform.position);
-                    if(Clock(stage)>1&&Clock(stage)<1.4f){musicApproach=true;Assert.That(distance,Is.GreaterThan(9));}
-                    if(Clock(stage)>2.65f&&Clock(stage)<2.9f&&!musicNear)
+                    if(!musicNear&&Clock(stage)>CampaignSchoolMusicCar.StartTime&&distance>9)musicApproach=true;
+                    if(musicApproach&&distance<4&&!musicNear)
                     {
                         musicNear=true;Assert.That(distance,Is.LessThan(4));Assert.That(source.spatialBlend,Is.EqualTo(1));
                         Assert.That(source.dopplerLevel,Is.GreaterThan(0).And.LessThan(.3f));Assert.That(source.isPlaying,Is.True);
                         float old=VarginhaGameSettings.Current.music;VarginhaGameSettings.Current.music=0;yield return null;
                         Assert.That(source.volume,Is.Zero);VarginhaGameSettings.Current.music=old;
-                        stage.TogglePause();yield return new WaitForSecondsRealtime(.2f);Assert.That(source.isPlaying,Is.False);stage.TogglePause();
-                        yield return Capture("school-passing-music-car");
+                        stage.TogglePause();yield return new WaitForSecondsRealtime(.2f);Assert.That(source.isPlaying,Is.False);
+                        Assert.That(CampaignPassingToro.Side.texture.name,Is.EqualTo("FiatToroSide"));
+                        stage.TogglePause();
+                        // Freeze the shot clock, without opening the pause menu,
+                        // while the GPU/window applies each capture resolution.
+                        float captureScale=Time.timeScale;Time.timeScale=0;
+                        try
+                        {
+                            foreach(int width in new[]{1280,1920})
+                            {
+                                int height=width==1280?720:1080;Screen.SetResolution(width,height,FullScreenMode.Windowed);
+                                yield return new WaitForSecondsRealtime(.3f);Assert.That(Screen.width,Is.EqualTo(width));Assert.That(Screen.height,Is.EqualTo(height));
+                                yield return Capture("school-passing-toro-"+width+"x"+height);
+                            }
+                        }
+                        finally{Time.timeScale=captureScale;}
                     }
-                    if(Clock(stage)>4.2f&&Clock(stage)<4.6f){musicAway=true;Assert.That(distance,Is.GreaterThan(9));}
+                    if(musicNear&&distance>9)musicAway=true;
                 }
                 if(title=="VARGINHA • 2026"&&Clock(stage)>2.2f)
                 {
@@ -124,6 +154,7 @@ namespace Game.Tests.PlayMode
             Assert.That(released&&withdrawn,Is.True,"All ignition poses must be reached before spontaneous restart.");
             Assert.That(exit&&gate,Is.True,"Disembarkation and the walk to the gameplay spawn must finish.");
             Assert.That(musicApproach&&musicNear&&musicAway,Is.True,"The music vehicle approaches, passes and recedes in the school arrival shot.");
+            Assert.That(toroWheelFrames.Count,Is.GreaterThanOrEqualTo(4),"The moving pickup renders different wheel phases during the live arrival.");
             yield return new WaitForSeconds(3.4f);
             Assert.That(VarginhaCampaignStage.Active.phase,Is.EqualTo(4));Assert.That(VarginhaCampaignStage.Active.Progress.arrival,Is.True);
             var actor=Object.FindAnyObjectByType<EdelzioTopDownController>();
@@ -148,7 +179,7 @@ namespace Game.Tests.PlayMode
         [UnityTest] public IEnumerator PixelResolvePreservesOpaqueInteriorAndWindowHolesOnGpu()
         {
             Directory.CreateDirectory(Output+"/runtime-layers");
-            foreach(string path in new[]{"Varginha/CinemaOpening/MorningTown","Varginha/CinemaOpening/ChildRoom1996","Varginha/CinemaOpening/Newspaper1996","Varginha/CinemaOpening/ChildWatchingTV","Varginha/CinemaOpening/FuscaCabinCartoon","Varginha/CinemaOpening/FuscaDashboardCartoon",CampaignTrailMapArt.TerrainPath,CampaignTrailMapArt.LandmarksPath})
+            foreach(string path in new[]{"Varginha/CinemaOpening/MorningTown","Varginha/CinemaOpening/ChildRoom1996","Varginha/CinemaOpening/Newspaper1996","Varginha/CinemaOpening/ChildWatchingTV","Varginha/CinemaOpening/FuscaCabinCartoon","Varginha/CinemaOpening/FuscaDashboardCartoon",CampaignFuscaCinema.FramePath,CampaignFuscaCinema.DashboardPath,CampaignTrailMapArt.TerrainPath,CampaignTrailMapArt.LandmarksPath})
             {
                 string name=path.Substring(path.LastIndexOf('/')+1);
                 var source=Resources.Load<Texture2D>(path);Assert.That(source,Is.Not.Null);Assert.That(source.isReadable,Is.False);
@@ -157,7 +188,7 @@ namespace Game.Tests.PlayMode
                 try{RenderTexture.active=rt;image.ReadPixels(new Rect(0,0,rt.width,rt.height),0,0);image.Apply();}
                 finally{RenderTexture.active=previous;}
                 var pixels=image.GetPixels32();Assert.That(pixels.All(p=>p.a==0||p.a==255),Is.True,"New cinematic cutouts use hard pixel alpha.");
-                Assert.That(pixels.Any(p=>p.a==255),Is.True);if(name=="FuscaCabinCartoon"||name=="FuscaDashboardCartoon"||name=="ChildWatchingTV"||name=="Landmarks")Assert.That(pixels.Any(p=>p.a==0),Is.True);
+                Assert.That(pixels.Any(p=>p.a==255),Is.True);if(name=="FuscaCabinCartoon"||name=="FuscaDashboardCartoon"||name=="FuscaCabinClassic"||name=="FuscaDashboardClassic"||name=="ChildWatchingTV"||name=="Landmarks")Assert.That(pixels.Any(p=>p.a==0),Is.True);
                 Assert.That(pixels.Where(p=>p.a!=0).Distinct().Count(),Is.GreaterThan(8),"Material colour variation must survive pixel resolution.");
                 File.WriteAllBytes(Output+"/runtime-layers/"+name+".png",image.EncodeToPNG());Object.Destroy(image);
             }

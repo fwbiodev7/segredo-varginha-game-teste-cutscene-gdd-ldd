@@ -31,7 +31,7 @@ if($Mode -ne 'Build'){$text=$text -replace '(?m)^  productName:.*$','  productNa
 $env:VARGINHA_CINEMA_QA=$evidence
 $env:VARGINHA_FINAL_BUILD_ROOT=$projectPath
 $argsUnity=@('-batchmode','-force-d3d11','-projectPath',$qaProject,'-logFile',(Join-Path $evidence ($Name+'.log')))
-if($Mode -eq 'Build'){$argsUnity+=@('-quit','-executeMethod','Game.Editor.Testing.VarginhaDailyBuild.Build')}
+if($Mode -eq 'Build'){$argsUnity+=@('-nographics','-quit','-executeMethod','Game.Editor.Testing.VarginhaDailyBuild.Build')}
 elseif($Mode -eq 'References'){$argsUnity+=@('-quit','-executeMethod','Game.Editor.Testing.CampaignDirectionalReferences.Export')}
 elseif($Mode -eq 'Compile'){$argsUnity+=@('-quit')}
 else{

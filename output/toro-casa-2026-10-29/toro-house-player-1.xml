@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="5" result="Passed" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="0001-01-01 00:00:00Z" end-time="0001-01-01 00:00:00Z" duration="120,2477503">
+  <test-suite type="TestSuite" id="1000" name="Varginha_Completion_QA_20261027" fullname="Varginha_Completion_QA_20261027" runstate="Runnable" testcasecount="344" result="Passed" start-time="2026-10-29 15:11:58Z" end-time="2026-10-29 15:13:58Z" duration="120.247750" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+QA_WALK 2 corner=(-3.75, 2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(-3.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.50, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.53, -5.62) target=(2.53, -5.62)
+QA_WALK 2 corner=(3.50, -5.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(3.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.50, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.44, -2.23) target=(4.44, -2.23)
+QA_WALK 2 corner=(5.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.36, -2.68) target=(-7.36, -2.68)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RealWalkWashCoffeeAndNotebookUseCloseAnchorsThenRestoreControlAndReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RoutineActivationRejectsDistanceAndObstaclesWithoutConsumingItems
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties><property name="platform" value="PlayMode"></property></properties><test-suite type="Assembly" id="1399" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Temp/UnityTempFile-d417ac2e1ada7b04dbb83dca131b1bea/PlayerWithTests/PlayerWithTests_Data/Managed/GamePlayModeTests.dll" runstate="Runnable" testcasecount="344" result="Passed" start-time="2026-10-29 15:11:58Z" end-time="2026-10-29 15:13:58Z" duration="120.190367" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+QA_WALK 2 corner=(-3.75, 2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(-3.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.50, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.53, -5.62) target=(2.53, -5.62)
+QA_WALK 2 corner=(3.50, -5.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(3.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.50, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.44, -2.23) target=(4.44, -2.23)
+QA_WALK 2 corner=(5.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.36, -2.68) target=(-7.36, -2.68)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RealWalkWashCoffeeAndNotebookUseCloseAnchorsThenRestoreControlAndReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RoutineActivationRejectsDistanceAndObstaclesWithoutConsumingItems
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties><property name="_PID" value="22440"></property><property name="_APPDOMAIN" value="Unity Root Domain"></property><property name="platform" value="PlayMode"></property><property name="EditorOnly" value="False"></property></properties><test-suite type="TestSuite" id="1400" name="Game" fullname="Game" runstate="Runnable" testcasecount="344" result="Passed" start-time="2026-10-29 15:11:58Z" end-time="2026-10-29 15:13:58Z" duration="120.144425" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+QA_WALK 2 corner=(-3.75, 2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(-3.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.50, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.53, -5.62) target=(2.53, -5.62)
+QA_WALK 2 corner=(3.50, -5.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(3.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.50, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.44, -2.23) target=(4.44, -2.23)
+QA_WALK 2 corner=(5.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.36, -2.68) target=(-7.36, -2.68)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RealWalkWashCoffeeAndNotebookUseCloseAnchorsThenRestoreControlAndReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RoutineActivationRejectsDistanceAndObstaclesWithoutConsumingItems
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties></properties><test-suite type="TestSuite" id="1401" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="344" result="Passed" start-time="2026-10-29 15:11:58Z" end-time="2026-10-29 15:13:58Z" duration="120.104229" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+QA_WALK 2 corner=(-3.75, 2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(-3.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.50, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.53, -5.62) target=(2.53, -5.62)
+QA_WALK 2 corner=(3.50, -5.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(3.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.50, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.44, -2.23) target=(4.44, -2.23)
+QA_WALK 2 corner=(5.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.36, -2.68) target=(-7.36, -2.68)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RealWalkWashCoffeeAndNotebookUseCloseAnchorsThenRestoreControlAndReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RoutineActivationRejectsDistanceAndObstaclesWithoutConsumingItems
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties></properties><test-suite type="TestSuite" id="1402" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="344" result="Passed" start-time="2026-10-29 15:11:58Z" end-time="2026-10-29 15:13:58Z" duration="120.030266" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+QA_WALK 2 corner=(-3.75, 2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(-3.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.50, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.53, -5.62) target=(2.53, -5.62)
+QA_WALK 2 corner=(3.50, -5.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(3.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.50, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.44, -2.23) target=(4.44, -2.23)
+QA_WALK 2 corner=(5.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.36, -2.68) target=(-7.36, -2.68)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RealWalkWashCoffeeAndNotebookUseCloseAnchorsThenRestoreControlAndReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RoutineActivationRejectsDistanceAndObstaclesWithoutConsumingItems
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties></properties><test-suite type="TestFixture" id="1033" name="CampaignCinematicOpeningPlayTests" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-29 15:11:58Z" end-time="2026-10-29 15:12:40Z" duration="42.136544" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+<properties></properties><test-case id="1034" name="AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" methodname="AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" seed="737559000" result="Passed" start-time="2026-10-29 15:11:58Z" end-time="2026-10-29 15:12:40Z" duration="42.087786" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+</output></test-case></test-suite><test-suite type="TestFixture" id="1039" name="CampaignCloseRoutinePlayTests" fullname="Game.Tests.PlayMode.CampaignCloseRoutinePlayTests" classname="Game.Tests.PlayMode.CampaignCloseRoutinePlayTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-29 15:12:40Z" end-time="2026-10-29 15:13:28Z" duration="47.781926" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">QA_WALK 2 corner=(-3.75, 2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(-3.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.50, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.53, -5.62) target=(2.53, -5.62)
+QA_WALK 2 corner=(3.50, -5.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(3.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.50, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.44, -2.23) target=(4.44, -2.23)
+QA_WALK 2 corner=(5.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.36, -2.68) target=(-7.36, -2.68)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RealWalkWashCoffeeAndNotebookUseCloseAnchorsThenRestoreControlAndReload
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RoutineActivationRejectsDistanceAndObstaclesWithoutConsumingItems
+<properties></properties><test-case id="1040" name="RealWalkWashCoffeeAndNotebookUseCloseAnchorsThenRestoreControlAndReload" fullname="Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RealWalkWashCoffeeAndNotebookUseCloseAnchorsThenRestoreControlAndReload" methodname="RealWalkWashCoffeeAndNotebookUseCloseAnchorsThenRestoreControlAndReload" classname="Game.Tests.PlayMode.CampaignCloseRoutinePlayTests" runstate="Runnable" seed="1841154003" result="Passed" start-time="2026-10-29 15:12:41Z" end-time="2026-10-29 15:13:23Z" duration="42.067162" asserts="0">QA_WALK 2 corner=(-3.75, 2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(-3.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.50, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.53, -5.62) target=(2.53, -5.62)
+QA_WALK 2 corner=(3.50, -5.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(3.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.50, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.44, -2.23) target=(4.44, -2.23)
+QA_WALK 2 corner=(5.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.36, -2.68) target=(-7.36, -2.68)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RealWalkWashCoffeeAndNotebookUseCloseAnchorsThenRestoreControlAndReload
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="180000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>QA_WALK 2 corner=(-3.75, 2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(-3.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -2.75) target=(2.53, -5.62)
+QA_WALK 2 corner=(0.75, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.50, -5.50) target=(2.53, -5.62)
+QA_WALK 2 corner=(2.53, -5.62) target=(2.53, -5.62)
+QA_WALK 2 corner=(3.50, -5.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(3.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.75) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.50, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -3.50) target=(4.44, -2.23)
+QA_WALK 2 corner=(2.25, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.50, -2.25) target=(4.44, -2.23)
+QA_WALK 2 corner=(4.44, -2.23) target=(4.44, -2.23)
+QA_WALK 2 corner=(5.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.25) target=(-7.36, -2.68)
+QA_WALK 2 corner=(3.00, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.50) target=(-7.36, -2.68)
+QA_WALK 2 corner=(2.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.25, -2.75) target=(-7.36, -2.68)
+QA_WALK 2 corner=(-7.36, -2.68) target=(-7.36, -2.68)
+NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RealWalkWashCoffeeAndNotebookUseCloseAnchorsThenRestoreControlAndReload
+</output></test-case><test-case id="1041" name="RoutineActivationRejectsDistanceAndObstaclesWithoutConsumingItems" fullname="Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RoutineActivationRejectsDistanceAndObstaclesWithoutConsumingItems" methodname="RoutineActivationRejectsDistanceAndObstaclesWithoutConsumingItems" classname="Game.Tests.PlayMode.CampaignCloseRoutinePlayTests" runstate="Runnable" seed="1329801277" result="Passed" start-time="2026-10-29 15:13:23Z" end-time="2026-10-29 15:13:28Z" duration="5.635911" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RoutineActivationRejectsDistanceAndObstaclesWithoutConsumingItems
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="45000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignCloseRoutinePlayTests.RoutineActivationRejectsDistanceAndObstaclesWithoutConsumingItems
+</output></test-case></test-suite><test-suite type="TestFixture" id="1066" name="CampaignExpansionPlayTests" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-29 15:13:28Z" end-time="2026-10-29 15:13:38Z" duration="9.297999" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+<properties></properties><test-case id="1069" name="AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate" fullname="Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate" methodname="AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate" classname="Game.Tests.PlayMode.CampaignExpansionPlayTests" runstate="Runnable" seed="1529095711" result="Passed" start-time="2026-10-29 15:13:28Z" end-time="2026-10-29 15:13:38Z" duration="9.264678" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignExpansionPlayTests.AdultHouseHygieneRespondsToKeyboardAndPreservesInvestigationGate
+</output></test-case></test-suite><test-suite type="TestFixture" id="1095" name="CampaignMessagePlayTests" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-10-29 15:13:38Z" end-time="2026-10-29 15:13:58Z" duration="20.755297" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties></properties><test-case id="1096" name="RoutineConsumesRealItemsAndKeepsThemGoneAfterReload" fullname="Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload" methodname="RoutineConsumesRealItemsAndKeepsThemGoneAfterReload" classname="Game.Tests.PlayMode.CampaignMessagePlayTests" runstate="Runnable" seed="1716807347" result="Passed" start-time="2026-10-29 15:13:38Z" end-time="2026-10-29 15:13:58Z" duration="20.731564" asserts="0">NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><output>NATIVE_TEST Passed Game.Tests.PlayMode.CampaignMessagePlayTests.RoutineConsumesRealItemsAndKeepsThemGoneAfterReload
+</output></test-case></test-suite></test-suite></test-suite></test-suite></test-suite></test-suite>
+</test-run>

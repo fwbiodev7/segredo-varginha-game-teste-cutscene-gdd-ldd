@@ -15,6 +15,8 @@ namespace Game.Tests.EditMode
             var layout=CampaignIllustratedMaps.Get(4);var parked=System.Array.Find(layout.props,p=>p.name=="Fusca");
             float scale=1120f/layout.width,parkedBottom=86+(parked.art[1]+parked.art[3]-490)*scale;
             var car=CampaignFuscaCinema.PassingCarRect(time);
+            Assert.That(car.width,Is.GreaterThan(parked.art[3]*scale*1.3f),"The pickup must read larger than the parked Fusca's full length.");
+            car.y+=CampaignPassingToro.BodyOffsetAt(time,false);
             Assert.That(car.yMin,Is.GreaterThan(parkedBottom),"Keep a separate traffic lane below the parked car.");
             Assert.That(car.yMax,Is.LessThan(CampaignFuscaCinema.ArrivalViewport.yMax),"Wheels must not be cut by the subtitle band.");
             Assert.That(CampaignFuscaCinema.ArrivalViewport.Contains(car.min)&&CampaignFuscaCinema.ArrivalViewport.Contains(car.max),Is.True,"Representative approach/pass/recede frames fit the map viewport.");

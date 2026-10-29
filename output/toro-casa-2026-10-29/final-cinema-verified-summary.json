@@ -1,0 +1,18 @@
+{
+  "source": "output\\toro-casa-2026-10-29\\final-cinema-verified.xml",
+  "runResult": "Failed(Child)",
+  "tests": {
+    "total": 1,
+    "passed": 0,
+    "failed": 1,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "name": "Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl",
+      "message": "  The music vehicle approaches, passes and recedes in the school arrival shot.\n  Expected: True\n  But was:  False\n",
+      "stack": "at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+<AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl>d__14.MoveNext () [0x00b0c] in C:\\Users\\Usuario\\AppData\\Local\\Temp\\varginha-master-qa-20261023-120709\\Assets\\Tests\\PlayMode\\CampaignCinematicOpeningPlayTests.cs:156\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@7a3849e09bd0\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:52\n"
+    }
+  ],
+  "success": false
+}

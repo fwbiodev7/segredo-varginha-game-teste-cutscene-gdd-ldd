@@ -8,7 +8,8 @@ namespace Game.Varginha.Experiment
     public static class CampaignFuscaCinema
     {
         public const string MorningPath="Varginha/CinemaOpening/MorningTown";
-        public const string FramePath="Varginha/CinemaOpening/FuscaCabinCartoon";
+        public const string FramePath="Varginha/Revision20261029/FuscaCabinClassic";
+        public const string DashboardPath="Varginha/Revision20261029/FuscaDashboardClassic";
         private static Texture _morning,_frame,_dashboard,_ignition,_column;
         public static readonly Vector2 SteeringHub=new(540,462);
         public static readonly Rect DashboardBounds=new(390,300,940,313);
@@ -41,8 +42,8 @@ namespace Game.Varginha.Experiment
 
         public static void DrawCabin(float time,string title,int panel,bool reduced)
         {
-            _morning=CampaignCinemaTextures.Resolve("MorningTown");_frame=CampaignCinemaTextures.Resolve("FuscaCabinCartoon");
-            _dashboard=CampaignCinemaTextures.Resolve("FuscaDashboardCartoon");
+            _morning=CampaignCinemaTextures.Resolve("MorningTown");_frame=CampaignCinemaTextures.ResolveResource(FramePath);
+            _dashboard=CampaignCinemaTextures.ResolveResource(DashboardPath);
             bool silence=title=="SILÊNCIO",voice=title=="UMA VOZ CONHECIDA",fault=panel==1;
             bool moving=!silence&&!voice&&(!fault||time<1.2f);
             float shift=moving&&!reduced?Mathf.Floor(time*18)%1280:0;
@@ -166,18 +167,18 @@ namespace Game.Varginha.Experiment
             DrawSprite(new Rect(carRect.center.x-sprite.rect.width*fit/2,carRect.center.y-sprite.rect.height*fit/2,sprite.rect.width*fit,sprite.rect.height*fit),sprite);
             if(time>=CampaignSchoolMusicCar.StartTime&&time<=CampaignSchoolMusicCar.EndTime)
             {
-                var passing=CampaignOriginalFusca.Side;var crossing=PassingCarRect(time);
-                var previous=GUI.color;GUI.color=new Color(.65f,.59f,.52f,1);
+                var crossing=PassingCarRect(time);
+                var previous=GUI.color;GUI.color=new Color(.84f,.84f,.84f,1);
                 GUI.BeginGroup(ArrivalViewport);
-                crossing.position-=ArrivalViewport.position;DrawSprite(crossing,passing);
+                crossing.position-=ArrivalViewport.position;CampaignPassingToro.Draw(crossing,time,reduced);
                 GUI.EndGroup();GUI.color=previous;
             }
         }
         public static Rect PassingCarRect(float time)
         {
             EnsureArrivalRoute();float scale=1120f/_schoolLayout.width;
-            var point=CampaignSchoolMusicCar.CarPixel(time);var sprite=CampaignOriginalFusca.Side;
-            float width=140*scale,height=width*sprite.rect.height/sprite.rect.width;
+            var point=CampaignSchoolMusicCar.CarPixel(time);var sprite=CampaignPassingToro.Side;
+            float width=CampaignPassingToro.MapPixelWidth*scale,height=width*sprite.rect.height/sprite.rect.width;
             return new Rect(80+point.x*scale-width/2,86+(point.y-490)*scale-height/2,width,height);
         }
         public static IReadOnlyList<Vector2> SchoolArrivalRoute {get{EnsureArrivalRoute();return ArrivalRoute;}}

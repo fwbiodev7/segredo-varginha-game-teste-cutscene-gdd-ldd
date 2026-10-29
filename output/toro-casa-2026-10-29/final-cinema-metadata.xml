@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="1" result="Failed(Child)" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="0001-01-01 00:00:00Z" end-time="0001-01-01 00:00:00Z" duration="42,8343669">
+  <test-suite type="TestSuite" id="1000" name="Varginha_Completion_QA_20261027" fullname="Varginha_Completion_QA_20261027" runstate="Runnable" testcasecount="345" result="Failed" site="Child" start-time="2026-10-29 15:55:43Z" end-time="2026-10-29 15:56:26Z" duration="42.834367" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errors  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties><property name="platform" value="PlayMode"></property></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="Assembly" id="1400" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/AppData/Local/Temp/varginha-master-qa-20261023-120709/Temp/UnityTempFile-4b1c20beefe20d941be76e2c6c1c8486/PlayerWithTests/PlayerWithTests_Data/Managed/GamePlayModeTests.dll" runstate="Runnable" testcasecount="345" result="Failed" site="Child" start-time="2026-10-29 15:55:43Z" end-time="2026-10-29 15:56:26Z" duration="42.778540" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errors  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties><property name="_PID" value="11644"></property><property name="_APPDOMAIN" value="Unity Root Domain"></property><property name="platform" value="PlayMode"></property><property name="EditorOnly" value="False"></property></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1401" name="Game" fullname="Game" runstate="Runnable" testcasecount="345" result="Failed" site="Child" start-time="2026-10-29 15:55:43Z" end-time="2026-10-29 15:56:26Z" duration="42.609666" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errorsOne or more child tests had errors  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1402" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="345" result="Failed" site="Child" start-time="2026-10-29 15:55:43Z" end-time="2026-10-29 15:56:26Z" duration="42.580406" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errorsOne or more child tests had errors  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestSuite" id="1403" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="345" result="Failed" site="Child" start-time="2026-10-29 15:55:43Z" end-time="2026-10-29 15:56:26Z" duration="42.477478" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errorsOne or more child tests had errors  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-suite type="TestFixture" id="1033" name="CampaignCinematicOpeningPlayTests" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" testcasecount="5" result="Failed" site="Child" start-time="2026-10-29 15:55:43Z" end-time="2026-10-29 15:56:26Z" duration="42.332291" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">One or more child tests had errors  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties></properties><failure>One or more child tests had errors<message>One or more child tests had errors</message></failure><test-case id="1034" name="AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" fullname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" methodname="AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl" classname="Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests" runstate="Runnable" seed="316306256" result="Failed" start-time="2026-10-29 15:55:43Z" end-time="2026-10-29 15:56:26Z" duration="42.276584" asserts="0">  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+<properties><property name="_JOINTYPE" value="UnityCombinatorial"></property><property name="Timeout" value="90000"></property><property name="retryIteration" value="0"></property><property name="repeatIteration" value="0"></property></properties><failure>  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+<message>  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+</message><stack-trace>at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+</stack-trace></failure><output>NATIVE_TEST Failed Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests.AllFuscaBeatsRenderInOrderPauseAndRestoreSchoolControl
+  The capture must show the white pickup at (768,176), not a pause overlay or hidden shot. Rect=(x:680.42, y:508.76, width:175.91, height:74.37), clock=3,1727
+  Expected: greater than 0.449999988f
+  But was:  0.0352941193f
+
+at Game.Tests.PlayMode.CampaignCinematicOpeningPlayTests+&lt;Capture&gt;d__13.MoveNext () [0x001a9] in C:\Users\Usuario\AppData\Local\Temp\varginha-master-qa-20261023-120709\Assets\Tests\PlayMode\CampaignCinematicOpeningPlayTests.cs:59
+at UnityEngine.TestTools.TestEnumerator+&lt;Execute&gt;d__7.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+
+</output></test-case></test-suite></test-suite></test-suite></test-suite></test-suite></test-suite>
+</test-run>

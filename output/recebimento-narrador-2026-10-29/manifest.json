@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "created": "2026-10-29",
+  "title": "Recebimento de repórter e narrador — Oizlede: Fragmento Perdido",
+  "status": "aguardando",
+  "audio_received_confirmed": false,
+  "expected_count": 15,
+  "sources": [
+    "Docs/CampanhaOficial/ROTEIRO_NARRADOR_REPORTER_2026-10-29.md",
+    "Docs/CampanhaOficial/ROTEIRO_PARA_DUBLADOR_2026-10-29.txt"
+  ],
+  "delivery": {
+    "preferred": "WAV mono 48 kHz, voz isolada, sem música/efeitos, pequena pausa antes/depois.",
+    "accepted": "WAV, MP3 ou OGG original; não recodificar nem pedir nova gravação apenas pelo formato.",
+    "one_selected_take_per_id": true
+  },
+  "runtime_integration_status": "Mapa de recebimento preparado; sincronização e integração final dependem dos takes recebidos.",
+  "entries": [
+    {
+      "id": "REP_01",
+      "filename_preferred": "REP_01.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "Moradores de Varginha relatam ter visto uma criatura.",
+      "scene": "TV da abertura, 1996",
+      "trigger": "Início do plano news_1996, após paper_1996.",
+      "narrative_restriction": "Começar no noticiário; continuar o áudio durante a revelação da TV, sem reiniciar no corte.",
+      "timing": {
+        "rule": "Aos 4 s da abertura; reportagem REP_01 + REP_02 ocupa aproximadamente 8–9 s, até o fim de tv_reveal.",
+        "opening_window_seconds": [
+          4,
+          13
+        ],
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    },
+    {
+      "id": "REP_02",
+      "filename_preferred": "REP_02.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "As versões são diferentes. Até agora, não há confirmação.",
+      "scene": "TV da abertura, 1996",
+      "trigger": "Imediatamente depois de REP_01; continuar em tv_reveal se necessário.",
+      "narrative_restriction": "Manter a incerteza da reportagem; não acrescentar confirmação da criatura.",
+      "timing": {
+        "rule": "Dentro da janela global 4–13 s; início exato depende da duração real de REP_01.",
+        "opening_window_seconds": [
+          4,
+          13
+        ],
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    },
+    {
+      "id": "NAR_01",
+      "filename_preferred": "NAR_01.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "Naquela noite, Edelzio tinha seis anos.",
+      "scene": "Apresentação de Edelzio criança",
+      "trigger": "Entrada do plano child_1996, antes da entrega do controle.",
+      "narrative_restriction": "Somente apresentar idade; não antecipar acidente, selo ou vida adulta.",
+      "timing": {
+        "rule": "Plano global 13–16 s; duração real a medir, sem cortar a fala.",
+        "opening_window_seconds": [
+          13,
+          16
+        ],
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    },
+    {
+      "id": "NAR_02",
+      "filename_preferred": "NAR_02.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "A casa ficou às escuras. Uma luz apareceu lá fora.",
+      "scene": "Casa de 1996: falha elétrica",
+      "trigger": "Depois da falha elétrica confirmada e quando o brilho externo já estiver visível.",
+      "narrative_restriction": "Não anunciar a luz antes de aparecer; não antecipar a queda.",
+      "timing": {
+        "rule": "Por evento, após falha + brilho; sem timestamp fixo.",
+        "opening_window_seconds": null,
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    },
+    {
+      "id": "NAR_03",
+      "filename_preferred": "NAR_03.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "Depois da queda, Edelzio não lembrava daquela noite.",
+      "scene": "Fim da noite de 1996",
+      "trigger": "Depois do clarão, da queda e do escurecimento da tela.",
+      "narrative_restriction": "Não falar da amnésia enquanto o jogador ainda presencia o acidente.",
+      "timing": {
+        "rule": "Após concluir os três eventos; sem timestamp fixo.",
+        "opening_window_seconds": null,
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    },
+    {
+      "id": "NAR_04",
+      "filename_preferred": "NAR_04.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "Trinta anos depois, a vida parecia ter seguido em frente.",
+      "scene": "Transição para 2026",
+      "trigger": "Ao apresentar a vida adulta, depois de concluir a sequência de 1996.",
+      "narrative_restriction": "Não revelar a continuidade do selo ou acontecimentos futuros.",
+      "timing": {
+        "rule": "Durante a transição temporal para 2026; sem timestamp fixo.",
+        "opening_window_seconds": null,
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    },
+    {
+      "id": "NAR_05",
+      "filename_preferred": "NAR_05.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "A chave tinha sumido. Agora, havia papéis pelo chão.",
+      "scene": "Casa adulta: chave desaparecida",
+      "trigger": "Depois de voltar à mesa e constatar que a chave sumiu, com os papéis já apresentados.",
+      "narrative_restriction": "Não disparar ao deixar a chave ou antes de ver o desaparecimento/papéis.",
+      "timing": {
+        "rule": "Após a constatação do desaparecimento; sem timestamp fixo.",
+        "opening_window_seconds": null,
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    },
+    {
+      "id": "NAR_06",
+      "filename_preferred": "NAR_06.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "Eram os recortes que ele guardou quando criança.",
+      "scene": "Casa adulta: caixa",
+      "trigger": "Somente depois de abrir a caixa e encontrar os recortes.",
+      "narrative_restriction": "Não revelar os recortes antes da abertura ou resolver a investigação da chave.",
+      "timing": {
+        "rule": "Após a descoberta dos recortes; sem timestamp fixo.",
+        "opening_window_seconds": null,
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    },
+    {
+      "id": "NAR_07",
+      "filename_preferred": "NAR_07.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "A interferência passou. A dúvida ficou.",
+      "scene": "Trajeto do Fusca",
+      "trigger": "Depois de terminar a interferência do trajeto.",
+      "narrative_restriction": "Não sobrepor a voz da interferência nem explicar sua origem.",
+      "timing": {
+        "rule": "Após o fim da interferência; sem timestamp fixo.",
+        "opening_window_seconds": null,
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    },
+    {
+      "id": "NAR_08",
+      "filename_preferred": "NAR_08.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "As notícias eram de dias diferentes. Alguns detalhes se repetiam.",
+      "scene": "Escola: investigação dos recortes",
+      "trigger": "Depois de concluir a investigação dos recortes na escola.",
+      "narrative_restriction": "Não dar a resposta durante a comparação/leitura do puzzle.",
+      "timing": {
+        "rule": "Após a conclusão confirmada; sem timestamp fixo.",
+        "opening_window_seconds": null,
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    },
+    {
+      "id": "NAR_09",
+      "filename_preferred": "NAR_09.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "Havia algo atrás dele. Edelzio precisava de abrigo.",
+      "scene": "Floresta: perseguição",
+      "trigger": "Depois de a ameaça aparecer, com a perseguição já iniciada.",
+      "narrative_restriction": "Não anunciar o perseguidor antes da aparição; não revelar a identidade.",
+      "timing": {
+        "rule": "Durante a perseguição ativa, após a revelação da ameaça.",
+        "opening_window_seconds": null,
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    },
+    {
+      "id": "NAR_10",
+      "filename_preferred": "NAR_10.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "Desde 1996, Edelzio mantinha a entidade contida.",
+      "scene": "Registro reconstruído: ligação de Edelzio",
+      "trigger": "Depois de reconstruir o registro e descobrir que Edelzio mantém a entidade contida.",
+      "narrative_restriction": "Revelação protegida: nunca antes da descoberta da ligação; ÂNCORA do compartimento não substitui Edelzio como selo.",
+      "timing": {
+        "rule": "Após a reconstrução e a descoberta confirmadas; sem timestamp fixo.",
+        "opening_window_seconds": null,
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    },
+    {
+      "id": "NAR_11",
+      "filename_preferred": "NAR_11.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "Os registros mostravam que tudo tinha começado muito antes.",
+      "scene": "Registros históricos de 1898",
+      "trigger": "Depois de encontrar e confirmar os registros de 1898.",
+      "narrative_restriction": "Não revelar a antiguidade antes da investigação/confirmação dos registros.",
+      "timing": {
+        "rule": "Após encontrar E confirmar; sem timestamp fixo.",
+        "opening_window_seconds": null,
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    },
+    {
+      "id": "NAR_12",
+      "filename_preferred": "NAR_12.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "A passagem estava pronta. A ligação precisava continuar até o fim.",
+      "scene": "Passagem para a travessia final",
+      "trigger": "Depois de derrotar a manifestação, concluir a calibração e abrir a passagem; antes de atravessar.",
+      "narrative_restriction": "Não disparar com calibração pendente nem declarar a ligação rompida.",
+      "timing": {
+        "rule": "Somente quando os três requisitos estiverem concluídos, antes da travessia.",
+        "opening_window_seconds": null,
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    },
+    {
+      "id": "NAR_13",
+      "filename_preferred": "NAR_13.wav",
+      "accepted_extensions": [
+        ".wav",
+        ".mp3",
+        ".ogg"
+      ],
+      "text": "A entidade voltou. A ligação foi desfeita. Edelzio estava livre.",
+      "scene": "Desfecho: libertação",
+      "trigger": "Somente depois da travessia concluída e do rompimento confirmado da ligação.",
+      "narrative_restriction": "Revelação final protegida: nunca antes de ambos os eventos.",
+      "timing": {
+        "rule": "Após travessia E rompimento; sem timestamp fixo.",
+        "opening_window_seconds": null,
+        "actual_duration_seconds": null,
+        "sync_status": "dependente_do_take_recebido"
+      },
+      "status": "aguardando",
+      "received_files": []
+    }
+  ]
+}
