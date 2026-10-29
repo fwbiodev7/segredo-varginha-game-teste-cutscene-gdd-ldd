@@ -1,5 +1,7 @@
 # Retomada — estado atualizado em29/10/2026
 
+Saldo final:15% restantes; nenhum lote pesado novo. A MESMA automação foi atualizada para29/10/2026 às11:56:59 (Brasília), um minuto após reset real11:55:59. Commit da entrega:58b3aff. ZIP323227116bytes, SHA25636024b1da133c64553dfea213af25fc1d0aa98a88ffb64fd6ba46e9926d2db95.
+
 O texto de28/10 abaixo é histórico. A revisão de código e a build de hoje já foram concluídas. NÃO repetir lotes antigos nem regenerar artes.
 
 - Branch codex/campanha-15-fases-e-site. Checkpoint de ontem b29ef8d; commit de hoje registrado na entrega/Git.
