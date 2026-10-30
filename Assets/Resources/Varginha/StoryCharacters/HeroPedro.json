@@ -4,8 +4,8 @@
   "columns": 6,
   "rows": 2,
   "pixelsPerUnit": [
-    82.90155440414507,
-    82.90155440414507
+    86.66666666666667,
+    86.66666666666667
   ],
   "frames": [
     {
@@ -16,11 +16,18 @@
         128
       ],
       "anchorX": 64,
-      "lift": 0.0844375,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "east",
       "stage": "anticipation",
-      "sha256": "887bf33136d6ca698d6ea762be0a4e0e6bd5583221dbc32b1034651c81f8d837"
+      "sha256": "1b9246826ffe4ef694cf943c5233e730e9e8a274dde358512f07c671e7d10cc6",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        83,
+        26,
+        224,
+        332
+      ]
     },
     {
       "rect": [
@@ -30,11 +37,18 @@
         128
       ],
       "anchorX": 192,
-      "lift": 0.0844375,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "east",
       "stage": "contact",
-      "sha256": "e4269b424c5f2bb54cf8a7b96d509eb587cb8a5a5e71ec11f3692d21804cb14a"
+      "sha256": "58ba335e5fb3e6b2e435af5e4b5084f2d680ab9100ed07f74e9ab34485d27c14",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        400,
+        58,
+        294,
+        300
+      ]
     },
     {
       "rect": [
@@ -44,11 +58,18 @@
         128
       ],
       "anchorX": 320,
-      "lift": 0.0844375,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "east",
       "stage": "recovery",
-      "sha256": "607ec3ca450b76e5844fdd6ec808ed67329a6bcde870623e0bf6b54b6fc36ca9"
+      "sha256": "e0302b5e4c1da52f5a6041f487203aa874ee254d359591ddf067343ada6e876c",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        808,
+        26,
+        235,
+        332
+      ]
     },
     {
       "rect": [
@@ -58,11 +79,18 @@
         128
       ],
       "anchorX": 448,
-      "lift": 0.07237500000000001,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "west",
       "stage": "anticipation",
-      "sha256": "d6448fbf644ec5531e8d4c9baaafea450dcf00c7d26458a1b0711a1af1fd5f15"
+      "sha256": "f07bd5d94498ea329731052d2f3316bb75c04a25d6f821cc316664e9d3f5f5a7",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1171,
+        26,
+        228,
+        332
+      ]
     },
     {
       "rect": [
@@ -72,11 +100,19 @@
         128
       ],
       "anchorX": 576,
-      "lift": 0.07237500000000001,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "west",
       "stage": "contact",
-      "sha256": "158f7f2937198edee11df99dadec19479db903acf1c6a4aa2f97cf1e2dc5bdcf"
+      "sha256": "ad457f346d5720d8e3c64409f895609b77d16b0f4f22c6749139fc032b17b4c2",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1870,
+        26,
+        219,
+        333
+      ],
+      "intentionalHold": "Valid west recovery pose reused at contact; dedicated west strum remains missing."
     },
     {
       "rect": [
@@ -86,11 +122,18 @@
         128
       ],
       "anchorX": 704,
-      "lift": 0.07237500000000001,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "west",
       "stage": "recovery",
-      "sha256": "8e0f05f3c4eb03f6dce4ee97644e0aa810117c6d72b41a6b7bff30c117bd5239"
+      "sha256": "ad457f346d5720d8e3c64409f895609b77d16b0f4f22c6749139fc032b17b4c2",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1870,
+        26,
+        219,
+        333
+      ]
     },
     {
       "rect": [
@@ -100,11 +143,18 @@
         128
       ],
       "anchorX": 64,
-      "lift": 0.265375,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "east",
       "stage": "anticipation",
-      "sha256": "7b46c2912a1d5d65d14a2f8b3ad449aa19e36c9e6a88c5ffc74396a091cc52b6"
+      "sha256": "11b82ea13e94dfd54aa8a4faa32dce5961d6918da7bb9da3d952d98af90a8bb0",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        36,
+        391,
+        271,
+        308
+      ]
     },
     {
       "rect": [
@@ -114,11 +164,18 @@
         128
       ],
       "anchorX": 192,
-      "lift": 0.22918750000000002,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "east",
       "stage": "contact",
-      "sha256": "c621bf21a8ec44524573d98746eeaedc342cf426c65cd3d51c3da893bfeb366a"
+      "sha256": "76802615d74553886b92a82584da45dea494b628989ed7cc8176009c3f4dbf38",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        387,
+        414,
+        294,
+        285
+      ]
     },
     {
       "rect": [
@@ -128,11 +185,18 @@
         128
       ],
       "anchorX": 320,
-      "lift": 0.24125000000000002,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "east",
       "stage": "recovery",
-      "sha256": "d4d9495cad5a252ea244aa8a1f1766c07231fe0ae1ccf5710ef7fba62ccff374"
+      "sha256": "3aca50cd752b7b3ed3456dfa72d6429cab7b5c2afa0edba6e63f22a8f3029238",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        775,
+        391,
+        258,
+        309
+      ]
     },
     {
       "rect": [
@@ -142,11 +206,18 @@
         128
       ],
       "anchorX": 448,
-      "lift": 0.265375,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "west",
       "stage": "anticipation",
-      "sha256": "0a8c2dbbbbd67da8c199e43cfe6b320b5af206c97e6709d892f5345e1c6485f0"
+      "sha256": "3e513a2691db0cda3e782384b1614d95539e5f5be2c15bb4dc5a15c1eab20373",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1151,
+        391,
+        252,
+        308
+      ]
     },
     {
       "rect": [
@@ -156,11 +227,19 @@
         128
       ],
       "anchorX": 576,
-      "lift": 0.24125000000000002,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "west",
       "stage": "contact",
-      "sha256": "0ef7d5a475ff21e7c44f8da1b1007947969e2e7633ef54294f2b89fc03ca82de"
+      "sha256": "be583737ed0bd86d921f6e9b090771cbb9cbdeffee2e4cb71dc4cfd95da925ce",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1877,
+        389,
+        259,
+        311
+      ],
+      "intentionalHold": "Valid west recovery pose reused at contact; dedicated west strum remains missing."
     },
     {
       "rect": [
@@ -170,11 +249,39 @@
         128
       ],
       "anchorX": 704,
-      "lift": 0.265375,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "west",
       "stage": "recovery",
-      "sha256": "b5eb6dfa2bc0b3ba85c69db122207e3a2a6ccdca2869cca9acbc95de5399cacd"
+      "sha256": "be583737ed0bd86d921f6e9b090771cbb9cbdeffee2e4cb71dc4cfd95da925ce",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1877,
+        389,
+        259,
+        311
+      ]
     }
+  ],
+  "source": "ArtSources/AttackSheets20261029/Pedro/generated-source.png",
+  "sourceSha256": "537d4746777adee6880273e59df3433a65ae424255110bb038b9a2f4af9eccaa",
+  "canonicalPortraitSha256": "7196bdea1af9fa9e3a33707a6aedbea0de3d063d90e35b5282bc4095f3e6f049",
+  "technicalUniformScale": 0.3123123123123123,
+  "origin": "top-left",
+  "intentionalHolds": [
+    {
+      "target": 4,
+      "source": 5,
+      "reason": "Generated contact faced east; valid west recovery pose held for contact."
+    },
+    {
+      "target": 10,
+      "source": 11,
+      "reason": "Generated contact faced east; valid west recovery pose held for contact."
+    }
+  ],
+  "runtimeVerified": false,
+  "notes": [
+    "Complete authored figure+instrument per frame. Effects separate. Baseline12 and lift=-12/PPU give world ground offset-.58 in CampaignStorySprites."
   ]
 }

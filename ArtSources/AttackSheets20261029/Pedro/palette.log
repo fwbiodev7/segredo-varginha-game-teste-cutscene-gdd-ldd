@@ -1,0 +1,3 @@
+C:\Users\Usuario\.codex\skills\pixel-art-sprite-sheet-master\scripts\sprite_pipeline.py:295: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  counts = Counter(px for px in im.convert('RGBA').getdata() if px[3] > 0)
+{"ok": true, "colors": 28345, "palette": "ArtSources\\AttackSheets20261029\\Pedro\\palette.json"}

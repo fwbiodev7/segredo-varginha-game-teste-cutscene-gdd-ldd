@@ -1,0 +1,118 @@
+{
+  "width": 384,
+  "height": 256,
+  "columns": 3,
+  "rows": 2,
+  "cell": [
+    128,
+    128
+  ],
+  "imageSha256": "e22ca45fef4493aa75d7d17ebeede69629f617ff352c2ba36dd9806fe300e47d",
+  "sourceSha256": "0d75aed0f1e94965452b9352e533a7e256916317c7b532370ffb1b468662c41a",
+  "frames": [
+    {
+      "variant": 0,
+      "stage": "projectile",
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "sourceRect": [
+        83,
+        134,
+        388,
+        324
+      ],
+      "uniformScale": 0.28865979381443296
+    },
+    {
+      "variant": 0,
+      "stage": "impact",
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "sourceRect": [
+        595,
+        33,
+        349,
+        498
+      ],
+      "uniformScale": 0.2248995983935743
+    },
+    {
+      "variant": 0,
+      "stage": "final",
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "sourceRect": [
+        1054,
+        101,
+        466,
+        415
+      ],
+      "uniformScale": 0.24034334763948498
+    },
+    {
+      "variant": 1,
+      "stage": "projectile",
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "sourceRect": [
+        66,
+        614,
+        446,
+        332
+      ],
+      "uniformScale": 0.25112107623318386
+    },
+    {
+      "variant": 1,
+      "stage": "impact",
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "sourceRect": [
+        512,
+        578,
+        512,
+        398
+      ],
+      "uniformScale": 0.21875
+    },
+    {
+      "variant": 1,
+      "stage": "final",
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "sourceRect": [
+        1024,
+        609,
+        496,
+        358
+      ],
+      "uniformScale": 0.22580645161290322
+    }
+  ],
+  "alphaPaddingThreshold": 8,
+  "runtimeVerified": false
+}

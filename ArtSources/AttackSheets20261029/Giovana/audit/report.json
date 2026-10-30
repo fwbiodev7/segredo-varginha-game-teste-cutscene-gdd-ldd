@@ -1,0 +1,267 @@
+{
+  "ok": true,
+  "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-main\\Assets\\Resources\\Varginha\\StoryCharacters\\HeroGiovana.png",
+  "sourceSha256": "c5ba6ce2ae218c8f4fa11e29bef3eedc8eb3dbcbd36470dcfeaaef7b7a8cecd7",
+  "errors": [],
+  "warnings": [
+    "More than 10% of visible samples have partial alpha; inspect halos/native pixel rendering",
+    "Unity textureCompression: expected 0, observed ['0', '1']; inspect overrides",
+    "Unity PPU missing/differs from manifest",
+    "Unity text inspection only: import, platform overrides and runtime not verified"
+  ],
+  "frames": [
+    {
+      "id": "attack_0_east_anticipation",
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "bbox": [
+        24,
+        13,
+        94,
+        116
+      ],
+      "visiblePixels": 4803,
+      "colors": 2835,
+      "partialAlphaPixels": 4776,
+      "pixelSha256": "bbd5c495b6790392cef7b6fe14f9950a0c2fa001fbf93088c00f4fb66e4a61d9"
+    },
+    {
+      "id": "attack_0_east_contact",
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "bbox": [
+        20,
+        15,
+        110,
+        116
+      ],
+      "visiblePixels": 5009,
+      "colors": 3146,
+      "partialAlphaPixels": 4998,
+      "pixelSha256": "99573f9b97b609bc5411e9f5ed42b4daad4bebc8bef9d475b32dddd984d19112"
+    },
+    {
+      "id": "attack_0_east_recovery",
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "bbox": [
+        21,
+        13,
+        93,
+        116
+      ],
+      "visiblePixels": 4898,
+      "colors": 2883,
+      "partialAlphaPixels": 4893,
+      "pixelSha256": "56195a5c00124b4dcb517219273e4624b519a424bf5c5fdd032a72a4ef11b189"
+    },
+    {
+      "id": "attack_0_west_anticipation",
+      "rect": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "bbox": [
+        30,
+        12,
+        106,
+        116
+      ],
+      "visiblePixels": 4943,
+      "colors": 2882,
+      "partialAlphaPixels": 4924,
+      "pixelSha256": "ad4129d01c6eaa63dec22134475c4fd8f03644e956e9177d8deff8f3b69b9134"
+    },
+    {
+      "id": "attack_0_west_contact",
+      "rect": [
+        512,
+        0,
+        128,
+        128
+      ],
+      "bbox": [
+        15,
+        17,
+        104,
+        116
+      ],
+      "visiblePixels": 4878,
+      "colors": 3080,
+      "partialAlphaPixels": 4875,
+      "pixelSha256": "677ab42fdf0dc8bc1b018e682c17e6e814e57a830e4716664932bec4b0e878b0"
+    },
+    {
+      "id": "attack_0_west_recovery",
+      "rect": [
+        640,
+        0,
+        128,
+        128
+      ],
+      "bbox": [
+        33,
+        12,
+        106,
+        116
+      ],
+      "visiblePixels": 4961,
+      "colors": 2848,
+      "partialAlphaPixels": 4947,
+      "pixelSha256": "20a15a2dc516409d8577813421538e2ac8cdc9766e09bdba36bc581aea857843"
+    },
+    {
+      "id": "attack_1_east_anticipation",
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "bbox": [
+        23,
+        15,
+        98,
+        116
+      ],
+      "visiblePixels": 4816,
+      "colors": 3072,
+      "partialAlphaPixels": 4805,
+      "pixelSha256": "2b7625c252d8dd01a5bea60c0b94bf17b093d5598d02f9ef14a6176013cae0e1"
+    },
+    {
+      "id": "attack_1_east_contact",
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "bbox": [
+        20,
+        18,
+        110,
+        116
+      ],
+      "visiblePixels": 4852,
+      "colors": 2950,
+      "partialAlphaPixels": 4847,
+      "pixelSha256": "14c7726e42f7604b2d2c17750e763d6fd03c55d6b831f04ba4bcee039db1b7c5"
+    },
+    {
+      "id": "attack_1_east_recovery",
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "bbox": [
+        23,
+        17,
+        99,
+        116
+      ],
+      "visiblePixels": 4826,
+      "colors": 3063,
+      "partialAlphaPixels": 4801,
+      "pixelSha256": "b236cb4e97a8be446376abfa79b18e61bbb165b15aa910181906ccf21603cbc2"
+    },
+    {
+      "id": "attack_1_west_anticipation",
+      "rect": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "bbox": [
+        29,
+        17,
+        105,
+        116
+      ],
+      "visiblePixels": 4802,
+      "colors": 3052,
+      "partialAlphaPixels": 4795,
+      "pixelSha256": "9f62cef881f266ec393056e9524db300dd7db4c7d50ac22c0c339f276e993571"
+    },
+    {
+      "id": "attack_1_west_contact",
+      "rect": [
+        512,
+        128,
+        128,
+        128
+      ],
+      "bbox": [
+        13,
+        18,
+        107,
+        116
+      ],
+      "visiblePixels": 5016,
+      "colors": 3105,
+      "partialAlphaPixels": 5011,
+      "pixelSha256": "3af17fa250037b368cdb04dc7d07fc3f8780b141978ef5db11ad8a55ed0a4be7"
+    },
+    {
+      "id": "attack_1_west_recovery",
+      "rect": [
+        640,
+        128,
+        128,
+        128
+      ],
+      "bbox": [
+        28,
+        17,
+        103,
+        116
+      ],
+      "visiblePixels": 4796,
+      "colors": 3048,
+      "partialAlphaPixels": 4787,
+      "pixelSha256": "c7e489aab30d308cd8870cc6b513097bf44c0ae427ad3e8706e2439603015d40"
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_0_east",
+      "frames": 3,
+      "distinctPoses": 3
+    },
+    {
+      "name": "attack_0_west",
+      "frames": 3,
+      "distinctPoses": 3
+    },
+    {
+      "name": "attack_1_east",
+      "frames": 3,
+      "distinctPoses": 3
+    },
+    {
+      "name": "attack_1_west",
+      "frames": 3,
+      "distinctPoses": 3
+    }
+  ],
+  "overlaps": [],
+  "visualApproval": false,
+  "runtimeVerified": false
+}

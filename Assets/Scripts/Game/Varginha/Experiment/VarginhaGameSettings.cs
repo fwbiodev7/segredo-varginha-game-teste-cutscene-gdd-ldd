@@ -156,12 +156,13 @@ namespace Game.Varginha.Experiment
             _next = Time.unscaledTime + .3f;
             foreach (var source in FindObjectsByType<AudioSource>())
             {
+                if(source.GetComponent<CampaignNarration>()!=null||source.GetComponent<CampaignCreditsMusic>()!=null)continue;
                 if (!_bases.TryGetValue(source, out float baseline)) { baseline = source.volume; _bases[source] = baseline; }
                 var settings = VarginhaGameSettings.Current;
                 string label = source.clip != null ? source.clip.name : source.name;
-                bool voice = label.Contains("NewsAnchor") || label.Contains("Witness") || label.Contains("Memory");
+                bool voice = label.Contains("NewsAnchor") || label.Contains("Witness") || label.Contains("Memory") || label.StartsWith("Narration");
                 bool mechanical = label == "Campaign_Engine";
-                source.volume = baseline * (voice ? settings.voice : source.loop && !mechanical ? settings.music : settings.effects);
+                source.volume = baseline * (voice ? settings.voice : source.loop && !mechanical ? settings.music * (CampaignNarration.Speaking?.35f:1f) : settings.effects);
             }
             var removed = new List<AudioSource>();
             foreach (var source in _bases.Keys) if (source == null) removed.Add(source);

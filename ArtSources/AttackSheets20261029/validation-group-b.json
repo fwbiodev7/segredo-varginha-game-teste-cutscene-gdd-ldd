@@ -1,0 +1,74 @@
+[
+  {
+    "name": "AnaTavares",
+    "frames": 12,
+    "unique": 12,
+    "size": [
+      768,
+      256
+    ],
+    "effects": "generated",
+    "actorHash": "7156808e5ad52b5468705c4c61efe7c346fa1d8a83ac3cd5a585c5f172e84a7d",
+    "rowCounts": [
+      6,
+      6
+    ],
+    "footBaseline": 120,
+    "bounds": "PASS",
+    "metaGuid": "preserved if present"
+  },
+  {
+    "name": "LuisMiguelMessias",
+    "frames": 12,
+    "unique": 12,
+    "size": [
+      768,
+      256
+    ],
+    "effects": "existing retained",
+    "actorHash": "502004b2e9ed91ad32de6770ee7eafe78e916d4e7e22096b3f0bf32dfca3740e",
+    "rowCounts": [
+      6,
+      6
+    ],
+    "footBaseline": 120,
+    "bounds": "PASS",
+    "metaGuid": "preserved if present"
+  },
+  {
+    "name": "Bianca",
+    "frames": 12,
+    "unique": 12,
+    "size": [
+      768,
+      256
+    ],
+    "effects": "generated",
+    "actorHash": "44fb3b41405cb6e739d979e25bb80bcf53f0da2d9dc22201b2306bd1dd60be4a",
+    "rowCounts": [
+      6,
+      6
+    ],
+    "footBaseline": 120,
+    "bounds": "PASS",
+    "metaGuid": "preserved if present"
+  },
+  {
+    "name": "Moscardini",
+    "frames": 12,
+    "unique": 12,
+    "size": [
+      768,
+      256
+    ],
+    "effects": "generated",
+    "actorHash": "f65b634446a93c20aa3d4d2aa128deeeb42eac4bc3c3cc4e4653f8dc0d6841c8",
+    "rowCounts": [
+      6,
+      6
+    ],
+    "footBaseline": 120,
+    "bounds": "PASS",
+    "metaGuid": "preserved if present"
+  }
+]

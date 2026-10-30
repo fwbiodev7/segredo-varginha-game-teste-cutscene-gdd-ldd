@@ -1,0 +1,183 @@
+{
+  "width": 768,
+  "height": 256,
+  "columns": 6,
+  "rows": 2,
+  "pixelsPerUnit": [
+    82.90155440414507,
+    82.90155440414507
+  ],
+  "frames": [
+    {
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 64.184039835693,
+      "lift": 0.48349999999999993,
+      "action": 0,
+      "direction": "east",
+      "stage": "anticipation",
+      "sha256": "932e7082469b34b9fb93f60bfe110d7f495a7f8b18d991eb87121410041947e9"
+    },
+    {
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 191.74306327933863,
+      "lift": 0.48349999999999993,
+      "action": 0,
+      "direction": "east",
+      "stage": "contact",
+      "sha256": "ac2f8d1725e9b7fe4138658302f4cb6dfb8dac1273c4a23508ba0f9d2dbd2e6d"
+    },
+    {
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 319.90704236568894,
+      "lift": 0.48349999999999993,
+      "action": 0,
+      "direction": "east",
+      "stage": "recovery",
+      "sha256": "d678901b63e31b72e0892b5c8b053001accf5f6a9c4eab2c669104f0b2e4c924"
+    },
+    {
+      "rect": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 447.88935473654175,
+      "lift": 0.48349999999999993,
+      "action": 0,
+      "direction": "west",
+      "stage": "anticipation",
+      "sha256": "b5611823aeb536d1a53198a1b4b1db314832748728c0f034f4e7a25b50b5f32f"
+    },
+    {
+      "rect": [
+        512,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 575.548059781516,
+      "lift": 0.48349999999999993,
+      "action": 0,
+      "direction": "west",
+      "stage": "contact",
+      "sha256": "2717bcbc077431551f6a144191deca96df603a44e564a25f84528fb3b43f1d6f"
+    },
+    {
+      "rect": [
+        640,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 703.8404619244086,
+      "lift": 0.48349999999999993,
+      "action": 0,
+      "direction": "west",
+      "stage": "recovery",
+      "sha256": "25c5cc23d28de48da44134d43efaa9690ff89b3cc427ddf21d63217c4524efb5"
+    },
+    {
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 63.60650369929788,
+      "lift": 0.48349999999999993,
+      "action": 1,
+      "direction": "east",
+      "stage": "anticipation",
+      "sha256": "3cc496f75b7197b433ab6c4803ad94a30da6c9178b849205235b0e0015bf6765"
+    },
+    {
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 187.99190900804967,
+      "lift": 0.48349999999999993,
+      "action": 1,
+      "direction": "east",
+      "stage": "contact",
+      "sha256": "48aaf43e4f33de3ea2881dee7761a67ec0467f460fe9b20a37c9960273b9ad8f"
+    },
+    {
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 319.54930362116994,
+      "lift": 0.48349999999999993,
+      "action": 1,
+      "direction": "east",
+      "stage": "recovery",
+      "sha256": "3f1cc4b14b3e4e88e1af69064957dbf210eb79eb9834c105ee8d497a52985da1"
+    },
+    {
+      "rect": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 447.87135227173286,
+      "lift": 0.48349999999999993,
+      "action": 1,
+      "direction": "west",
+      "stage": "anticipation",
+      "sha256": "5887304ffc0a3f5e6b1d236276f86c9ebbfeb5d962a277257435704772beecb2"
+    },
+    {
+      "rect": [
+        512,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 577.0511327303396,
+      "lift": 0.48349999999999993,
+      "action": 1,
+      "direction": "west",
+      "stage": "contact",
+      "sha256": "fa65216354883fdbb99781d7833ed6fb1dcb65c9dfe9817f34eacb5fdd7f53f6"
+    },
+    {
+      "rect": [
+        640,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 704.3731866429523,
+      "lift": 0.48349999999999993,
+      "action": 1,
+      "direction": "west",
+      "stage": "recovery",
+      "sha256": "90ca82af95f4372975738c36e47b08f714d5492737f355c7958748c2919c9e0a"
+    }
+  ],
+  "source": "ArtSources/AttackSheets20261029/Moscardini",
+  "status": "visual-reviewed",
+  "visualApproval": false
+}

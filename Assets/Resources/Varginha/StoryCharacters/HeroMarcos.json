@@ -4,8 +4,8 @@
   "columns": 6,
   "rows": 2,
   "pixelsPerUnit": [
-    91.66666666666667,
-    91.66666666666667
+    82.58064516129032,
+    82.58064516129032
   ],
   "frames": [
     {
@@ -15,12 +15,12 @@
         128,
         128
       ],
-      "anchorX": 64,
-      "lift": 0.03272727272727272,
+      "anchorX": 66.67507886435331,
+      "lift": 0.38625,
       "action": 0,
       "direction": "east",
       "stage": "anticipation",
-      "sha256": "c8ae5bb596fbb8dd8fd70c1c4be7200a3a786e6fffdbbc5c6946d2a006355e50"
+      "sha256": "09838f9d37566e2d8e44e30664134280e8ee72c3fbb3d870ba6537dfa7be1686"
     },
     {
       "rect": [
@@ -29,12 +29,12 @@
         128,
         128
       ],
-      "anchorX": 192,
-      "lift": 0.021818181818181816,
+      "anchorX": 176.53627760252365,
+      "lift": 0.38625,
       "action": 0,
       "direction": "east",
       "stage": "contact",
-      "sha256": "7fa6bef014b4cdb2d0a7684609549353105496dc550cb79860848856b8d0e938"
+      "sha256": "2e2d58341aa69a11ac7a260d679d1064a450f0a8275f66dcf82928695b077e7b"
     },
     {
       "rect": [
@@ -43,12 +43,12 @@
         128,
         128
       ],
-      "anchorX": 320,
-      "lift": 0.021818181818181816,
+      "anchorX": 318.2334384858044,
+      "lift": 0.38625,
       "action": 0,
       "direction": "east",
       "stage": "recovery",
-      "sha256": "eeecda0559c5813ee242562e3079271f193b10389d8f0e46b64a5ad7c85ea19e"
+      "sha256": "5a7ba09c2daf76829d7844823bc749398d7de1149e99b9a2c1ec5a825a744e76"
     },
     {
       "rect": [
@@ -57,12 +57,12 @@
         128,
         128
       ],
-      "anchorX": 448,
-      "lift": 0.021818181818181816,
+      "anchorX": 444.98422712933757,
+      "lift": 0.38625,
       "action": 0,
       "direction": "west",
       "stage": "anticipation",
-      "sha256": "162a4527f0ce8138c9a94089f544c6e95267dacbc8064c7010e9a9c2dfeb2c45"
+      "sha256": "125765e2166450d5f94f22d34b0a18a759eb3615dd8f1fb4e346990a4713ae68"
     },
     {
       "rect": [
@@ -71,12 +71,12 @@
         128,
         128
       ],
-      "anchorX": 576,
-      "lift": 0.03272727272727272,
+      "anchorX": 589.6845425867508,
+      "lift": 0.38625,
       "action": 0,
       "direction": "west",
       "stage": "contact",
-      "sha256": "c23e6217a2174871a3d28bdfcaf497a0d16a9c33254df2542f7472fa59e26f68"
+      "sha256": "d11334b787885d6bc556016c84c0f17af0d9e9bd34ac37362f2a9fc89b79615c"
     },
     {
       "rect": [
@@ -85,12 +85,12 @@
         128,
         128
       ],
-      "anchorX": 704,
-      "lift": 0.021818181818181816,
+      "anchorX": 703.372239747634,
+      "lift": 0.38625,
       "action": 0,
       "direction": "west",
       "stage": "recovery",
-      "sha256": "067299645da16e5e236994015cd4f010d3a85eaf014d872791b56e834098609d"
+      "sha256": "c2a9c2db6ea578b526c610aea8ddde23ccfad185f1a7376a447bad110163aa86"
     },
     {
       "rect": [
@@ -99,12 +99,12 @@
         128,
         128
       ],
-      "anchorX": 64,
-      "lift": 0.05454545454545454,
+      "anchorX": 62.1198738170347,
+      "lift": 0.38625,
       "action": 1,
       "direction": "east",
       "stage": "anticipation",
-      "sha256": "58d9a2543ebdf9c582d39f9b239ad6f7cc1be2cbbeb1a654b952cae5aa3163cd"
+      "sha256": "c57f212ed765b0d876f52f6f34beacdbd703e79fc26f6b2db5ec29f2480f6af0"
     },
     {
       "rect": [
@@ -113,12 +113,12 @@
         128,
         128
       ],
-      "anchorX": 192,
-      "lift": 0.05454545454545454,
+      "anchorX": 160.63091482649844,
+      "lift": 0.38625,
       "action": 1,
       "direction": "east",
       "stage": "contact",
-      "sha256": "c611201873d3bc2a7a41ad06c3d8754cbffe2e959d4dd555187b826a4cca5c0c"
+      "sha256": "426d71d25f3f84d219bb6f6aa0f5c617dc604bcd0e9b18a6d5e7a5d41e085c9f"
     },
     {
       "rect": [
@@ -127,12 +127,12 @@
         128,
         128
       ],
-      "anchorX": 320,
-      "lift": 0.05454545454545454,
+      "anchorX": 315.17665615141954,
+      "lift": 0.38625,
       "action": 1,
       "direction": "east",
       "stage": "recovery",
-      "sha256": "37f30e39fae598252551d029d69c3a5e86cd47d1c30337d1401cd3a257b7f1d9"
+      "sha256": "b2425b367668d6c93dcb9691a3b62c306dc290f73b3605ba7493c62a91ec5ff5"
     },
     {
       "rect": [
@@ -141,12 +141,12 @@
         128,
         128
       ],
-      "anchorX": 448,
-      "lift": 0.05454545454545454,
+      "anchorX": 450.34069400630915,
+      "lift": 0.38625,
       "action": 1,
       "direction": "west",
       "stage": "anticipation",
-      "sha256": "ef563526ec2e510dbc96c11fb10dc083fcd0212d0dcf817ed907210a00a161a6"
+      "sha256": "8c40090f22fd9917d9a29bf0918c570f16c19848ccff9b6d09aab3ba69dea173"
     },
     {
       "rect": [
@@ -155,12 +155,12 @@
         128,
         128
       ],
-      "anchorX": 576,
-      "lift": 0.05454545454545454,
+      "anchorX": 607.0914826498423,
+      "lift": 0.38625,
       "action": 1,
       "direction": "west",
       "stage": "contact",
-      "sha256": "c3815d57bf92958948ecf1e577456bc9dfbf8c7b7cd49d5717064a3861eb7507"
+      "sha256": "41a36d0b8060eb06004383a5dfc7c69a5fb54a1c9ca32270f60d1953b5551851"
     },
     {
       "rect": [
@@ -169,12 +169,12 @@
         128,
         128
       ],
-      "anchorX": 704,
-      "lift": 0.05454545454545454,
+      "anchorX": 705.3406940063091,
+      "lift": 0.38625,
       "action": 1,
       "direction": "west",
       "stage": "recovery",
-      "sha256": "5be0ff336cb84275b7fe6cba5bdd773559503ce5dff6c5331bc2212fed04e848"
+      "sha256": "6aa4e30a146fee7c75a3d0242cc5333edc80e97d389bf8f9589799f945ee532d"
     }
   ]
 }

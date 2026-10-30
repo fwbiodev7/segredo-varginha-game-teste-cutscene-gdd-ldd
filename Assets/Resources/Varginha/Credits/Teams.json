@@ -1,0 +1,61 @@
+{
+  "teams": [
+    {
+      "role": "ARTE",
+      "names": [
+        "Yasmin",
+        "Luís Martins",
+        "Giovana"
+      ]
+    },
+    {
+      "role": "SONOPLASTIA",
+      "names": [
+        "Luís Messias",
+        "Gustavo"
+      ]
+    },
+    {
+      "role": "DESENVOLVEDORES",
+      "names": [
+        "Marcos",
+        "Fábio",
+        "João Pedro",
+        "Asafe"
+      ]
+    },
+    {
+      "role": "TESTES E QA",
+      "names": [
+        "Moscardini",
+        "Anna Sabiá",
+        "Ana Tavares",
+        "Karol",
+        "Pedro"
+      ]
+    },
+    {
+      "role": "NARRATIVA",
+      "names": [
+        "João Guilherme",
+        "Bianca"
+      ]
+    },
+    {
+      "role": "EM HOMENAGEM A",
+      "names": [
+        "Edelzio",
+        "Ouzana",
+        "Professor Fábio",
+        "Renan"
+      ]
+    },
+    {
+      "role": "SUPERVISIONADO POR",
+      "names": [
+        "Renan",
+        "Alex"
+      ]
+    }
+  ]
+}

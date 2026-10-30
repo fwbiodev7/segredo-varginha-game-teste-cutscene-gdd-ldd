@@ -1,0 +1,107 @@
+[
+  {
+    "index": 1,
+    "provided": "audio1.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.44.24 PM.mp4",
+    "duration": 4.6506875,
+    "resource": "Varginha/Narration/Narration01"
+  },
+  {
+    "index": 2,
+    "provided": "audio2.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.44.32 PM.mp4",
+    "duration": 5.12,
+    "resource": "Varginha/Narration/Narration02"
+  },
+  {
+    "index": 3,
+    "provided": "audio3.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.44.49 PM.mp4",
+    "duration": 5.1626875,
+    "resource": "Varginha/Narration/Narration03"
+  },
+  {
+    "index": 4,
+    "provided": "audio4.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.43.50 PM.mp4",
+    "duration": 5.205375,
+    "resource": "Varginha/Narration/Narration04"
+  },
+  {
+    "index": 5,
+    "provided": "audio5.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.44.01 PM.mp4",
+    "duration": 5.397375,
+    "resource": "Varginha/Narration/Narration05"
+  },
+  {
+    "index": 6,
+    "provided": "audio6.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.43.26 PM.mp4",
+    "duration": 5.461375,
+    "resource": "Varginha/Narration/Narration06"
+  },
+  {
+    "index": 7,
+    "provided": "audio7.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.43.39 PM.mp4",
+    "duration": 6.08,
+    "resource": "Varginha/Narration/Narration07"
+  },
+  {
+    "index": 8,
+    "provided": "audio8.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.45.03 PM.mp4",
+    "duration": 6.101375,
+    "resource": "Varginha/Narration/Narration08"
+  },
+  {
+    "index": 9,
+    "provided": "audio9.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.44.11 PM.mp4",
+    "duration": 6.485375,
+    "resource": "Varginha/Narration/Narration09"
+  },
+  {
+    "index": 10,
+    "provided": "audio10.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.45.12 PM.mp4",
+    "duration": 6.8266875,
+    "resource": "Varginha/Narration/Narration10"
+  },
+  {
+    "index": 11,
+    "provided": "audio11.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.44.41 PM.mp4",
+    "duration": 6.997375,
+    "resource": "Varginha/Narration/Narration11"
+  },
+  {
+    "index": 12,
+    "provided": "audio12.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.43.01 PM.mp4",
+    "duration": 7.509375,
+    "resource": "Varginha/Narration/Narration12"
+  },
+  {
+    "index": 13,
+    "provided": "audio13.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.43.07 PM.mp4",
+    "duration": 8.256,
+    "resource": "Varginha/Narration/Narration13"
+  },
+  {
+    "index": 14,
+    "provided": "audio14.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.44.56 PM.mp4",
+    "duration": 8.277375,
+    "resource": "Varginha/Narration/Narration14"
+  },
+  {
+    "index": 15,
+    "provided": "audioultimafasefinal15.mp4",
+    "original": "WhatsApp Audio 2026-10-29 at 10.45.19 PM.mp4",
+    "duration": 9.301375,
+    "resource": "Varginha/Narration/Narration15"
+  }
+]

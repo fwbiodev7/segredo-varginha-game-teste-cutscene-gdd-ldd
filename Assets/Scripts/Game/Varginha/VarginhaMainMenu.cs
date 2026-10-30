@@ -34,6 +34,7 @@ namespace Game.Varginha
         private Key _padBinding=Key.E;
         private int _rebindArmedFrame = -1;
         private Texture2D pixel;
+        private float _creditsElapsed;
         private Texture2D backgroundTexture;
         private GUIStyle titleStyle;
         private GUIStyle subtitleStyle;
@@ -65,6 +66,7 @@ namespace Game.Varginha
         }
         private void Update()
         {
+            if(panel==Panel.Credits)_creditsElapsed+=Time.unscaledDeltaTime;
             if(!VarginhaInputActions.CancelPressed)return;
             if(_rebindingAction.HasValue){_rebindingAction=null;return;}
             if(panel==Panel.Keybinds)panel=Panel.Settings;
@@ -86,6 +88,7 @@ namespace Game.Varginha
                 {
                     if (Experiment.VarginhaGameSettings.Draw(() => OpenPanel(Panel.Keybinds))) panel = Panel.None;
                 }
+                else if(panel==Panel.Credits){var matrix=Experiment.ExperimentGUI.BeginCanvas();if(Experiment.CampaignCredits.Draw(_creditsElapsed))panel=Panel.None;GUI.matrix=matrix;}
                 else if (panel == Panel.Difficulty) DrawDifficulty();
                 else if (panel == Panel.Keybinds) DrawKeybinds();
                 else DrawPanel();
@@ -107,6 +110,7 @@ namespace Game.Varginha
             GUI.enabled = enabled;
             if (PixelMenuTheme.Button(new Rect(72, 449, 470, 56), "NOVA HISTÓRIA")) panel = Panel.Play;
             if (PixelMenuTheme.Button(new Rect(72, 525, 470, 56), "CONFIGURAÇÕES")) panel = Panel.Settings;
+            if(PixelMenuTheme.Button(new Rect(72,598,470,40),"CRÉDITOS")){_creditsElapsed=0;panel=Panel.Credits;}
             PixelMenuTheme.Label(new Rect(72, 654, 900, 24), "INVESTIGAÇÃO • MEMÓRIA • MISTÉRIO", 9, PixelMenuTheme.Muted);
             GUI.matrix = previous;
         }

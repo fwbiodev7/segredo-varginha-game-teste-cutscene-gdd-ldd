@@ -409,7 +409,7 @@ namespace Game.Varginha.Experiment
         public void CloseMessage()
         {
             _message=null;
-            if(_creditsPending){_creditsPending=false;_creditsVisible=true;_creditsTime=0;Save();}
+            if(_creditsPending){_creditsPending=false;_creditsVisible=true;_creditsTime=0;Save();CampaignNarration.Play(15);}
             Actor?.SetInputLocked(Modal);
         }
         private void Save()

@@ -141,6 +141,7 @@ namespace Game.Varginha
 
         private void Update()
         {
+            if(GetComponent<VarginhaSleepStatus>()?.IsSleeping==true){_body.linearVelocity=Vector2.zero;return;}
             if (_target.IsDead) { CancelAttack(); return; }
             if (_player == null) _player = FindAnyObjectByType<EdelzioTopDownController>();
             if (!CanFight)
@@ -188,7 +189,7 @@ namespace Game.Varginha
         private void FixedUpdate()
         {
             _body.linearVelocity = Vector2.zero;
-            if (_target.IsDead || _freeze > 0f || !CanFight) return;
+            if (_target.IsDead || _freeze > 0f || !CanFight || GetComponent<VarginhaSleepStatus>()?.IsSleeping==true) return;
             if (_stagger > 0f) { MoveBody(_knockback * Time.fixedDeltaTime); return; }
             if (_state == CombatState.Attacking && _role == EnemyRole.Rusher) { AdvanceCharge(); return; }
             if (_state != CombatState.Pursuing) return;
@@ -346,6 +347,8 @@ namespace Game.Varginha
         {
             if (_effect == null) { BeginRecovery(); return; }
             Vector2 origin = _effect.transform.position;
+            var shield=_player.GetComponent<VarginhaArcaneShield>();
+            if(shield!=null&&shield.Covers(origin)){_target.ReceiveHit(attackDamage*.75f,-_attackDirection,.03f);BeginRecovery();return;}
             float remaining = Vector2.Distance(origin, _attackDestination);
             float distance = Mathf.Min(remaining, 7.5f * dt);
             int count = Physics2D.CircleCast(origin, .18f, _attackDirection, SolidFilter(), _hits, distance);

@@ -1,0 +1,345 @@
+{
+  "student": "Matias",
+  "assetId": "Matias",
+  "generator": "built-in image_gen",
+  "sourceSize": [
+    2172,
+    724
+  ],
+  "sourceSha256": "09d0b2e32657c294cc25d539eb3cc7586eb2248f7e72d169bed4b3ef36c2c182",
+  "sourceEffectsSha256": "f12d0bcc79c0214a24dbc4294aaabb08e6ae7bcc7a8a7f66fcb9790cde985b26",
+  "portraitSha256": "a30774031ece2663b18343bb854b0fa58359c64db62c66e1fc494ae02d23326e",
+  "runtimeSha256": "77321f8a9ebaec337535b2a22d9f368236525d7ff07ab84553df90fd88eab33c",
+  "runtimeEffectSha256": "3191cfe6de7ab9d3e330f33fa8e8a3f0fbb22116537756723abf4cc43054b5fa",
+  "runtimeSize": [
+    768,
+    256
+  ],
+  "effectsSize": [
+    384,
+    256
+  ],
+  "scale": 0.30985915492957744,
+  "sourceFrames": [
+    {
+      "sourceRect": [
+        48,
+        56,
+        273,
+        284
+      ],
+      "anchor": 119.5,
+      "ground": 285,
+      "bodyHeight": 284
+    },
+    {
+      "sourceRect": [
+        393,
+        52,
+        360,
+        289
+      ],
+      "anchor": 132.5,
+      "ground": 289,
+      "bodyHeight": 289
+    },
+    {
+      "sourceRect": [
+        779,
+        56,
+        246,
+        285
+      ],
+      "anchor": 122.5,
+      "ground": 285,
+      "bodyHeight": 285
+    },
+    {
+      "sourceRect": [
+        1148,
+        56,
+        247,
+        284
+      ],
+      "anchor": 123.0,
+      "ground": 285,
+      "bodyHeight": 284
+    },
+    {
+      "sourceRect": [
+        1460,
+        53,
+        320,
+        287
+      ],
+      "anchor": 188.0,
+      "ground": 288,
+      "bodyHeight": 287
+    },
+    {
+      "sourceRect": [
+        1880,
+        56,
+        244,
+        285
+      ],
+      "anchor": 123.0,
+      "ground": 285,
+      "bodyHeight": 285
+    },
+    {
+      "sourceRect": [
+        50,
+        399,
+        265,
+        279
+      ],
+      "anchor": 119.5,
+      "ground": 279,
+      "bodyHeight": 279
+    },
+    {
+      "sourceRect": [
+        392,
+        419,
+        274,
+        258
+      ],
+      "anchor": 136.5,
+      "ground": 259,
+      "bodyHeight": 258
+    },
+    {
+      "sourceRect": [
+        764,
+        398,
+        258,
+        280
+      ],
+      "anchor": 119.0,
+      "ground": 280,
+      "bodyHeight": 280
+    },
+    {
+      "sourceRect": [
+        1141,
+        398,
+        264,
+        280
+      ],
+      "anchor": 143.0,
+      "ground": 280,
+      "bodyHeight": 280
+    },
+    {
+      "sourceRect": [
+        1510,
+        430,
+        271,
+        246
+      ],
+      "anchor": 138.5,
+      "ground": 248,
+      "bodyHeight": 246
+    },
+    {
+      "sourceRect": [
+        1884,
+        398,
+        240,
+        280
+      ],
+      "anchor": 119.5,
+      "ground": 280,
+      "bodyHeight": 280
+    }
+  ],
+  "effects": [
+    {
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "action": 0,
+      "stage": "projectile",
+      "sourceRect": [
+        103,
+        145,
+        409,
+        326
+      ],
+      "sha256": "2af7f940843b8cc981c2cc9d51424959654798e4f5c7d1d7099f65f26987c22a"
+    },
+    {
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "action": 0,
+      "stage": "impact",
+      "sourceRect": [
+        585,
+        114,
+        397,
+        359
+      ],
+      "sha256": "2ff9b9d46ed0093327aeae5ad8341d91ee437e4e98b1f33a4debbfde1eacbf37"
+    },
+    {
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "action": 0,
+      "stage": "dissipate",
+      "sourceRect": [
+        1086,
+        164,
+        395,
+        288
+      ],
+      "sha256": "832b55bd39775cb22ca79a5a580dd850986ccda26881a84801d2b312494dc3c6"
+    },
+    {
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "action": 1,
+      "stage": "projectile",
+      "sourceRect": [
+        40,
+        623,
+        472,
+        308
+      ],
+      "sha256": "33602a9a610a68498a7ce722a40e6488a270510bf4f253d2d8fe64a78deb34d7"
+    },
+    {
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "action": 1,
+      "stage": "impact",
+      "sourceRect": [
+        512,
+        670,
+        496,
+        261
+      ],
+      "sha256": "c31de3e2e7f543870505a4e78fe03effc0fd01d50e2756e6970435b54ce73264"
+    },
+    {
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "action": 1,
+      "stage": "dissipate",
+      "sourceRect": [
+        1073,
+        631,
+        430,
+        304
+      ],
+      "sha256": "166a8d434724bfaa88738c6796ebf2e5d2fb67ac3b5804759361f6f1ac56bbd4"
+    }
+  ],
+  "geometry": [
+    [
+      21,
+      24,
+      106,
+      112
+    ],
+    [
+      8,
+      22,
+      120,
+      112
+    ],
+    [
+      26,
+      24,
+      102,
+      112
+    ],
+    [
+      25,
+      24,
+      102,
+      112
+    ],
+    [
+      14,
+      23,
+      113,
+      112
+    ],
+    [
+      26,
+      24,
+      102,
+      112
+    ],
+    [
+      23,
+      26,
+      105,
+      112
+    ],
+    [
+      21,
+      32,
+      106,
+      112
+    ],
+    [
+      24,
+      25,
+      104,
+      112
+    ],
+    [
+      23,
+      25,
+      105,
+      112
+    ],
+    [
+      22,
+      35,
+      106,
+      111
+    ],
+    [
+      27,
+      25,
+      101,
+      112
+    ]
+  ],
+  "distinctAttackFrames": 12,
+  "status": "visual-reviewed",
+  "runtimeVerified": false,
+  "notes": [
+    "No additional generation after user budget instruction; all sources already complete.",
+    "Whole figures with their separate attached/released props grouped technically; no anatomical assembly, mirroring or recolouring.",
+    "Alpha mask threshold128; RGB art preserved, uniform whole-sprite nearest scaling.",
+    "Ground pivot is16px above cell bottom. lift=.58-16/PPU, anchor follows actor foot centre.",
+    "Runtime .meta GUIDs preserved."
+  ]
+}

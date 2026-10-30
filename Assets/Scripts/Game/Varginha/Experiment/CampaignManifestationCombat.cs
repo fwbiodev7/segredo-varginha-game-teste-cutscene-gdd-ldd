@@ -221,6 +221,7 @@ namespace Game.Varginha.Experiment
         private void Update()
         {
             _movementSpeed=0;
+            if(GetComponent<VarginhaSleepStatus>()?.IsSleeping==true)return;
             if(_player==null||_health==null||Defeated){if(_warning!=null)_warning.enabled=false;if(_shock!=null)_shock.enabled=false;if(_claws!=null)_claws.enabled=false;return;}
             if(_entering)return;
             if(CampaignContinuationController.Active?.Modal==true||Time.timeScale<=0||_player.IsInputLocked)return;
@@ -276,6 +277,7 @@ namespace Game.Varginha.Experiment
         }
         private void FixedUpdate()
         {
+            if(GetComponent<VarginhaSleepStatus>()?.IsSleeping==true)return;
             if(_entering||_exiting||Defeated||_player==null||_player.IsInputLocked||CampaignContinuationController.Active?.Modal==true||!_body.simulated){_repulsion=Vector2.zero;return;}
             // Render interpolation must never become the next physics position. The shield
             // displacement is consumed once here, so pursuit cannot overwrite it this tick.

@@ -44,3 +44,5 @@ Desktop.ini
 # Referencias fotograficas pessoais preservadas apenas localmente
 /ArtSources/**/photo-reference.jpeg
 /ArtSources/**/hat-reference.jpeg
+
+/.tools/

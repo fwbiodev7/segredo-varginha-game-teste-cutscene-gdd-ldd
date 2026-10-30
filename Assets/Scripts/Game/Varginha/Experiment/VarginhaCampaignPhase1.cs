@@ -166,7 +166,9 @@ namespace Game.Varginha.Experiment
         public void PlayOpening()
         {
             // Stop at the child's television: 2026 and the school belong to subsequent acts.
-            _timeline = new ExperimentTimeline(ExperimentDefinition.Load().shots.Take(6).ToArray());
+            var shots=ExperimentDefinition.Load().shots.Take(6).ToArray();
+            int[] narration={6,12,13};for(int i=0;i<3;i++){var clip=CampaignNarration.Clip(narration[i]);if(clip!=null)shots[i].duration=Mathf.Max(shots[i].duration,clip.length+.3f);}
+            _timeline = new ExperimentTimeline(shots);
             _lastShot = _frameTick = -1; SetStage(Stage.Opening); _ambience.Play();
         }
         public void FinishOpening()
@@ -179,6 +181,7 @@ namespace Game.Varginha.Experiment
             _stage = value; _stageTime = 0; _player.SetInputLocked(value != Stage.Explore || _paused || _dialogue != null);
             if (_preFlashGlow!=null) _preFlashGlow.gameObject.SetActive(value==Stage.Explore && _memory.powerFailed);
             if (value != Stage.Opening) { _voice.Stop(); _ambience.Stop(); }
+            if(value==Stage.Complete)CampaignNarration.Play(4);
             if (value == Stage.Encounter)
             {
                 var figure = new GameObject("Presença_Incompleta"); figure.transform.SetParent(transform);
@@ -205,7 +208,7 @@ namespace Game.Varginha.Experiment
                 if (_lastShot != _timeline.ShotIndex)
                 {
                     _lastShot = _timeline.ShotIndex; _voice.Stop();
-                    // Opening uses captions and ambience; synthetic narration was removed.
+                    int[] clips={6,12,13};if(_lastShot<3){_voice.clip=CampaignNarration.Clip(clips[_lastShot]);if(_voice.clip!=null)_voice.Play();}
                 }
                 if (_timeline.Finished) FinishOpening();
             }
@@ -235,7 +238,7 @@ namespace Game.Varginha.Experiment
                 if (_stageTime > 5.8f) { _memory.complete = true;_memory.memoryLost=_memory.headHit; Save(); SetStage(Stage.Complete); }
             }
         }
-        public void TriggerPowerFailure() { _memory.powerFailed = true; if(_stage==Stage.Explore && _preFlashGlow!=null)_preFlashGlow.gameObject.SetActive(true); Save(); }
+        public void TriggerPowerFailure() { if(!_memory.powerFailed)CampaignNarration.Play(7); _memory.powerFailed = true; if(_stage==Stage.Explore && _preFlashGlow!=null)_preFlashGlow.gameObject.SetActive(true); Save(); }
         private int NearestEvidence()
         {
             int found = -1; float distance = 1.85f;

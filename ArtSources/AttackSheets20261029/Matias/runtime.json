@@ -1,0 +1,180 @@
+{
+  "width": 768,
+  "height": 256,
+  "columns": 6,
+  "rows": 2,
+  "pixelsPerUnit": [
+    82.58064516129032,
+    82.58064516129032
+  ],
+  "frames": [
+    {
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 58.028169014084504,
+      "lift": 0.38625,
+      "action": 0,
+      "direction": "east",
+      "stage": "anticipation",
+      "sha256": "75ac8aa43b94c127976496c07c5bbfb2347e81d28ee53981e57ec3f90c475300"
+    },
+    {
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 177.05633802816902,
+      "lift": 0.38625,
+      "action": 0,
+      "direction": "east",
+      "stage": "contact",
+      "sha256": "30a5df382a20315c253a597c1727aba36cbf2100bc8212c8a7fcc82addede331"
+    },
+    {
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 319.9577464788732,
+      "lift": 0.38625,
+      "action": 0,
+      "direction": "east",
+      "stage": "recovery",
+      "sha256": "6768ebd1a8881a704c27af0098eff9e4cd0a2ae46da255dabb72fe8a2694f76e"
+    },
+    {
+      "rect": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 447.11267605633805,
+      "lift": 0.38625,
+      "action": 0,
+      "direction": "west",
+      "stage": "anticipation",
+      "sha256": "91f17135c653bb4c835c0b287b4e5424d2aab538af2480fdb9334759591f2023"
+    },
+    {
+      "rect": [
+        512,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 584.2535211267606,
+      "lift": 0.38625,
+      "action": 0,
+      "direction": "west",
+      "stage": "contact",
+      "sha256": "2d7f6299185a5b2c26df9b275e7b887ae9b2e7755e54e98eef07c4f12c7399e3"
+    },
+    {
+      "rect": [
+        640,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 704.112676056338,
+      "lift": 0.38625,
+      "action": 0,
+      "direction": "west",
+      "stage": "recovery",
+      "sha256": "22c77450417c6a52f18be4feefb84065e95fbd5c7d9269980ec9fc16b9ed2362"
+    },
+    {
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 60.028169014084504,
+      "lift": 0.38625,
+      "action": 1,
+      "direction": "east",
+      "stage": "anticipation",
+      "sha256": "7f4f8d1b17e7b4e7e3b860498f83433960a2db39eb169facfc56f1c84c358810"
+    },
+    {
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 191.29577464788733,
+      "lift": 0.38625,
+      "action": 1,
+      "direction": "east",
+      "stage": "contact",
+      "sha256": "cd87bef2e095154f6b7a883eda8b51d1b3acb0215774283da4544e2db6a4ad9c"
+    },
+    {
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 316.8732394366197,
+      "lift": 0.38625,
+      "action": 1,
+      "direction": "east",
+      "stage": "recovery",
+      "sha256": "db60f179fc4be9e966f8f16a26755be54455ac1ba1be62e369250d3f19508223"
+    },
+    {
+      "rect": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 451.30985915492954,
+      "lift": 0.38625,
+      "action": 1,
+      "direction": "west",
+      "stage": "anticipation",
+      "sha256": "094a4dcc3f939f44bc9e5164d5306f951869c1fdfb000e7f6bdf3b2c0730270a"
+    },
+    {
+      "rect": [
+        512,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 576.9154929577464,
+      "lift": 0.38625,
+      "action": 1,
+      "direction": "west",
+      "stage": "contact",
+      "sha256": "87413393fadd7bb7dacdabbbf2819f3f879d3a33f03831405726e1863bd519c1"
+    },
+    {
+      "rect": [
+        640,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 704.0281690140845,
+      "lift": 0.38625,
+      "action": 1,
+      "direction": "west",
+      "stage": "recovery",
+      "sha256": "aa44f4416187967f6310f07563a5ece6f0b85db15037ba34dc7d7b0483dd4420"
+    }
+  ]
+}

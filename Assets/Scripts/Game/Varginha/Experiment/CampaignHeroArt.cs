@@ -15,9 +15,9 @@ namespace Game.Varginha.Experiment
         {
             var names=VarginhaStudentSprites.AssetName(student) switch
             {
-                "Yasmin"=>new[]{"ONDA SONORA","PIANO DO CÉU"},"Pedro"=>new[]{"RIFF SONORO","ACORDE EM ÁREA"},
-                "Matias"=>new[]{"COMBO DE QUEDAS","PROJEÇÃO"},"Fabio"=>new[]{"CORTE DE KATANA","ARREMESSO DE ANILHAS"},
-                "Marcos"=>new[]{"SAQUE POTENTE","BOLA EM ÁREA"},"AnnaSabia"=>new[]{"RAQUETADA RÁPIDA","SPIN EM ÁREA"},
+                "Giovana"=>new[]{"PROTEÇÃO ARCANA","BARREIRA DOURADA"},"Bianca"=>new[]{"CHUVA DE CONHECIMENTO","LIVROS DE ESTUDO"},"Moscardini"=>new[]{"SONO PROFUNDO","SONO PROFUNDO"},"Yasmin"=>new[]{"PIANO DO CÉU","PIANO DO CÉU"},"Pedro"=>new[]{"RIFF SONORO","ACORDE EM ÁREA"},
+                "Matias"=>new[]{"COMBO DE QUEDAS","PROJEÇÃO"},"Fabio"=>new[]{"ARREMESSO DE HALTERES","HALTERES DUPLOS"},
+                "Marcos"=>new[]{"GRITO DE PROVOCAÇÃO","BOLADA DE VÔLEI"},"AnnaSabia"=>new[]{"RAQUETADA RÁPIDA","SPIN EM ÁREA"},
                 "AnaTavares"=>new[]{"TOQUE PRECISO","CHUVA DE BOLAS"},"LuisMiguelMessias"=>new[]{"RIMA PESADA","SOLTA A VOZ"},
                 _=>new[]{"JATO DE TINTA","EXPLOSÃO DE CORES"}
             };return names[Mathf.Clamp(variant,0,1)];
@@ -25,13 +25,13 @@ namespace Game.Varginha.Experiment
         public static bool Available(string student)=>Resources.Load<TextAsset>("Varginha/StoryCharacters/Hero"+VarginhaStudentSprites.AssetName(student))!=null;
         // Combat shares the redesigned uniform atlas with walking and portraits.
         // Retain the authored powers/effects without reverting to the old costume sheets.
-        public static Sprite Pose(string student,int variant,bool left,int stage)=>VarginhaStudentSprites.Frame(student,left?1:2,stage);
+        public static Sprite Pose(string student,int variant,bool left,int stage)=>CampaignStorySprites.Frame("Hero"+VarginhaStudentSprites.AssetName(student),variant,(left?3:0)+stage)??VarginhaStudentSprites.Frame(student,left?1:2,stage);
         public static Sprite Effect(string student,int variant,int stage)
         {
             string name=VarginhaStudentSprites.AssetName(student),key=name+variant+stage;
             if(Effects.TryGetValue(key,out var sprite)&&sprite!=null)return sprite;
             var texture=Resources.Load<Texture2D>("Varginha/StoryCharacters/Hero"+name+"Effects");if(texture==null)return null;
-            return Effects[key]=Sprite.Create(texture,new Rect(stage*128,(1-variant)*128,128,128),Vector2.one*.5f,48,0,SpriteMeshType.FullRect);
+            return Effects[key]=Sprite.Create(texture,new Rect(Mathf.Clamp(stage,0,texture.width/128-1)*128,Mathf.Clamp(1-variant,0,texture.height/128-1)*128,128,128),Vector2.one*.5f,48,0,SpriteMeshType.FullRect);
         }
     }
 }

@@ -1,0 +1,345 @@
+{
+  "student": "Fábio",
+  "assetId": "Fabio",
+  "generator": "built-in image_gen",
+  "sourceSize": [
+    2172,
+    724
+  ],
+  "sourceSha256": "6150b8cdcad62aec298007b07dd559a0fa6001fc3cdd8b8495af92a6eeb8bcfb",
+  "sourceEffectsSha256": "254d0b80d3b3e9b4ea7228206324409ee1bc3f611e569f4a1c05ee4b8d5db243",
+  "portraitSha256": "c9b02e16cc1894dbf54aea70790d10cdf6b65e682b8bae21b7fe01c434fc173f",
+  "runtimeSha256": "14985b8d2946c0975a1385e51ae4ddd2a8fcf57d9683692138c67ce465d1b2ac",
+  "runtimeEffectSha256": "d4416f525084ea04f13be52a0ce5cf98d0a68aafadc8b253b6bba11253219cd7",
+  "runtimeSize": [
+    768,
+    256
+  ],
+  "effectsSize": [
+    384,
+    256
+  ],
+  "scale": 0.2692307692307692,
+  "sourceFrames": [
+    {
+      "sourceRect": [
+        55,
+        69,
+        218,
+        263
+      ],
+      "anchor": 111.5,
+      "ground": 263,
+      "bodyHeight": 263
+    },
+    {
+      "sourceRect": [
+        360,
+        68,
+        416,
+        264
+      ],
+      "anchor": 112.5,
+      "ground": 264,
+      "bodyHeight": 264
+    },
+    {
+      "sourceRect": [
+        755,
+        69,
+        296,
+        263
+      ],
+      "anchor": 109.5,
+      "ground": 263,
+      "bodyHeight": 263
+    },
+    {
+      "sourceRect": [
+        1148,
+        67,
+        219,
+        265
+      ],
+      "anchor": 104.5,
+      "ground": 265,
+      "bodyHeight": 265
+    },
+    {
+      "sourceRect": [
+        1444,
+        67,
+        359,
+        265
+      ],
+      "anchor": 247.0,
+      "ground": 265,
+      "bodyHeight": 265
+    },
+    {
+      "sourceRect": [
+        1878,
+        69,
+        274,
+        263
+      ],
+      "anchor": 169.0,
+      "ground": 263,
+      "bodyHeight": 263
+    },
+    {
+      "sourceRect": [
+        47,
+        365,
+        233,
+        312
+      ],
+      "anchor": 116.0,
+      "ground": 312,
+      "bodyHeight": 312
+    },
+    {
+      "sourceRect": [
+        361,
+        413,
+        402,
+        264
+      ],
+      "anchor": 120.5,
+      "ground": 264,
+      "bodyHeight": 263
+    },
+    {
+      "sourceRect": [
+        750,
+        426,
+        293,
+        251
+      ],
+      "anchor": 112.0,
+      "ground": 251,
+      "bodyHeight": 251
+    },
+    {
+      "sourceRect": [
+        1139,
+        365,
+        230,
+        312
+      ],
+      "anchor": 114.5,
+      "ground": 312,
+      "bodyHeight": 312
+    },
+    {
+      "sourceRect": [
+        1423,
+        419,
+        389,
+        258
+      ],
+      "anchor": 268.0,
+      "ground": 258,
+      "bodyHeight": 258
+    },
+    {
+      "sourceRect": [
+        1878,
+        426,
+        274,
+        251
+      ],
+      "anchor": 166.0,
+      "ground": 251,
+      "bodyHeight": 251
+    }
+  ],
+  "effects": [
+    {
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "action": 0,
+      "stage": "projectile",
+      "sourceRect": [
+        63,
+        172,
+        431,
+        216
+      ],
+      "sha256": "5a3055cc3c8fc9ef2b8a23acb45d0dce832a2d30f5a4064e30803fdf393175f2"
+    },
+    {
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "action": 0,
+      "stage": "impact",
+      "sourceRect": [
+        586,
+        100,
+        387,
+        360
+      ],
+      "sha256": "8055c4e70883b6543d60a0da938b79a060d773ff1d06fb322618e3e055decfc6"
+    },
+    {
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "action": 0,
+      "stage": "dissipate",
+      "sourceRect": [
+        1099,
+        142,
+        351,
+        258
+      ],
+      "sha256": "7cf8c0c6d17a8144a9a344c5c1dd508303857ac1b1f994d4e7d266a0afd7186d"
+    },
+    {
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "action": 1,
+      "stage": "projectile",
+      "sourceRect": [
+        54,
+        622,
+        458,
+        246
+      ],
+      "sha256": "20488ad5a09cf4e63128d0d4ef8a187448fc8debe602b21a6fe2ea67c3363dc2"
+    },
+    {
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "action": 1,
+      "stage": "impact",
+      "sourceRect": [
+        512,
+        553,
+        474,
+        384
+      ],
+      "sha256": "cdd0b0f365c52e452bc4d4a3698df7392c5c2004efed1119589d737f1937a8b5"
+    },
+    {
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "action": 1,
+      "stage": "dissipate",
+      "sourceRect": [
+        1108,
+        634,
+        335,
+        241
+      ],
+      "sha256": "dd8cdc3a96af2c562822b3ac9e27008258aeefeb5372fcbd674474a4b34abb6f"
+    }
+  ],
+  "geometry": [
+    [
+      34,
+      41,
+      93,
+      112
+    ],
+    [
+      8,
+      41,
+      120,
+      112
+    ],
+    [
+      24,
+      41,
+      104,
+      112
+    ],
+    [
+      34,
+      41,
+      93,
+      112
+    ],
+    [
+      15,
+      41,
+      112,
+      112
+    ],
+    [
+      27,
+      41,
+      101,
+      112
+    ],
+    [
+      32,
+      28,
+      95,
+      112
+    ],
+    [
+      10,
+      41,
+      118,
+      112
+    ],
+    [
+      24,
+      44,
+      103,
+      112
+    ],
+    [
+      33,
+      28,
+      95,
+      112
+    ],
+    [
+      11,
+      43,
+      116,
+      112
+    ],
+    [
+      27,
+      44,
+      101,
+      112
+    ]
+  ],
+  "distinctAttackFrames": 12,
+  "status": "visual-reviewed",
+  "runtimeVerified": false,
+  "notes": [
+    "No additional generation after user budget instruction; all sources already complete.",
+    "Whole figures with their separate attached/released props grouped technically; no anatomical assembly, mirroring or recolouring.",
+    "Alpha mask threshold128; RGB art preserved, uniform whole-sprite nearest scaling.",
+    "Ground pivot is16px above cell bottom. lift=.58-16/PPU, anchor follows actor foot centre.",
+    "Runtime .meta GUIDs preserved."
+  ]
+}

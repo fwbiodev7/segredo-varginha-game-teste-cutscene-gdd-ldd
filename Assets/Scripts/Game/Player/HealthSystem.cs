@@ -54,6 +54,7 @@ namespace Game.Player
         {
             if (IsDead) return;
             if (IsInvincible) return;
+            if (GetComponent<Game.Varginha.VarginhaArcaneShield>()?.TryBlock() == true) return;
             if (amount <= 0f) return;
 
             float previous = currentHealth;
