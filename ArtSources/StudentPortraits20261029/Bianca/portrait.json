@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "character": "Bianca",
+  "mode": "built-in image_gen",
+  "status": "visual-reviewed",
+  "visualApproval": false,
+  "image": "Assets/Resources/Varginha/Allies/Portraits/Bianca.png",
+  "imageSha256": "66bfe28c18f448ce4a51b18a4d1931d0a61df1e436c1ae534b7afe687adcd922",
+  "nativeSize": [
+    256,
+    256
+  ],
+  "sourceImage": "generated-portrait.png",
+  "sourceSha256": "982d8aac3826929f3742a008a997f4cdef74869c93440d9c85999d092f82171f",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "sourceRect": [
+    106,
+    68,
+    1066,
+    1138
+  ],
+  "sourceRectOrigin": "top-left",
+  "uniformNearestScale": 0.210896309314587,
+  "completeBust": true,
+  "removedPaddingComponents": 0,
+  "alphaThreshold": 128,
+  "notes": [
+    "Complete bust extracted and uniformly reduced; no anatomical assembly or palette recoloring.",
+    "Alpha-connected silhouette removes only detached transparent-margin generation noise.",
+    "Current supplied design identity retained.",
+    "Generative adaptation; exact pixel equality with source designs is not claimed. Unity runtime pending parent integration."
+  ]
+}

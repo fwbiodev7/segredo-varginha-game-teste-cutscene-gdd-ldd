@@ -1,10 +1,10 @@
 {
     "result": "Succeeded",
-    "output": "C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Builds/Varginha_0.4.9-beta_2026-10-27/SegredoDeVarginha.exe",
+    "output": "C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-2026-10-19-07-21-23/Builds/Oizlede_0.6.0_Apresentacao_2026-10-30/Oizlede - Segredo de Varginha.exe",
     "unity": "6000.6.0f1",
-    "version": "0.4.9-beta",
-    "bytes": 413538630,
-    "seconds": 105.15669179999999,
+    "version": "0.6.0-apresentacao",
+    "bytes": 429135277,
+    "seconds": 173.7710706,
     "errors": 0,
     "warnings": 2,
     "scenes": [

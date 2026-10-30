@@ -1,0 +1,343 @@
+{
+  "ok": true,
+  "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-main\\ArtSources\\Students20261029\\LuisMartins\\atlas.png",
+  "sourceSha256": "ec148ccb839768e6063406efc1b0d87491a09f2d203ce4738dcf3fe4d1e79fe7",
+  "errors": [],
+  "warnings": [
+    "Unity textureCompression: expected 0, observed ['0', '1']; inspect overrides",
+    "Unity textureType: expected 8, observed ['0']; inspect overrides",
+    "Unity PPU missing/differs from manifest",
+    "Unity text inspection only: import, platform overrides and runtime not verified"
+  ],
+  "frames": [
+    {
+      "id": "walk_S_00",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "bbox": [
+        18,
+        9,
+        46,
+        58
+      ],
+      "visiblePixels": 1034,
+      "colors": 980,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "aea2f01cd5ea942bdb0e56cd45895aeb7ed0256cbeb3440123cff4343c7de2ac"
+    },
+    {
+      "id": "walk_S_01",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "bbox": [
+        18,
+        8,
+        45,
+        58
+      ],
+      "visiblePixels": 1015,
+      "colors": 961,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "0049f062564c7de34371a5d404dbac7a9bc5b42934a24f952e9169406013c76b"
+    },
+    {
+      "id": "walk_S_02",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "bbox": [
+        18,
+        9,
+        45,
+        58
+      ],
+      "visiblePixels": 1018,
+      "colors": 971,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "590ba6776952d28790ec0abb7428f39b3516b444a26bb6eca9dfcf94c807803c"
+    },
+    {
+      "id": "walk_S_03",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "bbox": [
+        18,
+        8,
+        45,
+        58
+      ],
+      "visiblePixels": 1009,
+      "colors": 942,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "a38aa6e9dd73337a5858cb473842ed18f9ef75eeae1fbfc5a4971f97a1325cb3"
+    },
+    {
+      "id": "walk_W_00",
+      "rect": [
+        0,
+        64,
+        64,
+        64
+      ],
+      "bbox": [
+        18,
+        11,
+        45,
+        58
+      ],
+      "visiblePixels": 845,
+      "colors": 791,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "39ac47fc9a740fa6243cf346da5e6278d2ec7edcb8d51b477b38140703d93fc5"
+    },
+    {
+      "id": "walk_W_01",
+      "rect": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "bbox": [
+        19,
+        11,
+        45,
+        58
+      ],
+      "visiblePixels": 845,
+      "colors": 782,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "c37e08eb7d4b14d3c0784a67b012a5b604bc1b4b8f09da806aec4edeef3b2cb9"
+    },
+    {
+      "id": "walk_W_02",
+      "rect": [
+        128,
+        64,
+        64,
+        64
+      ],
+      "bbox": [
+        19,
+        11,
+        45,
+        58
+      ],
+      "visiblePixels": 826,
+      "colors": 778,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "b85ddd16a013479b8cec7a15e454520c09e776d4a636a6503abcade507cd2d4d"
+    },
+    {
+      "id": "walk_W_03",
+      "rect": [
+        192,
+        64,
+        64,
+        64
+      ],
+      "bbox": [
+        19,
+        11,
+        45,
+        58
+      ],
+      "visiblePixels": 861,
+      "colors": 809,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "645ab6c818c83e7a0974f122292024779a1a22b6aecddf6086838c73a2942e07"
+    },
+    {
+      "id": "walk_E_00",
+      "rect": [
+        0,
+        128,
+        64,
+        64
+      ],
+      "bbox": [
+        19,
+        11,
+        45,
+        58
+      ],
+      "visiblePixels": 811,
+      "colors": 734,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "e9e45649460608651512d067f8e792063a85b1cd8e8951827ec3a67810c93273"
+    },
+    {
+      "id": "walk_E_01",
+      "rect": [
+        64,
+        128,
+        64,
+        64
+      ],
+      "bbox": [
+        19,
+        11,
+        45,
+        58
+      ],
+      "visiblePixels": 786,
+      "colors": 713,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "1d9f4e37a1a8773bc40267f2a0a333099d595ab05e069fd78980f6a2c38e28e6"
+    },
+    {
+      "id": "walk_E_02",
+      "rect": [
+        128,
+        128,
+        64,
+        64
+      ],
+      "bbox": [
+        19,
+        11,
+        45,
+        58
+      ],
+      "visiblePixels": 811,
+      "colors": 739,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "6f688038d5c8448d44c48383512383072bb631f13a63d58d49170939cc8eaf3b"
+    },
+    {
+      "id": "walk_E_03",
+      "rect": [
+        192,
+        128,
+        64,
+        64
+      ],
+      "bbox": [
+        19,
+        11,
+        45,
+        58
+      ],
+      "visiblePixels": 819,
+      "colors": 723,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "3b3c66f7e6bf54d0ed740dd98e587802ddcd0da722b9b496ee1032adcb22d314"
+    },
+    {
+      "id": "walk_N_00",
+      "rect": [
+        0,
+        192,
+        64,
+        64
+      ],
+      "bbox": [
+        20,
+        10,
+        44,
+        58
+      ],
+      "visiblePixels": 945,
+      "colors": 813,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "d4cb18bdb9be6280eb82930e658fc07d95abfe7cf835cb6c67bb809775264470"
+    },
+    {
+      "id": "walk_N_01",
+      "rect": [
+        64,
+        192,
+        64,
+        64
+      ],
+      "bbox": [
+        19,
+        10,
+        45,
+        58
+      ],
+      "visiblePixels": 943,
+      "colors": 799,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "366b7b4a5ee96eaf454a878b84c41be3c6d2ba6c50d6e2341c531421f8a48ffe"
+    },
+    {
+      "id": "walk_N_02",
+      "rect": [
+        128,
+        192,
+        64,
+        64
+      ],
+      "bbox": [
+        19,
+        10,
+        44,
+        58
+      ],
+      "visiblePixels": 945,
+      "colors": 795,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "1793be076040a168a025efd6a2a79088c41a7304298c43d1dfbb6733cc983c23"
+    },
+    {
+      "id": "walk_N_03",
+      "rect": [
+        192,
+        192,
+        64,
+        64
+      ],
+      "bbox": [
+        19,
+        10,
+        44,
+        58
+      ],
+      "visiblePixels": 922,
+      "colors": 767,
+      "partialAlphaPixels": 0,
+      "pixelSha256": "4cc63ad67d06ceae1314ee279f9b92930527fcf97e2fa3f7ab3710c038a0c7a2"
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_S",
+      "frames": 4,
+      "distinctPoses": 4
+    },
+    {
+      "name": "walk_W",
+      "frames": 4,
+      "distinctPoses": 4
+    },
+    {
+      "name": "walk_E",
+      "frames": 4,
+      "distinctPoses": 4
+    },
+    {
+      "name": "walk_N",
+      "frames": 4,
+      "distinctPoses": 4
+    }
+  ],
+  "overlaps": [],
+  "visualApproval": false,
+  "runtimeVerified": false
+}

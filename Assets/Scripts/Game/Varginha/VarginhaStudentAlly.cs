@@ -225,12 +225,12 @@ namespace Game.Varginha
         private void Update()
         {
             if (!_active) return;
+            if(Time.timeScale<=0||VarginhaGameHUD.Instance?.IsInventoryOpen==true||Experiment.CampaignContinuationController.Active?.Modal==true)return;
             if (LeaderDefeated)
             {
                 CancelAttack();
                 return;
             }
-            if(Time.timeScale<=0||VarginhaGameHUD.Instance?.IsInventoryOpen==true||Experiment.CampaignContinuationController.Active?.Modal==true)return;
             if (_leader != null && (!_manualMode || _equippedPresentation))
             {
                 // A formação é uma preferência, não um trilho. O pequeno movimento
@@ -335,7 +335,7 @@ namespace Game.Varginha
             // O estado de prontidão fica somente no HUD lateral. No cenário o
             // rótulo é um nome curto e único, evitando a pilha "nome + PRONTO"
             // sobre os sprites dos aliados.
-            string displayName = studentName == "Luis Miguel Messias" ? "Luis Miguel" : studentName;
+            string displayName = studentName == "Luis Miguel Messias" ? "Luis Miguel" : VarginhaStudentRoster.DisplayName(studentName);
             _nameStyle.fontSize = Screen.width < 520 ? 9 : 10;
             GUI.color = new Color(.55f, 1f, .72f);
             GUI.Label(new Rect(screen.x - 54f, screen.y - 10f, 108f, 18f), displayName, _nameStyle);
@@ -441,6 +441,9 @@ namespace Game.Varginha
         private void ApplyTacticalHit(VarginhaCombatTarget target, Vector2 direction, Vector2 impactPoint,
             VarginhaAllyAttackPresentation presentation)
         {
+            if(studentName=="Moscardini"){VarginhaSleepStatus.Apply(target);return;}
+            if(studentName=="Bianca"){StartCoroutine(VarginhaStudentPowers.Books(this,target));return;}
+            if(studentName=="Giovana"){VarginhaStudentPowers.Protect(this,_leader);return;}
             if(Experiment.CampaignHeroArt.Available(studentName)){HeroHit(target,direction,impactPoint,presentation);return;}
             float damage = _profile.Damage;
             var health = target.GetComponent<HealthSystem>();
@@ -558,10 +561,10 @@ namespace Game.Varginha
         {
             if(Experiment.CampaignHeroArt.Available(name))return name switch
             {
-                "Yasmin"=>"Onda sonora em linha / piano do céu em área",
+                "Yasmin"=>"Piano do céu em área",
                 "Pedro"=>"Riff sonoro em linha / acorde pesado em área",
                 "Matias"=>"Combo de quedas / projeção atordoante",
-                "Fabio"=>"Corte de katana / arremesso de anilhas",
+                "Fabio"=>"Arremesso de halteres",
                 "Marcos"=>"Saque potente / chuva de bolas em área",
                 "Anna Sabia"=>"Raquetada rápida / spin em área",
                 "Ana Tavares"=>"Toque preciso / chuva de bolas",
@@ -577,7 +580,7 @@ namespace Game.Varginha
             if(Experiment.CampaignHeroArt.Available(studentName))
             {
                 AttackVariant=_marcosAttackIndex%2;_marcosAttackIndex=(_marcosAttackIndex+1)%2;_profile=ProfileFor(studentName);
-                if(studentName=="Yasmin"&&AttackVariant==0)_profile=new AttackProfile(VarginhaStudentAllyStyle.Microphone,"onda sonora • microfone",28,5,4,.2f);
+                
                 if(studentName=="Fabio"&&AttackVariant==1)_profile=new AttackProfile(VarginhaStudentAllyStyle.Katana,"arremesso de anilhas • dano e atordoamento",32,5,4,.2f);
                 attackStyle=_profile.Style;return;
             }
@@ -677,6 +680,9 @@ namespace Game.Varginha
         {
             switch (name)
             {
+                case "Moscardini": return new AttackProfile(VarginhaStudentAllyStyle.Support,"SONO PROFUNDO: adormece inimigos por 3s; chefes imunes",0,4,3,.2f);
+                case "Bianca": return new AttackProfile(VarginhaStudentAllyStyle.Support,"CHUVA DE CONHECIMENTO: três livros, 24 de dano total",24,4,3,.2f);
+                case "Giovana": return new AttackProfile(VarginhaStudentAllyStyle.Support,"PROTEÇÃO ARCANA: barreira dourada por 3s, repulsão e reflexão de projéteis",0,4,3,.2f);
                 case "Matias": return new AttackProfile(VarginhaStudentAllyStyle.JiuJitsu, "jiujitsu: arremesso que derruba dois ETs", 30f, 1.3f, 2.8f, .16f);
                 case "Anna Sabia": return new AttackProfile(VarginhaStudentAllyStyle.PingPong, "ping-pong: topspin com dois ricochetes", 23f, 4f, 2.7f, .13f);
                 case "Ana Tavares": return new AttackProfile(VarginhaStudentAllyStyle.PingPong, "ping-pong: smash duplo de alta potência", 28f, 4f, 3f, .13f);

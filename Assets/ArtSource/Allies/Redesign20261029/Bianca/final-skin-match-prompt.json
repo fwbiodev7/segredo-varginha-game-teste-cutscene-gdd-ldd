@@ -1,0 +1,7 @@
+{
+  "mode": "built-in image_gen",
+  "editTarget": "Bianca-before-final-skin-match.png",
+  "skinReference": "Marcos-skin-whole-atlas-reference.png",
+  "output": "final-skin-match-source.png",
+  "prompt": "EDIT TARGET image1: Bianca sixteen-frame4x4pixel-art atlas. Image2: MARCOS sixteen-frame atlas is ONLY the SKIN COLOR reference. USER REQUIRES BIANCA TO HAVE EXACTLY SAME SKIN TONE AS MARCOS. Change ONLY Bianca's exposed skin in all16frames (face/ears/neck/arms/hands) from dark brown to Marcos's LIGHTER WARM CARAMEL/BROWN skin seen in image2. MATCH MARCOS VISUALLY: warm caramel/terracotta with bright peach-caramel highlights, approximate midtone RGB(196,119,78), highlight RGB(222,151,104), shadows RGB(152,82,51). She is currently too dark. Make ALL16frames same warm caramel as Marcos face and arms. Leave EVERYTHING ELSE unchanged from image1: hair/eyes/face geometry, curls/fringe, small gold hoop earrings, clothes, green raglan sleeves, white shirt chest badge, trousers, sneakers, exact body outlines, exact pixel clusters, shapes, poses and every sprite position. Do not redraw or invent poses. Strictly preserve4x4grid and transparent padding; keep whole sprites unchanged in size, no labels, no lines, no ground, real alpha background. Rows unchanged: front S, left W, right E, back N. Exact skin-only color edit, pixel-art hard edges unchanged."
+}

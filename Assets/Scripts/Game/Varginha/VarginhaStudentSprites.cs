@@ -15,12 +15,14 @@ namespace Game.Varginha
             public Sprite Portrait;
         }
         private static readonly Dictionary<string, Atlas> Atlases = new();
+        private static readonly Dictionary<string, Sprite> InventoryPortraits = new();
 
         public static string AssetName(string student)
         {
             string name = (student ?? string.Empty).Trim().Replace(" ", "");
             // The direction sheet uses these display-name variants for the same two students.
-            return name == "AnnaTavares" ? "AnaTavares" : name == "LuisMessias" ? "LuisMiguelMessias" : name;
+            return name == "AnnaTavares" ? "AnaTavares" : name == "LuisMessias" ? "LuisMiguelMessias"
+                : name == "AnnaSabiá" ? "AnnaSabia" : name;
         }
 
         private static Atlas Load(string student)
@@ -29,8 +31,8 @@ namespace Game.Varginha
             if (string.IsNullOrEmpty(assetName)) return null;
             if (Atlases.TryGetValue(assetName, out var existing) && existing.Texture != null
                 && existing.Frames[0] != null) return existing;
-            var texture = assetName == "Fabio" ? VarginhaReferenceSprites.FabioAtlas() ?? Resources.Load<Texture2D>("Varginha/Allies/" + assetName)
-                : Resources.Load<Texture2D>("Varginha/Allies/" + assetName);
+            var texture = Resources.Load<Texture2D>("Varginha/Allies/" + assetName);
+            if (texture == null && assetName == "Fabio") texture = VarginhaReferenceSprites.FabioAtlas();
             if (texture == null) return null;
             if (texture.width != CellSize * 4 || texture.height != CellSize * 4)
             {
@@ -79,6 +81,22 @@ namespace Game.Varginha
 
         public static Sprite Portrait(string student)
             => Load(student)?.Portrait;
+
+        /// <summary>Detailed backpack artwork; walking and combat retain their canonical pixel atlas.</summary>
+        public static Sprite InventoryPortrait(string student)
+        {
+            string name = AssetName(student);
+            if (InventoryPortraits.TryGetValue(name, out var cached) && cached != null) return cached;
+            var texture = Resources.Load<Texture2D>("Varginha/Allies/Portraits/" + name);
+            if (texture == null) return Portrait(student);
+            texture.filterMode = FilterMode.Point;
+            var portrait = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height),
+                Vector2.one * .5f, 128, 0, SpriteMeshType.FullRect);
+            portrait.name = "StudentInventoryPortrait_" + name;
+            InventoryPortraits[name] = portrait;
+            return portrait;
+        }
+
         public static int Direction(Vector2 movement)
             => Mathf.Abs(movement.x) > Mathf.Abs(movement.y)
                 ? movement.x < 0 ? 1 : 2 : movement.y > 0 ? 3 : 0;

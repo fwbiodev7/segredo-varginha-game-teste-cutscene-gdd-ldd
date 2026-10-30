@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="7" result="Passed" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-30 01:42:27Z" end-time="2026-10-30 01:42:32Z" duration="5,3603539">
+  <test-suite type="TestSuite" id="1278" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="236" result="Passed" start-time="2026-10-30 01:42:27Z" end-time="2026-10-30 01:42:32Z" duration="5.360354" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <test-suite type="Assembly" id="1549" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="236" result="Passed" start-time="2026-10-30 01:42:27Z" end-time="2026-10-30 01:42:32Z" duration="5.349723" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="42220" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <test-suite type="TestSuite" id="1550" name="Game" fullname="Game" runstate="Runnable" testcasecount="236" result="Passed" start-time="2026-10-30 01:42:27Z" end-time="2026-10-30 01:42:32Z" duration="5.345866" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1551" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="236" result="Passed" start-time="2026-10-30 01:42:27Z" end-time="2026-10-30 01:42:32Z" duration="5.336935" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1552" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="236" result="Passed" start-time="2026-10-30 01:42:27Z" end-time="2026-10-30 01:42:32Z" duration="5.328563" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1440" name="StudentRedesignTests" fullname="Game.Tests.PlayMode.StudentRedesignTests" classname="Game.Tests.PlayMode.StudentRedesignTests" runstate="Runnable" testcasecount="7" result="Passed" start-time="2026-10-30 01:42:27Z" end-time="2026-10-30 01:42:32Z" duration="5.311762" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1448" name="BackpackShowsAllTwelveAndEquipsTheNewStudentsOnlyInFinal" fullname="Game.Tests.PlayMode.StudentRedesignTests.BackpackShowsAllTwelveAndEquipsTheNewStudentsOnlyInFinal" methodname="BackpackShowsAllTwelveAndEquipsTheNewStudentsOnlyInFinal" classname="Game.Tests.PlayMode.StudentRedesignTests" runstate="Runnable" seed="1680808437" result="Passed" start-time="2026-10-30 01:42:27Z" end-time="2026-10-30 01:42:27Z" duration="0.740352" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.StudentRedesignTests.BackpackShowsAllTwelveAndEquipsTheNewStudentsOnlyInFinal
+QA test: Game.Tests.PlayMode.StudentRedesignTests.BackpackShowsAllTwelveAndEquipsTheNewStudentsOnlyInFinal
+QA result: Passed Game.Tests.PlayMode.StudentRedesignTests.BackpackShowsAllTwelveAndEquipsTheNewStudentsOnlyInFinal
+QA result: Passed Game.Tests.PlayMode.StudentRedesignTests.BackpackShowsAllTwelveAndEquipsTheNewStudentsOnlyInFinal
+]]></output>
+              </test-case>
+              <test-case id="1446" name="CombatUsesTheRedesignedAtlasInsteadOfOldCostumes" fullname="Game.Tests.PlayMode.StudentRedesignTests.CombatUsesTheRedesignedAtlasInsteadOfOldCostumes" methodname="CombatUsesTheRedesignedAtlasInsteadOfOldCostumes" classname="Game.Tests.PlayMode.StudentRedesignTests" runstate="Runnable" seed="746453402" result="Passed" start-time="2026-10-30 01:42:27Z" end-time="2026-10-30 01:42:27Z" duration="0.002282" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.StudentRedesignTests.CombatUsesTheRedesignedAtlasInsteadOfOldCostumes
+QA test: Game.Tests.PlayMode.StudentRedesignTests.CombatUsesTheRedesignedAtlasInsteadOfOldCostumes
+QA result: Passed Game.Tests.PlayMode.StudentRedesignTests.CombatUsesTheRedesignedAtlasInsteadOfOldCostumes
+QA result: Passed Game.Tests.PlayMode.StudentRedesignTests.CombatUsesTheRedesignedAtlasInsteadOfOldCostumes
+]]></output>
+              </test-case>
+              <test-case id="1447" name="EachNewStudentCanAttackFromItsFinalTeamSlot" fullname="Game.Tests.PlayMode.StudentRedesignTests.EachNewStudentCanAttackFromItsFinalTeamSlot" methodname="EachNewStudentCanAttackFromItsFinalTeamSlot" classname="Game.Tests.PlayMode.StudentRedesignTests" runstate="Runnable" seed="1470901377" result="Passed" start-time="2026-10-30 01:42:27Z" end-time="2026-10-30 01:42:32Z" duration="4.522373" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.StudentRedesignTests.EachNewStudentCanAttackFromItsFinalTeamSlot
+QA test: Game.Tests.PlayMode.StudentRedesignTests.EachNewStudentCanAttackFromItsFinalTeamSlot
+QA result: Passed Game.Tests.PlayMode.StudentRedesignTests.EachNewStudentCanAttackFromItsFinalTeamSlot
+QA result: Passed Game.Tests.PlayMode.StudentRedesignTests.EachNewStudentCanAttackFromItsFinalTeamSlot
+]]></output>
+              </test-case>
+              <test-case id="1445" name="NewTeamIndicesSurviveSerialization" fullname="Game.Tests.PlayMode.StudentRedesignTests.NewTeamIndicesSurviveSerialization" methodname="NewTeamIndicesSurviveSerialization" classname="Game.Tests.PlayMode.StudentRedesignTests" runstate="Runnable" seed="1931073358" result="Passed" start-time="2026-10-30 01:42:32Z" end-time="2026-10-30 01:42:32Z" duration="0.002033" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.StudentRedesignTests.NewTeamIndicesSurviveSerialization
+QA test: Game.Tests.PlayMode.StudentRedesignTests.NewTeamIndicesSurviveSerialization
+QA result: Passed Game.Tests.PlayMode.StudentRedesignTests.NewTeamIndicesSurviveSerialization
+QA result: Passed Game.Tests.PlayMode.StudentRedesignTests.NewTeamIndicesSurviveSerialization
+]]></output>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1444" name="TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices" fullname="Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices" classname="Game.Tests.PlayMode.StudentRedesignTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-30 01:42:32Z" end-time="2026-10-30 01:42:32Z" duration="0.026882" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1441" name="TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Easy)" fullname="Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Easy)" methodname="TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices" classname="Game.Tests.PlayMode.StudentRedesignTests" runstate="Runnable" seed="2001906462" result="Passed" start-time="2026-10-30 01:42:32Z" end-time="2026-10-30 01:42:32Z" duration="0.008978" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Easy)
+QA test: Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Easy)
+QA result: Passed Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Easy)
+QA result: Passed Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Easy)
+]]></output>
+                </test-case>
+                <test-case id="1442" name="TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Medium)" fullname="Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Medium)" methodname="TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices" classname="Game.Tests.PlayMode.StudentRedesignTests" runstate="Runnable" seed="1226679218" result="Passed" start-time="2026-10-30 01:42:32Z" end-time="2026-10-30 01:42:32Z" duration="0.003924" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Medium)
+QA test: Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Medium)
+QA result: Passed Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Medium)
+QA result: Passed Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Medium)
+]]></output>
+                </test-case>
+                <test-case id="1443" name="TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Hard)" fullname="Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Hard)" methodname="TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices" classname="Game.Tests.PlayMode.StudentRedesignTests" runstate="Runnable" seed="1292342053" result="Passed" start-time="2026-10-30 01:42:32Z" end-time="2026-10-30 01:42:32Z" duration="0.004463" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Hard)
+QA test: Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Hard)
+QA result: Passed Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Hard)
+QA result: Passed Game.Tests.PlayMode.StudentRedesignTests.TwelveStudentsUnlockOnlyInFinalAndKeepTheOriginalSaveIndices(Hard)
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+]]></output>
+                </test-case>
+              </test-suite>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

@@ -4,8 +4,8 @@
   "columns": 6,
   "rows": 2,
   "pixelsPerUnit": [
-    83.84496124031008,
-    83.84496124031008
+    86.66666666666667,
+    86.66666666666667
   ],
   "frames": [
     {
@@ -16,11 +16,18 @@
         128
       ],
       "anchorX": 64,
-      "lift": 0.08348742603550295,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "east",
       "stage": "anticipation",
-      "sha256": "59b0656b59c288adfe32996117fea0f9b8ad458d4dfd8c20e534dc4011420fce"
+      "sha256": "8226c911b48751fed0f6c39f42d056fe85fa9b61486a76811bdd55c0606d7ee8",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        44,
+        15,
+        265,
+        333
+      ]
     },
     {
       "rect": [
@@ -30,11 +37,18 @@
         128
       ],
       "anchorX": 192,
-      "lift": 0.08348742603550295,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "east",
       "stage": "contact",
-      "sha256": "4752cc0703ba045f470b19329868c77c6c972e16cd3fb09dc3aff10827430a12"
+      "sha256": "7211f27c991e2ddc56672b60488542743c5cc9fcaef02113cd54066f4dfb5c15",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        427,
+        31,
+        267,
+        317
+      ]
     },
     {
       "rect": [
@@ -44,11 +58,18 @@
         128
       ],
       "anchorX": 320,
-      "lift": 0.08348742603550295,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "east",
       "stage": "recovery",
-      "sha256": "0935e6c23fd50082864c615408f6dee83c8edb9388ea038b24fb291d26d40720"
+      "sha256": "b6248f0ffddc8c62c61798c4105528ad25936a797e615e125a29709309b3d198",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        778,
+        16,
+        264,
+        333
+      ]
     },
     {
       "rect": [
@@ -58,11 +79,18 @@
         128
       ],
       "anchorX": 448,
-      "lift": 0.08348742603550295,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "west",
       "stage": "anticipation",
-      "sha256": "f90a50bea3096c6a6feb57256dde3e936a3b596adc736cc9f02d87db27d4b249"
+      "sha256": "87bfd9fd2d277e4eac1dc6ee9210b2f6102ac62055e684523ca8d2381650a091",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1143,
+        16,
+        272,
+        333
+      ]
     },
     {
       "rect": [
@@ -72,11 +100,18 @@
         128
       ],
       "anchorX": 576,
-      "lift": 0.09541420118343194,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "west",
       "stage": "contact",
-      "sha256": "cb31e24a03915ae705c41d3813f2d0cb4ce94d7b88c784552fc829d32ba8ded9"
+      "sha256": "f51d155a7c24c5758caea9247302b71bdae26dfd76a85e661d2bb1d7f1056987",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1496,
+        33,
+        282,
+        316
+      ]
     },
     {
       "rect": [
@@ -86,11 +121,18 @@
         128
       ],
       "anchorX": 704,
-      "lift": 0.08348742603550295,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "west",
       "stage": "recovery",
-      "sha256": "e2befccd7b16b6db0b7acf3c63c53ee7a48d248584284d349be08dcc0ec5689e"
+      "sha256": "e1f35ab959c8b2a6282b90792b5715c508478a8b9cd97bbdf8b81b790be07f44",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1863,
+        15,
+        260,
+        333
+      ]
     },
     {
       "rect": [
@@ -100,11 +142,18 @@
         128
       ],
       "anchorX": 64,
-      "lift": 0.1550480769230769,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "east",
       "stage": "anticipation",
-      "sha256": "c2fefc418248498eb42c34cd71061868c24e4530ef4617a5d3c468edf9ff2aaf"
+      "sha256": "289d6292a57e2a24d5e57790750d0e60978ef87acea8dad9719f5f44ae9bbbe6",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        44,
+        374,
+        268,
+        335
+      ]
     },
     {
       "rect": [
@@ -114,11 +163,18 @@
         128
       ],
       "anchorX": 192,
-      "lift": 0.14312130177514792,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "east",
       "stage": "contact",
-      "sha256": "e436a4b5c99668fb87d6301b80979c3b8fb19281d42f45aeece7e9e5b7d89000"
+      "sha256": "6141b650c82c61c1516ca3cdd7f13b1da1925e3ae4f234e3bdcaa4efaefb7ca5",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        410,
+        411,
+        285,
+        298
+      ]
     },
     {
       "rect": [
@@ -128,11 +184,18 @@
         128
       ],
       "anchorX": 320,
-      "lift": 0.14312130177514792,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "east",
       "stage": "recovery",
-      "sha256": "ce4517c26789f446e30f0c86d75e4532f33be0fa53782ebbbfcee20095ca73c0"
+      "sha256": "4484421e2dd0181702ec6a5283ea391d26e5be555ec97f2fbbc7567ed57d5f90",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        774,
+        374,
+        268,
+        335
+      ]
     },
     {
       "rect": [
@@ -142,11 +205,18 @@
         128
       ],
       "anchorX": 448,
-      "lift": 0.14312130177514792,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "west",
       "stage": "anticipation",
-      "sha256": "6d2debd7fbd2d14ad4000694a68c530421799b3a593c0c79009dd70bf3ffb29e"
+      "sha256": "37ccb1b0517386bc283c950de085b554ddb9af0a10c0c44b4f36d19e1032bb00",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1143,
+        374,
+        269,
+        335
+      ]
     },
     {
       "rect": [
@@ -156,11 +226,18 @@
         128
       ],
       "anchorX": 576,
-      "lift": 0.14312130177514792,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "west",
       "stage": "contact",
-      "sha256": "d64fa787d7fbe431050f5fad61960c63fa2ce856785c32fbc3291755e089de80"
+      "sha256": "f96c4fef50cb0c9e34e25eb79ebe2554ab9c0f99d17f87b5049fe641a7f2300d",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1489,
+        411,
+        280,
+        298
+      ]
     },
     {
       "rect": [
@@ -170,11 +247,29 @@
         128
       ],
       "anchorX": 704,
-      "lift": 0.14312130177514792,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "west",
       "stage": "recovery",
-      "sha256": "0ebedcfe311277664fc64eba5941e579f0753fb890be90cfc3f614bfe2ed8ef1"
+      "sha256": "bb8c07cbccdf83b4868fae3116325972b66372d35d00e35f77acebded7777964",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1863,
+        374,
+        265,
+        335
+      ]
     }
+  ],
+  "source": "ArtSources/AttackSheets20261029/Yasmin/generated-source.png",
+  "sourceSha256": "693fb3ab168d1afc4dd1f762374198a70293d3ea2e03c5c3f1584159c6ed931f",
+  "canonicalPortraitSha256": "1053391e6435423dc457fb57afb1ca2df09ca62c779c2206f1d50fd9716ced63",
+  "technicalUniformScale": 0.31044776119402984,
+  "origin": "top-left",
+  "intentionalHolds": [],
+  "runtimeVerified": false,
+  "notes": [
+    "Complete authored figure+instrument per frame. Effects separate. Baseline12 and lift=-12/PPU give world ground offset-.58 in CampaignStorySprites.",
+    "Curly long hair and blue-green eyes from definitive portrait; real piano/keyboard in both variants. No microphone."
   ]
 }

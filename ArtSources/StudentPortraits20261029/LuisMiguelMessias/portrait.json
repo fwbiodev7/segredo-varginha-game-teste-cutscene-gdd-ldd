@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "character": "LuisMiguelMessias",
+  "mode": "built-in image_gen",
+  "status": "visual-reviewed",
+  "visualApproval": false,
+  "image": "Assets/Resources/Varginha/Allies/Portraits/LuisMiguelMessias.png",
+  "imageSha256": "e14b9164fbb4628dcf9c54f3c47f1bbe8e658efeae89a735303f894443651af1",
+  "nativeSize": [
+    256,
+    256
+  ],
+  "sourceImage": "generated-portrait.png",
+  "sourceSha256": "7e112b626d0e79da1a8cfc66c61e8aa83d3991941d2bf991db1eb46c73ec2b5c",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "sourceRect": [
+    154,
+    85,
+    946,
+    1117
+  ],
+  "sourceRectOrigin": "top-left",
+  "uniformNearestScale": 0.21486123545210384,
+  "completeBust": true,
+  "removedPaddingComponents": 0,
+  "alphaThreshold": 128,
+  "notes": [
+    "Complete bust extracted and uniformly reduced; no anatomical assembly or palette recoloring.",
+    "Alpha-connected silhouette removes only detached transparent-margin generation noise.",
+    "Current supplied design identity retained.",
+    "Generative adaptation; exact pixel equality with source designs is not claimed. Unity runtime pending parent integration."
+  ]
+}

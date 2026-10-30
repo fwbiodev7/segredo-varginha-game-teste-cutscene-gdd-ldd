@@ -1,0 +1,34 @@
+{
+  "id": "Giovana",
+  "image": "../../../Assets/Resources/Varginha/Allies/Portraits/Giovana.png",
+  "imageSha256": "8df6e8a485361ea29c8eecc02844758be4878d4da144b0f0a7eee93b6b0afc31",
+  "sourceImage": "generated-source.png",
+  "sourceSha256": "436d2b80cef9d3d3f6c5c24645c5af657618579f99fb8eb4226f7044c1848d61",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "finalSize": [
+    256,
+    256
+  ],
+  "alpha": true,
+  "technicalCrop": [
+    0,
+    0,
+    1254,
+    1208
+  ],
+  "wholeBustCrop": [
+    116,
+    115,
+    1141,
+    1206
+  ],
+  "uniformNearestNeighborScale": 0.21631530705774518,
+  "status": "visual-reviewed",
+  "visualApproval": false,
+  "generation": "built-in ImageGen",
+  "prompt": "prompt.txt",
+  "identityReference": "full-sprite-reference.png"
+}

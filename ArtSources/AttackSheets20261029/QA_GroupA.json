@@ -1,0 +1,62 @@
+{
+  "Fabio": {
+    "runtime": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroFabio.png",
+    "json": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroFabio.json",
+    "effects": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroFabioEffects.png",
+    "frames": 12,
+    "distinctFrames": 12,
+    "effectsFrames": 6,
+    "PPU": 82.58064516129032,
+    "scale": 0.2692307692307692,
+    "alpha": [
+      0,
+      255
+    ],
+    "geometryErrors": []
+  },
+  "Marcos": {
+    "runtime": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroMarcos.png",
+    "json": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroMarcos.json",
+    "effects": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroMarcosEffects.png",
+    "frames": 12,
+    "distinctFrames": 12,
+    "effectsFrames": 6,
+    "PPU": 82.58064516129032,
+    "scale": 0.277602523659306,
+    "alpha": [
+      0,
+      255
+    ],
+    "geometryErrors": []
+  },
+  "Matias": {
+    "runtime": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroMatias.png",
+    "json": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroMatias.json",
+    "effects": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroMatiasEffects.png",
+    "frames": 12,
+    "distinctFrames": 12,
+    "effectsFrames": 6,
+    "PPU": 82.58064516129032,
+    "scale": 0.30985915492957744,
+    "alpha": [
+      0,
+      255
+    ],
+    "geometryErrors": []
+  },
+  "AnnaSabia": {
+    "runtime": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroAnnaSabia.png",
+    "json": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroAnnaSabia.json",
+    "effects": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroAnnaSabiaEffects.png",
+    "frames": 12,
+    "distinctFrames": 12,
+    "effectsFrames": 6,
+    "PPU": 82.58064516129032,
+    "scale": 0.2864450127877238,
+    "alpha": [
+      0,
+      255
+    ],
+    "geometryErrors": []
+  }
+}

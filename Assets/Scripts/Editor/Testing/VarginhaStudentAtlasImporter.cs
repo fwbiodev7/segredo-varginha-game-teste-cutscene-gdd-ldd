@@ -14,13 +14,19 @@ namespace Game.Editor.Testing
         private const int FootBaseline = 6;
         private static readonly HashSet<string> PendingSources = new HashSet<string>();
 
-        public override uint GetVersion() => 2;
+        public override uint GetVersion() => 3;
 
         private void OnPreprocessTexture()
         {
             if (!assetPath.StartsWith(SourceFolder + "/") && !assetPath.StartsWith(OutputFolder + "/")) return;
             var importer = (TextureImporter)assetImporter;
             importer.textureType = TextureImporterType.Default;
+            if (assetPath.StartsWith(OutputFolder + "/Portraits/", StringComparison.Ordinal))
+            {
+                importer.textureType = TextureImporterType.Sprite;
+                importer.spriteImportMode = SpriteImportMode.Single;
+                importer.spritePixelsPerUnit = 128;
+            }
             importer.filterMode = FilterMode.Point;
             importer.mipmapEnabled = false;
             importer.textureCompression = TextureImporterCompression.Uncompressed;
@@ -46,6 +52,8 @@ namespace Game.Editor.Testing
             // Only source imports enqueue work. Importing the generated PNG cannot enqueue itself.
             if (!path.StartsWith(SourceFolder + "/", StringComparison.Ordinal)
                 || !path.EndsWith(".png", StringComparison.OrdinalIgnoreCase)) return;
+            // Subfolders preserve raw references and generation candidates, not importable 4x4 sheets.
+            if (Path.GetDirectoryName(path)?.Replace('\\', '/') != SourceFolder) return;
             if (!PendingSources.Add(path)) return;
             EditorApplication.delayCall -= ExportPending;
             EditorApplication.delayCall += ExportPending;
@@ -72,7 +80,7 @@ namespace Game.Editor.Testing
             }
         }
 
-        [MenuItem("Tools/Varginha/Atualizar atlas dos nove alunos")]
+        [MenuItem("Tools/Varginha/Atualizar atlas dos alunos")]
         public static void ExportAll()
         {
             if (!Directory.Exists(SourceFolder)) return;

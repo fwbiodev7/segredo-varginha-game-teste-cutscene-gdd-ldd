@@ -1,0 +1,218 @@
+{
+  "actorSourceHash": "6bdc018c94b2b30d9a6017d8ecdc5ff57b23dd8560093c72bf51a6a85b39598d",
+  "identityHash": "42cb41e1d11979dc4f54415bda7a606670077bde1e780e158f4a18f86dcdbe8a",
+  "frames": [
+    {
+      "frame": 0,
+      "source": "actors-source.png",
+      "sourceRect": [
+        26,
+        141,
+        222,
+        337
+      ],
+      "uniformScale": 0.3059490084985836,
+      "destination": [
+        25,
+        17,
+        68,
+        103
+      ]
+    },
+    {
+      "frame": 1,
+      "source": "actors-source.png",
+      "sourceRect": [
+        273,
+        140,
+        273,
+        338
+      ],
+      "uniformScale": 0.3059490084985836,
+      "destination": [
+        160,
+        17,
+        84,
+        103
+      ]
+    },
+    {
+      "frame": 2,
+      "source": "actors-source.png",
+      "sourceRect": [
+        552,
+        141,
+        194,
+        337
+      ],
+      "uniformScale": 0.3059490084985836,
+      "destination": [
+        288,
+        17,
+        59,
+        103
+      ]
+    },
+    {
+      "frame": 3,
+      "source": "actors-source.png",
+      "sourceRect": [
+        797,
+        141,
+        222,
+        337
+      ],
+      "uniformScale": 0.3059490084985836,
+      "destination": [
+        419,
+        17,
+        68,
+        103
+      ]
+    },
+    {
+      "frame": 4,
+      "source": "actors-source.png",
+      "sourceRect": [
+        1046,
+        141,
+        262,
+        335
+      ],
+      "uniformScale": 0.3059490084985836,
+      "destination": [
+        533,
+        18,
+        80,
+        102
+      ]
+    },
+    {
+      "frame": 5,
+      "source": "actors-source.png",
+      "sourceRect": [
+        1322,
+        141,
+        195,
+        337
+      ],
+      "uniformScale": 0.3059490084985836,
+      "destination": [
+        678,
+        17,
+        60,
+        103
+      ]
+    },
+    {
+      "frame": 6,
+      "source": "actors-source.png",
+      "sourceRect": [
+        35,
+        553,
+        212,
+        353
+      ],
+      "uniformScale": 0.3059490084985836,
+      "destination": [
+        29,
+        140,
+        65,
+        108
+      ]
+    },
+    {
+      "frame": 7,
+      "source": "actors-source.png",
+      "sourceRect": [
+        273,
+        555,
+        277,
+        349
+      ],
+      "uniformScale": 0.3059490084985836,
+      "destination": [
+        154,
+        141,
+        85,
+        107
+      ]
+    },
+    {
+      "frame": 8,
+      "source": "actors-source.png",
+      "sourceRect": [
+        555,
+        553,
+        193,
+        353
+      ],
+      "uniformScale": 0.3059490084985836,
+      "destination": [
+        287,
+        140,
+        59,
+        108
+      ]
+    },
+    {
+      "frame": 9,
+      "source": "actors-source.png",
+      "sourceRect": [
+        788,
+        554,
+        208,
+        350
+      ],
+      "uniformScale": 0.3059490084985836,
+      "destination": [
+        416,
+        141,
+        64,
+        107
+      ]
+    },
+    {
+      "frame": 10,
+      "source": "actors-source.png",
+      "sourceRect": [
+        1025,
+        555,
+        275,
+        348
+      ],
+      "uniformScale": 0.3059490084985836,
+      "destination": [
+        530,
+        142,
+        84,
+        106
+      ]
+    },
+    {
+      "frame": 11,
+      "source": "actors-source.png",
+      "sourceRect": [
+        1319,
+        554,
+        193,
+        352
+      ],
+      "uniformScale": 0.3059490084985836,
+      "destination": [
+        675,
+        140,
+        59,
+        108
+      ]
+    }
+  ],
+  "outputHash": "44fb3b41405cb6e739d979e25bb80bcf53f0da2d9dc22201b2306bd1dd60be4a",
+  "notes": [
+    "Complete figures only; no anatomy assembly or mirrored direction.",
+    "Shared scale per sheet; Ana two full-frame west contact repairs separately generated, remaining10frames unchanged.",
+    "Alpha-connected figure extraction preserves material colors; source transparent padding islands omitted.",
+    "Foot anchor computed from lower complete-figure silhouette; JSON lift matches ground foot baseline8.",
+    "Runtime Unity verification belongs to parent integration."
+  ]
+}

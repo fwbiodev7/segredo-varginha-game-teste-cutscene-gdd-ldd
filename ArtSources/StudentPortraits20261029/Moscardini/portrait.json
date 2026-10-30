@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "character": "Moscardini",
+  "mode": "built-in image_gen",
+  "status": "visual-reviewed",
+  "visualApproval": false,
+  "image": "Assets/Resources/Varginha/Allies/Portraits/Moscardini.png",
+  "imageSha256": "8fdbbd24d044e86ecd2592770f7dde3159d7af1daaf93d3b8d6fcf72ac310af2",
+  "nativeSize": [
+    256,
+    256
+  ],
+  "sourceImage": "generated-portrait.png",
+  "sourceSha256": "0145c52ad50b1cf565fde44874e9c2f930057cdfb967d83d5bac25be04ce9889",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "sourceRect": [
+    169,
+    66,
+    915,
+    1152
+  ],
+  "sourceRectOrigin": "top-left",
+  "uniformNearestScale": 0.20833333333333334,
+  "completeBust": true,
+  "removedPaddingComponents": 0,
+  "alphaThreshold": 128,
+  "notes": [
+    "Complete bust extracted and uniformly reduced; no anatomical assembly or palette recoloring.",
+    "Alpha-connected silhouette removes only detached transparent-margin generation noise.",
+    "Current supplied design identity retained.",
+    "Generative adaptation; exact pixel equality with source designs is not claimed. Unity runtime pending parent integration."
+  ]
+}

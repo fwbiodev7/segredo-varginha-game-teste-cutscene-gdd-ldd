@@ -1,0 +1,54 @@
+{
+  "errors": [],
+  "statistics": {
+    "Fabio": {
+      "frames": 16,
+      "distinctFrames": 16,
+      "runtimePixelsEqual": true
+    },
+    "Marcos": {
+      "frames": 16,
+      "distinctFrames": 16,
+      "runtimePixelsEqual": true
+    },
+    "Matias": {
+      "frames": 16,
+      "distinctFrames": 16,
+      "runtimePixelsEqual": true
+    },
+    "AnnaSabia": {
+      "frames": 16,
+      "distinctFrames": 16,
+      "runtimePixelsEqual": true
+    },
+    "AnaTavares": {
+      "frames": 16,
+      "distinctFrames": 16,
+      "runtimePixelsEqual": true
+    },
+    "Yasmin": {
+      "frames": 16,
+      "distinctFrames": 16,
+      "runtimePixelsEqual": true
+    },
+    "Pedro": {
+      "frames": 16,
+      "distinctFrames": 16,
+      "runtimePixelsEqual": true
+    },
+    "LuisMartins": {
+      "frames": 16,
+      "distinctFrames": 16,
+      "runtimePixelsEqual": true
+    },
+    "LuisMiguelMessias": {
+      "frames": 16,
+      "distinctFrames": 16,
+      "runtimePixelsEqual": true
+    }
+  },
+  "notes": [
+    "Comparison uses decoded RGBA pixels; PNG encoders can produce different bytes.",
+    "Baselines measured in top-left coordinates: bottom exclusive=58, equivalent to Unity yMin=6."
+  ]
+}

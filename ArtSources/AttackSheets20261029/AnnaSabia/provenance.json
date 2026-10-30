@@ -1,0 +1,345 @@
+{
+  "student": "Anna Sabiá",
+  "assetId": "AnnaSabia",
+  "generator": "built-in image_gen",
+  "sourceSize": [
+    2172,
+    724
+  ],
+  "sourceSha256": "c0a4225b3bed20f3e3cc3fda8913ab422afffd4bf35d487cb7074f6f67538c4c",
+  "sourceEffectsSha256": "34b8ebc8d1f36fdb01dc46c5af3e42611178700a50a066e817c75d12ed4af7ea",
+  "portraitSha256": "e1f646dd558091f21073e267947d58b7ef21f7a0546ab6f09158e03b4aab4720",
+  "runtimeSha256": "03b81d31c9a6c23cc386ed2a8963c07db89172575679cb44f0939fcca33f8b97",
+  "runtimeEffectSha256": "e8c841aa3835cfad7e087cee10b6d51c404731c197e628bae58c7cb911f4e798",
+  "runtimeSize": [
+    768,
+    256
+  ],
+  "effectsSize": [
+    384,
+    256
+  ],
+  "scale": 0.2864450127877238,
+  "sourceFrames": [
+    {
+      "sourceRect": [
+        57,
+        44,
+        252,
+        291
+      ],
+      "anchor": 127.0,
+      "ground": 293,
+      "bodyHeight": 291
+    },
+    {
+      "sourceRect": [
+        391,
+        52,
+        378,
+        283
+      ],
+      "anchor": 108.5,
+      "ground": 285,
+      "bodyHeight": 283
+    },
+    {
+      "sourceRect": [
+        794,
+        51,
+        229,
+        286
+      ],
+      "anchor": 103.0,
+      "ground": 286,
+      "bodyHeight": 286
+    },
+    {
+      "sourceRect": [
+        1153,
+        52,
+        259,
+        285
+      ],
+      "anchor": 118.0,
+      "ground": 285,
+      "bodyHeight": 285
+    },
+    {
+      "sourceRect": [
+        1459,
+        51,
+        352,
+        286
+      ],
+      "anchor": 238.5,
+      "ground": 286,
+      "bodyHeight": 286
+    },
+    {
+      "sourceRect": [
+        1915,
+        51,
+        228,
+        286
+      ],
+      "anchor": 127.0,
+      "ground": 286,
+      "bodyHeight": 286
+    },
+    {
+      "sourceRect": [
+        65,
+        415,
+        244,
+        260
+      ],
+      "anchor": 116.5,
+      "ground": 263,
+      "bodyHeight": 260
+    },
+    {
+      "sourceRect": [
+        391,
+        406,
+        388,
+        269
+      ],
+      "anchor": 141.0,
+      "ground": 272,
+      "bodyHeight": 269
+    },
+    {
+      "sourceRect": [
+        821,
+        395,
+        218,
+        283
+      ],
+      "anchor": 103.5,
+      "ground": 283,
+      "bodyHeight": 283
+    },
+    {
+      "sourceRect": [
+        1140,
+        412,
+        253,
+        263
+      ],
+      "anchor": 135.5,
+      "ground": 266,
+      "bodyHeight": 263
+    },
+    {
+      "sourceRect": [
+        1434,
+        398,
+        391,
+        278
+      ],
+      "anchor": 246.0,
+      "ground": 280,
+      "bodyHeight": 278
+    },
+    {
+      "sourceRect": [
+        1915,
+        395,
+        217,
+        281
+      ],
+      "anchor": 110.5,
+      "ground": 283,
+      "bodyHeight": 281
+    }
+  ],
+  "effects": [
+    {
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "action": 0,
+      "stage": "projectile",
+      "sourceRect": [
+        65,
+        215,
+        420,
+        145
+      ],
+      "sha256": "00c7ffbf01474ed83010b05d42b32eeedd081d920e84c3cc584728da9a9bbc5c"
+    },
+    {
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "action": 0,
+      "stage": "impact",
+      "sourceRect": [
+        626,
+        122,
+        312,
+        333
+      ],
+      "sha256": "25c0eaabc2e65815e41228113209e6bc062713f7e6ef6168e39174996d2c5f0a"
+    },
+    {
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "action": 0,
+      "stage": "dissipate",
+      "sourceRect": [
+        1131,
+        131,
+        329,
+        319
+      ],
+      "sha256": "688e16d3aabaae365baebf96905702d3f5a6dfe454bd8e416c93632bd7f465c2"
+    },
+    {
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "action": 1,
+      "stage": "projectile",
+      "sourceRect": [
+        84,
+        570,
+        401,
+        325
+      ],
+      "sha256": "253995208d2c6a9804c1d5c50cc9263a4f74b58238d348e66f6dbceed70eca1b"
+    },
+    {
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "action": 1,
+      "stage": "impact",
+      "sourceRect": [
+        583,
+        549,
+        403,
+        402
+      ],
+      "sha256": "aae9ac61c19c4e756ef3f2eeece5bc61989d73ff97c6fab22f3112b5f3695708"
+    },
+    {
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "action": 1,
+      "stage": "dissipate",
+      "sourceRect": [
+        1103,
+        584,
+        356,
+        314
+      ],
+      "sha256": "c2f6d0eea6f6fbba89fa356eb0cb4bb910e48621f497d772b95eef0cc2125a87"
+    }
+  ],
+  "geometry": [
+    [
+      28,
+      28,
+      100,
+      111
+    ],
+    [
+      10,
+      30,
+      118,
+      111
+    ],
+    [
+      31,
+      30,
+      97,
+      112
+    ],
+    [
+      27,
+      30,
+      101,
+      112
+    ],
+    [
+      13,
+      30,
+      114,
+      112
+    ],
+    [
+      31,
+      30,
+      96,
+      112
+    ],
+    [
+      29,
+      37,
+      99,
+      111
+    ],
+    [
+      8,
+      34,
+      119,
+      111
+    ],
+    [
+      33,
+      31,
+      95,
+      112
+    ],
+    [
+      28,
+      36,
+      100,
+      111
+    ],
+    [
+      8,
+      32,
+      120,
+      112
+    ],
+    [
+      33,
+      31,
+      95,
+      111
+    ]
+  ],
+  "distinctAttackFrames": 12,
+  "status": "visual-reviewed",
+  "runtimeVerified": false,
+  "notes": [
+    "No additional generation after user budget instruction; all sources already complete.",
+    "Whole figures with their separate attached/released props grouped technically; no anatomical assembly, mirroring or recolouring.",
+    "Alpha mask threshold128; RGB art preserved, uniform whole-sprite nearest scaling.",
+    "Ground pivot is16px above cell bottom. lift=.58-16/PPU, anchor follows actor foot centre.",
+    "Runtime .meta GUIDs preserved."
+  ]
+}

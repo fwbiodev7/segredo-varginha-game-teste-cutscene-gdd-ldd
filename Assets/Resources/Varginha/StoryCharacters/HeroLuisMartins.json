@@ -4,8 +4,8 @@
   "columns": 6,
   "rows": 2,
   "pixelsPerUnit": [
-    80.12519561815337,
-    80.12519561815337
+    86.66666666666667,
+    86.66666666666667
   ],
   "frames": [
     {
@@ -16,11 +16,18 @@
         128
       ],
       "anchorX": 64,
-      "lift": 0.049921875,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "east",
       "stage": "anticipation",
-      "sha256": "dd754e5ca148de8d70d56b7a7d5f1a3253597d7a2e8574d0f92f45687a7ae728"
+      "sha256": "c33f48bd656cbf9b98e407792ae94a667c75780369adf1fd2a4778097b62514c",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        54,
+        20,
+        207,
+        332
+      ]
     },
     {
       "rect": [
@@ -30,11 +37,18 @@
         128
       ],
       "anchorX": 192,
-      "lift": 0.049921875,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "east",
       "stage": "contact",
-      "sha256": "be381fefda2b49cdf97cdefa1fd8b2ecb00891bdebe9132aafeab860779aab3d"
+      "sha256": "f127104171337730d4eee89dd730e2d3f3365216555a1365d7fd071015aae14e",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        402,
+        23,
+        294,
+        330
+      ]
     },
     {
       "rect": [
@@ -44,11 +58,18 @@
         128
       ],
       "anchorX": 320,
-      "lift": 0.049921875,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "east",
       "stage": "recovery",
-      "sha256": "75097601ebf1f21652a0bd0db1b363021b1a529a4f757dad2a3a6096fb3bae60"
+      "sha256": "578fa3b4932731beb064ffa11fbd60bdf663d8cbb85509d2387bf7518e6c5d3c",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        793,
+        23,
+        220,
+        330
+      ]
     },
     {
       "rect": [
@@ -58,11 +79,18 @@
         128
       ],
       "anchorX": 448,
-      "lift": 0.049921875,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "west",
       "stage": "anticipation",
-      "sha256": "1839a1a95ca65396b1d71b8d30455b6a019a6ea188607ec5587a123ee35f17f5"
+      "sha256": "a8207c47e6e00959376ccd1fb20db8701b20b57dddf3fb021aa38bf3984e0d02",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1177,
+        24,
+        219,
+        329
+      ]
     },
     {
       "rect": [
@@ -72,11 +100,18 @@
         128
       ],
       "anchorX": 576,
-      "lift": 0.049921875,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "west",
       "stage": "contact",
-      "sha256": "36b55cbc84a742c605c363c52322b8fc4019ba4c90c5dc32a5edb85fd1218999"
+      "sha256": "dd9d2d589ffffbb7b0aec90cb6c14c4b4e88d2efc19d2c11f1eaa04cd249ef75",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1497,
+        23,
+        299,
+        330
+      ]
     },
     {
       "rect": [
@@ -86,11 +121,18 @@
         128
       ],
       "anchorX": 704,
-      "lift": 0.0249609375,
+      "lift": -0.13846153846153844,
       "action": 0,
       "direction": "west",
       "stage": "recovery",
-      "sha256": "2d752d4aeda0bba8bd678110172a4e89f103dc9f0df37b5d0260e9f9ff28e5f4"
+      "sha256": "784ba9254185acff1f0c6421082b6b1aa50418d9102e49478390a0576a93a68f",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1907,
+        24,
+        217,
+        329
+      ]
     },
     {
       "rect": [
@@ -100,11 +142,18 @@
         128
       ],
       "anchorX": 64,
-      "lift": 0.23712890625,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "east",
       "stage": "anticipation",
-      "sha256": "5b4e853a3be5075c2739219d34c8e342a62a76f946e7aa2a9c44dfb7b11eff72"
+      "sha256": "82600145e11f866579d5d05aeaf3bf752a01a6c8f1f73300e16db5e52c45bf6f",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        48,
+        376,
+        214,
+        326
+      ]
     },
     {
       "rect": [
@@ -114,11 +163,18 @@
         128
       ],
       "anchorX": 192,
-      "lift": 0.18720703125,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "east",
       "stage": "contact",
-      "sha256": "5407fff299503b137ee72e90e44a33729651b5cb22f457d486af4436858a8c91"
+      "sha256": "2201894678472bb4a497b67f4ef461ad02838ed5c596f58d70aab24a51e25083",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        374,
+        377,
+        323,
+        325
+      ]
     },
     {
       "rect": [
@@ -128,11 +184,18 @@
         128
       ],
       "anchorX": 320,
-      "lift": 0.21216796875,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "east",
       "stage": "recovery",
-      "sha256": "5ee7f941e77b40455202278c442f3209b975fbd4f76979246d242fedd9c3f53d"
+      "sha256": "8908bf406fae60d1f9fc3b609e39f980832d2c1de9bfcc349989b1933894ff41",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        792,
+        377,
+        208,
+        325
+      ]
     },
     {
       "rect": [
@@ -142,11 +205,18 @@
         128
       ],
       "anchorX": 448,
-      "lift": 0.18720703125,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "west",
       "stage": "anticipation",
-      "sha256": "899fc858e79ca23161eb9f631b17257f86f1b5150aa2e2537bf419fc5f8586b2"
+      "sha256": "450159758cf2731a761f3215303130f65860a791e794abb908f438f7be81f466",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1164,
+        378,
+        218,
+        324
+      ]
     },
     {
       "rect": [
@@ -156,11 +226,18 @@
         128
       ],
       "anchorX": 576,
-      "lift": 0.18720703125,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "west",
       "stage": "contact",
-      "sha256": "a49f43a23395add75c0063245c0e135bb4a6251e1c3ae3d6ec59a9ac1cb39c36"
+      "sha256": "8bd73830db9b509ec10be050c06e5d22675bfae5298a2f2dc1d4650d997e621a",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1478,
+        377,
+        322,
+        325
+      ]
     },
     {
       "rect": [
@@ -170,11 +247,28 @@
         128
       ],
       "anchorX": 704,
-      "lift": 0.21216796875,
+      "lift": -0.13846153846153844,
       "action": 1,
       "direction": "west",
       "stage": "recovery",
-      "sha256": "a48dba119e122788ead2ac4de177c77ee31024818633fd8dd3b2331f404169bd"
+      "sha256": "2986fef4c9da3c326e47d90fdcecaae94622f57323fa6ef8a882d90642b2f8a5",
+      "groundSupportBaselineUnity": 12,
+      "sourceRect": [
+        1907,
+        382,
+        217,
+        320
+      ]
     }
+  ],
+  "source": "ArtSources/AttackSheets20261029/LuisMartins/generated-source.png",
+  "sourceSha256": "84034c0615e9699c2e3d56b1f4817e299ab3de04119b95891e0e536bc6ee5a05",
+  "canonicalPortraitSha256": "db57a7aa1f52d25c8a17619c04b17c89c6f00a2f87cd11b983c7effa92c5b26f",
+  "technicalUniformScale": 0.3132530120481928,
+  "origin": "top-left",
+  "intentionalHolds": [],
+  "runtimeVerified": false,
+  "notes": [
+    "Complete authored figure+instrument per frame. Effects separate. Baseline12 and lift=-12/PPU give world ground offset-.58 in CampaignStorySprites."
   ]
 }

@@ -1,0 +1,528 @@
+{
+  "schemaVersion": 1,
+  "image": "../../../../Resources/Varginha/Allies/Bianca.png",
+  "imageSha256": "c88f3682b1d9ee12a1c54815705f61d6ce9006d5f8fa50fc9311a3a211ef74fa",
+  "nativeSize": [
+    256,
+    256
+  ],
+  "pixelsPerUnit": 47.407407407407405,
+  "status": "visual-reviewed",
+  "visualApproval": false,
+  "sources": [
+    {
+      "image": "final-skin-match-source.png",
+      "sha256": "190a0175ed11e928a695e67ed4ad4ed39c8a6cd59c888a61c58e578630630fec",
+      "size": [
+        1254,
+        1254
+      ],
+      "uniformScale": 0.211864406779661
+    }
+  ],
+  "referenceHashes": {
+    "design-reference.jpeg": "20bd5e3a250b9d7c6d6e92f233aaa1d45d0cf736b4d111b59451c0b13727942d",
+    "marcos-skin-reference.jpeg": "4c27639dac2de788d28f29e4869fe6daec7df291c3ec2eb6e7a8aa934ba2ddd5"
+  },
+  "rectOrigin": "top-left",
+  "frames": [
+    {
+      "id": "walk_S_00",
+      "rect": [
+        0,
+        0,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "S",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        74,
+        44,
+        161,
+        236
+      ],
+      "paddingIslandsRemoved": 0
+    },
+    {
+      "id": "walk_S_01",
+      "rect": [
+        64,
+        0,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "S",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        392,
+        49,
+        157,
+        231
+      ],
+      "paddingIslandsRemoved": 0
+    },
+    {
+      "id": "walk_S_02",
+      "rect": [
+        128,
+        0,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "S",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        700,
+        49,
+        161,
+        231
+      ],
+      "paddingIslandsRemoved": 2
+    },
+    {
+      "id": "walk_S_03",
+      "rect": [
+        192,
+        0,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "S",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        1014,
+        49,
+        161,
+        231
+      ],
+      "paddingIslandsRemoved": 0
+    },
+    {
+      "id": "walk_W_00",
+      "rect": [
+        0,
+        64,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "W",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        79,
+        372,
+        151,
+        222
+      ],
+      "paddingIslandsRemoved": 0
+    },
+    {
+      "id": "walk_W_01",
+      "rect": [
+        64,
+        64,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "W",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        392,
+        372,
+        152,
+        222
+      ],
+      "paddingIslandsRemoved": 0
+    },
+    {
+      "id": "walk_W_02",
+      "rect": [
+        128,
+        64,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "W",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        705,
+        372,
+        152,
+        222
+      ],
+      "paddingIslandsRemoved": 0
+    },
+    {
+      "id": "walk_W_03",
+      "rect": [
+        192,
+        64,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "W",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        1024,
+        373,
+        147,
+        221
+      ],
+      "paddingIslandsRemoved": 0
+    },
+    {
+      "id": "walk_E_00",
+      "rect": [
+        0,
+        128,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "E",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        83,
+        675,
+        147,
+        232
+      ],
+      "paddingIslandsRemoved": 0
+    },
+    {
+      "id": "walk_E_01",
+      "rect": [
+        64,
+        128,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "E",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        397,
+        676,
+        142,
+        231
+      ],
+      "paddingIslandsRemoved": 0
+    },
+    {
+      "id": "walk_E_02",
+      "rect": [
+        128,
+        128,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "E",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        710,
+        676,
+        142,
+        231
+      ],
+      "paddingIslandsRemoved": 0
+    },
+    {
+      "id": "walk_E_03",
+      "rect": [
+        192,
+        128,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "E",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        1024,
+        676,
+        147,
+        231
+      ],
+      "paddingIslandsRemoved": 1
+    },
+    {
+      "id": "walk_N_00",
+      "rect": [
+        0,
+        192,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "N",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        83,
+        985,
+        142,
+        235
+      ],
+      "paddingIslandsRemoved": 0
+    },
+    {
+      "id": "walk_N_01",
+      "rect": [
+        64,
+        192,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "N",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        402,
+        985,
+        137,
+        235
+      ],
+      "paddingIslandsRemoved": 0
+    },
+    {
+      "id": "walk_N_02",
+      "rect": [
+        128,
+        192,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "N",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        715,
+        985,
+        137,
+        235
+      ],
+      "paddingIslandsRemoved": 0
+    },
+    {
+      "id": "walk_N_03",
+      "rect": [
+        192,
+        192,
+        64,
+        64
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "footBaselineFromTop": 58,
+      "durationMs": 100,
+      "action": "walk",
+      "direction": "N",
+      "skin": "marcos-tone",
+      "form": "normal",
+      "sourceImage": "final-skin-match-source.png",
+      "sourceRect": [
+        1024,
+        985,
+        142,
+        235
+      ],
+      "paddingIslandsRemoved": 0
+    }
+  ],
+  "clips": [
+    {
+      "name": "walk_S",
+      "frames": [
+        "walk_S_00",
+        "walk_S_01",
+        "walk_S_02",
+        "walk_S_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "walk_W",
+      "frames": [
+        "walk_W_00",
+        "walk_W_01",
+        "walk_W_02",
+        "walk_W_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "walk_E",
+      "frames": [
+        "walk_E_00",
+        "walk_E_01",
+        "walk_E_02",
+        "walk_E_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    },
+    {
+      "name": "walk_N",
+      "frames": [
+        "walk_N_00",
+        "walk_N_01",
+        "walk_N_02",
+        "walk_N_03"
+      ],
+      "loop": true,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "walk_S",
+    "walk_W",
+    "walk_E",
+    "walk_N"
+  ],
+  "quality": {
+    "alphaThreshold": 128,
+    "maxColors": 4096,
+    "maxHeightRatio": 1.3
+  },
+  "notes": [
+    "Built-in ImageGen drawing based on supplied complete character designs.",
+    "Bianca final skin-only ImageGen edit uses actual runtime Marcos atlas as visual skin-tone reference; generative color match, not a measured exact shared palette.",
+    "Only complete frames extracted; no anatomical assembly, mirrors, rotations or palette recoloring.",
+    "Alpha threshold128 removes faint disconnected transparent-padding islands; no material color keyed.",
+    "Uniform whole-frame nearest-neighbor scale per generated source batch, final maximum height50px, feet58.",
+    "Canonical 512px source is an integer2x copy to preserve existing student importer workflow.",
+    "Four different gait drawings per direction; runtime Unity verification belongs to integration task."
+  ]
+}

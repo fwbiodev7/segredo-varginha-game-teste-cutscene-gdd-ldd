@@ -1,0 +1,41 @@
+{
+  "Pedro": {
+    "png": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroPedro.png",
+    "json": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroPedro.json",
+    "frames": 12,
+    "intentionalHolds": [
+      {
+        "target": 4,
+        "source": 5,
+        "reason": "Generated contact faced east; valid west recovery pose held for contact."
+      },
+      {
+        "target": 10,
+        "source": 11,
+        "reason": "Generated contact faced east; valid west recovery pose held for contact."
+      }
+    ],
+    "effects": "existing256x256 reused; runtime2-column adaptation needed"
+  },
+  "Yasmin": {
+    "png": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroYasmin.png",
+    "json": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroYasmin.json",
+    "frames": 12,
+    "intentionalHolds": [],
+    "effects": "existing256x256 reused; runtime2-column adaptation needed"
+  },
+  "LuisMartins": {
+    "png": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroLuisMartins.png",
+    "json": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroLuisMartins.json",
+    "frames": 12,
+    "intentionalHolds": [],
+    "effects": "existing256x256 reused; runtime2-column adaptation needed"
+  },
+  "Giovana": {
+    "png": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroGiovana.png",
+    "json": "Assets\\Resources\\Varginha\\StoryCharacters\\HeroGiovana.json",
+    "frames": 12,
+    "intentionalHolds": [],
+    "effects": "new384x256"
+  }
+}

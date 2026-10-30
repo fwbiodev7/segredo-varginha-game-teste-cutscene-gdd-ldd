@@ -1,0 +1,218 @@
+{
+  "actorSourceHash": "cb29b88b6745fd8cf0937214239f2fce98b5beae45cad08df5eecc1c86227223",
+  "identityHash": "3c4b24ea30050d9d849fa760d6fe0a6b7c38bc3712bbdf6f40e02a869449b6f9",
+  "frames": [
+    {
+      "frame": 0,
+      "source": "actors-source.png",
+      "sourceRect": [
+        13,
+        123,
+        231,
+        340
+      ],
+      "uniformScale": 0.28272251308900526,
+      "destination": [
+        26,
+        24,
+        65,
+        96
+      ]
+    },
+    {
+      "frame": 1,
+      "source": "actors-source.png",
+      "sourceRect": [
+        257,
+        123,
+        278,
+        340
+      ],
+      "uniformScale": 0.28272251308900526,
+      "destination": [
+        155,
+        24,
+        79,
+        96
+      ]
+    },
+    {
+      "frame": 2,
+      "source": "actors-source.png",
+      "sourceRect": [
+        533,
+        122,
+        211,
+        343
+      ],
+      "uniformScale": 0.28272251308900526,
+      "destination": [
+        289,
+        23,
+        60,
+        97
+      ]
+    },
+    {
+      "frame": 3,
+      "source": "actors-source.png",
+      "sourceRect": [
+        799,
+        123,
+        244,
+        340
+      ],
+      "uniformScale": 0.28272251308900526,
+      "destination": [
+        421,
+        24,
+        69,
+        96
+      ]
+    },
+    {
+      "frame": 4,
+      "source": "west-contact-repairs.png",
+      "sourceRect": [
+        47,
+        96,
+        869,
+        750
+      ],
+      "uniformScale": 0.1281675392670157,
+      "destination": [
+        516,
+        24,
+        111,
+        96
+      ]
+    },
+    {
+      "frame": 5,
+      "source": "actors-source.png",
+      "sourceRect": [
+        1309,
+        123,
+        213,
+        342
+      ],
+      "uniformScale": 0.28272251308900526,
+      "destination": [
+        678,
+        23,
+        60,
+        97
+      ]
+    },
+    {
+      "frame": 6,
+      "source": "actors-source.png",
+      "sourceRect": [
+        24,
+        526,
+        242,
+        379
+      ],
+      "uniformScale": 0.28272251308900526,
+      "destination": [
+        32,
+        141,
+        68,
+        107
+      ]
+    },
+    {
+      "frame": 7,
+      "source": "actors-source.png",
+      "sourceRect": [
+        273,
+        526,
+        242,
+        382
+      ],
+      "uniformScale": 0.28272251308900526,
+      "destination": [
+        159,
+        140,
+        68,
+        108
+      ]
+    },
+    {
+      "frame": 8,
+      "source": "actors-source.png",
+      "sourceRect": [
+        526,
+        585,
+        225,
+        323
+      ],
+      "uniformScale": 0.28272251308900526,
+      "destination": [
+        290,
+        157,
+        64,
+        91
+      ]
+    },
+    {
+      "frame": 9,
+      "source": "actors-source.png",
+      "sourceRect": [
+        790,
+        538,
+        247,
+        370
+      ],
+      "uniformScale": 0.28272251308900526,
+      "destination": [
+        421,
+        143,
+        70,
+        105
+      ]
+    },
+    {
+      "frame": 10,
+      "source": "west-contact-repairs.png",
+      "sourceRect": [
+        897,
+        16,
+        815,
+        833
+      ],
+      "uniformScale": 0.1281675392670157,
+      "destination": [
+        516,
+        141,
+        104,
+        107
+      ]
+    },
+    {
+      "frame": 11,
+      "source": "actors-source.png",
+      "sourceRect": [
+        1313,
+        585,
+        210,
+        323
+      ],
+      "uniformScale": 0.28272251308900526,
+      "destination": [
+        674,
+        157,
+        59,
+        91
+      ]
+    }
+  ],
+  "outputHash": "7156808e5ad52b5468705c4c61efe7c346fa1d8a83ac3cd5a585c5f172e84a7d",
+  "notes": [
+    "Complete figures only; no anatomy assembly or mirrored direction.",
+    "Shared scale per sheet; Ana two full-frame west contact repairs separately generated, remaining10frames unchanged.",
+    "Alpha-connected figure extraction preserves material colors; source transparent padding islands omitted.",
+    "Foot anchor computed from lower complete-figure silhouette; JSON lift matches ground foot baseline8.",
+    "Runtime Unity verification belongs to parent integration."
+  ]
+}

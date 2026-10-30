@@ -1,0 +1,34 @@
+{
+  "Fabio": {
+    "geometryErrors": [],
+    "distinctFrames": 16,
+    "visibleColors": 7295,
+    "sourceTallest": 241,
+    "sourceWidest": 157,
+    "ratio": 0.2074688796680498
+  },
+  "Marcos": {
+    "geometryErrors": [],
+    "distinctFrames": 16,
+    "visibleColors": 8080,
+    "sourceTallest": 276,
+    "sourceWidest": 165,
+    "ratio": 0.18115942028985507
+  },
+  "Matias": {
+    "geometryErrors": [],
+    "distinctFrames": 16,
+    "visibleColors": 8483,
+    "sourceTallest": 265,
+    "sourceWidest": 168,
+    "ratio": 0.18867924528301888
+  },
+  "AnnaSabia": {
+    "geometryErrors": [],
+    "distinctFrames": 16,
+    "visibleColors": 7373,
+    "sourceTallest": 266,
+    "sourceWidest": 203,
+    "ratio": 0.16541353383458646
+  }
+}

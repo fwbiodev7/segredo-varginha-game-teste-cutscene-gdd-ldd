@@ -1,0 +1,11 @@
+{
+  "sourceSha256": "02f1f1cca27a24a2a219193902bd257dd7355b206de2ae1f70fbbd51af98d13b",
+  "gifs": [
+    "clip-00.gif",
+    "clip-01.gif",
+    "clip-02.gif",
+    "clip-03.gif"
+  ],
+  "gifQuantized": true,
+  "visuallyReviewed": false
+}

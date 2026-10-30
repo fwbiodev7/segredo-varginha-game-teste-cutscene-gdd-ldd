@@ -1,0 +1,34 @@
+{
+  "id": "Yasmin",
+  "image": "../../../Assets/Resources/Varginha/Allies/Portraits/Yasmin.png",
+  "imageSha256": "6eb6bb4d6f9cc7aa7160eb9d38b3be3a0d4622779ddfa89892a51f001844f400",
+  "sourceImage": "generated-source.png",
+  "sourceSha256": "74adc395e51d448a9b059cd1a027610c9c86ebbfd79f263c1bfda71188eb999d",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "finalSize": [
+    256,
+    256
+  ],
+  "alpha": true,
+  "technicalCrop": [
+    0,
+    0,
+    1254,
+    1208
+  ],
+  "wholeBustCrop": [
+    160,
+    63,
+    1107,
+    1196
+  ],
+  "uniformNearestNeighborScale": 0.2082965578111209,
+  "status": "visual-reviewed",
+  "visualApproval": false,
+  "generation": "built-in ImageGen",
+  "prompt": "prompt.txt",
+  "identityReference": "full-sprite-reference.png"
+}

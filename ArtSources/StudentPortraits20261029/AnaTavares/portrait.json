@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "character": "AnaTavares",
+  "mode": "built-in image_gen",
+  "status": "visual-reviewed",
+  "visualApproval": false,
+  "image": "Assets/Resources/Varginha/Allies/Portraits/AnaTavares.png",
+  "imageSha256": "541ce54e82f069d578e16e4b8ab8a467a9e3c1d733cfacade4a3926a0ae2a4cf",
+  "nativeSize": [
+    256,
+    256
+  ],
+  "sourceImage": "generated-portrait.png",
+  "sourceSha256": "2d77c96866c6cbe7e17eaa26eb4c4bf2382ded9f40a792031174f829d2cd8b10",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "sourceRect": [
+    108,
+    41,
+    1062,
+    1196
+  ],
+  "sourceRectOrigin": "top-left",
+  "uniformNearestScale": 0.20066889632107024,
+  "completeBust": true,
+  "removedPaddingComponents": 1,
+  "alphaThreshold": 128,
+  "notes": [
+    "Complete bust extracted and uniformly reduced; no anatomical assembly or palette recoloring.",
+    "Alpha-connected silhouette removes only detached transparent-margin generation noise.",
+    "Current supplied photo is Ana Tavares identity authority, school uniform retained.",
+    "Generative adaptation; exact pixel equality with source designs is not claimed. Unity runtime pending parent integration."
+  ]
+}

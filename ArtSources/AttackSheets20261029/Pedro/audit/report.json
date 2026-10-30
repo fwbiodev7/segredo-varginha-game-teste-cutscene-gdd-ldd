@@ -1,0 +1,269 @@
+{
+  "ok": true,
+  "source": "C:\\Users\\Usuario\\segredo-varginha-game-teste-cutscene-gdd-ldd-main\\Assets\\Resources\\Varginha\\StoryCharacters\\HeroPedro.png",
+  "sourceSha256": "a964c6c34fda4f88236858c25d0ed616d096b7e6152717a9fe25ba522fe29424",
+  "errors": [],
+  "warnings": [
+    "attack_0_west: repeated poses; inspect intentional holds and loop",
+    "attack_1_west: repeated poses; inspect intentional holds and loop",
+    "More than 10% of visible samples have partial alpha; inspect halos/native pixel rendering",
+    "Unity textureCompression: expected 0, observed ['0', '1']; inspect overrides",
+    "Unity PPU missing/differs from manifest",
+    "Unity text inspection only: import, platform overrides and runtime not verified"
+  ],
+  "frames": [
+    {
+      "id": "attack_0_east_anticipation",
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "bbox": [
+        37,
+        12,
+        107,
+        116
+      ],
+      "visiblePixels": 3928,
+      "colors": 3545,
+      "partialAlphaPixels": 3924,
+      "pixelSha256": "1b9246826ffe4ef694cf943c5233e730e9e8a274dde358512f07c671e7d10cc6"
+    },
+    {
+      "id": "attack_0_east_contact",
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "bbox": [
+        9,
+        22,
+        101,
+        116
+      ],
+      "visiblePixels": 4051,
+      "colors": 3601,
+      "partialAlphaPixels": 4046,
+      "pixelSha256": "58ba335e5fb3e6b2e435af5e4b5084f2d680ab9100ed07f74e9ab34485d27c14"
+    },
+    {
+      "id": "attack_0_east_recovery",
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "bbox": [
+        32,
+        12,
+        105,
+        116
+      ],
+      "visiblePixels": 3852,
+      "colors": 3435,
+      "partialAlphaPixels": 3842,
+      "pixelSha256": "e0302b5e4c1da52f5a6041f487203aa874ee254d359591ddf067343ada6e876c"
+    },
+    {
+      "id": "attack_0_west_anticipation",
+      "rect": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "bbox": [
+        17,
+        12,
+        88,
+        116
+      ],
+      "visiblePixels": 3893,
+      "colors": 3467,
+      "partialAlphaPixels": 3885,
+      "pixelSha256": "f07bd5d94498ea329731052d2f3316bb75c04a25d6f821cc316664e9d3f5f5a7"
+    },
+    {
+      "id": "attack_0_west_contact",
+      "rect": [
+        512,
+        0,
+        128,
+        128
+      ],
+      "bbox": [
+        24,
+        12,
+        92,
+        116
+      ],
+      "visiblePixels": 3849,
+      "colors": 3452,
+      "partialAlphaPixels": 3841,
+      "pixelSha256": "ad457f346d5720d8e3c64409f895609b77d16b0f4f22c6749139fc032b17b4c2"
+    },
+    {
+      "id": "attack_0_west_recovery",
+      "rect": [
+        640,
+        0,
+        128,
+        128
+      ],
+      "bbox": [
+        24,
+        12,
+        92,
+        116
+      ],
+      "visiblePixels": 3849,
+      "colors": 3452,
+      "partialAlphaPixels": 3841,
+      "pixelSha256": "ad457f346d5720d8e3c64409f895609b77d16b0f4f22c6749139fc032b17b4c2"
+    },
+    {
+      "id": "attack_1_east_anticipation",
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "bbox": [
+        23,
+        20,
+        108,
+        116
+      ],
+      "visiblePixels": 3968,
+      "colors": 3563,
+      "partialAlphaPixels": 3964,
+      "pixelSha256": "11b82ea13e94dfd54aa8a4faa32dce5961d6918da7bb9da3d952d98af90a8bb0"
+    },
+    {
+      "id": "attack_1_east_contact",
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "bbox": [
+        13,
+        27,
+        105,
+        116
+      ],
+      "visiblePixels": 3912,
+      "colors": 3470,
+      "partialAlphaPixels": 3904,
+      "pixelSha256": "76802615d74553886b92a82584da45dea494b628989ed7cc8176009c3f4dbf38"
+    },
+    {
+      "id": "attack_1_east_recovery",
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "bbox": [
+        28,
+        19,
+        109,
+        116
+      ],
+      "visiblePixels": 3929,
+      "colors": 3534,
+      "partialAlphaPixels": 3927,
+      "pixelSha256": "3aca50cd752b7b3ed3456dfa72d6429cab7b5c2afa0edba6e63f22a8f3029238"
+    },
+    {
+      "id": "attack_1_west_anticipation",
+      "rect": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "bbox": [
+        23,
+        20,
+        102,
+        116
+      ],
+      "visiblePixels": 3882,
+      "colors": 3483,
+      "partialAlphaPixels": 3875,
+      "pixelSha256": "3e513a2691db0cda3e782384b1614d95539e5f5be2c15bb4dc5a15c1eab20373"
+    },
+    {
+      "id": "attack_1_west_contact",
+      "rect": [
+        512,
+        128,
+        128,
+        128
+      ],
+      "bbox": [
+        24,
+        19,
+        105,
+        116
+      ],
+      "visiblePixels": 3855,
+      "colors": 3448,
+      "partialAlphaPixels": 3853,
+      "pixelSha256": "be583737ed0bd86d921f6e9b090771cbb9cbdeffee2e4cb71dc4cfd95da925ce"
+    },
+    {
+      "id": "attack_1_west_recovery",
+      "rect": [
+        640,
+        128,
+        128,
+        128
+      ],
+      "bbox": [
+        24,
+        19,
+        105,
+        116
+      ],
+      "visiblePixels": 3855,
+      "colors": 3448,
+      "partialAlphaPixels": 3853,
+      "pixelSha256": "be583737ed0bd86d921f6e9b090771cbb9cbdeffee2e4cb71dc4cfd95da925ce"
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_0_east",
+      "frames": 3,
+      "distinctPoses": 3
+    },
+    {
+      "name": "attack_0_west",
+      "frames": 3,
+      "distinctPoses": 2
+    },
+    {
+      "name": "attack_1_east",
+      "frames": 3,
+      "distinctPoses": 3
+    },
+    {
+      "name": "attack_1_west",
+      "frames": 3,
+      "distinctPoses": 2
+    }
+  ],
+  "overlaps": [],
+  "visualApproval": false,
+  "runtimeVerified": false
+}

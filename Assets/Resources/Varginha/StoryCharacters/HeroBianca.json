@@ -1,0 +1,183 @@
+{
+  "width": 768,
+  "height": 256,
+  "columns": 6,
+  "rows": 2,
+  "pixelsPerUnit": [
+    82.90155440414507,
+    82.90155440414507
+  ],
+  "frames": [
+    {
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 64.1331076137061,
+      "lift": 0.48349999999999993,
+      "action": 0,
+      "direction": "east",
+      "stage": "anticipation",
+      "sha256": "60585b49bf7ce6c4ab82d8442255ccb5ddfb4b2c38418635d67acd6f01dc035d"
+    },
+    {
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 192.2605349324896,
+      "lift": 0.48349999999999993,
+      "action": 0,
+      "direction": "east",
+      "stage": "contact",
+      "sha256": "e63e69ddd3d9b3e2ad32ad05ebf50237cad50649d7da88f3403bdd93cc37658f"
+    },
+    {
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 319.5366348032904,
+      "lift": 0.48349999999999993,
+      "action": 0,
+      "direction": "east",
+      "stage": "recovery",
+      "sha256": "db63ab169f7ee31e2ba44879a703a40c8596f9c0c837e53a68150b9029fa8eb5"
+    },
+    {
+      "rect": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 448.33062633575076,
+      "lift": 0.48349999999999993,
+      "action": 0,
+      "direction": "west",
+      "stage": "anticipation",
+      "sha256": "e2914dca03525cf1f719dd2181ef9687e808e47f28694f6425bf754111229d3a"
+    },
+    {
+      "rect": [
+        512,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 576.3549185961518,
+      "lift": 0.48349999999999993,
+      "action": 0,
+      "direction": "west",
+      "stage": "contact",
+      "sha256": "1c8c1e8067d125f5ca560b4f815054dd51e53b7aa5291a15fdd423032bab0731"
+    },
+    {
+      "rect": [
+        640,
+        0,
+        128,
+        128
+      ],
+      "anchorX": 704.4387193329414,
+      "lift": 0.48349999999999993,
+      "action": 0,
+      "direction": "west",
+      "stage": "recovery",
+      "sha256": "0e5d192243f940f428bb9c266a148d24347bc53f8a28ba1fdd02526b8441b48f"
+    },
+    {
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 63.800520856073696,
+      "lift": 0.48349999999999993,
+      "action": 1,
+      "direction": "east",
+      "stage": "anticipation",
+      "sha256": "0bda16968d99bcc77dbd53e355310cb06ab198452a6c4c96e18cfd11f6528143"
+    },
+    {
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 191.6188910239902,
+      "lift": 0.48349999999999993,
+      "action": 1,
+      "direction": "east",
+      "stage": "contact",
+      "sha256": "bc11f244790635849e3b114c3441dda493ee353f46019040237e70677e9e1215"
+    },
+    {
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 319.87225746888936,
+      "lift": 0.48349999999999993,
+      "action": 1,
+      "direction": "east",
+      "stage": "recovery",
+      "sha256": "4e002dbc81a07c8d2153b3f2ffb73279359e5d4e8e8fef4379b8422a7d404b36"
+    },
+    {
+      "rect": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 448.2975195191046,
+      "lift": 0.48349999999999993,
+      "action": 1,
+      "direction": "west",
+      "stage": "anticipation",
+      "sha256": "ae26724279afab8951e080b5b7218d1cfabea0eafc4d98547dbba176aa9e08d4"
+    },
+    {
+      "rect": [
+        512,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 575.5467540519896,
+      "lift": 0.48349999999999993,
+      "action": 1,
+      "direction": "west",
+      "stage": "contact",
+      "sha256": "c8588035b1ee426174f144fa4e191b6f2600cb3b398a867f0d811795ee24a1e5"
+    },
+    {
+      "rect": [
+        640,
+        128,
+        128,
+        128
+      ],
+      "anchorX": 703.9448943886252,
+      "lift": 0.48349999999999993,
+      "action": 1,
+      "direction": "west",
+      "stage": "recovery",
+      "sha256": "dac6fee3ccd99f3544bfbb65aac574572955dbf66ede45016237326b251131d0"
+    }
+  ],
+  "source": "ArtSources/AttackSheets20261029/Bianca",
+  "status": "visual-reviewed",
+  "visualApproval": false
+}

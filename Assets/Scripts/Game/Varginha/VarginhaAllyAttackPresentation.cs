@@ -28,8 +28,9 @@ namespace Game.Varginha
             bool authored=Experiment.CampaignHeroArt.Available(student);
             if(authored)color=Experiment.CampaignHeroArt.ColorFor(student);
             _color = color;
-            _caption = student.ToUpperInvariant() + " • " + (authored?Experiment.CampaignHeroArt.AttackName(student,variant):Signature(student, style));
-            _captionCharacter=student;_captionAbility=authored?Experiment.CampaignHeroArt.AttackName(student,variant):Signature(student,style);
+            string displayName = VarginhaStudentRoster.DisplayName(student);
+            _caption = displayName.ToUpperInvariant() + " • " + (authored?Experiment.CampaignHeroArt.AttackName(student,variant):Signature(student, style));
+            _captionCharacter=displayName;_captionAbility=authored?Experiment.CampaignHeroArt.AttackName(student,variant):Signature(student,style);
             _captionLane=0;
             _root=_pooledRoot!=null?_pooledRoot:(_pooledRoot=new GameObject("Animacao_"+student));
             _root.SetActive(true);_partCursor=0;
@@ -184,11 +185,8 @@ namespace Game.Varginha
                 }
                 if(authored)
                 {
-                    int pose=time<anticipation?0:move<.65f?1:move<1?2:3;
-                    Vector2 facing=(Vector2)(destination-start);
-                    if(facing.sqrMagnitude<.001f)facing=sign<0?Vector2.left:Vector2.right;
-                    actor.sprite=Experiment.CampaignHeroArt.DirectionalPose(student,variant,facing,pose)
-                        ??Experiment.CampaignHeroArt.Pose(student,variant,sign<0,Mathf.Min(2,pose));
+                    int pose=time<anticipation?0:time<anticipation+action?1:2;
+                    actor.sprite=Experiment.CampaignHeroArt.Pose(student,variant,sign<0,pose);
                     actor.transform.localScale=Vector3.one;actor.transform.rotation=Quaternion.identity;
                     actor.transform.position=Vector3.Lerp(start,destination+Vector3.left*sign*.8f,ease);
                     shadow.transform.position=actor.transform.position-Vector3.up*.58f;
@@ -206,7 +204,7 @@ namespace Game.Varginha
                 {
                     struck = true;
                     impact?.Invoke();
-                    PlayImpactSound(style);
+                    PlayImpactSound(student, style);
                     var camera = Camera.main;
                     if (camera != null) (camera.GetComponent<VarginhaCameraShake>() ?? camera.gameObject.AddComponent<VarginhaCameraShake>()).Shake(.13f,.06f);
                 }
@@ -345,8 +343,36 @@ namespace Game.Varginha
         }
 
         private static readonly System.Collections.Generic.Dictionary<VarginhaStudentAllyStyle, AudioClip> Sounds = new();
-        private void PlayImpactSound(VarginhaStudentAllyStyle style)
+        /// <summary>Maps each ally style to a CampaignSoundscape sound ID; falls back to procedural clip.</summary>
+        private static string SoundIdForStyle(VarginhaStudentAllyStyle style) => style switch
         {
+            VarginhaStudentAllyStyle.JiuJitsu      => "AllyJiuJitsu",
+            VarginhaStudentAllyStyle.PingPong       => "AllyPingPong",
+            VarginhaStudentAllyStyle.Guitar         => "AllyGuitar",
+            VarginhaStudentAllyStyle.Art            => "AllyArtSplash",
+            VarginhaStudentAllyStyle.Microphone     => "AllyMicrophone",
+            VarginhaStudentAllyStyle.FallingPiano   => "AllyPianoFall",
+            VarginhaStudentAllyStyle.Volleyball     => "AllyVolleyball",
+            VarginhaStudentAllyStyle.MarcosChute    => "AllyJiuJitsu",
+            VarginhaStudentAllyStyle.MarcosCotovelo => "AllyJiuJitsu",
+            _                                       => "AllyDumbbell"
+        };
+        private static string SoundIdForStudent(string student, VarginhaStudentAllyStyle style)
+        {
+            // Per-hero overrides for authored characters with distinct weapons/powers.
+            var name = VarginhaStudentSprites.AssetName(student);
+            if (name == "Giovana")    return "AllyShield";
+            if (name == "Bianca")     return "AllyBook";
+            if (name == "Yasmin")     return "AllyPianoFall";
+            return SoundIdForStyle(style);
+        }
+        private void PlayImpactSound(string student, VarginhaStudentAllyStyle style)
+        {
+            // Use the CampaignSoundscape attached to the active campaign controller.
+            var soundscape = Experiment.CampaignContinuationController.Active?.GetComponent<Experiment.CampaignSoundscape>()
+                ?? Experiment.CampaignExpansionController.Active?.GetComponent<Experiment.CampaignSoundscape>();
+            if (soundscape != null) { soundscape.Play(SoundIdForStudent(student, style)); return; }
+            // Fallback: generate a simple chirp directly on the presentation root.
             if (!Sounds.TryGetValue(style, out var clip) || clip == null)
             {
                 const int rate = 22050;
@@ -362,10 +388,10 @@ namespace Game.Varginha
                     float envelope = Mathf.Sin(Mathf.PI * i / count) * Mathf.Exp(-t * 12);
                     samples[i] = (Mathf.Sin(2*Mathf.PI*frequency*t*(1-t)) + .35f*Mathf.Sin(2*Mathf.PI*frequency*1.5f*t))*envelope*.4f;
                 }
-                clip=AudioClip.Create("Impacto_"+style,count,1,rate,false);clip.SetData(samples,0);Sounds[style]=clip;
+                clip = AudioClip.Create("Impacto_"+style, count, 1, rate, false); clip.SetData(samples, 0); Sounds[style] = clip;
             }
-            var audio=_root.GetComponent<AudioSource>();if(audio==null)audio=_root.AddComponent<AudioSource>();
-            audio.playOnAwake=false;audio.spatialBlend=0;audio.volume=.35f;audio.PlayOneShot(clip);
+            var audio = _root.GetComponent<AudioSource>(); if (audio == null) audio = _root.AddComponent<AudioSource>();
+            audio.playOnAwake = false; audio.spatialBlend = 0; audio.volume = .35f; audio.PlayOneShot(clip);
         }
 
         private static Color AttackGlowColor(VarginhaStudentAllyStyle style, Color studentColor, float time)

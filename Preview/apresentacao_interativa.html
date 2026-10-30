@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Segredo de Varginha — Apresentação dos Grupos (30/10/2026)</title>
+  <style>
+    :root {
+      --bg-dark: #0a0e14;
+      --panel-bg: rgba(16, 23, 34, 0.95);
+      --card-bg: rgba(22, 33, 49, 0.85);
+      --border-color: #243b55;
+      --accent-cyan: #38ef7d;
+      --accent-gold: #f6d365;
+      --accent-purple: #9b51e0;
+      --accent-blue: #00d2ff;
+      --text-main: #e2e8f0;
+      --text-muted: #94a3b8;
+      --font-pixel: 'Courier New', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: radial-gradient(circle at 50% 20%, #111d2e 0%, var(--bg-dark) 80%);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: rgba(10, 14, 20, 0.9);
+      border-bottom: 2px solid var(--border-color);
+      padding: 1.2rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .title-group h1 {
+      font-size: 1.5rem;
+      color: var(--accent-cyan);
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .title-group p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .badge {
+      background: linear-gradient(135deg, #11998e, #38ef7d);
+      color: #061e16;
+      font-weight: bold;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    nav {
+      display: flex;
+      background: #0d1520;
+      padding: 0.5rem 2rem;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border-color);
+      overflow-x: auto;
+    }
+
+    .nav-btn {
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--text-muted);
+      padding: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .nav-btn:hover {
+      background: rgba(56, 239, 125, 0.1);
+      color: var(--text-main);
+    }
+
+    .nav-btn.active {
+      background: var(--card-bg);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+      box-shadow: 0 0 12px rgba(56, 239, 125, 0.2);
+    }
+
+    main {
+      flex: 1;
+      padding: 2.5rem;
+      max-width: 1300px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .slide {
+      display: none;
+      animation: fadeIn 0.35s ease forwards;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-card {
+      background: var(--panel-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-blue));
+    }
+
+    .hero-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .hero-header h2 {
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    .members-tag {
+      background: rgba(56, 239, 125, 0.15);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(56, 239, 125, 0.3);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.95rem;
+      font-weight: bold;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-cyan);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.8rem;
+      color: var(--accent-gold);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .card li {
+      margin-bottom: 0.6rem;
+      position: relative;
+      padding-left: 1.4rem;
+      line-height: 1.5;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+    }
+
+    .card li::before {
+      content: "▶";
+      position: absolute;
+      left: 0;
+      color: var(--accent-cyan);
+      font-size: 0.75rem;
+      top: 3px;
+    }
+
+    .highlight-box {
+      background: rgba(0, 210, 255, 0.08);
+      border-left: 4px solid var(--accent-blue);
+      padding: 1.2rem;
+      border-radius: 4px;
+      margin: 1.2rem 0;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .quote-box {
+      font-style: italic;
+      color: #f1f5f9;
+      background: rgba(246, 211, 101, 0.08);
+      border-left: 4px solid var(--accent-gold);
+      padding: 1rem 1.4rem;
+      border-radius: 4px;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge-tool {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #38bdf8;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-family: var(--font-pixel);
+      margin-right: 6px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 1.2rem 2rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: #090d13;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="title-group">
+      <h1>👾 OIZLEDE: O SEGREDO DE VARGINHA</h1>
+      <p>Apresentação Geral dos Grupos do Projeto • 30 de Outubro de 2026</p>
+    </div>
+    <div class="badge">Versão Beta Gold • Windows x64</div>
+  </header>
+
+  <nav>
+    <button class="nav-btn active" onclick="showSlide('visao-geral')">🌐 Visão Geral</button>
+    <button class="nav-btn" onclick="showSlide('arte')">🎨 Arte & Design (Destaque)</button>
+    <button class="nav-btn" onclick="showSlide('dev')">💻 Desenvolvimento & IA</button>
+    <button class="nav-btn" onclick="showSlide('narrativa')">📜 Narrativa & GDD</button>
+    <button class="nav-btn" onclick="showSlide('som')">🎧 Som & Dublagem</button>
+    <button class="nav-btn" onclick="showSlide('qa')">🔍 Testes & QA</button>
+  </nav>
+
+  <main>
+    <!-- SLIDE 0: VISÃO GERAL -->
+    <div id="visao-geral" class="slide active">
+      <div class="hero-card">
+        <div class="hero-header">
+          <div>
+            <h2>Um Jogo Construído Por Alunos e Professores</h2>
+            <p style="color: var(--text-muted); margin-top: 6px;">Desenvolvido com dedicação, criatividade e tecnologia de ponta.</p>
+          </div>
+          <span class="badge">14 Capítulos Jogáveis</span>
+        </div>
+        <div class="quote-box">
+          "O Segredo de Varginha conecta o mistério de 1996 a uma investigação repleta de pistas, puzzles e atmosfera de suspense, unindo o talento de cada equipe em uma entrega completa."
+        </div>
+        <div class="grid-3">
+          <div class="card" onclick="showSlide('arte')" style="cursor: pointer;">
+            <h3>🎨 Arte e Design</h3>
+            <p style="color: var(--text-muted); margin-bottom: 8px;">Yasmin, Giovana e Luís Martins</p>
+            <p>Spritesheets no <b>Pixilart (Pixil)</b>, 12 alunos com retratos canônicos e animações em 4 direções.</p>
+          </div>
+          <div class="card" onclick="showSlide('dev')" style="cursor: pointer;">
+            <h3>💻 Desenvolvimento</h3>
+            <p style="color: var(--text-muted); margin-bottom: 8px;">Fábio, João Pedro Matias, Asafe e Marcos</p>
+            <p>Unity 6, C#, arquitetura de combate e uso inovador de <b>Codex</b> e <b>Antigravity</b>.</p>
+          </div>
+          <div class="card" onclick="showSlide('narrativa')" style="cursor: pointer;">
+            <h3>📜 Narrativa & GDD</h3>
+            <p style="color: var(--text-muted); margin-bottom: 8px;">Bianca e João Guilherme</p>
+            <p>GDD e LDD baseados em histórias reais contadas por Edelzio e Professor Fábio.</p>
+          </div>
+          <div class="card" onclick="showSlide('som')" style="cursor: pointer;">
+            <h3>🎧 Som & Dublagem</h3>
+            <p style="color: var(--text-muted); margin-bottom: 8px;">Luís Messias e Gustavo</p>
+            <p>Trilhas, SFX via Pixabay e a dublagem oficial de 15 falas gravadas por Luís Messias.</p>
+          </div>
+          <div class="card" onclick="showSlide('qa')" style="cursor: pointer;">
+            <h3>🔍 Testes e QA</h3>
+            <p style="color: var(--text-muted); margin-bottom: 8px;">Moscardini, Anna Sabiá, Ana Tavares, Karol e Pedro</p>
+            <p>Validação desde os protótipos de setembro, auditoria de colisões e balanceamento fino.</p>
+          </div>
+          <div class="card" style="border-color: #38ef7d;">
+            <h3>🏆 Entrega Final</h3>
+            <p style="color: var(--text-muted); margin-bottom: 8px;">Apresentação Oficial</p>
+            <p>Build standalone para Windows x64 gerada e pronta para demonstração ao vivo!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 1: ARTE E DESIGN (EXPANDIDO) -->
+    <div id="arte" class="slide">
+      <div class="hero-card">
+        <div class="hero-header">
+          <div>
+            <h2>Arte, Sprites e Design Geral</h2>
+            <p style="color: var(--text-muted); margin-top: 6px;">Construção visual e animações de personagens em pixel art retrô.</p>
+          </div>
+          <div class="members-tag">Equipe: Yasmin, Giovana e Luís Martins</div>
+        </div>
+
+        <div class="quote-box">
+          "Para garantir a identidade visual de suspense dos anos 90, nossa equipe utilizou o <strong>Pixilart (Pixil)</strong> — um site simples, leve e 'bão demais' para criação de pixel art, permitindo desenhar quadro a quadro com precisão cirúrgica."
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>🖌️ O Papel do Pixilart (Pixil)</h3>
+            <ul>
+              <li><strong>Interface simples e objetiva:</strong> Ferramenta no navegador que facilitou o trabalho colaborativo sem necessidade de softwares pesados.</li>
+              <li><strong>Grid e células de 64×64:</strong> Controle rigoroso da escala e resolução dos sprites para encaixe perfeito na Unity sem borrões (Point Filter).</li>
+              <li><strong>Paleta de Cores Harmônica:</strong> Tons de pele autênticos, uniformes contrastantes e sombreamento clássico com contornos nítidos.</li>
+              <li><strong>Exportação de Atlas:</strong> Montagem de folhas 4×4 (16 quadros por personagem) com walk cycles fluidos.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>🚶 Animações e Ciclos de Caminhada</h3>
+            <ul>
+              <li><strong>4 Direções Completas:</strong> Frente (Sul), Costas (Norte), Direita (Leste) e Esquerda (Oeste).</li>
+              <li><strong>Baseline de Contato com o Chão:</strong> Alinhamento com baseline <code>y = 6</code> para garantir que nenhum personagem flutue ou afunde nos cenários.</li>
+              <li><strong>Expressividade Corporal:</strong> Movimentação de pernas, balanço de braços, cadência de passos e caimento de cabelos e mochilas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>🎒 Os 12 Alunos & Retratos Canônicos</h3>
+            <ul>
+              <li><strong>12 Retratos Canônicos Individuais:</strong> Criados em 256×256 pixels para a mochila e janelas de diálogo, capturando a essência de cada aluno da vida real.</li>
+              <li><strong>Yasmin:</strong> Cachos pretos, olhos azul-esverdeados marcantes e o lendário poder do piano caindo do céu.</li>
+              <li><strong>Giovana:</strong> Postura ágil, ginga inspirada na capoeira e escudo arcano dourado.</li>
+              <li><strong>Bianca:</strong> Visual de pesquisadora com frascos, livros de química e ataques em área.</li>
+              <li><strong>Moscardini:</strong> Porte imponente de lutador e o poder do Sono Profundo para adormecer inimigos.</li>
+              <li><strong>Pedro, Matias, Fábio, Marcos, Anna Sabiá, Ana Tavares e Luís Miguel Messias:</strong> Cada um com seu estilo próprio e vestimentas distintas.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>🏙️ Cenários, Objetos e Atmosfera</h3>
+            <ul>
+              <li><strong>Ambientes Ricos:</strong> Casa do Edelzio com pia e café fumegante, sala de informática da Industrial, laboratório, casarão e a igreja.</li>
+              <li><strong>O Fusca Azul:</strong> Ícone da jornada com visual clássico, animação de partida e interior detalhado.</li>
+              <li><strong>Efeitos Visuais de Combate:</strong> Ondas de choque, estalos de luz, barras de escudo e impactos animados.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2: DESENVOLVIMENTO -->
+    <div id="dev" class="slide">
+      <div class="hero-card">
+        <div class="hero-header">
+          <div>
+            <h2>Desenvolvimento e Engenharia de Software</h2>
+            <p style="color: var(--text-muted); margin-top: 6px;">Programação C#, arquitetura na Unity 6 e uso pioneiro de IA.</p>
+          </div>
+          <div class="members-tag">Equipe: Fábio, João Pedro Matias, Asafe e Marcos</div>
+        </div>
+
+        <div class="highlight-box">
+          Desenvolvimento profissional utilizando a <strong>Unity 6</strong> combinado ao auxílio pioneiro de inteligências artificiais de programação: <strong>OpenAI Codex</strong> e <strong>Antigravity (Google DeepMind)</strong>.
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>⚙️ Sistemas e Mecânicas em C#</h3>
+            <ul>
+              <li><strong>Top-Down Controller:</strong> Movimentação em 8 direções com inércia calibrada, corrida, agachamento e colisão precisa.</li>
+              <li><strong>Mochila em Grade 3×4:</strong> Exibição dos 12 alunos com inspeção detalhada e escolha de aliados para a batalha final.</li>
+              <li><strong>Sistema de Save e Persistência:</strong> Armazenamento de pistas, puzzles e checkpoints em formato JSON com migração sem perdas.</li>
+              <li><strong>IA de Inimigos e Chefes:</strong> Patrulha, perseguição por linha de visão e combate dinâmico contra a manifestação.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>🤖 Programação Pair com IA (Codex & Antigravity)</h3>
+            <ul>
+              <li><strong>Google Antigravity:</strong> Agente pair programming autônomo que auxiliou na sincronização de branches, resolução de conflitos e testes PlayMode.</li>
+              <li><strong>OpenAI Codex:</strong> Geração acelerada de lógica de combate, importadores de texturas e scripts de suporte.</li>
+              <li><strong>Automação de Build:</strong> Scripts batchmode que compilam o jogo inteiro em menos de 2 minutos gerando o executável standalone.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3: NARRATIVA -->
+    <div id="narrativa" class="slide">
+      <div class="hero-card">
+        <div class="hero-header">
+          <div>
+            <h2>Narrativa, GDD e Roteiro</h2>
+            <p style="color: var(--text-muted); margin-top: 6px;">A alma da história construída a partir de histórias reais.</p>
+          </div>
+          <div class="members-tag">Equipe: Bianca e João Guilherme</div>
+        </div>
+
+        <div class="quote-box">
+          "A história de O Segredo de Varginha nasceu de conversas, lembranças e causos contados pelo professor Edelzio e pelo professor Fábio, unindo o mito regional a uma profunda aventura fictícia."
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>📘 Criação do GDD e LDD</h3>
+            <ul>
+              <li><strong>Game Design Document (GDD):</strong> Definição dos quatro pilares do jogo: Investigação, Tensão, Exploração e Cooperação.</li>
+              <li><strong>Level Design Document (LDD):</strong> Planejamento dos 14 capítulos, do sumiço da chave na infância até o ritual no casarão.</li>
+              <li><strong>Puzzles com Sentido:</strong> Desafios ligados ao Livro do Tombo e ao caderno de anotações, sem charadas desconexas.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>🌌 O Mistério e o Respeito ao ET</h3>
+            <ul>
+              <li><strong>1996 vs 2026:</strong> O trauma infantil esquecido e o retorno do professor adulto para encarar seu passado.</li>
+              <li><strong>A Criatura Ferida:</strong> A narrativa diferencia com clareza o ser frágil e assustado da entidade agressiva que emerge da fenda.</li>
+              <li><strong>Homenagem aos Professores:</strong> Diálogos inteligentes e cheios de referências que valorizam a amizade e o conhecimento.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4: SOM -->
+    <div id="som" class="slide">
+      <div class="hero-card">
+        <div class="hero-header">
+          <div>
+            <h2>Sonoplastia e Dublagem</h2>
+            <p style="color: var(--text-muted); margin-top: 6px;">Atmosfera auditiva envolvente e voz oficial da campanha.</p>
+          </div>
+          <div class="members-tag">Equipe: Luís Messias e Gustavo</div>
+        </div>
+
+        <div class="highlight-box">
+          Uma experiência imersiva combinando a seleção criteriosa de efeitos sonoros livres do <strong>Pixabay</strong>, sintetizadores em tempo real e a <strong>narração dublada por Luís Messias</strong>.
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>🔊 Sonoplastia & Efeitos Pixabay</h3>
+            <ul>
+              <li><strong>Passos Realistas:</strong> Diferenciação acústica entre pisos de madeira antiga, ladrilhos da escola e folhas da floresta.</li>
+              <li><strong>Sons Mecânicos:</strong> A ignição e engasgos do motor do Fusca, o chiado do rádio e os cliques do notebook.</li>
+              <li><strong>Sintetizadores Procedurais:</strong> Efeitos gerados matematicamente na Unity para os ataques e escudos dos alunos.</li>
+              <li><strong>Trilhas de Tensão:</strong> O suspense gélido da capela e o tema emocionante dos créditos finais.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>🎙️ Narração Dublada de Luís Messias</h3>
+            <ul>
+              <li><strong>15 Faixas Gravadas:</strong> Narração pontual e expressiva que acompanha momentos-chave da jornada de Edelzio.</li>
+              <li><strong>Profundidade Emocional:</strong> Transmite as dúvidas, o medo e a coragem do protagonista durante a investigação.</li>
+              <li><strong>Integração com HUD:</strong> A narração pausa automaticamente durante a abertura da mochila e respeita os sliders de volume.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5: TESTES E QA -->
+    <div id="qa" class="slide">
+      <div class="hero-card">
+        <div class="hero-header">
+          <div>
+            <h2>Testes e Garantia de Qualidade (QA)</h2>
+            <p style="color: var(--text-muted); margin-top: 6px;">Auditoria contínua para entregar um jogo estável e polido.</p>
+          </div>
+          <div class="members-tag">Equipe: Moscardini, Anna Sabiá, Ana Tavares, Karol e Pedro</div>
+        </div>
+
+        <div class="quote-box">
+          "Testamos o jogo incansavelmente desde os primeiros protótipos de setembro, garantindo que a experiência do jogador fosse fluida, sem travamentos e com a dificuldade perfeita."
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>🛡️ O Trabalho do Time de QA</h3>
+            <ul>
+              <li><strong>Testes Diários de Gameplay:</strong> Jogabilidade repetida em dezenas de sessões para encontrar falhas antes das entregas.</li>
+              <li><strong>Auditoria de Cenário:</strong> Inspeção de mais de 18 ambientes e centenas de móveis para eliminar colisores invisíveis e bugs de travamento.</li>
+              <li><strong>Validação de Saves:</strong> Garantia de que carregar um jogo salvo não cause perda de pistas nem itens da mochila.</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>🎯 Feedbacks que Moldaram o Jogo</h3>
+            <ul>
+              <li><strong>Balanceamento de Combate:</strong> Ajustes nos pontos de vida e tempos de recarga dos golpes dos alunos.</li>
+              <li><strong>Legibilidade de Pistas:</strong> Modificações nos contrastes de cores e fontes para leitura fácil até em telas distantes.</li>
+              <li><strong>Prevenção de Cliques Múltiplos:</strong> Correções que impedem que botões de transição pulem fases acidentalmente.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>O Segredo de Varginha • Projeto Interdisciplinar • Apresentação de 30/10/2026</p>
+  </footer>
+
+  <script>
+    function showSlide(id) {
+      document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+      const target = document.getElementById(id);
+      if (target) target.classList.add('active');
+      const btn = Array.from(document.querySelectorAll('.nav-btn')).find(b => b.getAttribute('onclick')?.includes(id));
+      if (btn) btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+[
+  {
+    "student": "LuisMiguelMessias",
+    "original": "luis_messias_pixelart_bianca_style.png",
+    "sourceCrop": null,
+    "opaqueSource": false,
+    "output": "LuisMiguelMessias.png"
+  },
+  {
+    "student": "Fabio",
+    "original": "Retrato pixel art com camiseta verde.png",
+    "sourceCrop": null,
+    "opaqueSource": true,
+    "output": "Fabio.png"
+  },
+  {
+    "student": "AnnaSabia",
+    "original": "Retratos pixel art em camisetas verdes.png",
+    "sourceCrop": [
+      0,
+      0,
+      887,
+      887
+    ],
+    "opaqueSource": false,
+    "output": "AnnaSabia.png"
+  },
+  {
+    "student": "Matias",
+    "original": "Retratos pixel art em camisetas verdes.png",
+    "sourceCrop": [
+      887,
+      0,
+      1774,
+      887
+    ],
+    "opaqueSource": false,
+    "output": "Matias.png"
+  },
+  {
+    "student": "LuisMartins",
+    "original": "Retratos Pixelados de Luis e Yasmin.png",
+    "sourceCrop": [
+      0,
+      0,
+      887,
+      887
+    ],
+    "opaqueSource": false,
+    "output": "LuisMartins.png"
+  },
+  {
+    "student": "Yasmin",
+    "original": "Retratos Pixelados de Luis e Yasmin.png",
+    "sourceCrop": [
+      887,
+      0,
+      1774,
+      887
+    ],
+    "opaqueSource": false,
+    "output": "Yasmin.png"
+  },
+  {
+    "student": "AnaTavares",
+    "original": "Retratos Pixelados em Camisetas Verdes.png",
+    "sourceCrop": [
+      0,
+      0,
+      887,
+      887
+    ],
+    "opaqueSource": true,
+    "output": "AnaTavares.png"
+  },
+  {
+    "student": "Pedro",
+    "original": "Retratos Pixelados em Camisetas Verdes.png",
+    "sourceCrop": [
+      887,
+      0,
+      1774,
+      887
+    ],
+    "opaqueSource": true,
+    "output": "Pedro.png"
+  },
+  {
+    "student": "Marcos",
+    "original": "Avatar juvenil com burst fade em pixel art.png",
+    "sourceCrop": null,
+    "opaqueSource": true,
+    "output": "Marcos.png"
+  },
+  {
+    "student": "Bianca",
+    "original": "bianca arte maior.png",
+    "sourceCrop": null,
+    "opaqueSource": false,
+    "output": "Bianca.png"
+  },
+  {
+    "student": "Moscardini",
+    "original": "moscardini_retrato_pixelart.png",
+    "sourceCrop": null,
+    "opaqueSource": false,
+    "output": "Moscardini.png"
+  },
+  {
+    "student": "Giovana",
+    "original": "codex-clipboard-01786fea-0b5f-43de-be94-c20c7c5f283d.png",
+    "sourceCrop": null,
+    "opaqueSource": true,
+    "output": "Giovana.png"
+  }
+]

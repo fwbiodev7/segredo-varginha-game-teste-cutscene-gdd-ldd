@@ -1,0 +1,283 @@
+{
+  "schemaVersion": 1,
+  "image": "../../../Assets/Resources/Varginha/StoryCharacters/HeroGiovana.png",
+  "imageSha256": "c5ba6ce2ae218c8f4fa11e29bef3eedc8eb3dbcbd36470dcfeaaef7b7a8cecd7",
+  "nativeSize": [
+    768,
+    256
+  ],
+  "pixelsPerUnit": 86.66666666666667,
+  "status": "visual-reviewed",
+  "visualApproval": false,
+  "frames": [
+    {
+      "id": "attack_0_east_anticipation",
+      "rect": [
+        0,
+        0,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.4864583333333333
+      ],
+      "durationMs": 160,
+      "action": "attack_0",
+      "direction": "east",
+      "skin": "default",
+      "form": "normal"
+    },
+    {
+      "id": "attack_0_east_contact",
+      "rect": [
+        128,
+        0,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.4864583333333333
+      ],
+      "durationMs": 130,
+      "action": "attack_0",
+      "direction": "east",
+      "skin": "default",
+      "form": "normal"
+    },
+    {
+      "id": "attack_0_east_recovery",
+      "rect": [
+        256,
+        0,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.4864583333333333
+      ],
+      "durationMs": 200,
+      "action": "attack_0",
+      "direction": "east",
+      "skin": "default",
+      "form": "normal"
+    },
+    {
+      "id": "attack_0_west_anticipation",
+      "rect": [
+        384,
+        0,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.4864583333333333
+      ],
+      "durationMs": 160,
+      "action": "attack_0",
+      "direction": "west",
+      "skin": "default",
+      "form": "normal"
+    },
+    {
+      "id": "attack_0_west_contact",
+      "rect": [
+        512,
+        0,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.4864583333333333
+      ],
+      "durationMs": 130,
+      "action": "attack_0",
+      "direction": "west",
+      "skin": "default",
+      "form": "normal"
+    },
+    {
+      "id": "attack_0_west_recovery",
+      "rect": [
+        640,
+        0,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.4864583333333333
+      ],
+      "durationMs": 200,
+      "action": "attack_0",
+      "direction": "west",
+      "skin": "default",
+      "form": "normal"
+    },
+    {
+      "id": "attack_1_east_anticipation",
+      "rect": [
+        0,
+        128,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.4864583333333333
+      ],
+      "durationMs": 160,
+      "action": "attack_1",
+      "direction": "east",
+      "skin": "default",
+      "form": "normal"
+    },
+    {
+      "id": "attack_1_east_contact",
+      "rect": [
+        128,
+        128,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.4864583333333333
+      ],
+      "durationMs": 130,
+      "action": "attack_1",
+      "direction": "east",
+      "skin": "default",
+      "form": "normal"
+    },
+    {
+      "id": "attack_1_east_recovery",
+      "rect": [
+        256,
+        128,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.4864583333333333
+      ],
+      "durationMs": 200,
+      "action": "attack_1",
+      "direction": "east",
+      "skin": "default",
+      "form": "normal"
+    },
+    {
+      "id": "attack_1_west_anticipation",
+      "rect": [
+        384,
+        128,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.4864583333333333
+      ],
+      "durationMs": 160,
+      "action": "attack_1",
+      "direction": "west",
+      "skin": "default",
+      "form": "normal"
+    },
+    {
+      "id": "attack_1_west_contact",
+      "rect": [
+        512,
+        128,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.4864583333333333
+      ],
+      "durationMs": 130,
+      "action": "attack_1",
+      "direction": "west",
+      "skin": "default",
+      "form": "normal"
+    },
+    {
+      "id": "attack_1_west_recovery",
+      "rect": [
+        640,
+        128,
+        128,
+        128
+      ],
+      "pivot": [
+        0.5,
+        0.4864583333333333
+      ],
+      "durationMs": 200,
+      "action": "attack_1",
+      "direction": "west",
+      "skin": "default",
+      "form": "normal"
+    }
+  ],
+  "clips": [
+    {
+      "name": "attack_0_east",
+      "frames": [
+        "attack_0_east_anticipation",
+        "attack_0_east_contact",
+        "attack_0_east_recovery"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_0_west",
+      "frames": [
+        "attack_0_west_anticipation",
+        "attack_0_west_contact",
+        "attack_0_west_recovery"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_1_east",
+      "frames": [
+        "attack_1_east_anticipation",
+        "attack_1_east_contact",
+        "attack_1_east_recovery"
+      ],
+      "loop": false,
+      "allowStatic": false
+    },
+    {
+      "name": "attack_1_west",
+      "frames": [
+        "attack_1_west_anticipation",
+        "attack_1_west_contact",
+        "attack_1_west_recovery"
+      ],
+      "loop": false,
+      "allowStatic": false
+    }
+  ],
+  "requiredClips": [
+    "attack_0_east",
+    "attack_0_west",
+    "attack_1_east",
+    "attack_1_west"
+  ],
+  "quality": {
+    "alphaThreshold": 128,
+    "maxColors": 32768,
+    "maxHeightRatio": 1.5
+  }
+}

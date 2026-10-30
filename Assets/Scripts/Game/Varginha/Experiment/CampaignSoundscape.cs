@@ -118,7 +118,12 @@ namespace Game.Varginha.Experiment
             if (Clips.TryGetValue(id, out var clip) && clip != null) return clip;
             const int rate = 22050;
             bool ambient = id.Contains("Ambience"), engine = id == "Engine";
-            float duration = ambient ? 6 : engine ? 2 : id == "AlienBurst" ? .9f : id == "Success" ? 1.1f : id == "Starter" ? 1.2f : id == "Typing" ? .65f : .22f;
+            float duration = ambient ? 6 : engine ? 2 : id == "AlienBurst" ? .9f : id == "Success" ? 1.1f : id == "Starter" ? 1.2f : id == "Typing" ? .65f
+                : id == "AllyDumbbell"   ? .38f : id == "AllyVolleyball" ? .42f : id == "AllyPingPong"   ? .18f
+                : id == "AllyGuitar"     ? .55f : id == "AllyPianoFall"  ? .70f : id == "AllyMicrophone" ? .50f
+                : id == "AllySpray"      ? .45f : id == "AllyJiuJitsu"   ? .28f : id == "AllyBook"       ? .40f
+                : id == "AllyArtSplash"  ? .35f : id == "AllyShield"     ? .80f : id == "AllyCommand"    ? .12f
+                : id == "AllyReady"      ? .22f : id == "VictoryJingle"  ? 1.8f : .22f;
             if(id=="ManifestationRise")duration=6.2f;
             if(id=="ManifestationCollapse")duration=4.7f;
             if(id=="ManifestationTear"||id=="SealClose")duration=.85f;
@@ -166,6 +171,92 @@ namespace Game.Varginha.Experiment
                 else if (foot) value = filtered * .20f * Mathf.Exp(-t * 28) + Mathf.Sin(t * 2 * Mathf.PI * (id == "FootWood" ? 100 : 170)) * .13f * Mathf.Exp(-t * 35);
                 else if (id == "Paper" || id == "Zip") value = filtered * .55f * Mathf.Sin(t * 160) * Mathf.Exp(-t * 11);
                 else if (id == "Typing") value = filtered * .4f * Mathf.Pow(Mathf.Max(0, Mathf.Sin(t * 70)), 14);
+                else if (id == "AllyDumbbell")
+                {
+                    float rumble = filtered * .35f * Mathf.Exp(-t * 18);
+                    float ping = Mathf.Sin(t * Mathf.PI * 2 * 380) * .18f * Mathf.Exp(-t * 22) + Mathf.Sin(t * Mathf.PI * 2 * 760) * .08f * Mathf.Exp(-t * 30);
+                    value = (rumble + ping) * Mathf.Sin(Mathf.Clamp01(t / .01f) * Mathf.PI * .5f);
+                }
+                else if (id == "AllyVolleyball")
+                {
+                    float thump = (filtered * .28f + Mathf.Sin(t * Mathf.PI * 2 * 170) * .22f) * Mathf.Exp(-t * 16);
+                    float whoosh = filtered * .12f * Mathf.Exp(-t * 8) * (t < .12f ? t / .12f : 1);
+                    value = thump + whoosh;
+                }
+                else if (id == "AllyPingPong")
+                {
+                    value = (filtered * .15f + Mathf.Sin(t * Mathf.PI * 2 * 920) * .26f) * Mathf.Exp(-t * 55);
+                }
+                else if (id == "AllyGuitar")
+                {
+                    float root = Mathf.Sin(t * Mathf.PI * 2 * 110) * .18f;
+                    float fifth = Mathf.Sin(t * Mathf.PI * 2 * 165) * .12f;
+                    float oct = Mathf.Sin(t * Mathf.PI * 2 * 220) * .10f;
+                    float crunch = Mathf.Clamp(root + fifth + oct, -1, 1);
+                    value = (crunch + filtered * .08f) * Mathf.Exp(-t * 5.5f);
+                }
+                else if (id == "AllyPianoFall")
+                {
+                    float boom = (filtered * .40f + Mathf.Sin(t * Mathf.PI * 2 * (55 - t * 20)) * .28f) * Mathf.Exp(-t * 9);
+                    float keys = Mathf.Sin(t * Mathf.PI * 2 * (440 + t * -200)) * .12f * Mathf.Exp(-t * 14) * (t > .15f ? 1 : t / .15f);
+                    value = boom + keys;
+                }
+                else if (id == "AllyMicrophone")
+                {
+                    float bass = Mathf.Sin(t * Mathf.PI * 2 * 80) * .30f * Mathf.Exp(-t * 7);
+                    float air = filtered * .20f * Mathf.Pow(Mathf.Clamp01(1 - t / duration), 2);
+                    float ring = Mathf.Sin(t * Mathf.PI * 2 * 640) * .06f * Mathf.Exp(-t * 12);
+                    value = bass + air + ring;
+                }
+                else if (id == "AllySpray")
+                {
+                    float hiss = filtered * .42f * (t < .08f ? t / .08f : Mathf.Exp(-(t - .08f) * 10));
+                    float whoosh = Mathf.Sin(t * Mathf.PI * 2 * 3800) * .06f * Mathf.Exp(-t * 18);
+                    value = hiss + whoosh;
+                }
+                else if (id == "AllyJiuJitsu")
+                {
+                    float cut = filtered * .18f * (t < .04f ? 1 : Mathf.Exp(-(t - .04f) * 25));
+                    float thud = (filtered * .22f + Mathf.Sin(t * Mathf.PI * 2 * 190) * .16f) * Mathf.Exp(-t * 22) * (t > .06f ? 1 : t / .06f);
+                    value = cut + thud;
+                }
+                else if (id == "AllyBook")
+                {
+                    float swirl = Mathf.Sin(t * Mathf.PI * 2 * (280 - t * 180)) * .18f * Mathf.Exp(-t * 6);
+                    float flutter = filtered * .22f * Mathf.Pow(Mathf.Max(0, Mathf.Sin(t * 60)), 6) * Mathf.Exp(-t * 5);
+                    float magic = Mathf.Sin(t * Mathf.PI * 2 * 520) * .08f * Mathf.Exp(-t * 10);
+                    value = swirl + flutter + magic;
+                }
+                else if (id == "AllyArtSplash")
+                {
+                    float slap = (filtered * .30f + Mathf.Sin(t * Mathf.PI * 2 * 240) * .20f) * Mathf.Exp(-t * 20);
+                    float sparkle = Mathf.Sin(t * Mathf.PI * 2 * 1800) * .06f * Mathf.Exp(-t * 18);
+                    value = slap + sparkle;
+                }
+                else if (id == "AllyShield")
+                {
+                    float hum = Mathf.Sin(t * Mathf.PI * 2 * 130) * .14f + Mathf.Sin(t * Mathf.PI * 2 * 195) * .07f;
+                    float shimmer = filtered * .10f * Mathf.Sin(t * Mathf.PI * 2 * 2200) * Mathf.Exp(-t * 3);
+                    float rise = Mathf.SmoothStep(0, 1, t / (.4f * duration));
+                    value = (hum * rise + shimmer) * Mathf.Exp(-t * 1.8f);
+                }
+                else if (id == "AllyCommand")
+                {
+                    value = Mathf.Sin(t * Mathf.PI * 2 * 880) * .22f * Mathf.Exp(-t * 40);
+                }
+                else if (id == "AllyReady")
+                {
+                    float f = t < duration * .5f ? 660 : 880;
+                    value = Mathf.Sin(t * Mathf.PI * 2 * f) * .20f * Mathf.Exp(-(t % (.5f * duration)) * 30);
+                }
+                else if (id == "VictoryJingle")
+                {
+                    float[] vNotes = { 261.63f, 329.63f, 392, 523.25f, 659.25f };
+                    int seg = Mathf.Clamp((int)(t * 5), 0, 4);
+                    float tSeg = t - seg * .2f;
+                    value = Mathf.Sin(tSeg * Mathf.PI * 2 * vNotes[seg]) * .22f * Mathf.Exp(-tSeg * 8);
+                    if (t > 1f) value += (Mathf.Sin(t * Mathf.PI * 2 * 261.63f) + Mathf.Sin(t * Mathf.PI * 2 * 329.63f) + Mathf.Sin(t * Mathf.PI * 2 * 392f)) * .08f * Mathf.Exp(-(t - 1f) * 4);
+                }
                 else value = Mathf.Sin(t * 2 * Mathf.PI * (id == "Key" ? 1400 : 640)) * .17f * Mathf.Exp(-t * 28) + filtered * .12f * Mathf.Exp(-t * 40);
                 data[i] = Mathf.Clamp(value * envelope, -.7f, .7f);
             }

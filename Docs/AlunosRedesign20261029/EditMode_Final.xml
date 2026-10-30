@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="19" result="Passed" total="19" passed="19" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0,3137077">
+  <test-suite type="TestSuite" id="1000" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="241" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.313708" total="19" passed="19" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1282" name="GameEditModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Library/ScriptAssemblies/GameEditModeTests.dll" runstate="Runnable" testcasecount="241" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.292701" total="19" passed="19" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="32636" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1283" name="Game" fullname="Game" runstate="Runnable" testcasecount="241" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.288189" total="19" passed="19" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1284" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="241" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.283801" total="19" passed="19" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1285" name="EditMode" fullname="Game.Tests.EditMode" runstate="Runnable" testcasecount="241" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.276467" total="19" passed="19" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1256" name="VarginhaStudentSpriteTests" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" testcasecount="19" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.267006" total="19" passed="19" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1271" name="AllTwelveBackpackPortraitsUseDistinctDetailedArtwork" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.AllTwelveBackpackPortraitsUseDistinctDetailedArtwork" methodname="AllTwelveBackpackPortraitsUseDistinctDetailedArtwork" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="234185684" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.045169" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.AllTwelveBackpackPortraitsUseDistinctDetailedArtwork
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.AllTwelveBackpackPortraitsUseDistinctDetailedArtwork
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.AllTwelveBackpackPortraitsUseDistinctDetailedArtwork
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.AllTwelveBackpackPortraitsUseDistinctDetailedArtwork
+]]></output>
+              </test-case>
+              <test-case id="1272" name="AnnaSabiaKeepsHerCorrectDisplayNameAndHistoricalSaveIdentity" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.AnnaSabiaKeepsHerCorrectDisplayNameAndHistoricalSaveIdentity" methodname="AnnaSabiaKeepsHerCorrectDisplayNameAndHistoricalSaveIdentity" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1235722044" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.000350" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.AnnaSabiaKeepsHerCorrectDisplayNameAndHistoricalSaveIdentity
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.AnnaSabiaKeepsHerCorrectDisplayNameAndHistoricalSaveIdentity
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.AnnaSabiaKeepsHerCorrectDisplayNameAndHistoricalSaveIdentity
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.AnnaSabiaKeepsHerCorrectDisplayNameAndHistoricalSaveIdentity
+]]></output>
+              </test-case>
+              <test-suite type="ParameterizedMethod" id="1277" name="BriefNameVariantsResolveToTheExistingStudent" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.008236" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1274" name="BriefNameVariantsResolveToTheExistingStudent(&quot;Anna Sabiá&quot;,&quot;Anna Sabia&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent(&quot;Anna Sabiá&quot;,&quot;Anna Sabia&quot;)" methodname="BriefNameVariantsResolveToTheExistingStudent" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="2006526287" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.002467" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Sabiá","Anna Sabia")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Sabiá","Anna Sabia")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Sabiá","Anna Sabia")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Sabiá","Anna Sabia")
+]]></output>
+                </test-case>
+                <test-case id="1275" name="BriefNameVariantsResolveToTheExistingStudent(&quot;Anna Tavares&quot;,&quot;Ana Tavares&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent(&quot;Anna Tavares&quot;,&quot;Ana Tavares&quot;)" methodname="BriefNameVariantsResolveToTheExistingStudent" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="597205346" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.000487" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Tavares","Ana Tavares")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Tavares","Ana Tavares")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Tavares","Ana Tavares")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Anna Tavares","Ana Tavares")
+]]></output>
+                </test-case>
+                <test-case id="1276" name="BriefNameVariantsResolveToTheExistingStudent(&quot;Luis Messias&quot;,&quot;Luis Miguel Messias&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent(&quot;Luis Messias&quot;,&quot;Luis Miguel Messias&quot;)" methodname="BriefNameVariantsResolveToTheExistingStudent" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1816020239" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.000516" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Luis Messias","Luis Miguel Messias")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Luis Messias","Luis Miguel Messias")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Luis Messias","Luis Miguel Messias")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.BriefNameVariantsResolveToTheExistingStudent("Luis Messias","Luis Miguel Messias")
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-suite type="ParameterizedMethod" id="1269" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" testcasecount="12" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.185959" total="12" passed="12" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1257" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Giovana&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Giovana&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="551962254" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.019557" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Giovana")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Giovana")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Giovana")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Giovana")
+]]></output>
+                </test-case>
+                <test-case id="1258" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Bianca&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Bianca&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1295599783" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.015390" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Bianca")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Bianca")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Bianca")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Bianca")
+]]></output>
+                </test-case>
+                <test-case id="1259" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Moscardini&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Moscardini&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1564283277" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.015364" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Moscardini")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Moscardini")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Moscardini")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Moscardini")
+]]></output>
+                </test-case>
+                <test-case id="1260" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Yasmin&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Yasmin&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1670589100" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.015395" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Yasmin")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Yasmin")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Yasmin")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Yasmin")
+]]></output>
+                </test-case>
+                <test-case id="1261" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Pedro&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Pedro&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="780867801" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.007919" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Pedro")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Pedro")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Pedro")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Pedro")
+]]></output>
+                </test-case>
+                <test-case id="1262" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Matias&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Matias&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1880164604" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.016157" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Matias")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Matias")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Matias")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Matias")
+]]></output>
+                </test-case>
+                <test-case id="1263" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Marcos&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Marcos&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="76617896" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.015147" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Marcos")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Marcos")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Marcos")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Marcos")
+]]></output>
+                </test-case>
+                <test-case id="1264" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Anna Sabia&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Anna Sabia&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1764792418" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.014248" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Anna Sabia")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Anna Sabia")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Anna Sabia")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Anna Sabia")
+]]></output>
+                </test-case>
+                <test-case id="1265" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Ana Tavares&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Ana Tavares&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1609608017" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.014029" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Ana Tavares")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Ana Tavares")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Ana Tavares")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Ana Tavares")
+]]></output>
+                </test-case>
+                <test-case id="1266" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Luis Miguel Messias&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Luis Miguel Messias&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="86947953" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.007522" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Miguel Messias")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Miguel Messias")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Miguel Messias")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Miguel Messias")
+]]></output>
+                </test-case>
+                <test-case id="1267" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Luis Martins&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Luis Martins&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="42632823" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.015033" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Martins")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Martins")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Martins")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Luis Martins")
+]]></output>
+                </test-case>
+                <test-case id="1268" name="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Fabio&quot;)" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits(&quot;Fabio&quot;)" methodname="EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1399272790" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.016568" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                  <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Fabio")
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Fabio")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Fabio")
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.EveryStudentUsesTheCanonicalAtlasForWalkingAndPortraits("Fabio")
+]]></output>
+                </test-case>
+              </test-suite>
+              <test-case id="1270" name="FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons" methodname="FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="472819782" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.005178" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.FabioUsesCanonicalAtlasForWalkingPortraitsAndSummons
+]]></output>
+              </test-case>
+              <test-case id="1273" name="ShortAnnaAndTallAnaKeepDifferentHeights" fullname="Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights" methodname="ShortAnnaAndTallAnaKeepDifferentHeights" classname="Game.Tests.EditMode.VarginhaStudentSpriteTests" runstate="Runnable" seed="1729526594" result="Passed" start-time="2026-10-30 01:43:41Z" end-time="2026-10-30 01:43:41Z" duration="0.001445" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights
+QA test: Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights
+QA result: Passed Game.Tests.EditMode.VarginhaStudentSpriteTests.ShortAnnaAndTallAnaKeepDifferentHeights
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

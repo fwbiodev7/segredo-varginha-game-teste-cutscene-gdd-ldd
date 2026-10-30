@@ -62,15 +62,17 @@ Os ataques têm preparação, impacto e recuperação. A intenção é deixar a 
 
 O Fusca conecta a narrativa e os deslocamentos. A viagem cinematográfica apresenta a pane, o rádio e a chegada à escola. A oficina tem suas interações próprias. Os testes de física também verificam aceleração, frenagem, ré e a saída do contato com os limites. Isso não significa que todas as viagens sejam trechos de direção livre: cada passagem usa a mecânica prevista para ela.”
 
-## 7. Tecnologia, arte e áudio
+## 7. Tecnologia, arte e áudio — O trabalho das equipes
 
-Tempo: 1 minuto e 10 segundos. Tela de apoio: cenário e animação em jogo.
+Tempo: 2 minutos. Tela de apoio: apresentação dos grupos e pixel art no Pixilart.
 
-“O jogo utiliza Unity e C#. O código separa o progresso da campanha, a apresentação dos diálogos, os puzzles e os controladores dos personagens. Git registra as mudanças e permite relacionar uma correção à versão que foi testada.
+“A realização de O Segredo de Varginha foi viabilizada pela divisão em equipes dedicadas:
 
-A apresentação visual usa cenários ilustrados e personagens em pixel art. Uma parte importante do trabalho foi encaixar esses recursos: profundidade dos móveis, tamanho dos personagens, ponto de apoio dos pés e recortes das animações. Os ajustes mais recentes preservam os desenhos e os quadros completos dos personagens.
-
-No áudio, o projeto combina ambientes, música e efeitos. Sons de ações precisam coincidir com o contato mostrado na animação, como a xícara chegando à boca. Também integramos os arquivos recebidos para o menu e a igreja. Há preparação de roteiros e canais para voz, mas isso não equivale a dizer que toda a dublagem humana já foi gravada. Ferramentas de IA apoiaram partes do processo de código e recursos visuais; os materiais e as integrações têm registros próprios no projeto.”
+- **Arte e Design Geral (Yasmin, Giovana e Luís Martins):** Trabalharam intensamente no **Pixilart (Pixil)**, um site simples, prático e ágil de pixel art e criação de sprites. A equipe desenhou quadro a quadro os 12 alunos com ciclos completos de caminhada em quatro direções (Norte, Sul, Leste e Oeste) alinhados no chão, além de 12 retratos canônicos expressivos para a mochila e janelas de diálogo, objetos de cena (café, notebook, laboratório) e efeitos visuais de combate.
+- **Desenvolvimento e Engenharia (Fábio, João Pedro Matias, Asafe e Marcos):** Desenvolveram a arquitetura na Unity 6 em C#, combinando física 2D, sistema de inventário, combate dinâmico e integração inovadora com IAs de programação (**Codex** e **Google Antigravity**), que apoiaram na resolução de bugs, automação de testes e builds standalone.
+- **Narrativa e Roteiro (Bianca e João Guilherme):** Estruturaram o Game Design Document (GDD) e Level Design Document (LDD), criando a história principal dos 14 capítulos inspirada em memórias e causos reais compartilhados pelo professor Edelzio e pelo professor Fábio.
+- **Sonoplastia e Dublagem (Luís Messias e Gustavo):** Criaram a atmosfera auditiva do jogo combinando efeitos sonoros selecionados do Pixabay (passos, portas, motor do Fusca) com a gravação de 15 faixas de narração dublada por Luís Messias.
+- **Testes e Garantia de Qualidade (Moscardini, Anna Sabiá, Ana Tavares, Karol e Pedro):** Realizaram testes sistemáticos desde os primeiros protótipos de setembro, auditando colisões, passagens entre ambientes e fornecendo feedbacks essenciais de balanceamento e jogabilidade.”
 
 ## 8. Testes e dificuldades encontradas
 

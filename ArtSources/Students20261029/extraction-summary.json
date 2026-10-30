@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Fabio",
+    "displayName": "Fábio",
+    "frames": 16,
+    "ratio": 0.6172839506172839,
+    "sourceTallest": 81,
+    "sourceWidest": 55
+  },
+  {
+    "name": "Marcos",
+    "displayName": "Marcos",
+    "frames": 16,
+    "ratio": 0.6410256410256411,
+    "sourceTallest": 78,
+    "sourceWidest": 47
+  },
+  {
+    "name": "Matias",
+    "displayName": "Matias",
+    "frames": 16,
+    "ratio": 0.6329113924050633,
+    "sourceTallest": 79,
+    "sourceWidest": 56
+  },
+  {
+    "name": "AnnaSabia",
+    "displayName": "AnnaSofia",
+    "frames": 16,
+    "ratio": 0.5714285714285714,
+    "sourceTallest": 77,
+    "sourceWidest": 64
+  },
+  {
+    "name": "AnaTavares",
+    "displayName": "AnaTavares",
+    "frames": 16,
+    "ratio": 0.7272727272727273,
+    "sourceTallest": 77,
+    "sourceWidest": 59
+  },
+  {
+    "name": "Yasmin",
+    "displayName": "Yasmin",
+    "frames": 16,
+    "ratio": 0.6666666666666666,
+    "sourceTallest": 75,
+    "sourceWidest": 52
+  },
+  {
+    "name": "Pedro",
+    "displayName": "Pedro",
+    "frames": 16,
+    "ratio": 0.6024096385542169,
+    "sourceTallest": 83,
+    "sourceWidest": 63
+  },
+  {
+    "name": "LuisMartins",
+    "displayName": "LuisMartins",
+    "frames": 16,
+    "ratio": 0.5952380952380952,
+    "sourceTallest": 84,
+    "sourceWidest": 47
+  },
+  {
+    "name": "LuisMiguelMessias",
+    "displayName": "LuisMiguelMessias",
+    "frames": 16,
+    "ratio": 0.5555555555555556,
+    "sourceTallest": 90,
+    "sourceWidest": 46
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "name": "Matias",
+  "assetId": "Matias",
+  "generator": "built-in image_gen",
+  "status": "visual-reviewed",
+  "source": {
+    "file": "generated-source.png",
+    "size": [
+      1254,
+      1254
+    ],
+    "sha256": "7e8ec392fa177058a545e03010bb9894c90969e0d3621b245d5f7625c2c3bc1b"
+  },
+  "image": {
+    "path": "Assets/Resources/Varginha/Allies/Portraits/Matias.png",
+    "size": [
+      256,
+      256
+    ],
+    "sha256": "1de08c8674c952b8be8caad96ab2f0ec3c6d0f6b8ba43430270bae8de0700a4f"
+  },
+  "postprocess": "uniform whole-image nearest-neighbour reduction; original alpha preserved",
+  "logicalCanvas": [
+    256,
+    256
+  ],
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "bounds": [
+    10,
+    10,
+    245,
+    256
+  ],
+  "unityRuntimeVerified": false
+}

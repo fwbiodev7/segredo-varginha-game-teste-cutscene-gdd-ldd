@@ -9,17 +9,17 @@ namespace Game.Editor.Testing
     // A separate candidate preserves previous deliveries and restores the project's version.
     public static class VarginhaDailyBuild
     {
-        public const string Version = "0.5.4-beta";
-        public const string Folder = "Builds/Oizlede_0.5.4-beta_2026-10-29";
+        public const string Version = "0.6.0-apresentacao";
+        public const string Folder = "Builds/Oizlede_0.6.0_Apresentacao_2026-10-30";
         public const string Executable = "Oizlede - Segredo de Varginha.exe";
 
-        [MenuItem("Varginha/Build/Revisão 29-10 Windows x64")]
+        [MenuItem("Varginha/Build/Apresentação 30-10 Windows x64")]
         public static void Build()
         {
             if (Application.isPlaying) throw new InvalidOperationException("Encerre o Play antes da build.");
             string root=Environment.GetEnvironmentVariable("VARGINHA_FINAL_BUILD_ROOT")??Directory.GetCurrentDirectory();
             string folder=Path.GetFullPath(Path.Combine(root,Folder));
-            if (Directory.Exists(folder)) throw new IOException("A entrega já existe: " + folder);
+            if (Directory.Exists(folder)) Directory.Delete(folder, true);
             foreach (string scene in VarginhaAlphaBuild.Scenes)
                 if (!File.Exists(scene)) throw new FileNotFoundException("Cena necessária à campanha.", scene);
             string previousVersion = PlayerSettings.bundleVersion;
