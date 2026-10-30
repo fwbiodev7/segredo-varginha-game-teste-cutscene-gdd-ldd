@@ -32,7 +32,7 @@ namespace Game.Varginha.Experiment
             for (int i=0;i<3;i++) chamberValues[i]=Mathf.Clamp(chamberValues[i],0,2);
             area=Mathf.Clamp(area,0,2);chambersPrepared &= 7;finalStep=Mathf.Clamp(finalStep,0,4);
             if(battleStudents==null||battleStudents.Length!=3)battleStudents=new[]{-1,-1,-1};
-            for(int i=0;i<3;i++){battleStudents[i]=Mathf.Clamp(battleStudents[i],-1,8);for(int j=0;j<i;j++)if(battleStudents[j]==battleStudents[i])battleStudents[i]=-1;}
+            for(int i=0;i<3;i++){battleStudents[i]=Mathf.Clamp(battleStudents[i],-1,VarginhaStudentRoster.Count-1);for(int j=0;j<i;j++)if(battleStudents[j]==battleStudents[i])battleStudents[i]=-1;}
             battleSupport=Mathf.Clamp(battleSupport,-1,2);
             if(finalRegulators==null||finalRegulators.Length!=3)finalRegulators=new int[3];
             for(int i=0;i<3;i++)finalRegulators[i]=Mathf.Clamp(finalRegulators[i],0,3);

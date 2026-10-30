@@ -7,6 +7,9 @@ namespace Game.Tests.EditMode
 {
     public sealed class VarginhaStudentSpriteTests
     {
+        [TestCase("Giovana")]
+        [TestCase("Bianca")]
+        [TestCase("Moscardini")]
         [TestCase("Yasmin")]
         [TestCase("Pedro")]
         [TestCase("Matias")]
@@ -85,6 +88,40 @@ namespace Game.Tests.EditMode
         }
 
         [Test]
+        public void AllTwelveBackpackPortraitsUseDistinctDetailedArtwork()
+        {
+            var textures = new HashSet<Texture2D>();
+            for (int i = 0; i < VarginhaStudentRoster.Count; i++)
+            {
+                string student = VarginhaStudentRoster.Name(i);
+                var portrait = VarginhaStudentAllySquad.Portrait(i);
+                Assert.IsNotNull(portrait, student);
+                StringAssert.StartsWith("StudentInventoryPortrait_", portrait.name, student);
+                Assert.AreEqual(256, portrait.texture.width, student);
+                Assert.AreEqual(256, portrait.texture.height, student);
+                Assert.AreEqual(FilterMode.Point, portrait.texture.filterMode, student);
+                Assert.AreEqual(1, portrait.texture.mipmapCount, student);
+                Assert.IsTrue(textures.Add(portrait.texture), "Retrato duplicado: " + student);
+                int transparent = 0, visible = 0;
+                foreach (var pixel in portrait.texture.GetPixels32())
+                {
+                    if (pixel.a == 0) transparent++;
+                    if (pixel.a >= 128) visible++;
+                }
+                Assert.Greater(transparent, 655, student + " requer fundo transparente.");
+                Assert.Greater(visible, 6553, student + " requer personagem visível.");
+            }
+        }
+
+        [Test]
+        public void AnnaSabiaKeepsHerCorrectDisplayNameAndHistoricalSaveIdentity()
+        {
+            Assert.AreEqual("Anna Sabiá", VarginhaStudentRoster.DisplayName(5));
+            Assert.AreEqual("Anna Sabia", VarginhaStudentRoster.Name(5));
+            Assert.AreEqual("AnnaSabia", VarginhaStudentSprites.AssetName("Anna Sabiá"));
+        }
+
+        [Test]
         public void ShortAnnaAndTallAnaKeepDifferentHeights()
         {
             int shortHeight = VisibleBounds(VarginhaStudentSprites.Frame("Anna Sabia")).height;
@@ -94,6 +131,7 @@ namespace Game.Tests.EditMode
             Assert.That(tallHeight - regularHeight, Is.GreaterThanOrEqualTo(4));
         }
 
+        [TestCase("Anna Sabiá", "Anna Sabia")]
         [TestCase("Anna Tavares", "Ana Tavares")]
         [TestCase("Luis Messias", "Luis Miguel Messias")]
         public void BriefNameVariantsResolveToTheExistingStudent(string briefName, string gameName)

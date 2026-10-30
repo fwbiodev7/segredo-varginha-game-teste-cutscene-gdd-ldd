@@ -177,7 +177,7 @@ namespace Game.Tests.PlayMode
         }
 
         [Test]
-        public void AlliedSummonsAreGatedUntilHardPhasesButFinalPhaseAlwaysAllowsAll()
+        public void AlliedSummonsAreOnlyAvailableInTheFinalPhaseAtEveryDifficulty()
         {
             var previous = VarginhaDifficulty.Selected;
             try
@@ -187,9 +187,11 @@ namespace Game.Tests.PlayMode
                 VarginhaDifficulty.Select(InvestigationDifficulty.Medium);
                 Assert.AreEqual(0, VarginhaDifficulty.AlliedSummonCount(2));
                 VarginhaDifficulty.Select(InvestigationDifficulty.Hard);
-                Assert.AreEqual(3, VarginhaDifficulty.AlliedSummonCount(2));
-                Assert.AreEqual(9, VarginhaDifficulty.AlliedSummonCount(2, true));
-                Assert.AreEqual(9, VarginhaDifficulty.AlliedSummonCount(3));
+                Assert.AreEqual(0, VarginhaDifficulty.AlliedSummonCount(2));
+                Assert.AreEqual(12, VarginhaDifficulty.AlliedSummonCount(2, true));
+                Assert.AreEqual(12, VarginhaDifficulty.AlliedSummonCount(3));
+                Assert.AreEqual(0, VarginhaDifficulty.AlliedSummonCount(11));
+                Assert.AreEqual(0, VarginhaDifficulty.AlliedSummonCount(14));
             }
             finally
             {

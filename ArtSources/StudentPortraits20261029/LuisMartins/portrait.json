@@ -1,0 +1,34 @@
+{
+  "id": "LuisMartins",
+  "image": "../../../Assets/Resources/Varginha/Allies/Portraits/LuisMartins.png",
+  "imageSha256": "dc270f4cb21e5514a0581e23b38e36aa2b8e4a4d743a2a50aacfaa42bacf3fed",
+  "sourceImage": "generated-source.png",
+  "sourceSha256": "a39ef0764bd4e5b0dfb3d949a1a4c0288da64adfe262cd3bf913fe698c66328e",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "finalSize": [
+    256,
+    256
+  ],
+  "alpha": true,
+  "technicalCrop": [
+    0,
+    0,
+    1254,
+    1208
+  ],
+  "wholeBustCrop": [
+    225,
+    68,
+    1030,
+    1206
+  ],
+  "uniformNearestNeighborScale": 0.20738137082601055,
+  "status": "visual-reviewed",
+  "visualApproval": false,
+  "generation": "built-in ImageGen",
+  "prompt": "prompt.txt",
+  "identityReference": "full-sprite-reference.png"
+}

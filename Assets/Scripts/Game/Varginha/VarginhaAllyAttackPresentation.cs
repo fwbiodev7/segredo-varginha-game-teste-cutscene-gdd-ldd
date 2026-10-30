@@ -28,8 +28,9 @@ namespace Game.Varginha
             bool authored=Experiment.CampaignHeroArt.Available(student);
             if(authored)color=Experiment.CampaignHeroArt.ColorFor(student);
             _color = color;
-            _caption = student.ToUpperInvariant() + " • " + (authored?Experiment.CampaignHeroArt.AttackName(student,variant):Signature(student, style));
-            _captionCharacter=student;_captionAbility=authored?Experiment.CampaignHeroArt.AttackName(student,variant):Signature(student,style);
+            string displayName = VarginhaStudentRoster.DisplayName(student);
+            _caption = displayName.ToUpperInvariant() + " • " + (authored?Experiment.CampaignHeroArt.AttackName(student,variant):Signature(student, style));
+            _captionCharacter=displayName;_captionAbility=authored?Experiment.CampaignHeroArt.AttackName(student,variant):Signature(student,style);
             _captionLane=0;
             _root=_pooledRoot!=null?_pooledRoot:(_pooledRoot=new GameObject("Animacao_"+student));
             _root.SetActive(true);_partCursor=0;

@@ -79,7 +79,7 @@ namespace Game.Varginha.Experiment
     if(slot<3)
     {
      var ally=slot<Squad.SelectedStudentIndices.Count?Squad.Allies[Squad.SelectedStudentIndices[slot]]:null;
-     label=(slot+1)+" • "+(ally==null?"VAZIO":ally.StudentName.Replace("Luis Miguel Messias","L. Messias").Replace("Luis Martins","L. Martins"));
+     label=(slot+1)+" • "+(ally==null?"VAZIO":VarginhaStudentRoster.DisplayName(ally.StudentName).Replace("Luis Miguel Messias","L. Messias").Replace("Luis Martins","L. Martins"));
      status=ally==null?"EQUIPE NA MOCHILA":ally.IsAttacking?"ATACANDO":ally.ManualCooldownRemaining>0?"RECARGA "+Mathf.CeilToInt(ally.ManualCooldownRemaining)+"s":"PRONTO";
     }
     else

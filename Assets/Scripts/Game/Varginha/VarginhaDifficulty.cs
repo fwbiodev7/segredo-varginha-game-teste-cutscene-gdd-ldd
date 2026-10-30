@@ -18,13 +18,11 @@ namespace Game.Varginha
         public static bool AlliedSummonsUnlocked => Selected == InvestigationDifficulty.Hard;
 
         /// <summary>
-        /// Em fases difíceis, apenas um pequeno núcleo de alunos pode ser chamado.
-        /// A fase final ignora a limitação e libera os nove resgatados.
+        /// Os alunos ficam disponíveis somente na batalha final, em qualquer dificuldade.
         /// </summary>
         public static int AlliedSummonCount(int phaseNumber, bool finalPhase = false)
         {
-            if (finalPhase || phaseNumber >= 3) return 9;
-            return AlliedSummonsUnlocked && phaseNumber >= 2 ? 3 : 0;
+            return finalPhase || phaseNumber == 3 ? VarginhaStudentRoster.Count : 0;
         }
 
         public static void Select(InvestigationDifficulty difficulty) => Selected = difficulty;

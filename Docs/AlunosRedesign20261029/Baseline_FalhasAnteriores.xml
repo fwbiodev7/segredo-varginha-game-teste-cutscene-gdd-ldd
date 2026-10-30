@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="6" result="Failed(Child)" total="6" passed="0" failed="6" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-29 20:49:43Z" end-time="2026-10-29 20:49:47Z" duration="4,2097705">
+  <test-suite type="TestSuite" id="1269" name="Template 2D Kit" fullname="Template 2D Kit" runstate="Runnable" testcasecount="229" result="Failed" site="Child" start-time="2026-10-29 20:49:43Z" end-time="2026-10-29 20:49:47Z" duration="4.209771" total="6" passed="0" failed="6" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="PlayMode" />
+    </properties>
+    <failure>
+      <message><![CDATA[One or more child tests had errors]]></message>
+    </failure>
+    <test-suite type="Assembly" id="1531" name="GamePlayModeTests.dll" fullname="C:/Users/Usuario/segredo-varginha-game-teste-cutscene-gdd-ldd-main/Library/ScriptAssemblies/GamePlayModeTests.dll" runstate="Runnable" testcasecount="229" result="Failed" site="Child" start-time="2026-10-29 20:49:43Z" end-time="2026-10-29 20:49:47Z" duration="4.196868" total="6" passed="0" failed="6" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="13196" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="PlayMode" />
+        <property name="EditorOnly" value="False" />
+      </properties>
+      <failure>
+        <message><![CDATA[One or more child tests had errors]]></message>
+      </failure>
+      <test-suite type="TestSuite" id="1532" name="Game" fullname="Game" runstate="Runnable" testcasecount="229" result="Failed" site="Child" start-time="2026-10-29 20:49:43Z" end-time="2026-10-29 20:49:47Z" duration="4.191994" total="6" passed="0" failed="6" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <failure>
+          <message><![CDATA[One or more child tests had errors]]></message>
+        </failure>
+        <test-suite type="TestSuite" id="1533" name="Tests" fullname="Game.Tests" runstate="Runnable" testcasecount="229" result="Failed" site="Child" start-time="2026-10-29 20:49:43Z" end-time="2026-10-29 20:49:47Z" duration="4.183410" total="6" passed="0" failed="6" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <failure>
+            <message><![CDATA[One or more child tests had errors]]></message>
+          </failure>
+          <test-suite type="TestSuite" id="1534" name="PlayMode" fullname="Game.Tests.PlayMode" runstate="Runnable" testcasecount="229" result="Failed" site="Child" start-time="2026-10-29 20:49:43Z" end-time="2026-10-29 20:49:47Z" duration="4.175191" total="6" passed="0" failed="6" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <failure>
+              <message><![CDATA[One or more child tests had errors]]></message>
+            </failure>
+            <test-suite type="TestFixture" id="1479" name="VarginhaInventoryTests" fullname="Game.Tests.PlayMode.VarginhaInventoryTests" classname="Game.Tests.PlayMode.VarginhaInventoryTests" runstate="Runnable" testcasecount="8" result="Failed" site="Child" start-time="2026-10-29 20:49:43Z" end-time="2026-10-29 20:49:43Z" duration="0.082776" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1483" name="NoStudentAppearsOrAttacksUntilEquipped" fullname="Game.Tests.PlayMode.VarginhaInventoryTests.NoStudentAppearsOrAttacksUntilEquipped" methodname="NoStudentAppearsOrAttacksUntilEquipped" classname="Game.Tests.PlayMode.VarginhaInventoryTests" runstate="Runnable" seed="133022607" result="Failed" start-time="2026-10-29 20:49:43Z" end-time="2026-10-29 20:49:43Z" duration="0.057256" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: False
+  But was:  True
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaInventoryTests.NoStudentAppearsOrAttacksUntilEquipped () [0x00080] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\PlayMode\VarginhaInventoryTests.cs:76
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaInventoryTests.NoStudentAppearsOrAttacksUntilEquipped
+QA test: Game.Tests.PlayMode.VarginhaInventoryTests.NoStudentAppearsOrAttacksUntilEquipped
+QA result: Failed Game.Tests.PlayMode.VarginhaInventoryTests.NoStudentAppearsOrAttacksUntilEquipped
+QA result: Failed Game.Tests.PlayMode.VarginhaInventoryTests.NoStudentAppearsOrAttacksUntilEquipped
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1515" name="VarginhaStudentAllyTests" fullname="Game.Tests.PlayMode.VarginhaStudentAllyTests" classname="Game.Tests.PlayMode.VarginhaStudentAllyTests" runstate="Runnable" testcasecount="15" result="Failed" site="Child" start-time="2026-10-29 20:49:43Z" end-time="2026-10-29 20:49:47Z" duration="4.049848" total="5" passed="0" failed="5" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <failure>
+                <message><![CDATA[One or more child tests had errors]]></message>
+              </failure>
+              <test-case id="1527" name="AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage" fullname="Game.Tests.PlayMode.VarginhaStudentAllyTests.AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage" methodname="AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage" classname="Game.Tests.PlayMode.VarginhaStudentAllyTests" runstate="Runnable" seed="461352227" result="Failed" start-time="2026-10-29 20:49:43Z" end-time="2026-10-29 20:49:44Z" duration="1.429978" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: 82.75d +/- 0.0099999997764825821d
+  But was:  100.0d
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaStudentAllyTests+<AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage>d__19.MoveNext () [0x000e0] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\PlayMode\VarginhaStudentAllyTests.cs:274
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaStudentAllyTests.AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage
+QA test: Game.Tests.PlayMode.VarginhaStudentAllyTests.AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+QA result: Failed Game.Tests.PlayMode.VarginhaStudentAllyTests.AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage
+QA result: Failed Game.Tests.PlayMode.VarginhaStudentAllyTests.AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage
+]]></output>
+              </test-case>
+              <test-case id="1516" name="DeathCancelsPendingAllyAndPlayerAttacksWhileTimeIsPaused" fullname="Game.Tests.PlayMode.VarginhaStudentAllyTests.DeathCancelsPendingAllyAndPlayerAttacksWhileTimeIsPaused" methodname="DeathCancelsPendingAllyAndPlayerAttacksWhileTimeIsPaused" classname="Game.Tests.PlayMode.VarginhaStudentAllyTests" runstate="Runnable" seed="1036858043" result="Failed" start-time="2026-10-29 20:49:44Z" end-time="2026-10-29 20:49:45Z" duration="0.204360" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: null
+  But was:  <TestEnemy (Game.Varginha.VarginhaCombatTarget)>
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaStudentAllyTests+<DeathCancelsPendingAllyAndPlayerAttacksWhileTimeIsPaused>d__8.MoveNext () [0x0011d] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\PlayMode\VarginhaStudentAllyTests.cs:76
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaStudentAllyTests.DeathCancelsPendingAllyAndPlayerAttacksWhileTimeIsPaused
+QA test: Game.Tests.PlayMode.VarginhaStudentAllyTests.DeathCancelsPendingAllyAndPlayerAttacksWhileTimeIsPaused
+QA result: Failed Game.Tests.PlayMode.VarginhaStudentAllyTests.DeathCancelsPendingAllyAndPlayerAttacksWhileTimeIsPaused
+QA result: Failed Game.Tests.PlayMode.VarginhaStudentAllyTests.DeathCancelsPendingAllyAndPlayerAttacksWhileTimeIsPaused
+]]></output>
+              </test-case>
+              <test-case id="1528" name="KatanaPiercesOnlyTargetsBehindItsAim" fullname="Game.Tests.PlayMode.VarginhaStudentAllyTests.KatanaPiercesOnlyTargetsBehindItsAim" methodname="KatanaPiercesOnlyTargetsBehindItsAim" classname="Game.Tests.PlayMode.VarginhaStudentAllyTests" runstate="Runnable" seed="1963007395" result="Failed" start-time="2026-10-29 20:49:45Z" end-time="2026-10-29 20:49:46Z" duration="1.419721" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: 71.5d +/- 0.0099999997764825821d
+  But was:  100.0d
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaStudentAllyTests+<KatanaPiercesOnlyTargetsBehindItsAim>d__20.MoveNext () [0x000e0] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\PlayMode\VarginhaStudentAllyTests.cs:289
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaStudentAllyTests.KatanaPiercesOnlyTargetsBehindItsAim
+QA test: Game.Tests.PlayMode.VarginhaStudentAllyTests.KatanaPiercesOnlyTargetsBehindItsAim
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+QA result: Failed Game.Tests.PlayMode.VarginhaStudentAllyTests.KatanaPiercesOnlyTargetsBehindItsAim
+QA result: Failed Game.Tests.PlayMode.VarginhaStudentAllyTests.KatanaPiercesOnlyTargetsBehindItsAim
+]]></output>
+              </test-case>
+              <test-case id="1525" name="MarcosSpikesOnceAndSplashRespectsRange" fullname="Game.Tests.PlayMode.VarginhaStudentAllyTests.MarcosSpikesOnceAndSplashRespectsRange" methodname="MarcosSpikesOnceAndSplashRespectsRange" classname="Game.Tests.PlayMode.VarginhaStudentAllyTests" runstate="Runnable" seed="1459309641" result="Failed" start-time="2026-10-29 20:49:46Z" end-time="2026-10-29 20:49:47Z" duration="0.982546" asserts="0">
+                <properties>
+                  <property name="_JOINTYPE" value="UnityCombinatorial" />
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  A cortada deve iluminar em dourado.
+  Expected: greater than 1.0f
+  But was:  0.542400002f
+]]></message>
+                  <stack-trace><![CDATA[at Game.Tests.PlayMode.VarginhaStudentAllyTests+<MarcosSpikesOnceAndSplashRespectsRange>d__17.MoveNext () [0x001cb] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\PlayMode\VarginhaStudentAllyTests.cs:235
+at UnityEngine.TestTools.TestEnumerator+<Execute>d__8.MoveNext () [0x0003a] in .\Library\PackageCache\com.unity.test-framework@7a3849e09bd0\UnityEngine.TestRunner\NUnitExtensions\Attributes\TestEnumerator.cs:52
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaStudentAllyTests.MarcosSpikesOnceAndSplashRespectsRange
+QA test: Game.Tests.PlayMode.VarginhaStudentAllyTests.MarcosSpikesOnceAndSplashRespectsRange
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+There are no audio listeners in the scene. Please ensure there is always one audio listener in the scene
+QA result: Failed Game.Tests.PlayMode.VarginhaStudentAllyTests.MarcosSpikesOnceAndSplashRespectsRange
+QA result: Failed Game.Tests.PlayMode.VarginhaStudentAllyTests.MarcosSpikesOnceAndSplashRespectsRange
+]]></output>
+              </test-case>
+              <test-case id="1524" name="SignatureStudentsKeepTheirRequestedAttacks" fullname="Game.Tests.PlayMode.VarginhaStudentAllyTests.SignatureStudentsKeepTheirRequestedAttacks" methodname="SignatureStudentsKeepTheirRequestedAttacks" classname="Game.Tests.PlayMode.VarginhaStudentAllyTests" runstate="Runnable" seed="1755894340" result="Failed" start-time="2026-10-29 20:49:47Z" end-time="2026-10-29 20:49:47Z" duration="0.001405" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <failure>
+                  <message><![CDATA[  Expected: String containing "jiujitsu"
+  But was:  "Combo de quedas / projeção atordoante • Os dois golpes alternam a cada invocação."
+]]></message>
+                  <stack-trace><![CDATA[at NUnit.Framework.StringAssert.Contains (System.String expected, System.String actual, System.String message, System.Object[] args) [0x00008] in <8b63e8ac0a4746599ed207982825ae6c>:0
+at NUnit.Framework.StringAssert.Contains (System.String expected, System.String actual) [0x00001] in <8b63e8ac0a4746599ed207982825ae6c>:0
+at Game.Tests.PlayMode.VarginhaStudentAllyTests.SignatureStudentsKeepTheirRequestedAttacks () [0x00000] in C:\Users\Usuario\segredo-varginha-game-teste-cutscene-gdd-ldd-main\Assets\Tests\PlayMode\VarginhaStudentAllyTests.cs:203
+]]></stack-trace>
+                </failure>
+                <output><![CDATA[QA test: Game.Tests.PlayMode.VarginhaStudentAllyTests.SignatureStudentsKeepTheirRequestedAttacks
+QA test: Game.Tests.PlayMode.VarginhaStudentAllyTests.SignatureStudentsKeepTheirRequestedAttacks
+QA result: Failed Game.Tests.PlayMode.VarginhaStudentAllyTests.SignatureStudentsKeepTheirRequestedAttacks
+QA result: Failed Game.Tests.PlayMode.VarginhaStudentAllyTests.SignatureStudentsKeepTheirRequestedAttacks
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+Saving results to: C:/Users/Usuario/AppData/LocalLow/DefaultCompany/Template 2D Kit\TestResults.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

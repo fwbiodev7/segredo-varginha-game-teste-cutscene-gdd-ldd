@@ -334,7 +334,7 @@ namespace Game.Varginha
             // O estado de prontidão fica somente no HUD lateral. No cenário o
             // rótulo é um nome curto e único, evitando a pilha "nome + PRONTO"
             // sobre os sprites dos aliados.
-            string displayName = studentName == "Luis Miguel Messias" ? "Luis Miguel" : studentName;
+            string displayName = studentName == "Luis Miguel Messias" ? "Luis Miguel" : VarginhaStudentRoster.DisplayName(studentName);
             _nameStyle.fontSize = Screen.width < 520 ? 9 : 10;
             GUI.color = new Color(.55f, 1f, .72f);
             GUI.Label(new Rect(screen.x - 54f, screen.y - 10f, 108f, 18f), displayName, _nameStyle);

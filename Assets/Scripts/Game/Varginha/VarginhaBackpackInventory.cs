@@ -27,10 +27,10 @@ namespace Game.Varginha
         private EventSystem _navigationOwner;
         private bool _navigationEvents;
 
-        private readonly UnityEngine.UI.Image[] _cells = new UnityEngine.UI.Image[9];
-        private readonly TMP_Text[] _states = new TMP_Text[9];
-        private readonly TMP_Text[] _cellNames = new TMP_Text[9];
-        private readonly UnityEngine.UI.Image[] _cellPortraits = new UnityEngine.UI.Image[9];
+        private readonly UnityEngine.UI.Image[] _cells = new UnityEngine.UI.Image[VarginhaStudentRoster.Count];
+        private readonly TMP_Text[] _states = new TMP_Text[VarginhaStudentRoster.Count];
+        private readonly TMP_Text[] _cellNames = new TMP_Text[VarginhaStudentRoster.Count];
+        private readonly UnityEngine.UI.Image[] _cellPortraits = new UnityEngine.UI.Image[VarginhaStudentRoster.Count];
         private UnityEngine.UI.Button _itemsTab, _studentsTab;
         private UnityEngine.UI.Button _supportTab;
         private TMP_Text _supportTabLabel;
@@ -147,7 +147,7 @@ namespace Game.Varginha
 
             if(_lastDevice!=VarginhaInputActions.UsingGamepad){_lastDevice=VarginhaInputActions.UsingGamepad;Refresh();}
             int next = _inspected;
-            int count=ShowingSupport?3:ShowingStudents?9:6;
+            int count=ShowingSupport?3:ShowingStudents?VarginhaStudentRoster.Count:6;
             if (keyboard?.leftArrowKey.wasPressedThisFrame==true||pad?.dpad.left.wasPressedThisFrame==true) next = (_inspected + count-1) % count;
             if (keyboard?.rightArrowKey.wasPressedThisFrame==true||pad?.dpad.right.wasPressedThisFrame==true) next = (_inspected + 1) % count;
             if (keyboard?.upArrowKey.wasPressedThisFrame==true||pad?.dpad.up.wasPressedThisFrame==true) next = (_inspected + count-3) % count;
@@ -168,7 +168,7 @@ namespace Game.Varginha
         private void Equip()
         {
             if(ShowingSupport){if(Experiment.CampaignFinalAllies.Active?.SelectSupport(_inspected)==true){Refresh();Experiment.CampaignContinuationController.Active?.SaveTeamChoice();}return;}
-            if (ShowingStudents && _squad != null && _squad.SelectStudent(_inspected))
+            if (ShowingStudents && _squad != null && _squad.IsFinalBattle && _squad.SelectStudent(_inspected))
             {
                 Refresh();
                 Experiment.CampaignContinuationController.Active?.SaveTeamChoice();
@@ -228,7 +228,7 @@ namespace Game.Varginha
             }
 
             _equipped.text = _squad?.SelectedStudent != null && _squad.SelectedStudent.IsActive
-                ? $"<color=#{ColorUtility.ToHtmlStringRGB(FocusGold)}>EQUIPADO</color>\n<b>{_squad.SelectedStudent.StudentName}</b>\n\n<size=12><color=#{ColorUtility.ToHtmlStringRGB(AccentCyan)}>{VarginhaInputBindings.DisplayName(VarginhaInputAction.AllyCommand)}</color> para atacar</size>"
+                ? $"<color=#{ColorUtility.ToHtmlStringRGB(FocusGold)}>EQUIPADO</color>\n<b>{VarginhaStudentRoster.DisplayName(_squad.SelectedStudent.StudentName)}</b>\n\n<size=12><color=#{ColorUtility.ToHtmlStringRGB(AccentCyan)}>{VarginhaInputBindings.DisplayName(VarginhaInputAction.AllyCommand)}</color> para atacar</size>"
                 : $"<color=#{ColorUtility.ToHtmlStringRGB(MutedCyan)}>NENHUM ALUNO EQUIPADO</color>\n<size=12>Selecione na aba Alunos</size>";
             if(finalCombat)_equipped.text=FinalTeamSummary();
             if (Experiment.VarginhaCampaignStage.Active != null)
@@ -239,7 +239,7 @@ namespace Game.Varginha
 
             if (!ShowingStudents)
             {
-                for (int i = 0; i < 9; i++)
+                for (int i = 0; i < _cells.Length; i++)
                 {
                     _cells[i].gameObject.SetActive(i<ItemNames.Length);
                     bool owned = i < ItemNames.Length && _player != null && _player.HasInventoryItem(i);
@@ -296,16 +296,16 @@ namespace Game.Varginha
             _portrait.enabled = true;
             _equipCaption.text = "EQUIPAR ALUNO";
 
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < _cells.Length; i++)
             {
                 _cells[i].gameObject.SetActive(true);
                 _cellPortraits[i].enabled = true;
                 _cellPortraits[i].sprite = VarginhaStudentAllySquad.Portrait(i);
-                _cellNames[i].text = VarginhaPhase2Controller.StudentNames[i];
+                _cellNames[i].text = VarginhaStudentRoster.DisplayName(i);
                 _cellNames[i].color = PaperColor;
 
                 var ally = _squad != null && i < _squad.Allies.Count ? _squad.Allies[i] : null;
-                bool available = ally != null && ally.IsActive;
+                bool available = _squad != null && _squad.IsFinalBattle && ally != null && ally.IsActive;
                 bool equipped = available && _squad.SelectedStudentIndices.Contains(i);
                 bool selected = i == _inspected;
 
@@ -317,23 +317,24 @@ namespace Game.Varginha
                 _states[i].color = equipped ? FocusGold : (available ? AccentCyan : MutedCyan);
             }
 
-            string studentName = VarginhaPhase2Controller.StudentNames[_inspected];
+            string studentName = VarginhaStudentRoster.Name(_inspected);
             var selectedAlly = _squad != null && _inspected < _squad.Allies.Count ? _squad.Allies[_inspected] : null;
-            bool unlocked = selectedAlly != null && selectedAlly.IsActive;
+            bool unlocked = _squad != null && _squad.IsFinalBattle && selectedAlly != null && selectedAlly.IsActive;
 
-            _name.text = studentName;
+            _name.text = VarginhaStudentRoster.DisplayName(studentName);
             _name.color = unlocked ? AccentCyan : MutedCyan;
             _portrait.sprite = VarginhaStudentAllySquad.Portrait(_inspected);
             _description.text = VarginhaStudentAlly.DescribeAttack(studentName);
             _description.color = PaperColor;
 
-            _availability.text = finalCombat?"Até 3 alunos e 1 apoio.\nA / Enter equipa ou remove. Uma quarta escolha substitui a última vaga.\nRecargas são individuais.":unlocked
-                ? "Recarga individual: 5 segundos.\n\nTrocar de aluno não reinicia recargas. O comando de aliado chama o aluno equipado."
-                : "Este aliado ainda não foi resgatado. Encontre a turma na escola; os especiais ficam ativos na igreja.";
+            _availability.text = unlocked
+                ? "Disponível na batalha final.\nAté 3 alunos e 1 apoio.\nA / Enter equipa ou remove. Uma quarta escolha substitui a última vaga.\nRecargas individuais."
+                : "Seleção de alunos disponível somente na batalha final.";
             _availability.color = unlocked ? PaperColor : MutedCyan;
 
             _equip.interactable = unlocked;
-            if(finalCombat)_equipCaption.text=_squad.SelectedStudentIndices.Contains(_inspected)?"REMOVER DA EQUIPE":_squad.SelectedStudentIndices.Count==3?"SUBSTITUIR ÚLTIMA VAGA":"EQUIPAR ALUNO";
+            if(unlocked)_equipCaption.text=_squad.SelectedStudentIndices.Contains(_inspected)?"REMOVER DA EQUIPE":_squad.SelectedStudentIndices.Count==3?"SUBSTITUIR ÚLTIMA VAGA":"EQUIPAR ALUNO";
+            if (!unlocked) _equipCaption.text = "SOMENTE NA LUTA FINAL";
             _equip.image.sprite = unlocked ? _buttonActiveSprite : _buttonNormalSprite;
             _equipCaption.color = unlocked ? PaperColor : MutedCyan;
         }
@@ -341,26 +342,26 @@ namespace Game.Varginha
         {
             var progress = Experiment.VarginhaCampaignStage.Active.Progress;
             var actors = Object.FindObjectsByType<Experiment.CampaignSchoolLife>();
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < _cells.Length; i++)
             {
                 _cells[i].gameObject.SetActive(true);
                 bool known = (progress.studentsTalked & 1 << i) != 0;
                 _cells[i].sprite = i == _inspected ? _slotSelectedSprite : _slotNormalSprite;
                 _cellPortraits[i].enabled = true; _cellPortraits[i].sprite = VarginhaStudentAllySquad.Portrait(i);
-                _cellNames[i].text = VarginhaPhase2Controller.StudentNames[i]; _states[i].text = known ? "CONVERSA REGISTRADA" : "NA INDUSTRIAL";
+                _cellNames[i].text = VarginhaStudentRoster.DisplayName(i); _states[i].text = known ? "CONVERSA REGISTRADA" : i < VarginhaPhase2Controller.StudentNames.Length ? "NA INDUSTRIAL" : "LUTA FINAL";
                 _states[i].color = known ? AccentCyan : MutedCyan;
             }
-            string name = VarginhaPhase2Controller.StudentNames[_inspected];
-            _name.text = name; _portrait.enabled = true; _portrait.sprite = VarginhaStudentAllySquad.Portrait(_inspected);
+            string name = VarginhaStudentRoster.Name(_inspected);
+            _name.text = VarginhaStudentRoster.DisplayName(name); _portrait.enabled = true; _portrait.sprite = VarginhaStudentAllySquad.Portrait(_inspected);
             var actor = System.Array.Find(actors, candidate => candidate.StudentName == name);
-            _description.text = actor != null ? "Na escola: " + actor.Activity + "." : "Aluno da Industrial. Converse com ele durante o expediente.";
-            _availability.text = (progress.studentsTalked & 1 << _inspected) != 0 ? "A conversa foi registrada. As falas acompanham o andamento da investigação." : "Aproxime-se e pressione E para conversar. Cada aluno trabalha em uma atividade e possui observações próprias.";
-            _equip.interactable = false; _equipCaption.text = "CONVERSAR NA ESCOLA"; _equip.image.sprite = _buttonNormalSprite;
+            _description.text = _inspected >= VarginhaPhase2Controller.StudentNames.Length ? "Aliado que se junta à turma na batalha final." : actor != null ? "Na escola: " + actor.Activity + "." : "Aluno da Industrial. Converse com ele durante o expediente.";
+            _availability.text = _inspected >= VarginhaPhase2Controller.StudentNames.Length ? "Disponível para seleção na mochila somente na batalha final." : (progress.studentsTalked & 1 << _inspected) != 0 ? "A conversa foi registrada. As falas acompanham o andamento da investigação." : "Aproxime-se e pressione E para conversar. Cada aluno trabalha em uma atividade e possui observações próprias.";
+            _equip.interactable = false; _equipCaption.text = "SOMENTE NA LUTA FINAL"; _equip.image.sprite = _buttonNormalSprite;
         }
         private void RefreshSupport()
         {
             var allies=Experiment.CampaignFinalAllies.Active;
-            for(int i=0;i<9;i++)
+            for(int i=0;i<_cells.Length;i++)
             {
                 bool available=i<3;_cells[i].gameObject.SetActive(available);_cells[i].sprite=i==_inspected?_slotSelectedSprite:_slotNormalSprite;
                 _cellPortraits[i].enabled=available;
@@ -379,7 +380,7 @@ namespace Game.Varginha
         private string FinalTeamSummary()
         {
             var allies=Experiment.CampaignFinalAllies.Active;string text="<size=11><color=#a3c9cc>ALUNOS "+_squad.SelectedStudentIndices.Count+"/3</color>";
-            foreach(int i in _squad.SelectedStudentIndices)text+="\n"+_squad.Allies[i].StudentName;
+            foreach(int i in _squad.SelectedStudentIndices)text+="\n"+VarginhaStudentRoster.DisplayName(_squad.Allies[i].StudentName);
             text+="\n<color=#a3c9cc>APOIO "+(allies.SelectedSupport>=0?"1/1":"0/1")+"</color>";
             if(allies.SelectedSupport>=0)text+="\n"+Experiment.CampaignFinalAllies.Names[allies.SelectedSupport];
             return text+"</size>";
@@ -462,20 +463,20 @@ namespace Game.Varginha
             var footNote = Label(leftPanel.transform, "Itens usados saem.\nPistas permanecem.", 12, 424, 206, 36, 12, TextAlignmentOptions.Center);
             footNote.color = FocusGold;
 
-            // ================= CENTER COLUMN (3x3 Grid) =================
+            // ================= CENTER COLUMN (3x4 Grid) =================
             var centerPanel = Panel(page, "PainelCentro", 274, 78, 496, 474, Color.white);
             centerPanel.sprite = _subPanelSprite;
             centerPanel.type = UnityEngine.UI.Image.Type.Sliced;
 
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < _cells.Length; i++)
             {
                 int index = i;
                 int col = i % 3;
                 int row = i / 3;
                 float x = 14 + col * 158;
-                float y = 14 + row * 148;
+                float y = 14 + row * 114;
 
-                _cells[i] = Panel(centerPanel.transform, "Slot_" + i, x, y, 152, 142, Color.white);
+                _cells[i] = Panel(centerPanel.transform, "Slot_" + i, x, y, 152, 108, Color.white);
                 _cells[i].sprite = _slotNormalSprite;
                 _cells[i].type = UnityEngine.UI.Image.Type.Sliced;
                 _cells[i].raycastTarget = true;
@@ -486,16 +487,16 @@ namespace Game.Varginha
                 button.onClick.AddListener(() => { if(ShowingSupport&&index>=3||!ShowingStudents&&!ShowingSupport&&index>=6)return;_inspected = index; Refresh(); });
 
                 // Frame for portrait
-                var portBox = Panel(_cells[i].transform, "PortBox_" + i, 44, 8, 64, 64, new Color(0, 0, 0, .45f));
+                var portBox = Panel(_cells[i].transform, "PortBox_" + i, 44, 4, 64, 64, new Color(0, 0, 0, .45f));
                 var portrait = Panel(portBox.transform, "Retrato_" + i, 2, 2, 60, 60, Color.white);
                 _cellPortraits[i] = portrait;
                 portrait.sprite = VarginhaStudentAllySquad.Portrait(i);
                 portrait.preserveAspect = true;
 
-                _cellNames[i] = Label(_cells[i].transform, "", 4, 78, 144, 34, 13, TextAlignmentOptions.Center);
+                _cellNames[i] = Label(_cells[i].transform, "", 4, 70, 144, 18, 12, TextAlignmentOptions.Center);
                 _cellNames[i].color = PaperColor;
 
-                _states[i] = Label(_cells[i].transform, "", 4, 114, 144, 20, 11, TextAlignmentOptions.Center);
+                _states[i] = Label(_cells[i].transform, "", 4, 90, 144, 16, 10, TextAlignmentOptions.Center);
             }
 
             // ================= RIGHT COLUMN (Inspection) =================
@@ -506,14 +507,14 @@ namespace Game.Varginha
             _name = Label(rightPanel.transform, "", 12, 16, 232, 40, 20, TextAlignmentOptions.Center);
             _name.fontStyle = FontStyles.Bold;
 
-            var inspectPortBox = Panel(rightPanel.transform, "InspectPortBox", 76, 62, 104, 104, Color.white);
+            var inspectPortBox = Panel(rightPanel.transform, "InspectPortBox", 58, 62, 140, 140, Color.white);
             inspectPortBox.sprite = _slotNormalSprite;
             inspectPortBox.type = UnityEngine.UI.Image.Type.Sliced;
 
-            _portrait = Panel(inspectPortBox.transform, "Retrato_Inspecionado", 4, 4, 96, 96, Color.white);
+            _portrait = Panel(inspectPortBox.transform, "Retrato_Inspecionado", 4, 4, 132, 132, Color.white);
             _portrait.preserveAspect = true;
 
-            _description = Label(rightPanel.transform, "", 16, 176, 224, 110, 14, TextAlignmentOptions.Center);
+            _description = Label(rightPanel.transform, "", 16, 210, 224, 76, 14, TextAlignmentOptions.Center);
 
             Separator(rightPanel.transform, 16, 294, 224, 2);
 

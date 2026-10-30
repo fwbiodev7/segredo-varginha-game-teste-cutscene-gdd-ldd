@@ -1,48 +1,22 @@
-# Direção visual dos aliados — 17/09/2026
+# Direção visual dos alunos aliados — 29/10/2026
 
-A lista abaixo substitui a aparência anterior e se aplica aos sprites, retratos, animações e cabine do Fusca.
+As três referências enviadas em 29/10/2026 substituem o figurino anterior. Todos usam o uniforme da Industrial. A documentação de integração, fontes, prompts e limites está em [AlunosRedesign20261029](AlunosRedesign20261029/README.md).
 
-## Yasmin
+| Aluno | Identidade da referência |
+| --- | --- |
+| Fábio | Cabelo castanho médio repartido, óculos escuros, camiseta branca com mangas verdes, calça escura e tênis claros/azuis. |
+| Marcos | Pele morena quente, cabelo curto com topo crespo e laterais baixas, uniforme branco/verde, calça escura e tênis claros/azuis. É a referência de pele de Giovana e Bianca. |
+| Matias | Cabelo castanho curto cacheado, torso verde com mangas brancas conforme a referência, parte inferior escura e tênis rosa. |
+| Anna Sabiá | Cabelo castanho ondulado, camisa branca com detalhes amarelos conforme a folha, calça escura, tênis claros; identidade histórica `Anna Sabia` preservada nos dados. |
+| Ana Tavares | Rosto e cabelo da foto enviada em 29/10: cachos longos castanhos com mechas, testa livre, aparelho dentário no retrato, pequenos brincos e corrente. Mantém camisa branca com detalhes amarelos e o restante do uniforme. |
+| Yasmin | Cabelo preto liso com franja, uniforme branco/verde, parte inferior escura e tênis pretos/claros. |
+| Pedro | Óculos redondos e touca marrom/ocre da foto enviada em 29/10, com dois olhos escuros e boca vermelha dentada na frente; cachos aparentes sob a touca. Mantém uniforme branco/verde, parte inferior escura e tênis claros/azuis. |
+| Luis Martins | Cabelo castanho liso repartido de lado, uniforme branco/verde, calça escura e tênis vermelhos/brancos. |
+| Luis Miguel Messias | Cabelo escuro curto, barba, uniforme branco/verde, calça escura e tênis claros/escuros. |
+| Giovana | Cabelo longo preto liso com franja e presilha vermelha, pele na referência de Marcos, uniforme branco/verde, shorts escuros e tênis rosa. |
+| Bianca | Cabelo castanho escuro cacheado e volumoso, pele na referência de Marcos, uniforme branco/verde, calça escura e tênis claros/escuros. |
+| Moscardini | Cabelo castanho escuro volumoso e repartido, uniforme branco/verde, calça escura e tênis claros/escuros. |
 
-Yasmin, young female student with pale warm skin, BLACK WAVY shoulder-length hair and a STRAIGHT smooth fringe/bangs. Small pink hair clip. BLACK ROCK BAND T-SHIRT with a small off-white electric guitar/skull graphic, no readable lettering. Dark blue jeans, charcoal sneakers. NO blue jacket and NO glasses.
+Os desenhos e as assimetrias das imagens prevalecem sobre descrições textuais abreviadas. Não recuperar os figurinos antigos de banda, judô, moletom ou futebol ao invocar poderes. A caminhada e a figura dos golpes compartilham o atlas de uniforme; a mochila usa retratos individuais detalhados, baseados nos mesmos designs. Efeitos e regras de dano dos poderes existentes são mantidos.
 
-## Pedro
-
-Pedro, young male student, warm light skin, LONG CURLY chestnut brown hair down to his shoulders, ROUND black eyeglasses with clear lenses and visible eyes. Open midnight blue overshirt over a burgundy T-shirt, navy jeans, dark sneakers. The long curly hair and ROUND glasses must be unmistakable in all views.
-
-## Matias
-
-Matias, athletic young male student, LIGHT WARM TAN skin a little lighter than the old sprite, short dark brown curly hair, NO glasses and NO headband. WHITE Brazilian jiu-jitsu gi with lapels and long white trousers, a ROYAL BLUE JIU-JITSU BELT tied at his WAIST with its two ends hanging down visibly. Dark training shoes. Blue belt MUST be around the waist, never around the head.
-
-## Fabio
-
-Fabio, young male student with warm light skin, brown hair parted cleanly DOWN THE MIDDLE with two curtain fringe sections, SQUARE black eyeglasses clear lenses. ALL BLACK OUTFIT: black T-shirt, black casual jacket, black jeans and black sneakers with charcoal highlights. No orange, yellow or white shirt. Center part and square frames easy to recognize.
-
-## Marcos
-
-Marcos, young male student with warm medium brown skin, a clearly visible high FADE HAIRCUT, closely SHAVED SIDES and taller textured curly dark top. NO glasses, clear expressive dark eyes. Purple hoodie over cream T-shirt, dark jeans, violet gray trainers. Sides of head expose skin with a short dark fade gradient, NOT a round mop of curls covering ears.
-
-## AnnaSabia
-
-Anna Sabia, SHORT young female student, warm fair skin, dense bouncy CURLY chestnut brown shoulder-length hair, no glasses, tiny gold earrings. LOOSE OVERSIZED dusty-pink sweatshirt with dropped shoulders and BAGGY navy trousers, chunky burgundy sneakers. A compact, short silhouette, loose clothing clear in each pose, friendly expressive eyes. Do not make her tall or slim or draw straight hair.
-
-## AnaTavares
-
-Anna Tavares, TALL athletic young female student, warm light tan skin, brown wavy hair tied back into a practical ponytail. TABLE TENNIS UNIFORM: fitted red and black short-sleeve sports jersey with a diagonal white trim, black athletic shorts, white sports socks, blue-white indoor court shoes. Long legs and tall athletic silhouette, no jeans, no sweater. No racket in the walking sheet, equipment will be added separately by game.
-
-## LuisMiguelMessias
-
-Luis Messias, young adult male student, warm medium tan skin, short dark hair, neat dark beard and mustache, black rectangular glasses clear lenses. ATLETICO MINEIRO football club home jersey: unmistakable BLACK AND WHITE VERTICAL STRIPES, black short sleeves and black collar, small black shield with white edge on left chest with CAM and tiny gold star. Dark navy jeans and black sneakers. No yellow shirt. Keep jersey stripes continuous and consistent from front to side and back.
-
-## LuisMartins
-
-Luis Martins, young male student, warm fair skin, STRAIGHT BROWN hair smoothly side-parted, no curls, NO glasses, clear visible eyes. RED HOODED SWEATSHIRT with a front kangaroo pocket, hood down and drawstrings, dark blue jeans, dark gray sneakers. Strong clean red clothing identity. No gray jacket.
-
-## Geração
-
-Ferramenta integrada ImageGen. Cada folha contém 4 direções × 4 poses; o importador Unity alinha os pés e faz amostragem Point para células de 64 × 64, preservando alpha. Fontes em Assets/ArtSource/Allies; atlas usados pelo jogo em Assets/Resources/Varginha/Allies.
-
-## Prompt base final
-
-Create a production-ready pixel-art game animation atlas with exactly FOUR columns and FOUR rows (16 full-body sprites), square image with true TRANSPARENT alpha background. Match the Edelzio reference's polished pixel art, compact 2.4-head-tall anatomy, face and hands with readable pixel clusters, clean dark outline and 3-tone shading. Reference1 is the character's PREVIOUS appearance to EDIT; replace it with the new identity specified. Reference2 Edelzio is the style/scale quality target. Reference3 Yasmin is the shared atlas format/style. Preserve roughly the same large head/body scale as reference3 except the requested relative height for tall/short characters. Every square cell same size, sprite centered horizontally, consistent feet baseline, 15 percent transparent padding. ROW1 faces DOWN/front, ROW2 faces LEFT with all noses pointing to the left edge, ROW3 faces RIGHT with all noses pointing right edge, ROW4 faces UP/back (NO eyes on back). Four DIFFERENT walk poses per row: col1 left leg forward contact, col2 feet together passing right knee bent, col3 right leg forward contact, col4 feet together passing left knee bent. Opposing arm swing, believable joints, subtle torso bob, seamless loop. Never duplicate all four poses. No weapons, no labels, no grid, no text outside clothing, no baked ground shadow, no checkerboard. No blurry edges or painterly brush texture. Preferred square1024x1024. New canonical character identity: 
-
+Atlas finais: `Assets/Resources/Varginha/Allies/`, 256×256 RGBA, quatro colunas de caminhada e linhas S/W/E/N. Fontes canônicas de reexportação na raiz `Assets/ArtSource/Allies/`; fontes brutas, candidatas e referências preservadas nas pastas documentadas. Os três alunos novos podem ser equipados apenas na batalha final, com o mesmo limite de três alunos da equipe.

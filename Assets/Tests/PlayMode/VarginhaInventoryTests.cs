@@ -87,7 +87,7 @@ namespace Game.Tests.PlayMode
             squad.ActivateManualAllies();
             Assert.IsTrue(squad.SelectStudent(3));
             Assert.IsFalse(squad.SelectStudent(-1));
-            Assert.IsFalse(squad.SelectStudent(9));
+            Assert.IsFalse(squad.SelectStudent(VarginhaStudentRoster.Count));
             var enemy = new GameObject("ET", typeof(CircleCollider2D), typeof(VarginhaCombatTarget));
             enemy.transform.SetParent(_root.transform); enemy.transform.position = Vector3.right * 3;
             Physics2D.SyncTransforms();

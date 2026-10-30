@@ -23,7 +23,9 @@ namespace Game.Varginha.Experiment
             };return names[Mathf.Clamp(variant,0,1)];
         }
         public static bool Available(string student)=>Resources.Load<TextAsset>("Varginha/StoryCharacters/Hero"+VarginhaStudentSprites.AssetName(student))!=null;
-        public static Sprite Pose(string student,int variant,bool left,int stage)=>CampaignStorySprites.Frame("Hero"+VarginhaStudentSprites.AssetName(student),variant,(left?3:0)+stage);
+        // Combat shares the redesigned uniform atlas with walking and portraits.
+        // Retain the authored powers/effects without reverting to the old costume sheets.
+        public static Sprite Pose(string student,int variant,bool left,int stage)=>VarginhaStudentSprites.Frame(student,left?1:2,stage);
         public static Sprite Effect(string student,int variant,int stage)
         {
             string name=VarginhaStudentSprites.AssetName(student),key=name+variant+stage;

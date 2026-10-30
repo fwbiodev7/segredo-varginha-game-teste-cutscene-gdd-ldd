@@ -1,0 +1,35 @@
+{
+  "id": "Pedro",
+  "image": "../../../Assets/Resources/Varginha/Allies/Portraits/Pedro.png",
+  "imageSha256": "46eb45d87293a88ad9e3a1910c35ed53c34664854d28144bfb2fc8b0dc11a95c",
+  "sourceImage": "generated-source.png",
+  "sourceSha256": "5215dc4ce55db13163cb8b02409db0d7adc324a6c37d507df2bb37a3a20a8fa7",
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "finalSize": [
+    256,
+    256
+  ],
+  "alpha": true,
+  "technicalCrop": [
+    0,
+    0,
+    1254,
+    1208
+  ],
+  "wholeBustCrop": [
+    169,
+    48,
+    1098,
+    1208
+  ],
+  "uniformNearestNeighborScale": 0.20344827586206896,
+  "status": "visual-reviewed",
+  "visualApproval": false,
+  "generation": "built-in ImageGen",
+  "prompt": "prompt.txt",
+  "identityReference": "full-sprite-reference.png",
+  "priorityReference": "hat-reference.jpeg; round eyeglasses explicitly requested"
+}

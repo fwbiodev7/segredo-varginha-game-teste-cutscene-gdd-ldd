@@ -22,7 +22,7 @@ namespace Game.Editor.Testing
             if (Application.isPlaying) throw new InvalidOperationException("Encerre o Play antes de gerar a build alpha.");
             foreach (string scene in Scenes)
                 if (!File.Exists(scene)) throw new FileNotFoundException("Cena necessária à campanha.", scene);
-            string folder = Path.GetFullPath(Path.Combine("Builds", Name));
+            string folder = Path.GetFullPath(Path.Combine("Builds", "Oizlede-Fragmento-Perdido-Apresentacao"));
             Directory.CreateDirectory(folder);
             var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
                 scenes = Scenes, locationPathName = Path.Combine(folder, Name + ".exe"),

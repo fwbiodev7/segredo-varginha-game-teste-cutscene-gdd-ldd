@@ -1,0 +1,15 @@
+# Giovana, Pedro, Yasmin e Luis Martins — 29/10/2026
+
+Quatro atlas de caminhada refeitos com a ferramenta integrada ImageGen, usando as identidades atuais e a nitidez/linguagem de pixels de Bianca e Moscardini. Os benchmarks não foram alterados. Cada identidade teve uma geração própria. Pedro recebeu uma geração adicional após a nova referência prioritária de touca; a candidata anterior sem touca está preservada, mas não é entregue ao jogo.
+
+Fontes brutas, prompts exatos, manifesto, paleta, auditoria, contato e GIFs ficam nas quatro subpastas nomeadas. `canonical-before-crisp.png` preserva o atlas anterior. `generated-source.png` é a arte final selecionada. `build_group_giovana.py` recorta figuras completas, reduz todos os quadros de uma folha pela mesma razão com nearest-neighbor, alinha os pés e limpa somente ilhas desconectadas do alpha. Não desenha nem recolore anatomia, olhos, roupa ou cabelo. Não foram montados personagens por partes.
+
+Destino: `Assets/Resources/Varginha/Allies/{ID}.png`; fonte canônica reproduzível: `Assets/ArtSource/Allies/{ID}.png`. Ambos são 256 × 256 RGBA, quatro linhas S/W/E/N, quatro quadros por linha, células 64 × 64, PPU runtime 64 / 1.35 e pivô central. Altura máxima 50 e baseline Unity 6 em todos os quadros. Quatro quadros distintos por direção. A igualdade RGBA fonte/destino foi confirmada antes de importação Unity. GUIDs existentes foram preservados.
+
+Identidade: Giovana mantém pele quente de Marcos, cabelo preto longo liso/franja/presilha vermelha, shorts escuros e tênis rosa. Yasmin mantém cabelo escuro longo com franja sem presilha, calças escuras e tênis preto/branco. Luis Martins mantém cabelo castanho curto com franja lateral, calças escuras e tênis vermelho/branco. Pedro mantém cachos castanhos aparentes sob a nova touca marrom/ocre e usa óculos redondos. Na touca, motivo frontal Domo com olhos pretos e boca vermelha dentada branca; costas sem motivo e perfis com porção geometricamente visível.
+
+Contato inspecionado: `Preview/StudentsCrisp20261029/GroupGiovana/walks-contact-4.png`. Cabeças, mãos, pés e touca completos; frente/perfis/costas conferidos; movimentos distintos de pernas/braços; ausência de borrão JPEG e de pixels coloridos soltos na margem. Resumo numérico: `validation.json` no mesmo diretório. As auditorias das quatro folhas passaram sem erros estruturais. Alertas sobre alpha parcial e importador refletem a fonte gerada e o consumidor Texture2D/runtime do projeto, documentados nos relatórios próprios.
+
+GIFs por direção foram gerados. Contatos estáticos vistos; reprodução temporal e testes no Editor/runtime ficam para a validação do agente principal. Este agente não abriu nem usou Unity. Inspeção técnica/visual não equivale a aprovação humana. Fontes anteriores de Giovana em Assets/ArtSource/Allies/Redesign20261029 são históricas e foram superadas por este pacote.
+
+Os quatro retratos individuais ficam em `Assets/Resources/Varginha/Allies/Portraits/{ID}.png` e suas fontes em `ArtSources/StudentPortraits20261029/{ID}`. Consulte o relatório do grupo de retratos.

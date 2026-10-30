@@ -1,0 +1,17 @@
+{
+  "baseCommit": "412cd5f",
+  "baselineRuntimeCode": true,
+  "sameFailureNamesAndMessages": true,
+  "newTests": 7,
+  "newPassed": 7,
+  "playmodeTotal": 30,
+  "playmodePassed": 24,
+  "preExistingFailures": {
+    "Game.Tests.PlayMode.VarginhaInventoryTests.NoStudentAppearsOrAttacksUntilEquipped": "Expected: False\n  But was:  True",
+    "Game.Tests.PlayMode.VarginhaStudentAllyTests.AnnaRicochetsAcrossTwoNewTargetsWithoutRepeatingDamage": "Expected: 82.75d +/- 0.0099999997764825821d\n  But was:  100.0d",
+    "Game.Tests.PlayMode.VarginhaStudentAllyTests.DeathCancelsPendingAllyAndPlayerAttacksWhileTimeIsPaused": "Expected: null\n  But was:  <TestEnemy (Game.Varginha.VarginhaCombatTarget)>",
+    "Game.Tests.PlayMode.VarginhaStudentAllyTests.KatanaPiercesOnlyTargetsBehindItsAim": "Expected: 71.5d +/- 0.0099999997764825821d\n  But was:  100.0d",
+    "Game.Tests.PlayMode.VarginhaStudentAllyTests.MarcosSpikesOnceAndSplashRespectsRange": "A cortada deve iluminar em dourado.\n  Expected: greater than 1.0f\n  But was:  0.542400002f",
+    "Game.Tests.PlayMode.VarginhaStudentAllyTests.SignatureStudentsKeepTheirRequestedAttacks": "Expected: String containing \"jiujitsu\"\n  But was:  \"Combo de quedas / projeção atordoante • Os dois golpes alternam a cada invocação.\""
+  }
+}

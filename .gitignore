@@ -40,3 +40,7 @@ Desktop.ini
 /Library.BeforeShortPath/
 /Entregas/
 /sites/segredo-de-varginha/
+
+# Referencias fotograficas pessoais preservadas apenas localmente
+/ArtSources/**/photo-reference.jpeg
+/ArtSources/**/hat-reference.jpeg

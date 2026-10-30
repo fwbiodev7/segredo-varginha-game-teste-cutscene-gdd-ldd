@@ -23,6 +23,7 @@ namespace Game.Varginha
         private readonly List<int> _teamSelection=new();
         public IReadOnlyList<int> SelectedStudentIndices=>_teamSelection;
         public int SelectionCapacity {get;private set;}=1;
+        public bool IsFinalBattle { get; private set; }
         public void ConfigureSelectionSlots(int count){SelectionCapacity=Mathf.Clamp(count,1,3);ClearSelection();}
         public int FormationSlot(VarginhaStudentAlly ally)=>Mathf.Max(0,_teamSelection.IndexOf(_allies.IndexOf(ally)));
         public int SelectedStudentIndex => _selectedStudentIndex;
@@ -31,7 +32,7 @@ namespace Game.Varginha
 
         public bool SelectStudent(int index)
         {
-            if (index < 0 || index >= _allies.Count || _allies[index] == null || !_allies[index].IsActive) return false;
+            if (!IsFinalBattle || index < 0 || index >= _allies.Count || _allies[index] == null || !_allies[index].IsActive) return false;
             if(SelectionCapacity==1){_teamSelection.Clear();_teamSelection.Add(index);}
             else if(_teamSelection.Contains(index))_teamSelection.Remove(index);
             else{if(_teamSelection.Count==SelectionCapacity)_teamSelection.RemoveAt(_teamSelection.Count-1);_teamSelection.Add(index);}
@@ -48,8 +49,8 @@ namespace Game.Varginha
 
         public static Sprite Portrait(int index)
         {
-            index = Mathf.Clamp(index, 0, VarginhaPhase2Controller.StudentNames.Length - 1);
-            return VarginhaPixelArtSprites.Create("StudentHead_" + VarginhaPhase2Controller.StudentNames[index], ShirtColors[index]);
+            index = Mathf.Clamp(index, 0, VarginhaStudentRoster.Count - 1);
+            return VarginhaStudentSprites.InventoryPortrait(VarginhaStudentRoster.Name(index));
         }
         private float _commandReadyAt;
         private int _nextCommandSlot;
@@ -95,6 +96,7 @@ namespace Game.Varginha
 
         public void DeactivateAllies()
         {
+            IsFinalBattle = false;
             ClearSelection();
             _commandReadyAt = 0f;
             _lastInvokedStudentName = null;
@@ -118,6 +120,8 @@ namespace Game.Varginha
 
         private void ActivateManualAllies(float cooldownSeconds, bool finalPhase, int phaseNumber)
         {
+            foreach (var ally in _allies) ally?.Deactivate();
+            IsFinalBattle = finalPhase;
             EnsureRoster();
             if (leader == null) leader = Object.FindAnyObjectByType<EdelzioTopDownController>()?.transform;
             _selectedStudentIndex = -1;
@@ -137,7 +141,8 @@ namespace Game.Varginha
         /// <summary>Ativa a quantidade permitida pela dificuldade para uma fase comum.</summary>
         public void ActivateForPhase(int phaseNumber, float cooldownSeconds = VarginhaStudentAlly.ManualCooldownSeconds)
         {
-            ActivateManualAllies(cooldownSeconds, phaseNumber >= 3, phaseNumber);
+            // Phase 3 is the legacy final arena. The story campaign opts in explicitly.
+            ActivateManualAllies(cooldownSeconds, phaseNumber == 3, phaseNumber);
         }
 
         /// <summary>Invoca um aluno equipado por comando.</summary>
@@ -263,18 +268,19 @@ namespace Game.Varginha
                 byName.Add(ally.StudentName, ally);
             }
 
-            for (int i = 0; i < VarginhaPhase2Controller.StudentNames.Length; i++)
+            int count = IsFinalBattle ? VarginhaStudentRoster.Count : VarginhaPhase2Controller.StudentNames.Length;
+            for (int i = 0; i < count; i++)
             {
-                string name = VarginhaPhase2Controller.StudentNames[i];
+                string name = VarginhaStudentRoster.Name(i);
                 if (!byName.TryGetValue(name, out var ally))
                 {
                     var allyObject = new GameObject("Aliado_" + name.Replace(" ", "_"));
                     allyObject.transform.SetParent(transform);
                     allyObject.transform.position = leader != null ? leader.position : Vector3.zero;
                     var renderer = allyObject.AddComponent<SpriteRenderer>();
-                    renderer.sprite = VarginhaPixelArtSprites.Create("Student_" + name, ShirtColors[i]);
+                    renderer.sprite = VarginhaPixelArtSprites.Create("Student_" + name, ShirtColors[i % ShirtColors.Length]);
                     ally = allyObject.AddComponent<VarginhaStudentAlly>();
-                    ally.Configure(name, ShirtColors[i], i);
+                    ally.Configure(name, ShirtColors[i % ShirtColors.Length], i);
                 }
                 _allies.Add(ally);
             }
