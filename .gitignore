@@ -6,6 +6,7 @@ Obj/
 .dotnet-home/
 Build/
 Builds/
+Builds.zip
 MemoryCaptures/
 .vs/
 .vscode/

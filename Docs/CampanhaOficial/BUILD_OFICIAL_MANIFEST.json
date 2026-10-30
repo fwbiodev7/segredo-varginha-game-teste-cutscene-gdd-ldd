@@ -1,0 +1,32 @@
+{
+  "name": "Oizlede - Segredo de Varginha",
+  "status": "Versão Oficial",
+  "version": "1.0.0-oficial (0.6.0)",
+  "date": "2026-10-30",
+  "platform": "Windows x64 Standalone",
+  "unity": "6000.6.0f1",
+  "build_result": "Succeeded",
+  "build_errors": 0,
+  "build_warnings": 2,
+  "bytes": 429135277,
+  "zip_bytes": 327786754,
+  "zip_file": "Builds/Oizlede_0.6.0_Apresentacao_2026-10-30_Windows_x64.zip",
+  "zip_sha256": "A690D31EBBA5B6F3D4E5DA3A842CD4F814917A86CDD0935238A7506D5453DEE2",
+  "executable": "Builds/Oizlede_0.6.0_Apresentacao_2026-10-30/Oizlede - Segredo de Varginha.exe",
+  "features": [
+    "Campanha oficial completa com 14 capítulos e 19 cenas integradas",
+    "Redesign dos 12 alunos em pixel art com ciclos completos em 4 direções",
+    "12 Retratos canônicos 256x256 na mochila e janelas de diálogo",
+    "Seleção de até 3 alunos aliados e 1 personagem de apoio para a batalha final",
+    "Narração dublada completa com 15 faixas gravadas por Luís Messias",
+    "Trilhas sonoras completas de suspense e ambientação com efeitos Pixabay",
+    "Apresentações interativas e roteiros dedicados de cada equipe do projeto"
+  ],
+  "teams": {
+    "arte_e_design": ["Yasmin", "Giovana", "Luís Martins"],
+    "desenvolvedores": ["Fábio", "João Pedro Matias", "Asafe", "Marcos"],
+    "narrativa": ["Bianca", "João Guilherme"],
+    "sonoplastia_e_dublagem": ["Luís Messias", "Gustavo"],
+    "testes_e_qa": ["Moscardini", "Anna Sabiá", "Ana Tavares", "Karol", "Pedro"]
+  }
+}

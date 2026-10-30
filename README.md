@@ -1,20 +1,19 @@
-# O Segredo de Varginha
+# O Segredo de Varginha — Versão Oficial
 
 **Uma investigação sobrenatural em pixel art, vista de cima, ambientada em Varginha.**
 
 Trinta anos depois de uma noite esquecida, Edelzio encontra uma caixa que devolve perguntas sobre seu passado. Explore casas, a Escola Industrial, trilhas e laboratórios; converse com Renan, Padre Fábio e Ouzana; reúna pistas e conte com seus aliados quando a investigação se transformar em combate.
 
-**Em desenvolvimento · 14 capítulos · candidata local Windows 0.5.1-beta · atualização: 27/10/2026.**
+> 🎮 **VERSÃO OFICIAL DO JOGO (30/10/2026)**  
+> **[Baixar a Versão Oficial no GitHub (Windows x64)](https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/releases/tag/v1.0.0-oficial)**  
+> Pacote completo compilado: `Builds/Oizlede_0.6.0_Apresentacao_2026-10-30_Windows_x64.zip`  
+> *Inclui: Campanha com 14 capítulos (19 cenas), redesign dos 12 alunos com retratos canônicos no Pixilart, narração dublada gravada por Luís Messias, ambientação sonora rica com efeitos Pixabay e sintetizadores.*
 
-Ajuste de 27/10: [duas colunas embaralhadas e disposição salva](Docs/CampanhaOficial/EMBARALHAMENTO_ESCOLA_2026-10-27.md). Pacote local: `Builds/Varginha_0.5.1-beta_2026-10-27_Windows_x64.zip`.
+* **Apresentação Interativa dos Grupos:** [Ver Slides Interativos](Docs/Apresentacao/apresentacao_interativa.html)  
+* **Roteiro e Documento de Apresentação:** [Docs/Apresentacao/APRESENTACAO_GRUPOS_PROJETO_2026-10-30.md](Docs/Apresentacao/APRESENTACAO_GRUPOS_PROJETO_2026-10-30.md) e [ROTEIRO_COMPLETO_30-10-2026.md](Docs/Apresentacao/ROTEIRO_COMPLETO_30-10-2026.md)  
+* **Manifesto Técnico da Build:** [BUILD_OFICIAL_MANIFEST.json](Docs/CampanhaOficial/BUILD_OFICIAL_MANIFEST.json)  
 
-Redesign escolar de 27/10: [Padrões Ocultos, testes, arquivos e cenas](Docs/CampanhaOficial/ENTREGA_ESCOLA_2026-10-27.md). Recortes e anotações são recuperados uma vez na casa, analisados em quatro etapas na escola e mantidos no caderno. Pacote local: `Builds/Varginha_0.5.0-beta_2026-10-27_Windows_x64.zip`. A validação com pessoa leiga e mouse está registrada separadamente.
-
-Fechamento anterior — Entrega local de 27/10: [fechamento da revisão, testes e build](Docs/CampanhaOficial/ENTREGA_2026-10-27.md), [daily atualizada](output/daily-sprint-2026-10-20/A_Sprint_Final_Varginha.html) e [roteiro para 30/10](Docs/Apresentacao/ROTEIRO_COMPLETO_30-10-2026.md). Pacote: `Builds/Varginha_0.4.9-beta_2026-10-27_Windows_x64.zip`. As versões públicas e os registros abaixo são históricos.
-
-Revisão histórica de 21/10: [integração dos sons recebidos](Docs/CampanhaOficial/INTEGRACAO_AUDIO_2026-10-21.md), [artes e correções dos apoios](Docs/CampanhaOficial/AUDITORIA_APOIOS_2026-10-21.md), com pulso cyber do Renan, frasco da Ouzana e escudo transparente do Padre. [Relatório, testes e prints](output/audio-integration-2026-10-21/RELATORIO.md); [daily atualizada](output/daily-sprint-2026-10-20/A_Sprint_Final_Varginha.html). Pacote local: `Builds/Varginha_0.4.4-beta_2026-10-21_Windows_x64.zip`. As entregas abaixo permanecem históricas.
-
-[**Baixar beta 0.4.4 no GitHub**](https://github.com/fwbiodev7/segredo-varginha-game-teste-cutscene-gdd-ldd/releases/tag/v0.4.4-beta) — build Windows, HTML da daily e relatório. É uma pré-release; a mixagem, o balanceamento com pessoas e o teste em outro PC continuam na [lista de pendências](Docs/CampanhaOficial/PENDENCIAS_2026-10-21.md).
+---
 
 Revisão visual mais recente: [abertura de 1996 animada e fase adulta às 7h](Docs/CampanhaOficial/POLIMENTO_VISUAL_E_ABERTURA_2026-10-21.md), cabine cartunesca, paisagem baseada na fotografia de Varginha, mapa de Fragmentos ilustrado e picos de interferência mais densos. [Relatório e testes desta revisão](output/visual-polish-2026-10-21/RELATORIO.md); prévias silenciosas do [prólogo](output/visual-polish-2026-10-21/opening-preview.html) e da [viagem do Fusca](output/visual-polish-2026-10-21/preview.html). O novo pacote local é `Builds/Varginha_0.4.3-beta_2026-10-21_Windows_x64.zip`. A entrega 0.4.2 abaixo fica preservada como histórico.
 
